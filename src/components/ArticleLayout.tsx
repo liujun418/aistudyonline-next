@@ -104,7 +104,7 @@ export default function ArticleLayout({
           </div>
 
           {/* Content */}
-          <div className="prose prose-zinc max-w-none dark:prose-invert">
+          <div className="article-content">
             {typeof content === "string" ? (
               <div dangerouslySetInnerHTML={{ __html: content }} />
             ) : (
@@ -121,28 +121,12 @@ export default function ArticleLayout({
               <h3 className="mb-3 text-sm font-semibold text-foreground">
                 {aDict.tableOfContents || "On This Page"}
               </h3>
-              <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-                <li>
-                  <span className="cursor-pointer transition-colors hover:text-primary-600">
-                    What is {title.split(":")[0] || title}?
-                  </span>
-                </li>
-                <li>
-                  <span className="cursor-pointer transition-colors hover:text-primary-600">
-                    Getting Started
-                  </span>
-                </li>
-                <li>
-                  <span className="cursor-pointer transition-colors hover:text-primary-600">
-                    Key Features
-                  </span>
-                </li>
-                <li>
-                  <span className="cursor-pointer transition-colors hover:text-primary-600">
-                    Tips &amp; Best Practices
-                  </span>
-                </li>
-              </ul>
+              <nav className="article-toc space-y-1">
+                <a href="#">Installation</a>
+                <a href="#">Configuration</a>
+                <a href="#">First Project</a>
+                <a href="#">FAQ</a>
+              </nav>
             </div>
 
             {/* Tools Mentioned */}
