@@ -1,0 +1,87 @@
+{
+  "site": {
+    "title": "AI Study Online",
+    "tagline": "Aprende IA. Úsala de Verdad.",
+    "subtitle": "De cero a productivo. Descubre las herramientas de IA que importan y aprende a usarlas."
+  },
+  "nav": {
+    "tools": "Herramientas IA",
+    "learn": "Aprende IA",
+    "blog": "Blog",
+    "about": "Acerca de",
+    "search": "Buscar",
+    "changeLanguage": "Cambiar idioma",
+    "changeTheme": "Cambiar tema",
+    "dark": "Oscuro",
+    "light": "Claro",
+    "system": "Sistema"
+  },
+  "home": {
+    "heroTitle": "Aprende IA. <span>Úsala de Verdad.</span>",
+    "heroSubtitle": "De cero a productivo. Descubre las herramientas de IA que importan y aprende a usarlas — paso a paso, sin jerga.",
+    "exploreTools": "Explorar Herramientas",
+    "startLearning": "Empezar a Aprender",
+    "featuredTools": "Herramientas IA Destacadas",
+    "viewAllTools": "Ver las 100+ Herramientas →",
+    "latestArticles": "Últimos Artículos",
+    "viewAllArticles": "Ver Todos los Artículos →",
+    "browseByCategory": "Explorar por Categoría",
+    "features": {
+      "curated": {
+        "title": "Herramientas Seleccionadas",
+        "desc": "Más de 100 herramientas de IA seleccionadas y organizadas por lo que quieres hacer, no por categoría técnica."
+      },
+      "beginner": {
+        "title": "Para Principiantes",
+        "desc": "Sin jerga, sin requisitos previos. Cada guía está escrita para alguien que empieza desde cero."
+      },
+      "tutorials": {
+        "title": "Guías Paso a Paso",
+        "desc": "Tutoriales prácticos que te muestran exactamente qué hacer, escribir y esperar."
+      },
+      "multilingual": {
+        "title": "Multilingüe",
+        "desc": "Contenido disponible en inglés, español y árabe. Aprende en tu idioma preferido."
+      }
+    }
+  },
+  "tools": {
+    "title": "Directorio de Herramientas IA",
+    "description": "Explora más de 100 herramientas de IA organizadas por categoría. Encuentra la herramienta adecuada para tu tarea.",
+    "searchPlaceholder": "Buscar herramientas...",
+    "allTools": "Todas",
+    "difficulty": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado"
+    },
+    "pricing": "Precio",
+    "visit": "Visitar",
+    "noResults": "No se encontraron herramientas. Prueba con otra búsqueda o filtro."
+  },
+  "learn": {
+    "title": "Aprende IA Desde Cero",
+    "description": "Tutoriales prácticos y guías para principiantes en IA. Sin jerga, solo instrucciones paso a paso.",
+    "allCategories": "Todas",
+    "articlesCount": "{count} artículos"
+  },
+  "article": {
+    "tableOfContents": "En Esta Página",
+    "toolsMentioned": "Herramientas Mencionadas",
+    "relatedArticles": "Artículos Relacionados",
+    "updated": "Actualizado"
+  },
+  "footer": {
+    "copyright": "© 2026 AI Study Online. Todos los derechos reservados.",
+    "about": "Acerca de",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos del Servicio",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "tools": "Herramientas IA",
+    "learn": "Aprende IA"
+  },
+  "ad": {
+    "label": "Publicidad"
+  }
+}

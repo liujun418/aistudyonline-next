@@ -1,0 +1,87 @@
+{
+  "site": {
+    "title": "AI Study Online",
+    "tagline": "Learn AI. Actually Use It.",
+    "subtitle": "Zero to productive. Discover AI tools that matter and learn how to use them."
+  },
+  "nav": {
+    "tools": "AI Tools",
+    "learn": "Learn AI",
+    "blog": "Blog",
+    "about": "About",
+    "search": "Search",
+    "changeLanguage": "Change language",
+    "changeTheme": "Change theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "home": {
+    "heroTitle": "Learn AI. <span>Actually Use It.</span>",
+    "heroSubtitle": "Zero to productive. Discover AI tools that matter and learn how to use them — step by step, no jargon.",
+    "exploreTools": "Explore Tools",
+    "startLearning": "Start Learning",
+    "featuredTools": "Featured AI Tools",
+    "viewAllTools": "View All 100+ Tools →",
+    "latestArticles": "Latest Articles",
+    "viewAllArticles": "View All Articles →",
+    "browseByCategory": "Browse by Category",
+    "features": {
+      "curated": {
+        "title": "Curated Tools",
+        "desc": "100+ AI tools hand-picked and organized by what you want to do, not by technical category."
+      },
+      "beginner": {
+        "title": "Beginner Friendly",
+        "desc": "No jargon, no prerequisites. Every guide is written for someone starting from zero."
+      },
+      "tutorials": {
+        "title": "Step-by-Step Guides",
+        "desc": "Practical tutorials that show you exactly what to click, type, and expect."
+      },
+      "multilingual": {
+        "title": "Multi-Language",
+        "desc": "Content available in English, Spanish, and Arabic. Learn in your preferred language."
+      }
+    }
+  },
+  "tools": {
+    "title": "AI Tools Directory",
+    "description": "Browse 100+ AI tools organized by category. Find the right tool for your task.",
+    "searchPlaceholder": "Search tools...",
+    "allTools": "All",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "pricing": "Pricing",
+    "visit": "Visit",
+    "noResults": "No tools found. Try a different search or filter."
+  },
+  "learn": {
+    "title": "Learn AI From Zero",
+    "description": "Practical tutorials and guides for AI beginners. No jargon, just step-by-step instructions.",
+    "allCategories": "All",
+    "articlesCount": "{count} articles"
+  },
+  "article": {
+    "tableOfContents": "On This Page",
+    "toolsMentioned": "Tools Mentioned",
+    "relatedArticles": "Related Articles",
+    "updated": "Updated"
+  },
+  "footer": {
+    "copyright": "© 2026 AI Study Online. All rights reserved.",
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "blog": "Blog",
+    "tools": "AI Tools",
+    "learn": "Learn AI"
+  },
+  "ad": {
+    "label": "Advertisement"
+  }
+}
