@@ -14,6 +14,25 @@ export interface Article {
 }
 
 export const articles: Article[] = [
+  // ====== Sample: Claude Code (Path: Claude Code 编程入门, Part 1/4) ======
+  {
+    slug: "claude-code-install-setup",
+    title: "Claude Code Installation & Setup: From Zero to Your First AI-Generated Web Page",
+    titleEs: "Instalación y Configuración de Claude Code: De Cero a Tu Primera Página Web Generada por IA",
+    titleAr: "تثبيت وإعداد Claude Code: من الصفر إلى أول صفحة ويب منشأة بالذكاء الاصطناعي",
+    description:
+      "Step-by-step guide to installing Claude Code on Windows, Mac, or Linux — with copyable commands, API key setup, and your first AI-generated project.",
+    descriptionEs:
+      "Guía paso a paso para instalar Claude Code en Windows, Mac o Linux — con comandos copiables, configuración de API key y tu primer proyecto generado por IA.",
+    descriptionAr:
+      "دليل خطوة بخطوة لتثبيت Claude Code على Windows أو Mac أو Linux — مع أوامر قابلة للنسخ وإعداد مفتاح API وأول مشروع منشأ بالذكاء الاصطناعي.",
+    category: "ai-tutorials",
+    tags: ["claude-code", "installation", "setup", "command-line", "coding", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-05-22",
+  },
+
   // ====== AI Basics (5) ======
   {
     slug: "llms-in-plain-english",
