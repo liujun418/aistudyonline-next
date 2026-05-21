@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isValidLocale, getDictionary } from "@/lib/i18n";
 import { articles } from "@/lib/articles";
+import { articleContents } from "@/lib/article-content";
 import { categories } from "@/lib/categories";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import ArticleLayout from "@/components/ArticleLayout";
@@ -100,36 +101,10 @@ export default async function ArticlePage({
     article.descriptionAr,
   );
 
-  // Placeholder article content — will be replaced with real content later
-  const content = `
-    <h2>Introduction</h2>
-    <p>Welcome to our guide on <strong>${title}</strong>. ${
-    article.category === "ai-basics"
-      ? "This article will help you understand the fundamentals."
-      : article.category === "ai-tutorials"
-        ? "Follow along with our step-by-step instructions to get started."
-        : article.category === "ai-comparisons"
-          ? "We put these tools head-to-head so you can make an informed decision."
-          : article.category === "ai-use-cases"
-            ? "Discover practical ways to apply AI to real-world tasks."
-            : "Stay up to date with the latest developments in AI."
-  }</p>
-
-    <h2>What You Need to Know</h2>
-    <p>${description}</p>
-    <p>This article is being written. We are preparing detailed, hands-on content to help you get the most out of this topic. Check back soon for the full guide.</p>
-
-    <h2>Getting Started</h2>
-    <p>In the meantime, explore our <a href="/${locale}/learn">Learn AI</a> section for more tutorials and guides. You can also browse the <a href="/${locale}/tools">AI Tools Directory</a> to discover tools mentioned in this article.</p>
-
-    <h2>Key Points</h2>
-    <ul>
-      <li>Full step-by-step instructions are being prepared</li>
-      <li>Practical examples and real-world use cases will be included</li>
-      <li>Screenshots and visual aids are being created</li>
-      <li>Tips and best practices from experienced users will be added</li>
-    </ul>
-  `;
+  const entry = articleContents[article.slug];
+  const rawContent = entry
+    ? (locale === "es" ? entry.contentEs : locale === "ar" ? entry.contentAr : entry.content)
+    : `<p>${description}</p><p>Full article content coming soon.</p>`;
 
   return (
     <>
@@ -196,7 +171,7 @@ export default async function ArticlePage({
 
       <ArticleLayout
         article={article}
-        content={content}
+        content={rawContent}
         locale={locale}
         dict={dict}
       />
