@@ -69,6 +69,23 @@ export const articles: Article[] = [
     date: "2026-05-20",
   },
   {
+    slug: "how-to-choose-right-ai-tool",
+    title: "Which AI Tool Should You Use? A Decision Framework for Beginners",
+    titleEs: "¿Qué Herramienta de IA Deberías Usar? Un Marco de Decisión para Principiantes",
+    titleAr: "أي أداة ذكاء اصطناعي يجب أن تستخدم؟ إطار قرار للمبتدئين",
+    description:
+      "ChatGPT vs Claude vs Gemini vs Perplexity vs Midjourney — which one do you actually need? A practical decision matrix based on what you're trying to do.",
+    descriptionEs:
+      "ChatGPT vs Claude vs Gemini vs Perplexity vs Midjourney — ¿cuál necesitas realmente? Una matriz de decisión práctica basada en lo que intentas hacer.",
+    descriptionAr:
+      "ChatGPT مقابل Claude مقابل Gemini مقابل Perplexity مقابل Midjourney — أي منها تحتاج فعلاً؟ مصفوفة قرار عملية بناءً على ما تحاول القيام به.",
+    category: "ai-basics",
+    tags: ["comparison", "tools", "chatgpt", "claude", "gemini", "perplexity", "midjourney", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["chatgpt", "claude", "gemini", "perplexity", "midjourney"],
+    date: "2026-05-22",
+  },
+  {
     slug: "free-vs-paid-ai-tools-worth-it",
     title: "Free vs Paid AI Tools: When It's Actually Worth Paying (and When It's Not)",
     titleEs: "Herramientas IA Gratis vs de Pago: Cuándo Vale la Pena Pagar (y Cuándo No)",
@@ -123,158 +140,158 @@ export const articles: Article[] = [
   // ====== AI Tutorials (5) ======
   {
     slug: "chatgpt-voice-mode-job-interview",
-    title: "How to Use ChatGPT's Voice Mode to Practice a Job Interview",
-    titleEs: "Cómo Usar el Modo de Voz de ChatGPT para Practicar una Entrevista de Trabajo",
-    titleAr: "كيفية استخدام وضع الصوت في ChatGPT للتدرب على مقابلة عمل",
+    title: "ChatGPT Fundamentals: Interface, Settings, and Your First 10 Prompts",
+    titleEs: "Fundamentos de ChatGPT: Interfaz, Configuración y tus Primeros 10 Prompts",
+    titleAr: "أساسيات ChatGPT: الواجهة والإعدادات وأول 10 أوامر لك",
     description:
-      "You've got an interview next week and nobody to practice with. Here's how to use ChatGPT's voice mode as your mock interviewer — with prompts that actually work.",
+      "New to ChatGPT? Here is the complete beginner's guide — account setup, interface tour, settings to configure, and 10 starter prompts to get real value from day one.",
     descriptionEs:
-      "Tienes una entrevista la próxima semana y nadie con quien practicar. Aquí te mostramos cómo usar el modo de voz de ChatGPT como tu entrevistador de práctica.",
+      "Nuevo en ChatGPT? Aquí tienes la guía completa para principiantes — configuración de cuenta, recorrido de interfaz, ajustes y 10 prompts iniciales.",
     descriptionAr:
-      "لديك مقابلة عمل الأسبوع القادم ولا يوجد أحد لتتمرن معه. إليك كيفية استخدام وضع الصوت في ChatGPT كمحاور تدريبي.",
+      "جديد في ChatGPT؟ إليك الدليل الكامل للمبتدئين — إعداد الحساب وجولة الواجهة والإعدادات وأول 10 أوامر للبدء.",
     category: "ai-tutorials",
-    tags: ["chatgpt", "voice-mode", "job-interview", "practice", "hands-on"],
+    tags: ["chatgpt", "beginner", "fundamentals", "prompts", "getting-started"],
     difficulty: "beginner",
     toolsMentioned: ["chatgpt"],
-    date: "2026-05-21",
+    date: "2026-05-22",
   },
   {
     slug: "claude-projects-organize-chats",
-    title: "Claude Projects: How to Organize Your AI Chats Like a Pro (Even If You're Not One)",
-    titleEs: "Proyectos de Claude: Cómo Organizar Tus Chats de IA Como un Profesional (Aunque No Lo Seas)",
-    titleAr: "مشاريع Claude: كيفية تنظيم محادثات الذكاء الاصطناعي الخاصة بك كمحترف (حتى لو لم تكن كذلك)",
+    title: "How to Write Prompts That Actually Work: The 5-Point Framework",
+    titleEs: "Cómo Escribir Prompts Que Realmente Funcionan: El Marco de 5 Puntos",
+    titleAr: "كيفية كتابة أوامر تعمل فعلاً: إطار العمل المكون من 5 نقاط",
     description:
-      "Your Claude sidebar is a mess of random conversations. Projects fix that. Here's how to set them up in 5 minutes and actually find things later.",
+      "Vague prompts get mediocre answers. Master the 5-Point Prompt Framework — Role, Context, Task, Format, Constraints — and get dramatically better results from any AI tool.",
     descriptionEs:
-      "Tu barra lateral de Claude es un desorden de conversaciones aleatorias. Los Proyectos lo arreglan. Aquí te mostramos cómo configurarlos en 5 minutos.",
+      "Los prompts vagos obtienen respuestas mediocres. Domina el Marco de 5 Puntos — Rol, Contexto, Tarea, Formato, Restricciones — y obtén resultados dramáticamente mejores.",
     descriptionAr:
-      "شريطك الجانبي في Claude فوضى من المحادثات العشوائية. المشاريع تصلح ذلك. إليك كيفية إعدادها في 5 دقائق.",
+      "الأوامر الغامضة تحصل على إجابات متوسطة. أتقن إطار العمل المكون من 5 نقاط — الدور والسياق والمهمة والتنسيق والقيود — واحصل على نتائج أفضل بشكل ملحوظ.",
     category: "ai-tutorials",
-    tags: ["claude", "projects", "organization", "productivity", "how-to"],
+    tags: ["prompts", "prompt-engineering", "framework", "writing", "chatgpt"],
     difficulty: "beginner",
-    toolsMentioned: ["claude"],
-    date: "2026-05-19",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-22",
   },
   {
     slug: "ai-images-that-dont-look-like-ai",
-    title: "How to Generate AI Images That Don't Look Like AI (Beginner's Settings Guide)",
-    titleEs: "Cómo Generar Imágenes de IA que No Parezcan de IA (Guía de Configuración para Principiantes)",
-    titleAr: "كيفية إنشاء صور بالذكاء الاصطناعي لا تبدو كأنها من الذكاء الاصطناعي (دليل الإعدادات للمبتدئين)",
+    title: "ChatGPT for Writing: Emails, Reports, and Creative Projects",
+    titleEs: "ChatGPT para Escribir: Correos, Informes y Proyectos Creativos",
+    titleAr: "ChatGPT للكتابة: رسائل البريد الإلكتروني والتقارير والمشاريع الإبداعية",
     description:
-      "You can spot AI images from a mile away — weird fingers, plastic skin, that 'AI glow.' Here are the actual settings and prompt tricks that fix each of these.",
+      "Move beyond basic prompts. Master AI writing with tone control, outline-first reports, creative techniques, and editing workflows that produce professional-grade content.",
     descriptionEs:
-      "Puedes detectar imágenes de IA a kilómetros — dedos raros, piel de plástico, ese 'brillo IA.' Aquí están los ajustes y trucos de prompt que arreglan cada uno de estos problemas.",
+      "Ve más allá de los prompts básicos. Domina la escritura con IA con control de tono, informes estructurados, técnicas creativas y flujos de edición profesionales.",
     descriptionAr:
-      "يمكنك تمييز صور الذكاء الاصطناعي من على بعد أميال — أصابع غريبة، بشرة بلاستيكية، ذلك 'التوهج الاصطناعي.' إليك الإعدادات والحيل الفعلية التي تصلح كل منها.",
+      "تجاوز الأوامر الأساسية. أتقن الكتابة بالذكاء الاصطناعي مع التحكم في النغمة والتقارير المنظمة والتقنيات الإبداعية وسير عمل التحرير.",
     category: "ai-tutorials",
-    tags: ["image-generation", "midjourney", "dalle", "prompt-tips", "realistic"],
-    difficulty: "intermediate",
-    toolsMentioned: ["midjourney", "dalle-3", "leonardo-ai"],
-    date: "2026-05-17",
+    tags: ["chatgpt", "writing", "email", "content", "editing"],
+    difficulty: "beginner",
+    toolsMentioned: ["chatgpt"],
+    date: "2026-05-22",
   },
   {
     slug: "voice-recording-to-meeting-notes-free",
-    title: "How to Turn a Voice Recording Into Meeting Notes Using Free AI Tools",
-    titleEs: "Cómo Convertir una Grabación de Voz en Notas de Reunión Usando Herramientas IA Gratuitas",
-    titleAr: "كيفية تحويل تسجيل صوتي إلى ملاحظات اجتماع باستخدام أدوات ذكاء اصطناعي مجانية",
+    title: "ChatGPT for Research and Analysis: Web Search, File Upload, and Data",
+    titleEs: "ChatGPT para Investigación y Análisis: Búsqueda Web, Carga de Archivos y Datos",
+    titleAr: "ChatGPT للبحث والتحليل: البحث على الويب وتحميل الملفات والبيانات",
     description:
-      "You recorded an hour-long meeting on your phone. Now you need notes. Here's a free two-step workflow: transcribe with AI, then summarize — no paid tools needed.",
+      "ChatGPT is more than a chatbot. Use it for web search, document analysis, data processing with Advanced Data Analysis, and long-form research — all in one place.",
     descriptionEs:
-      "Grabaste una reunión de una hora en tu teléfono. Ahora necesitas notas. Aquí tienes un flujo de trabajo gratuito de dos pasos: transcribe con IA, luego resume.",
+      "ChatGPT es más que un chatbot. Úsalo para búsqueda web, análisis de documentos, procesamiento de datos con Análisis Avanzado de Datos e investigación avanzada.",
     descriptionAr:
-      "سجلت اجتماعاً لمدة ساعة على هاتفك. الآن تحتاج ملاحظات. إليك سير عمل مجاني من خطوتين: النسخ بالذكاء الاصطناعي، ثم التلخيص.",
+      "ChatGPT أكثر من مجرد دردشة. استخدمه للبحث على الويب وتحليل المستندات ومعالجة البيانات مع تحليل البيانات المتقدم والبحث المتعمق.",
     category: "ai-tutorials",
-    tags: ["voice", "transcription", "meeting-notes", "free-tools", "workflow"],
+    tags: ["chatgpt", "research", "file-upload", "data-analysis", "web-search"],
     difficulty: "intermediate",
-    toolsMentioned: ["chatgpt", "gemini"],
-    date: "2026-05-15",
+    toolsMentioned: ["chatgpt"],
+    date: "2026-05-22",
   },
   {
     slug: "first-ai-coding-project-no-experience",
-    title: "Your First AI Coding Project: Build a Simple Web Page Without Knowing How to Code",
-    titleEs: "Tu Primer Proyecto de Programación con IA: Construye una Página Web Sin Saber Programar",
-    titleAr: "مشروعك الأول في البرمجة بالذكاء الاصطناعي: أنشئ صفحة ويب بسيطة دون معرفة كيفية البرمجة",
+    title: "Custom GPTs and Automation: Build Your Own AI Assistant",
+    titleEs: "GPTs Personalizados y Automatización: Crea tu Propio Asistente de IA",
+    titleAr: "GPTs المخصصة والأتمتة: ابنِ مساعد الذكاء الاصطناعي الخاص بك",
     description:
-      "You don't need to learn Python to build something useful. We'll use Cursor's free tier to make a personal landing page — and you'll copy-paste the prompts.",
+      "Create custom versions of ChatGPT for your specific needs. Learn to build, configure with knowledge files, and share GPTs — no coding required.",
     descriptionEs:
-      "No necesitas aprender Python para construir algo útil. Usaremos el nivel gratuito de Cursor para hacer una página personal — y copiarás y pegarás los prompts.",
+      "Crea versiones personalizadas de ChatGPT para tus necesidades específicas. Aprende a construir, configurar con archivos de conocimiento y compartir GPTs.",
     descriptionAr:
-      "لست بحاجة لتعلم Python لبناء شيء مفيد. سنستخدم الطبقة المجانية من Cursor لإنشاء صفحة هبوط شخصية — وستقوم بنسخ ولصق الأوامر.",
+      "أنشئ إصدارات مخصصة من ChatGPT لاحتياجاتك الخاصة. تعلم كيفية بناء وتكوين ومشاركة GPTs — بدون برمجة.",
     category: "ai-tutorials",
-    tags: ["coding", "cursor", "beginner", "no-code", "project-based"],
-    difficulty: "beginner",
-    toolsMentioned: ["cursor"],
-    date: "2026-05-13",
+    tags: ["chatgpt", "custom-gpts", "automation", "gpt-store", "no-code"],
+    difficulty: "intermediate",
+    toolsMentioned: ["chatgpt"],
+    date: "2026-05-22",
   },
 
   // ====== AI Use Cases (5) ======
   {
     slug: "etsy-seller-ai-product-descriptions",
-    title: "How a Small Etsy Shop Owner Uses AI to Write Product Descriptions",
-    titleEs: "Cómo un Pequeño Vendedor de Etsy Usa IA para Escribir Descripciones de Productos",
-    titleAr: "كيف يستخدم صاحب متجر Etsy صغير الذكاء الاصطناعي لكتابة أوصاف المنتجات",
+    title: "AI for Business Communication: Emails, Proposals, and Client Outreach",
+    titleEs: "IA para Comunicación Empresarial: Correos, Propuestas y Atención al Cliente",
+    titleAr: "الذكاء الاصطناعي للاتصالات التجارية: رسائل البريد الإلكتروني والعروض والتواصل مع العملاء",
     description:
-      "\"I used to spend 2 hours per listing just on the description.\" Here's the exact workflow a real Etsy seller uses — including the prompt template you can steal.",
+      "Professional communication takes hours each day. Use AI to draft emails, proposals, pitches, and product descriptions faster while maintaining your professional tone.",
     descriptionEs:
-      "\"Solía pasar 2 horas por anuncio solo en la descripción.\" Aquí está el flujo de trabajo exacto que usa un vendedor real de Etsy — incluyendo la plantilla de prompt que puedes copiar.",
+      "La comunicación profesional toma horas cada día. Usa IA para redactar correos, propuestas y descripciones de productos más rápido manteniendo tu tono profesional.",
     descriptionAr:
-      "\"كنت أقضي ساعتين لكل إعلان على الوصف فقط.\" إليك سير العمل الدقيق الذي يستخدمه بائع Etsy حقيقي — بما في ذلك نموذج الأمر الذي يمكنك سرقته.",
+      "الاتصالات المهنية تستغرق ساعات كل يوم. استخدم الذكاء الاصطناعي لصياغة رسائل البريد الإلكتروني والعروض ووصف المنتجات بشكل أسرع مع الحفاظ على نغمتك المهنية.",
     category: "ai-use-cases",
-    tags: ["etsy", "small-business", "product-descriptions", "real-example", "prompt-template"],
+    tags: ["business", "communication", "email", "proposals", "productivity"],
     difficulty: "beginner",
     toolsMentioned: ["chatgpt", "claude"],
-    date: "2026-05-20",
+    date: "2026-05-22",
   },
   {
     slug: "ai-wedding-planning-free-tools",
-    title: "AI for Wedding Planning: Timeline, Budget, and Speech Help (All Free)",
-    titleEs: "IA para Planificación de Bodas: Cronograma, Presupuesto y Ayuda con Discursos (Todo Gratis)",
-    titleAr: "الذكاء الاصطناعي لتخطيط حفلات الزفاف: الجدول الزمني والميزانية والمساعدة في الخطاب (كلها مجانية)",
+    title: "AI for Project Planning and Organization: From Timelines to Budgets",
+    titleEs: "IA para Planificación y Organización de Proyectos: De Cronogramas a Presupuestos",
+    titleAr: "الذكاء الاصطناعي لتخطيط وتنظيم المشاريع: من الجداول الزمنية إلى الميزانيات",
     description:
-      "Planning a wedding is basically a part-time job. Here's how to use free AI tools for the timeline, budget tracking, seating chart logic, and even writing your vows.",
+      "AI excels at structured planning. Use it for timelines, budgets, task breakdowns, decision matrices, and status reports — whether for work projects or personal events.",
     descriptionEs:
-      "Planificar una boda es básicamente un trabajo a tiempo parcial. Aquí te mostramos cómo usar herramientas IA gratuitas para el cronograma, presupuesto y hasta escribir tus votos.",
+      "La IA sobresale en planificación estructurada. Úsala para cronogramas, presupuestos, desgloses de tareas y matrices de decisión — para proyectos laborales o personales.",
     descriptionAr:
-      "التخطيط لحفل زفاف هو في الأساس وظيفة بدوام جزئي. إليك كيفية استخدام أدوات الذكاء الاصطناعي المجانية للجدول الزمني وتتبع الميزانية وحتى كتابة عهود الزواج.",
+      "يتفوق الذكاء الاصطناعي في التخطيط المنظم. استخدمه للجداول الزمنية والميزانيات وتقسيم المهام ومصفوفات القرار — سواء للمشاريع العملية أو الشخصية.",
     category: "ai-use-cases",
-    tags: ["wedding", "planning", "free-tools", "life-event", "practical"],
+    tags: ["planning", "project-management", "timeline", "budget", "productivity"],
     difficulty: "beginner",
-    toolsMentioned: ["chatgpt", "gemini", "canva-ai"],
-    date: "2026-05-18",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-22",
   },
   {
     slug: "ai-travel-itinerary-real-prompts",
-    title: "How to Use AI to Plan a 7-Day Trip Itinerary (With Real Prompts You Can Copy)",
-    titleEs: "Cómo Usar IA para Planificar un Itinerario de Viaje de 7 Días (Con Prompts Reales que Puedes Copiar)",
-    titleAr: "كيفية استخدام الذكاء الاصطناعي لتخطيط برنامج رحلة لمدة 7 أيام (مع أوامر حقيقية يمكنك نسخها)",
+    title: "AI for Research and Report Writing: Find, Analyze, and Summarize",
+    titleEs: "IA para Investigación y Redacción de Informes: Encuentra, Analiza y Resume",
+    titleAr: "الذكاء الاصطناعي للبحث وكتابة التقارير: ابحث وحلل ولخص",
     description:
-      "Don't pay for a travel agent. Here's how to get ChatGPT to plan your entire 7-day trip — flights, hotels, daily activities, and restaurant recs — with prompts you can copy-paste.",
+      "Accelerate your research workflow with AI. Plan your approach, analyze sources, interpret data, and write reports — with prompting techniques that produce reliable results.",
     descriptionEs:
-      "No pagues por un agente de viajes. Aquí te mostramos cómo hacer que ChatGPT planifique todo tu viaje de 7 días — vuelos, hoteles, actividades diarias y recomendaciones de restaurantes.",
+      "Acelera tu flujo de trabajo de investigación con IA. Planifica tu enfoque, analiza fuentes, interpreta datos y escribe informes — con técnicas de prompting fiables.",
     descriptionAr:
-      "لا تدفع لوكيل سفر. إليك كيفية جعل ChatGPT يخطط لرحلتك الكاملة لمدة 7 أيام — الرحلات الجوية والفنادق والأنشطة اليومية وتوصيات المطاعم.",
+      "سرّع سير عمل البحث الخاص بك باستخدام الذكاء الاصطناعي. خطط لنهجك وحلل المصادر وفسر البيانات واكتب التقارير — بتقنيات أوامر موثوقة.",
     category: "ai-use-cases",
-    tags: ["travel", "itinerary", "chatgpt", "prompt-template", "planning"],
-    difficulty: "beginner",
-    toolsMentioned: ["chatgpt", "gemini"],
-    date: "2026-05-16",
+    tags: ["research", "report-writing", "analysis", "productivity", "data"],
+    difficulty: "intermediate",
+    toolsMentioned: ["chatgpt", "perplexity"],
+    date: "2026-05-22",
   },
   {
     slug: "learn-english-with-ai-free-speaking-practice",
-    title: "Learning English With AI: Free Speaking Practice Without a Tutor",
-    titleEs: "Aprendiendo Inglés Con IA: Práctica de Conversación Gratis Sin Tutor",
-    titleAr: "تعلم الإنجليزية بالذكاء الاصطناعي: ممارسة محادثة مجانية بدون معلم",
+    title: "AI for Learning and Skill Development: Language, Tech, and More",
+    titleEs: "IA para Aprendizaje y Desarrollo de Habilidades: Idiomas, Tecnología y Más",
+    titleAr: "الذكاء الاصطناعي للتعلم وتطوير المهارات: اللغات والتقنية والمزيد",
     description:
-      "English tutors are expensive. Here's how to use ChatGPT's voice mode and other free tools to practice speaking, get pronunciation feedback, and build vocabulary — all for free.",
+      "AI is the most powerful self-education tool ever created. Use it for language practice with voice mode, interview prep, concept learning, and certification study.",
     descriptionEs:
-      "Los tutores de inglés son caros. Aquí te mostramos cómo usar el modo de voz de ChatGPT y otras herramientas gratuitas para practicar conversación y mejorar pronunciación — todo gratis.",
+      "La IA es la herramienta de autoeducación más poderosa jamás creada. Úsala para práctica de idiomas con modo de voz, preparación de entrevistas y estudio de certificaciones.",
     descriptionAr:
-      "مدرسو اللغة الإنجليزية مكلفون. إليك كيفية استخدام وضع الصوت في ChatGPT وأدوات مجانية أخرى لممارسة التحدث والحصول على ملاحظات النطق وبناء المفردات — كل ذلك مجاناً.",
+      "الذكاء الاصطناعي هو أقوى أداة للتعلم الذاتي تم إنشاؤها على الإطلاق. استخدمه لممارسة اللغة مع وضع الصوت والتحضير للمقابلات ودراسة الشهادات.",
     category: "ai-use-cases",
-    tags: ["language-learning", "english", "voice-mode", "free", "speaking"],
+    tags: ["learning", "education", "language", "skills", "voice-mode"],
     difficulty: "beginner",
-    toolsMentioned: ["chatgpt", "gemini"],
-    date: "2026-05-14",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-22",
   },
   {
     slug: "ai-for-parents-quiet-moments",
@@ -297,20 +314,20 @@ export const articles: Article[] = [
   // ====== AI Comparisons (5) ======
   {
     slug: "free-ai-image-generators-same-prompt-test",
-    title: "I Tested 4 Free AI Image Generators With the Same Prompt — See the Results",
-    titleEs: "Probé 4 Generadores de Imagen IA Gratis Con el Mismo Prompt — Mira los Resultados",
-    titleAr: "اختبرت 4 مولدات صور مجانية بالذكاء الاصطناعي بنفس الأمر — شاهد النتائج",
+    title: "Midjourney Basics: Getting Started with AI Image Creation",
+    titleEs: "Fundamentos de Midjourney: Cómo Empezar con la Creación de Imágenes con IA",
+    titleAr: "أساسيات Midjourney: البدء في إنشاء الصور بالذكاء الاصطناعي",
     description:
-      "Same prompt, four different tools, side by side. I tested DALL-E 3, Leonardo, Firefly, and Stable Diffusion on portraits, landscapes, and text-in-image. One was surprisingly good.",
+      "Midjourney produces the highest-quality AI images, but it requires Discord. Here is how to set up, write your first /imagine prompt, and master essential parameters.",
     descriptionEs:
-      "Mismo prompt, cuatro herramientas diferentes, lado a lado. Probé DALL-E 3, Leonardo, Firefly y Stable Diffusion en retratos, paisajes y texto en imagen. Una fue sorprendentemente buena.",
+      "Midjourney produce las imágenes de IA de mayor calidad, pero requiere Discord. Aquí te mostramos cómo configurarlo, escribir tu primer prompt /imagine y dominar los parámetros esenciales.",
     descriptionAr:
-      "نفس الأمر، أربع أدوات مختلفة، جنباً إلى جنب. اختبرت DALL-E 3 وLeonardo وFirefly وStable Diffusion على الصور الشخصية والمناظر الطبيعية والنص في الصورة. واحدة كانت جيدة بشكل مفاجئ.",
+      "ينتج Midjourney صور الذكاء الاصطناعي الأعلى جودة، لكنه يتطلب Discord. إليك كيفية الإعداد وكتابة أول أمر /imagine لك وإتقان المعلمات الأساسية.",
     category: "ai-comparisons",
-    tags: ["image-generation", "comparison", "free-tools", "side-by-side", "same-prompt"],
+    tags: ["midjourney", "image-generation", "tutorial", "discord", "beginner"],
     difficulty: "beginner",
-    toolsMentioned: ["dalle-3", "leonardo-ai", "adobe-firefly", "stable-diffusion"],
-    date: "2026-05-19",
+    toolsMentioned: ["midjourney"],
+    date: "2026-05-22",
   },
   {
     slug: "chatgpt-free-vs-plus-2026-what-you-get",
@@ -466,5 +483,119 @@ export const articles: Article[] = [
     difficulty: "beginner",
     toolsMentioned: [],
     date: "2026-05-13",
+  },
+
+  // ====== Claude Code Path (Part 2/4) ======
+  {
+    slug: "claude-code-mcp-configuration",
+    title: "Configure MCP Servers in Claude Code: File Access, APIs, and Databases",
+    titleEs: "Configura Servidores MCP en Claude Code: Acceso a Archivos, APIs y Bases de Datos",
+    titleAr: "تكوين خوادم MCP في Claude Code: الوصول إلى الملفات وواجهات برمجة التطبيقات وقواعد البيانات",
+    description:
+      "Extend Claude Code's capabilities with MCP (Model Context Protocol) servers. Learn to configure file system access, API integration, and database connections.",
+    descriptionEs:
+      "Extiende las capacidades de Claude Code con servidores MCP. Aprende a configurar acceso al sistema de archivos, integración de APIs y conexiones a bases de datos.",
+    descriptionAr:
+      "وسّع قدرات Claude Code باستخدام خوادم MCP. تعلم تكوين الوصول إلى نظام الملفات وتكامل واجهات برمجة التطبيقات والاتصال بقواعد البيانات.",
+    category: "ai-tutorials",
+    tags: ["claude-code", "mcp", "configuration", "servers", "tools"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-05-22",
+  },
+
+  // ====== Claude Code Path (Part 3/4) ======
+  {
+    slug: "claude-code-in-action",
+    title: "Claude Code in Action: Build a Real Project from Scratch",
+    titleEs: "Claude Code en Acción: Construye un Proyecto Real Desde Cero",
+    titleAr: "Claude Code في العمل: ابنِ مشروعاً حقيقياً من الصفر",
+    description:
+      "Watch Claude Code build a complete web application from a single prompt. See the full workflow — planning, coding, debugging, and deployment.",
+    descriptionEs:
+      "Observa a Claude Code construir una aplicación web completa desde un solo prompt. Ve el flujo de trabajo completo — planificación, codificación, depuración y despliegue.",
+    descriptionAr:
+      "شاهد Claude Code يبني تطبيق ويب كامل من أمر واحد. شاهد سير العمل الكامل — التخطيط والبرمجة والتصحيح والنشر.",
+    category: "ai-tutorials",
+    tags: ["claude-code", "project", "web-development", "workflow"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-05-22",
+  },
+
+  // ====== Claude Code Path (Part 4/4) ======
+  {
+    slug: "claude-code-advanced",
+    title: "Advanced Claude Code: Custom Slash Commands, Hooks, and CI/CD Integration",
+    titleEs: "Claude Code Avanzado: Comandos Slash Personalizados, Hooks e Integración CI/CD",
+    titleAr: "Claude Code المتقدم: أوامر الشرطة المخصصة والخطافات وتكامل CI/CD",
+    description:
+      "Take Claude Code to production. Build custom slash commands, pre-commit hooks for code quality, and integrate with your CI/CD pipeline.",
+    descriptionEs:
+      "Lleva Claude Code a producción. Crea comandos slash personalizados, hooks de pre-commit para calidad de código e intégralo con tu pipeline CI/CD.",
+    descriptionAr:
+      "خذ Claude Code إلى الإنتاج. ابنِ أوامر شرطة مخصصة وخطافات pre-commit لجودة الكود ودمجها مع خط أنابيب CI/CD الخاص بك.",
+    category: "ai-tutorials",
+    tags: ["claude-code", "advanced", "hooks", "ci-cd", "custom-commands"],
+    difficulty: "advanced",
+    toolsMentioned: ["claude"],
+    date: "2026-05-22",
+  },
+
+  // ====== AI Image Generation Path (Part 2/4) ======
+  {
+    slug: "ai-image-dalle-firefly",
+    title: "DALL-E vs Firefly vs Midjourney: Which AI Image Generator Should You Use?",
+    titleEs: "DALL-E vs Firefly vs Midjourney: Qué Generador de Imágenes por IA Deberías Usar",
+    titleAr: "DALL-E ضد Firefly ضد Midjourney: أي مولد صور بالذكاء الاصطناعي يجب أن تستخدم؟",
+    description:
+      "Compare the three leading AI image generators head-to-head. See real outputs, pricing, and use cases to decide which one fits your workflow.",
+    descriptionEs:
+      "Compara los tres principales generadores de imágenes por IA cara a cara. Ve resultados reales, precios y casos de uso para decidir cuál se adapta a tu flujo de trabajo.",
+    descriptionAr:
+      "قارن بين مولدات الصور الرائدة بالذكاء الاصطناعي وجهاً لوجه. شاهد النتائج الحقيقية والأسعار وحالات الاستخدام لتقرر أيها يناسب سير عملك.",
+    category: "ai-tutorials",
+    tags: ["ai-image", "dalle", "firefly", "midjourney", "comparison"],
+    difficulty: "beginner",
+    toolsMentioned: ["dalle", "midjourney", "firefly"],
+    date: "2026-05-22",
+  },
+
+  // ====== AI Image Generation Path (Part 3/4) ======
+  {
+    slug: "ai-image-prompt-guide",
+    title: "The Ultimate AI Image Prompt Guide: Techniques That Actually Work",
+    titleEs: "La Guía Definitiva de Prompts para Imágenes por IA: Técnicas Que Realmente Funcionan",
+    titleAr: "الدليل النهائي لأوامر الصور بالذكاء الاصطناعي: تقنيات تعمل فعلاً",
+    description:
+      "Go beyond 'a cat in space.' Learn professional prompt techniques — style references, lighting specs, composition rules, and negative prompts that deliver stunning results.",
+    descriptionEs:
+      "Ve más allá de 'un gato en el espacio.' Aprende técnicas profesionales de prompts — referencias de estilo, especificaciones de iluminación, reglas de composición y prompts negativos.",
+    descriptionAr:
+      "تجاوز 'قطة في الفضاء.' تعلم تقنيات الأوامر الاحترافية — مراجع الأنماط ومواصفات الإضاءة وقواعد التكوين والأوامر السلبية.",
+    category: "ai-tutorials",
+    tags: ["ai-image", "prompts", "prompt-engineering", "techniques", "guide"],
+    difficulty: "intermediate",
+    toolsMentioned: ["dalle", "midjourney", "firefly", "stable-diffusion"],
+    date: "2026-05-22",
+  },
+
+  // ====== AI Image Generation Path (Part 4/4) ======
+  {
+    slug: "ai-image-commercial-licensing",
+    title: "AI Image Copyright and Commercial Licensing: What You Can and Can't Sell",
+    titleEs: "Derechos de Autor y Licencias Comerciales de Imágenes por IA: Qué Puedes y No Puedes Vender",
+    titleAr: "حقوق النشر والتراخيص التجارية للصور بالذكاء الاصطناعي: ما يمكنك وما لا يمكنك بيعه",
+    description:
+      "Navigate the legal landscape of AI-generated images. Understand copyright rules, commercial licenses, and platform-specific terms for DALL-E, Firefly, and Midjourney.",
+    descriptionEs:
+      "Navega el panorama legal de las imágenes generadas por IA. Comprende las reglas de derechos de autor, licencias comerciales y términos específicos de cada plataforma.",
+    descriptionAr:
+      "تنقل في المشهد القانوني للصور المنشأة بالذكاء الاصطناعي. افهم قواعد حقوق النشر والتراخيص التجارية والشروط الخاصة بكل منصة.",
+    category: "ai-tutorials",
+    tags: ["ai-image", "copyright", "licensing", "commercial", "legal"],
+    difficulty: "beginner",
+    toolsMentioned: ["dalle", "midjourney", "firefly"],
+    date: "2026-05-22",
   },
 ];

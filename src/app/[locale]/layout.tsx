@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Suspense } from "react";
-import { Geist, Geist_Mono, Noto_Sans_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
 import "@/app/globals.css";
 import Header from "@/components/Header";
@@ -11,20 +10,6 @@ import { locales, isValidLocale, localeDir, getDictionary } from "@/lib/i18n";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import type { Locale } from "@/lib/i18n";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const notoSansArabic = Noto_Sans_Arabic({
-  variable: "--font-noto-sans-arabic",
-  subsets: ["arabic"],
-});
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -88,10 +73,7 @@ export default async function LocaleLayout({
 
   const dict = await getDictionary(locale as Locale);
   const dir = localeDir[locale as Locale];
-  const fontClass =
-    locale === "ar"
-      ? `${geistSans.variable} ${geistMono.variable} ${notoSansArabic.variable}`
-      : `${geistSans.variable} ${geistMono.variable}`;
+  const fontClass = "";
 
   return (
     <html
@@ -100,12 +82,13 @@ export default async function LocaleLayout({
       className={`${fontClass} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="512x512" href="/favicon-512.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
         <Script
