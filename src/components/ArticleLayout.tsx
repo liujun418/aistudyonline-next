@@ -163,7 +163,7 @@ export default function ArticleLayout({
             )}
 
             {/* Ad Unit */}
-            <AdUnit adSlot="1234567890" format="rectangle" />
+            <AdUnit adSlot="7831293092" format="rectangle" />
           </div>
         </aside>
       </div>
