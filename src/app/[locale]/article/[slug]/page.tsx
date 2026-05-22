@@ -174,6 +174,16 @@ export default async function ArticlePage({
         content={localizedContent}
         locale={locale}
         dict={dict}
+        tocItems={(() => {
+          const h2Regex = /<h2[^>]*>(.*?)<\/h2>/gi;
+          const items: string[] = [];
+          let m;
+          while ((m = h2Regex.exec(localizedContent)) !== null) {
+            const text = m[1].replace(/<[^>]*>/g, "").trim();
+            if (text) items.push(text);
+          }
+          return items;
+        })()}
       />
     </>
   );

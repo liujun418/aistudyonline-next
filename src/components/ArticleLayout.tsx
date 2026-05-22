@@ -13,6 +13,7 @@ interface ArticleLayoutProps {
   content: React.ReactNode | string;
   locale: string;
   dict: Record<string, unknown>;
+  tocItems?: string[];
 }
 
 function localized(
@@ -29,6 +30,7 @@ export default function ArticleLayout({
   content,
   locale,
   dict,
+  tocItems = [],
 }: ArticleLayoutProps) {
   const aDict = ((dict as any)?.article || {}) as Record<string, string>;
   const siteTitle = ((dict as any)?.site?.title || "AI Study Online") as string;
@@ -115,17 +117,20 @@ export default function ArticleLayout({
         <aside className="lg:w-1/3">
           <div className="sticky top-24 space-y-6">
             {/* On This Page */}
-            <div className="rounded-xl border border-border bg-surface p-5">
-              <h3 className="mb-3 text-sm font-semibold text-foreground">
-                {aDict.tableOfContents || "On This Page"}
-              </h3>
-              <nav className="article-toc space-y-1">
-                <a href="#">Installation</a>
-                <a href="#">Configuration</a>
-                <a href="#">First Project</a>
-                <a href="#">FAQ</a>
-              </nav>
-            </div>
+            {tocItems.length > 0 && (
+              <div className="rounded-xl border border-border bg-surface p-5">
+                <h3 className="mb-3 text-sm font-semibold text-foreground">
+                  {aDict.tableOfContents || "On This Page"}
+                </h3>
+                <nav className="article-toc space-y-1">
+                  {tocItems.map((item, idx) => (
+                    <a key={idx} href={`#${item.toLowerCase().replace(/\s+/g, '-').replace(/[^\w一-鿿-]/g, '')}`}>
+                      {item}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            )}
 
             {/* Tools Mentioned */}
             {mentionedTools.length > 0 && (

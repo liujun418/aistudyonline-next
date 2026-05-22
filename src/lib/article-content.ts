@@ -359,7 +359,7 @@ npm config set registry https://registry.npmjs.org</code></pre>
 <p>Claude Code 是<strong>命令行工具</strong>，适合快速改项目、自动化任务、在终端里直接操作。Cursor 是<strong>IDE</strong>（编辑器），适合边写代码边用 AI 辅助。Copilot 是<strong>IDE 插件</strong>，适合在已有编辑器里自动补全。实际工作中三者可以配合使用。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-code-mcp-configuration">第2部分：Configura Servidores MCP en Claude Code: Acceso a Archivos, APIs y Bases de Datos →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-mcp-configuration">第2部分：在Claude Code中配置MCP服务器：文件访问、API和数据库 →</a></p>
 </div>`,
   },
 
@@ -572,7 +572,7 @@ Processing starts:
 <p>可以，但有条件。像Llama 3.2 3B或Microsoft Phi-3这样的小模型可以在现代笔记本电脑（8GB+内存）上使用Ollama或LM Studio等工具运行。像GPT-4这样的前沿模型需要数据中心级的硬件，无法在本地运行。能够离线运行且尊重隐私的小模型生态系统正在不断壮大——代价是在能力上不如云端模型。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-hallucinations-explained-with-examples">第2部分：Alucinaciones de IA Explicadas: Por Qué ChatGPT Inventa Cosas (Con Ejemplos Reales) →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-hallucinations-explained-with-examples">第2部分：AI幻觉解释：为什么ChatGPT会编造内容（附真实例子） →</a></p>
 </div>`,
   },
   // ... remaining articles stub for build compatibility
@@ -769,7 +769,7 @@ Processing starts:
 <p>不。软件bug是指代码没有按照设计做它应该做的事。幻觉是指模型完全按照设计做了它该做的事（预测最可能的token），但该行为从人类视角产生了错误的陈述。这是架构的特性，不是实现的缺陷。这就是为什么"修复"幻觉从根本上比修复普通软件bug更难。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：¿Qué Herramienta de IA Deberías Usar? Un Marco de Decisión para Principiantes →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：你应该使用哪个AI工具？初学者的决策框架 →</a></p>
 </div>`,
   },
   "how-to-choose-right-ai-tool": {
@@ -1129,7 +1129,7 @@ Processing starts:
 <p>ChatGPT、Claude和Gemini的免费版是持续性的——它们不会在试用期后过期。你可以永久使用，但访问最新模型的权限有限。Perplexity的免费版也是永久的。Midjourney是唯一一个在短期免费试用后需要付费的。这与2023-2024年免费版更受限的情况相比已经发生了变化。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">第4部分：Herramientas IA Gratis vs de Pago: Cuándo Vale la Pena Pagar (y Cuándo No) →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">第4部分：免费vs付费AI工具：何时值得付费（何时不值得） →</a></p>
 </div>`,
   },
   "free-vs-paid-ai-tools-worth-it": {
@@ -1477,7 +1477,7 @@ Processing starts:
 <p>对于非常重的使用（每天数千次查询），API更便宜。例如，通过Claude的API运行自动化任务，根据模型不同，每百万输入token大约花费3-15美元。每月运行数百万token的开发者通过API支付的费用低于20美元的订阅费。但订阅包含了API不提供的聊天界面、项目、文件上传等功能。对大多数人来说，订阅性价比更高；对于自动化/规模化使用，API胜出。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-myths-people-still-believe">第5部分：5 Mitos de IA que Tus Amigos No Técnicos Siguen Creyendo (y Qué es Realmente Verdad) →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-myths-people-still-believe">第5部分：你的非技术朋友仍然相信的5个AI迷思（以及真相是什么） →</a></p>
 </div>`,
   },
   "what-is-a-gpu-non-techie": {
@@ -1945,7 +1945,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>有。ChatGPT有官方的iOS和Android应用，支持语音输入。应用与网页版同步历史记录。高级语音模式（带语气检测的实时对话）在Plus上可用。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-projects-organize-chats">第2部分：Cómo Escribir Prompts Que Realmente Funcionan: El Marco de 5 Puntos →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-projects-organize-chats">第2部分：如何写出真正有效的提示词：5点框架 →</a></p>
 </div>`,
   },
   "claude-projects-organize-chats": {
@@ -2091,7 +2091,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>是的。框架针对LLM如何处理指令，而非平台特定功能。所有主要模型都对结构化的提示词反应更好。Claude对模糊提示词的容忍度略高于ChatGPT，但两者都受益于框架。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：ChatGPT para Escribir: Correos, Informes y Proyectos Creativos →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：ChatGPT写作：邮件、报告和创意项目 →</a></p>
 </div>`,
   },
   "ai-images-that-dont-look-like-ai": {
@@ -2265,7 +2265,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>ChatGPT有输出限制（根据模型不同，每次回复约3000-4000词）。对于更长的文档，使用本文描述的大纲+逐节方法。你也可以使用ChatGPT的高级数据分析功能将各部分合并为单一文档。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：ChatGPT para Investigación y Análisis: Búsqueda Web, Carga de Archivos y Datos →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：ChatGPT研究与分析：网页搜索、文件上传和数据处理 →</a></p>
 </div>`,
   },
   "voice-recording-to-meeting-notes-free": {
@@ -2448,7 +2448,7 @@ and how do I fix it?</code></pre>
 <p>可以。在同一对话中上传多个文件并提出对比性问题："比较报告A和报告B的发现。指出矛盾点和一致之处。"</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/first-ai-coding-project-no-experience">第5部分：GPTs Personalizados y Automatización: Crea tu Propio Asistente de IA →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/first-ai-coding-project-no-experience">第5部分：自定义GPT和自动化：构建你自己的AI助手 →</a></p>
 </div>`,
   },
   "first-ai-coding-project-no-experience": {
@@ -2726,7 +2726,7 @@ due to QA delays."
 <p>对于内部沟通，不需要。对于外部客户工作，取决于你的行业。专业服务公司通常不披露。内容营销机构经常披露。如有疑问，查看客户的AI使用政策。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：IA para Planificación y Organización de Proyectos: De Cronogramas a Presupuestos →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：AI项目规划与组织：从时间线到预算 →</a></p>
 </div>`,
   },
   "ai-wedding-planning-free-tools": {
@@ -2863,7 +2863,7 @@ Sprint速度）、需要做出的决策。使用仪表盘风格格式，
 <p>不能。除非你提供更新，否则AI不会持续记忆项目的状态。把它用作规划助手，而不是项目管理系统。在每次新的规划会话中向AI更新当前状态。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：IA para Investigación y Redacción de Informes: Encuentra, Analiza y Resume →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：AI研究与报告写作：查找、分析和总结 →</a></p>
 </div>`,
   },
   "ai-travel-itinerary-real-prompts": {
@@ -3027,7 +3027,7 @@ available. Mark any sources you are uncertain about as
 <p>单一话题深度研究：NotebookLM（上传来源，提出基于上下文的问題）。多来源探索：Perplexity Pro（带引用的网络搜索）。数据分析：ChatGPT Plus带高级数据分析。三者结合比任何单一工具都强大。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">第4部分：IA para Aprendizaje y Desarrollo de Habilidades: Idiomas, Tecnología y Más →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">第4部分：AI学习与技能发展：语言、技术等 →</a></p>
 </div>`,
   },
   "learn-english-with-ai-free-speaking-practice": {
@@ -3433,7 +3433,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <p>先使用U按钮，然后"在浏览器中打开"，使用Upscayl（免费）或Topaz Gigapixel等工具进一步放大。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-dalle-firefly">第2部分：DALL-E vs Firefly vs Midjourney: Qué Generador de Imágenes por IA Deberías Usar →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-dalle-firefly">第2部分：DALL-E vs Firefly vs Midjourney：你应该使用哪个AI图像生成器？ →</a></p>
 </div>`,
   },
   "chatgpt-free-vs-plus-2026-what-you-get": {
@@ -4773,7 +4773,7 @@ claude --verbose</code></pre>
 <p>有。MCP服务器可以访问它们连接的任何系统（数据库、API、文件系统）。只从可信来源安装MCP服务器。在安装前检查每个服务器请求的权限。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">第3部分：Claude Code en Acción: Construye un Proyecto Real Desde Cero →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">第3部分：Claude Code实战：从零构建一个真实项目 →</a></p>
 </div>`,
   },
 
@@ -4973,7 +4973,7 @@ xdg-open index.html  # Linux</code></pre>
 <p>可以。导航到任何现有项目，确保它已初始化git，然后运行<code>claude</code>。它读取完整的项目结构，可以立即开始提供帮助。这是Claude Code相对于仅能看到打开文件的IDE工具的优势所在。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-code-advanced">第4部分：Claude Code Avanzado: Comandos Slash Personalizados, Hooks e Integración CI/CD →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-advanced">第4部分：高级Claude Code：自定义Slash命令、Hooks和CI/CD集成 →</a></p>
 </div>`,
   },
 
@@ -5408,7 +5408,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <p>Midjourney生成最美观逼真的图像。DALL-E 3生成更精确描述性的图像，但艺术感较弱。Firefly最擅长编辑现有照片，而不是从头创建新图像。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-prompt-guide">第3部分：La Guía Definitiva de Prompts para Imágenes por IA: Técnicas Que Realmente Funcionan →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-prompt-guide">第3部分：终极AI图像提示指南：真正有效的技巧 →</a></p>
 </div>`,
   },
 
@@ -5632,7 +5632,7 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p>Midjourney：使用V按钮创建变体，然后使用U放大最佳的那个。使用修改后的提示词搭配<code>--seed</code>。DALL-E 3：让ChatGPT"生成这张图像的4个变体"或上传已生成的图像并基于现有构图要求编辑。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-commercial-licensing">第4部分：Derechos de Autor y Licencias Comerciales de Imágenes por IA: Qué Puedes y No Puedes Vender →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-commercial-licensing">第4部分：AI图像版权和商业许可：你可以卖什么，不能卖什么 →</a></p>
 </div>`,
   },
 
