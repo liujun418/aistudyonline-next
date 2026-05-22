@@ -8,6 +8,7 @@ function getFooter(dict: Record<string, unknown> | undefined) {
     about: (f.about as string) || "About",
     privacy: (f.privacy as string) || "Privacy Policy",
     terms: (f.terms as string) || "Terms of Service",
+    refund: (f.refund as string) || "Refund Policy",
     contact: (f.contact as string) || "Contact",
     blog: (f.blog as string) || "Blog",
     tools: (f.tools as string) || "AI Tools",
@@ -49,6 +50,9 @@ export default function Footer({
             </Link>
             <Link href={`/${locale}/terms`} className="hover:text-zinc-900 dark:hover:text-white">
               {f.terms}
+            </Link>
+            <Link href={`/${locale}/refund`} className="hover:text-zinc-900 dark:hover:text-white">
+              {f.refund}
             </Link>
             <Link href={`/${locale}/contact`} className="hover:text-zinc-900 dark:hover:text-white">
               {f.contact}
