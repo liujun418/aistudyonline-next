@@ -20,6 +20,14 @@ const FEATURED_TOOL_IDS = ["chatgpt", "midjourney", "cursor", "elevenlabs"];
 const FEATURED_MODEL_IDS = ["gpt-4o", "claude-4-opus", "gemini-2-5-pro", "deepseek-r1"];
 
 // Hardcoded featured article slugs for the homepage
+// Editor's Picks — hand-curated quality articles
+const EDITORS_PICK_SLUGS = [
+  "llms-in-plain-english",
+  "chatgpt-free-vs-plus-2026-what-you-get",
+  "free-ai-image-generators-same-prompt-test",
+  "claude-vs-chatgpt-writing-blind-test",
+];
+
 const FEATURED_ARTICLE_SLUGS = [
   "what-is-chatgpt-beginners-guide",
   "chatgpt-vs-claude-comparison",
@@ -42,6 +50,7 @@ function getHome(dict: Record<string, unknown> | undefined) {
     viewAllTools: (h.viewAllTools as string) || "View All 100+ Tools →",
     featuredModels: (h.featuredModels as string) || "Featured AI Models",
     viewAllModels: (h.viewAllModels as string) || "View All 25+ Models →",
+    editorPicks: (h.editorPicks as string) || "Editor's Picks",
     latestArticles: (h.latestArticles as string) || "Latest Articles",
     viewAllArticles: (h.viewAllArticles as string) || "View All Articles →",
     browseByCategory: (h.browseByCategory as string) || "Browse by Category",
@@ -79,7 +88,11 @@ export default function HomeClient({
   const home = getHome(dict);
   const featuredTools = tools.filter((t) => FEATURED_TOOL_IDS.includes(t.id));
   const featuredModels = models.filter((m) => FEATURED_MODEL_IDS.includes(m.id));
+  const editorsPicks = articles.filter((a) => EDITORS_PICK_SLUGS.includes(a.slug));
   const featuredArticles = articles.filter((a) => FEATURED_ARTICLE_SLUGS.includes(a.slug));
+  const latestArticles = articles
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 6);
 
   const articleCountMap: Record<string, number> = {};
   articles.forEach((a) => {
@@ -236,11 +249,14 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* Section 4: Latest Articles */}
+      {/* Section 4: Editor's Picks */}
       <section className="bg-surface-alt px-4 py-16 md:py-20 dark:bg-zinc-900/50">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-foreground md:text-3xl">{home.latestArticles}</h2>
+            <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+              <span className="mr-2" role="img" aria-label="star">⭐</span>
+              {home.editorPicks}
+            </h2>
             <Link
               href={`/${locale}/learn`}
               className="text-sm font-medium text-primary-600 hover:text-primary-500 dark:text-primary-400"
@@ -248,8 +264,8 @@ export default function HomeClient({
               {home.viewAllArticles}
             </Link>
           </div>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {featuredArticles.map((article) => (
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {editorsPicks.map((article) => (
               <ArticleCard
                 key={article.slug}
                 slug={article.slug}
@@ -268,7 +284,39 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* Section 5: Browse by Category */}
+      {/* Section 5: Latest Articles */}
+      <section className="px-4 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-8 flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-foreground md:text-3xl">{home.latestArticles}</h2>
+            <Link
+              href={`/${locale}/learn`}
+              className="text-sm font-medium text-primary-600 hover:text-primary-500 dark:text-primary-400"
+            >
+              {home.viewAllArticles}
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {latestArticles.map((article) => (
+              <ArticleCard
+                key={article.slug}
+                slug={article.slug}
+                title={locale === "zh" ? article.titleZh : article.title}
+                description={
+                  locale === "zh" ? article.descriptionZh : article.description
+                }
+                category={article.category}
+                date={article.date}
+                locale={locale}
+                tags={article.tags}
+                difficulty={article.difficulty}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Browse by Category */}
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-8 text-center text-2xl font-bold text-foreground md:text-3xl">

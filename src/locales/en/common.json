@@ -48,7 +48,8 @@
         "title": "Multi-Language",
         "desc": "Content available in English, Spanish, and Arabic. Learn in your preferred language."
       }
-    }
+    },
+    "editorPicks": "Editor's Picks"
   },
   "models": {
     "title": "AI Models Directory",
