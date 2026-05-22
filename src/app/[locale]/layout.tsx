@@ -92,7 +92,7 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="anonymous" />
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-B17KH1S3VM"
+          src="https://www.googletagmanager.com/gtag/js?id=G-MXS4P3XP87"
           strategy="afterInteractive"
         />
         <Script
@@ -103,7 +103,7 @@ export default async function LocaleLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-B17KH1S3VM');
+              gtag('config', 'G-MXS4P3XP87');
             `,
           }}
         />
