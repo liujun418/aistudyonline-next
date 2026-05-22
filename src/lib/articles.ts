@@ -529,4 +529,36 @@ export const articles: Article[] = [
     toolsMentioned: ["dalle3", "midjourney", "adobe-firefly"],
     date: "2026-05-22",
   },
+
+  // ====== AI Basics: 12 Core Concepts ======
+  {
+    slug: "12-core-ai-concepts-guide",
+    title: "Master 12 Core Concepts of AI Large Models in One Guide",
+    titleZh: "一篇文章掌握AI大模型12个核心概念",
+    description:
+      "From model parameters and context windows to RAG and embodied intelligence — this guide breaks down 12 essential AI concepts in plain language with real-world examples.",
+    descriptionZh:
+      "从模型参数、上下文窗口到RAG和具身智能——本文用通俗语言和真实例子解释12个AI必备概念。",
+    category: "ai-basics",
+    tags: ["llm", "concepts", "parameters", "token", "rag", "agent", "quantization", "guide"],
+    difficulty: "beginner",
+    toolsMentioned: ["deepseek", "chatgpt", "claude"],
+    date: "2026-05-22",
+  },
+
+  // ====== AI Tutorials: OpenClaw Demystified ======
+  {
+    slug: "openclaw-demystified-20-lines",
+    title: "Unveiling OpenClaw: Demystify the AI Tool in 20 Lines of Code",
+    titleZh: "揭开OpenClaw面纱：20行代码讲透这个AI工具",
+    description:
+      "OpenClaw (aka Lobster) isn't magic — it's an agent loop + LLM + prompt instructions. Here's exactly how it works, with code you can run yourself.",
+    descriptionZh:
+      "OpenClaw（又名Lobster）不是魔法——它是代理循环+LLM+提示指令的组合。这里用可运行的代码精确解释其工作原理。",
+    category: "ai-tutorials",
+    tags: ["openclaw", "agent", "llm", "automation", "tutorial", "open-source"],
+    difficulty: "intermediate",
+    toolsMentioned: ["openclaw", "openrouter", "claude", "chatgpt"],
+    date: "2026-05-22",
+  },
 ];

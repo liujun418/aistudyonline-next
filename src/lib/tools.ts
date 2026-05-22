@@ -12189,7 +12189,214 @@ export const _tools2 = [
         name: "Synthesys Web", description: "Browser-based platform", descriptionZh: "浏览器平台",
       },
     ],
-  }
+  },
+
+{
+    id: "openclaw",
+    name: "OpenClaw",
+    description: "Open-source AI agent framework that combines LLMs with command execution loops. Turn natural language into automated workflows.",
+    descriptionZh: "开源AI代理框架，将LLM与命令执行循环结合。将自然语言转化为自动化工作流。",
+    category: "coding",
+    tags: ["open-source", "agent", "automation", "cli", "workflow"],
+    difficulty: "advanced",
+    url: "https://github.com/openclaw/openclaw",
+    rating: r(4.2),
+    pricing: "Free (open source)",
+    useCase: "OpenClaw is an open-source AI agent framework that connects LLMs to command execution, enabling automated workflows from natural language.",
+    icon: "\u{1F99E}",
+    company: "OpenClaw Community",
+    companyZh: "OpenClaw社区",
+    founded: "2025",
+    headquarters: "Community",
+    descriptionLong: "OpenClaw (also known as Lobster) is an open-source AI agent framework that bridges large language models with system command execution. It operates on a simple yet powerful loop: an LLM generates commands based on user instructions, the framework executes them, and the results feed back into the LLM for the next step. This enables complex multi-step automation — from file operations and web scraping to API orchestration and deployment pipelines. Extensible via skill documents that teach the agent new capabilities.",
+    descriptionLongZh: "OpenClaw（又称Lobster）是一个开源AI代理框架，连接大语言模型与系统命令执行。它基于一个简单而强大的循环：LLM根据用户指令生成命令，框架执行命令，结果反馈给LLM进行下一步。支持复杂的多步骤自动化——从文件操作、网页抓取到API编排和部署流程。可通过技能文档扩展代理能力。",
+    targetAudience: "Developers and power users who want to automate workflows using natural language instructions.",
+    targetAudienceZh: "希望使用自然语言指令自动化工作流的开发者和高级用户。",
+    scene: "development",
+    advantages: [
+      "Open-source and free",
+      "Extensible via skill documents",
+      "Works with any LLM via API",
+      "Natural language to automation",
+      "Active community development"
+    ],
+    advantagesZh: [
+      "开源免费",
+      "通过技能文档可扩展",
+      "兼容任何LLM的API",
+      "自然语言转自动化",
+      "社区活跃开发"
+    ],
+    useCases: [
+      "File system automation",
+      "Code generation and execution",
+      "Web scraping and data extraction",
+      "API orchestration",
+      "DevOps pipeline automation"
+    ],
+    useCasesZh: [
+      "文件系统自动化",
+      "代码生成与执行",
+      "网页抓取与数据提取",
+      "API编排",
+      "DevOps流水线自动化"
+    ],
+    skills: [
+      "agent",
+      "automation",
+      "CLI",
+      "open source",
+      "workflow"
+    ],
+    pros: [
+      "Completely free and open-source",
+      "Flexible and extensible architecture",
+      "Works with any LLM backend",
+      "Active community and development",
+      "Teaches AI agent fundamentals"
+    ],
+    prosZh: [
+      "完全免费开源",
+      "灵活可扩展的架构",
+      "兼容任何LLM后端",
+      "社区活跃、持续开发",
+      "学习AI代理原理的好工具"
+    ],
+    cons: [
+      "Requires command-line familiarity",
+      "No built-in GUI by default",
+      "Security risks with command execution",
+      "Depends on external LLM API keys"
+    ],
+    consZh: [
+      "需要命令行基础",
+      "默认无图形界面",
+      "命令执行存在安全风险",
+      "依赖外部LLM API密钥"
+    ],
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["All features", "Open-source", "Self-hosted"],
+        featuresZh: ["全部功能", "开源", "自托管"],
+      },
+    ],
+    extensions: [
+      {
+        name: "OpenClaw GitHub",
+        description: "Official open-source repository",
+        descriptionZh: "官方开源仓库",
+      },
+    ],
+  },
+
+{
+    id: "openrouter",
+    name: "OpenRouter",
+    description: "Unified API gateway for accessing 200+ LLMs including GPT-4o, Claude, Gemini, and open-source models through a single endpoint.",
+    descriptionZh: "统一API网关，通过单个端点访问200多个LLM，包括GPT-4o、Claude、Gemini和开源模型。",
+    category: "coding",
+    tags: ["api", "gateway", "multi-model", "unified", "llm"],
+    difficulty: "intermediate",
+    url: "https://openrouter.ai",
+    rating: r(4.5),
+    pricing: "Pay-per-use (no subscription)",
+    useCase: "OpenRouter provides a unified API endpoint to access 200+ LLMs with a single integration and pay-per-use pricing.",
+    icon: "\u{1F500}",
+    company: "OpenRouter",
+    companyZh: "OpenRouter",
+    founded: "2023",
+    headquarters: "Remote",
+    descriptionLong: "OpenRouter is a unified API gateway that gives developers access to 200+ large language models through a single endpoint. Instead of managing separate API keys, billing, and SDKs for each provider (OpenAI, Anthropic, Google, Meta, Mistral, and dozens of open-source models), OpenRouter handles routing, load balancing, and fallback logic automatically. Features include model fallback chains, usage analytics, and competitive pay-per-use pricing across providers. Ideal for comparing model outputs and building multi-model applications.",
+    descriptionLongZh: "OpenRouter是一个统一API网关，开发者通过单个端点即可访问200多个大语言模型。无需为每个提供商分别管理API密钥、计费和SDK，OpenRouter自动处理路由、负载均衡和回退逻辑。功能包括模型回退链、使用量分析和跨提供商的按量计费。非常适合比较模型输出和构建多模型应用。",
+    targetAudience: "Developers who want to access multiple LLMs through a single API without managing separate provider accounts.",
+    targetAudienceZh: "希望通过单一API访问多个LLM而无需分别管理各提供商账户的开发者。",
+    scene: "development",
+    advantages: [
+      "200+ models via one API",
+      "Pay-per-use, no subscription",
+      "Automatic fallback routing",
+      "No monthly commitment",
+      "Compare model outputs easily"
+    ],
+    advantagesZh: [
+      "一个API访问200多个模型",
+      "按量计费，无需订阅",
+      "自动回退路由",
+      "无月度承诺",
+      "轻松比较模型输出"
+    ],
+    useCases: [
+      "Multi-model AI applications",
+      "Model comparison and testing",
+      "Fallback-reliable API routing",
+      "Cost optimization across providers",
+      "Rapid LLM prototyping"
+    ],
+    useCasesZh: [
+      "多模型AI应用",
+      "模型比较与测试",
+      "高可靠API路由回退",
+      "跨提供商成本优化",
+      "快速LLM原型开发"
+    ],
+    skills: [
+      "API",
+      "multi-model",
+      "LLM",
+      "gateway",
+      "integration"
+    ],
+    pros: [
+      "Massive model selection",
+      "Simple unified API",
+      "Pay only for what you use",
+      "Automatic fallback handling",
+      "No provider lock-in"
+    ],
+    prosZh: [
+      "海量模型选择",
+      "统一API使用简单",
+      "按量付费",
+      "自动回退处理",
+      "无供应商锁定"
+    ],
+    cons: [
+      "Adds latency overhead",
+      "Rate limits vary by model",
+      "Premium models cost more than direct",
+      "Limited free tier (credits)"
+    ],
+    consZh: [
+      "增加延迟开销",
+      "不同模型速率限制不同",
+      "付费模型比直连更贵",
+      "免费额度有限"
+    ],
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "Free credits",
+        features: ["Limited free credits", "Access to 200+ models"],
+        featuresZh: ["免费额度有限", "访问200多个模型"],
+      },
+      {
+        tier: "Pay-as-you-go",
+        tierZh: "按量付费",
+        price: "Varies by model",
+        features: ["Full access", "Usage analytics", "No commitment"],
+        featuresZh: ["完整访问", "用量分析", "无承诺"],
+      },
+    ],
+    extensions: [
+      {
+        name: "OpenRouter API", description: "Unified API endpoint", descriptionZh: "统一API网关",
+      },
+    ],
+  },
 ] as Tool[];
 
 export const tools: Tool[] = [..._tools1, ..._tools2];

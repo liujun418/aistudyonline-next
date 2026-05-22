@@ -6071,4 +6071,310 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p><strong>下一篇：</strong> 想本地运行AI模型？阅读<a href="/article/open-source-ai-models-run-on-laptop">2026年开源AI模型：哪些可以在你的笔记本上运行 →</a></p>
 </div>`,
   },
+  "12-core-ai-concepts-guide": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Basics · <strong>Difficulty:</strong> Beginner</p>
+<p><strong>Prerequisites:</strong> None — this guide is designed for absolute beginners.</p>
+<p><strong>What you'll learn:</strong> 12 essential concepts that form the foundation of modern AI large models — from parameters and tokens to agents and embodied intelligence.</p>
+</div>
+
+<p>In the rapidly evolving field of artificial intelligence, grasping the core concepts of large models is crucial for anyone looking to stay ahead. This guide breaks down 12 key concepts, providing you with a solid foundation to navigate the world of AI.</p>
+
+<h2>1. Model Parameters: The "Brain Capacity" of AI</h2>
+
+<p>Model parameters determine an AI's ability to process complex tasks. Measured in billions (B), these parameters act like neurons in a brain. For example, DeepSeek-R1 has a massive 671B parameters, allowing it to handle intricate problems, from philosophical debates to advanced calculations. However, more parameters mean higher hardware requirements — an 8GB GPU, for instance, cannot run a 67B model. Always check your system's capabilities before choosing a model.</p>
+
+<h2>2. Context Window: AI's "Memory"</h2>
+
+<p>The context window defines how much text an AI can process at once, measured in tokens. A 128K context window, like that of DeepSeek-R1, can handle around 60,000 Chinese characters—equivalent to a novella. Without a sufficient context window, AI suffers from "short-term memory," forgetting earlier parts of a conversation. Models like Claude excel here, making them ideal for tasks like summarizing long PDFs or writing novels.</p>
+
+<h2>3. Chain of Thought (CoT) and Max Output Length</h2>
+
+<p><strong>Chain of Thought (CoT):</strong> Forces AI to explain its reasoning step-by-step, boosting accuracy. For example, DeepSeek-R1 uses CoT to solve math problems transparently.</p>
+
+<p><strong>Max Output Length:</strong> Dictates how much text AI can generate at once. While an 8K output might seem long, real-world use often requires segmenting tasks, like writing a novel chapter by chapter.</p>
+
+<h2>4. Quantization: AI's "Slimming Technique"</h2>
+
+<p>Quantization reduces a model's size by compressing its parameters (e.g., from 32-bit to 8-bit). This speeds up load times and lowers hardware needs, making AI runnable on edge devices. However, it trades a small amount of accuracy (5-15%) for performance. Choose quantization levels (e.g., FP8, INT4) based on your task's need for speed vs. precision.</p>
+
+<h2>5. Model Distillation: AI's "Knowledge Transfer"</h2>
+
+<p>Model distillation lets a small "student" model learn from a large "teacher" model (e.g., a 7B model learning from DeepSeek-R1). The student gains skills without copying data, making it smaller, faster, and cheaper to deploy. It is perfect for specific tasks where full model capabilities are not needed, like customer service chatbots.</p>
+
+<h2>6. Token: AI's "Language Unit"</h2>
+
+<p>Tokens are the smallest units of text AI processes (words, characters, or punctuation). Pricing for AI services is based on tokens. Roughly, 1 English character = 0.3 tokens, and 1 Chinese character = 0.6 tokens (varies by model). For example, 1,000 Chinese characters is approximately 600 tokens. Remember: both input and output tokens are charged.</p>
+
+<h2>7. MoE Architecture: AI's "Expert Team"</h2>
+
+<p>Mixture of Experts (MoE) uses multiple "expert" sub-models, each specializing in a task. A gate network activates only relevant experts, saving compute power. Models like DeepSeek-V3 use MoE, appearing large but operating efficiently by "calling experts on demand."</p>
+
+<h2>8. RAG (Retrieval-Augmented Generation): AI's "Research Skill"</h2>
+
+<p>RAG lets AI retrieve external information before generating answers, solving the "knowledge lag" issue. For example, when asked about the 2025 Nobel Physics Prize, RAG fetches the latest news instead of relying on outdated training data. It is widely used in enterprise for tasks like smart customer service.</p>
+
+<h2>9. Reinforcement Learning: AI's "Trial-and-Error Learning"</h2>
+
+<p>Unlike supervised learning (where AI is taught answers), reinforcement learning rewards AI for correct actions and penalizes mistakes. It is great for tasks like math reasoning or game strategy, where learning methods (not just answers) matter. Think of it like a child learning to walk — falling teaches them to balance.</p>
+
+<h2>10. Agent: AI's "Doer"</h2>
+
+<p>Agents are AI entities that <strong>act</strong> — they perceive environments, make decisions, and complete tasks. Unlike chatbots (which only talk), agents can perform actions like booking flights or automating business workflows. They represent AI's shift from "talking" to "doing."</p>
+
+<h2>11. AIGC vs. AGI vs. Agent: AI's "Roles"</h2>
+
+<ul>
+<li><strong>AIGC (AI-Generated Content):</strong> Creates text, images, or music (e.g., ChatGPT, MidJourney).</li>
+<li><strong>AGI (Artificial General Intelligence):</strong> Hypothetical AI with human-like intelligence (still theoretical).</li>
+<li><strong>Agent:</strong> Focuses on <strong>execution</strong> — AGI's "hands and feet."</li>
+</ul>
+
+<p>Analogy: AGI is a restaurant owner, AIGC is the chef, and Agents are the waiters.</p>
+
+<h2>12. Embodied Intelligence: AI's "Physical Interaction"</h2>
+
+<p>Embodied intelligence gives AI a "body" to interact with the physical world (e.g., robots with cameras and robotic arms). It believes intelligence comes from <strong>physical experience</strong> — not just data. This is the future of AI, enabling tasks like autonomous driving or robotic assistance.</p>
+
+<h2>Conclusion</h2>
+
+<p>By mastering these concepts, you will understand the "operating system" of modern AI and be ready to leverage its power in your work or projects. The AI landscape is shifting from generating content to taking action — do not get left behind!</p>
+
+<p>For an even simpler introduction, read <a href="/article/llms-in-plain-english">what LLMs actually are in plain English</a>. If you have ever wondered why AI sometimes makes things up, check out <a href="/article/ai-hallucinations-explained-with-examples">AI Hallucinations Explained with Examples</a>. And if you are curious about the hardware running all of this, see <a href="/article/what-is-a-gpu-non-techie">What's a GPU and Why Does AI Need It?</a></p>
+
+<h2>FAQ</h2>
+
+<h3>Q: How many parameters do I need for everyday AI tasks?</h3>
+<p>For everyday use like writing, brainstorming, and research, models with 7B to 70B parameters are more than sufficient. Massive models (100B+) are typically needed for specialized tasks like advanced math, coding, or scientific research.</p>
+
+<h3>Q: Does a larger context window always mean better AI?</h3>
+<p>Not necessarily. A larger context window is helpful for tasks like analyzing long documents or maintaining complex conversations. However, it also requires more computational resources and can slow down response times. Choose based on your specific use case.</p>
+
+<h3>Q: Do I need to understand all these concepts to use AI tools?</h3>
+<p>No. You can use tools like ChatGPT, Claude, or DeepSeek without knowing any of these concepts. However, understanding them helps you choose the right tool, write better prompts, and debug issues when AI behaves unexpectedly.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> Start with the simplest explanation first — read <a href="/article/llms-in-plain-english">LLMs in Plain English →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI基础 · <strong>难度：</strong> 入门</p>
+<p><strong>前置要求：</strong> 无——本文专为初学者设计。</p>
+<p><strong>你将学到：</strong> 构成现代AI大模型基础的12个核心概念——从参数和Token到代理和具身智能。</p>
+</div>
+
+<p>在人工智能快速发展的领域，掌握大模型的核心概念对于想要保持领先的人来说至关重要。本指南分解了12个关键概念，为你提供了驾驭AI世界的坚实基础。</p>
+
+<h2>1. 模型参数：AI的"大脑容量"</h2>
+
+<p>模型参数决定了AI处理复杂任务的能力。以十亿（B）为单位计量，这些参数就像大脑中的神经元。例如，DeepSeek-R1拥有惊人的671B参数，使其能够处理从哲学辩论到高级计算的复杂问题。然而，更多的参数意味着更高的硬件要求——例如，8GB GPU无法运行67B模型。在选择模型之前，务必检查你的系统能力。</p>
+
+<h2>2. 上下文窗口：AI的"记忆"</h2>
+
+<p>上下文窗口定义了AI一次能处理多少文本，以Token计量。DeepSeek-R1的128K上下文窗口可以处理约60,000个中文字符——相当于一部中篇小说。没有足够的上下文窗口，AI会出现"短期记忆"问题，忘记对话的前面部分。Claude等模型在这方面表现出色，非常适合总结长PDF或写小说等任务。</p>
+
+<h2>3. 思维链（CoT）与最大输出长度</h2>
+
+<p><strong>思维链（CoT）：</strong> 迫使AI逐步解释其推理过程，提高准确性。例如，DeepSeek-R1使用CoT透明地解决数学问题。</p>
+
+<p><strong>最大输出长度：</strong> 决定AI一次能生成多少文本。虽然8K输出看起来很长，但实际使用中通常需要分段完成，比如逐章写小说。</p>
+
+<h2>4. 量化：AI的"瘦身技术"</h2>
+
+<p>量化通过压缩参数（例如，从32位到8位）来减小模型大小。这加快了加载速度并降低了硬件需求，使AI可在边缘设备上运行。但这是用少量精度（5-15%）换取性能。根据任务对速度与精度的需求选择量化级别（如FP8、INT4）。</p>
+
+<h2>5. 模型蒸馏：AI的"知识迁移"</h2>
+
+<p>模型蒸馏让一个小的"学生"模型从大的"教师"模型（例如，7B模型从DeepSeek-R1学习）中学习。学生获得技能但不复制数据，使其更小、更快、更便宜。它非常适合不需要完整模型能力的特定任务，如客服聊天机器人。</p>
+
+<h2>6. Token：AI的"语言单位"</h2>
+
+<p>Token是AI处理的最小文本单位（单词、字符或标点）。AI服务的定价基于Token。粗略计算，1个英文字符约0.3个Token，1个中文字符约0.6个Token（因模型而异）。例如，1,000个中文字符约600个Token。请记住：输入和输出Token都要收费。</p>
+
+<h2>7. MoE架构：AI的"专家团队"</h2>
+
+<p>混合专家（MoE）使用多个"专家"子模型，每个专门处理一种任务。门控网络只激活相关的专家，节省计算资源。DeepSeek-V3等模型使用MoE架构，看似庞大但通过"按需调用专家"高效运行。</p>
+
+<h2>8. RAG（检索增强生成）：AI的"研究能力"</h2>
+
+<p>RAG让AI在生成答案之前检索外部信息，解决了"知识滞后"问题。例如，当被问及2025年诺贝尔物理学奖时，RAG会获取最新新闻而不是依赖过时的训练数据。它在企业中广泛应用于智能客服等任务。</p>
+
+<h2>9. 强化学习：AI的"试错学习"</h2>
+
+<p>与监督学习（教AI正确答案）不同，强化学习对AI的正确行为给予奖励，对错误进行惩罚。它非常适合数学推理或游戏策略等任务——学习方法本身（而不仅仅是答案）才是关键。就像孩子学走路——摔倒教会他们平衡。</p>
+
+<h2>10. 代理（Agent）：AI的"执行者"</h2>
+
+<p>Agent是<strong>行动</strong>的AI实体——它们感知环境、做出决策并完成任务。与只能"说话"的聊天机器人不同，Agent可以执行订机票或自动化业务流程等操作。它们代表了AI从"说话"到"做事"的转变。</p>
+
+<h2>11. AIGC vs. AGI vs. Agent：AI的"角色分工"</h2>
+
+<ul>
+<li><strong>AIGC（AI生成内容）：</strong> 创建文本、图像或音乐（如ChatGPT、MidJourney）。</li>
+<li><strong>AGI（通用人工智能）：</strong> 具有类人智能的假想AI（仍处于理论阶段）。</li>
+<li><strong>Agent：</strong> 专注于<strong>执行</strong>——AGI的"手和脚"。</li>
+</ul>
+
+<p>类比：AGI是餐厅老板，AIGC是厨师，Agent是服务员。</p>
+
+<h2>12. 具身智能：AI的"物理交互"</h2>
+
+<p>具身智能赋予AI一个"身体"来与物理世界交互（例如，带有摄像头和机械臂的机器人）。它认为智能来自<strong>物理经验</strong>——而不仅仅是数据。这是AI的未来，实现自动驾驶或机器人辅助等任务。</p>
+
+<h2>总结</h2>
+
+<p>掌握这些概念后，你将理解现代AI的"操作系统"，并准备好利用它的力量为你服务。AI的格局正在从生成内容转变为采取行动——不要被落下！</p>
+
+<p>想要更简单的入门？阅读<a href="/article/llms-in-plain-english">通俗解释LLM到底是什么</a>。如果你曾好奇AI为什么有时会编造内容，请查看<a href="/article/ai-hallucinations-explained-with-examples">AI幻觉解释（附真实例子）</a>。如果你想了解运行这一切的硬件，请看<a href="/article/what-is-a-gpu-non-techie">什么是GPU？AI为什么需要它？</a></p>
+
+<h2>常见问题</h2>
+
+<h3>问：日常使用AI需要多少参数？</h3>
+<p>对于写作、头脑风暴和研究等日常使用，7B到70B参数的模型完全足够。大规模模型（100B+）通常用于高级数学、编程或科学研究等专业任务。</p>
+
+<h3>问：更大的上下文窗口一定意味着更好的AI吗？</h3>
+<p>不一定。更大的上下文窗口有助于分析长文档或维持复杂对话。但它也需要更多计算资源，可能降低响应速度。根据你的具体使用场景选择。</p>
+
+<h3>问：我需要了解所有这些概念才能使用AI工具吗？</h3>
+<p>不需要。你可以直接使用ChatGPT、Claude或DeepSeek等工具而无需了解任何这些概念。然而，理解它们有助于你选择合适的工具、编写更好的提示词，以及在AI表现异常时排查问题。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> 先从最简单的解释开始——阅读<a href="/article/llms-in-plain-english">通俗解释LLM →</a></p>
+</div>`,
+  },
+  "openclaw-demystified-20-lines": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials · <strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Prerequisites:</strong> Basic familiarity with LLMs (reading <a href="/article/llms-in-plain-english">LLMs in Plain English</a> helps). Some command-line experience is useful.</p>
+<p><strong>What you'll learn:</strong> How OpenClaw (Lobster) actually works — an agent loop + LLM + prompts — in 20 lines of core logic.</p>
+</div>
+
+<p>In the realm of AI tools, "Lobster" (OpenClaw) has been making waves recently, sparking polarized and even contradictory discussions online. Some hail it as an all-powerful tool of the future, while others dismiss it as useless or even a scam. Prices for related services vary too, from $70 for installation to $40 for uninstallation. But what is the real story behind OpenClaw? Let us break it down from the ground up.</p>
+
+<h2>Start with Large Language Models (LLMs)</h2>
+
+<p>LLMs like ChatGPT are essentially question-and-answer systems. To interact with them programmatically, we use <strong>API interfaces</strong>. Major LLM providers such as OpenAI and Anthropic Claude offer HTTP-based APIs, and intermediaries like <a href="/tools/openrouter">OpenRouter</a> even provide SDKs for easier integration, say, with Python.</p>
+
+<p>Here is a simple example. Take a piece of official sample code, modify the LLM model (e.g., switch to Claude's Opus 4.6) and the input question (e.g., "Hello" in Chinese), then run it via the command line. You will get a response from the LLM, proving you can interact with LLMs programmatically.</p>
+
+<h2>Fix the "Memory" Issue of LLMs</h2>
+
+<p>LLMs do not have built-in memory. To enable continuous conversation, we need to pass the <strong>conversation history</strong> every time. Maintain a <code>messages</code> list, append user questions and LLM responses to it, and the LLM will "remember" the context.</p>
+
+<p>Run the improved code, ask "Hello", then "1 + 1 = ?", and then "add 1 more", the LLM will correctly answer "3" because it has the full conversation history.</p>
+
+<h2>Build an Agent</h2>
+
+<p>An <strong>Agent</strong> is the core of OpenClaw. It works by having the LLM generate executable commands, which the program then runs automatically.</p>
+
+<ul>
+<li><strong>Set Response Rules:</strong> Instruct the LLM to reply with either "Command: XXX" or "Done: XXX".</li>
+<li><strong>Loop Execution:</strong> The program loops, executing commands if the LLM outputs "Command: XXX" and ending the loop when it outputs "Done: XXX".</li>
+</ul>
+
+<p>For example, to create a <code>hello.txt</code> file with "hello world", the LLM will generate <code>echo "hello world" > hello.txt</code>, and the program will execute it, creating the file locally. Another example: to download and zip videos, the Agent will use <code>yt-dlp</code> to download and <code>zip</code> to compress, all automatically.</p>
+
+<h2>The Essence of OpenClaw</h2>
+
+<p>OpenClaw is essentially a combination of <strong>Agent loop + LLM + Prompt Instructions</strong>. The Agent does not understand the commands; it just executes them blindly. The "intelligence" comes from the LLM's ability to generate commands and the pre-defined "instruction manual" (prompts).</p>
+
+<ul>
+<li><strong>Extend Capabilities:</strong> Add "skill documents" (like <code>skill.md</code>) to teach the Agent new commands, e.g., how to search for news.</li>
+<li><strong>Interface Customization:</strong> Transform the command-line interface into an HTTP service with a web UI, or integrate with social platforms like Feishu/QQ for remote control — this is what most people recognize as "Lobster."</li>
+</ul>
+
+<h2>A Balanced View</h2>
+
+<p>OpenClaw is neither all-powerful nor useless. Its effectiveness depends on whether operations in the world are <strong>command-based or API-based</strong> and whether the LLM knows those commands. It pushes the trend of making operations more command- and API-centric, but this also brings risks (e.g., executing malicious commands), echoing ethical debates in movies like <em>I, Robot</em>.</p>
+
+<p>In short, OpenClaw is a powerful paradigm, but its true potential lies in how command- and API-driven our world becomes. For a deeper dive into LLM fundamentals, read <a href="/article/llms-in-plain-english">LLMs in Plain English</a>. If you want to try OpenClaw yourself, check out its <a href="/tools/openclaw">tool page</a> and the <a href="/tools/openrouter">OpenRouter</a> service that powers many multi-model workflows. For a step-by-step CLI setup guide, see <a href="/article/claude-code-install-setup">Claude Code Installation and Setup</a>.</p>
+
+<h2>FAQ</h2>
+
+<h3>Q: Do I need to know programming to use OpenClaw?</h3>
+<p>Basic command-line familiarity is helpful. You need to know how to open a terminal, navigate directories, and run commands. However, you do not need to be a professional programmer — the LLM handles the actual coding.</p>
+
+<h3>Q: Is OpenClaw safe to run on my computer?</h3>
+<p>OpenClaw can execute arbitrary commands generated by the LLM. This is powerful but risky. Always review commands before they run, especially if the LLM has access to system-level operations. Use sandbox environments for testing.</p>
+
+<h3>Q: How is OpenClaw different from Claude Code or ChatGPT?</h3>
+<p>ChatGPT and Claude are chat interfaces. <a href="/article/claude-code-install-setup">Claude Code</a> is a coding assistant. OpenClaw is a framework that lets you build your own agents — you decide what the LLM can do and how it interacts with your system.</p>
+
+<h3>Q: Can I use OpenClaw with any LLM?</h3>
+<p>Yes. OpenClaw works with any LLM that has an API endpoint. You can use OpenAI, Anthropic Claude, or any model available through <a href="/tools/openrouter">OpenRouter</a>.</p>
+
+<h2>Next Steps</h2>
+
+<p>Now that you understand OpenClaw, explore more advanced agent capabilities with <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills guide →</a></p>
+
+<div class="next-step">
+<p><strong>Next:</strong> Learn about the most powerful Claude Code extensions — <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI教程 · <strong>难度：</strong> 中级</p>
+<p><strong>前置要求：</strong> 对LLM有基本了解（阅读<a href="/article/llms-in-plain-english">通俗解释LLM</a>有帮助）。有一些命令行经验更好。</p>
+<p><strong>你将学到：</strong> OpenClaw（Lobster）的实际工作原理——代理循环+LLM+提示词——20行核心逻辑。</p>
+</div>
+
+<p>在AI工具领域，"Lobster"（OpenClaw）最近引起了广泛关注，网上讨论两极分化甚至互相矛盾。有人称其为全能的未来工具，也有人认为它毫无用处甚至是骗局。相关服务价格也差异很大，从70美元的安装到40美元的卸载。但OpenClaw背后的真实故事是什么？让我们从头拆解。</p>
+
+<h2>首先了解大语言模型（LLM）</h2>
+
+<p>像ChatGPT这样的LLM本质上是问答系统。要以编程方式与它们交互，我们使用<strong>API接口</strong>。OpenAI和Anthropic Claude等主要LLM提供商提供基于HTTP的API，而<a href="/tools/openrouter">OpenRouter</a>等中间商甚至提供SDK以便于集成。</p>
+
+<p>一个简单的例子：取一段官方示例代码，修改LLM模型（例如，切换到Claude的Opus 4.6）和输入问题，然后通过命令行运行。你将收到LLM的响应，证明你可以通过编程方式与LLM交互。</p>
+
+<h2>解决LLM的"记忆"问题</h2>
+
+<p>LLM没有内置记忆。要实现持续对话，我们需要每次传递<strong>对话历史</strong>。维护一个<code>messages</code>列表，将用户问题和LLM响应追加到其中，LLM就会"记住"上下文。</p>
+
+<p>运行改进后的代码，先问"你好"，再问"1+1=?"，然后问"再加1"，LLM会正确回答"3"，因为它拥有完整的对话历史。</p>
+
+<h2>构建一个Agent</h2>
+
+<p><strong>Agent</strong>是OpenClaw的核心。它的工作原理是让LLM生成可执行的命令，然后程序自动运行这些命令。</p>
+
+<ul>
+<li><strong>设置响应规则：</strong> 指示LLM用"Command: XXX"或"Done: XXX"格式回复。</li>
+<li><strong>循环执行：</strong> 程序循环运行，如果LLM输出"Command: XXX"则执行命令，输出"Done: XXX"则结束循环。</li>
+</ul>
+
+<p>例如，要创建一个包含"hello world"的<code>hello.txt</code>文件，LLM会生成<code>echo "hello world" > hello.txt</code>，程序执行该命令，在本地创建文件。另一个例子：下载并压缩视频，Agent会使用<code>yt-dlp</code>下载和<code>zip</code>压缩，全部自动完成。</p>
+
+<h2>OpenClaw的本质</h2>
+
+<p>OpenClaw本质上是<strong>Agent循环 + LLM + 提示指令</strong>的组合。Agent不理解命令的含义，它只是盲目执行。"智能"来自LLM生成命令的能力和预定义的"指令手册"（提示词）。</p>
+
+<ul>
+<li><strong>扩展能力：</strong> 添加"技能文档"（如<code>skill.md</code>）来教Agent新命令，例如如何搜索新闻。</li>
+<li><strong>界面定制：</strong> 将命令行界面转变为带有Web UI的HTTP服务，或集成到飞书/QQ等社交平台进行远程控制——这是大多数人认识的"Lobster"。</li>
+</ul>
+
+<h2>客观看待</h2>
+
+<p>OpenClaw既不是万能的，也不是无用的。它的有效性取决于世界上的操作是否是<strong>基于命令或API的</strong>，以及LLM是否知道这些命令。它推动操作更加命令和API中心化的趋势，但这也带来了风险（例如执行恶意命令），呼应了《我，机器人》等电影中的伦理辩论。</p>
+
+<p>简而言之，OpenClaw是一个强大的范式，但其真正潜力取决于我们的世界在多大程度上由命令和API驱动。要深入了解LLM基础，请阅读<a href="/article/llms-in-plain-english">通俗解释LLM</a>。如果你想亲自尝试OpenClaw，请查看其<a href="/tools/openclaw">工具页面</a>和驱动许多多模型工作流的<a href="/tools/openrouter">OpenRouter</a>服务。如需逐步CLI设置指南，请参阅<a href="/article/claude-code-install-setup">Claude Code安装与配置</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：使用OpenClaw需要会编程吗？</h3>
+<p>基本的命令行操作经验会很有帮助。你需要知道如何打开终端、导航目录和运行命令。但你不需要是专业程序员——LLM会处理实际的编码工作。</p>
+
+<h3>问：OpenClaw在电脑上运行安全吗？</h3>
+<p>OpenClaw可以执行LLM生成的任意命令。这很强大但也存在风险。在执行前始终审查命令，特别是当LLM可以访问系统级操作时。建议在沙箱环境中进行测试。</p>
+
+<h3>问：OpenClaw与Claude Code或ChatGPT有什么不同？</h3>
+<p>ChatGPT和Claude是聊天界面。<a href="/article/claude-code-install-setup">Claude Code</a>是编程助手。OpenClaw是一个让你构建自己Agent的框架——你决定LLM能做什么以及如何与系统交互。</p>
+
+<h3>问：OpenClaw可以使用任何LLM吗？</h3>
+<p>是的。OpenClaw可以与任何提供API端点的LLM配合使用。你可以使用OpenAI、Anthropic Claude或通过<a href="/tools/openrouter">OpenRouter</a>可用的任何模型。</p>
+
+<h2>下一步</h2>
+
+<p>现在你已经理解了OpenClaw，探索更高级的Agent能力——阅读<a href="/article/claude-code-top-7-skills">Claude Code七大技能完整指南 →</a></p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> 了解最强大的Claude Code扩展——<a href="/article/claude-code-top-7-skills">Claude Code七大技能 →</a></p>
+</div>`,
+  },
 };
