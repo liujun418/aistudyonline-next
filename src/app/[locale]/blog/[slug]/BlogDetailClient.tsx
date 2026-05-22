@@ -31,7 +31,7 @@ export default function BlogDetailClient({
   const catColor = categoryColors[post.category] || "bg-primary-100 text-primary-700";
   const rawContent = locale === "zh" ? post.contentZh : post.content;
   const content = rawContent.replace(
-    /href="\/(article|learn|tools|models|blog)\//g,
+    /href="\/(article|learn|tools|models|blog)(\/|")/g,
     `href="/${locale}/$1/`,
   );
 
