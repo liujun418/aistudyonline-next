@@ -1,5 +1,7 @@
 "use client";
 
+import AdUnit from "@/components/AdUnit";
+
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { models, modelCategories, modelCategoryLabels } from "@/lib/models";

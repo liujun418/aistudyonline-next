@@ -168,9 +168,14 @@ export default function ArticleLayout({
         </aside>
       </div>
 
+      {/* Bottom Ad */}
+      <div className="mx-auto mt-10 max-w-3xl">
+        <AdUnit adSlot="7831293092" format="horizontal" />
+      </div>
+
       {/* Related Articles */}
       {related.length > 0 && (
-        <section className="mt-12 border-t border-border pt-8">
+        <section className="mt-8 border-t border-border pt-8">
           <h2 className="mb-6 text-xl font-bold text-foreground">
             {aDict.relatedArticles || "Related Articles"}
           </h2>

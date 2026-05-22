@@ -1,5 +1,7 @@
 "use client";
 
+import AdUnit from "@/components/AdUnit";
+
 import { useState, useMemo } from "react";
 import ToolCard from "@/components/ToolCard";
 import { tools, toolCategories, toolCategoryLabels, toolScenes, toolSceneLabels } from "@/lib/tools";

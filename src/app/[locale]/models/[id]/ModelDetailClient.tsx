@@ -1,5 +1,7 @@
 "use client";
 
+import AdUnit from "@/components/AdUnit";
+
 import Link from "next/link";
 import { models as allModels } from "@/lib/models";
 import type { AIModel } from "@/lib/models";
@@ -315,6 +317,11 @@ export default function ModelDetailClient({
           </div>
         </div>
       </section>
+
+      {/* Ad */}
+      <div className="mb-10 flex justify-center">
+        <AdUnit adSlot="7831293092" format="rectangle" />
+      </div>
 
       {/* Related Models */}
       {relatedModels.length > 0 && (

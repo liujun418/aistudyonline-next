@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { tools as allTools } from "@/lib/tools";
 import { articles } from "@/lib/articles";
+import AdUnit from "@/components/AdUnit";
 import type { Tool } from "@/lib/tools";
 
 function getLabel(d: Record<string, unknown> | undefined, section: string, key: string, fallback: string): string {
@@ -299,6 +300,11 @@ export default function ToolDetailClient({
           </div>
         </section>
       )}
+
+      {/* Ad */}
+      <div className="mb-10 flex justify-center">
+        <AdUnit adSlot="7831293092" format="rectangle" />
+      </div>
 
       {/* Extensions & Plugins */}
       {tool.extensions.length > 0 && (
