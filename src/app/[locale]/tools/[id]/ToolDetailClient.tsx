@@ -282,10 +282,10 @@ export default function ToolDetailClient({
                 key={i}
                 className="flex flex-col rounded-xl border border-border bg-surface p-5 shadow-sm transition hover:shadow-md"
               >
-                <h3 className="mb-1 text-lg font-semibold text-foreground">{tier.tier}</h3>
+                <h3 className="mb-1 text-lg font-semibold text-foreground">{locale === "zh" ? tier.tierZh : tier.tier}</h3>
                 <p className="mb-4 text-2xl font-bold text-primary-600">{tier.price}</p>
                 <ul className="space-y-2">
-                  {tier.features.map((f: string, j: number) => (
+                  {(locale === "zh" ? tier.featuresZh : tier.features).map((f: string, j: number) => (
                     <li key={j} className="flex items-start gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                       <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -311,7 +311,7 @@ export default function ToolDetailClient({
                 className="rounded-xl border border-border bg-surface p-4 shadow-sm transition hover:shadow-md"
               >
                 <h3 className="text-sm font-semibold text-foreground">{ext.name}</h3>
-                <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{ext.description}</p>
+                <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{locale === "zh" ? ext.descriptionZh : ext.description}</p>
                 {ext.url && (
                   <a
                     href={ext.url}

@@ -35,10 +35,10 @@ export interface Tool {
   targetAudienceZh: string;
 
   // Pricing tiers
-  pricingTiers: { tier: string; price: string; features: string[] }[];
+  pricingTiers: { tier: string; tierZh: string; price: string; features: string[]; featuresZh: string[] }[];
 
   // Extensions / plugins
-  extensions: { name: string; description: string; url?: string }[];
+  extensions: { name: string; description: string; descriptionZh: string; url?: string }[];
 
   // Related skills
   skills: string[];
@@ -152,42 +152,63 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "GPT-4o mini access",
           "Limited GPT-5 messages",
           "Basic file uploads"
-        ]
+        ],
+        featuresZh: [
+          "GPT-4o mini访问权限",
+          "GPT-5消息有限额度",
+          "基础文件上传",
+        ],
       },
       {
         tier: "Plus",
+          tierZh: "Plus版",
         price: "$20/mo",
         features: [
           "Unlimited GPT-5",
           "Advanced data analysis",
           "DALL-E 3",
           "Custom GPTs"
-        ]
+        ],
+        featuresZh: [
+          "GPT-5无限使用",
+          "高级数据分析",
+          "DALL-E 3图像生成",
+          "自定义GPTs",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$200/mo",
         features: [
           "Unlimited GPT-5 Turbo",
           "Priority access",
           "Extended context"
-        ]
+        ],
+        featuresZh: [
+          "GPT-5 Turbo无限使用",
+          "优先访问",
+          "扩展上下文",
+        ],
       }
     ],  
   extensions: [
         {
           name: "ChatGPT for Chrome",
           description: "Official browser extension",
+          descriptionZh: "官方浏览器扩展程序",
           url: "https://chrome.google.com/webstore"
         },
         {
           name: "ChatGPT Desktop",
-          description: "Native apps for Windows and macOS"
+          description: "Native apps for Windows and macOS",
+          descriptionZh: "Windows和macOS桌面应用",
         }
       ],  
   scene: "content-creation",
@@ -270,40 +291,60 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Claude 4 Sonnet",
           "Limited daily messages",
           "Basic uploads"
-        ]
+        ],
+        featuresZh: [
+          "Claude 4 Sonnet模型",
+          "每日消息限制",
+          "基础文件上传",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$20/mo",
         features: [
           "Unlimited Claude 4 Sonnet",
           "Claude 4 Opus",
           "Projects"
-        ]
+        ],
+        featuresZh: [
+          "Claude 4 Sonnet无限使用",
+          "Claude 4 Opus模型",
+          "项目管理",
+        ],
       },
       {
         tier: "Team",
+          tierZh: "团队版",
         price: "$30/user/mo",
         features: [
           "All Pro features",
           "Higher limits",
           "Shared workspaces"
-        ]
+        ],
+        featuresZh: [
+          "所有专业版功能",
+          "更高使用额度",
+          "共享工作区",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Claude Code CLI",
-          description: "Command-line coding assistant"
+          description: "Command-line coding assistant",
+          descriptionZh: "命令行编码助手",
         },
         {
           name: "Claude API",
-          description: "Enterprise API with SSO"
+          description: "Enterprise API with SSO",
+          descriptionZh: "企业级API，支持单点登录",
         }
       ],  
   scene: "content-creation",
@@ -387,31 +428,45 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Gemini 2.0 Flash",
           "Google Search",
           "File uploads"
-        ]
+        ],
+        featuresZh: [
+          "Gemini 2.0 Flash模型",
+          "谷歌搜索",
+          "文件上传",
+        ],
       },
       {
         tier: "Advanced",
+          tierZh: "高级版",
         price: "$19.99/mo",
         features: [
           "Gemini 2.0 Pro",
           "1TB Drive storage",
           "Workspace integration"
-        ]
+        ],
+        featuresZh: [
+          "Gemini 2.0 Pro模型",
+          "1TB云盘存储",
+          "工作区集成",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Gemini for Workspace",
-          description: "AI across Gmail, Docs, Sheets"
+          description: "AI across Gmail, Docs, Sheets",
+          descriptionZh: "Gmail、文档和表格的AI功能",
         },
         {
           name: "Gemini Mobile",
-          description: "Android/iOS app with voice"
+          description: "Android/iOS app with voice",
+          descriptionZh: "支持语音的Android/iOS应用",
         }
       ],  
   scene: "office-productivity",
@@ -493,31 +548,45 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free Chat",
+          tierZh: "免费聊天版",
         price: "$0",
         features: [
           "Unlimited DeepSeek chat",
           "DeepSeek-R1",
           "File uploads"
-        ]
+        ],
+        featuresZh: [
+          "DeepSeek无限聊天",
+          "DeepSeek-R1模型",
+          "文件上传",
+        ],
       },
       {
         tier: "API",
+          tierZh: "API版",
         price: "From $0.14/M tokens",
         features: [
           "R1 and V3 API",
           "Rate limits",
           "Fine-tuning"
-        ]
+        ],
+        featuresZh: [
+          "R1和V3 API",
+          "速率限制",
+          "模型微调",
+        ],
       }
     ],  
   extensions: [
         {
           name: "DeepSeek API",
-          description: "REST API for app integration"
+          description: "REST API for app integration",
+          descriptionZh: "用于应用集成的REST API",
         },
         {
           name: "Ollama Support",
-          description: "Run locally via Ollama"
+          description: "Run locally via Ollama",
+          descriptionZh: "通过Ollama本地运行",
         }
       ],  
   scene: "free-open-source",
@@ -601,31 +670,45 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Standard search",
           "Limited Pro searches",
           "File uploads"
-        ]
+        ],
+        featuresZh: [
+          "标准搜索",
+          "专业搜索有限额度",
+          "文件上传",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$20/mo",
         features: [
           "Unlimited Pro",
           "Unlimited file analysis",
           "API access"
-        ]
+        ],
+        featuresZh: [
+          "专业搜索无限使用",
+          "文件分析无限使用",
+          "API访问权限",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Perplexity Browser Extension",
-          description: "Search anywhere on the web"
+          description: "Search anywhere on the web",
+          descriptionZh: "在网页任意位置搜索",
         },
         {
           name: "Perplexity Mobile",
-          description: "iOS and Android apps"
+          description: "iOS and Android apps",
+          descriptionZh: "iOS和Android应用",
         }
       ],  
   scene: "office-productivity",
@@ -710,37 +793,45 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Basic",
+          tierZh: "基础版",
         price: "$10/mo",
         features: [
           "3.3 hrs/month GPU",
           "Commercial license"
-        ]
+        ],
+        featuresZh: ["每月3.3小时GPU时长", "商业使用授权"],
       },
       {
         tier: "Standard",
+          tierZh: "标准版",
         price: "$30/mo",
         features: [
           "15 hrs/month GPU",
           "Stealth mode"
-        ]
+        ],
+        featuresZh: ["每月15小时GPU时长", "隐身模式"],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$60/mo",
         features: [
           "30 hrs/month GPU",
           "Priority queue"
-        ]
+        ],
+        featuresZh: ["每月30小时GPU时长", "优先队列"],
       }
     ],  
   extensions: [
         {
           name: "Midjourney Discord Bot",
-          description: "Primary interface via Discord"
+          description: "Primary interface via Discord",
+          descriptionZh: "通过Discord使用的主要界面",
         },
         {
           name: "Midjourney Web",
-          description: "Web editor and gallery"
+          description: "Web editor and gallery",
+          descriptionZh: "网页编辑器和作品集",
         }
       ],  
   scene: "design-video",
@@ -826,25 +917,30 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "ChatGPT Free",
+          tierZh: "ChatGPT免费版",
         price: "$0",
         features: [
           "Limited DALL-E 3",
           "Basic resolution"
-        ]
+        ],
+        featuresZh: ["DALL-E 3有限使用", "基础分辨率"],
       },
       {
         tier: "ChatGPT Plus",
+          tierZh: "ChatGPT Plus版",
         price: "$20/mo",
         features: [
           "Unlimited DALL-E 3",
           "HD resolution"
-        ]
+        ],
+        featuresZh: ["DALL-E 3无限使用", "高清分辨率"],
       }
     ],  
   extensions: [
         {
           name: "Built into ChatGPT",
-          description: "Access via ChatGPT interface"
+          description: "Access via ChatGPT interface",
+          descriptionZh: "通过ChatGPT界面访问",
         }
       ],  
   scene: "design-video",
@@ -924,31 +1020,45 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Self-hosted",
+          tierZh: "自托管版",
         price: "$0",
         features: [
           "Unlimited generation",
           "Full privacy",
           "All models"
-        ]
+        ],
+        featuresZh: [
+          "无限生成",
+          "完全隐私保护",
+          "所有模型",
+        ],
       },
       {
         tier: "API",
+          tierZh: "API版",
         price: "Pay-as-you-go",
         features: [
           "Cloud hosted",
           "API access",
           "No GPU needed"
-        ]
+        ],
+        featuresZh: [
+          "云端托管",
+          "API访问权限",
+          "无需GPU",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Automatic1111 WebUI",
-          description: "Most popular SD interface"
+          description: "Most popular SD interface",
+          descriptionZh: "最流行的Stable Diffusion界面",
         },
         {
           name: "ComfyUI",
-          description: "Node-based workflow interface"
+          description: "Node-based workflow interface",
+          descriptionZh: "基于节点的可视化工作流界面",
         }
       ],  
   scene: "free-open-source",
@@ -1033,31 +1143,45 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "25 credits/month",
           "Basic features",
           "Express access"
-        ]
+        ],
+        featuresZh: [
+          "每月25积分",
+          "基础功能",
+          "Express访问权限",
+        ],
       },
       {
         tier: "Premium",
+          tierZh: "高级版",
         price: "$4.99/mo",
         features: [
           "100 credits/month",
           "Full features",
           "Commercial use"
-        ]
+        ],
+        featuresZh: [
+          "每月100积分",
+          "全部功能",
+          "商业使用授权",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Adobe Photoshop",
-          description: "Generative Fill built in"
+          description: "Generative Fill built in",
+          descriptionZh: "内置生成式填充功能",
         },
         {
           name: "Adobe Express",
-          description: "Quick AI design tool"
+          description: "Quick AI design tool",
+          descriptionZh: "快速AI设计工具",
         }
       ],  
   scene: "design-video",
@@ -1142,33 +1266,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "150 tokens/day",
           "Standard models"
-        ]
+        ],
+        featuresZh: ["每日150点数", "标准模型"],
       },
       {
         tier: "Starter",
+          tierZh: "入门版",
         price: "$10/mo",
         features: [
           "2500 tokens/month",
           "Faster generation"
-        ]
+        ],
+        featuresZh: ["每月2500点数", "更快的生成速度"],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$24/mo",
         features: [
           "8000 tokens/month",
           "API access"
-        ]
+        ],
+        featuresZh: ["每月8000点数", "API访问权限"],
       }
     ],  
   extensions: [
         {
           name: "Leonardo Web App",
-          description: "Full web-based creation platform"
+          description: "Full web-based creation platform",
+          descriptionZh: "基于网页的完整创作平台",
         }
       ],  
   scene: "design-video",
@@ -1253,35 +1384,50 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Limited generations",
           "720p export"
-        ]
+        ],
+        featuresZh: ["有限生成次数", "720p导出"],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$15/mo",
         features: [
           "Unlimited generations",
           "4K export",
           "Green screen"
-        ]
+        ],
+        featuresZh: [
+          "无限生成",
+          "4K导出",
+          "绿幕功能",
+        ],
       },
       {
         tier: "Team",
+          tierZh: "团队版",
         price: "$30/mo",
         features: [
           "All Pro",
           "Collaboration",
           "Priority support"
-        ]
+        ],
+        featuresZh: [
+          "所有专业版功能",
+          "团队协作",
+          "优先支持",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Runway Browser",
-          description: "Web-based editing platform"
+          description: "Web-based editing platform",
+          descriptionZh: "基于网页的编辑平台",
         }
       ],  
   scene: "design-video",
@@ -1365,26 +1511,35 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Limited generations",
           "Standard quality"
-        ]
+        ],
+        featuresZh: ["有限生成次数", "标准质量"],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$10/mo",
         features: [
           "More generations",
           "HD quality",
           "Faster queue"
-        ]
+        ],
+        featuresZh: [
+          "更多生成次数",
+          "高清质量",
+          "更快的处理队列",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Pika Web App",
-          description: "Browser-based video generation"
+          description: "Browser-based video generation",
+          descriptionZh: "基于浏览器的视频生成",
         }
       ],  
   scene: "design-video",
@@ -1468,36 +1623,55 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "1 min video",
           "Watermark",
           "Basic avatars"
-        ]
+        ],
+        featuresZh: [
+          "1分钟视频",
+          "包含水印",
+          "基础虚拟形象",
+        ],
       },
       {
         tier: "Creator",
+          tierZh: "创作者版",
         price: "$29/mo",
         features: [
           "10 mins/month",
           "No watermark",
           "HD export"
-        ]
+        ],
+        featuresZh: [
+          "每月10分钟",
+          "无水印",
+          "高清导出",
+        ],
       },
       {
         tier: "Business",
+          tierZh: "商务版",
         price: "$89/mo",
         features: [
           "30 mins/month",
           "Custom avatars",
           "Priority support"
-        ]
+        ],
+        featuresZh: [
+          "每月30分钟",
+          "自定义虚拟形象",
+          "优先支持",
+        ],
       }
     ],  
   extensions: [
         {
           name: "HeyGen Web",
-          description: "Browser-based video creation platform"
+          description: "Browser-based video creation platform",
+          descriptionZh: "基于浏览器的视频创作平台",
         }
       ],  
   scene: "design-video",
@@ -1582,27 +1756,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Creator",
+          tierZh: "创作者版",
         price: "$49/mo",
         features: [
           "1 user",
           "50+ templates",
           "SEO mode"
-        ]
+        ],
+        featuresZh: [
+          "1个用户",
+          "50多个模板",
+          "SEO模式",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$69/mo",
         features: [
           "3 users",
           "Brand voice",
           "Custom templates"
-        ]
+        ],
+        featuresZh: [
+          "3个用户",
+          "品牌语气",
+          "自定义模板",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Jasper Chrome Extension",
-          description: "Write anywhere on the web"
+          description: "Write anywhere on the web",
+          descriptionZh: "在网页任意位置写作",
         }
       ],  
   scene: "marketing",
@@ -1689,27 +1876,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "2000 words/month",
           "1 user",
           "Basic templates"
-        ]
+        ],
+        featuresZh: [
+          "每月2000词",
+          "1个用户",
+          "基础模板",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$36/mo",
         features: [
           "Unlimited words",
           "5 users",
           "Workflows"
-        ]
+        ],
+        featuresZh: [
+          "无限字数",
+          "5个用户",
+          "工作流自动化",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Copy.ai Chrome Extension",
-          description: "Write anywhere"
+          description: "Write anywhere",
+          descriptionZh: "随处写作",
         }
       ],  
   scene: "marketing",
@@ -1794,18 +1994,25 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Add-on",
+          tierZh: "附加功能版",
         price: "$10/mo",
         features: [
           "Per member",
           "AI writing",
           "Auto-fill databases"
-        ]
+        ],
+        featuresZh: [
+          "按成员计费",
+          "AI写作",
+          "自动填充数据库",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Notion AI Built-in",
-          description: "Available in all Notion workspaces"
+          description: "Available in all Notion workspaces",
+          descriptionZh: "所有Notion工作区可用",
         }
       ],  
   scene: "office-productivity",
@@ -1892,40 +2099,60 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Basic grammar",
           "Spelling",
           "Punctuation"
-        ]
+        ],
+        featuresZh: [
+          "基础语法检查",
+          "拼写检查",
+          "标点检查",
+        ],
       },
       {
         tier: "Premium",
+          tierZh: "高级版",
         price: "$12/mo",
         features: [
           "Full grammar",
           "Tone detection",
           "Plagiarism"
-        ]
+        ],
+        featuresZh: [
+          "完整语法检查",
+          "语气检测",
+          "查重功能",
+        ],
       },
       {
         tier: "Business",
+          tierZh: "商务版",
         price: "$15/user/mo",
         features: [
           "All Premium",
           "Style guide",
           "Analytics"
-        ]
+        ],
+        featuresZh: [
+          "所有高级版功能",
+          "风格指南",
+          "数据分析",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Grammarly for Chrome",
-          description: "Browser extension for all sites"
+          description: "Browser extension for all sites",
+          descriptionZh: "支持所有网站的浏览器扩展",
         },
         {
           name: "Grammarly Desktop",
-          description: "Windows and Mac app"
+          description: "Windows and Mac app",
+          descriptionZh: "Windows和Mac应用",
         }
       ],  
   scene: "content-creation",
@@ -2010,26 +2237,35 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "200 AI completions",
           "Basic chat"
-        ]
+        ],
+        featuresZh: ["200次AI补全", "基础聊天"],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$20/mo",
         features: [
           "Unlimited AI",
           "Agent mode",
           "Multi-file edit"
-        ]
+        ],
+        featuresZh: [
+          "AI无限使用",
+          "代理模式",
+          "多文件编辑",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Cursor Editor",
-          description: "Standalone VS Code fork with AI"
+          description: "Standalone VS Code fork with AI",
+          descriptionZh: "集成AI的独立VS Code分支",
         }
       ],  
   scene: "development",
@@ -2114,30 +2350,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "2000 completions/month",
           "Code chat"
-        ]
+        ],
+        featuresZh: ["每月2000次补全", "代码聊天"],
       },
       {
         tier: "Individual",
+          tierZh: "个人版",
         price: "$10/mo",
         features: [
           "Unlimited",
           "Multi-file",
           "PR summaries"
-        ]
+        ],
+        featuresZh: [
+          "无限使用",
+          "多文件支持",
+          "PR摘要生成",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Copilot for VS Code",
-          description: "VS Code extension"
+          description: "VS Code extension",
+          descriptionZh: "VS Code扩展",
         },
         {
           name: "Copilot for JetBrains",
-          description: "JetBrains IDE plugin"
+          description: "JetBrains IDE plugin",
+          descriptionZh: "JetBrains IDE插件",
         }
       ],  
   scene: "development",
@@ -2222,27 +2468,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Limited compute",
           "AI agent access",
           "Public projects"
-        ]
+        ],
+        featuresZh: [
+          "有限计算资源",
+          "AI代理访问",
+          "公开项目",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$20/mo",
         features: [
           "Unlimited compute",
           "Private projects",
           "Faster AI"
-        ]
+        ],
+        featuresZh: [
+          "无限计算资源",
+          "私有项目",
+          "更快的AI响应",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Replit Browser",
-          description: "Web-based IDE and deployment"
+          description: "Web-based IDE and deployment",
+          descriptionZh: "基于网页的IDE和部署平台",
         }
       ],  
   scene: "development",
@@ -2327,26 +2586,35 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Limited AI credits",
           "Basic templates"
-        ]
+        ],
+        featuresZh: ["有限AI额度", "基础模板"],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$10/mo",
         features: [
           "Unlimited AI",
           "All templates",
           "Export options"
-        ]
+        ],
+        featuresZh: [
+          "AI无限使用",
+          "所有模板",
+          "导出选项",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Gamma Web App",
-          description: "Browser-based creation tool"
+          description: "Browser-based creation tool",
+          descriptionZh: "基于浏览器的创作工具",
         }
       ],  
   scene: "office-productivity",
@@ -2430,27 +2698,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$12/mo",
         features: [
           "Unlimited presentations",
           "All templates",
           "Export"
-        ]
+        ],
+        featuresZh: [
+          "无限演示文稿",
+          "所有模板",
+          "导出功能",
+        ],
       },
       {
         tier: "Team",
+          tierZh: "团队版",
         price: "$40/user/mo",
         features: [
           "All Pro",
           "Team library",
           "Brand control"
-        ]
+        ],
+        featuresZh: [
+          "所有专业版功能",
+          "团队资源库",
+          "品牌控制",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Beautiful.ai Web",
-          description: "Browser-based presentation tool"
+          description: "Browser-based presentation tool",
+          descriptionZh: "基于浏览器的演示文稿工具",
         }
       ],  
   scene: "office-productivity",
@@ -2536,31 +2817,45 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Limited AI",
           "250K+ templates",
           "1GB storage"
-        ]
+        ],
+        featuresZh: [
+          "AI功能有限",
+          "超过25万个模板",
+          "1GB存储空间",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$12.99/mo",
         features: [
           "Unlimited AI",
           "100M+ assets",
           "Brand kits"
-        ]
+        ],
+        featuresZh: [
+          "AI无限使用",
+          "超过1亿素材",
+          "品牌工具包",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Canva Web App",
-          description: "Full browser-based design platform"
+          description: "Full browser-based design platform",
+          descriptionZh: "完整的基于浏览器的设计平台",
         },
         {
           name: "Canva Desktop",
-          description: "Windows and Mac app"
+          description: "Windows and Mac app",
+          descriptionZh: "Windows和Mac应用",
         }
       ],  
   scene: "design-video",
@@ -2645,33 +2940,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "10K chars/month",
           "Standard voices"
-        ]
+        ],
+        featuresZh: ["每月1万字符", "标准语音"],
       },
       {
         tier: "Starter",
+          tierZh: "入门版",
         price: "$5/mo",
         features: [
           "30K chars/month",
           "Voice cloning"
-        ]
+        ],
+        featuresZh: ["每月3万字符", "语音克隆"],
       },
       {
         tier: "Creator",
+          tierZh: "创作者版",
         price: "$22/mo",
         features: [
           "100K chars/month",
           "API access"
-        ]
+        ],
+        featuresZh: ["每月10万字符", "API访问权限"],
       }
     ],  
   extensions: [
         {
           name: "ElevenLabs Web",
-          description: "Browser-based TTS platform"
+          description: "Browser-based TTS platform",
+          descriptionZh: "基于浏览器的语音合成平台",
         }
       ],  
   scene: "content-creation",
@@ -2756,26 +3058,35 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "5 songs/day",
           "Basic quality"
-        ]
+        ],
+        featuresZh: ["每天5首", "基础质量"],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$10/mo",
         features: [
           "500 songs/month",
           "Full quality",
           "Commercial use"
-        ]
+        ],
+        featuresZh: [
+          "每月500首",
+          "完整质量",
+          "商业使用授权",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Suno Web",
-          description: "Browser-based music generation"
+          description: "Browser-based music generation",
+          descriptionZh: "基于浏览器的音乐生成",
         }
       ],  
   scene: "content-creation",
@@ -2859,26 +3170,35 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "10 mins voice",
           "Limited voices"
-        ]
+        ],
+        featuresZh: ["10分钟语音", "有限语音选择"],
       },
       {
         tier: "Basic",
+          tierZh: "基础版",
         price: "$19/mo",
         features: [
           "24 hours/year",
           "All voices",
           "Commercial use"
-        ]
+        ],
+        featuresZh: [
+          "每年24小时",
+          "所有语音",
+          "商业使用授权",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Murf Web",
-          description: "Browser-based voiceover studio"
+          description: "Browser-based voiceover studio",
+          descriptionZh: "基于浏览器的配音工作室",
         }
       ],  
   scene: "content-creation",
@@ -2963,26 +3283,35 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Audit",
+          tierZh: "旁听版",
         price: "$0",
         features: [
           "Video access",
           "Limited exercises"
-        ]
+        ],
+        featuresZh: ["视频课程访问", "有限练习"],
       },
       {
         tier: "Coursera",
+          tierZh: "Coursera版",
         price: "From $49/mo",
         features: [
           "Full courses",
           "Projects",
           "Certificate"
-        ]
+        ],
+        featuresZh: [
+          "完整课程",
+          "项目管理",
+          "结业证书",
+        ],
       }
     ],  
   extensions: [
         {
           name: "DeepLearning.AI Website",
-          description: "Course platform and community"
+          description: "Course platform and community",
+          descriptionZh: "课程平台和社区",
         }
       ],  
   scene: "free-open-source",
@@ -3066,18 +3395,25 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "All Courses",
+          tierZh: "全部课程版",
         price: "$0",
         features: [
           "All course materials",
           "Forum access",
           "Book included"
-        ]
+        ],
+        featuresZh: [
+          "所有课程资料",
+          "论坛访问权限",
+          "包含教材",
+        ],
       }
     ],  
   extensions: [
         {
           name: "fast.ai Forums",
-          description: "Community discussion platform"
+          description: "Community discussion platform",
+          descriptionZh: "社区讨论平台",
         }
       ],  
   scene: "free-open-source",
@@ -3162,30 +3498,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Open Source",
+          tierZh: "开源版",
         price: "$0",
         features: [
           "All framework features",
           "Self-hosted"
-        ]
+        ],
+        featuresZh: ["所有框架功能", "自行托管"],
       },
       {
         tier: "LangSmith",
+          tierZh: "LangSmith版",
         price: "Pay-as-you-go",
         features: [
           "Debugging",
           "Monitoring",
           "Evaluation"
-        ]
+        ],
+        featuresZh: [
+          "调试功能",
+          "监控功能",
+          "评估功能",
+        ],
       }
     ],  
   extensions: [
         {
           name: "LangChain Python",
-          description: "Python framework package"
+          description: "Python framework package",
+          descriptionZh: "Python框架包",
         },
         {
           name: "LangChain JS",
-          description: "JavaScript/TypeScript framework"
+          description: "JavaScript/TypeScript framework",
+          descriptionZh: "JavaScript/TypeScript框架",
         }
       ],  
   scene: "development",
@@ -3271,27 +3617,40 @@ export const tools: Tool[] = [
   pricingTiers: [
       {
         tier: "Free",
+          tierZh: "免费版",
         price: "$0",
         features: [
           "Public models",
           "Datasets",
           "Limited Spaces"
-        ]
+        ],
+        featuresZh: [
+          "公开模型",
+          "数据集访问",
+          "有限Spaces额度",
+        ],
       },
       {
         tier: "Pro",
+          tierZh: "专业版",
         price: "$9/mo",
         features: [
           "Private repos",
           "More Spaces",
           "Inference API"
-        ]
+        ],
+        featuresZh: [
+          "私有仓库",
+          "更多Spaces额度",
+          "推理API",
+        ],
       }
     ],  
   extensions: [
         {
           name: "Hugging Face Hub",
-          description: "Web platform and APIs"
+          description: "Web platform and APIs",
+          descriptionZh: "网页平台和API",
         }
       ],  
   scene: "free-open-source",
@@ -3354,10 +3713,9 @@ export const tools: Tool[] = [
     targetAudience: "Content marketers and small business owners needing SEO-optimized copy at scale.",
     targetAudienceZh: "需要大规模SEO优化文案的内容营销人员和小企业主。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["10,000 words/month", "Basic templates"] },
-      { tier: "Pro", price: "$19/mo", features: ["Unlimited words", "SEO optimization", "Brand voice"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["10,000 words/month", "Basic templates"], featuresZh: ["每月1万字", "基础模板"] },
     ],
-    extensions: [{ name: "Writesonic Chrome Extension", description: "Write anywhere on the web" }],
+    extensions: [{ name: "Writesonic Chrome Extension", description: "Write anywhere on the web", descriptionZh: "在网页任意位置写作" }],
     skills: ["copywriting", "SEO writing", "content marketing", "email marketing", "landing pages"],
     pros: ["SEO-focused writing", "Good for long-form content", "Real-time fact checking", "Affordable pricing"],
     prosZh: ["专注于SEO写作", "适合长内容", "实时事实核查", "价格实惠"],
@@ -3391,10 +3749,9 @@ export const tools: Tool[] = [
     targetAudience: "Budget-conscious solo creators and small teams needing versatile AI writing.",
     targetAudienceZh: "预算有限的个人创作者和小团队，需要多功能AI写作。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["5,000 chars/month", "40+ templates"] },
-      { tier: "Pro", price: "$9/mo", features: ["50,000 chars/month", "Plagiarism check", "Custom tones"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["5,000 chars/month", "40+ templates"], featuresZh: ["每月5000字符", "40多个模板"] },
     ],
-    extensions: [{ name: "Rytr Web App", description: "Browser-based writing tool" }],
+    extensions: [{ name: "Rytr Web App", description: "Browser-based writing tool", descriptionZh: "基于浏览器的写作工具" }],
     skills: ["copywriting", "content creation", "email writing", "social media"],
     pros: ["Very affordable", "Good template variety", "Easy to use", "Plagiarism checker included"],
     prosZh: ["价格实惠", "模板种类丰富", "易于使用", "包含查重功能"],
@@ -3428,10 +3785,9 @@ export const tools: Tool[] = [
     targetAudience: "Students, researchers, and professionals who need to paraphrase, summarize, and polish written content.",
     targetAudienceZh: "需要改写、总结和润色书面内容的学生、研究人员和专业人士。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited paraphrasing", "2 modes", "Basic summary"] },
-      { tier: "Premium", price: "$9.95/mo", features: ["Unlimited paraphrasing", "7 modes", "Plagiarism check"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited paraphrasing", "2 modes", "Basic summary"], featuresZh: ["有限改写次数", "2种模式", "基础摘要"] },
     ],
-    extensions: [{ name: "QuillBot Chrome Extension", description: "Paraphrase anywhere on the web" }],
+    extensions: [{ name: "QuillBot Chrome Extension", description: "Paraphrase anywhere on the web", descriptionZh: "在网页任意位置改写" }],
     skills: ["paraphrasing", "academic writing", "editing", "summarization", "grammar"],
     pros: ["Excellent paraphrasing quality", "Useful summarizer", "Generous free tier", "Multiple modes"],
     prosZh: ["改写质量优秀", "摘要功能实用", "慷慨的免费套餐", "多种模式"],
@@ -3465,10 +3821,9 @@ export const tools: Tool[] = [
     targetAudience: "Writers and professionals who want to improve sentence-level clarity and express ideas more effectively.",
     targetAudienceZh: "希望在句子层面提高清晰度和表达效果的写作者和专业人士。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["10 rephrases/day", "Basic modes"] },
-      { tier: "Premium", price: "$9.99/mo", features: ["Unlimited rephrases", "All modes", "Tone adjustment"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["10 rephrases/day", "Basic modes"], featuresZh: ["每天10次改写", "基础模式"] },
     ],
-    extensions: [{ name: "Wordtune Chrome Extension", description: "Write better across the web" }],
+    extensions: [{ name: "Wordtune Chrome Extension", description: "Write better across the web", descriptionZh: "在网页各处写出更好的文章" }],
     skills: ["editing", "paraphrasing", "writing refinement", "professional writing", "creative writing"],
     pros: ["Excellent sentence-level suggestions", "Natural rephrasing", "Works everywhere via extension", "Tone options useful"],
     prosZh: ["句子级建议出色", "改写自然", "扩展随处可用", "语气选项实用"],
@@ -3502,10 +3857,9 @@ export const tools: Tool[] = [
     targetAudience: "E-commerce businesses and dropshippers who need bulk product descriptions and marketing copy.",
     targetAudienceZh: "需要批量产品描述和营销文案的电商企业和代发货商。",
     pricingTiers: [
-      { tier: "Starter", price: "$19/mo", features: ["20,000 words/mo", "Basic features"] },
-      { tier: "Pro", price: "$59/mo", features: ["Unlimited words", "Bulk generation", "Shopify sync"] }
+      { tier: "Starter", tierZh: "入门版", price: "$19/mo", features: ["20,000 words/mo", "Basic features"], featuresZh: ["每月2万字", "基础功能"] },
     ],
-    extensions: [{ name: "CopySmith Shopify App", description: "Direct Shopify integration" }],
+    extensions: [{ name: "CopySmith Shopify App", description: "Direct Shopify integration", descriptionZh: "Shopify直接集成" }],
     skills: ["e-commerce copywriting", "product descriptions", "Amazon SEO", "Shopify", "bulk content"],
     pros: ["Great for e-commerce", "Bulk generation saves time", "Shopify integration", "Good template library"],
     prosZh: ["适合电商", "批量生成省时", "Shopify集成", "模板库丰富"],
@@ -3539,10 +3893,9 @@ export const tools: Tool[] = [
     targetAudience: "Performance marketers and growth teams who want data-driven copywriting with conversion optimization.",
     targetAudienceZh: "追求数据驱动文案和转化率优化的效果营销人员和增长团队。",
     pricingTiers: [
-      { tier: "Starter", price: "$49/mo", features: ["5,000 AI words/mo", "Basic scoring"] },
-      { tier: "Pro", price: "$99/mo", features: ["20,000 AI words/mo", "Advanced scoring", "Integrations"] }
+      { tier: "Starter", tierZh: "入门版", price: "$49/mo", features: ["5,000 AI words/mo", "Basic scoring"], featuresZh: ["每月5000AI词", "基础评分"] },
     ],
-    extensions: [{ name: "Anyword Chrome Extension", description: "Score copy anywhere" }],
+    extensions: [{ name: "Anyword Chrome Extension", description: "Score copy anywhere", descriptionZh: "随处评估文案效果" }],
     skills: ["copywriting", "conversion optimization", "A/B testing", "marketing analytics", "ad copy"],
     pros: ["Unique scoring feature", "Data-driven approach", "Good for ads", "Optimization insights"],
     prosZh: ["独特的评分功能", "数据驱动方法", "适合广告", "优化洞察"],
@@ -3576,10 +3929,9 @@ export const tools: Tool[] = [
     targetAudience: "Novelists, fiction writers, and screenwriters who want AI assistance for creative writing.",
     targetAudienceZh: "小说家、虚构作家和编剧，希望AI辅助创意写作。",
     pricingTiers: [
-      { tier: "Pro", price: "$19/mo", features: ["Unlimited words", "All features"] },
-      { tier: "Max", price: "$29/mo", features: ["Higher quality", "Priority support"] }
+      { tier: "Pro", tierZh: "专业版", price: "$19/mo", features: ["Unlimited words", "All features"], featuresZh: ["无限字数", "All features"] },
     ],
-    extensions: [{ name: "Sudowrite Web App", description: "Browser-based writing studio" }],
+    extensions: [{ name: "Sudowrite Web App", description: "Browser-based writing studio", descriptionZh: "基于浏览器的写作工作室" }],
     skills: ["creative writing", "fiction", "storytelling", "character design", "world-building"],
     pros: ["Excellent for fiction", "Unique story tools", "Good rewriting features", "Inspirational for writers"],
     prosZh: ["适合小说创作", "独特的故事工具", "改写功能好", "激发作家灵感"],
@@ -3615,12 +3967,11 @@ export const tools: Tool[] = [
     targetAudience: "E-commerce sellers, designers, and photographers needing quick background removal.",
     targetAudienceZh: "需要快速背景移除的电商卖家、设计师和摄影师。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Standard resolution", "Preview quality"] },
-      { tier: "Pro", price: "$9/mo", features: ["HD resolution", "API access", "Batch processing"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Standard resolution", "Preview quality"], featuresZh: ["标准分辨率", "预览质量"] },
     ],
     extensions: [
-      { name: "Remove.bg Photoshop Plugin", description: "Background removal in Photoshop" },
-      { name: "Remove.bg API", description: "Automated background removal" }
+      { name: "Remove.bg Photoshop Plugin", description: "Background removal in Photoshop", descriptionZh: "在Photoshop中移除背景" },
+      { name: "Remove.bg API", description: "Automated background removal", descriptionZh: "自动化背景移除" },
     ],
     skills: ["photo editing", "background removal", "e-commerce photos", "image processing"],
     pros: ["Fast and accurate", "Easy to use", "API available", "Works on complex edges"],
@@ -3655,10 +4006,9 @@ export const tools: Tool[] = [
     targetAudience: "Designers and content creators who need quick AI-powered image fixes without complex software.",
     targetAudienceZh: "需要快速AI图像修复的设计师和内容创作者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Basic tools", "Standard quality"] },
-      { tier: "Pro", price: "$9/mo", features: ["HD quality", "All tools", "API access"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Basic tools", "Standard quality"], featuresZh: ["基础工具", "标准质量"] },
     ],
-    extensions: [{ name: "ClipDrop Web App", description: "Browser-based design toolkit" }],
+    extensions: [{ name: "ClipDrop Web App", description: "Browser-based design toolkit", descriptionZh: "基于浏览器的设计工具包" }],
     skills: ["photo editing", "image cleanup", "design tools", "background removal", "object removal"],
     pros: ["Versatile tool collection", "One-click simplicity", "Good quality output", "Mobile app available"],
     prosZh: ["工具集多功能", "一键操作简单", "输出质量好", "提供移动应用"],
@@ -3692,12 +4042,11 @@ export const tools: Tool[] = [
     targetAudience: "Social media creators and anyone needing a free, powerful video editor for short-form content.",
     targetAudienceZh: "社交媒体创作者和任何需要免费、强大视频编辑器制作短视频的人。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Basic editing", "Auto-captions", "Templates"] },
-      { tier: "Pro", price: "$7.99/mo", features: ["Advanced effects", "4K export", "Cloud storage"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Basic editing", "Auto-captions", "Templates"], featuresZh: ["基础编辑", "自动字幕", "模板"] },
     ],
     extensions: [
-      { name: "CapCut Desktop", description: "Windows and Mac app" },
-      { name: "CapCut Mobile", description: "iOS and Android app" }
+      { name: "CapCut Desktop", description: "Windows and Mac app", descriptionZh: "Windows和Mac应用" },
+      { name: "CapCut Mobile", description: "iOS and Android app", descriptionZh: "iOS and Android app" },
     ],
     skills: ["video editing", "social media content", "captions", "short-form video", "motion graphics"],
     pros: ["Free with powerful features", "AI captions excellent", "Easy to use", "Great for TikTok"],
@@ -3732,10 +4081,9 @@ export const tools: Tool[] = [
     targetAudience: "Podcasters, content creators, and anyone who wants a simpler way to edit video and audio.",
     targetAudienceZh: "播客制作者、内容创作者，以及希望简化音视频编辑的人。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["1 hour transcription", "Basic editing"] },
-      { tier: "Pro", price: "$24/mo", features: ["10 hours/mo", "AI features", "Screen recording"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["1 hour transcription", "Basic editing"], featuresZh: ["1小时转录", "基础编辑"] },
     ],
-    extensions: [{ name: "Descript Desktop", description: "Windows and Mac app" }],
+    extensions: [{ name: "Descript Desktop", description: "Windows and Mac app", descriptionZh: "Windows和Mac应用" }],
     skills: ["video editing", "audio editing", "podcasting", "transcription", "screen recording"],
     pros: ["Innovative text-based editing", "AI features powerful", "Great for podcasters", "Saves editing time"],
     prosZh: ["创新的文本编辑方式", "AI功能强大", "适合播客制作者", "节省编辑时间"],
@@ -3769,10 +4117,9 @@ export const tools: Tool[] = [
     targetAudience: "Businesses and content teams who need professional video content without filming or voice actors.",
     targetAudienceZh: "需要专业视频内容但无需拍摄或配音演员的企业和内容团队。",
     pricingTiers: [
-      { tier: "Starter", price: "$29/mo", features: ["10 mins video", "Standard avatars"] },
-      { tier: "Enterprise", price: "Custom", features: ["Custom avatars", "API access", "Dedicated support"] }
+      { tier: "Starter", tierZh: "入门版", price: "$29/mo", features: ["10 mins video", "Standard avatars"], featuresZh: ["10分钟视频", "标准虚拟形象"] },
     ],
-    extensions: [{ name: "Synthesia Web App", description: "Browser-based video creation platform" }],
+    extensions: [{ name: "Synthesia Web App", description: "Browser-based video creation platform", descriptionZh: "基于浏览器的视频创作平台" }],
     skills: ["video production", "AI avatars", "corporate training", "multi-language content", "presentation"],
     pros: ["Professional avatar quality", "Multi-language support", "No filming needed", "Fast production"],
     prosZh: ["虚拟形象专业", "多语言支持", "无需拍摄", "制作快速"],
@@ -3806,10 +4153,9 @@ export const tools: Tool[] = [
     targetAudience: "Marketers and small business owners who want professional videos without video editing skills.",
     targetAudienceZh: "希望制作专业视频但无视频编辑技能的营销人员和小企业主。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Watermarked", "Limited templates"] },
-      { tier: "Plus", price: "$20/mo", features: ["No watermark", "All templates", "Stock media"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Watermarked", "Limited templates"], featuresZh: ["含带水印", "有限模板"] },
     ],
-    extensions: [{ name: "InVideo Web App", description: "Browser-based video creation" }],
+    extensions: [{ name: "InVideo Web App", description: "Browser-based video creation", descriptionZh: "基于浏览器的视频创作" }],
     skills: ["video creation", "marketing video", "social media video", "template design", "content repurposing"],
     pros: ["Huge template library", "AI text-to-video works well", "Good for beginners", "Large stock media library"],
     prosZh: ["海量模板库", "AI文字转视频效果好", "适合初学者", "素材库丰富"],
@@ -3843,10 +4189,9 @@ export const tools: Tool[] = [
     targetAudience: "Anyone who needs free, quick photo editing without installing software.",
     targetAudienceZh: "任何需要免费、快速照片编辑又不想安装软件的人。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Basic editors", "AI tools limited"] },
-      { tier: "Premium", price: "$1.99/mo", features: ["All AI tools", "Ad-free", "Advanced features"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Basic editors", "AI tools limited"], featuresZh: ["基础编辑器", "AI工具有限"] },
     ],
-    extensions: [{ name: "Pixlr Web App", description: "Browser-based photo editor" }],
+    extensions: [{ name: "Pixlr Web App", description: "Browser-based photo editor", descriptionZh: "基于浏览器的照片编辑器" }],
     skills: ["photo editing", "graphic design", "image retouching", "collage", "social media graphics"],
     pros: ["Free for core features", "Works in browser", "AI tools included", "Low price for premium"],
     prosZh: ["核心功能免费", "浏览器运行", "包含AI工具", "高级版价格低廉"],
@@ -3882,12 +4227,11 @@ export const tools: Tool[] = [
     targetAudience: "Microsoft 365 users who want AI assistance integrated into their existing work apps.",
     targetAudienceZh: "希望AI助手集成到现有工作应用中的Microsoft 365用户。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Web copilot", "Limited daily chats"] },
-      { tier: "M365 Copilot", price: "$30/user/mo", features: ["Full Office integration", "Copilot Studio", "Enterprise security"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Web copilot", "Limited daily chats"], featuresZh: ["网页版Copilot", "每日聊天次数限制"] },
     ],
     extensions: [
-      { name: "Copilot in Word", description: "AI writing assistant in Word" },
-      { name: "Copilot in Excel", description: "AI data analysis in Excel" }
+      { name: "Copilot in Word", description: "AI writing assistant in Word", descriptionZh: "Word中的AI写作助手" },
+      { name: "Copilot in Excel", description: "AI data analysis in Excel", descriptionZh: "Excel中的AI数据分析" },
     ],
     skills: ["office productivity", "document drafting", "data analysis", "meeting management", "email management"],
     pros: ["Deep Office integration", "Excel analysis powerful", "Teams summaries useful", "Enterprise ready"],
@@ -3922,12 +4266,11 @@ export const tools: Tool[] = [
     targetAudience: "Professionals who attend many meetings and want automated notes without manual transcription.",
     targetAudienceZh: "参加大量会议、希望自动做记录的专业人士。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["300 mins/month", "Basic transcription"] },
-      { tier: "Pro", price: "$16.99/mo", features: ["1200 mins/month", "Search", "Export"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["300 mins/month", "Basic transcription"], featuresZh: ["每月300分钟", "基础转录"] },
     ],
     extensions: [
-      { name: "Otter for Zoom", description: "Zoom integration" },
-      { name: "Otter for Google Meet", description: "Google Meet integration" }
+      { name: "Otter for Zoom", description: "Zoom integration", descriptionZh: "Zoom集成" },
+      { name: "Otter for Google Meet", description: "Google Meet integration", descriptionZh: "Google Meet集成" },
     ],
     skills: ["meeting notes", "transcription", "sales productivity", "interview recording", "collaboration"],
     pros: ["Excellent transcription accuracy", "Real-time during meetings", "Speaker identification", "Searchable transcripts"],
@@ -3962,12 +4305,11 @@ export const tools: Tool[] = [
     targetAudience: "Sales teams, recruiters, and managers who want conversation intelligence from their meetings.",
     targetAudienceZh: "希望从会议中获得对话智能的销售团队、招聘人员和管理者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited transcription", "Public meetings"] },
-      { tier: "Pro", price: "$10/mo", features: ["Unlimited transcription", "Search", "Integrations"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited transcription", "Public meetings"], featuresZh: ["有限转录", "公开会议"] },
     ],
     extensions: [
-      { name: "Fireflies for Zoom", description: "Zoom bot" },
-      { name: "Fireflies for Salesforce", description: "Salesforce integration" }
+      { name: "Fireflies for Zoom", description: "Zoom bot", descriptionZh: "Zoom机器人" },
+      { name: "Fireflies for Salesforce", description: "Salesforce integration", descriptionZh: "Salesforce集成" },
     ],
     skills: ["meeting transcription", "sales analytics", "conversation intelligence", "CRM workflows", "recruiting"],
     pros: ["Works with multiple platforms", "Strong search", "CRM integration useful", "Good analytics"],
@@ -4002,10 +4344,9 @@ export const tools: Tool[] = [
     targetAudience: "Google Slides users who want AI-powered presentation creation without leaving their workflow.",
     targetAudienceZh: "希望不离开工作流即可AI创建演示文稿的Google Slides用户。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited slides", "Basic themes"] },
-      { tier: "Pro", price: "$10/mo", features: ["Unlimited slides", "All themes", "Image generation"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited slides", "Basic themes"], featuresZh: ["有限幻灯片数", "基础主题"] },
     ],
-    extensions: [{ name: "SlidesAI Google Workspace", description: "Google Slides add-on" }],
+    extensions: [{ name: "SlidesAI Google Workspace", description: "Google Slides add-on", descriptionZh: "Google Slides插件" }],
     skills: ["presentation design", "Google Slides", "content formatting", "visual design", "educational content"],
     pros: ["Google Slides integration", "Quick slide creation", "Clean designs", "Free tier usable"],
     prosZh: ["Google Slides集成", "快速创建幻灯片", "设计简洁", "免费版可用"],
@@ -4039,10 +4380,9 @@ export const tools: Tool[] = [
     targetAudience: "Product managers, educators, and storytellers who want narrative-rich, multi-format presentations.",
     targetAudienceZh: "想要叙事丰富、多格式演示的产品经理、教育工作者和故事讲述者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited presentations", "Basic AI"] },
-      { tier: "Pro", price: "$16/mo", features: ["Unlimited presentations", "Full AI", "Custom branding"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited presentations", "Basic AI"], featuresZh: ["有限演示文稿", "基础AI功能"] },
     ],
-    extensions: [{ name: "Tome Web App", description: "Browser-based storytelling tool" }],
+    extensions: [{ name: "Tome Web App", description: "Browser-based storytelling tool", descriptionZh: "基于浏览器的故事讲述工具" }],
     skills: ["presentation design", "storytelling", "visual communication", "product pitches", "educational content"],
     pros: ["Unique narrative format", "Multi-format canvas", "Good AI generation", "Great for pitches"],
     prosZh: ["独特的叙事格式", "多格式画布", "AI生成好", "适合路演"],
@@ -4076,12 +4416,11 @@ export const tools: Tool[] = [
     targetAudience: "Developers building RAG systems and data-intensive LLM applications who need structured data frameworks.",
     targetAudienceZh: "构建RAG系统和数据密集型LLM应用的开发者，需要结构化数据框架。",
     pricingTiers: [
-      { tier: "Open Source", price: "$0", features: ["All framework features", "Self-hosted"] },
-      { tier: "LlamaCloud", price: "Pay-as-you-go", features: ["Managed indexing", "API access"] }
+      { tier: "Open Source", tierZh: "开源版", price: "$0", features: ["All framework features", "Self-hosted"], featuresZh: ["所有框架功能", "自行托管"] },
     ],
     extensions: [
-      { name: "LlamaIndex Python", description: "Python framework package" },
-      { name: "LlamaIndex TS", description: "TypeScript framework" }
+      { name: "LlamaIndex Python", description: "Python framework package", descriptionZh: "Python框架包" },
+      { name: "LlamaIndex TS", description: "TypeScript framework", descriptionZh: "TypeScript框架" },
     ],
     skills: ["RAG systems", "data engineering", "LLM development", "Python", "information retrieval"],
     pros: ["Excellent RAG support", "Flexible data connectors", "Active development", "Strong documentation"],
@@ -4118,12 +4457,11 @@ export const tools: Tool[] = [
     targetAudience: "Developers and enterprises who need AI code completion with strong privacy guarantees.",
     targetAudienceZh: "需要AI代码补全且有强隐私保证的开发者及企业。",
     pricingTiers: [
-      { tier: "Basic", price: "$0", features: ["Local completions", "Limited suggestions"] },
-      { tier: "Pro", price: "$12/mo", features: ["Full completions", "Whole-line", "Team models"] }
+      { tier: "Basic", tierZh: "基础版", price: "$0", features: ["Local completions", "Limited suggestions"], featuresZh: ["本地补全", "有限建议"] },
     ],
     extensions: [
-      { name: "Tabnine for VS Code", description: "VS Code extension" },
-      { name: "Tabnine for JetBrains", description: "JetBrains plugin" }
+      { name: "Tabnine for VS Code", description: "VS Code extension", descriptionZh: "VS Code扩展" },
+      { name: "Tabnine for JetBrains", description: "JetBrains plugin", descriptionZh: "JetBrains插件" },
     ],
     skills: ["code completion", "software development", "privacy", "IDE usage", "multi-language development"],
     pros: ["Strong privacy", "Offline capable", "Works in many IDEs", "No data sharing"],
@@ -4158,12 +4496,11 @@ export const tools: Tool[] = [
     targetAudience: "Developers who want free, fast AI code completion across many languages and IDEs.",
     targetAudienceZh: "希望跨多种语言和IDE获得免费、快速AI代码补全的开发者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Unlimited completions", "AI chat"] },
-      { tier: "Pro", price: "$15/mo", features: ["Priority completions", "Higher limits"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Unlimited completions", "AI chat"], featuresZh: ["Unlimited completions", "AI chat"] },
     ],
     extensions: [
-      { name: "Codeium for VS Code", description: "VS Code extension" },
-      { name: "Codeium for JetBrains", description: "JetBrains plugin" }
+      { name: "Codeium for VS Code", description: "VS Code extension", descriptionZh: "VS Code扩展" },
+      { name: "Codeium for JetBrains", description: "JetBrains plugin", descriptionZh: "JetBrains插件" },
     ],
     skills: ["code completion", "software development", "AI chat", "multi-language", "productivity"],
     pros: ["Free with unlimited completions", "Good quality suggestions", "Fast responses", "Support for many IDEs"],
@@ -4198,12 +4535,11 @@ export const tools: Tool[] = [
     targetAudience: "Developers working with large codebases who need AI assistance with full project context.",
     targetAudienceZh: "处理大型代码库、需要完整项目上下文的AI辅助的开发者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited requests", "Basic context"] },
-      { tier: "Pro", price: "$9/mo", features: ["Unlimited requests", "Full context", "Multiple repos"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited requests", "Basic context"], featuresZh: ["有限请求", "基础上下文"] },
     ],
     extensions: [
-      { name: "Cody for VS Code", description: "VS Code extension" },
-      { name: "Cody for JetBrains", description: "JetBrains plugin" }
+      { name: "Cody for VS Code", description: "VS Code extension", descriptionZh: "VS Code扩展" },
+      { name: "Cody for JetBrains", description: "JetBrains plugin", descriptionZh: "JetBrains插件" },
     ],
     skills: ["codebase understanding", "code search", "refactoring", "code review", "debugging"],
     pros: ["Understands full codebase", "Excellent for large projects", "Context-aware answers", "Good onboarding tool"],
@@ -4238,10 +4574,9 @@ export const tools: Tool[] = [
     targetAudience: "Developers and DevOps professionals who spend significant time in the terminal.",
     targetAudienceZh: "经常在终端中工作的开发者和DevOps专业人士。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["AI search limited", "Basic features"] },
-      { tier: "Pro", price: "$12/mo", features: ["Unlimited AI", "Workflows", "Team features"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["AI search limited", "Basic features"], featuresZh: ["AI搜索有限", "基础功能"] },
     ],
-    extensions: [{ name: "Warp Desktop", description: "Native terminal app for macOS/Linux" }],
+    extensions: [{ name: "Warp Desktop", description: "Native terminal app for macOS/Linux", descriptionZh: "macOS/Linux原生终端应用" }],
     skills: ["terminal usage", "command line", "DevOps", "developer productivity", "scripting"],
     pros: ["Beautiful modern UI", "AI command search helpful", "Fast GPU rendering", "Smart autocomplete"],
     prosZh: ["美观的现代UI", "AI命令搜索实用", "GPU渲染快速", "智能自动补全"],
@@ -4275,10 +4610,9 @@ export const tools: Tool[] = [
     targetAudience: "Beginner coders and anyone using Replit for browser-based development with AI assistance.",
     targetAudienceZh: "初学者编程者和任何在Replit上使用浏览器开发且需要AI辅助的人。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited suggestions", "Basic chat"] },
-      { tier: "Pro", price: "$20/mo", features: ["Unlimited AI", "Private projects", "Ghostwriter"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited suggestions", "Basic chat"], featuresZh: ["有限建议", "基础聊天"] },
     ],
-    extensions: [{ name: "Replit Browser IDE", description: "Browser-based development environment" }],
+    extensions: [{ name: "Replit Browser IDE", description: "Browser-based development environment", descriptionZh: "基于浏览器的开发环境" }],
     skills: ["web development", "learning to code", "browser IDE", "collaborative coding", "prototyping"],
     pros: ["No setup needed", "Beginner friendly", "Built-in deployment", "Collaborative features"],
     prosZh: ["无需设置", "新手友好", "内置部署", "协作功能"],
@@ -4312,10 +4646,9 @@ export const tools: Tool[] = [
     targetAudience: "Startups, developer tool companies, and tech teams who need professional documentation without a dedicated team.",
     targetAudienceZh: "需要专业文档但没有专门文档团队的初创公司、开发者工具公司和技术团队。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Public docs", "Basic features"] },
-      { tier: "Pro", price: "$150/mo", features: ["Custom domain", "Analytics", "Multiple users"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Public docs", "Basic features"], featuresZh: ["公开文档", "基础功能"] },
     ],
-    extensions: [{ name: "Mintlify Web Platform", description: "Hosted documentation platform" }],
+    extensions: [{ name: "Mintlify Web Platform", description: "Hosted documentation platform", descriptionZh: "托管的文档平台" }],
     skills: ["technical writing", "API documentation", "developer relations", "knowledge management", "product documentation"],
     pros: ["Beautiful output", "Easy to set up", "Great search", "Auto API refs"],
     prosZh: ["输出美观", "易于设置", "搜索功能好", "自动API引用"],
@@ -4349,12 +4682,11 @@ export const tools: Tool[] = [
     targetAudience: "Developers who want to build a personal knowledge base of code snippets with AI-powered recall.",
     targetAudienceZh: "希望构建AI驱动的个人代码片段知识库的开发者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Basic capture", "Limited storage"] },
-      { tier: "Pro", price: "$20/mo", features: ["Unlimited storage", "Team sharing", "Advanced AI"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Basic capture", "Limited storage"], featuresZh: ["基础捕获", "有限存储"] },
     ],
     extensions: [
-      { name: "Pieces Desktop", description: "Desktop app for snippet management" },
-      { name: "Pieces for VS Code", description: "VS Code extension" }
+      { name: "Pieces Desktop", description: "Desktop app for snippet management", descriptionZh: "代码片段管理桌面应用" },
+      { name: "Pieces for VS Code", description: "VS Code extension", descriptionZh: "VS Code扩展" },
     ],
     skills: ["code organization", "knowledge management", "developer productivity", "snippet management", "workflow optimization"],
     pros: ["Automatic capture", "AI enrichment useful", "Works across tools", "Privacy focused"],
@@ -4389,10 +4721,9 @@ export const tools: Tool[] = [
     targetAudience: "Developers who need quick, accurate technical answers with up-to-date information and source citations.",
     targetAudienceZh: "需要快速准确的技术答案和最新信息及来源引用的开发者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited searches", "Basic models"] },
-      { tier: "Pro", price: "$20/mo", features: ["Unlimited searches", "GPT-5/C4 Opus", "Priority"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited searches", "Basic models"], featuresZh: ["有限搜索", "基础模型"] },
     ],
-    extensions: [{ name: "Phind Web App", description: "Browser-based AI search" }],
+    extensions: [{ name: "Phind Web App", description: "Browser-based AI search", descriptionZh: "基于浏览器的AI搜索" }],
     skills: ["technical research", "debugging", "code search", "problem solving", "developer tools"],
     pros: ["Accurate technical answers", "Up-to-date information", "Code examples included", "Citations for verification"],
     prosZh: ["技术答案准确", "信息最新", "包含代码示例", "可验证的引用来源"],
@@ -4428,12 +4759,11 @@ export const tools: Tool[] = [
     targetAudience: "SEO professionals and content teams who want data-driven optimization for organic search performance.",
     targetAudienceZh: "追求数据驱动优化的SEO专业人员和内容团队。",
     pricingTiers: [
-      { tier: "Essential", price: "$69/mo", features: ["60 articles", "Basic analysis"] },
-      { tier: "Advanced", price: "$149/mo", features: ["200 articles", "AI generation", "Integrations"] }
+      { tier: "Essential", tierZh: "基础版", price: "$69/mo", features: ["60 articles", "Basic analysis"], featuresZh: ["60篇文章", "基础分析"] },
     ],
     extensions: [
-      { name: "Surfer SEO Chrome Extension", description: "SERP analyzer" },
-      { name: "Surfer Google Docs Add-on", description: "Content editor in Google Docs" }
+      { name: "Surfer SEO Chrome Extension", description: "SERP analyzer", descriptionZh: "SERP分析器" },
+      { name: "Surfer Google Docs Add-on", description: "Content editor in Google Docs", descriptionZh: "Google Docs中的内容编辑器" },
     ],
     skills: ["SEO", "content optimization", "keyword research", "content strategy", "organic marketing"],
     pros: ["Data-driven suggestions", "Real-time content scoring", "SERP analysis valuable", "Integration ecosystem"],
@@ -4468,12 +4798,11 @@ export const tools: Tool[] = [
     targetAudience: "Content marketers and SEO professionals who want affordable AI-driven content optimization.",
     targetAudienceZh: "想要价格实惠的AI驱动内容优化的内容营销人员和SEO专业人士。",
     pricingTiers: [
-      { tier: "Individual", price: "$14.99/mo", features: ["1 user", "30 articles/mo"] },
-      { tier: "Business", price: "$49.99/mo", features: ["5 users", "Unlimited articles"] }
+      { tier: "Individual", tierZh: "个人版", price: "$14.99/mo", features: ["1 user", "30 articles/mo"], featuresZh: ["1个用户", "每月30篇文章"] },
     ],
     extensions: [
-      { name: "Frase Chrome Extension", description: "SERP research tool" },
-      { name: "Frase WordPress Plugin", description: "WordPress integration" }
+      { name: "Frase Chrome Extension", description: "SERP research tool", descriptionZh: "SERP研究工具" },
+      { name: "Frase WordPress Plugin", description: "WordPress integration", descriptionZh: "WordPress集成" },
     ],
     skills: ["SEO", "content strategy", "topic research", "content writing", "keyword optimization"],
     pros: ["Affordable pricing", "Good SERP research", "AI content briefs useful", "Integrated writing tool"],
@@ -4508,9 +4837,9 @@ export const tools: Tool[] = [
     targetAudience: "Enterprise content teams and marketing departments who need data-driven content strategy at scale.",
     targetAudienceZh: "需要数据驱动内容策略的企业内容团队和营销部门。",
     pricingTiers: [
-      { tier: "Enterprise", price: "Custom", features: ["Full platform", "Custom analysis", "Dedicated support"] }
-    ],
-    extensions: [{ name: "MarketMuse Web Platform", description: "Enterprise content optimization" }],
+      { tier: "Enterprise", tierZh: "企业版", price: "Custom", features: ["Full platform", "Custom analysis", "Dedicated support"], featuresZh: ["完整平台", "自定义分析", "专属支持"] },
+      ],
+    extensions: [{ name: "MarketMuse Web Platform", description: "Enterprise content optimization", descriptionZh: "企业级内容优化" }],
     skills: ["content strategy", "SEO", "competitive analysis", "content planning", "topic modeling"],
     pros: ["Deep content analysis", "Strategic planning focus", "Enterprise grade", "Comprehensive audits"],
     prosZh: ["深度内容分析", "战略规划焦点", "企业级", "全面的审计"],
@@ -4544,12 +4873,11 @@ export const tools: Tool[] = [
     targetAudience: "HubSpot users who want AI capabilities integrated into their existing CRM and marketing workflows.",
     targetAudienceZh: "希望AI能力集成到现有CRM和营销工作流中的HubSpot用户。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Basic AI tools", "Limited content"] },
-      { tier: "Pro", price: "$50/mo", features: ["Full AI suite", "Content assistant", "Predictive scoring"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Basic AI tools", "Limited content"], featuresZh: ["基础AI工具", "有限内容"] },
     ],
     extensions: [
-      { name: "HubSpot Content Hub", description: "AI content platform" },
-      { name: "HubSpot Sales Hub", description: "Sales AI features" }
+      { name: "HubSpot Content Hub", description: "AI content platform", descriptionZh: "AI内容平台" },
+      { name: "HubSpot Sales Hub", description: "Sales AI features", descriptionZh: "销售AI功能" },
     ],
     skills: ["CRM", "marketing automation", "sales enablement", "content marketing", "customer service"],
     pros: ["Deep HubSpot integration", "All-in-one platform", "Good for existing users", "Scalable"],
@@ -4584,12 +4912,11 @@ export const tools: Tool[] = [
     targetAudience: "Marketers and business owners who want automated chatbot marketing on social messaging platforms.",
     targetAudienceZh: "希望在社交消息平台上实现聊天机器人自动化营销的营销人员和企业主。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["1,000 contacts", "Basic features"] },
-      { tier: "Pro", price: "$15/mo", features: ["10,000 contacts", "AI flows", "Sequences"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["1,000 contacts", "Basic features"], featuresZh: ["1000个联系人", "基础功能"] },
     ],
     extensions: [
-      { name: "ManyChat for Messenger", description: "Facebook Messenger integration" },
-      { name: "ManyChat for Instagram", description: "Instagram DM integration" }
+      { name: "ManyChat for Messenger", description: "Facebook Messenger integration", descriptionZh: "Facebook Messenger集成" },
+      { name: "ManyChat for Instagram", description: "Instagram DM integration", descriptionZh: "Instagram私信集成" },
     ],
     skills: ["chatbot marketing", "social media automation", "lead generation", "customer service", "e-commerce"],
     pros: ["Easy to set up", "Multi-platform", "Visual builder intuitive", "Good integrations"],
@@ -4626,11 +4953,11 @@ export const tools: Tool[] = [
     targetAudience: "Privacy-conscious users, developers, and AI enthusiasts who want to run LLMs locally for free.",
     targetAudienceZh: "注重隐私的用户、开发者和AI爱好者，希望免费本地运行LLM。",
     pricingTiers: [
-      { tier: "Open Source", price: "$0", features: ["All models", "Local only", "CLI + API"] }
-    ],
+      { tier: "Open Source", tierZh: "开源版", price: "$0", features: ["All models", "Local only", "CLI + API"], featuresZh: ["所有模型", "仅本地运行", "命令行和API"] },
+      ],
     extensions: [
-      { name: "Ollama CLI", description: "Command-line tool" },
-      { name: "Ollama Python Library", description: "Python API client" }
+      { name: "Ollama CLI", description: "Command-line tool", descriptionZh: "命令行工具" },
+      { name: "Ollama Python Library", description: "Python API client", descriptionZh: "Python API客户端" },
     ],
     skills: ["local AI", "LLM deployment", "self-hosting", "privacy", "open-source tools"],
     pros: ["Completely free", "Full privacy", "Easy to use", "Large model library"],
@@ -4665,9 +4992,9 @@ export const tools: Tool[] = [
     targetAudience: "AI enthusiasts and developers who prefer a GUI for running local LLMs without command-line complexity.",
     targetAudienceZh: "喜欢用图形界面运行本地LLM而不想处理命令行的AI爱好者和开发者。",
     pricingTiers: [
-      { tier: "Open Source", price: "$0", features: ["All features", "Local only", "GUI + API"] }
-    ],
-    extensions: [{ name: "LM Studio Desktop", description: "Desktop app for Windows/Mac/Linux" }],
+      { tier: "Open Source", tierZh: "开源版", price: "$0", features: ["All features", "Local only", "GUI + API"], featuresZh: ["All features", "仅本地运行", "图形界面和API"] },
+      ],
+    extensions: [{ name: "LM Studio Desktop", description: "Desktop app for Windows/Mac/Linux", descriptionZh: "Windows/Mac/Linux桌面应用" }],
     skills: ["local AI", "LLM experimentation", "model evaluation", "self-hosting", "GUI tools"],
     pros: ["Beautiful GUI", "Free and open-source", "Easy model management", "Built-in chat"],
     prosZh: ["精美图形界面", "免费开源", "模型管理方便", "内置聊天"],
@@ -4701,9 +5028,9 @@ export const tools: Tool[] = [
     targetAudience: "Anyone who wants a free, private AI assistant that runs on their existing computer without special hardware.",
     targetAudienceZh: "任何想要免费、隐私的AI助手且无需特殊硬件的人。",
     pricingTiers: [
-      { tier: "Open Source", price: "$0", features: ["All features", "Local CPU", "Offline"] }
-    ],
-    extensions: [{ name: "GPT4All Desktop", description: "Desktop chat application" }],
+      { tier: "Open Source", tierZh: "开源版", price: "$0", features: ["All features", "Local CPU", "Offline"], featuresZh: ["All features", "本地CPU运行", "离线运行"] },
+      ],
+    extensions: [{ name: "GPT4All Desktop", description: "Desktop chat application", descriptionZh: "桌面聊天应用" }],
     skills: ["local AI", "offline AI", "privacy", "CPU inference", "document RAG"],
     pros: ["Works on any computer", "Completely free", "No GPU needed", "Private and offline"],
     prosZh: ["任何电脑可用", "完全免费", "无需GPU", "隐私离线"],
@@ -4737,9 +5064,9 @@ export const tools: Tool[] = [
     targetAudience: "Power users and developers who want local, unrestricted AI-powered code execution and system automation.",
     targetAudienceZh: "希望本地、无限制的AI驱动代码执行和系统自动化的高级用户和开发者。",
     pricingTiers: [
-      { tier: "Open Source", price: "$0", features: ["All features", "Local only", "Self-hosted"] }
-    ],
-    extensions: [{ name: "Open Interpreter CLI", description: "Command-line tool" }],
+      { tier: "Open Source", tierZh: "开源版", price: "$0", features: ["All features", "Local only", "Self-hosted"], featuresZh: ["All features", "仅本地运行", "自行托管"] },
+      ],
+    extensions: [{ name: "Open Interpreter CLI", description: "Command-line tool", descriptionZh: "命令行工具" }],
     skills: ["automation", "code execution", "data analysis", "system administration", "Python"],
     pros: ["Completely free", "Unlimited capability", "Full system access", "Active community"],
     prosZh: ["完全免费", "能力无限制", "完整系统访问", "活跃社区"],
@@ -4773,9 +5100,9 @@ export const tools: Tool[] = [
     targetAudience: "AI enthusiasts and developers who want a single, self-hosted interface for multiple AI models with privacy.",
     targetAudienceZh: "想要一个可自托管的单一界面来使用多种AI模型并保护隐私的AI爱好者和开发者。",
     pricingTiers: [
-      { tier: "Open Source", price: "$0", features: ["All features", "Self-hosted", "Multi-provider"] }
-    ],
-    extensions: [{ name: "LibreChat Web App", description: "Self-hosted chat platform" }],
+      { tier: "Open Source", tierZh: "开源版", price: "$0", features: ["All features", "Self-hosted", "Multi-provider"], featuresZh: ["All features", "自行托管", "多提供商支持"] },
+      ],
+    extensions: [{ name: "LibreChat Web App", description: "Self-hosted chat platform", descriptionZh: "自托管聊天平台" }],
     skills: ["multi-model AI", "self-hosting", "chat interfaces", "AI comparison", "privacy"],
     pros: ["Multi-model in one UI", "Self-hosted privacy", "Free and open-source", "Active development"],
     prosZh: ["多模型统一界面", "自托管隐私", "免费开源", "积极开发"],
@@ -4810,10 +5137,9 @@ export const tools: Tool[] = [
     targetAudience: "Designers, marketers, and brand managers who need AI-generated images with accurate text rendering.",
     targetAudienceZh: "需要AI生成图像且文字渲染准确的设计师、营销人员和品牌经理。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Limited generations", "Basic features"] },
-      { tier: "Pro", price: "$20/mo", features: ["Unlimited generations", "All features", "Priority queue"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited generations", "Basic features"], featuresZh: ["有限生成次数", "基础功能"] },
     ],
-    extensions: [{ name: "Ideogram Web App", description: "Browser-based image generation" }],
+    extensions: [{ name: "Ideogram Web App", description: "Browser-based image generation", descriptionZh: "基于浏览器的图像生成" }],
     skills: ["image generation", "logo design", "typography", "graphic design", "branding"],
     pros: ["Best text rendering in AI images", "Great for logos", "Easy to use", "High quality output"],
     prosZh: ["AI图像中文字渲染最佳", "非常适合标志设计", "易于使用", "输出质量高"],
@@ -4847,10 +5173,9 @@ export const tools: Tool[] = [
     targetAudience: "Podcasters and audio content creators who want an all-in-one platform for recording, editing, and publishing.",
     targetAudienceZh: "想要一站式录制、编辑和发布平台的播客制作者和音频内容创作者。",
     pricingTiers: [
-      { tier: "Free", price: "$0", features: ["Basic recording", "Audio cleanup"] },
-      { tier: "Storyteller", price: "$11.99/mo", features: ["Unlimited recording", "Revoice", "Publishing"] }
+      { tier: "Free", tierZh: "免费版", price: "$0", features: ["Basic recording", "Audio cleanup"], featuresZh: ["基础录制", "音频清理"] },
     ],
-    extensions: [{ name: "Podcastle Web App", description: "Browser-based podcast studio" }],
+    extensions: [{ name: "Podcastle Web App", description: "Browser-based podcast studio", descriptionZh: "基于浏览器的播客工作室" }],
     skills: ["podcasting", "audio editing", "audio production", "voice recording", "content creation"],
     pros: ["All-in-one platform", "Magic Dust cleanup impressive", "Remote recording good quality", "Revoice saves re-recording"],
     prosZh: ["一站式平台", "音频清理效果出色", "远程录制质量好", "Revoice免去重新录制"],
