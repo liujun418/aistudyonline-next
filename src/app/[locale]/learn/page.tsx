@@ -89,7 +89,9 @@ export default async function LearnPage({
       {/* Articles grouped by category */}
       <div className="space-y-12">
         {categories.map((cat) => {
-          const catArticles = articles.filter((a) => a.category === cat.id);
+          const catArticles = articles
+            .filter((a) => a.category === cat.id)
+            .sort((a, b) => b.date.localeCompare(a.date));
           if (catArticles.length === 0) return null;
 
           const catName = localized(locale, cat.name, cat.nameZh);

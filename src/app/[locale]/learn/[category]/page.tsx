@@ -95,7 +95,9 @@ export default async function CategoryPage({
     cat.descriptionZh,
   );
 
-  const catArticles = articles.filter((a) => a.category === cat.id);
+  const catArticles = articles
+    .filter((a) => a.category === cat.id)
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
