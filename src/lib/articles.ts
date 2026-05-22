@@ -402,6 +402,22 @@ export const articles: Article[] = [
     date: "2026-05-13",
   },
 
+  // ====== AI News (6/6: Google I/O 2026) ======
+  {
+    slug: "google-io-2026-93-ai-agents",
+    title: "Google I/O 2026: 93 AI Agents Built an OS in 12 Hours — Here's What It Means",
+    titleZh: "Google I/O 2026：93个AI代理12小时协作构建操作系统——这意味着什么",
+    description:
+      "At Google I/O 2026, 93 AI agents collaborated autonomously to build a working OS from scratch. Here's what happened, why it matters, and how it changes the AI landscape.",
+    descriptionZh:
+      "在Google I/O 2026上，93个AI代理自主协作，从零构建了一个可运行的操作系统。发生了什么、为什么重要、以及它如何改变AI格局。",
+    category: "ai-news",
+    tags: ["google-io", "ai-agents", "gemini", "google", "collaboration", "2026"],
+    difficulty: "beginner",
+    toolsMentioned: ["gemini"],
+    date: "2026-05-22",
+  },
+
   // ====== Claude Code Path (Part 2/4) ======
   {
     slug: "claude-code-mcp-configuration",
