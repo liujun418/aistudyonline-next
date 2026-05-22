@@ -144,8 +144,10 @@ export default function BlogDetailClient({
         />
       </article>
 
-      {/* Share Buttons */}
+      <div className="mt-10 border-t border-border pt-8">
       <ShareButtons url={`https://aistudyonline.club/${locale}/blog/${post.slug}`} title={locale === "zh" ? post.titleZh : post.title} locale={locale} />
+
+      </div>
 
       {/* Related Tools */}
       {relatedTools.length > 0 && (

@@ -352,8 +352,10 @@ export default function ToolDetailClient({
         </section>
       )}
 
-      {/* Share Buttons */}
+      <section className="mb-10">
       <ShareButtons url={`https://aistudyonline.club/${locale}/tools/${tool.id}`} title={tool.name} locale={locale} />
+
+      </section>
 
       {/* Related Tools */}
       {relatedTools.length > 0 && (

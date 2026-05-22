@@ -324,8 +324,10 @@ export default function ModelDetailClient({
         <AdUnit adSlot="7831293092" format="rectangle" />
       </div>
 
-      {/* Share Buttons */}
+      <section className="mb-10">
       <ShareButtons url={`https://aistudyonline.club/${locale}/models/${model.id}`} title={model.name} locale={locale} />
+
+      </section>
 
       {/* Related Models */}
       {relatedModels.length > 0 && (

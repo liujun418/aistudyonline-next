@@ -107,11 +107,10 @@ export default function ShareButtons({ url, title, locale }: ShareButtonsProps) 
   const copyLabel = locale === "zh" ? "已复制！" : "Copied!";
 
   return (
-    <div className="mt-10 border-t border-border pt-6">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="mr-2 text-sm font-medium text-zinc-500 dark:text-zinc-400">
-          {shareLabel}
-        </span>
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="mr-2 text-sm font-medium text-zinc-500 dark:text-zinc-400">
+        {shareLabel}
+      </span>
         {platforms.map((p) => (
           <button
             key={p.id}
@@ -127,6 +126,5 @@ export default function ShareButtons({ url, title, locale }: ShareButtonsProps) 
           </button>
         ))}
       </div>
-    </div>
   );
 }

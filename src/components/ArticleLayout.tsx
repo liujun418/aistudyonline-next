@@ -170,11 +170,14 @@ export default function ArticleLayout({
       </div>
 
       {/* Share Buttons */}
+      <div className="mt-10 border-t border-border pt-6">
       <ShareButtons
         url={`https://aistudyonline.club/${locale}/article/${article.slug}`}
         title={title}
         locale={locale}
       />
+
+      </div>
 
       {/* Bottom Ad */}
       <div className="mx-auto mt-6 max-w-3xl">
