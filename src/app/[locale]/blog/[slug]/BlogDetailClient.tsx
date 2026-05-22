@@ -137,8 +137,7 @@ export default function BlogDetailClient({
         )}
 
         {/* Article Content */}
-        <div
-          className="prose prose-zinc max-w-none dark:prose-invert prose-headings:font-bold prose-headings:text-foreground prose-p:text-zinc-600 dark:prose-p:text-zinc-400 prose-a:text-primary-600 prose-a:underline hover:prose-a:text-primary-700 dark:prose-a:text-primary-400 prose-pre:bg-zinc-900 prose-pre:text-zinc-100 prose-code:text-primary-600 [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:mt-6 [&_h3]:mb-3"
+        <div className="article-content"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
