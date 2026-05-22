@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import { locales, localeNames, Locale } from "@/lib/i18n";
@@ -45,11 +46,23 @@ export default function Header({
     <header className="border-b border-primary-200 bg-white dark:border-primary-900 dark:bg-zinc-950">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         {/* Logo */}
-        <Link
-          href={`/${locale}`}
-          className="text-lg font-bold text-primary-700 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300"
-        >
-          AI Study Online
+        <Link href={`/${locale}`} className="flex-shrink-0">
+          <Image
+            src="/logo-b.png"
+            alt="AI Study Online"
+            width={160}
+            height={36}
+            className="h-9 w-auto dark:hidden"
+            priority
+          />
+          <Image
+            src="/logo-h.png"
+            alt="AI Study Online"
+            width={160}
+            height={36}
+            className="hidden h-9 w-auto dark:inline-block"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
