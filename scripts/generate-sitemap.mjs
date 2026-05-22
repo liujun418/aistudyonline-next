@@ -14,7 +14,7 @@ function readSlugs(file, pattern) {
 const SITE = "https://aistudyonline.club";
 const LOCALES = ["en", "zh"];
 const XDEFAULT = "en";
-const LASTMOD = new Date().toISOString().replace(/\.\d{3}Z$/, "+00:00");
+const LASTMOD = new Date().toISOString().replace(/\.\d{3}Z$/, "+00:00").replace("T", "T").replace("+00:00", "+00:00");
 
 const articleSlugs = readSlugs(resolve("../src/lib/articles.ts"), 'slug:\\s*"([^"]+)"');
 const toolSlugs = readSlugs(resolve("../src/lib/tools.ts"), 'id:\\s*"([^"]+)"');
@@ -29,45 +29,42 @@ function esc(s) {
           .replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-// Single URL entry with all hreflang alternates (Google compliant)
 function urlEntry(path, prio, freq) {
   const canonical = `${SITE}/${XDEFAULT}${path}`;
-  let xml = `<url>\n  <loc>${esc(canonical)}</loc>\n  <lastmod>${LASTMOD}</lastmod>\n`;
-  xml += `  <priority>${prio}</priority>\n  <changefreq>${freq}</changefreq>\n`;
+  let s = `<url><loc>${esc(canonical)}</loc><lastmod>${LASTMOD}</lastmod><priority>${prio}</priority><changefreq>${freq}</changefreq>`;
   for (const l of LOCALES) {
-    xml += `  <xhtml:link rel="alternate" hreflang="${l}" href="${esc(SITE)}/${l}${path}"/>\n`;
+    s += `<xhtml:link rel="alternate" hreflang="${l}" href="${esc(SITE)}/${l}${path}"/>`;
   }
-  xml += `  <xhtml:link rel="alternate" hreflang="x-default" href="${esc(canonical)}"/>\n`;
-  xml += `</url>\n`;
-  return xml;
+  s += `<xhtml:link rel="alternate" hreflang="x-default" href="${esc(canonical)}"/>`;
+  s += `</url>`;
+  return s;
 }
 
-let count = 0;
-let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n';
-xml += '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
+let xml = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>';
+xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">';
 
 // Homepage
-xml += urlEntry("", "1.0", "daily"); count++;
+xml += urlEntry("", "1.0", "daily");
 // Listing pages
 for (const p of ["/tools", "/models", "/learn", "/blog"]) {
-  xml += urlEntry(p, "0.9", "weekly"); count++;
+  xml += urlEntry(p, "0.9", "weekly");
 }
 // Categories
-for (const c of categoryIds) { xml += urlEntry(`/learn/${c}`, "0.8", "weekly"); count++; }
+for (const c of categoryIds) { xml += urlEntry(`/learn/${c}`, "0.8", "weekly"); }
 // Articles
-for (const s of articleSlugs) { xml += urlEntry(`/article/${s}`, "0.8", "weekly"); count++; }
+for (const s of articleSlugs) { xml += urlEntry(`/article/${s}`, "0.8", "weekly"); }
 // Tools
-for (const s of toolSlugs) { xml += urlEntry(`/tools/${s}`, "0.8", "weekly"); count++; }
+for (const s of toolSlugs) { xml += urlEntry(`/tools/${s}`, "0.8", "weekly"); }
 // Models
-for (const s of modelSlugs) { xml += urlEntry(`/models/${s}`, "0.8", "weekly"); count++; }
+for (const s of modelSlugs) { xml += urlEntry(`/models/${s}`, "0.8", "weekly"); }
 // Blogs
-for (const s of blogSlugs) { xml += urlEntry(`/blog/${s}`, "0.7", "monthly"); count++; }
+for (const s of blogSlugs) { xml += urlEntry(`/blog/${s}`, "0.7", "monthly"); }
 // Static
-for (const p of staticPages) { xml += urlEntry(`/${p}`, "0.5", "monthly"); count++; }
+for (const p of staticPages) { xml += urlEntry(`/${p}`, "0.5", "monthly"); }
 
-xml += "</urlset>\n";
+xml += "</urlset>";
 
 const out = resolve("../public/sitemap.xml");
 writeFileSync(out, xml);
-console.log(`Sitemap: ${count} canonical URLs (${articleSlugs.length} articles, ${toolSlugs.length} tools, ${modelSlugs.length} models, ${blogSlugs.length} blogs, ${categoryIds.length} categories)`);
+const size = (Buffer.byteLength(xml) / 1024).toFixed(1);
+console.log(`Sitemap: ${articleSlugs.length + toolSlugs.length + modelSlugs.length + blogSlugs.length + categoryIds.length + staticPages.length + 5} canonical URLs (${size}KB)`);
