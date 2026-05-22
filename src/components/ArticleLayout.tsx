@@ -7,6 +7,7 @@ import { tools } from "@/lib/tools";
 import ToolCard from "@/components/ToolCard";
 import ArticleCard from "@/components/ArticleCard";
 import AdUnit from "@/components/AdUnit";
+import ShareButtons from "@/components/ShareButtons";
 
 interface ArticleLayoutProps {
   article: Article;
@@ -168,8 +169,15 @@ export default function ArticleLayout({
         </aside>
       </div>
 
+      {/* Share Buttons */}
+      <ShareButtons
+        url={`https://aistudyonline.club/${locale}/article/${article.slug}`}
+        title={title}
+        locale={locale}
+      />
+
       {/* Bottom Ad */}
-      <div className="mx-auto mt-10 max-w-3xl">
+      <div className="mx-auto mt-6 max-w-3xl">
         <AdUnit adSlot="8266407367" format="horizontal" />
       </div>
 
