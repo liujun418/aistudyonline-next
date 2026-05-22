@@ -48,7 +48,7 @@ export default function Header({
         {/* Logo */}
         <Link href={`/${locale}`} className="flex-shrink-0">
           <Image
-            src="/logo-2bx.png"
+            src="/logo-b.png"
             alt="AI Study Online"
             width={160}
             height={36}
@@ -56,7 +56,7 @@ export default function Header({
             priority
           />
           <Image
-            src="/logo-2hx.png"
+            src="/logo-h.png"
             alt="AI Study Online"
             width={160}
             height={36}
