@@ -108,6 +108,7 @@
     "articlesCount": "{count} articles"
   },
   "article": {
+    "readingTime": "5 min read",
     "tableOfContents": "On This Page",
     "toolsMentioned": "Tools Mentioned",
     "relatedArticles": "Related Articles",

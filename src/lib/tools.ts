@@ -67,6 +67,15 @@ export const toolCategories = [
 
 export type ToolCategory = (typeof toolCategories)[number];
 
+export const toolDifficulties = ["beginner", "intermediate", "advanced"] as const;
+export type ToolDifficulty = (typeof toolDifficulties)[number];
+
+export const toolDifficultyLabels: Record<ToolDifficulty, { en: string; zh: string }> = {
+  beginner: { en: "Beginner", zh: "入门" },
+  intermediate: { en: "Intermediate", zh: "中级" },
+  advanced: { en: "Advanced", zh: "高级" },
+};
+
 export const toolCategoryLabels: Record<ToolCategory, { en: string; zh: string }> = {
   chatbots: { en: "Chatbots", zh: "聊天机器人" },
   "image-generation": { en: "Image Gen", zh: "图像生成" },
@@ -237,7 +246,7 @@ export const tools: Tool[] = [
             "No native offline mode"
           ],
   consZh: [
-            "提供免费版本 con mensajes GPT-5 limitados",
+            "免费版GPT-5消息有限额度",
             "可能自信地给出错误答案",
             "无原生离线模式"
           ],
@@ -738,7 +747,7 @@ export const tools: Tool[] = [
             "Weak for coding"
           ],
   consZh: [
-            "Escritura creativa limitada",
+            "创意写作能力有限",
             "Pro版价格较高",
             "质量依赖网络搜索",
             "编程能力较弱"
@@ -1133,7 +1142,7 @@ export const tools: Tool[] = [
             "Brand asset variations"
           ],
   useCasesZh: [
-            "生成式填充 en Photoshop",
+            "Photoshop中的生成式填充",
             "Express中的社交媒体图像",
             "AI文字效果",
             "图像扩展"
@@ -1201,7 +1210,7 @@ export const tools: Tool[] = [
   prosZh: [
             "与Creative Cloud无缝集成",
             "商业使用安全",
-            "生成式填充 de primera",
+            "卓越的生成式填充",
             "企业级就绪"
           ],
   cons: [
@@ -1460,7 +1469,7 @@ export const tools: Tool[] = [
             "专业版价格较高",
             "学习曲线陡峭",
             "质量不稳定",
-            "提供免费版本 limitado"
+            "免费版功能有限"
           ],
   },
 
@@ -1940,7 +1949,7 @@ export const tools: Tool[] = [
           ],
   consZh: [
             "输出需要编辑",
-            "对输出控制较少 de voz",
+            "对输出控制较少",
             "模板较为通用",
             "长文生成能力有限"
           ],
@@ -2760,10 +2769,10 @@ export const tools: Tool[] = [
             "AI can be restrictive"
           ],
   consZh: [
-            "Menos libertad creativa",
+            "创意自由度较低",
             "个人用户价格较高",
-            "Plantillas limitadas",
-            "IA restrictiva"
+            "模板有限",
+            "AI限制较多"
           ],
   },
 
@@ -3005,7 +3014,7 @@ export const tools: Tool[] = [
   consZh: [
             "高使用量费用较高",
             "语音克隆伦理问题",
-            "提供免费版本 limitado",
+            "免费版功能有限",
             "长文本处理较慢"
           ],
   },
@@ -3230,7 +3239,7 @@ export const tools: Tool[] = [
   consZh: [
             "部分声音仍显机械",
             "完整功能价格较高",
-            "提供免费版本 limitado",
+            "免费版功能有限",
             "质量不稳定"
           ],
   },

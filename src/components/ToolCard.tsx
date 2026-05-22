@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTagLabel } from "@/lib/i18n";
 
 interface ToolCardProps {
   id: string;
@@ -22,16 +23,15 @@ const difficultyStyles: Record<string, string> = {
 };
 
 function getLabel(dict: Record<string, unknown> | undefined, key: string, fallback: string): string {
-  const difficulty = (dict as any)?.tools?.difficulty;
-  if (difficulty && difficulty[key]) return difficulty[key] as string;
-  const fallbacks: Record<string, string> = {
-    beginner: "Beginner",
-    intermediate: "Intermediate",
-    advanced: "Advanced",
-    pricing: "Pricing",
-    visit: "Visit",
-  };
-  return fallbacks[key] || fallback;
+  const t = (dict as any)?.tools || {};
+  // For difficulty keys, look in tools.difficulty
+  if (["beginner", "intermediate", "advanced"].includes(key)) {
+    if (t?.difficulty?.[key]) return t.difficulty[key] as string;
+  }
+  // For pricing/visit, look in tools directly
+  if (key === "pricing" && t?.pricing) return t.pricing as string;
+  if (key === "visit" && t?.visit) return t.visit as string;
+  return fallback;
 }
 
 function StarRating({ rating }: { rating: number }) {
@@ -104,7 +104,7 @@ export default function ToolCard({
               key={tag}
               className="rounded-md bg-primary-100 px-2 py-0.5 text-xs text-primary-700 dark:bg-primary-900/40 dark:text-primary-300"
             >
-              {tag}
+              {getTagLabel(tag, locale)}
             </span>
           ))}
         </div>

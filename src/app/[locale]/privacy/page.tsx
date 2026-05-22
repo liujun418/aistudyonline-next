@@ -148,7 +148,7 @@ const enContent = {
     body: "AI Study Online does not collect personal information from its visitors. We do not require registration, accounts, or email sign-ups to use our tools or read our content.",
   },
   adsense: {
-    title: "Google AdSense",
+    title: "Google AdSense（谷歌广告）",
     bodyBefore:
       "We use Google AdSense to display advertisements on our website. Google AdSense uses cookies to serve ads based on your previous visits to our website or other websites. You can opt out of personalized advertising by visiting",
     linkLabel: "Google Ads Settings",
@@ -188,18 +188,18 @@ const zhContent = {
     body: "AI Study Online 不会收集访客的个人信息。您无需注册、创建账户或订阅邮件即可使用我们的工具或阅读我们的内容。",
   },
   adsense: {
-    title: "Google AdSense",
+    title: "Google AdSense（谷歌广告）",
     bodyBefore:
       "我们使用 Google AdSense 在本网站展示广告。Google AdSense 会根据您之前访问本网站或其他网站的历史，使用 Cookie 投放个性化广告。您可以通过访问",
     linkLabel: "Google 广告设置",
     bodyAfter: "来选择退出个性化广告。",
   },
   analytics: {
-    title: "Google Analytics",
+    title: "Google Analytics（谷歌分析）",
     body: "我们使用 Google Analytics 来了解访客如何与我们的网站互动。这些数据经过匿名化处理，帮助我们改进内容和用户体验。Google Analytics 会收集页面浏览、来源渠道和浏览器类型等信息。",
   },
   cookies: {
-    title: "Cookie",
+    title: "Cookie（缓存）",
     intro: "本网站使用以下类型的 Cookie：",
     items: [
       "Google AdSense 广告 Cookie",

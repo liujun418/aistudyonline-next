@@ -124,8 +124,9 @@ export default async function CategoryPage({
           <h1 className="text-3xl font-bold text-foreground">{catName}</h1>
           <p className="mt-1 text-zinc-600 dark:text-zinc-400">{catDesc}</p>
           <p className="mt-1 text-sm text-zinc-400 dark:text-zinc-500">
-            {catArticles.length}{" "}
-            {catArticles.length === 1 ? "article" : "articles"}
+            {locale === "zh"
+              ? `${catArticles.length}篇文章`
+              : `${catArticles.length} ${catArticles.length === 1 ? "article" : "articles"}`}
           </p>
         </div>
       </div>

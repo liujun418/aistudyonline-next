@@ -205,7 +205,7 @@ export default function ToolsClient({
                 key={tool.id}
                 id={tool.id}
                 name={tool.name}
-                description={tool.description}
+                description={locale === "zh" ? tool.descriptionZh : tool.description}
                 category={tool.category}
                 tags={tool.tags}
                 difficulty={tool.difficulty}

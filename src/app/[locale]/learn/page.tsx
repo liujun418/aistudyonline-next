@@ -148,7 +148,7 @@ export default async function LearnPage({
                     href={`/${locale}/learn/${cat.slug}`}
                     className="text-sm font-medium text-primary-600 transition-colors hover:text-primary-700 dark:text-primary-400"
                   >
-                    View all in {catName} &rarr;
+                    {locale === "zh" ? `查看全部${catName} →` : `View all in ${catName} →`}
                   </Link>
                 </div>
               )}

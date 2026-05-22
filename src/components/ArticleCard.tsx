@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { categories, Category } from "@/lib/categories";
+import { toolDifficultyLabels } from "@/lib/tools";
+import { getTagLabel } from "@/lib/i18n";
 
 interface ArticleCardProps {
   slug: string;
@@ -28,8 +30,9 @@ export default function ArticleCard({
   locale,
   tags,
   difficulty,
-  readingTime = "5 min read",
+  readingTime,
 }: ArticleCardProps) {
+  const defaultReadingTime = readingTime || (locale === "zh" ? "5分钟阅读" : "5 min read");
   const cat: Category | undefined = categories.find((c) => c.id === category);
   const catColor = cat?.color?.split(" ")[0] || "bg-primary-100";
   const catTextColor = cat?.color?.split(" ")[1] || "text-primary-700";
@@ -39,12 +42,14 @@ export default function ArticleCard({
       {/* Category badge */}
       <div className="mb-3 flex items-center justify-between">
         <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${catColor || "bg-primary-100"} ${catTextColor || "text-primary-700"}`}>
-          {cat?.name || category}
+          {locale === "zh" && cat?.nameZh ? cat.nameZh : (cat?.name || category)}
         </span>
         <span
           className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${difficultyStyles[difficulty]}`}
         >
-          {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+          {locale === "zh"
+            ? (toolDifficultyLabels[difficulty]?.zh || difficulty)
+            : (toolDifficultyLabels[difficulty]?.en || difficulty)}
         </span>
       </div>
 
@@ -67,7 +72,7 @@ export default function ArticleCard({
       <div className="mb-3 flex items-center gap-3 text-xs text-zinc-400 dark:text-zinc-500">
         <time dateTime={date}>{date}</time>
         <span aria-hidden="true">&middot;</span>
-        <span>{readingTime}</span>
+        <span>{defaultReadingTime}</span>
       </div>
 
       {/* Tags */}
@@ -78,7 +83,7 @@ export default function ArticleCard({
               key={tag}
               className="rounded-md bg-zinc-100 px-2 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
             >
-              {tag}
+              {getTagLabel(tag, locale)}
             </span>
           ))}
         </div>
