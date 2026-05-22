@@ -29,7 +29,11 @@ export default function BlogDetailClient({
   const catLabel =
     locale === "zh" ? categoryLabels[post.category].zh : categoryLabels[post.category].en;
   const catColor = categoryColors[post.category] || "bg-primary-100 text-primary-700";
-  const content = locale === "zh" ? post.contentZh : post.content;
+  const rawContent = locale === "zh" ? post.contentZh : post.content;
+  const content = rawContent.replace(
+    /href="\/(article|learn|tools|models|blog)\//g,
+    `href="/${locale}/$1/`,
+  );
 
   // Related tools
   const relatedTools = tools.filter((t) => post.toolsMentioned.includes(t.id));

@@ -101,6 +101,10 @@ export default async function ArticlePage({
   const rawContent = entry
     ? (locale === "zh" ? entry.contentZh : entry.content)
     : `<p>${description}</p><p>Full article content coming soon.</p>`;
+  const localizedContent = rawContent.replace(
+    /href="\/(article|learn|tools|models|blog)\//g,
+    `href="/${locale}/$1/`,
+  );
 
   return (
     <>
@@ -167,7 +171,7 @@ export default async function ArticlePage({
 
       <ArticleLayout
         article={article}
-        content={rawContent}
+        content={localizedContent}
         locale={locale}
         dict={dict}
       />
