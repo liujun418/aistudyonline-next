@@ -25,66 +25,49 @@ const categoryIds = readSlugs(resolve("../src/lib/categories.ts"), 'id:\\s*"([^"
 const staticPages = ["about", "privacy", "terms", "refund"];
 
 function esc(s) {
-  return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return s.replace(/&/g, "&amp;").replace(/'/g, "&apos;").replace(/"/g, "&quot;")
+          .replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function hreflang(url) {
-  let links = "";
-  for (const l of LOCALES) {
-    const u = url.replace("/__LOCALE__/", `/${l}/`);
-    links += `<xhtml:link rel="alternate" hreflang="${l}" href="${esc(u)}"/>`;
-  }
-  const xd = url.replace("/__LOCALE__/", `/${XDEFAULT}/`);
-  links += `<xhtml:link rel="alternate" hreflang="x-default" href="${esc(xd)}"/>`;
-  return links;
-}
-
+// Single URL entry with all hreflang alternates (Google compliant)
 function urlEntry(path, prio, freq) {
-  let xml = "";
+  const canonical = `${SITE}/${XDEFAULT}${path}`;
+  let xml = `<url>\n  <loc>${esc(canonical)}</loc>\n  <lastmod>${LASTMOD}</lastmod>\n`;
+  xml += `  <priority>${prio}</priority>\n  <changefreq>${freq}</changefreq>\n`;
   for (const l of LOCALES) {
-    const u = `${SITE}/${l}${path}`;
-    xml += `<url><loc>${esc(u)}</loc><lastmod>${LASTMOD}</lastmod><priority>${prio}</priority><changefreq>${freq}</changefreq>`;
-    // Build hreflang links for each locale
-    for (const hl of LOCALES) {
-      xml += `<xhtml:link rel="alternate" hreflang="${hl}" href="${esc(SITE)}/${hl}${path}"/>`;
-    }
-    xml += `<xhtml:link rel="alternate" hreflang="x-default" href="${esc(SITE)}/${XDEFAULT}${path}"/>`;
-    xml += `</url>`;
+    xml += `  <xhtml:link rel="alternate" hreflang="${l}" href="${esc(SITE)}/${l}${path}"/>\n`;
   }
+  xml += `  <xhtml:link rel="alternate" hreflang="x-default" href="${esc(canonical)}"/>\n`;
+  xml += `</url>\n`;
   return xml;
 }
 
-// Remove unused hreflang function
-
 let count = 0;
-let xml = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
+let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n';
+xml += '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
 
 // Homepage
-xml += urlEntry("", "1.0", "daily"); count += 2;
-// Tools
-xml += urlEntry("/tools", "0.9", "weekly"); count += 2;
-// Models
-xml += urlEntry("/models", "0.9", "weekly"); count += 2;
-// Learn
-xml += urlEntry("/learn", "0.9", "weekly"); count += 2;
-// Blog
-xml += urlEntry("/blog", "0.7", "weekly"); count += 2;
-
+xml += urlEntry("", "1.0", "daily"); count++;
+// Listing pages
+for (const p of ["/tools", "/models", "/learn", "/blog"]) {
+  xml += urlEntry(p, "0.9", "weekly"); count++;
+}
 // Categories
-for (const c of categoryIds) { xml += urlEntry(`/learn/${c}`, "0.8", "weekly"); count += 2; }
+for (const c of categoryIds) { xml += urlEntry(`/learn/${c}`, "0.8", "weekly"); count++; }
 // Articles
-for (const s of articleSlugs) { xml += urlEntry(`/article/${s}`, "0.8", "weekly"); count += 2; }
-// Tools detail
-for (const s of toolSlugs) { xml += urlEntry(`/tools/${s}`, "0.8", "weekly"); count += 2; }
-// Models detail
-for (const s of modelSlugs) { xml += urlEntry(`/models/${s}`, "0.8", "weekly"); count += 2; }
-// Blog posts
-for (const s of blogSlugs) { xml += urlEntry(`/blog/${s}`, "0.7", "monthly"); count += 2; }
-// Static pages
-for (const p of staticPages) { xml += urlEntry(`/${p}`, "0.5", "monthly"); count += 2; }
+for (const s of articleSlugs) { xml += urlEntry(`/article/${s}`, "0.8", "weekly"); count++; }
+// Tools
+for (const s of toolSlugs) { xml += urlEntry(`/tools/${s}`, "0.8", "weekly"); count++; }
+// Models
+for (const s of modelSlugs) { xml += urlEntry(`/models/${s}`, "0.8", "weekly"); count++; }
+// Blogs
+for (const s of blogSlugs) { xml += urlEntry(`/blog/${s}`, "0.7", "monthly"); count++; }
+// Static
+for (const p of staticPages) { xml += urlEntry(`/${p}`, "0.5", "monthly"); count++; }
 
 xml += "</urlset>\n";
 
 const out = resolve("../public/sitemap.xml");
 writeFileSync(out, xml);
-console.log(`Sitemap: ${count} URLs (${articleSlugs.length} articles, ${toolSlugs.length} tools, ${modelSlugs.length} models, ${blogSlugs.length} blogs, ${categoryIds.length} categories)`);
+console.log(`Sitemap: ${count} canonical URLs (${articleSlugs.length} articles, ${toolSlugs.length} tools, ${modelSlugs.length} models, ${blogSlugs.length} blogs, ${categoryIds.length} categories)`);
