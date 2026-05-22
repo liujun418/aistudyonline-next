@@ -2,53 +2,53 @@ export const articleContents: Record<string, { content: string; contentZh: strin
   // ====== Sample: Claude Code Installation (Path: Claude Code × 4, Part 1) ======
   "claude-code-install-setup": {
     content: `<div class="article-meta-banner">
-<p><strong>Learning Path:</strong> Claude Code 编程入门 · <strong>Part 1 of 4</strong></p>
-<p><strong>Prerequisites:</strong> 一台电脑（Windows/Mac/Linux）、基本命令行操作能力（会用 <code>cd</code> 和 <code>ls</code> 即可）</p>
-<p><strong>What you'll build:</strong> 一个可运行的 Claude Code 开发环境，能通过命令行直接调用 Claude 写代码。</p>
+<p><strong>Learning Path:</strong> Claude Code Quickstart · <strong>Part 1 of 4</strong></p>
+<p><strong>Prerequisites:</strong> A computer (Windows/Mac/Linux) with basic command-line skills (<code>cd</code> and <code>ls</code> are sufficient)</p>
+<p><strong>What you'll build:</strong> A working Claude Code development environment that lets you call Claude to write code directly from your terminal.</p>
 </div>
 
 <h2>What is Claude Code?</h2>
 
-<p>Claude Code 是 Anthropic 推出的命令行 AI 编程工具。和 Cursor、GitHub Copilot 不同，它不需要打开 IDE——直接在终端里输入自然语言，Claude 就能读你的代码库、写代码、修 bug、解释逻辑。它最独特的能力是<strong>理解整个项目结构</strong>，而不是只处理当前打开的文件。</p>
+<p>Claude Code is Anthropic's command-line AI coding tool. Unlike Cursor or GitHub Copilot, it does not require an IDE — you type natural language directly in your terminal, and Claude reads your codebase, writes code, fixes bugs, and explains logic. Its most unique ability is <strong>understanding your entire project structure</strong>, not just the file you have open.</p>
 
-<p>在正式开始之前，你需要知道三件事：</p>
+<p>Before you start, there are three things you need to know:</p>
 
 <ol>
-<li>Claude Code 需要 <strong>Anthropic API Key</strong>（付费），不是 Claude.ai 的网页版订阅。两者独立。</li>
-<li>它是<strong>命令行工具</strong>，运行在终端里，没有图形界面。别担心——你不会被要求写任何代码来使用它。</li>
-<li>它会<strong>读取和修改你的文件</strong>。建议在测试项目里先试用，不要一上来就在公司代码库里跑。</li>
+<li>Claude Code requires an <strong>Anthropic API Key</strong> (paid), not a Claude.ai web subscription. They are separate products.</li>
+<li>It is a <strong>command-line tool</strong> that runs in your terminal with no graphical interface. Do not worry — you will not need to write any code just to use it.</li>
+<li>It will <strong>read and modify your files</strong>. It is best to try it on a test project first, not on your production codebase.</li>
 </ol>
 
 <h2>Step 1: Install Node.js 18+</h2>
 
-<p>Claude Code 基于 Node.js。如果你的电脑上还没有 Node.js，先装它。</p>
+<p>Claude Code runs on Node.js. If you do not have Node.js installed yet, start here.</p>
 
 <div class="step-card">
 
 <h3>Windows</h3>
-<p>去 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>，下载 LTS 版本（推荐 20.x 或 22.x）。运行安装程序，全部默认选项，一路 Next 到底。</p>
+<p>Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> and download the LTS version (20.x or 22.x recommended). Run the installer with all default settings — just click Next all the way through.</p>
 
-<p>安装完成后，打开 <strong>PowerShell</strong>（按 Win 键，输入 PowerShell，回车），验证安装：</p>
+<p>Once installed, open <strong>PowerShell</strong> (press the Win key, type "PowerShell", press Enter) and verify the installation:</p>
 
 <pre><code>node --version
-# 应该输出: v20.x.x 或 v22.x.x
+# Should output: v20.x.x or v22.x.x
 
 npm --version
-# 应该输出: 10.x.x</code></pre>
+# Should output: 10.x.x</code></pre>
 </div>
 
 <div class="step-card">
 
 <h3>Mac</h3>
-<p>推荐用 Homebrew。如果你没装过 Homebrew，先打开 <strong>终端（Terminal）</strong> 运行：</p>
+<p>Homebrew is the recommended approach. If you do not have Homebrew yet, open <strong>Terminal</strong> and run:</p>
 
 <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
 
-<p>然后安装 Node.js：</p>
+<p>Then install Node.js:</p>
 
 <pre><code>brew install node@22</code></pre>
 
-<p>验证安装：</p>
+<p>Verify the installation:</p>
 
 <pre><code>node --version
 npm --version</code></pre>
@@ -61,7 +61,7 @@ npm --version</code></pre>
 <pre><code>curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt-get install -y nodejs</code></pre>
 
-<p>验证：</p>
+<p>Verify:</p>
 
 <pre><code>node --version
 npm --version</code></pre>
@@ -69,117 +69,117 @@ npm --version</code></pre>
 
 <h2>Step 2: Get Your Anthropic API Key</h2>
 
-<p>这步容易搞混。你需要的是 <strong>API Key</strong>，不是 Claude.ai 的网页版账号。</p>
+<p>This step is easy to get wrong. You need an <strong>API Key</strong>, not a Claude.ai web account.</p>
 
 <ol>
-<li>打开 <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a></li>
-<li>注册或登录（可以用 Google 账号）</li>
-<li>首次使用需要绑定信用卡，设置消费限额（建议先设 $20/月）</li>
-<li>左侧菜单 → <strong>API Keys</strong> → 点击 <strong>Create Key</strong></li>
-<li>给 key 起个名字（比如 "claude-code-laptop"）→ 复制生成的 key</li>
+<li>Open <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a></li>
+<li>Sign up or log in (Google account works)</li>
+<li>First-time users need to add a credit card and set a spending limit ($20/month is a good starting point)</li>
+<li>Left menu → <strong>API Keys</strong> → click <strong>Create Key</strong></li>
+<li>Give your key a name (e.g., "claude-code-laptop") → copy the generated key</li>
 </ol>
 
 <div class="warning-box">
-<p><strong>⚠️ 重要：</strong>Key 只显示一次。关闭页面后无法再次查看。请立即保存到安全的地方（密码管理器、文本文件都行，不要贴到聊天记录里）。</p>
+<p><strong>Important:</strong> The key is only shown once. You cannot view it again after closing the page. Save it immediately in a secure place (password manager, encrypted text file — anywhere but your chat logs).</p>
 </div>
 
 <h2>Step 3: Install Claude Code</h2>
 
-<p>打开终端（Windows: PowerShell。Mac: Terminal。Linux: Terminal），运行：</p>
+<p>Open your terminal (Windows: PowerShell, Mac: Terminal, Linux: Terminal) and run:</p>
 
 <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
 
-<p>这条命令做了什么：<code>npm install -g</code> 是"全局安装"，安装后你可以在任何目录里使用 <code>claude</code> 命令。<code>@anthropic-ai/claude-code</code> 是 Claude Code 的包名。</p>
+<p>What this command does: <code>npm install -g</code> installs the package globally so you can use the <code>claude</code> command from any directory. <code>@anthropic-ai/claude-code</code> is the official package name for Claude Code.</p>
 
-<p>安装过程大约 30-60 秒。你可能会看到一些 warning 信息，只要最后没有红色的 <code>ERROR</code>，就可以继续。</p>
+<p>The installation takes about 30–60 seconds. You may see some warning messages — as long as there is no red <code>ERROR</code>, you are good to continue.</p>
 
-<p>验证安装成功：</p>
+<p>Verify the installation:</p>
 
 <pre><code>claude --version
-# 应该输出类似: v1.x.x</code></pre>
+# Should output something like: v1.x.x</code></pre>
 
-<h2>Step 4: 配置 API Key</h2>
+<h2>Step 4: Configure Your API Key</h2>
 
-<p>有两种方式告诉 Claude Code 你的 API Key。推荐方式一：</p>
+<p>There are two ways to tell Claude Code about your API Key. Method one is recommended:</p>
 
 <div class="step-card">
-<p><strong>方式一（推荐）：环境变量</strong>——将 key 设为系统环境变量，所有项目生效：</p>
+<p><strong>Method 1 (recommended): Environment variable</strong> — set the key as a system environment variable so it applies to all projects:</p>
 
-<h3>Windows (PowerShell, 管理员模式)</h3>
+<h3>Windows (PowerShell, Administrator mode)</h3>
 
 <pre><code>[Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-ant-api03-your-key-here', 'User')</code></pre>
 
-<p>把 <code>sk-ant-api03-your-key-here</code> 替换成你的真实 key。关闭并重新打开 PowerShell 使其生效。</p>
+<p>Replace <code>sk-ant-api03-your-key-here</code> with your actual key. Close and reopen PowerShell for the change to take effect.</p>
 
 <h3>Mac / Linux (Terminal)</h3>
 
-<pre><code># 添加到 shell 配置文件中（zsh 用户用 .zshrc，bash 用户用 .bashrc）
+<pre><code># Add to your shell config file (use .zshrc for zsh, .bashrc for bash)
 echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' >> ~/.zshrc
 
-# 立即生效
+# Apply immediately
 source ~/.zshrc</code></pre>
 </div>
 
 <div class="step-card">
-<p><strong>方式二：项目级配置</strong>——只在当前项目中生效，适用于多个项目用不同 key 的情况：</p>
+<p><strong>Method 2: Project-level config</strong> — only applies to the current project, useful when you use different keys for different projects:</p>
 
-<pre><code># 在项目根目录创建 .env 文件
+<pre><code># Create a .env file in your project root
 echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' > .env</code></pre>
 
-<p>Claude Code 启动时会自动读取 <code>.env</code> 文件。</p>
+<p>Claude Code automatically reads the <code>.env</code> file when it starts.</p>
 </div>
 
-<h2>Step 5: 测试你的第一个 Claude Code 命令</h2>
+<h2>Step 5: Test Your First Claude Code Command</h2>
 
-<p>创建一个测试项目目录，然后启动 Claude Code：</p>
+<p>Create a test project directory and launch Claude Code:</p>
 
-<pre><code># 创建测试目录
+<pre><code># Create a test directory
 mkdir claude-test && cd claude-test
 
-# 初始化 git（Claude Code 需要 git 来跟踪代码变更）
+# Initialize git (Claude Code needs git to track code changes)
 git init
 
-# 启动 Claude Code
+# Start Claude Code
 claude</code></pre>
 
-<p>第一次启动时，Claude Code 可能会问你是否同意使用条款。输入 <code>y</code> 确认。</p>
+<p>On first launch, Claude Code may ask you to accept the terms of use. Type <code>y</code> to confirm.</p>
 
-<p>看到交互式界面后，输入你的第一个指令：</p>
+<p>Once the interactive interface appears, enter your first command:</p>
 
-<pre><code>创建一个简单的 HTML 文件 index.html，内容是一个现代化的"Hello World"页面，有居中的文字和好看的背景色。</code></pre>
+<pre><code>Create a simple HTML file called index.html with a modern "Hello World" page that has centered text and a nice background color.</code></pre>
 
-<p>Claude 会：</p>
+<p>Claude will:</p>
 
 <ol>
-<li>分析你的请求</li>
-<li>生成代码</li>
-<li>显示它打算做什么（可能需要你按 Enter 确认）</li>
-<li>创建文件</li>
+<li>Analyze your request</li>
+<li>Generate the code</li>
+<li>Show you what it plans to do (you may need to press Enter to confirm)</li>
+<li>Create the file</li>
 </ol>
 
-<p>完成后，在浏览器中打开 <code>index.html</code> 查看结果。</p>
+<p>When done, open <code>index.html</code> in your browser to see the result.</p>
 
-<h2>常见问题</h2>
+<h2>Frequently Asked Questions</h2>
 
-<h3>Q: 提示 "API key not found"</h3>
-<p>检查环境变量是否正确设置。运行 <code>echo $ANTHROPIC_API_KEY</code>（Mac/Linux）或 <code>$env:ANTHROPIC_API_KEY</code>（PowerShell）查看当前值。如果为空，回到 Step 4 重新设置。</p>
+<h3>Q: I get "API key not found"</h3>
+<p>Check whether the environment variable was set correctly. Run <code>echo $ANTHROPIC_API_KEY</code> (Mac/Linux) or <code>$env:ANTHROPIC_API_KEY</code> (PowerShell) to see the current value. If it is empty, go back to Step 4 and set it again.</p>
 
-<h3>Q: 提示 "Insufficient permissions"</h3>
-<p>去 <a href="https://console.anthropic.com/settings/billing" target="_blank" rel="noopener">Anthropic Console → Billing</a> 检查：账户余额是否 >$0、是否已绑定信用卡、消费限额是否用完。</p>
+<h3>Q: I get "Insufficient permissions"</h3>
+<p>Go to <a href="https://console.anthropic.com/settings/billing" target="_blank" rel="noopener">Anthropic Console → Billing</a> and check: does your account balance have credits? Is your credit card linked? Have you hit your spending limit?</p>
 
-<h3>Q: 安装很慢或失败</h3>
-<p>这是 npm 网络问题。尝试使用国内镜像：</p>
+<h3>Q: The installation is very slow or fails</h3>
+<p>This is usually an npm network issue. Try using a mirror registry:</p>
 
 <pre><code>npm config set registry https://registry.npmmirror.com
 npm install -g @anthropic-ai/claude-code
-# 安装完成后恢复默认
+# Restore the default after install
 npm config set registry https://registry.npmjs.org</code></pre>
 
-<h3>Q: Claude Code 和 Cursor / Copilot 有什么区别？</h3>
-<p>Claude Code 是<strong>命令行工具</strong>，适合快速改项目、自动化任务、在终端里直接操作。Cursor 是<strong>IDE</strong>（编辑器），适合边写代码边用 AI 辅助。Copilot 是<strong>IDE 插件</strong>，适合在已有编辑器里自动补全。实际工作中三者可以配合使用。</p>
+<h3>Q: What is the difference between Claude Code, Cursor, and Copilot?</h3>
+<p>Claude Code is a <strong>command-line tool</strong> built for quick project modifications, automation tasks, and working directly in the terminal. Cursor is an <strong>IDE</strong> (editor) designed for writing code with AI assistance alongside. Copilot is an <strong>IDE plugin</strong> focused on autocomplete within your existing editor. In practice, all three can complement each other in your workflow.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/claude-code-mcp-configuration">Part 2: Claude Code 环境配置与 MCP 工具集成 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/claude-code-mcp-configuration">Part 2: Configure MCP Servers in Claude Code: File Access, APIs, and Databases →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>Learning Path:</strong> Claude Code 编程入门 · <strong>Part 1 of 4</strong></p>
@@ -359,7 +359,7 @@ npm config set registry https://registry.npmjs.org</code></pre>
 <p>Claude Code 是<strong>命令行工具</strong>，适合快速改项目、自动化任务、在终端里直接操作。Cursor 是<strong>IDE</strong>（编辑器），适合边写代码边用 AI 辅助。Copilot 是<strong>IDE 插件</strong>，适合在已有编辑器里自动补全。实际工作中三者可以配合使用。</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/claude-code-mcp-configuration">Part 2: Claude Code 环境配置与 MCP 工具集成 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-mcp-configuration">第2部分：Configura Servidores MCP en Claude Code: Acceso a Archivos, APIs y Bases de Datos →</a></p>
 </div>`,
   },
 
@@ -470,7 +470,7 @@ Processing starts:
 <p>Yes, but with caveats. Small models like Llama 3.2 3B or Microsoft Phi-3 can run on a modern laptop (8GB+ RAM) using tools like Ollama or LM Studio. Frontier models like GPT-4 require data center-scale hardware and cannot run locally. There is a growing ecosystem of capable small models that work offline and respect your privacy &mdash; at the cost of some capability compared to cloud models.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-hallucinations-explained-with-examples">第2部分：AI幻觉详解——为什么ChatGPT会编造内容（附真实案例）→</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-hallucinations-explained-with-examples">Part 2: AI Hallucinations Explained: Why ChatGPT Makes Stuff Up (With Real Examples) →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI基础 · <strong>第1部分（共5部分）</strong></p>
@@ -572,7 +572,7 @@ Processing starts:
 <p>可以，但有条件。像Llama 3.2 3B或Microsoft Phi-3这样的小模型可以在现代笔记本电脑（8GB+内存）上使用Ollama或LM Studio等工具运行。像GPT-4这样的前沿模型需要数据中心级的硬件，无法在本地运行。能够离线运行且尊重隐私的小模型生态系统正在不断壮大——代价是在能力上不如云端模型。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-hallucinations-explained-with-examples">第2部分：AI幻觉详解——为什么ChatGPT会编造内容（附真实案例）→</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-hallucinations-explained-with-examples">第2部分：Alucinaciones de IA Explicadas: Por Qué ChatGPT Inventa Cosas (Con Ejemplos Reales) →</a></p>
 </div>`,
   },
   // ... remaining articles stub for build compatibility
@@ -672,7 +672,7 @@ Processing starts:
 <p>No. A software bug is when code does not do what it was designed to do. Hallucination is when the model does exactly what it was designed to do (predict likely tokens) but that behavior produces an incorrect statement from a human perspective. It is a feature of the architecture, not a flaw in the implementation. This is why "fixing" hallucinations is fundamentally harder than fixing a normal software bug.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：你应该使用哪个AI工具？初学者的决策框架 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/how-to-choose-right-ai-tool">Part 3: Which AI Tool Should You Use? A Decision Framework for Beginners →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI基础 · <strong>第2部分（共5部分）</strong></p>
@@ -769,7 +769,7 @@ Processing starts:
 <p>不。软件bug是指代码没有按照设计做它应该做的事。幻觉是指模型完全按照设计做了它该做的事（预测最可能的token），但该行为从人类视角产生了错误的陈述。这是架构的特性，不是实现的缺陷。这就是为什么"修复"幻觉从根本上比修复普通软件bug更难。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：你应该使用哪个AI工具？初学者的决策框架 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：¿Qué Herramienta de IA Deberías Usar? Un Marco de Decisión para Principiantes →</a></p>
 </div>`,
   },
   "how-to-choose-right-ai-tool": {
@@ -950,7 +950,7 @@ Processing starts:
 <p>ChatGPT, Claude, and Gemini free tiers are ongoing &mdash; they do not expire after a trial period. You get permanently reduced access to the latest models but can use them indefinitely. Perplexity's free tier is also permanent. Midjourney is the only one that requires payment after a short free trial. This is a change from 2023-2024 when free tiers were more limited.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">第4部分：2026年免费vs付费AI工具：你的钱什么时候花得值 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">Part 4: Free vs Paid AI Tools: When It's Actually Worth Paying (and When It's Not) →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI基础 · <strong>第3部分（共5部分）</strong></p>
@@ -1129,7 +1129,7 @@ Processing starts:
 <p>ChatGPT、Claude和Gemini的免费版是持续性的——它们不会在试用期后过期。你可以永久使用，但访问最新模型的权限有限。Perplexity的免费版也是永久的。Midjourney是唯一一个在短期免费试用后需要付费的。这与2023-2024年免费版更受限的情况相比已经发生了变化。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">第4部分：2026年免费vs付费AI工具：你的钱什么时候花得值 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">第4部分：Herramientas IA Gratis vs de Pago: Cuándo Vale la Pena Pagar (y Cuándo No) →</a></p>
 </div>`,
   },
   "free-vs-paid-ai-tools-worth-it": {
@@ -1304,7 +1304,7 @@ Processing starts:
 <p>For very heavy use (thousands of queries per day), the API can be cheaper. For example, running automated tasks through Claude's API costs roughly $3-15 per million input tokens depending on the model. A developer running millions of tokens per month would pay less via API than the $20 subscription. But the subscription includes the chat interface, projects, file uploads, and other features the API does not provide. For most people, the subscription is better value; for automated/scaled use, the API wins.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-myths-people-still-believe">第5部分：你的非技术朋友仍然相信的5个AI迷思（以及真相是什么）→</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-myths-people-still-believe">Part 5: 5 AI Myths Your Non-Techie Friends Still Believe (and What's Actually True) →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI基础 · <strong>第4部分（共5部分）</strong></p>
@@ -1477,7 +1477,7 @@ Processing starts:
 <p>对于非常重的使用（每天数千次查询），API更便宜。例如，通过Claude的API运行自动化任务，根据模型不同，每百万输入token大约花费3-15美元。每月运行数百万token的开发者通过API支付的费用低于20美元的订阅费。但订阅包含了API不提供的聊天界面、项目、文件上传等功能。对大多数人来说，订阅性价比更高；对于自动化/规模化使用，API胜出。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-myths-people-still-believe">第5部分：你的非技术朋友仍然相信的5个AI迷思（以及真相是什么）→</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-myths-people-still-believe">第5部分：5 Mitos de IA que Tus Amigos No Técnicos Siguen Creyendo (y Qué es Realmente Verdad) →</a></p>
 </div>`,
   },
   "what-is-a-gpu-non-techie": {
@@ -1540,7 +1540,7 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <p>NVIDIA's market cap surpassed $3 trillion because AI demand created exponential GPU growth. Data centers now buy GPUs at unprecedented scale. Competitors AMD and Intel are racing to catch up, but NVIDIA's CUDA software ecosystem gives it a massive advantage for AI workloads.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI基础 · <strong>独立文章</strong></p>
@@ -1706,7 +1706,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>Yes, but with awareness. All human-generated information has bias &mdash; news articles, textbooks, government reports, Wikipedia. The problem with AI is that its biases are harder to detect because the model presents information as neutral. Use AI for what it is good at (drafting, brainstorming, summarizing, coding) while maintaining skepticism about factual claims and being aware that the model's "neutral" tone may conceal underlying training data skew. Cross-checking important information remains essential.</p>
 
 <div class="next-step">
-<p><strong>AI基础学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+<p><strong>AI Basics path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI基础 · <strong>第5部分（共5部分）</strong></p>
@@ -1878,7 +1878,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>Yes. ChatGPT has official iOS and Android apps with voice input support. The app syncs history with the web version. Advanced Voice Mode (real-time conversation with tone detection) is available on Plus.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-projects-organize-chats">第2部分：如何写出真正有效的提示词：5点框架 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/claude-projects-organize-chats">Part 2: How to Write Prompts That Actually Work: The 5-Point Framework →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> ChatGPT精通 · <strong>第1部分（共5部分）</strong></p>
@@ -1945,7 +1945,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>有。ChatGPT有官方的iOS和Android应用，支持语音输入。应用与网页版同步历史记录。高级语音模式（带语气检测的实时对话）在Plus上可用。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-projects-organize-chats">第2部分：如何写出真正有效的提示词：5点框架 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-projects-organize-chats">第2部分：Cómo Escribir Prompts Que Realmente Funcionan: El Marco de 5 Puntos →</a></p>
 </div>`,
   },
   "claude-projects-organize-chats": {
@@ -2019,7 +2019,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>Yes. The framework addresses how LLMs process instructions, not platform-specific features. All major models respond better to structured prompts. Claude is slightly more tolerant of vague prompts than ChatGPT, but both benefit from the framework.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：用ChatGPT写作：邮件、报告和创意项目 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-images-that-dont-look-like-ai">Part 3: ChatGPT for Writing: Emails, Reports, and Creative Projects →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> ChatGPT精通 · <strong>第2部分（共5部分）</strong></p>
@@ -2091,7 +2091,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>是的。框架针对LLM如何处理指令，而非平台特定功能。所有主要模型都对结构化的提示词反应更好。Claude对模糊提示词的容忍度略高于ChatGPT，但两者都受益于框架。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：用ChatGPT写作：邮件、报告和创意项目 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：ChatGPT para Escribir: Correos, Informes y Proyectos Creativos →</a></p>
 </div>`,
   },
   "ai-images-that-dont-look-like-ai": {
@@ -2179,7 +2179,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>ChatGPT has output limits (roughly 3000-4000 words per response depending on the model). For longer documents, use the outline + section-by-section approach described in this article. You can also use ChatGPT's Advanced Data Analysis to combine sections into a single document.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：ChatGPT的研究与分析功能：网络搜索、文件上传和数据处理 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/voice-recording-to-meeting-notes-free">Part 4: ChatGPT for Research and Analysis: Web Search, File Upload, and Data →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> ChatGPT精通 · <strong>第3部分（共5部分）</strong></p>
@@ -2265,7 +2265,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <p>ChatGPT有输出限制（根据模型不同，每次回复约3000-4000词）。对于更长的文档，使用本文描述的大纲+逐节方法。你也可以使用ChatGPT的高级数据分析功能将各部分合并为单一文档。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：ChatGPT的研究与分析功能：网络搜索、文件上传和数据处理 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：ChatGPT para Investigación y Análisis: Búsqueda Web, Carga de Archivos y Datos →</a></p>
 </div>`,
   },
   "voice-recording-to-meeting-notes-free": {
@@ -2358,7 +2358,7 @@ and how do I fix it?</code></pre>
 <p>Yes. Upload multiple files in the same conversation and ask comparative questions: "Compare the findings in report A with report B. Highlight contradictions and areas of agreement."</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/first-ai-coding-project-no-experience">第5部分：自定义GPTs和自动化：构建你自己的AI助手 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/first-ai-coding-project-no-experience">Part 5: Custom GPTs and Automation: Build Your Own AI Assistant →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> ChatGPT精通 · <strong>第4部分（共5部分）</strong></p>
@@ -2448,7 +2448,7 @@ and how do I fix it?</code></pre>
 <p>可以。在同一对话中上传多个文件并提出对比性问题："比较报告A和报告B的发现。指出矛盾点和一致之处。"</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/first-ai-coding-project-no-experience">第5部分：自定义GPTs和自动化：构建你自己的AI助手 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/first-ai-coding-project-no-experience">第5部分：GPTs Personalizados y Automatización: Crea tu Propio Asistente de IA →</a></p>
 </div>`,
   },
   "first-ai-coding-project-no-experience": {
@@ -2515,7 +2515,7 @@ customer support GPT that answers accurately without hallucinating.</code></pre>
 <p>Custom GPTs have the same memory capabilities as regular ChatGPT. They can remember information across sessions if you enable memory. You can also upload knowledge files that persist permanently. Each session starts fresh within the GPT's configured instructions and knowledge.</p>
 
 <div class="next-step">
-<p><strong>ChatGPT精通学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+<p><strong>ChatGPT Mastery path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> ChatGPT精通 · <strong>第5部分（共5部分）</strong></p>
@@ -2656,7 +2656,7 @@ due to QA delays."
 <p>For internal communication, no. For external client work, it depends on your industry. Professional services firms typically do not disclose. Content marketing agencies often do. When in doubt, review your client's AI usage policy.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：AI用于项目规划和组织 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-wedding-planning-free-tools">Part 2: AI for Project Planning and Organization: From Timelines to Budgets →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI工作应用 · <strong>第1部分（共4部分）</strong></p>
@@ -2726,7 +2726,7 @@ due to QA delays."
 <p>对于内部沟通，不需要。对于外部客户工作，取决于你的行业。专业服务公司通常不披露。内容营销机构经常披露。如有疑问，查看客户的AI使用政策。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：AI用于项目规划和组织 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：IA para Planificación y Organización de Proyectos: De Cronogramas a Presupuestos →</a></p>
 </div>`,
   },
   "ai-wedding-planning-free-tools": {
@@ -2797,7 +2797,7 @@ with emoji indicators for status.</code></pre>
 <p>No. AI does not have persistent memory of your project's state unless you provide updates. Use it as a planning assistant, not a project management system. Update the AI with your current status for each new planning session.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：AI用于研究和报告写作 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-travel-itinerary-real-prompts">Part 3: AI for Research and Report Writing: Find, Analyze, and Summarize →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI工作应用 · <strong>第2部分（共4部分）</strong></p>
@@ -2863,7 +2863,7 @@ Sprint速度）、需要做出的决策。使用仪表盘风格格式，
 <p>不能。除非你提供更新，否则AI不会持续记忆项目的状态。把它用作规划助手，而不是项目管理系统。在每次新的规划会话中向AI更新当前状态。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：AI用于研究和报告写作 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：IA para Investigación y Redacción de Informes: Encuentra, Analiza y Resume →</a></p>
 </div>`,
   },
   "ai-travel-itinerary-real-prompts": {
@@ -2947,7 +2947,7 @@ available. Mark any sources you are uncertain about as
 <p>For single-topic deep research: NotebookLM (upload sources, ask grounded questions). For multi-source exploration: Perplexity Pro (web search with citations). For data analysis: ChatGPT Plus with Advanced Data Analysis. The combination of all three is more powerful than any single tool.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">第4部分：AI用于学习和技能发展 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">Part 4: AI for Learning and Skill Development: Language, Tech, and More →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI工作应用 · <strong>第3部分（共4部分）</strong></p>
@@ -3027,7 +3027,7 @@ available. Mark any sources you are uncertain about as
 <p>单一话题深度研究：NotebookLM（上传来源，提出基于上下文的问題）。多来源探索：Perplexity Pro（带引用的网络搜索）。数据分析：ChatGPT Plus带高级数据分析。三者结合比任何单一工具都强大。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">第4部分：AI用于学习和技能发展 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">第4部分：IA para Aprendizaje y Desarrollo de Habilidades: Idiomas, Tecnología y Más →</a></p>
 </div>`,
   },
   "learn-english-with-ai-free-speaking-practice": {
@@ -3112,7 +3112,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <p>Ask AI to track your progress within the conversation. At the start of each session, request a review: "Based on our previous session, what did I learn and what should I review today?" For systematic tracking, use a Custom GPT or Claude Project with instructions to maintain a learning log.</p>
 
 <div class="next-step">
-<p><strong>AI工作应用学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+<p><strong>AI for Work path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI工作应用 · <strong>第4部分（共4部分）</strong></p>
@@ -3248,7 +3248,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <p>Some exist (Huckleberry for sleep, Wonder Weeks for milestones), but general-purpose AI like ChatGPT adapts better to your specific situation.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI日常生活 · <strong>独立指南</strong></p>
@@ -3367,7 +3367,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <p>Use the U buttons first, then "Open in Browser" and use tools like Upscayl (free) or Topaz Gigapixel for further upscaling.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-dalle-firefly">第2部分：DALL-E 3和Adobe Firefly：基于浏览器的AI图像工具 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-image-dalle-firefly">Part 2: DALL-E vs Firefly vs Midjourney: Which AI Image Generator Should You Use? →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI图像生成 · <strong>第1部分（共4部分）</strong></p>
@@ -3433,7 +3433,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <p>先使用U按钮，然后"在浏览器中打开"，使用Upscayl（免费）或Topaz Gigapixel等工具进一步放大。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-dalle-firefly">第2部分：DALL-E 3和Adobe Firefly：基于浏览器的AI图像工具 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-dalle-firefly">第2部分：DALL-E vs Firefly vs Midjourney: Qué Generador de Imágenes por IA Deberías Usar →</a></p>
 </div>`,
   },
   "chatgpt-free-vs-plus-2026-what-you-get": {
@@ -3509,7 +3509,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <p>If you write fewer than 30 messages daily, free tier is sufficient. For professional writing relying on GPT-5 nuance, Plus value is clear.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
@@ -3654,11 +3654,11 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Is Perplexity's free tier good enough?</h3>
 <p>Yes for basic research. Pro ($20/month) unlocks deeper search, higher-quality models, and file uploads.</p>
 
-<h3>问：我可以同时使用两者吗？</h3>
-<p>可以，而且这是最佳方案。使用Perplexity进行初步探索，然后将找到的源文件上传到NotebookLM进行深入分析。</p>
+<h3>Q: Can I use both together?</h3>
+<p>Yes, and that is actually the best approach. Use Perplexity for initial exploration, then upload the sources you find to NotebookLM for deep analysis.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
@@ -3781,11 +3781,11 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Would results change with better prompting?</h3>
 <p>Possibly. ChatGPT's output improves with advanced techniques (role setting, style examples). The test was designed for typical user behavior.</p>
 
-<h3>问：我应该用哪个来写作？</h3>
-<p>对于注重语气的写作（邮件、方案、创意），从Claude开始。对于技术性或结构化写作，ChatGPT很强。用你的实际工作试试两者。</p>
+<h3>Q: Which should I use for writing?</h3>
+<p>For tone-sensitive writing (emails, proposals, creative), start with Claude. For technical or structured writing, ChatGPT is strong. Try both with your actual work.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
@@ -3893,11 +3893,11 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Which has a better free tier for learning?</h3>
 <p>Cursor's free tier (2000 completions + 50 premium requests/month) is more beginner-friendly and includes the chat feature for free.</p>
 
-<h3>问：以后可以从Cursor切换到Copilot吗？</h3>
-<p>可以。Cursor基于VS Code。你甚至可以在Cursor内部安装Copilot作为扩展。</p>
+<h3>Q: Can I switch from Cursor to Copilot later?</h3>
+<p>Yes. Cursor is based on VS Code. You can even install Copilot as an extension inside Cursor.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
@@ -4003,11 +4003,11 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Do I need new prompts for GPT-5?</h3>
 <p>No. Existing prompts work fine. GPT-5 handles vaguer instructions better than GPT-4o.</p>
 
-<h3>问：GPT-5是一个独立的应用吗？</h3>
-<p>不是。它取代了ChatGPT中的现有模型。对于Plus订阅者，模型选择器现在显示GPT-5而不是GPT-4o。</p>
+<h3>Q: Is GPT-5 a separate application?</h3>
+<p>No. It replaces the existing model in ChatGPT. For Plus subscribers, the model selector now shows GPT-5 instead of GPT-4o.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI新闻 · <strong>独立分析</strong></p>
@@ -4122,11 +4122,11 @@ ollama --version</code></pre>
 <h3>Q: Do they work offline?</h3>
 <p>Yes. Once downloaded, all models run entirely offline. No data sent to any server.</p>
 
-<h3>问：本地模型能替代ChatGPT吗？</h3>
-<p>对于70%的日常任务，可以。对于复杂推理或创意写作，前沿云模型仍然明显更好。把本地模型看作日常使用中免费、私密、离线的选择。</p>
+<h3>Q: Can local models replace ChatGPT?</h3>
+<p>For 70% of everyday tasks, yes. For complex reasoning or creative writing, frontier cloud models are still significantly better. Think of local models as a free, private, offline option for everyday use.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI新闻 · <strong>独立指南</strong></p>
@@ -4243,11 +4243,11 @@ ollama --version</code></pre>
 <h3>Q: Does the Act ban AI in high-risk areas?</h3>
 <p>No. It requires oversight, testing, and documentation. The goal is safe deployment, not prohibition.</p>
 
-<h3>问：谁负责执行这些规则？</h3>
-<p>各欧盟成员国的国家AI主管部门。欧洲AI办公室跨国家协调。</p>
+<h3>Q: Who enforces these rules?</h3>
+<p>National AI authorities in each EU member state. The European AI Office coordinates across countries.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI新闻 · <strong>独立指南</strong></p>
@@ -4343,11 +4343,11 @@ ollama --version</code></pre>
 <h3>Q: Are these roles stable or temporary?</h3>
 <p>The roles will evolve but the underlying need for AI-savvy specialists grows. Titles may change but the skillset is increasingly valuable.</p>
 
-<h3>问：我该如何开始？</h3>
-<p>每天在实际工作中使用AI工具。建立提示词、工作流程或编辑内容的作品集。实际案例比证书更重要。</p>
+<h3>Q: How do I get started?</h3>
+<p>Use AI tools in your daily work. Build a portfolio of prompts, workflows, or edited content. Real examples matter more than certificates.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI新闻 · <strong>独立分析</strong></p>
@@ -4445,11 +4445,11 @@ ollama --version</code></pre>
 <h3>Q: Does it require a subscription?</h3>
 <p>No. It is free with supported devices. Cost is built into hardware.</p>
 
-<h3>问：Apple会把我的数据发送到云端吗？</h3>
-<p>大多数处理在设备上进行。复杂请求使用Private Cloud Compute——Apple芯片服务器，处理时不存储数据。Apple无法访问你的数据。</p>
+<h3>Q: Does Apple send my data to the cloud?</h3>
+<p>Most processing happens on-device. Complex requests use Private Cloud Compute — Apple silicon servers that do not store data during processing. Apple cannot access your data.</p>
 
 <div class="next-step">
-<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+<p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>分类：</strong> AI新闻 · <strong>独立分析</strong></p>
@@ -4636,11 +4636,11 @@ claude --verbose</code></pre>
 <h3>Q: Can I have different settings for different projects?</h3>
 <p>Yes. Project-level settings in <code>.claude/settings.json</code> override user-level settings in <code>~/.claude/settings.json</code>. This lets you have strict permissions for work projects and relaxed settings for personal projects.</p>
 
-<h3>问：MCP服务器有风险吗？</h3>
-<p>有。MCP服务器可以访问它们连接的任何系统（数据库、API、文件系统）。只从可信来源安装MCP服务器。在安装前检查每个服务器请求的权限。</p>
+<h3>Q: Do MCP servers have risks?</h3>
+<p>Yes. MCP servers can access any system they connect to (databases, APIs, file systems). Only install MCP servers from trusted sources. Check each server requested permissions before installing.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">第3部分：Claude Code实战：逐步构建真实项目 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/claude-code-in-action">Part 3: Claude Code in Action: Build a Real Project from Scratch →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> Claude Code · <strong>第2部分（共4部分）</strong></p>
@@ -4773,7 +4773,7 @@ claude --verbose</code></pre>
 <p>有。MCP服务器可以访问它们连接的任何系统（数据库、API、文件系统）。只从可信来源安装MCP服务器。在安装前检查每个服务器请求的权限。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">第3部分：Claude Code实战：逐步构建真实项目 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">第3部分：Claude Code en Acción: Construye un Proyecto Real Desde Cero →</a></p>
 </div>`,
   },
 
@@ -4871,11 +4871,11 @@ xdg-open index.html  # Linux</code></pre>
 <h3>Q: Will Claude Code overwrite my changes?</h3>
 <p>Claude Code uses git to track changes. Before making modifications, it shows you what it plans to change and asks for confirmation. You can also review changes with <code>git diff</code> before committing. If you reject a change, Claude Code does not apply it.</p>
 
-<h3>问：我能在现有项目中使用Claude Code吗？</h3>
-<p>可以。导航到任何现有项目，确保它已初始化git，然后运行<code>claude</code>。它读取完整的项目结构，可以立即开始提供帮助。这是Claude Code相对于仅能看到打开文件的IDE工具的优势所在。</p>
+<h3>Q: Can I use Claude Code on existing projects?</h3>
+<p>Yes. Navigate to any existing project, make sure it has git initialized, then run <code>claude</code>. It reads the full project structure and can start helping immediately.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-code-advanced">第4部分：Claude Code高级功能：调试、重构和多文件工作流 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/claude-code-advanced">Part 4: Advanced Claude Code: Custom Slash Commands, Hooks, and CI/CD Integration →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> Claude Code · <strong>第3部分（共4部分）</strong></p>
@@ -4973,7 +4973,7 @@ xdg-open index.html  # Linux</code></pre>
 <p>可以。导航到任何现有项目，确保它已初始化git，然后运行<code>claude</code>。它读取完整的项目结构，可以立即开始提供帮助。这是Claude Code相对于仅能看到打开文件的IDE工具的优势所在。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/claude-code-advanced">第4部分：Claude Code高级功能：调试、重构和多文件工作流 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-advanced">第4部分：Claude Code Avanzado: Comandos Slash Personalizados, Hooks e Integración CI/CD →</a></p>
 </div>`,
   },
 
@@ -5095,11 +5095,11 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <h3>Q: Can Claude Code work with TypeScript?</h3>
 <p>Yes. Claude Code reads tsconfig.json, understands type definitions, and generates typed code. It handles type errors during refactoring and can fix type mismatches automatically.</p>
 
-<h3>问：Claude Code适合生产代码库吗？</h3>
-<p>可以，但需要适当的审查。在提交之前，始终用<code>git diff</code>审查更改。对于生产工作，使用<code>--permission</code>标志要求每次文件更改都需明确批准。从小项目开始，直到你熟悉工作流程。</p>
+<h3>Q: Is Claude Code safe for production codebases?</h3>
+<p>Yes, but with proper review. Always review changes with <code>git diff</code> before committing. For production work, use the <code>--permission</code> flag to require explicit approval for each file change. Start with small projects until you are comfortable with the workflow.</p>
 
 <div class="next-step">
-<p><strong>Claude Code学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+<p><strong>Claude Code path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> Claude Code · <strong>第4部分（共4部分）</strong></p>
@@ -5311,11 +5311,11 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <h3>Q: Is Adobe Firefly's free tier worth using?</h3>
 <p>For occasional use, yes. You get 25 free generations per month. For regular use, the $5/month subscription is reasonable. Firefly is the cheapest premium AI image generator.</p>
 
-<h3>问：哪个工具生成最逼真的图像？</h3>
-<p>Midjourney生成最美观逼真的图像。DALL-E 3生成更精确描述性的图像，但艺术感较弱。Firefly最擅长编辑现有照片，而不是从头创建新图像。</p>
+<h3>Q: Which tool generates the most realistic images?</h3>
+<p>Midjourney produces the most beautiful, realistic images. DALL-E 3 generates more precisely descriptive images but with less artistic flair. Firefly is best at editing existing photos rather than creating new ones from scratch.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-prompt-guide">第3部分：AI图像提示词工程：完整参数指南 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-image-prompt-guide">Part 3: The Ultimate AI Image Prompt Guide: Techniques That Actually Work →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI图像生成 · <strong>第2部分（共4部分）</strong></p>
@@ -5408,7 +5408,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <p>Midjourney生成最美观逼真的图像。DALL-E 3生成更精确描述性的图像，但艺术感较弱。Firefly最擅长编辑现有照片，而不是从头创建新图像。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-prompt-guide">第3部分：AI图像提示词工程：完整参数指南 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-prompt-guide">第3部分：La Guía Definitiva de Prompts para Imágenes por IA: Técnicas Que Realmente Funcionan →</a></p>
 </div>`,
   },
 
@@ -5518,11 +5518,11 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: What is "seed" and should I use it?</h3>
 <p>A seed is a number that determines the random starting point for image generation. Using the same seed + same prompt produces the same image. Useful when you find a composition you like and want to tweak the prompt while keeping the general layout. In Midjourney, add <code>--seed 12345</code>. In DALL-E, seeds are not exposed to users.</p>
 
-<h3>问：如何在特定图像上进行迭代？</h3>
-<p>Midjourney：使用V按钮创建变体，然后使用U放大最佳的那个。使用修改后的提示词搭配<code>--seed</code>。DALL-E 3：让ChatGPT"生成这张图像的4个变体"或上传已生成的图像并基于现有构图要求编辑。</p>
+<h3>Q: How do I iterate on a specific image?</h3>
+<p>Midjourney: Use the V buttons to create variations, then U to upscale the best one. Use modified prompts with <code>--seed</code>. DALL-E 3: Ask ChatGPT to "generate 4 variations of this image" or upload or upload previously generated images and ask for edits based on the existing composition.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-commercial-licensing">第4部分：商业用AI图像：许可、版权和最佳实践 →</a></p>
+<p><strong>Next in this path:</strong> <a href="/article/ai-image-commercial-licensing">Part 4: AI Image Copyright and Commercial Licensing: What You Can and Can't Sell →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI图像生成 · <strong>第3部分（共4部分）</strong></p>
@@ -5632,7 +5632,7 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p>Midjourney：使用V按钮创建变体，然后使用U放大最佳的那个。使用修改后的提示词搭配<code>--seed</code>。DALL-E 3：让ChatGPT"生成这张图像的4个变体"或上传已生成的图像并基于现有构图要求编辑。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/ai-image-commercial-licensing">第4部分：商业用AI图像：许可、版权和最佳实践 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-commercial-licensing">第4部分：Derechos de Autor y Licencias Comerciales de Imágenes por IA: Qué Puedes y No Puedes Vender →</a></p>
 </div>`,
   },
 
@@ -5713,11 +5713,11 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: Does Midjourney's "all rights" license mean I own the copyright?</h3>
 <p>No. Midjourney grants you broad usage rights but cannot grant copyright because copyright requires human authorship. "All rights" in Midjourney's terms means you can use the images for almost any purpose, not that you hold copyright.</p>
 
-<h3>问：如果针对AI公司的训练数据诉讼成功了会怎样？</h3>
-<p>这是一个活跃的法律领域。如果法院裁定在未经许可的情况下对受版权保护的图像进行训练构成侵权，这可能会影响这些模型生成的图像的法律地位。为了最大安全性，在关键商业项目中使用Firefly（许可训练数据+赔偿保障）。对于低风险用途，现有工具实际上是安全的。</p>
+<h3>Q: What if the training data lawsuits against AI companies succeed?</h3>
+<p>This is an active legal area. If courts rule that training on copyrighted images without permission constitutes infringement, it could affect the legal status of images these models generate. For maximum safety, use Firefly (licensed training data) for critical commercial projects.</p>
 
 <div class="next-step">
-<p><strong>AI图像生成学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+<p><strong>AI Image Generation path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI图像生成 · <strong>第4部分（共4部分）</strong></p>
