@@ -6377,4 +6377,238 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p><strong>下一篇：</strong> 了解最强大的Claude Code扩展——<a href="/article/claude-code-top-7-skills">Claude Code七大技能 →</a></p>
 </div>`,
   },
+
+  // ====== LLM Service Packages Review ======
+  "llm-service-packages-review-2026": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Comparisons &middot; <strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Prerequisites:</strong> Basic familiarity with LLM services like ChatGPT, Claude, or Gemini. No technical expertise required.</p>
+<p><strong>What you'll learn:</strong> How to evaluate domestic and international LLM service packages — pricing, features, hidden pitfalls, and which ones actually deliver value.</p>
+</div>
+
+<h2>International LLM Packages: Stability and Functionality as Core Advantages</h2>
+
+<p>International giants like OpenAI, Anthropic, and Google have set high standards with their LLM service packages, focusing on <strong>reliable performance</strong> and <strong>comprehensive functionality</strong>.</p>
+
+<p>OpenAI's GPT series packages (e.g., GPT-4o, GPT-4 Turbo) shine with consistent response quality and seamless ecosystem integration. The paid tiers offer generous context windows (up to 128K tokens), fast inference speeds, and access to advanced features like multimodal input (text, image, audio) and API customization. For developers, the well-documented SDK and flexible pricing plans (pay-as-you-go or volume discounts) make it easy to scale projects without unnecessary overhead. Even the free tier provides enough functionality for casual users, avoiding the "paywall for basic use" frustration. <a href="/tools/chatgpt">Learn more about ChatGPT →</a></p>
+
+<p>Anthropic's Claude packages prioritize <strong>safety and transparency</strong>, a major draw for enterprises handling sensitive data. Claude 3 Opus and Sonnet tiers offer enterprise-grade security features (end-to-end encryption, data privacy guarantees) alongside powerful reasoning capabilities — ideal for legal document analysis, financial modeling, and complex problem-solving. The packages also stand out for their user-friendly interface and responsive customer support, addressing technical issues quickly to minimize workflow disruptions. <a href="/tools/claude">Learn more about Claude →</a></p>
+
+<p>Google's Gemini packages leverage the tech giant's cloud infrastructure, delivering <strong>high-speed processing</strong> and seamless integration with Google Workspace (Docs, Sheets, Gmail). The premium tiers support large-scale batch processing and custom model fine-tuning, making them a top choice for businesses looking to embed AI into daily operations. While the free tier has more limitations, it still provides access to core features like natural language generation and basic API calls, serving as a solid entry point for new users. <a href="/tools/gemini">Learn more about Gemini →</a></p>
+
+<h2>Domestic LLM Packages: Potential Undermined by Shortcomings</h2>
+
+<p>Domestic LLMs (e.g., from Baidu, ByteDance, Alibaba) have made strides in localization and language adaptation, but their service packages often suffer from <strong>inconsistent quality</strong> and <strong>uncompetitive terms</strong>.</p>
+
+<p>One common issue is the <strong>unbalanced feature-to-price ratio</strong>. Some domestic packages charge premium prices but fail to deliver comparable functionality — for example, smaller context windows (often capped at 32K tokens), slower response times, and limited multimodal support. Free tiers are frequently restricted to basic text generation, with critical features (like API access or long-form content creation) locked behind expensive subscriptions. This creates a barrier for individual developers and small businesses looking to test or adopt AI tools.</p>
+
+<p>Another pain point is <strong>poor developer support and documentation</strong>. Unlike international packages with detailed guides, sample code, and active community forums, some domestic offerings provide vague documentation, outdated SDKs, and slow customer service. This makes integration into existing workflows frustrating and time-consuming, defeating the purpose of using AI to boost efficiency.</p>
+
+<p>Hidden costs and restrictive terms also mar the user experience. Some packages advertise low base prices but charge extra for essential add-ons (e.g., increased token limits, priority support, or data storage). Others impose strict usage restrictions, such as limiting the number of API calls per month or prohibiting commercial use of generated content — limitations that are often buried in fine print.</p>
+
+<h2>Key Takeaways for Choosing an LLM Package</h2>
+
+<p>When selecting an LLM service package, prioritize these factors to avoid disappointment:</p>
+
+<ul>
+<li><strong>Functionality alignment</strong>: Ensure the package offers the features you need (context window size, multimodal support, API flexibility) for your use case.</li>
+<li><strong>Price transparency</strong>: Look for clear pricing structures with no hidden fees or unexpected add-ons.</li>
+<li><strong>Performance reliability</strong>: Check user reviews and benchmarks for response consistency, speed, and downtime records.</li>
+<li><strong>Support quality</strong>: Opt for packages with comprehensive documentation, responsive customer service, and active developer communities.</li>
+</ul>
+
+<p>While international LLM packages currently lead in terms of robustness and user experience, domestic offerings show potential — especially for users requiring Mandarin-specific optimization or compliance with local data regulations. As the market matures, domestic providers need to address pricing fairness, feature completeness, and developer support to compete effectively. For a broader perspective on pricing, also read <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools: When It's Actually Worth Paying</a> and <a href="/article/how-to-choose-right-ai-tool">Which AI Tool Should You Use? A Decision Framework for Beginners</a>.</p>
+
+<h2>FAQ</h2>
+
+<h3>Q: Which LLM package offers the best value for individual developers?</h3>
+<p>For individual developers, ChatGPT Plus ($20/month) offers the best balance of features, API access, and ecosystem integration. Claude Pro ($20/month) is a strong alternative if you prioritize safety and reasoning. Both provide generous free tiers to test before committing.</p>
+
+<h3>Q: Are domestic LLM packages suitable for English-language applications?</h3>
+<p>Domestic LLMs are optimized for Mandarin and perform best with Chinese-language content. For English-language applications, international packages generally offer superior performance, larger context windows, and more comprehensive documentation.</p>
+
+<h3>Q: What hidden costs should I watch for when choosing an LLM package?</h3>
+<p>Watch for: API call limits that reset monthly but charge overage fees, context window upgrades locked behind premium tiers, additional charges for multimodal features, data storage fees, and restrictions on commercial use of generated content. Always read the fine print before committing to an annual plan.</p>
+
+<div class="next-step">
+<p><strong>Next step:</strong> Understand whether free AI tools meet your needs — <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools: When It's Actually Worth Paying →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI对比评测 · <strong>难度：</strong> 中级</p>
+<p><strong>前置要求：</strong> 对ChatGPT、Claude或Gemini等LLM服务有基本了解，无需专业技术背景。</p>
+<p><strong>你将学到：</strong> 如何评估国内外LLM服务套餐——定价、功能、隐藏陷阱，以及哪些真正物有所值。</p>
+</div>
+
+<h2>国际LLM服务：稳定与功能为核心优势</h2>
+
+<p>OpenAI、Anthropic和Google等国际巨头为LLM服务套餐设定了高标准，专注于<strong>可靠性能</strong>和<strong>全面功能</strong>。</p>
+
+<p>OpenAI的GPT系列套餐（如GPT-4o、GPT-4 Turbo）以一致的响应质量和无缝的生态系统集成著称。付费层级提供慷慨的上下文窗口（高达128K tokens）、快速推理速度，以及多模态输入（文本、图像、音频）和API自定义等高级功能。对开发者而言，文档完善的SDK和灵活的定价计划（按需付费或批量折扣）让项目扩展变得轻松。即使是免费层级也为普通用户提供了足够的功能，避免了"基本使用就要付费"的挫败感。了解更多<a href="/tools/chatgpt">ChatGPT →</a></p>
+
+<p>Anthropic的Claude套餐优先考虑<strong>安全性和透明度</strong>，这对处理敏感数据的企业是一大吸引力。Claude 3 Opus和Sonnet层级提供企业级安全功能（端到端加密、数据隐私保证）以及强大的推理能力——非常适合法律文档分析、财务建模和复杂问题解决。这些套餐还以其用户友好的界面和响应迅速的客户支持脱颖而出，快速解决技术问题以最小化工作流中断。了解更多<a href="/tools/claude">Claude →</a></p>
+
+<p>Google的Gemini套餐利用这家科技巨头的云基础设施，提供<strong>高速处理</strong>和与Google Workspace（文档、表格、Gmail）的无缝集成。高级层级支持大规模批处理和自定义模型微调，使其成为希望将AI嵌入日常运营的企业首选。免费层级虽然限制更多，但仍提供自然语言生成和基本API调用等核心功能，是新用户的坚实入口。了解更多<a href="/tools/gemini">Gemini →</a></p>
+
+<h2>国内LLM服务：潜力被短板削弱</h2>
+
+<p>国内LLM（如百度、字节跳动、阿里巴巴）在本地化和语言适配方面取得了进展，但其服务套餐常常面临<strong>质量不稳定</strong>和<strong>条款缺乏竞争力</strong>的问题。</p>
+
+<p>一个常见问题是<strong>功能与价格的不平衡</strong>。部分国内套餐收取高端价格但未能提供同等功能——例如，更小的上下文窗口（通常上限32K tokens）、较慢的响应时间和有限的多模态支持。免费层级通常仅限于基本文本生成，关键功能（如API访问或长内容创作）被锁定在昂贵的订阅后面。这对希望试用或采用AI工具的个人开发者和中小企业构成了障碍。</p>
+
+<p>另一个痛点是<strong>糟糕的开发者支持和文档</strong>。与国际套餐提供的详细指南、示例代码和活跃社区论坛不同，一些国内产品提供模糊的文档、过时的SDK和慢速的客户服务。这使得将AI集成到现有工作流程中变得令人沮丧且耗时，违背了使用AI提升效率的初衷。</p>
+
+<p>隐藏成本和限制性条款也破坏了用户体验。一些套餐宣传低价但为必要的附加功能额外收费（如增加token限制、优先支持或数据存储）。其他套餐施加严格的使用限制，例如限制每月API调用次数或禁止将生成内容用于商业用途——这些限制通常藏在细则中。</p>
+
+<h2>选择LLM套餐的关键要点</h2>
+
+<p>选择LLM服务套餐时，优先考虑以下因素以避免失望：</p>
+
+<ul>
+<li><strong>功能匹配</strong>：确保套餐提供你使用场景所需的功能（上下文窗口大小、多模态支持、API灵活性）。</li>
+<li><strong>价格透明</strong>：寻找清晰的定价结构，没有隐藏费用或意外的附加费用。</li>
+<li><strong>性能可靠</strong>：检查用户评价和基准测试，了解响应一致性、速度和宕机记录。</li>
+<li><strong>支持质量</strong>：选择具有全面文档、响应式客户服务和活跃开发者社区的套餐。</li>
+</ul>
+
+<p>目前国际LLM套餐在稳健性和用户体验方面领先，但国内产品显示出潜力——尤其适合需要中文优化或遵守本地数据法规的用户。随着市场成熟，国内提供商需要解决定价公平性、功能完整性和开发者支持等问题才能有效竞争。关于定价的更多视角，请阅读<a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具：何时值得付费</a>和<a href="/article/how-to-choose-right-ai-tool">你应该使用哪个AI工具？初学者的决策框架</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：对于个人开发者来说，哪个LLM套餐性价比最高？</h3>
+<p>对于个人开发者，ChatGPT Plus（每月20美元）在功能、API访问和生态系统集成方面提供了最佳平衡。如果你优先考虑安全性和推理能力，Claude Pro（每月20美元）是一个强有力的替代选择。两者都提供慷慨的免费层级，可以在付费前先试用。</p>
+
+<h3>问：国内LLM套餐适合英文应用吗？</h3>
+<p>国内LLM针对中文进行了优化，在处理中文内容时表现最佳。对于英文应用，国际套餐通常提供更优越的性能、更大的上下文窗口和更全面的文档。</p>
+
+<h3>问：选择LLM套餐时需要注意哪些隐藏成本？</h3>
+<p>需要注意：每月重置但超量收费的API调用限制、锁定在高级层级下的上下文窗口升级、多模态功能的额外收费、数据存储费用，以及生成内容商业用途的限制。在承诺年度计划之前，务必阅读细则。</p>
+
+<div class="next-step">
+<p><strong>下一步：</strong> 了解免费AI工具是否能满足你的需求 —— <a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具：何时值得付费 →</a></p>
+</div>`,
+  },
+
+  // ====== Claude Code Browser Automation ======
+  "claude-code-browser-automation": {
+    content: `<div class="article-meta-banner">
+<p><strong>Companion Article:</strong> Claude Code Browser Control Guide</p>
+<p><strong>Prerequisites:</strong> <a href="/article/claude-code-install-setup">Claude Code installed</a> and basic familiarity with the <code>claude</code> command line interface.</p>
+<p><strong>What you'll learn:</strong> How to control web browsers through Claude Code for page navigation, data capture, screenshots, and cross-page workflows — with key strategies to minimize token consumption.</p>
+</div>
+
+<h2>Core Advantages of Claude Code Browser Operation</h2>
+
+<p>Traditional automated scripts often come with lengthy code and heavy resource occupation. In contrast, Claude Code can directly send instructions to control mainstream browsers. It simulates real human browsing behaviors such as page jumping, element clicking, content input, information extraction and screenshot capturing. The whole process avoids redundant code writing, which greatly lowers the technical threshold for web automation.</p>
+
+<p>More importantly, proper configuration enables remarkable token saving effects. Less token consumption means lower operating costs, faster response speed, and longer continuous task running duration, perfectly fitting batch web processing, data collection and online operation demands.</p>
+
+<h2>Practical Browser Control Functional Scenarios</h2>
+
+<h3>1. Page Navigation &amp; Element Interaction</h3>
+<p>Claude Code can access designated website links, locate buttons, input boxes and text areas on pages, and finish clicking, typing, selecting and switching tabs automatically. It handles daily routine web operations without manual supervision.</p>
+
+<h3>2. Online Data Capture &amp; Sorting</h3>
+<p>The AI assistant extracts target text, pictures, form data and list information from loaded web pages. It sorts and organizes collected content instantly, realizing automatic information gathering from news portals, industry platforms and resource websites.</p>
+
+<h3>3. Screenshot &amp; Page Status Detection</h3>
+<p>It supports full-page or regional screenshot recording, and judges page loading status, pop-up windows and verification prompts. It can respond to abnormal page conditions timely to guarantee stable running of automated tasks.</p>
+
+<h3>4. Cross-page Continuous Workflow</h3>
+<p>Complete chained operations including form submission, multi-page information query and file downloading. It executes business processes end to end inside browsers steadily.</p>
+
+<h2>Key Tips to Reduce Token Usage</h2>
+
+<h3>Simplify Command Description</h3>
+<p>Avoid overly wordy and repetitive descriptive sentences when delivering orders. Use concise, definite task demands. Clear and brief instructions help Claude Code understand intentions quickly, reducing invalid token consumption brought by redundant text parsing.</p>
+
+<h3>Define Exact Operation Scope</h3>
+<p>Specify target pages, element positions and task boundaries clearly. Narrow down the execution range and prevent the AI from scanning irrelevant page content or conducting unnecessary trial operations, effectively cutting extra token loss.</p>
+
+<h3>Reuse Stable Basic Logic</h3>
+<p>Summarize common browser operation rules and fixed templates. Call existing mature logic repeatedly for similar tasks, instead of rewriting complete instructions every time. Reusable command frameworks drastically compress average token cost of single operation.</p>
+
+<h3>Disable Unnecessary Auxiliary Analysis</h3>
+<p>Turn off redundant explanation, detailed principle deduction and excessive result feedback when pursuing efficient execution. Only retain core operation logs and final results, saving tokens occupied by text output.</p>
+
+<h2>Application Value &amp; Usage Suggestion</h2>
+
+<p>Browser control powered by Claude Code balances easy operation and low cost. It is suitable for developers, content creators and industry practitioners to streamline repetitive web work. By mastering token-saving control methods, users can maximize task volume under limited token quota, improve daily work automation level, and create more practical productivity tools based on browser operation functions.</p>
+
+<p>For more on extending Claude Code's capabilities, check out <a href="/article/claude-code-install-setup">Claude Code Installation &amp; Setup</a> or explore the <a href="/article/claude-code-top-7-skills">Top 7 Skills guide</a>.</p>
+
+<h2>FAQ</h2>
+
+<h3>Q: Do I need programming experience to use Claude Code for browser control?</h3>
+<p>No. Claude Code accepts natural language instructions, so you can describe what you want to do in plain English. Basic familiarity with browser concepts (URLs, buttons, forms) is sufficient. The AI handles the underlying automation logic.</p>
+
+<h3>Q: How much can token optimization actually save?</h3>
+<p>With proper optimization techniques — simplified commands, scoped operations, reusable templates — users typically see 40-60% reduction in token consumption compared to naive prompting. For heavy automation workflows, this can translate to significant cost savings over time.</p>
+
+<h3>Q: Can Claude Code handle complex multi-step workflows like form submissions?</h3>
+<p>Yes. Claude Code can execute chained operations across multiple pages, including form filling, data extraction, navigation between sites, and file downloads. For best results, break complex workflows into clearly defined steps and reuse stable templates for repeated operation patterns.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> Explore the most powerful Claude Code extensions — <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>配套文章：</strong> Claude Code 浏览器操控指南</p>
+<p><strong>前置要求：</strong> 已<a href="/article/claude-code-install-setup">安装Claude Code</a>并基本熟悉<code>claude</code>命令行界面。</p>
+<p><strong>你将学到：</strong> 如何通过Claude Code操控浏览器进行页面导航、数据抓取、截图和跨页面工作流——以及最小化Token消耗的关键策略。</p>
+</div>
+
+<h2>Claude Code浏览器操作的核心优势</h2>
+
+<p>传统自动化脚本通常伴随着冗长的代码和高资源占用。相比之下，Claude Code可以直接发送指令来控制主流浏览器。它模拟真实的人类浏览行为，如页面跳转、元素点击、内容输入、信息提取和截图。整个过程避免了冗余的代码编写，大大降低了网页自动化的技术门槛。</p>
+
+<p>更重要的是，合理配置可实现显著的Token节省效果。更少的Token消耗意味着更低的运营成本、更快的响应速度和更长的连续任务运行时间，完美适应批量网页处理、数据收集和在线操作需求。</p>
+
+<h2>实用浏览器控制功能场景</h2>
+
+<h3>1. 页面导航与元素交互</h3>
+<p>Claude Code可以访问指定网站链接，定位页面上的按钮、输入框和文本区域，自动完成点击、输入、选择和切换标签页等操作。无需人工监督即可处理日常网页操作。</p>
+
+<h3>2. 在线数据采集与整理</h3>
+<p>AI助手从加载的网页中提取目标文本、图片、表单数据和列表信息。它即时整理收集到的内容，实现从新闻门户、行业平台和资源网站的自动信息采集。</p>
+
+<h3>3. 截图与页面状态检测</h3>
+<p>支持全屏或区域截图记录，判断页面加载状态、弹窗和验证提示。它能及时响应异常页面状况，保证自动化任务的稳定运行。</p>
+
+<h3>4. 跨页面连续工作流</h3>
+<p>完成包括表单提交、多页信息查询和文件下载在内的链式操作。它在浏览器内稳定执行端到端的业务流程。</p>
+
+<h2>减少Token使用的关键技巧</h2>
+
+<h3>简化指令描述</h3>
+<p>在发出命令时避免过于冗长和重复的描述性句子。使用简洁明确的任务要求。清晰简短的指令有助于Claude Code快速理解意图，减少冗余文本解析带来的无效Token消耗。</p>
+
+<h3>明确操作范围</h3>
+<p>清晰指定目标页面、元素位置和任务边界。缩小执行范围，防止AI扫描无关页面内容或进行不必要的尝试操作，有效减少额外的Token损失。</p>
+
+<h3>复用稳定的基本逻辑</h3>
+<p>总结常见的浏览器操作规则和固定模板。对于相似任务，反复调用已有的成熟逻辑，而不是每次都重写完整的指令。可复用的命令框架大幅压缩单次操作的平均Token成本。</p>
+
+<h3>禁用不必要的辅助分析</h3>
+<p>在追求高效执行时，关闭冗余解释、详细原理推导和过多的结果反馈。只保留核心操作日志和最终结果，节省文本输出占用的Token。</p>
+
+<h2>应用价值与使用建议</h2>
+
+<p>Claude Code驱动的浏览器控制兼具易操作性和低成本。它适合开发者、内容创作者和行业从业者简化重复的网页工作。通过掌握Token节省的控制方法，用户可以在有限的Token配额下最大化任务量，提高日常工作的自动化水平，并基于浏览器操作功能创建更多实用的生产力工具。</p>
+
+<p>要了解更多关于扩展Claude Code能力的信息，请查看<a href="/article/claude-code-install-setup">Claude Code安装与配置</a>或浏览<a href="/article/claude-code-top-7-skills">七大技能完整指南</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：使用Claude Code进行浏览器控制需要编程经验吗？</h3>
+<p>不需要。Claude Code接受自然语言指令，你可以用中文描述你想要做的事情。只要基本了解浏览器概念（URL、按钮、表单）就足够了。AI会处理底层的自动化逻辑。</p>
+
+<h3>问：Token优化实际能节省多少？</h3>
+<p>通过适当的优化技术——简化指令、限定操作范围、复用模板——用户通常可以看到与原始提示相比40-60%的Token消耗减少。对于重度的自动化工作流，这可以随着时间的推移转化为显著的节省。</p>
+
+<h3>问：Claude Code能处理复杂的多步骤工作流吗？</h3>
+<p>是的。Claude Code可以跨多个页面执行链式操作，包括表单填写、数据提取、跨站导航和文件下载。为获得最佳效果，将复杂工作流分解为明确定义的步骤，并对重复的操作模式复用稳定的模板。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> 探索最强大的Claude Code扩展 —— <a href="/article/claude-code-top-7-skills">Claude Code七大技能完整指南 →</a></p>
+</div>`,
+  },
 };

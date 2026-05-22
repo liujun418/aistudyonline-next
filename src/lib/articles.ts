@@ -561,4 +561,36 @@ export const articles: Article[] = [
     toolsMentioned: ["openclaw", "openrouter", "claude", "chatgpt"],
     date: "2026-05-22",
   },
+
+  // ====== AI Comparisons: LLM Service Packages Review ======
+  {
+    slug: "llm-service-packages-review-2026",
+    title: "LLM Service Packages Review: From Premium to Disappointing",
+    titleZh: "LLM服务套餐评测：从物超所值到令人失望",
+    description:
+      "A critical comparison of domestic and international LLM service packages — analyzing pricing, features, and hidden pitfalls of OpenAI, Anthropic, Google, and domestic providers.",
+    descriptionZh:
+      "国内外LLM服务套餐的深度对比评测——分析OpenAI、Anthropic、Google及国内厂商的定价、功能和隐藏陷阱。",
+    category: "ai-comparisons",
+    tags: ["llm", "pricing", "comparison", "openai", "anthropic", "google"],
+    difficulty: "intermediate",
+    toolsMentioned: ["chatgpt", "claude", "gemini", "deepseek"],
+    date: "2026-05-22",
+  },
+
+  // ====== Claude Code Companion: Browser Control ======
+  {
+    slug: "claude-code-browser-automation",
+    title: "Efficient Browser Control with Claude Code: Minimize Token Consumption",
+    titleZh: "用Claude Code高效操控浏览器：最小化Token消耗",
+    description:
+      "Learn how to control web browsers through Claude Code with token-saving strategies — page navigation, data capture, screenshots, and cross-page workflows.",
+    descriptionZh:
+      "学习如何通过Claude Code操控浏览器并节省Token——页面导航、数据抓取、截图和跨页面工作流。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "browser", "automation", "token-optimization", "productivity"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-05-22",
+  },
 ];
