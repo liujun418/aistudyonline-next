@@ -555,9 +555,9 @@ export const articles: Article[] = [
     descriptionAr:
       "قارن بين مولدات الصور الرائدة بالذكاء الاصطناعي وجهاً لوجه. شاهد النتائج الحقيقية والأسعار وحالات الاستخدام لتقرر أيها يناسب سير عملك.",
     category: "ai-tutorials",
-    tags: ["ai-image", "dalle", "firefly", "midjourney", "comparison"],
+    tags: ["ai-image", "dalle3", "adobe-firefly", "midjourney", "comparison"],
     difficulty: "beginner",
-    toolsMentioned: ["dalle", "midjourney", "firefly"],
+    toolsMentioned: ["dalle3", "midjourney", "adobe-firefly"],
     date: "2026-05-22",
   },
 
@@ -576,7 +576,7 @@ export const articles: Article[] = [
     category: "ai-tutorials",
     tags: ["ai-image", "prompts", "prompt-engineering", "techniques", "guide"],
     difficulty: "intermediate",
-    toolsMentioned: ["dalle", "midjourney", "firefly", "stable-diffusion"],
+    toolsMentioned: ["dalle3", "midjourney", "adobe-firefly", "stable-diffusion"],
     date: "2026-05-22",
   },
 
@@ -595,7 +595,7 @@ export const articles: Article[] = [
     category: "ai-tutorials",
     tags: ["ai-image", "copyright", "licensing", "commercial", "legal"],
     difficulty: "beginner",
-    toolsMentioned: ["dalle", "midjourney", "firefly"],
+    toolsMentioned: ["dalle3", "midjourney", "adobe-firefly"],
     date: "2026-05-22",
   },
 ];

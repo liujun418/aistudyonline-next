@@ -83,5 +83,31 @@
   },
   "ad": {
     "label": "Publicidad"
+  },
+  "toolDetail": {
+    "visitWebsite": "Visitar Sitio Web",
+    "about": "Acerca de",
+    "advantages": "Ventajas",
+    "useCases": "Casos de Uso",
+    "pricing": "Precios",
+    "extensions": "Extensiones y Plugins",
+    "prosCons": "Pros y Contras",
+    "quickFacts": "Datos Rápidos",
+    "relatedTools": "Herramientas Relacionadas",
+    "relatedArticles": "Artículos Relacionados",
+    "company": "Empresa",
+    "founded": "Fundación",
+    "headquarters": "Sede",
+    "difficulty": "Dificultad",
+    "pricingRange": "Rango de Precio",
+    "skills": "Habilidades",
+    "targetAudience": "Público Objetivo",
+    "free": "Gratis",
+    "contactSales": "Contactar Ventas",
+    "noPricing": "Gratis y Código Abierto",
+    "pros": "Pros",
+    "cons": "Contras",
+    "home": "Inicio",
+    "aiTools": "Herramientas IA"
   }
 }

@@ -67,6 +67,7 @@ export default function ToolCard({
   const diffLabel = getLabel(dict, difficulty, difficulty.charAt(0).toUpperCase() + difficulty.slice(1));
   const pricingLabel = getLabel(dict, "pricing", "Pricing");
   const visitLabel = getLabel(dict, "visit", "Visit");
+  const detailsLabel = locale === "es" ? "Detalles" : locale === "ar" ? "التفاصيل" : "Details";
 
   return (
     <div className="flex flex-col rounded-xl border border-border bg-surface p-5 shadow-sm transition hover:shadow-md">
@@ -77,7 +78,9 @@ export default function ToolCard({
             {icon}
           </span>
           <div>
-            <h3 className="text-sm font-semibold text-foreground">{name}</h3>
+            <Link href={`/${locale}/tools/${id}`} className="hover:text-primary-600 transition-colors">
+              <h3 className="text-sm font-semibold text-foreground">{name}</h3>
+            </Link>
             <StarRating rating={rating} />
           </div>
         </div>
@@ -112,18 +115,29 @@ export default function ToolCard({
         <span className="font-medium">{pricingLabel}:</span> {pricing}
       </div>
 
-      {/* Visit link */}
-      <Link
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 self-start rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-primary-600"
-      >
-        {visitLabel}
-        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </Link>
+      {/* Action buttons */}
+      <div className="mt-auto flex gap-2">
+        <Link
+          href={`/${locale}/tools/${id}`}
+          className="inline-flex items-center gap-1 rounded-lg border border-primary-300 px-4 py-2 text-sm font-medium text-primary-700 transition hover:bg-primary-50 dark:border-primary-700 dark:text-primary-300 dark:hover:bg-primary-900/30"
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {detailsLabel}
+        </Link>
+        <Link
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 rounded-lg bg-primary-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-primary-600"
+        >
+          {visitLabel}
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </Link>
+      </div>
     </div>
   );
 }

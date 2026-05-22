@@ -83,5 +83,31 @@
   },
   "ad": {
     "label": "إعلان"
+  },
+  "toolDetail": {
+    "visitWebsite": "زيارة الموقع",
+    "about": "حول",
+    "advantages": "المزايا",
+    "useCases": "حالات الاستخدام",
+    "pricing": "الأسعار",
+    "extensions": "الإضافات والملحقات",
+    "prosCons": "المزايا والعيوب",
+    "quickFacts": "حقائق سريعة",
+    "relatedTools": "أدوات ذات صلة",
+    "relatedArticles": "مقالات ذات صلة",
+    "company": "الشركة",
+    "founded": "التأسيس",
+    "headquarters": "المقر الرئيسي",
+    "difficulty": "المستوى",
+    "pricingRange": "نطاق السعر",
+    "skills": "المهارات",
+    "targetAudience": "الجمهور المستهدف",
+    "free": "مجاني",
+    "contactSales": "اتصل بالمبيعات",
+    "noPricing": "مجاني ومفتوح المصدر",
+    "pros": "المزايا",
+    "cons": "العيوب",
+    "home": "الرئيسية",
+    "aiTools": "أدوات الذكاء الاصطناعي"
   }
 }
