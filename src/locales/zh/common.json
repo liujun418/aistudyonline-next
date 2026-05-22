@@ -1,0 +1,157 @@
+{
+  "site": {
+    "title": "AI Study Online",
+    "tagline": "学AI，真正用起来",
+    "subtitle": "从零到精通。发现真正重要的AI工具，并学会如何使用它们。"
+  },
+  "nav": {
+    "models": "大模型",
+    "tools": "AI工具",
+    "learn": "学AI",
+    "blog": "博客",
+    "about": "关于",
+    "search": "搜索",
+    "changeLanguage": "切换语言",
+    "changeTheme": "切换主题",
+    "dark": "深色",
+    "light": "浅色",
+    "system": "系统"
+  },
+  "home": {
+    "heroTitle": "学AI。<span>真正用起来。</span>",
+    "heroSubtitle": "从零到精通。发现真正重要的AI工具，并学会如何使用它们——一步步来，没有行话。",
+    "searchPlaceholder": "搜索任何AI工具...",
+    "hotTools": "本周热门AI工具TOP 10",
+    "exploreTools": "探索工具",
+    "startLearning": "开始学习",
+    "featuredTools": "精选AI工具",
+    "viewAllTools": "查看所有100+工具 →",
+    "featuredModels": "精选AI大模型",
+    "viewAllModels": "查看全部25+模型 →",
+    "latestArticles": "最新文章",
+    "viewAllArticles": "查看所有文章 →",
+    "browseByCategory": "按分类浏览",
+    "features": {
+      "curated": {
+        "title": "精选工具",
+        "desc": "100+款AI工具精心挑选，按你的使用场景分类，而非技术类别。"
+      },
+      "beginner": {
+        "title": "新手友好",
+        "desc": "没有行话，没有先修要求。每篇指南都为零基础用户编写。"
+      },
+      "tutorials": {
+        "title": "分步指南",
+        "desc": "实用的教程，精确告诉你每一步该点击什么、输入什么、期待什么结果。"
+      },
+      "multilingual": {
+        "title": "多语言支持",
+        "desc": "内容支持英文和中文。用你偏好的语言学习。"
+      }
+    }
+  },
+  "models": {
+    "title": "AI大模型库",
+    "description": "探索25+款来自全球顶级开发者的前沿AI大模型。比较参数、价格和性能表现。",
+    "searchPlaceholder": "搜索模型...",
+    "allModels": "全部",
+    "noResults": "未找到匹配的模型。请尝试不同的搜索条件或筛选。",
+    "parameters": "参数量",
+    "contextWindow": "上下文"
+  },
+  "modelDetail": {
+    "home": "首页",
+    "models": "AI大模型",
+    "visitWebsite": "访问官网",
+    "about": "关于",
+    "quickFacts": "快速概览",
+    "strengths": "优势",
+    "weaknesses": "不足",
+    "bestFor": "适用场景",
+    "pricing": "价格",
+    "benchmarks": "基准测试",
+    "benchmark": "基准",
+    "competitor": "对比模型",
+    "techSpecs": "技术规格",
+    "developer": "开发者",
+    "releaseDate": "发布日期",
+    "apiDocs": "API文档",
+    "relatedModels": "相关模型",
+    "parameters": "参数量",
+    "contextWindow": "上下文窗口",
+    "modalitiesLabel": "模态",
+    "languages": "语言",
+    "openSource": "开源",
+    "license": "许可证",
+    "pricingRange": "价格",
+    "yes": "是",
+    "no": "否"
+  },
+  "tools": {
+    "title": "AI工具目录",
+    "description": "浏览100+款AI工具，按分类组织。找到适合你的任务的最佳工具。",
+    "searchPlaceholder": "搜索工具...",
+    "allTools": "全部",
+    "difficulty": {
+      "beginner": "入门",
+      "intermediate": "中级",
+      "advanced": "高级"
+    },
+    "pricing": "价格",
+    "visit": "访问",
+    "noResults": "没有找到匹配的工具。请尝试不同的搜索条件或筛选。"
+  },
+  "learn": {
+    "title": "从零开始学AI",
+    "description": "面向AI初学者的实用教程和指南。没有行话，只有一步步的操作说明。",
+    "allCategories": "全部",
+    "articlesCount": "{count}篇文章"
+  },
+  "article": {
+    "tableOfContents": "本页内容",
+    "toolsMentioned": "相关工具",
+    "relatedArticles": "相关文章",
+    "updated": "更新于"
+  },
+  "footer": {
+    "copyright": "© 2026 AI Study Online. 保留所有权利。",
+    "about": "关于",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们",
+    "blog": "博客",
+    "tools": "AI工具",
+    "learn": "学AI"
+  },
+  "ad": {
+    "label": "广告"
+  },
+  "toolDetail": {
+    "visitWebsite": "访问网站",
+    "about": "关于",
+    "advantages": "优势",
+    "useCases": "使用场景",
+    "pricing": "价格",
+    "extensions": "扩展与插件",
+    "prosCons": "优缺点",
+    "quickFacts": "快速概览",
+    "relatedTools": "相关工具",
+    "relatedArticles": "相关文章",
+    "company": "公司",
+    "founded": "成立时间",
+    "headquarters": "总部",
+    "difficulty": "难度",
+    "pricingRange": "价格范围",
+    "skills": "技能",
+    "targetAudience": "目标用户",
+    "free": "免费",
+    "contactSales": "联系销售",
+    "noPricing": "免费且开源",
+    "pros": "优点",
+    "cons": "缺点",
+    "home": "首页",
+    "aiTools": "AI工具",
+    "affiliateLink": "立即使用（推广链接）",
+    "affiliateNotice": "我们可能获得佣金，不会增加您的额外费用。"
+  }
+}

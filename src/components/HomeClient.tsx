@@ -1,16 +1,23 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ToolCard from "@/components/ToolCard";
 import ArticleCard from "@/components/ArticleCard";
 import TopicCard from "@/components/TopicCard";
 import { tools } from "@/lib/tools";
+import { models } from "@/lib/models";
 import { articles } from "@/lib/articles";
 import { categories } from "@/lib/categories";
+import { topTools } from "@/lib/rankings";
 import type { Locale } from "@/lib/i18n";
 
 // Hardcoded featured tool IDs for the homepage
 const FEATURED_TOOL_IDS = ["chatgpt", "midjourney", "cursor", "elevenlabs"];
+
+// Hardcoded featured model IDs for the homepage
+const FEATURED_MODEL_IDS = ["gpt-4o", "claude-4-opus", "gemini-2-5-pro", "deepseek-r1"];
 
 // Hardcoded featured article slugs for the homepage
 const FEATURED_ARTICLE_SLUGS = [
@@ -27,10 +34,14 @@ function getHome(dict: Record<string, unknown> | undefined) {
   return {
     heroTitle: (h.heroTitle as string) || "Learn AI. <span>Actually Use It.</span>",
     heroSubtitle: (h.heroSubtitle as string) || "Zero to productive. Discover AI tools that matter and learn how to use them.",
+    searchPlaceholder: (h.searchPlaceholder as string) || "Search any AI tool...",
+    hotTools: (h.hotTools as string) || "Top 10 AI Tools This Week",
     exploreTools: (h.exploreTools as string) || "Explore Tools",
     startLearning: (h.startLearning as string) || "Start Learning",
     featuredTools: (h.featuredTools as string) || "Featured AI Tools",
     viewAllTools: (h.viewAllTools as string) || "View All 100+ Tools →",
+    featuredModels: (h.featuredModels as string) || "Featured AI Models",
+    viewAllModels: (h.viewAllModels as string) || "View All 25+ Models →",
     latestArticles: (h.latestArticles as string) || "Latest Articles",
     viewAllArticles: (h.viewAllArticles as string) || "View All Articles →",
     browseByCategory: (h.browseByCategory as string) || "Browse by Category",
@@ -49,7 +60,7 @@ function getHome(dict: Record<string, unknown> | undefined) {
       },
       multilingual: {
         title: (h.features?.multilingual?.title as string) || "Multi-Language",
-        desc: (h.features?.multilingual?.desc as string) || "Content available in English, Spanish, and Arabic. Learn in your preferred language.",
+        desc: (h.features?.multilingual?.desc as string) || "Content available in English and Chinese. Learn in your preferred language.",
       },
     },
   };
@@ -62,8 +73,12 @@ export default function HomeClient({
   locale: string;
   dict: Record<string, unknown>;
 }) {
+  const router = useRouter();
+  const [heroSearch, setHeroSearch] = useState("");
+
   const home = getHome(dict);
   const featuredTools = tools.filter((t) => FEATURED_TOOL_IDS.includes(t.id));
+  const featuredModels = models.filter((m) => FEATURED_MODEL_IDS.includes(m.id));
   const featuredArticles = articles.filter((a) => FEATURED_ARTICLE_SLUGS.includes(a.slug));
 
   const articleCountMap: Record<string, number> = {};
@@ -90,6 +105,36 @@ export default function HomeClient({
           <p className="mx-auto mb-8 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
             {home.heroSubtitle}
           </p>
+
+          {/* Hero Search Box */}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const q = heroSearch.trim();
+              if (q) router.push(`/${locale}/tools?q=${encodeURIComponent(q)}`);
+            }}
+            className="mx-auto mb-8 max-w-xl"
+          >
+            <div className="relative">
+              <svg
+                className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-zinc-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                type="text"
+                value={heroSearch}
+                onChange={(e) => setHeroSearch(e.target.value)}
+                placeholder={home.searchPlaceholder || "Search any AI tool..."}
+                className="w-full rounded-xl border border-border bg-surface/80 py-4 pl-12 pr-4 text-sm text-foreground placeholder-zinc-400 shadow-sm backdrop-blur outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-800"
+                aria-label={home.searchPlaceholder || "Search any AI tool..."}
+              />
+            </div>
+          </form>
+
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href={`/${locale}/tools`}
@@ -107,11 +152,52 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* Section 2: Featured Tools */}
+      {/* Section 2: Featured Models */}
+      <section className="bg-surface-alt px-4 py-16 md:py-20 dark:bg-zinc-900/50">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-8 flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-foreground md:text-3xl">{home.featuredModels}</h2>
+            <Link
+              href={`/${locale}/models`}
+              className="text-sm font-medium text-primary-600 hover:text-primary-500 dark:text-primary-400"
+            >
+              {home.viewAllModels}
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {featuredModels.map((model) => (
+              <Link
+                key={model.id}
+                href={`/${locale}/models/${model.id}`}
+                className="flex flex-col rounded-xl border border-border bg-surface p-4 shadow-sm transition hover:shadow-md hover:border-primary-300 group"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl" role="img" aria-label={model.name}>
+                    {model.icon}
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground group-hover:text-primary-600 transition-colors">
+                      {locale === "zh" ? model.nameZh : model.name}
+                    </h3>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                      {locale === "zh" ? model.developerZh : model.developer}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-xs leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-2">
+                  {locale === "zh" ? model.descriptionZh : model.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Hot Tools Ranking */}
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-foreground md:text-3xl">{home.featuredTools}</h2>
+            <h2 className="text-2xl font-bold text-foreground md:text-3xl">{home.hotTools}</h2>
             <Link
               href={`/${locale}/tools`}
               className="text-sm font-medium text-primary-600 hover:text-primary-500 dark:text-primary-400"
@@ -119,29 +205,38 @@ export default function HomeClient({
               {home.viewAllTools}
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            {featuredTools.map((tool) => (
-              <ToolCard
-                key={tool.id}
-                id={tool.id}
-                name={tool.name}
-                description={tool.description}
-                category={tool.category}
-                tags={tool.tags}
-                difficulty={tool.difficulty}
-                url={tool.url}
-                rating={tool.rating}
-                pricing={tool.pricing}
-                icon={tool.icon}
-                locale={locale}
-                dict={dict}
-              />
-            ))}
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
+            {topTools.map((entry) => {
+              const tool = tools.find((t) => t.id === entry.toolId);
+              if (!tool) return null;
+              return (
+                <Link
+                  key={entry.rank}
+                  href={`/${locale}/tools/${tool.id}`}
+                  className="group flex flex-col rounded-xl border border-border bg-surface p-4 shadow-sm transition hover:shadow-md hover:border-primary-300"
+                >
+                  <div className="mb-2 flex items-center justify-between">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
+                      {entry.rank}
+                    </span>
+                    <span className="text-xl" role="img" aria-label={tool.name}>
+                      {tool.icon}
+                    </span>
+                  </div>
+                  <h3 className="mb-1 text-sm font-semibold text-foreground group-hover:text-primary-600 transition-colors">
+                    {tool.name}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400 line-clamp-3">
+                    {locale === "zh" ? entry.reasonZh : entry.reason}
+                  </p>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Section 3: Latest Articles */}
+      {/* Section 4: Latest Articles */}
       <section className="bg-surface-alt px-4 py-16 md:py-20 dark:bg-zinc-900/50">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 flex items-center justify-between">
@@ -158,9 +253,9 @@ export default function HomeClient({
               <ArticleCard
                 key={article.slug}
                 slug={article.slug}
-                title={locale === "es" ? article.titleEs : locale === "ar" ? article.titleAr : article.title}
+                title={locale === "zh" ? article.titleZh : article.title}
                 description={
-                  locale === "es" ? article.descriptionEs : locale === "ar" ? article.descriptionAr : article.description
+                  locale === "zh" ? article.descriptionZh : article.description
                 }
                 category={article.category}
                 date={article.date}
@@ -173,7 +268,7 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* Section 4: Browse by Category */}
+      {/* Section 5: Browse by Category */}
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-8 text-center text-2xl font-bold text-foreground md:text-3xl">
@@ -192,7 +287,7 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* Section 5: Features */}
+      {/* Section 6: Features */}
       <section className="bg-surface-alt px-4 py-16 md:py-20 dark:bg-zinc-900/50">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

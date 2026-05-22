@@ -8,15 +8,14 @@ import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import ArticleLayout from "@/components/ArticleLayout";
 import type { Locale } from "@/lib/i18n";
 
-function localized(locale: string, en: string, es: string, ar: string): string {
-  if (locale === "es") return es;
-  if (locale === "ar") return ar;
+function localized(locale: string, en: string, zh: string): string {
+  if (locale === "zh") return zh;
   return en;
 }
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
-  for (const locale of ["en", "es", "ar"]) {
+  for (const locale of ["en", "zh"]) {
     for (const article of articles) {
       params.push({ locale, slug: article.slug });
     }
@@ -35,17 +34,16 @@ export async function generateMetadata({
   const article = articles.find((a) => a.slug === slug);
   if (!article) return {};
 
-  const title = localized(locale, article.title, article.titleEs, article.titleAr);
+  const title = localized(locale, article.title, article.titleZh);
   const description = localized(
     locale,
     article.description,
-    article.descriptionEs,
-    article.descriptionAr,
+    article.descriptionZh,
   );
 
   const cat = categories.find((c) => c.id === article.category);
 
-  const localeMap: Record<string, string> = { en: "en_US", es: "es_ES", ar: "ar_SA" };
+  const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
   const OG_IMAGE = `${SITE_URL}/og-default.png`;
 
   return {
@@ -73,8 +71,7 @@ export async function generateMetadata({
       languages: {
         "x-default": `${SITE_URL}/en/article/${slug}`,
         en: `${SITE_URL}/en/article/${slug}`,
-        es: `${SITE_URL}/es/article/${slug}`,
-        ar: `${SITE_URL}/ar/article/${slug}`,
+        zh: `${SITE_URL}/zh/article/${slug}`,
       },
     },
   };
@@ -93,17 +90,16 @@ export default async function ArticlePage({
 
   const dict = await getDictionary(locale as Locale);
 
-  const title = localized(locale, article.title, article.titleEs, article.titleAr);
+  const title = localized(locale, article.title, article.titleZh);
   const description = localized(
     locale,
     article.description,
-    article.descriptionEs,
-    article.descriptionAr,
+    article.descriptionZh,
   );
 
   const entry = articleContents[article.slug];
   const rawContent = entry
-    ? (locale === "es" ? entry.contentEs : locale === "ar" ? entry.contentAr : entry.content)
+    ? (locale === "zh" ? entry.contentZh : entry.content)
     : `<p>${description}</p><p>Full article content coming soon.</p>`;
 
   return (

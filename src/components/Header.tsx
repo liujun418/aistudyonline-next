@@ -9,6 +9,7 @@ import { locales, localeNames, Locale } from "@/lib/i18n";
 function getNav(dict: Record<string, unknown> | undefined) {
   const nav = (dict as any)?.nav || {};
   return {
+    models: (nav.models as string) || "AI Models",
     tools: (nav.tools as string) || "AI Tools",
     learn: (nav.learn as string) || "Learn AI",
     blog: (nav.blog as string) || "Blog",
@@ -32,7 +33,7 @@ export default function Header({
   const switchLocale = (newLocale: Locale) => {
     document.cookie = `locale=${newLocale}; path=/; max-age=31536000`;
     const segments = pathname.split("/").filter(Boolean);
-    if (segments.length > 0 && ["en", "es", "ar"].includes(segments[0])) {
+    if (segments.length > 0 && ["en", "zh"].includes(segments[0])) {
       segments[0] = newLocale;
     } else {
       segments.unshift(newLocale);
@@ -53,6 +54,9 @@ export default function Header({
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-5 text-sm text-zinc-600 md:flex dark:text-zinc-400">
+          <Link href={`/${locale}/models`} className="hover:text-zinc-900 dark:hover:text-white">
+            {nav.models}
+          </Link>
           <Link href={`/${locale}/tools`} className="hover:text-zinc-900 dark:hover:text-white">
             {nav.tools}
           </Link>
@@ -123,6 +127,13 @@ export default function Header({
       {showMobile && (
         <div className="border-t border-primary-200 bg-white px-4 py-4 md:hidden dark:border-primary-900 dark:bg-zinc-950">
           <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-400">
+            <Link
+              href={`/${locale}/models`}
+              className="hover:text-zinc-900 dark:hover:text-white"
+              onClick={() => setShowMobile(false)}
+            >
+              {nav.models}
+            </Link>
             <Link
               href={`/${locale}/tools`}
               className="hover:text-zinc-900 dark:hover:text-white"

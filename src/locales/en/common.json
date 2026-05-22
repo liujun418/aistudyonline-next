@@ -5,6 +5,7 @@
     "subtitle": "Zero to productive. Discover AI tools that matter and learn how to use them."
   },
   "nav": {
+    "models": "AI Models",
     "tools": "AI Tools",
     "learn": "Learn AI",
     "blog": "Blog",
@@ -19,10 +20,14 @@
   "home": {
     "heroTitle": "Learn AI. <span>Actually Use It.</span>",
     "heroSubtitle": "Zero to productive. Discover AI tools that matter and learn how to use them — step by step, no jargon.",
+    "searchPlaceholder": "Search any AI tool...",
+    "hotTools": "Top 10 AI Tools This Week",
     "exploreTools": "Explore Tools",
     "startLearning": "Start Learning",
     "featuredTools": "Featured AI Tools",
     "viewAllTools": "View All 100+ Tools →",
+    "featuredModels": "Featured AI Models",
+    "viewAllModels": "View All 25+ Models →",
     "latestArticles": "Latest Articles",
     "viewAllArticles": "View All Articles →",
     "browseByCategory": "Browse by Category",
@@ -44,6 +49,43 @@
         "desc": "Content available in English, Spanish, and Arabic. Learn in your preferred language."
       }
     }
+  },
+  "models": {
+    "title": "AI Models Directory",
+    "description": "Explore 25 cutting-edge AI models from top developers worldwide. Compare parameters, pricing, and performance.",
+    "searchPlaceholder": "Search models...",
+    "allModels": "All",
+    "noResults": "No models found. Try a different search or filter.",
+    "parameters": "Parameters",
+    "contextWindow": "Context"
+  },
+  "modelDetail": {
+    "home": "Home",
+    "models": "AI Models",
+    "visitWebsite": "Visit Website",
+    "about": "About",
+    "quickFacts": "Quick Facts",
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "bestFor": "Best For",
+    "pricing": "Pricing",
+    "benchmarks": "Benchmarks",
+    "benchmark": "Benchmark",
+    "competitor": "Competitor",
+    "techSpecs": "Technical Specs",
+    "developer": "Developer",
+    "releaseDate": "Released",
+    "apiDocs": "API Docs",
+    "relatedModels": "Related Models",
+    "parameters": "Parameters",
+    "contextWindow": "Context Window",
+    "modalitiesLabel": "Modalities",
+    "languages": "Languages",
+    "openSource": "Open Source",
+    "license": "License",
+    "pricingRange": "Pricing",
+    "yes": "Yes",
+    "no": "No"
   },
   "tools": {
     "title": "AI Tools Directory",
@@ -108,6 +150,8 @@
     "pros": "Pros",
     "cons": "Cons",
     "home": "Home",
-    "aiTools": "AI Tools"
+    "aiTools": "AI Tools",
+    "affiliateLink": "Get Started (Affiliate Link)",
+    "affiliateNotice": "We may earn a commission at no extra cost to you."
   }
 }

@@ -1,7 +1,6 @@
-const es = "<p>[Spanish version — pending translation]</p>";
-const ar = "<p>[Arabic version — pending translation]</p>";
+const zh = "<p>[Chinese version — pending translation]</p>";
 
-export const articleContents: Record<string, { content: string; contentEs: string; contentAr: string }> = {
+export const articleContents: Record<string, { content: string; contentZh: string }> = {
   // ====== Sample: Claude Code Installation (Path: Claude Code × 4, Part 1) ======
   "claude-code-install-setup": {
     content: `<div class="article-meta-banner">
@@ -184,7 +183,7 @@ npm config set registry https://registry.npmjs.org</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-code-mcp-configuration">Part 2: Claude Code 环境配置与 MCP 工具集成 →</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 
   // ====== Existing 25 articles (to be rewritten per new standards) ======
@@ -296,7 +295,7 @@ Processing starts:
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-hallucinations-explained-with-examples">Part 2: AI Hallucinations Explained: Why ChatGPT Makes Stuff Up (With Real Examples) &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   // ... remaining articles stub for build compatibility
   "ai-hallucinations-explained-with-examples": {
@@ -397,7 +396,7 @@ Processing starts:
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/how-to-choose-right-ai-tool">Part 3: Which AI Tool Should You Use? A Decision Framework for Beginners &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "how-to-choose-right-ai-tool": {
     content: `<div class="article-meta-banner">
@@ -579,7 +578,7 @@ Processing starts:
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">Part 4: Free vs Paid AI Tools in 2026: When Your Money Is Actually Well Spent &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "free-vs-paid-ai-tools-worth-it": {
     content: `<div class="article-meta-banner">
@@ -755,7 +754,7 @@ Processing starts:
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-myths-people-still-believe">Part 5: 5 AI Myths Your Non-Techie Friends Still Believe (and What's Actually True) &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "what-is-a-gpu-non-techie": {
     content: `<div class="article-meta-banner">
@@ -819,7 +818,7 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "ai-myths-people-still-believe": {
     content: `<div class="article-meta-banner">
@@ -925,7 +924,7 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <div class="next-step">
 <p><strong>End of AI Basics learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "chatgpt-voice-mode-job-interview": {
     content: `<div class="article-meta-banner">
@@ -995,7 +994,7 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-projects-organize-chats">Part 2: How to Write Prompts That Actually Work: The 5-Point Framework &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "claude-projects-organize-chats": {
     content: `<div class="article-meta-banner">
@@ -1070,7 +1069,7 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-images-that-dont-look-like-ai">Part 3: ChatGPT for Writing: Emails, Reports, and Creative Projects &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "ai-images-that-dont-look-like-ai": {
     content: `<div class="article-meta-banner">
@@ -1159,7 +1158,7 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/voice-recording-to-meeting-notes-free">Part 4: ChatGPT for Research and Analysis: Web Search, File Upload, and Data &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "voice-recording-to-meeting-notes-free": {
     content: `<div class="article-meta-banner">
@@ -1253,7 +1252,7 @@ and how do I fix it?</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/first-ai-coding-project-no-experience">Part 5: Custom GPTs and Automation: Build Your Own AI Assistant &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "first-ai-coding-project-no-experience": {
     content: `<div class="article-meta-banner">
@@ -1321,7 +1320,7 @@ customer support GPT that answers accurately without hallucinating.</code></pre>
 <div class="next-step">
 <p><strong>End of ChatGPT Mastery learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "etsy-seller-ai-product-descriptions": {
     content: `<div class="article-meta-banner">
@@ -1399,7 +1398,7 @@ due to QA delays."
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-wedding-planning-free-tools">Part 2: AI for Project Planning and Organization &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "ai-wedding-planning-free-tools": {
     content: `<div class="article-meta-banner">
@@ -1471,7 +1470,7 @@ with emoji indicators for status.</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-travel-itinerary-real-prompts">Part 3: AI for Research and Report Writing &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "ai-travel-itinerary-real-prompts": {
     content: `<div class="article-meta-banner">
@@ -1556,7 +1555,7 @@ available. Mark any sources you are uncertain about as
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">Part 4: AI for Learning and Skill Development &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "learn-english-with-ai-free-speaking-practice": {
     content: `<div class="article-meta-banner">
@@ -1642,7 +1641,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>End of AI for Work learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "ai-for-parents-quiet-moments": {
     content: `<div class="article-meta-banner">
@@ -1696,7 +1695,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "free-ai-image-generators-same-prompt-test": {
     content: `<div class="article-meta-banner">
@@ -1765,7 +1764,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-image-dalle-firefly">Part 2: DALL-E 3 and Adobe Firefly: Browser-Based AI Image Tools &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "chatgpt-free-vs-plus-2026-what-you-get": {
     content: `<div class="article-meta-banner">
@@ -1842,7 +1841,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "notebooklm-vs-perplexity-research": {
     content: `<div class="article-meta-banner">
@@ -1918,7 +1917,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "claude-vs-chatgpt-writing-blind-test": {
     content: `<div class="article-meta-banner">
@@ -1973,7 +1972,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "cursor-vs-copilot-complete-beginner": {
     content: `<div class="article-meta-banner">
@@ -2034,7 +2033,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "gpt5-for-regular-users": {
     content: `<div class="article-meta-banner">
@@ -2087,7 +2086,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "open-source-ai-models-run-on-laptop": {
     content: `<div class="article-meta-banner">
@@ -2157,7 +2156,7 @@ ollama --version</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "eu-ai-act-plain-english": {
     content: `<div class="article-meta-banner">
@@ -2212,7 +2211,7 @@ ollama --version</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "ai-jobs-that-didnt-exist-3-years-ago": {
     content: `<div class="article-meta-banner">
@@ -2261,7 +2260,7 @@ ollama --version</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
   "apple-intelligence-6-months-later": {
     content: `<div class="article-meta-banner">
@@ -2318,7 +2317,7 @@ ollama --version</code></pre>
 <div class="next-step">
 <p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 
   // ====== Claude Code Path: Part 2 of 4 (NEW SLUG) ======
@@ -2456,7 +2455,7 @@ claude --verbose</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-code-in-action">Part 3: Claude Code in Action: Building a Real Project Step by Step &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 
   // ====== Claude Code Path: Part 3 of 4 (NEW SLUG) ======
@@ -2559,7 +2558,7 @@ xdg-open index.html  # Linux</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-code-advanced">Part 4: Claude Code Advanced: Debugging, Refactoring, and Multi-File Workflows &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 
   // ====== Claude Code Path: Part 4 of 4 (NEW SLUG) ======
@@ -2686,7 +2685,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <div class="next-step">
 <p><strong>End of Claude Code learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 
   // ====== AI Image Generation Path: Part 2 of 4 (NEW SLUG) ======
@@ -2784,7 +2783,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-image-prompt-guide">Part 3: AI Image Prompt Engineering: The Complete Parameter Guide &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 
   // ====== AI Image Generation Path: Part 3 of 4 (NEW SLUG) ======
@@ -2899,7 +2898,7 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-image-commercial-licensing">Part 4: AI Images for Commercial Use: Licensing, Copyright, and Best Practices &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 
   // ====== AI Image Generation Path: Part 4 of 4 (NEW SLUG) ======
@@ -2985,6 +2984,6 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <div class="next-step">
 <p><strong>End of AI Image Generation learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
 </div>`,
-    contentEs: es, contentAr: ar,
+    contentZh: zh,
   },
 };

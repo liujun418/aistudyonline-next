@@ -18,11 +18,9 @@ interface ArticleLayoutProps {
 function localized(
   locale: string,
   en: string,
-  es: string,
-  ar: string,
+  zh: string,
 ): string {
-  if (locale === "es") return es;
-  if (locale === "ar") return ar;
+  if (locale === "zh") return zh;
   return en;
 }
 
@@ -38,10 +36,10 @@ export default function ArticleLayout({
 
   const cat = categories.find((c) => c.id === article.category);
   const catName = cat
-    ? localized(locale, cat.name, cat.nameEs, cat.nameAr)
+    ? localized(locale, cat.name, cat.nameZh)
     : article.category;
 
-  const title = localized(locale, article.title, article.titleEs, article.titleAr);
+  const title = localized(locale, article.title, article.titleZh);
 
   const mentionedTools = tools.filter((t) =>
     article.toolsMentioned.includes(t.id),
@@ -143,8 +141,7 @@ export default function ArticleLayout({
                     description={localized(
                       locale,
                       tool.description,
-                      tool.descriptionEs,
-                      tool.descriptionAr,
+                      tool.descriptionZh,
                     )}
                     category={tool.category}
                     tags={tool.tags}
@@ -177,12 +174,11 @@ export default function ArticleLayout({
               <ArticleCard
                 key={a.slug}
                 slug={a.slug}
-                title={localized(locale, a.title, a.titleEs, a.titleAr)}
+                title={localized(locale, a.title, a.titleZh)}
                 description={localized(
                   locale,
                   a.description,
-                  a.descriptionEs,
-                  a.descriptionAr,
+                  a.descriptionZh,
                 )}
                 category={a.category}
                 date={a.date}

@@ -67,7 +67,7 @@ export default function ToolCard({
   const diffLabel = getLabel(dict, difficulty, difficulty.charAt(0).toUpperCase() + difficulty.slice(1));
   const pricingLabel = getLabel(dict, "pricing", "Pricing");
   const visitLabel = getLabel(dict, "visit", "Visit");
-  const detailsLabel = locale === "es" ? "Detalles" : locale === "ar" ? "التفاصيل" : "Details";
+  const detailsLabel = locale === "zh" ? "详情" : "Details";
 
   return (
     <div className="flex flex-col rounded-xl border border-border bg-surface p-5 shadow-sm transition hover:shadow-md">

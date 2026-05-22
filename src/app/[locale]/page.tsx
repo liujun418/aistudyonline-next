@@ -17,7 +17,7 @@ export async function generateMetadata({
   const site = (dict as any)?.site || {};
   const home = (dict as any)?.home || {};
 
-  const localeMap: Record<string, string> = { en: "en_US", es: "es_ES", ar: "ar_SA" };
+  const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
   const OG_IMAGE = `${SITE_URL}/og-default.png`;
 
   const title = `${SITE_NAME} — ${site.tagline || "Learn AI. Actually Use It."}`;
@@ -46,8 +46,7 @@ export async function generateMetadata({
       languages: {
         "x-default": `${SITE_URL}/en`,
         en: `${SITE_URL}/en`,
-        es: `${SITE_URL}/es`,
-        ar: `${SITE_URL}/ar`,
+        zh: `${SITE_URL}/zh`,
       },
     },
   };
@@ -69,7 +68,7 @@ export default async function HomePage({
     name: SITE_NAME,
     url: SITE_URL,
     description: "Learn AI from zero. Discover the best AI tools and learn how to use them.",
-    inLanguage: ["en", "es", "ar"],
+    inLanguage: ["en", "zh"],
     potentialAction: {
       "@type": "SearchAction",
       target: {

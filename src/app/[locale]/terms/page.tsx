@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isValidLocale(locale)) return {};
 
-  const localeMap: Record<string, string> = { en: "en_US", es: "es_ES", ar: "ar_SA" };
+  const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
 
   return {
     title: `Terms of Service — ${SITE_NAME}`,
@@ -29,8 +29,7 @@ export async function generateMetadata({
       languages: {
         "x-default": `${SITE_URL}/en/terms`,
         en: `${SITE_URL}/en/terms`,
-        es: `${SITE_URL}/es/terms`,
-        ar: `${SITE_URL}/ar/terms`,
+        zh: `${SITE_URL}/zh/terms`,
       },
     },
   };

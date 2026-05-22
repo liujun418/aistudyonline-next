@@ -26,7 +26,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   const site = (dict as any)?.site || {};
 
-  const localeMap: Record<string, string> = { en: "en_US", es: "es_ES", ar: "ar_SA" };
+  const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
   const OG_IMAGE = `${SITE_URL}/og-default.png`;
 
   return {
@@ -51,8 +51,7 @@ export async function generateMetadata({
       languages: {
         "x-default": `${SITE_URL}/en`,
         en: `${SITE_URL}/en`,
-        es: `${SITE_URL}/es`,
-        ar: `${SITE_URL}/ar`,
+        zh: `${SITE_URL}/zh`,
       },
     },
     other: {
@@ -84,7 +83,7 @@ export default async function LocaleLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -118,7 +117,7 @@ export default async function LocaleLayout({
               url: "https://aistudyonline.club",
               description:
                 "Learn AI from zero. Discover the best AI tools and learn how to use them.",
-              inLanguage: ["en", "es", "ar"],
+              inLanguage: ["en", "zh"],
               potentialAction: {
                 "@type": "SearchAction",
                 target: {

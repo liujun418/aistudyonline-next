@@ -4,7 +4,7 @@ const ARTICLES_TS = new URL("../src/lib/articles.ts", import.meta.url).pathname.
 const CATEGORIES_TS = new URL("../src/lib/categories.ts", import.meta.url).pathname.replace(/^\/([a-z]):\//i, "$1:/");
 
 const SITE = "https://aistudyonline.club";
-const LOCALES = ["en", "es", "ar"];
+const LOCALES = ["en", "zh"];
 const XDEFAULT = "en";
 
 // Parse articles

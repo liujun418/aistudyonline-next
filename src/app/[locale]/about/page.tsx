@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isValidLocale(locale)) return {};
 
-  const localeMap: Record<string, string> = { en: "en_US", es: "es_ES", ar: "ar_SA" };
+  const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
 
   return {
     title: `About — ${SITE_NAME}`,
@@ -30,8 +30,7 @@ export async function generateMetadata({
       languages: {
         "x-default": `${SITE_URL}/en/about`,
         en: `${SITE_URL}/en/about`,
-        es: `${SITE_URL}/es/about`,
-        ar: `${SITE_URL}/ar/about`,
+        zh: `${SITE_URL}/zh/about`,
       },
     },
   };

@@ -2,8 +2,8 @@
 
 import { useState, useMemo } from "react";
 import ToolCard from "@/components/ToolCard";
-import { tools, toolCategories, toolCategoryLabels } from "@/lib/tools";
-import type { ToolCategory } from "@/lib/tools";
+import { tools, toolCategories, toolCategoryLabels, toolScenes, toolSceneLabels } from "@/lib/tools";
+import type { ToolCategory, ToolScene } from "@/lib/tools";
 
 function getToolsDict(dict: Record<string, unknown> | undefined) {
   const t = (dict as any)?.tools || {};
@@ -26,6 +26,7 @@ export default function ToolsClient({
   dict: Record<string, unknown>;
 }) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeScene, setActiveScene] = useState<string>("all");
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [activeDifficulty, setActiveDifficulty] = useState<string>("all");
 
@@ -41,6 +42,11 @@ export default function ToolsClient({
         if (!nameMatch && !descMatch) return false;
       }
 
+      // Scene filter
+      if (activeScene !== "all" && tool.scene !== activeScene) {
+        return false;
+      }
+
       // Category filter
       if (activeCategory !== "all" && tool.category !== activeCategory) {
         return false;
@@ -53,12 +59,18 @@ export default function ToolsClient({
 
       return true;
     });
-  }, [searchQuery, activeCategory, activeDifficulty]);
+  }, [searchQuery, activeScene, activeCategory, activeDifficulty]);
 
   function getCatLabel(cat: ToolCategory): string {
-    if (locale === "es") return toolCategoryLabels[cat].es;
-    if (locale === "ar") return toolCategoryLabels[cat].ar;
+    if (locale === "zh") return toolCategoryLabels[cat].zh;
     return toolCategoryLabels[cat].en;
+  }
+
+  function getSceneLabel(scene: string): string {
+    if (scene === "all") return toolsDict.allTools;
+    const s = scene as ToolScene;
+    if (locale === "zh") return toolSceneLabels[s]?.zh || scene;
+    return toolSceneLabels[s]?.en || scene;
   }
 
   function getDiffLabel(diff: string): string {
@@ -91,6 +103,35 @@ export default function ToolsClient({
             className="w-full rounded-lg border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-zinc-400 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-800"
             aria-label={toolsDict.searchPlaceholder}
           />
+        </div>
+
+        {/* Scene tabs */}
+        <div className="mb-4 overflow-x-auto">
+          <div className="flex gap-2 pb-2">
+            <button
+              onClick={() => setActiveScene("all")}
+              className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition ${
+                activeScene === "all"
+                  ? "bg-primary-500 text-white"
+                  : "bg-surface border border-border text-zinc-600 hover:bg-primary-50 dark:text-zinc-400 dark:hover:bg-primary-950"
+              }`}
+            >
+              {toolsDict.allTools}
+            </button>
+            {toolScenes.map((scene) => (
+              <button
+                key={scene}
+                onClick={() => setActiveScene(scene)}
+                className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition ${
+                  activeScene === scene
+                    ? "bg-primary-500 text-white"
+                    : "bg-surface border border-border text-zinc-600 hover:bg-primary-50 dark:text-zinc-400 dark:hover:bg-primary-950"
+                }`}
+              >
+                {getSceneLabel(scene)}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Category tabs */}
@@ -151,11 +192,9 @@ export default function ToolsClient({
 
         {/* Count display */}
         <p className="mb-4 text-sm text-zinc-500 dark:text-zinc-400">
-          {locale === "es"
-            ? `Mostrando ${filteredTools.length} de ${tools.length} herramientas`
-            : locale === "ar"
-              ? `عرض ${filteredTools.length} من ${tools.length} أداة`
-              : `Showing ${filteredTools.length} of ${tools.length} tools`}
+          {locale === "zh"
+            ? `显示 ${filteredTools.length} / ${tools.length} 个工具`
+            : `Showing ${filteredTools.length} of ${tools.length} tools`}
         </p>
 
         {/* Tool cards grid */}

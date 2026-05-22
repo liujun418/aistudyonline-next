@@ -57,21 +57,20 @@ export default function ToolDetailClient({
   dict: Record<string, unknown>;
 }) {
   const td = (dict as any)?.toolDetail || {};
-  const rtl = locale === "ar";
 
   // Locale-aware field selection
-  const description = locale === "es" ? tool.descriptionEs : locale === "ar" ? tool.descriptionAr : tool.description;
+  const description = locale === "zh" ? tool.descriptionZh : tool.description;
   const descriptionLong =
-    locale === "es" ? tool.descriptionLongEs : locale === "ar" ? tool.descriptionLongAr : tool.descriptionLong;
+    locale === "zh" ? tool.descriptionLongZh : tool.descriptionLong;
   const advantages =
-    locale === "es" ? tool.advantagesEs : locale === "ar" ? tool.advantagesAr : tool.advantages;
+    locale === "zh" ? tool.advantagesZh : tool.advantages;
   const useCases =
-    locale === "es" ? tool.useCasesEs : locale === "ar" ? tool.useCasesAr : tool.useCases;
+    locale === "zh" ? tool.useCasesZh : tool.useCases;
   const targetAudience =
-    locale === "es" ? tool.targetAudienceEs : locale === "ar" ? tool.targetAudienceAr : tool.targetAudience;
-  const company = locale === "es" ? tool.companyEs : locale === "ar" ? tool.companyAr : tool.company;
-  const pros = locale === "es" ? tool.prosEs : locale === "ar" ? tool.prosAr : tool.pros;
-  const cons = locale === "es" ? tool.consEs : locale === "ar" ? tool.consAr : tool.cons;
+    locale === "zh" ? tool.targetAudienceZh : tool.targetAudience;
+  const company = locale === "zh" ? tool.companyZh : tool.company;
+  const pros = locale === "zh" ? tool.prosZh : tool.pros;
+  const cons = locale === "zh" ? tool.consZh : tool.cons;
 
   // Related tools: same category, exclude self, max 4
   const relatedTools = allTools
@@ -84,7 +83,7 @@ export default function ToolDetailClient({
     .slice(0, 3);
 
   return (
-    <main className={`mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8 ${rtl ? "rtl" : ""}`} dir={rtl ? "rtl" : "ltr"}>
+    <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8" dir="ltr">
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm text-zinc-500 dark:text-zinc-400">
         <Link href={`/${locale}`} className="hover:text-primary-600 transition-colors">
@@ -117,17 +116,39 @@ export default function ToolDetailClient({
               <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">{description}</p>
             </div>
           </div>
-          <a
-            href={tool.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-primary-600"
-          >
-            {td.visitWebsite || "Visit Website"}
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
+          <div className="flex flex-col items-start gap-2">
+            <div className="flex flex-wrap gap-2">
+              <a
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-primary-600"
+              >
+                {td.visitWebsite || "Visit Website"}
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              {tool.hasAffiliate && tool.affiliateUrl && (
+                <a
+                  href={tool.affiliateUrl}
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border-2 border-primary-500 bg-white px-6 py-3 text-sm font-medium text-primary-600 transition hover:bg-primary-50 dark:bg-transparent dark:hover:bg-primary-950"
+                >
+                  {td.affiliateLink || "Get Started (Affiliate Link)"}
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              )}
+            </div>
+            {tool.hasAffiliate && (
+              <p className="text-xs text-zinc-400 dark:text-zinc-500">
+                {td.affiliateNotice || "We may earn a commission at no extra cost to you."}
+              </p>
+            )}
+          </div>
         </div>
 
         {/* Quick Facts */}
@@ -345,7 +366,7 @@ export default function ToolDetailClient({
                   </div>
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400 line-clamp-2">
-                  {locale === "es" ? t.descriptionEs : locale === "ar" ? t.descriptionAr : t.description}
+                  {locale === "zh" ? t.descriptionZh : t.description}
                 </p>
               </Link>
             ))}
@@ -365,10 +386,10 @@ export default function ToolDetailClient({
                 className="block rounded-xl border border-border bg-surface p-4 shadow-sm transition hover:shadow-md hover:border-primary-300"
               >
                 <h3 className="text-sm font-semibold text-foreground">
-                  {locale === "es" ? a.titleEs : locale === "ar" ? a.titleAr : a.title}
+                  {locale === "zh" ? a.titleZh : a.title}
                 </h3>
                 <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2">
-                  {locale === "es" ? a.descriptionEs : locale === "ar" ? a.descriptionAr : a.description}
+                  {locale === "zh" ? a.descriptionZh : a.description}
                 </p>
               </Link>
             ))}

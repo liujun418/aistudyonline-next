@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isValidLocale, getDictionary } from "@/lib/i18n";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
-import { tools } from "@/lib/tools";
+import { models } from "@/lib/models";
 import type { Locale } from "@/lib/i18n";
-import ToolDetailClient from "./ToolDetailClient";
+import ModelDetailClient from "./ModelDetailClient";
 
 export async function generateStaticParams() {
   const locales = ["en", "zh"] as const;
   const paths: { locale: string; id: string }[] = [];
   for (const locale of locales) {
-    for (const tool of tools) {
-      paths.push({ locale, id: tool.id });
+    for (const model of models) {
+      paths.push({ locale, id: model.id });
     }
   }
   return paths;
@@ -25,19 +25,16 @@ export async function generateMetadata({
   const { locale, id } = await params;
   if (!isValidLocale(locale)) return {};
 
-  const tool = tools.find((t) => t.id === id);
-  if (!tool) return {};
+  const model = models.find((m) => m.id === id);
+  if (!model) return {};
 
   const dict = await getDictionary(locale as Locale);
-  const toolDetail = (dict as any)?.toolDetail || {};
+  const modelDetail = (dict as any)?.modelDetail || {};
   const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
 
-  const name = tool.name;
-  const description =
-    locale === "zh"
-      ? tool.descriptionZh
-      : tool.description;
-  const title = `${name} — ${toolDetail.aiTools || "AI Tools"} — ${SITE_NAME}`;
+  const name = locale === "zh" ? model.nameZh : model.name;
+  const description = locale === "zh" ? model.descriptionZh : model.description;
+  const title = `${name} — ${modelDetail.models || "AI Models"} — ${SITE_NAME}`;
 
   return {
     title,
@@ -45,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: localeMap[locale] || "en_US",
-      url: `${SITE_URL}/${locale}/tools/${id}`,
+      url: `${SITE_URL}/${locale}/models/${id}`,
       siteName: SITE_NAME,
       title,
       description,
@@ -58,15 +55,15 @@ export async function generateMetadata({
     },
     alternates: {
       languages: {
-        "x-default": `${SITE_URL}/en/tools/${id}`,
-        en: `${SITE_URL}/en/tools/${id}`,
-        zh: `${SITE_URL}/zh/tools/${id}`,
+        "x-default": `${SITE_URL}/en/models/${id}`,
+        en: `${SITE_URL}/en/models/${id}`,
+        zh: `${SITE_URL}/zh/models/${id}`,
       },
     },
   };
 }
 
-export default async function ToolDetailPage({
+export default async function ModelDetailPage({
   params,
 }: {
   params: Promise<{ locale: string; id: string }>;
@@ -74,30 +71,28 @@ export default async function ToolDetailPage({
   const { locale, id } = await params;
   if (!isValidLocale(locale)) notFound();
 
-  const tool = tools.find((t) => t.id === id);
-  if (!tool) notFound();
+  const model = models.find((m) => m.id === id);
+  if (!model) notFound();
 
   const dict = await getDictionary(locale as Locale);
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: tool.name,
-    description:
-      locale === "zh"
-        ? tool.descriptionZh
-        : tool.description,
-    applicationCategory: "AIApplication",
+    "@type": "SoftwareApplication",
+    name: locale === "zh" ? model.nameZh : model.name,
+    description: locale === "zh" ? model.descriptionZh : model.description,
+    applicationCategory: "AI Application",
     operatingSystem: "Web",
     offers: {
       "@type": "Offer",
-      price: tool.pricing,
+      price: model.pricing,
       priceCurrency: "USD",
     },
     author: {
       "@type": "Organization",
-      name: tool.company,
+      name: model.developer,
     },
+    datePublished: model.releaseDate,
   };
 
   return (
@@ -106,7 +101,7 @@ export default async function ToolDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ToolDetailClient tool={tool} locale={locale as Locale} dict={dict} />
+      <ModelDetailClient model={model} locale={locale as Locale} dict={dict} />
     </>
   );
 }

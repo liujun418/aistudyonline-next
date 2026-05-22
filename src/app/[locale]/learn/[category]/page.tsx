@@ -8,15 +8,14 @@ import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import ArticleCard from "@/components/ArticleCard";
 import type { Locale } from "@/lib/i18n";
 
-function localized(locale: string, en: string, es: string, ar: string): string {
-  if (locale === "es") return es;
-  if (locale === "ar") return ar;
+function localized(locale: string, en: string, zh: string): string {
+  if (locale === "zh") return zh;
   return en;
 }
 
 export async function generateStaticParams() {
   const params: { locale: string; category: string }[] = [];
-  for (const locale of ["en", "es", "ar"]) {
+  for (const locale of ["en", "zh"]) {
     for (const cat of categories) {
       params.push({ locale, category: cat.slug });
     }
@@ -37,15 +36,14 @@ export async function generateMetadata({
 
   const dict = await getDictionary(locale as Locale);
   const learnDict = (dict as any)?.learn || {};
-  const catName = localized(locale, cat.name, cat.nameEs, cat.nameAr);
+  const catName = localized(locale, cat.name, cat.nameZh);
   const catDesc = localized(
     locale,
     cat.description,
-    cat.descriptionEs,
-    cat.descriptionAr,
+    cat.descriptionZh,
   );
 
-  const localeMap: Record<string, string> = { en: "en_US", es: "es_ES", ar: "ar_SA" };
+  const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
   const pageTitle = `${catName} — ${learnDict.title || "Learn AI From Zero"} — ${SITE_NAME}`;
 
   return {
@@ -70,8 +68,7 @@ export async function generateMetadata({
       languages: {
         "x-default": `${SITE_URL}/en/learn/${category}`,
         en: `${SITE_URL}/en/learn/${category}`,
-        es: `${SITE_URL}/es/learn/${category}`,
-        ar: `${SITE_URL}/ar/learn/${category}`,
+        zh: `${SITE_URL}/zh/learn/${category}`,
       },
     },
   };
@@ -91,12 +88,11 @@ export default async function CategoryPage({
   const dict = await getDictionary(locale as Locale);
   const learnDict = (dict as any)?.learn || {};
 
-  const catName = localized(locale, cat.name, cat.nameEs, cat.nameAr);
+  const catName = localized(locale, cat.name, cat.nameZh);
   const catDesc = localized(
     locale,
     cat.description,
-    cat.descriptionEs,
-    cat.descriptionAr,
+    cat.descriptionZh,
   );
 
   const catArticles = articles.filter((a) => a.category === cat.id);
@@ -144,14 +140,12 @@ export default async function CategoryPage({
               title={localized(
                 locale,
                 article.title,
-                article.titleEs,
-                article.titleAr,
+                article.titleZh,
               )}
               description={localized(
                 locale,
                 article.description,
-                article.descriptionEs,
-                article.descriptionAr,
+                article.descriptionZh,
               )}
               category={article.category}
               date={article.date}
