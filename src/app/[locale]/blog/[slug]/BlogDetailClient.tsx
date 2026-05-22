@@ -1,5 +1,7 @@
 "use client";
 
+import ShareButtons from "@/components/ShareButtons";
+
 import Link from "next/link";
 import { blogPosts, type BlogPost } from "@/lib/blog-posts";
 import { tools } from "@/lib/tools";
@@ -141,6 +143,9 @@ export default function BlogDetailClient({
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
+
+      {/* Share Buttons */}
+      <ShareButtons url={`https://aistudyonline.club/${locale}/blog/${post.slug}`} title={locale === "zh" ? post.titleZh : post.title} locale={locale} />
 
       {/* Related Tools */}
       {relatedTools.length > 0 && (

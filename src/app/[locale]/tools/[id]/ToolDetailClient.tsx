@@ -4,6 +4,7 @@ import Link from "next/link";
 import { tools as allTools } from "@/lib/tools";
 import { articles } from "@/lib/articles";
 import AdUnit from "@/components/AdUnit";
+import ShareButtons from "@/components/ShareButtons";
 import type { Tool } from "@/lib/tools";
 
 function getLabel(d: Record<string, unknown> | undefined, section: string, key: string, fallback: string): string {
@@ -350,6 +351,9 @@ export default function ToolDetailClient({
           </div>
         </section>
       )}
+
+      {/* Share Buttons */}
+      <ShareButtons url={`https://aistudyonline.club/${locale}/tools/${tool.id}`} title={tool.name} locale={locale} />
 
       {/* Related Tools */}
       {relatedTools.length > 0 && (

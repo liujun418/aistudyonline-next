@@ -1,6 +1,7 @@
 "use client";
 
 import AdUnit from "@/components/AdUnit";
+import ShareButtons from "@/components/ShareButtons";
 
 import Link from "next/link";
 import { models as allModels } from "@/lib/models";
@@ -322,6 +323,9 @@ export default function ModelDetailClient({
       <div className="mb-10 flex justify-center">
         <AdUnit adSlot="7831293092" format="rectangle" />
       </div>
+
+      {/* Share Buttons */}
+      <ShareButtons url={`https://aistudyonline.club/${locale}/models/${model.id}`} title={model.name} locale={locale} />
 
       {/* Related Models */}
       {relatedModels.length > 0 && (
