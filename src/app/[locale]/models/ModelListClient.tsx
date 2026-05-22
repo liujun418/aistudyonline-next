@@ -171,6 +171,10 @@ export default function ModelListClient({
             <p className="text-zinc-500 dark:text-zinc-400">{modelsDict.noResults}</p>
           </div>
         )}
+        {/* Banner Ad */}
+        <div className="mt-8 flex justify-center">
+          <AdUnit adSlot="8266407367" format="horizontal" />
+        </div>
       </div>
     </div>
   );

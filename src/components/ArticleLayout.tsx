@@ -170,7 +170,7 @@ export default function ArticleLayout({
 
       {/* Bottom Ad */}
       <div className="mx-auto mt-10 max-w-3xl">
-        <AdUnit adSlot="7831293092" format="horizontal" />
+        <AdUnit adSlot="8266407367" format="horizontal" />
       </div>
 
       {/* Related Articles */}

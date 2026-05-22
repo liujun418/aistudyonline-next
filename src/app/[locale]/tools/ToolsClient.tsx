@@ -225,6 +225,10 @@ export default function ToolsClient({
             <p className="text-zinc-500 dark:text-zinc-400">{toolsDict.noResults}</p>
           </div>
         )}
+        {/* Banner Ad */}
+        <div className="mt-8 flex justify-center">
+          <AdUnit adSlot="8266407367" format="horizontal" />
+        </div>
       </div>
     </div>
   );
