@@ -1,5 +1,3 @@
-const zh = "<p>[Chinese version — pending translation]</p>";
-
 export const articleContents: Record<string, { content: string; contentZh: string }> = {
   // ====== Sample: Claude Code Installation (Path: Claude Code × 4, Part 1) ======
   "claude-code-install-setup": {
@@ -183,7 +181,186 @@ npm config set registry https://registry.npmjs.org</code></pre>
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-code-mcp-configuration">Part 2: Claude Code 环境配置与 MCP 工具集成 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>Learning Path:</strong> Claude Code 编程入门 · <strong>Part 1 of 4</strong></p>
+<p><strong>Prerequisites:</strong> 一台电脑（Windows/Mac/Linux）、基本命令行操作能力（会用 <code>cd</code> 和 <code>ls</code> 即可）</p>
+<p><strong>What you'll build:</strong> 一个可运行的 Claude Code 开发环境，能通过命令行直接调用 Claude 写代码。</p>
+</div>
+
+<h2>What is Claude Code?</h2>
+
+<p>Claude Code 是 Anthropic 推出的命令行 AI 编程工具。和 Cursor、GitHub Copilot 不同，它不需要打开 IDE——直接在终端里输入自然语言，Claude 就能读你的代码库、写代码、修 bug、解释逻辑。它最独特的能力是<strong>理解整个项目结构</strong>，而不是只处理当前打开的文件。</p>
+
+<p>在正式开始之前，你需要知道三件事：</p>
+
+<ol>
+<li>Claude Code 需要 <strong>Anthropic API Key</strong>（付费），不是 Claude.ai 的网页版订阅。两者独立。</li>
+<li>它是<strong>命令行工具</strong>，运行在终端里，没有图形界面。别担心——你不会被要求写任何代码来使用它。</li>
+<li>它会<strong>读取和修改你的文件</strong>。建议在测试项目里先试用，不要一上来就在公司代码库里跑。</li>
+</ol>
+
+<h2>Step 1: Install Node.js 18+</h2>
+
+<p>Claude Code 基于 Node.js。如果你的电脑上还没有 Node.js，先装它。</p>
+
+<div class="step-card">
+
+<h3>Windows</h3>
+<p>去 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>，下载 LTS 版本（推荐 20.x 或 22.x）。运行安装程序，全部默认选项，一路 Next 到底。</p>
+
+<p>安装完成后，打开 <strong>PowerShell</strong>（按 Win 键，输入 PowerShell，回车），验证安装：</p>
+
+<pre><code>node --version
+# 应该输出: v20.x.x 或 v22.x.x
+
+npm --version
+# 应该输出: 10.x.x</code></pre>
+</div>
+
+<div class="step-card">
+
+<h3>Mac</h3>
+<p>推荐用 Homebrew。如果你没装过 Homebrew，先打开 <strong>终端（Terminal）</strong> 运行：</p>
+
+<pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+
+<p>然后安装 Node.js：</p>
+
+<pre><code>brew install node@22</code></pre>
+
+<p>验证安装：</p>
+
+<pre><code>node --version
+npm --version</code></pre>
+</div>
+
+<div class="step-card">
+
+<h3>Linux (Ubuntu/Debian)</h3>
+
+<pre><code>curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt-get install -y nodejs</code></pre>
+
+<p>验证：</p>
+
+<pre><code>node --version
+npm --version</code></pre>
+</div>
+
+<h2>Step 2: Get Your Anthropic API Key</h2>
+
+<p>这步容易搞混。你需要的是 <strong>API Key</strong>，不是 Claude.ai 的网页版账号。</p>
+
+<ol>
+<li>打开 <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a></li>
+<li>注册或登录（可以用 Google 账号）</li>
+<li>首次使用需要绑定信用卡，设置消费限额（建议先设 $20/月）</li>
+<li>左侧菜单 → <strong>API Keys</strong> → 点击 <strong>Create Key</strong></li>
+<li>给 key 起个名字（比如 "claude-code-laptop"）→ 复制生成的 key</li>
+</ol>
+
+<div class="warning-box">
+<p><strong>⚠️ 重要：</strong>Key 只显示一次。关闭页面后无法再次查看。请立即保存到安全的地方（密码管理器、文本文件都行，不要贴到聊天记录里）。</p>
+</div>
+
+<h2>Step 3: Install Claude Code</h2>
+
+<p>打开终端（Windows: PowerShell。Mac: Terminal。Linux: Terminal），运行：</p>
+
+<pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+
+<p>这条命令做了什么：<code>npm install -g</code> 是"全局安装"，安装后你可以在任何目录里使用 <code>claude</code> 命令。<code>@anthropic-ai/claude-code</code> 是 Claude Code 的包名。</p>
+
+<p>安装过程大约 30-60 秒。你可能会看到一些 warning 信息，只要最后没有红色的 <code>ERROR</code>，就可以继续。</p>
+
+<p>验证安装成功：</p>
+
+<pre><code>claude --version
+# 应该输出类似: v1.x.x</code></pre>
+
+<h2>Step 4: 配置 API Key</h2>
+
+<p>有两种方式告诉 Claude Code 你的 API Key。推荐方式一：</p>
+
+<div class="step-card">
+<p><strong>方式一（推荐）：环境变量</strong>——将 key 设为系统环境变量，所有项目生效：</p>
+
+<h3>Windows (PowerShell, 管理员模式)</h3>
+
+<pre><code>[Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-ant-api03-your-key-here', 'User')</code></pre>
+
+<p>把 <code>sk-ant-api03-your-key-here</code> 替换成你的真实 key。关闭并重新打开 PowerShell 使其生效。</p>
+
+<h3>Mac / Linux (Terminal)</h3>
+
+<pre><code># 添加到 shell 配置文件中（zsh 用户用 .zshrc，bash 用户用 .bashrc）
+echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' >> ~/.zshrc
+
+# 立即生效
+source ~/.zshrc</code></pre>
+</div>
+
+<div class="step-card">
+<p><strong>方式二：项目级配置</strong>——只在当前项目中生效，适用于多个项目用不同 key 的情况：</p>
+
+<pre><code># 在项目根目录创建 .env 文件
+echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' > .env</code></pre>
+
+<p>Claude Code 启动时会自动读取 <code>.env</code> 文件。</p>
+</div>
+
+<h2>Step 5: 测试你的第一个 Claude Code 命令</h2>
+
+<p>创建一个测试项目目录，然后启动 Claude Code：</p>
+
+<pre><code># 创建测试目录
+mkdir claude-test && cd claude-test
+
+# 初始化 git（Claude Code 需要 git 来跟踪代码变更）
+git init
+
+# 启动 Claude Code
+claude</code></pre>
+
+<p>第一次启动时，Claude Code 可能会问你是否同意使用条款。输入 <code>y</code> 确认。</p>
+
+<p>看到交互式界面后，输入你的第一个指令：</p>
+
+<pre><code>创建一个简单的 HTML 文件 index.html，内容是一个现代化的"Hello World"页面，有居中的文字和好看的背景色。</code></pre>
+
+<p>Claude 会：</p>
+
+<ol>
+<li>分析你的请求</li>
+<li>生成代码</li>
+<li>显示它打算做什么（可能需要你按 Enter 确认）</li>
+<li>创建文件</li>
+</ol>
+
+<p>完成后，在浏览器中打开 <code>index.html</code> 查看结果。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: 提示 "API key not found"</h3>
+<p>检查环境变量是否正确设置。运行 <code>echo $ANTHROPIC_API_KEY</code>（Mac/Linux）或 <code>$env:ANTHROPIC_API_KEY</code>（PowerShell）查看当前值。如果为空，回到 Step 4 重新设置。</p>
+
+<h3>Q: 提示 "Insufficient permissions"</h3>
+<p>去 <a href="https://console.anthropic.com/settings/billing" target="_blank" rel="noopener">Anthropic Console → Billing</a> 检查：账户余额是否 >$0、是否已绑定信用卡、消费限额是否用完。</p>
+
+<h3>Q: 安装很慢或失败</h3>
+<p>这是 npm 网络问题。尝试使用国内镜像：</p>
+
+<pre><code>npm config set registry https://registry.npmmirror.com
+npm install -g @anthropic-ai/claude-code
+# 安装完成后恢复默认
+npm config set registry https://registry.npmjs.org</code></pre>
+
+<h3>Q: Claude Code 和 Cursor / Copilot 有什么区别？</h3>
+<p>Claude Code 是<strong>命令行工具</strong>，适合快速改项目、自动化任务、在终端里直接操作。Cursor 是<strong>IDE</strong>（编辑器），适合边写代码边用 AI 辅助。Copilot 是<strong>IDE 插件</strong>，适合在已有编辑器里自动补全。实际工作中三者可以配合使用。</p>
+
+<div class="next-step">
+<p><strong>Next in this path:</strong> <a href="/article/claude-code-mcp-configuration">Part 2: Claude Code 环境配置与 MCP 工具集成 →</a></p>
+</div>`,
   },
 
   // ====== Existing 25 articles (to be rewritten per new standards) ======
@@ -293,9 +470,110 @@ Processing starts:
 <p>Yes, but with caveats. Small models like Llama 3.2 3B or Microsoft Phi-3 can run on a modern laptop (8GB+ RAM) using tools like Ollama or LM Studio. Frontier models like GPT-4 require data center-scale hardware and cannot run locally. There is a growing ecosystem of capable small models that work offline and respect your privacy &mdash; at the cost of some capability compared to cloud models.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-hallucinations-explained-with-examples">Part 2: AI Hallucinations Explained: Why ChatGPT Makes Stuff Up (With Real Examples) &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-hallucinations-explained-with-examples">第2部分：AI幻觉详解——为什么ChatGPT会编造内容（附真实案例）→</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI基础 · <strong>第1部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> 无——本文面向零基础读者，无需任何技术背景。</p>
+</div>
+
+<h2>大语言模型到底是什么？</h2>
+
+<p>你一定看过这些头条新闻："大语言模型正在改变一切。"CEO们在财报电话会议上谈论它们。你的亲戚在饭桌上提起过它们。这个词被到处使用，好像每个人都应该知道它是什么意思。</p>
+
+<p>用最简单的方式来理解：</p>
+
+<p><strong>大语言模型（LLM）就是手机输入法自动补全功能的超级进阶版。</strong></p>
+
+<p>当你在手机上输入"生日快乐"时，它会建议下一个词。那是一个小型语言模型在做预测。现在想象一下，这个系统是在<strong>互联网上大部分公开内容</strong>——书籍、维基百科、Reddit、科学论文、GitHub代码、新闻文章——上训练的，并且规模扩大了数千倍。这就是LLM。</p>
+
+<h2>LLM实际上是如何工作的（无需数学）</h2>
+
+<p>每个LLM只做一件事：预测下一个词（更准确地说，是下一个"token"）。一个token大约相当于0.75个单词。当你输入一个问题时，模型会查看到目前为止的所有token，计算最可能的下一个token，然后重复这个过程，直到回答完成。</p>
+
+<p>没有数据库查询。没有"知识"被检索。模型内部没有Wikipedia。它只有一个统计映射，记录了哪些token倾向于跟在哪些token序列之后——这是从训练数据中构建出来的。</p>
+
+<h2>用数字说话</h2>
+
+<p>规模确实令人震惊：</p>
+
+<ul>
+<li><strong>GPT-4</strong> 在大约 <strong>13万亿个token</strong> 上训练——大约10万亿个单词，相当于约4000万本书。</li>
+<li>GPT-4 估计有 <strong>1.76万亿个参数</strong>。下面会解释这意味着什么。</li>
+<li>训练过程消耗了数千个GPU运行数月。估计成本：<strong>1亿美元以上</strong>。</li>
+<li>Meta的 Llama 3 405B 在 <strong>15.6万亿个token</strong> 上训练，使用 <strong>3080万GPU小时</strong>。</li>
+</ul>
+
+<p>这些数字解释了为什么全世界只有少数几家公司能构建前沿模型：OpenAI、Google、Anthropic、Meta等。仅算力成本就高不可攀。</p>
+
+<h2>"数十亿参数"——这意味着什么？</h2>
+
+<p>参数是模型在训练过程中学到的一个数字。可以把它想象成一个影响预测的小权重。当数十亿个这样的权重通过模型的神经网络相乘时，你就得到了一个预测。</p>
+
+<p>一个有用的类比：想象一个拥有1.76万亿个旋钮的菜谱。在训练过程中，模型调整每个旋钮，这样当你输入"法国的首都是___"时，"巴黎"成为最可能的答案。"数十亿参数"只是意味着有那么多旋钮需要调节。</p>
+
+<p>作为对比：</p>
+<ul>
+<li>GPT-1（2018年）：1.17亿个参数</li>
+<li>GPT-3（2020年）：1750亿个参数</li>
+<li>GPT-4（2023年）：约1.76万亿个参数（估计）</li>
+<li>Llama 3（2024年）：8B、70B和405B参数版本</li>
+<li>Claude 3.5 Sonnet（2024年）：估计低于100B参数，但性能超过许多更大的模型</li>
+</ul>
+
+<p>注意最后一项：<strong>更大并不总是更好</strong>。架构和训练数据质量至少和原始参数数量同等重要。</p>
+
+<h2>LLM与传统软件有何不同</h2>
+
+<p>这是需要理解的最重要的区别：</p>
+
+<div class="step-card">
+<p><strong>传统软件：</strong> 开发人员编写明确的规则。如果你点击"保存"，程序调用 <code>saveFile()</code>。每个行为都是确定性的，由人类编程实现。如果它做错了什么，那是人类写错了代码。</p>
+</div>
+
+<div class="step-card">
+<p><strong>LLM：</strong> 没有人编写规则告诉它该说什么。模型从数据中学习模式。当你问一个问题时，它会生成一个<strong>统计上最可能</strong>的回答——基于它的训练，而不是保证正确的回答。这就是为什么LLM能写诗（没有"写诗函数"），也是为什么它们会自信地陈述错误信息（没有"事实核查函数"）。</p>
+</div>
+
+<h2>真实示例：逐Token看发生了什么</h2>
+
+<p>假设你问ChatGPT：<strong>"日本的首都是什么？"</strong></p>
+
+<p>在底层大致发生的过程如下：</p>
+
+<pre><code>输入 tokens: ["日本", "的", "首都", "是", "什么"]
+处理开始：
+  第1步：模型预测下一个token → "东京" (概率: 0.85)
+  第2步：→ "。" (概率: 0.78)
+  第3步：→ "它是" (概率: 0.72) —— 开始后续补充说明
+  ……继续直到模型预测"停止"</code></pre>
+
+<p>模型并不知道日本有首都。它不知道东京是一个城市。它在训练数据中无数次看到过"某国的首都是某城市"这个模式，以至于"东京"成为"日本的首都是"之后压倒性的最可能token。</p>
+
+<p>这也是为什么模型可能<strong>还会</strong>告诉你东京的人口、江户的历史，甚至推荐餐厅——它看到过这些模式跟在同一个触发短语后面。</p>
+
+<h2>最重要的一点</h2>
+
+<p><strong>LLM做的是预测，不是"知道"。</strong></p>
+
+<p>当一个律师向ChatGPT咨询判例法，而它编造了六个不存在的法院案例（这事在2023年真实发生过），它并不是在撒谎。它只是在预测最可能的token序列——看起来像法律引用的内容。模型从未见过"真理数据库"。它见过包含引用的文本模式，所以它生成更多看起来像引用的文本。</p>
+
+<p>这个区别——预测 vs 知识——解释了几乎所有LLM的怪异行为：幻觉、自信的错误答案、创造力、用任何风格写作的能力，以及无法可靠地做简单算术的问题。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：LLM理解自己在说什么吗？</h3>
+<p>不。目前没有任何证据表明任何LLM具备理解、意识或知觉。它们基于统计模式操纵token。它们可以<em>表现得</em>像在理解，因为人类语言是有模式的，令人信服地模仿模式会制造出理解的错觉。但底层机制是预测，不是理解。</p>
+
+<h3>问：所有LLM在本质上都一样吗？</h3>
+<p>架构上，是的——大多数现代LLM使用Transformer架构的变体（Google于2017年提出）。但它们在训练数据、训练方法、规模和微调方面差异巨大。GPT-4、Claude、Gemini、Llama和DeepSeek都使用Transformer，但由于训练选择不同，输出差异很大。</p>
+
+<h3>问：我能在自己的电脑上运行LLM吗？</h3>
+<p>可以，但有条件。像Llama 3.2 3B或Microsoft Phi-3这样的小模型可以在现代笔记本电脑（8GB+内存）上使用Ollama或LM Studio等工具运行。像GPT-4这样的前沿模型需要数据中心级的硬件，无法在本地运行。能够离线运行且尊重隐私的小模型生态系统正在不断壮大——代价是在能力上不如云端模型。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-hallucinations-explained-with-examples">第2部分：AI幻觉详解——为什么ChatGPT会编造内容（附真实案例）→</a></p>
+</div>`,
   },
   // ... remaining articles stub for build compatibility
   "ai-hallucinations-explained-with-examples": {
@@ -394,9 +672,105 @@ Processing starts:
 <p>No. A software bug is when code does not do what it was designed to do. Hallucination is when the model does exactly what it was designed to do (predict likely tokens) but that behavior produces an incorrect statement from a human perspective. It is a feature of the architecture, not a flaw in the implementation. This is why "fixing" hallucinations is fundamentally harder than fixing a normal software bug.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/how-to-choose-right-ai-tool">Part 3: Which AI Tool Should You Use? A Decision Framework for Beginners &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：你应该使用哪个AI工具？初学者的决策框架 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI基础 · <strong>第2部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/llms-in-plain-english">第1部分：用大白话理解LLM</a> ——理解LLM是预测而非知道，对本文非常重要。</p>
+</div>
+
+<h2>什么是AI幻觉？</h2>
+
+<p>AI幻觉是指语言模型生成<strong>自信且错误</strong>的信息。模型以与真实陈述相同的语法确定性陈述虚假内容。它不知道自己是错的——因为在它的视角里，它只是在预测最可能的下一个token。</p>
+
+<p>这不是可以通过"写更好的代码"来<strong>修复</strong>的bug。这是LLM工作方式的<strong>固有属性</strong>。它们是下一个token预测器，不是事实检索系统。幻觉是我们为模型能够写诗、解释量子物理和起草商业计划而付出的代价——因为产生创造力的同一机制也产生了编造能力。</p>
+
+<h2>3个真实案例</h2>
+
+<h3>案例1：提交虚假案件的律师</h3>
+<p>2023年，纽约律师Steven Schwartz使用ChatGPT准备法律摘要。ChatGPT引用了<strong>六个不存在</strong>的法院案件——完整的案号、法官姓名和法律推理。Schwartz在未核实的情况下提交了摘要。对方律师找不到任何这些案件。当法官询问时，Schwartz承认自己没有核实引文。他被法院处以罚款。</p>
+
+<p><strong>发生了什么：</strong> ChatGPT在训练数据中看到过无数法律引用的例子。当被要求提供相关案例时，它生成了看似合理的引文——因为这是统计上最可能的模式。它无法知道这些案件并不存在。</p>
+
+<h3>案例2：编造的产品描述</h3>
+<p>一位小企业主让AI为一个"带温度指南的硅胶烘焙垫"写产品描述。AI生成道："内置热致变色条，当烤垫达到400°F时变色——来自我们研发团队的专利创新。"这完全不真实。该产品没有这样的功能。如果发布，将构成虚假广告。</p>
+
+<p><strong>发生了什么：</strong> AI将其他产品描述中的模式（温度敏感条在其他产品中是真实存在的）与提示中的关键词组合起来。它用听起来合理但不存在的细节"填补"了描述。</p>
+
+<h3>案例3：编造的科学引用</h3>
+<p>研究人员记录了多个AI模型生成虚假学术引用的案例。2024年的一项研究发现，当LLM被要求总结特定主题的研究论文时，它们会编造不存在的论文，包含看似合理的标题、作者姓名和期刊名称——包括发表在真实期刊上但卷号和页码是编造的。</p>
+
+<p><strong>发生了什么：</strong> 模型学习了学术引用（作者、年份、标题、期刊、卷号、页码）的<em>结构</em>，并生成了符合该结构的文本。内容是编造的，因为模型没有真实论文的数据库——它只有引用长什么样的统计模式。</p>
+
+<h2>为什么会发生幻觉？</h2>
+
+<p>回到第1部分的核心机制：token预测。当你问"法国的首都是什么？"时，模型的训练数据包含"巴黎"跟在"法国的首都"之后数百万次的模式。"巴黎"的概率约为95%，所以答案是正确的。</p>
+
+<p>但当你问一些<strong>看起来像</strong>事实问题但在数据中没有明确统计答案的问题时，模型不会说"我不知道"。它会生成它能想到的<strong>最听起来合理的序列</strong>。以下几个因素会增加幻觉风险：</p>
+
+<ul>
+<li><strong>冷门话题：</strong> 训练数据少意味着统计模式弱，因此模型会用合理的内容填补。</li>
+<li><strong>具体数字和日期：</strong> LLM在精确数字上表现糟糕，因为token预测不偏向算术精度。</li>
+<li><strong>近期事件：</strong> 如果事件发生在模型训练截止日期之后，模型无法知道——但它可能会编造一个听起来合理的答案，而不是承认不知道。</li>
+<li><strong>模糊的提示：</strong> 模糊的问题给了模型更多空间用编造的细节填补空白。</li>
+</ul>
+
+<h2>如何检测幻觉</h2>
+
+<div class="step-card">
+<p><strong>技巧1：交叉验证。</strong> 将LLM的每个具体声明视为潜在编造，直到核实为止。日期、统计数据、引用和引文是最常被幻觉的内容。</p>
+</div>
+
+<div class="step-card">
+<p><strong>技巧2：要求提供来源。</strong> 说"你能为这个说法提供具体来源吗？"如果模型提供引用，请独立验证。许多用户就是这样发现幻觉的。</p>
+</div>
+
+<div class="step-card">
+<p><strong>技巧3：使用Perplexity进行事实查询。</strong> Perplexity.ai 设计为基于网络搜索结果给出回答。它无法免疫幻觉，但包含可点击验证的引用。对于事实研究，Perplexity优于ChatGPT的独立知识。</p>
+</div>
+
+<div class="step-card">
+<p><strong>技巧4：让模型自我批评。</strong> 一个已知技巧：在得到答案后，追问"你确定吗？再检查一下。"这有时会导致模型重新考虑高概率但不正确的token序列。</p>
+</div>
+
+<h2>如何减少自己使用中的幻觉</h2>
+
+<p>这些技巧不会消除幻觉（没有任何方法可以），但能显著降低发生率：</p>
+
+<ol>
+<li><strong>提供上下文。</strong> 不要问"关键发现是什么？"而是说"基于我刚刚提供的记录，关键发现是什么？"让模型立足于提供的文本，减少对其统计猜测的依赖。</li>
+<li><strong>要求评估概率。</strong> "请用1-10分评估你对这个答案的自信程度并解释原因。"当被明确问及自信度时，模型倾向于更加谨慎。</li>
+<li><strong>将复杂问题分解为步骤。</strong> 与其说"分析这份合同"，不如说"首先列出所有提到的日期，然后分别总结每个条款。"分步骤指令减少了模型"填补"缺失上下文的需要。</li>
+<li><strong>使用检索增强生成（RAG）工具。</strong> NotebookLM、Claude Projects或自定义GPTs等工具允许你上传文档，模型将其作为事实来源。当模型被限制在你的文档范围内时，幻觉大幅下降。</li>
+</ol>
+
+<h2>AI公司正在采取什么措施</h2>
+
+<p>行业正在积极解决这个问题。2026年的主要方法：</p>
+
+<ul>
+<li><strong>检索增强生成（RAG）：</strong> 在生成答案之前，模型搜索知识库中的相关文档并用作上下文。这使回答基于经过验证的信息。每个主要AI平台现在都提供某种形式的RAG。</li>
+<li><strong>网络搜索接地：</strong> ChatGPT现在可以搜索网络，Google Gemini原生基于Google搜索进行回答。这意味着模型可以对照实时来源检查事实——但仅在明确启用搜索时有效。</li>
+<li><strong>Constitutional AI和训练改进：</strong> Anthropic的Constitutional AI方法和改进的后训练技术减少了Claude相比早期模型的幻觉率。独立基准测试显示，Claude 3.5 Sonnet在事实问题上的幻觉率比GPT-3.5低约40-60%。</li>
+<li><strong>引用要求：</strong> 现代模型可以被提示从其上下文中引用来源，但这是权宜之计——引用本身也可能被幻觉。</li>
+</ul>
+
+<p><strong>实话实说：</strong> 幻觉无法从纯LLM中消除。生成新颖文本的机制与生成虚假文本的机制是同一个。解决方案是将LLM与外部工具（搜索、数据库、验证系统）相结合——而不是依赖模型的"知识"本身。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：Claude比ChatGPT的幻觉少吗？</h3>
+<p>在独立基准测试（如Vectara的幻觉排行榜和LMSYS评估）中，Claude 3.5 Sonnet和GPT-4o在事实任务上的幻觉率相当，Claude在摘要任务上略有优势。两者都比GPT-3.5或更早模型好得多。但没有任何模型是免疫的——你应该验证任何AI提供的关键信息。</p>
+
+<h3>问：我可以训练一个模型不在我的特定数据上产生幻觉吗？</h3>
+<p>可以，这叫做微调。如果你在你的领域有一组经过验证的问答对数据集，你可以微调模型使其在这些特定类型的问题上更准确。这不能消除领域外问题的幻觉，但可以显著提高你使用场景的准确性。LlamaFactory等工具和OpenAI的微调API使这变得可行，无需成为机器学习专家。</p>
+
+<h3>问：幻觉等同于软件bug吗？</h3>
+<p>不。软件bug是指代码没有按照设计做它应该做的事。幻觉是指模型完全按照设计做了它该做的事（预测最可能的token），但该行为从人类视角产生了错误的陈述。这是架构的特性，不是实现的缺陷。这就是为什么"修复"幻觉从根本上比修复普通软件bug更难。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：你应该使用哪个AI工具？初学者的决策框架 →</a></p>
+</div>`,
   },
   "how-to-choose-right-ai-tool": {
     content: `<div class="article-meta-banner">
@@ -576,9 +950,187 @@ Processing starts:
 <p>ChatGPT, Claude, and Gemini free tiers are ongoing &mdash; they do not expire after a trial period. You get permanently reduced access to the latest models but can use them indefinitely. Perplexity's free tier is also permanent. Midjourney is the only one that requires payment after a short free trial. This is a change from 2023-2024 when free tiers were more limited.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">Part 4: Free vs Paid AI Tools in 2026: When Your Money Is Actually Well Spent &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">第4部分：2026年免费vs付费AI工具：你的钱什么时候花得值 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI基础 · <strong>第3部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/llms-in-plain-english">第1部分：用大白话理解LLM</a> 和 <a href="/article/ai-hallucinations-explained-with-examples">第2部分：AI幻觉详解</a> 建议先阅读以了解背景。</p>
+</div>
+
+<h2>令人眼花缭乱的AI工具版图</h2>
+
+<p>2026年，有几十种AI工具，其中至少有五种对大多数人来说真正有用：ChatGPT、Claude、Gemini、Perplexity和Midjourney。每个都被宣传为"最佳AI"，但诚实的回答是：每个工具在<strong>不同的事情上</strong>表现最佳。</p>
+
+<p>以下是你真正需要的决策框架，基于你想完成的任务。</p>
+
+<h2>快速决策矩阵</h2>
+
+<div class="step-card">
+<table>
+<thead>
+<tr>
+<th>任务</th>
+<th>最佳工具</th>
+<th>次选</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创意写作、邮件、长内容</td>
+<td><strong>Claude</strong></td>
+<td>ChatGPT</td>
+<td>Claude的写作更自然，模式化更少，能更好地遵循语气指令</td>
+</tr>
+<tr>
+<td>编程、调试、技术工作</td>
+<td><strong>Claude</strong></td>
+<td>ChatGPT</td>
+<td>Claude代码推理更强；ChatGPT更适合Python/数据科学</td>
+</tr>
+<tr>
+<td>研究、事实查证、时事</td>
+<td><strong>Perplexity</strong></td>
+<td>Gemini</td>
+<td>两者都基于网络搜索给出答案；Perplexity引用质量更高</td>
+</tr>
+<tr>
+<td>数据分析、Google集成</td>
+<td><strong>Gemini</strong></td>
+<td>ChatGPT</td>
+<td>Gemini通过扩展可直接连接Google Sheets、Gmail和Docs</td>
+</tr>
+<tr>
+<td>图像生成（艺术类）</td>
+<td><strong>Midjourney</strong></td>
+<td>DALL-E 3</td>
+<td>Midjourney生成最符合审美的图像；DALL-E 3在遵循具体提示方面更好</td>
+</tr>
+<tr>
+<td>通用对话、头脑风暴</td>
+<td><strong>ChatGPT</strong></td>
+<td>Claude</td>
+<td>ChatGPT界面最灵活，处理来回对话最好</td>
+</tr>
+<tr>
+<td>文档分析、长PDF</td>
+<td><strong>Claude</strong></td>
+<td>NotebookLM</td>
+<td>Claude有20万token上下文窗口；NotebookLM擅长多文档综合</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>写作任务 → Claude</h2>
+
+<p>如果你在写邮件、博客文章、新闻通讯或任何<strong>语气和风格很重要</strong>的内容，Claude是最强的选择。在盲测中（包括AIStudyOnline自己的测试），读者一致认为Claude的写作比ChatGPT的输出更自然，更不像"AI写的"。</p>
+
+<p><strong>真实提示对比：</strong></p>
+<p>提示："写一封简短的邮件给团队，宣布项目延期。要诚实但鼓励人心。由于QA问题，移动应用发布推迟2周。"</p>
+
+<p><strong>Claude输出（精简）：</strong>"大家好，我想给大家一个关于移动应用时间线的透明更新。我们遇到了一些QA问题，需要更多时间妥善解决——预计推迟2周。我知道在大家付出这么多努力后，这很令人失望。以下是我们正在采取的应对措施……"</p>
+
+<p><strong>ChatGPT输出（精简）：</strong>"亲爱的团队成员，希望这封信对您一切安好。我写信通知您，由于不可预见的质量保证挑战，我们需要将移动应用程序发布的时间线调整约14天。感谢您的理解和持续奉献。"</p>
+
+<p>Claude听起来像一个真实的人类同事。ChatGPT听起来像公司备忘录。对于希望听起来像<em>你自己</em>的专业写作，Claude是更好的选择。</p>
+
+<h2>研究 → Perplexity</h2>
+
+<p>对于事实研究，不要使用默认模式下的ChatGPT或Claude。它们会在来源、日期和统计数据上产生幻觉。使用Perplexity或Gemini（启用Google搜索接地功能）。</p>
+
+<p>Perplexity Pro（20美元/月）有一个独特的优势：它实时搜索网络，阅读多个来源，并为每个声明提供内联引用。你可以点击每个引用进行验证。这与ChatGPT的方法有本质区别——后者先由模型生成答案，然后<em>可选地</em>搜索网络。</p>
+
+<p><strong>何时使用哪个：</strong></p>
+<ul>
+<li>快速事实核查 → Perplexity（免费版）</li>
+<li>深度研究某个话题 → Perplexity Pro或NotebookLM</li>
+<li>学术文献综述 → NotebookLM（支持上传PDF）</li>
+<li>公司研究 → Perplexity（更擅长查找当前商业信息）</li>
+<li>历史话题 → ChatGPT或Claude（训练数据覆盖2025年之前的内容很好）</li>
+</ul>
+
+<h2>编程 → Claude或ChatGPT</h2>
+
+<p>两者在这方面都很强，但各有优势：</p>
+
+<ul>
+<li><strong>Claude</strong> 擅长推理复杂的编程问题、重构现有代码和处理大型代码库。Claude Code（命令行工具）可以读取整个项目目录并进行跨文件修改。</li>
+<li><strong>ChatGPT</strong> 擅长Python/数据科学任务、生成样板代码和解释概念。它还具有高级数据分析功能（前身为Code Interpreter），可以运行Python代码并生成图表。</li>
+<li><strong>GitHub Copilot</strong> 和 <strong>Cursor</strong> 是专门集成到编辑器中的编程工具——它们在日常代码补全方面比通用聊天机器人更好。</li>
+</ul>
+
+<p>如果你需要一个同时用于写作和编程的工具，Claude是更好的全能选手。如果你在做大量的Python数据分析，ChatGPT的高级数据分析功能非常有用。</p>
+
+<h2>创意工作 → Midjourney + ChatGPT</h2>
+
+<p>基于文本的AI（LLM）和图像生成AI服务于不同的创意需求。对于视觉工作：</p>
+
+<ul>
+<li><strong>Midjourney</strong>（10美元/月）生成最高质量的艺术图像。其绝对优势在于美学构图、光线和风格多样性。</li>
+<li><strong>DALL-E 3</strong>（包含在ChatGPT Plus中）在遵循具体指令和在图像中呈现文字方面更好。如果你需要"一个写有'盛大开业'字样的蓝色招牌，带蛋糕图标"，DALL-E 3做得更好。</li>
+<li><strong>Leonardo.ai</strong>（有免费版）是游戏素材和角色设计的最佳免费选项。</li>
+</ul>
+
+<p>一个实用的工作流程：使用ChatGPT头脑风暴和完善概念，然后使用Midjourney或DALL-E生成最终视觉作品。每个工具做自己最擅长的事。</p>
+
+<h2>免费版对比</h2>
+
+<div class="step-card">
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>免费版限制</th>
+<th>最佳免费用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>GPT-4o mini无限；GPT-4o/5每几小时有限消息</td>
+<td>通用问答、轻度写作</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>Claude 3.5 Sonnet无限；Claude 4消息有限</td>
+<td>写作、编程、文档分析</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>Gemini 2.0 Flash无限；Gemini 2.5 Pro有限</td>
+<td>Google集成任务、研究</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>无限基本查询；Pro搜索有限</td>
+<td>事实核查、快速研究</td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>免费试用（约25张图）</td>
+<td>付费前测试工具</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>关键要点：</strong> 2026年，Claude和ChatGPT的免费版出乎意料地强大。对于大多数日常写作、头脑风暴和学习任务，免费版确实够用。你只需要在重度使用、特定的高级功能（如图像生成或长上下文）或像Midjourney这样的专业工具时才需要付费。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：我需要所有这些工具吗？能不能只用一个？</h3>
+<p>大多数人只需<strong>两个</strong>就够了：一个主要聊天AI（ChatGPT或Claude）和一个研究工具（Perplexity或Gemini）。如果你不生成图像，就不需要Midjourney。如果你不编程，编程对比不适用。从一个主要工具开始——ChatGPT或Claude——只有在遇到无法绕过的特定限制时才添加其他工具。</p>
+
+<h3>问：ChatGPT最受欢迎，是不是客观上最好的？</h3>
+<p>不是。ChatGPT最受欢迎是因为它最先进入市场（2022年11月）并且品牌认知度最强。受欢迎不等于在每项任务上都优秀。Claude在写作和编程上媲美或超越ChatGPT。Perplexity在研究方面更好。Gemini具有独特的Google集成优势。根据任务选择，而不是根据品牌知名度。</p>
+
+<h3>问：免费版可以无限期使用吗？会过期吗？</h3>
+<p>ChatGPT、Claude和Gemini的免费版是持续性的——它们不会在试用期后过期。你可以永久使用，但访问最新模型的权限有限。Perplexity的免费版也是永久的。Midjourney是唯一一个在短期免费试用后需要付费的。这与2023-2024年免费版更受限的情况相比已经发生了变化。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">第4部分：2026年免费vs付费AI工具：你的钱什么时候花得值 →</a></p>
+</div>`,
   },
   "free-vs-paid-ai-tools-worth-it": {
     content: `<div class="article-meta-banner">
@@ -752,9 +1304,181 @@ Processing starts:
 <p>For very heavy use (thousands of queries per day), the API can be cheaper. For example, running automated tasks through Claude's API costs roughly $3-15 per million input tokens depending on the model. A developer running millions of tokens per month would pay less via API than the $20 subscription. But the subscription includes the chat interface, projects, file uploads, and other features the API does not provide. For most people, the subscription is better value; for automated/scaled use, the API wins.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-myths-people-still-believe">Part 5: 5 AI Myths Your Non-Techie Friends Still Believe (and What's Actually True) &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-myths-people-still-believe">第5部分：你的非技术朋友仍然相信的5个AI迷思（以及真相是什么）→</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI基础 · <strong>第4部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/how-to-choose-right-ai-tool">第3部分：你应该使用哪个AI工具？</a> ——熟悉不同工具有助于理解价格对比。</p>
+</div>
+
+<h2>2026年AI的真实成本</h2>
+
+<p>每个主要AI平台都提供免费版。每个主要平台也都试图让你升级到付费订阅。问题不是"能不能免费获得AI？"——答案是能。问题是：<strong>不付费你会错过什么？</strong></p>
+
+<p>以下是2026年主要平台的确切定价，每个级别实际给你的东西，以及——最重要的是——升级是否值得你实际使用AI的方式。</p>
+
+<h2>价格标签：一切的价格</h2>
+
+<div class="step-card">
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>免费版</th>
+<th>付费版</th>
+<th>付费价格（月费）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>GPT-4o mini（无限），GPT-4o/5（有限）</td>
+<td>ChatGPT Plus</td>
+<td>20美元</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>Claude 3.5 Sonnet（无限），Claude 4（有限）</td>
+<td>Claude Pro</td>
+<td>20美元</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>Gemini 2.0 Flash（无限），2.5 Pro（有限）</td>
+<td>Gemini Advanced</td>
+<td>20美元</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>无限基本查询</td>
+<td>Perplexity Pro</td>
+<td>20美元</td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>约25张免费图片（一次性试用）</td>
+<td>Midjourney Basic</td>
+<td>10美元</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>注意到一个规律了吗？主要的聊天AI平台都收取<strong>20美元/月</strong>。这不是巧合——这是市场价格趋同。当你付费购买一个时，你付的金额和买任何其他差不多。这使得"我该为哪个付费"的决定比"我该不该付费"更重要。</p>
+
+<h2>免费版实际给了你什么</h2>
+
+<p>自2024年以来，免费版有了显著改进。以下是对不付费情况下所获内容的诚实评估：</p>
+
+<ul>
+<li><strong>ChatGPT免费版：</strong> 你可以无限使用GPT-4o mini进行对话。这个模型快速且有能力——它能很好地处理大多数写作、问答和头脑风暴任务。你还可以获得有限数量的GPT-4o或GPT-5消息（通常每3-5小时10-30条，视需求而定）。免费版<strong>不能</strong>使用DALL-E图像生成、高级数据分析或网络搜索（有限的测试除外）。</li>
+<li><strong>Claude免费版：</strong> 你可以无限使用Claude 3.5 Sonnet进行对话——值得注意的是，这是OpenAI在2024年收费20美元/月的模型，至今仍是最好的模型之一。你还可以获得有限的Claude 4消息（Opus级别）。免费版支持文件上传和20万token上下文。</li>
+<li><strong>Gemini免费版：</strong> 你可以无限使用Gemini 2.0 Flash，并有限访问Gemini 2.5 Pro。Google的免费版在功能方面最为慷慨——网络搜索接地是内置的，你还可以连接Google Drive。</li>
+<li><strong>Perplexity免费版：</strong> 你可以无限进行带搜索接地的基本查询。每天"Pro"搜索的次数有限（使用更高质量的模型和更深入的搜索）。免费版对研究确实有用。</li>
+<li><strong>Midjourney免费版：</strong> 没有持续的免费版。你获得大约25张图片的一次性试用，之后必须支付10美元/月。</li>
+</ul>
+
+<h2>付费版增加的内容（不是营销——是真实差异）</h2>
+
+<h3>ChatGPT Plus（20美元/月）</h3>
+<ul>
+<li>无限使用GPT-4o和GPT-5（不只是有限消息）</li>
+<li>DALL-E 3图像生成（每次提示约2张图，每3小时约40张）</li>
+<li>高级数据分析：上传CSV/Excel文件，运行Python代码，生成图表</li>
+<li>网络搜索集成（比免费版有限搜索更可靠）</li>
+<li>自定义GPTs和GPT商店访问</li>
+<li>高峰使用期更高优先级（更少出现"ChatGPT已满"错误）</li>
+</ul>
+
+<h3>Claude Pro（20美元/月）</h3>
+<ul>
+<li>无限Claude 4消息（免费版有限）</li>
+<li>Claude 4使用限制高出5倍</li>
+<li>高流量期的优先访问</li>
+<li>带知识库的Claude Projects（上传文档作为上下文）</li>
+<li>新功能早期访问</li>
+</ul>
+
+<h3>Gemini Advanced（20美元/月，包含在Google One 2TB中）</h3>
+<ul>
+<li>无限Gemini 2.5 Pro访问</li>
+<li>新功能优先访问（如实时视频分析）</li>
+<li>2TB Google Drive存储空间（独特之处在于订阅包含云存储）</li>
+<li>Google Workspace集成（Gmail、Docs、Sheets的AI功能）</li>
+</ul>
+
+<h3>Perplexity Pro（20美元/月）</h3>
+<ul>
+<li>无限Pro搜索（更深入的研究，更高质量的模型）</li>
+<li>文件上传（PDF、图像分析作为搜索的一部分）</li>
+<li>更高质量的引用提取</li>
+<li>API访问用于自定义集成</li>
+</ul>
+
+<h2>何时免费就够了</h2>
+
+<p>如果以下任何一条符合你的情况，你不需要为AI付费：</p>
+
+<ul>
+<li><strong>日常写作：</strong> 邮件、社交媒体帖子、头脑风暴想法。免费版Claude（3.5 Sonnet）和免费版ChatGPT（4o mini）都完美胜任。</li>
+<li><strong>学习和问答：</strong> 询问你在学习的话题。免费版拥有截至训练截止日期的完整知识，回答清晰。</li>
+<li><strong>文档摘要：</strong> 免费版Claude支持文件上传和20万token上下文。你可以粘贴长文档并获取摘要——无需付费。</li>
+<li><strong>偶尔使用：</strong> 如果你每周使用AI 2-3次，免费版的消息限制永远不会成为问题。</li>
+<li><strong>轻度研究：</strong> 免费版Perplexity的基本搜索足以核查常见话题的事实。</li>
+</ul>
+
+<h2>何时付费确实重要</h2>
+
+<p>以下是付费版值得20美元/月的场景：</p>
+
+<ul>
+<li><strong>每日重度使用：</strong> 如果你每天工作中使用AI，达到免费版消息限制会变得令人沮丧。20美元/月移除了天花板。</li>
+<li><strong>专业内容创作：</strong> 如果你以写作为生，Claude Pro的无限Claude 4访问和Projects功能能显著提升输出质量。</li>
+<li><strong>数据分析：</strong> ChatGPT Plus的高级数据分析让你上传杂乱的CSV文件并得到清晰的可视化图——对小企业主、分析师和研究人员很有用。</li>
+<li><strong>图像生成：</strong> 如果你创建视觉内容，Midjourney（10美元）或DALL-E 3（通过ChatGPT Plus）是必需的。除了试用版，没有可行的免费替代品能提供高质量的AI图像生成。</li>
+<li><strong>编程：</strong> Claude Pro的更高限制和Claude Code访问权限对每天编程的人来说值得。免费版的速率限制对真正的开发工作来说太严格了。</li>
+</ul>
+
+<h2>总拥有成本</h2>
+
+<p>让我们为一个每天跨多个任务使用AI的人算笔账：</p>
+
+<div class="step-card">
+<p><strong>场景1：普通用户（写作+研究）</strong></p>
+<p>免费Claude + 免费Perplexity = <strong>0美元/月</strong>。你不会损失任何实际有价值的东西。</p>
+</div>
+
+<div class="step-card">
+<p><strong>场景2：专业写作者</strong></p>
+<p>Claude Pro（20美元）+ 免费Perplexity = <strong>20美元/月</strong>。为了无限Claude 4访问，值得。</p>
+</div>
+
+<div class="step-card">
+<p><strong>场景3：程序员+写作者+研究员</strong></p>
+<p>Claude Pro（20美元）+ Perplexity Pro（20美元）= <strong>40美元/月</strong>。如果你只是偶尔使用Perplexity，可以跳过Pro版。</p>
+</div>
+
+<div class="step-card">
+<p><strong>场景4：全栈（写作、编程、图像生成、研究）</strong></p>
+<p>Claude Pro（20美元）+ Perplexity Pro（20美元）+ Midjourney（10美元）= <strong>50美元/月</strong>。这涵盖了大多数个人所需的一切。</p>
+</div>
+
+<p>诚实的结论：<strong>大多数人每月需要花0美元。</strong>免费版已经改进到能很好地满足80%的使用场景。只有当你遇到特定限制时再付费——然后为那个解决特定限制的工具付费，而不是为所有工具付费。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：付费能得到更好的AI"大脑"吗？还是只是更多访问权限？</h3>
+<p>两者都有。使用ChatGPT Plus，你可以访问GPT-5（而免费版是GPT-4o mini）。使用Claude Pro，你获得Claude 4（而免费版是Claude 3.5 Sonnet）。付费模型确实更有能力——它们推理更好，幻觉更少，处理更复杂的指令。但免费模型（尤其是Claude 3.5 Sonnet和GPT-4o mini）在日常生活任务中仍然非常强大。差异在复杂或专业工作中最为明显；对于日常使用，免费模型足够了。</p>
+
+<h3>问：我可以和家人共享付费订阅吗？</h3>
+<p>ChatGPT Plus、Claude Pro和Perplexity Pro都是个人订阅——共享账户违反服务条款，可能导致账户被暂停。Gemini Advanced是例外：Google One家庭计划（30美元/月）覆盖最多5位家庭成员各自拥有独立账户。Midjourney不正式支持账户共享。</p>
+
+<h3>问：API呢？重度使用时比订阅便宜吗？</h3>
+<p>对于非常重的使用（每天数千次查询），API更便宜。例如，通过Claude的API运行自动化任务，根据模型不同，每百万输入token大约花费3-15美元。每月运行数百万token的开发者通过API支付的费用低于20美元的订阅费。但订阅包含了API不提供的聊天界面、项目、文件上传等功能。对大多数人来说，订阅性价比更高；对于自动化/规模化使用，API胜出。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-myths-people-still-believe">第5部分：你的非技术朋友仍然相信的5个AI迷思（以及真相是什么）→</a></p>
+</div>`,
   },
   "what-is-a-gpu-non-techie": {
     content: `<div class="article-meta-banner">
@@ -816,9 +1540,69 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <p>NVIDIA's market cap surpassed $3 trillion because AI demand created exponential GPU growth. Data centers now buy GPUs at unprecedented scale. Competitors AMD and Intel are racing to catch up, but NVIDIA's CUDA software ecosystem gives it a massive advantage for AI workloads.</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI基础 · <strong>独立文章</strong></p>
+<p><strong>前置要求：</strong> 无——本文关于硬件，而非AI软件。无需技术背景。</p>
+</div>
+
+<h2>GPU到底是什么？</h2>
+
+<p>你听说过NVIDIA现在是全球最有价值的公司之一。你听说过"GPU运行AI"。但GPU是什么？它为什么重要？</p>
+
+<p><strong>GPU代表Graphics Processing Unit（图形处理单元）。</strong>它最初设计用于渲染视频游戏图形。CPU（你电脑的主处理器）擅长非常快速地处理少数复杂任务。GPU擅长同时处理数百万个简单任务。</p>
+
+<p>可以这样理解：CPU是一个人做高等微积分。GPU是一万个人同时做基础算术。</p>
+
+<p>对于视频游戏，GPU每秒计算60次像素颜色。对于AI，GPU同时进行数百万次矩阵乘法——这正是神经网络所需要的。</p>
+
+<h2>为什么AI需要GPU</h2>
+
+<p>神经网络是数学运算的层次结构，大部分是矩阵乘法。矩阵是一个数字网格，两个大矩阵相乘涉及数百万次相同的简单计算。GPU并行处理这些；CPU需要花很长时间。</p>
+
+<pre><code>CPU: 计算 1+2, 然后 3+4, 然后 5+6...（串行）
+GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
+
+<p>训练GPT-4需要大约25,000个NVIDIA A100 GPU运行90-120天。按每个GPU约10,000美元计算，仅硬件就需2.5亿美元，还不包括电力和人力。这就是为什么只有大公司才训练前沿模型。</p>
+
+<h2>GPU对比</h2>
+
+<table>
+<thead>
+<tr><th>GPU</th><th>显存</th><th>用途</th><th>价格（2026年）</th></tr>
+</thead>
+<tbody>
+<tr><td>NVIDIA RTX 5090</td><td>32 GB</td><td>游戏、爱好者AI</td><td>2,000美元</td></tr>
+<tr><td>NVIDIA A100</td><td>80 GB</td><td>数据中心训练</td><td>10,000美元以上</td></tr>
+<tr><td>NVIDIA H100</td><td>80 GB</td><td>前沿AI训练</td><td>25,000美元以上</td></tr>
+<tr><td>NVIDIA B200</td><td>192 GB</td><td>最新一代（2025+）</td><td>30,000美元以上</td></tr>
+<tr><td>Apple M4 Ultra</td><td>192 GB 统一内存</td><td>Mac本地AI</td><td>集成在Mac中</td></tr>
+</tbody>
+</table>
+
+<h2>你需要为AI买GPU吗？</h2>
+
+<p>对于云端AI（ChatGPT、Claude、Midjourney），不需要。提供商的服务器有成千上万个GPU。你只需通过订阅或API使用付费获得结果。</p>
+
+<p>对于本地AI（在自己的电脑上运行模型），GPU有帮助但不是必需的。像Llama 3.2 3B这样的小模型可以在CPU上以可接受的速度运行。像Llama 3.1 8B这样更大的模型受益于GPU，但也可以在CPU上运行。</p>
+
+<p>显存决定了你可以在本地加载多大的模型。一个4bit的7B参数模型需要约4GB。一个70B模型需要约40GB。这就是为什么在本地运行最大的模型需要数据中心级的GPU或激进的压缩。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：如何检查我的电脑是否有GPU？</h3>
+<p>Windows：任务管理器（Ctrl+Shift+Esc）→ 性能选项卡 → 查找GPU。Mac：苹果菜单 → 关于本机 → 图形卡。Linux：在终端运行 <code>lspci | grep -i vga</code>。</p>
+
+<h3>问：我应该为AI买GPU吗？</h3>
+<p>只有当你特别想为了隐私、离线访问或实验而在本地运行开源模型时才需要。对于云端AI使用，任何能上网的电脑或手机都可以。在花钱买GPU之前，先从基于CPU的工具如Ollama开始。</p>
+
+<h3>问：如果GPU已经很常见了，为什么NVIDIA这么值钱？</h3>
+<p>NVIDIA的市值超过3万亿美元，因为AI需求带来了GPU的指数级增长。数据中心现在以前所未有的规模购买GPU。竞争对手AMD和Intel正在追赶，但NVIDIA的CUDA软件生态系统使其在AI工作负载方面具有巨大优势。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "ai-myths-people-still-believe": {
     content: `<div class="article-meta-banner">
@@ -922,9 +1706,111 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <p>Yes, but with awareness. All human-generated information has bias &mdash; news articles, textbooks, government reports, Wikipedia. The problem with AI is that its biases are harder to detect because the model presents information as neutral. Use AI for what it is good at (drafting, brainstorming, summarizing, coding) while maintaining skepticism about factual claims and being aware that the model's "neutral" tone may conceal underlying training data skew. Cross-checking important information remains essential.</p>
 
 <div class="next-step">
-<p><strong>End of AI Basics learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
+<p><strong>AI基础学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI基础 · <strong>第5部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> 这是AI基础路径的最后一篇文章。建议先阅读<a href="/article/llms-in-plain-english">第1部分</a>到<a href="/article/free-vs-paid-ai-tools-worth-it">第4部分</a>，尽管每个迷思可以独立阅读。</p>
+</div>
+
+<h2>为什么迷思会持续存在</h2>
+
+<p>AI是自互联网以来被炒作最多的技术。炒作带来了真正的兴奋——也带来了真正的困惑。进入主流AI时代三年后，某些迷思仍然顽固存在。有些来自耸人听闻的头条新闻。有些来自科幻小说的期待。有些来自对技术实际工作原理的误解。</p>
+
+<p>以下是五个最持久的迷思，以及证据实际揭示的内容。</p>
+
+<h2>迷思1："AI有意识"</h2>
+
+<p><strong>相信的观点：</strong> ChatGPT和类似的AI系统正在"觉醒"。它们有思想、感受、目标或某种形式的意识。关于"有感知的AI"和Blake Lemoine/LaMDA事件（2022年）的头条新闻使这个迷思有了实质性的影响力。</p>
+
+<p><strong>实际情况：</strong> 目前没有AI系统有意识。没有任何证据表明任何LLM具有主观体验、自我意识或真正的理解。目前生产中的每个AI系统都是<strong>统计模式匹配器</strong>——它基于训练数据中的模式预测下一个token。这在数学和架构上与意识完全不同。</p>
+
+<p><strong>证据：</strong> 如果你问ChatGPT"你有意识吗？"它会说"不，我没有意识。"这不是自我意识——它是在重复从训练数据中学到的关于AI系统如何描述自己的模式。同一个模型在被提示时，也会以烤面包机的视角生成第一人称叙述。这两种回应都不反映内在体验，因为根本没有内在体验。</p>
+
+<p><strong>反例：</strong> 2022年，Google工程师Blake Lemoine声称Google的LaMDA模型有感知能力时，他引用的是模型描述自己有感受的回应。实际发生的情况：LaMDA是在科幻对话和关于意识的哲学文本上进行模式匹配。它生成了听起来合理的关于有感受的文字——就像它会生成一个听起来合理的关于成为海盗的故事一样。科学界普遍拒绝了Lemoine的说法。Google让他停职。</p>
+
+<h2>迷思2："AI将取代所有工作"</h2>
+
+<p><strong>相信的观点：</strong> AI将在2-3年内自动化所有白领工作。没有人会有工作。"AI杀死了办公室工作"是点击驱动型媒体中的常见叙事。</p>
+
+<p><strong>实际情况：</strong> AI自动化的是<strong>任务</strong>，而不是<strong>工作</strong>。这个区别至关重要。一个单一工作包含数十个任务，其中许多当前的AI无法可靠完成。2023-2026年的证据表明，AI增强了工作者，而不是大规模取代他们。</p>
+
+<p><strong>证据：</strong></p>
+<ul>
+<li>麦肯锡2025年的一项研究发现，以当前AI技术，只有不到5%的职业可能被自动化大多数任务。</li>
+<li>美国劳工统计局数据显示，自2022年ChatGPT推出以来，白领领域（软件、法律、会计）的就业率并未下降。</li>
+<li>Upwork和Fiverr都报告在AI相关类别（提示工程、AI内容编辑、AI工作流设计）中，对人类自由职业者的需求增加。</li>
+<li>摩根大通作为最激进的AI采纳者之一，在2025年表示AI将增强员工而非取代他们——并且那一年雇用了更多员工。</li>
+</ul>
+
+<p><strong>反例：</strong> "AI将取代翻译"的预测自2017年以来一直是反复出现的头条新闻。七年后，专业翻译仍然有需求——不是因为AI不能翻译，而是因为真正的翻译工作涉及上下文、文化差异、领域专长和客户关系，这些AI处理得很差。翻译工具提高了生产力，但并没有消除这个职业。</p>
+
+<h2>迷思3："AI无所不知"</h2>
+
+<p><strong>相信的观点：</strong> 你可以问AI任何问题并得到可靠的答案。它在互联网上训练过，所以它一定知道互联网知道的一切。</p>
+
+<p><strong>实际情况：</strong> AI有三个大多数用户没有意识到的根本性知识限制：</p>
+
+<ol>
+<li><strong>训练截止日期：</strong> 每个LLM都有知识截止日期。GPT-4o的知识截至2023年。在那之后发生的任何事情——2025年的选举结果、2024年的产品发布、上周的新闻——都在模型的训练数据之外。模型不知道这些事件发生过。</li>
+<li><strong>幻觉：</strong> 如本路径第2部分所讨论的，LLM会自信地编造信息。一个看似全知的模型实际上是在生成听起来合理的文本，可能完全错误。</li>
+<li><strong>没有实时感知：</strong> 与Google搜索不同，LLM不会浏览网页，除非专门设计成这样做（即使如此，也只有在功能启用时）。默认情况下，它从冻结的训练数据中回答。</li>
+</ol>
+
+<p><strong>反例：</strong> 在不启用网络搜索的情况下，问任何LLM"上周超级碗发生了什么？"模型要么承认不知道（如果训练得好），要么编造比分、球队名称和精彩片段（如果没训练好）。这不是知识——这是模式补全。一旦你问训练分布之外的内容，模型的局限性就变得明显。</p>
+
+<h2>迷思4："更大的模型总是更好"</h2>
+
+<p><strong>相信的观点：</strong> 参数最多的模型是最好的模型。拥有数万亿参数的GPT-5一定比更小的模型更聪明。大小等于能力。</p>
+
+<p><strong>实际情况：</strong> 模型质量取决于<strong>架构、训练数据质量和训练方法</strong>——而不仅仅是参数数量。训练良好的小模型在特定任务上经常优于更大、更粗糙的模型。</p>
+
+<p><strong>证据：</strong></p>
+<ul>
+<li>Microsoft的Phi-3（38亿参数）在推理基准测试中能超越Llama 2（700亿参数）。小18倍的模型，在更高质量的精选数据上训练，达到或超过了大模型。</li>
+<li>Claude 3.5 Sonnet（估计低于1000亿参数）在多个基准测试中匹配或超越了GPT-4（估计1.76万亿参数）——尽管小了约20倍。</li>
+<li>Llama 3 8B在许多任务上的表现与GPT-3.5（1750亿参数）相当。再次，20倍的大小差异，能力大致相当。</li>
+<li>Gemini 2.0 Flash（Google的轻量级模型）在速度和多个质量指标上超越了Gemini 1.5 Pro（Google之前的重磅模型）。</li>
+</ul>
+
+<p><strong>反例：</strong> 专门的小模型（如医学诊断模型、代码补全模型或翻译模型）通常刻意保持小规模，因为它们在特定任务上比通用巨型模型表现得更好。一个在医学文献上训练的7B模型会比GPT-5给出更好的医疗建议，因为它是为那个特定目的训练的。</p>
+
+<h2>迷思5："AI没有偏见且客观"</h2>
+
+<p><strong>相信的观点：</strong> 因为AI是机器不是人，它一定是中立和客观的。它处理数据时没有人类的偏见。</p>
+
+<p><strong>实际情况：</strong> AI系统会继承并可能放大其训练数据中存在的偏见。由于大多数训练数据来自互联网——这反映了人类偏见——除非明确纠正，否则AI模型会复制这些偏见。</p>
+
+<p><strong>AI偏见的真实案例：</strong></p>
+<ul>
+<li><strong>招聘工具中的性别偏见：</strong> 亚马逊的AI招聘工具（基于10年的简历训练）系统性地惩罚包含"女性"一词的简历。它的训练数据中大多数成功候选人都是男性，所以它学会了偏好与男性相关的语言。亚马逊在2018年废弃了该工具，但类似的偏见在现代LLM中仍然存在。</li>
+<li><strong>医疗中的种族偏见：</strong> 2019年的一项研究发现，一个广泛使用的医疗算法（不是LLM，而是机器学习系统）系统性地低估了黑人患者的健康需求。该算法使用医疗支出来代理健康需求——但黑人患者由于系统性不平等，历史上在医疗上花费较少，所以算法得出结论认为他们需要更少的护理。</li>
+<li><strong>图像生成偏见：</strong> 早期版本的DALL-E和Stable Diffusion，当被要求生成"一位CEO"时，产生了以白人男性为主的图像。当被要求生成"一位护士"时，产生了以白人女性为主的图像。这些偏见直接反映了训练数据中图像的统计分布。</li>
+<li><strong>LLM政治偏见：</strong> 多项研究表明，ChatGPT、Claude和Gemini在有争议的话题上表现出可检测的政治倾向（在美国政治光谱上普遍偏左）。这不是有意的——它反映了训练数据中政治内容的分布，某些观点被过度代表了。</li>
+</ul>
+
+<p><strong>应对方法：</strong> AI公司现在大力投资于偏见缓解。技术包括：平衡的训练数据策展、多样化的RLHF（基于人类反馈的强化学习）评估者，以及"红队测试"（故意测试有害输出）。这些措施减少了偏见但不能消除偏见——而且缓解措施本身引入了不同形式的偏见，以安全过滤的形式可能审查合法的讨论。</p>
+
+<h2>为什么这些迷思很重要</h2>
+
+<p>相信关于AI的迷思会导致错误的决策：依赖AI做它不能做的事，害怕AI做它不会做的事，以及误解"进步"真正是什么样的。这个AI基础路径的目标是用理解取代炒作——不是贬低AI的真实能力，而是让它更清晰、更有用。</p>
+
+<p><strong>诚实的总结：</strong> AI没有意识，不会马上取代所有工作，不是全知的，不是越大越好，也不是客观的。它是一个极其强大的文本预测系统，当在理解其局限性的基础上使用时，可以真正有用。这个现实比任何迷思都更有价值。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：如果AI没有意识，为什么它有时看起来有情感或同理心？</h3>
+<p>因为它在人类文本上训练，其中包括情感性和同理心的语言。当你告诉ChatGPT"我今天心情不好"时，它会生成与支持性人类对话模式匹配的回应。它不是感受同理心——它是在生成看起来像同理心的文本，因为训练数据中有这个。这是有用的（得到支持性的回应可以让人感觉被支持），但这是模式匹配，不是情感。</p>
+
+<h3>问：未来的AI会有意识吗？意识在路线图上吗？</h3>
+<p>关于AI何时或是否能拥有意识，目前没有科学共识。当前的架构（Transformer）不是为产生意识而设计的。主要AI实验室没有将意识作为目标——他们在追求能力提升（更好的推理、更少的错误、更大的上下文）。关于"AGI将在2-3年内到来"的说法是推测性的，不是基于已发表的研究路线图。对这类说法保持怀疑态度。</p>
+
+<h3>问：如果AI有固有偏见，我还应该使用它吗？</h3>
+<p>应该，但要有意识。所有人类生成的信息都有偏见——新闻文章、教科书、政府报告、Wikipedia。AI的问题在于其偏见更难检测，因为模型以中性的方式呈现信息。使用AI做它擅长的事（起草、头脑风暴、摘要、编程），同时对事实声明保持怀疑态度，并意识到模型的"中性"语气可能隐藏训练数据的偏差。交叉核对重要信息仍然是必要的。</p>
+
+<div class="next-step">
+<p><strong>AI基础学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+</div>`,
   },
   "chatgpt-voice-mode-job-interview": {
     content: `<div class="article-meta-banner">
@@ -992,9 +1878,75 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <p>Yes. ChatGPT has official iOS and Android apps with voice input support. The app syncs history with the web version. Advanced Voice Mode (real-time conversation with tone detection) is available on Plus.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/claude-projects-organize-chats">Part 2: How to Write Prompts That Actually Work: The 5-Point Framework &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-projects-organize-chats">第2部分：如何写出真正有效的提示词：5点框架 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> ChatGPT精通 · <strong>第1部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> 无——有免费ChatGPT账户会更有帮助但不是必需的。</p>
+</div>
+
+<h2>你的第一次ChatGPT体验</h2>
+
+<p>ChatGPT是全球使用最广泛的AI工具，截至2026年初拥有超过4亿月活跃用户。如果你还没尝试过，或者你注册了但不知道从哪里开始，本指南将带你了解界面、设置和第一个提示词。</p>
+
+<h2>第1步：创建账户</h2>
+<ol>
+<li>打开 <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a></li>
+<li>点击"注册"——使用邮箱、Google或Apple账户</li>
+<li>验证你的邮箱地址</li>
+<li>现在你就在免费版上，可以访问GPT-4o mini（无限）和有限的GPT-5消息</li>
+</ol>
+
+<h2>第2步：界面导览</h2>
+<p>ChatGPT界面有三个主要区域：</p>
+<ul>
+<li><strong>左侧边栏：</strong> 显示聊天历史。点击铅笔图标开始新对话。你可以重命名、删除或归档对话。</li>
+<li><strong>中央聊天区：</strong> 对话发生的地方。你的消息在右侧，ChatGPT的在左侧。</li>
+<li><strong>底部输入栏：</strong> 输入你的消息。回形针图标让你上传文件。麦克风图标启用语音输入（浏览器和应用均可）。</li>
+</ul>
+
+<h2>第3步：需要配置的设置</h2>
+<p>点击你的头像 → 设置：</p>
+<ul>
+<li><strong>数据控制：</strong> 如果你不希望你的对话被用于训练，关闭"为所有人改进模型"</li>
+<li><strong>自定义指令：</strong> 永久告诉ChatGPT关于你的信息（"我是一名营销经理，喜欢简洁的回答"）</li>
+<li><strong>记忆：</strong> 让ChatGPT跨对话记住信息。你可以查看、编辑或删除它记住的内容。</li>
+<li><strong>Beta功能：</strong> 在功能广泛发布前提前启用</li>
+</ul>
+
+<h2>你的前10个提示词</h2>
+<p>按顺序尝试这些提示词，探索ChatGPT的能力：</p>
+
+<ol>
+<li><strong>总结：</strong>"用3个要点总结附件PDF的关键内容。"</li>
+<li><strong>写作：</strong>"写一封专业的邮件，请求延长项目截止日期。"</li>
+<li><strong>解释：</strong>"向一个10岁的孩子解释加密货币是如何工作的。"</li>
+<li><strong>头脑风暴：</strong>"给我10个小面包店的博客文章创意。"</li>
+<li><strong>编辑：</strong>"修正这段落中的语法，让它更简洁。"[粘贴文本]</li>
+<li><strong>格式化：</strong>"把这个列表转换成Markdown表格，列名为名称、价格和评分。"</li>
+<li><strong>翻译：</strong>"把这封邮件翻译成西班牙语，保持专业语气。"</li>
+<li><strong>角色扮演：</strong>"扮演招聘经理，面试我的产品经理岗位。"</li>
+<li><strong>规划：</strong>"制定一个巴黎3天行程，预算100美元/天。"</li>
+<li><strong>分析：</strong>"这个决定的优缺点是什么？"[描述一个决定]</li>
+</ol>
+
+<h2>免费版vs Plus：你从什么开始</h2>
+<p>在免费版上，你可以使用GPT-4o mini（对大多数任务快速且有能力）加上有限的GPT-5消息（约每5小时10条）。这足够学习和实验。当你持续达到限制时，考虑ChatGPT Plus（20美元/月）以获得最新模型的无限制访问。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：ChatGPT能看到我的私人信息吗？</h3>
+<p>OpenAI默认不使用API数据进行训练，ChatGPT用户可以选择退出训练。进入设置 → 数据控制，关闭"改进模型"。对于敏感信息，考虑使用Claude（提供更强的隐私默认设置）或本地模型。</p>
+
+<h3>问：ChatGPT和Google搜索有什么不同？</h3>
+<p>Google搜索查找与关键词匹配的现有网页。ChatGPT基于训练数据中的模式生成新文本。对于事实查询，Google更可靠。对于写作、分析和对话，ChatGPT更好。</p>
+
+<h3>问：ChatGPT有移动应用吗？</h3>
+<p>有。ChatGPT有官方的iOS和Android应用，支持语音输入。应用与网页版同步历史记录。高级语音模式（带语气检测的实时对话）在Plus上可用。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-projects-organize-chats">第2部分：如何写出真正有效的提示词：5点框架 →</a></p>
+</div>`,
   },
   "claude-projects-organize-chats": {
     content: `<div class="article-meta-banner">
@@ -1067,9 +2019,80 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <p>Yes. The framework addresses how LLMs process instructions, not platform-specific features. All major models respond better to structured prompts. Claude is slightly more tolerant of vague prompts than ChatGPT, but both benefit from the framework.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-images-that-dont-look-like-ai">Part 3: ChatGPT for Writing: Emails, Reports, and Creative Projects &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：用ChatGPT写作：邮件、报告和创意项目 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> ChatGPT精通 · <strong>第2部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/chatgpt-voice-mode-job-interview">第1部分：ChatGPT基础</a>——你应该有一个ChatGPT账户并尝试过基本提示词。</p>
+</div>
+
+<h2>为什么大多数提示词会失败</h2>
+
+<p>大多数人输入模糊的问题，得到平庸的答案。问题不在AI——在提示词。结构良好的提示词能产生显著更好的结果。本文介绍5点提示词框架，这是一种系统化方法，适用于ChatGPT、Claude、Gemini和任何其他LLM。</p>
+
+<h2>5点提示词框架</h2>
+
+<p>每个有效的提示词都包含这五个要素。你不需要总是全部使用，但在相关时包含它们能显著提高输出质量。</p>
+
+<div class="step-card">
+<h3>1. 角色</h3>
+<p>告诉AI它是什么。"你是一名……"设定语气、专业水平和视角的上下文。</p>
+<p><strong>不要这样：</strong>"解释量子计算。"</p>
+<p><strong>试试这样：</strong>"你是一名给高中生上课的物理教授。用16岁孩子能理解的类比来解释量子计算。"</p>
+</div>
+
+<div class="step-card">
+<h3>2. 上下文</h3>
+<p>提供AI需要的背景信息。没有上下文，AI默认生成通用答案。</p>
+<p><strong>不要这样：</strong>"写一封营销邮件。"</p>
+<p><strong>试试这样：</strong>"我们是一家小型SaaS公司，正在为自由职业者推出一款项目管理工具。我们的产品售价15美元/月，与Asana和Trello竞争但更简单。写一封发布邮件给我们的500人等待名单。"</p>
+</div>
+
+<div class="step-card">
+<h3>3. 任务</h3>
+<p>准确说明你想要什么。明确说明行动和范围。</p>
+<p><strong>弱：</strong>"帮我改简历。"</p>
+<p><strong>强：</strong>"审阅我的软件工程师职位简历。找出3个需要改进的部分，并重写每个部分。"</p>
+</div>
+
+<div class="step-card">
+<h3>4. 格式</h3>
+<p>指定输出结构。AI默认输出段落。明确的格式指令让你得到你真正需要的内容。</p>
+<p><strong>示例：</strong>"输出为表格，列名为任务、时间和优先级。" / "以5项的要点列表形式返回。" / "恰好写100个词。"</p>
+</div>
+
+<div class="step-card">
+<h3>5. 约束</h3>
+<p>设定边界。这是最常被跳过的要素，也是最能提高具体性的要素。</p>
+<p><strong>示例：</strong>"不要使用术语。" / "假设预算为0。" / "避免提及竞争对手。" / "保持语气随意。" / "最多3段。"</p>
+</div>
+
+<h2>前后对比示例</h2>
+
+<p><strong>之前（无框架）：</strong>"写一份晚餐食谱。"</p>
+<p><strong>之后（有框架）：</strong>"你是一名专攻30分钟餐点的专业厨师。我家有鸡胸肉、西兰花和米饭。用这些食材加上基本厨房储备给我一份食谱。格式：食材清单、分步说明、总时间。每份应低于600卡路里，不使用乳制品。"</p>
+
+<p>差别是天壤之别。第一个提示词产生的是通用的汤建议。第二个产生的是具体、可用的食谱。</p>
+
+<h2>最小框架：时间紧迫时</h2>
+<p>如果你只有10秒钟，使用"RCT"快捷方式：<strong>角色 + 上下文 + 任务</strong>。这三个就能消除80%的不良输出。</p>
+
+<pre><code>"你是一名[角色]。情况是这样的：[上下文]。请做这件事：[任务]。"</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：提示词应该多长？</h3>
+<p>足够提供必要上下文，又足够短以保持重点。大多数有效提示词在30-100个词之间。添加不相关的细节会稀释指令。如果你得到错误的答案，添加更多相关的上下文——而不是更多的词。</p>
+
+<h3>问：每个提示词都需要使用框架吗？</h3>
+<p>不需要。对于简单、定义明确的任务（"80的15%是多少？"），直接提问就很好。对于复杂、创意或高风险的提示词，当输出质量最重要时使用框架。</p>
+
+<h3>问：框架在ChatGPT、Claude和Gemini上效果一样吗？</h3>
+<p>是的。框架针对LLM如何处理指令，而非平台特定功能。所有主要模型都对结构化的提示词反应更好。Claude对模糊提示词的容忍度略高于ChatGPT，但两者都受益于框架。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：用ChatGPT写作：邮件、报告和创意项目 →</a></p>
+</div>`,
   },
   "ai-images-that-dont-look-like-ai": {
     content: `<div class="article-meta-banner">
@@ -1156,9 +2179,94 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <p>ChatGPT has output limits (roughly 3000-4000 words per response depending on the model). For longer documents, use the outline + section-by-section approach described in this article. You can also use ChatGPT's Advanced Data Analysis to combine sections into a single document.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/voice-recording-to-meeting-notes-free">Part 4: ChatGPT for Research and Analysis: Web Search, File Upload, and Data &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：ChatGPT的研究与分析功能：网络搜索、文件上传和数据处理 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> ChatGPT精通 · <strong>第3部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/claude-projects-organize-chats">第2部分：5点提示词框架</a>——熟悉结构化提示词。</p>
+</div>
+
+<h2>用AI写作：超越简单提示词</h2>
+
+<p>ChatGPT擅长写作任务，但通用AI文本和专业级内容的区别在于你如何引导模型。本文涵盖邮件、报告和创意项目的写作技巧。</p>
+
+<h2>带语气控制的邮件写作</h2>
+
+<p>ChatGPT可以用任何语气写邮件，但你必须明确指定语气。同样的内容在不同指令下听起来完全不同：</p>
+
+<div class="step-card">
+<p><strong>正式语气提示词：</strong></p>
+<pre><code>给客户写一封关于价格调整的邮件。我们的月费将从49美元涨到59美元，从下个季度开始。语气应该专业、透明、感谢他们的业务。包含30天的宽限期。包含邮件主题。</code></pre>
+</div>
+
+<div class="step-card">
+<p><strong>随意语气提示词：</strong></p>
+<pre><code>就同一价格调整给团队写一条Slack消息。我们是一个5人的创业公司。语气：随意、直接，不用公司语言。提到我们试图避免涨价但托管成本上升了。</code></pre>
+</div>
+
+<h2>报告和文档写作</h2>
+
+<p>对于较长的文档，使用"先列大纲"技巧：</p>
+
+<ol>
+<li><strong>生成大纲：</strong>"为一份关于2026年社交媒体趋势的2000字报告创建详细大纲。包括5个主要部分，每部分3个子部分。"</li>
+<li><strong>审阅和完善大纲：</strong>"把第4部分移到第2部分之前。添加一个关于TikTok的子部分。"</li>
+<li><strong>逐节写作：</strong>"基于大纲写报告的第1部分。使用正式语气，包含具体数据点。目标400词。"</li>
+<li><strong>编辑和连接：</strong>"在第1部分和第2部分之间添加一个过渡段。"</li>
+</ol>
+
+<p>这种方法比让ChatGPT一次性写完整篇文档产生更好的长文内容。每个部分都得到专注的关注，你可以边写边调整方向。</p>
+
+<h2>创意写作技巧</h2>
+
+<p>对于故事、剧本和营销文案：</p>
+
+<ul>
+<li><strong>提供示例：</strong>"以这个样段落的风格写作：[粘贴示例]。话题不同但语气和句子结构应匹配。"</li>
+<li><strong>迭代草稿：</strong>"把这段改写得更悬疑。使用更短的句子。添加感官细节。"</li>
+<li><strong>结合风格：</strong>"写一个产品描述，结合Apple的极简主义风格和Nike的激励性语气。"</li>
+<li><strong>创造性地使用约束：</strong>"写一个关于咖啡店的50词故事。每个句子必须以字母表的不同字母开头。"</li>
+</ul>
+
+<h2>编辑和改写现有文本</h2>
+
+<p>ChatGPT在改进你已写好的文本方面表现出色：</p>
+
+<pre><code>请编辑这段文字。我希望它：
+1. 更简洁（减少30%字数）
+2. 语气更专业
+3. 修正所有语法错误
+4. 保留关键信息不变
+
+[粘贴你的文本]</code></pre>
+
+<p>你也可以要求特定的编辑，比如"让这听起来更自信"或"去掉所有被动语态"或"调整为适合LinkedIn读者的风格。"</p>
+
+<h2>避免常见的AI写作模式</h2>
+
+<p>ChatGPT有一些可识别的模式。要么告诉它避免这些模式，要么添加具体的风格指令：</p>
+
+<pre><code>写这段文字时不要使用：
+- "在当今的数字环境中"或任何类似的陈词滥调
+- "革命性"或"改变游戏规则"等通用形容词
+- 重述问题的开头句
+- 为修辞效果而使用的三列表（三点规则）
+- 以"值得注意的是"开头的句子</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：用AI写作算抄袭吗？</h3>
+<p>从法律上说不是。AI生成的文本不受版权保护（美国版权局），所以使用AI生成的文本不构成版权侵权。然而，许多出版物要求披露使用了AI。对于学术工作，请查看你所在机构的规定——大多数禁止将AI生成的文本作为原创作品提交。</p>
+
+<h3>问：AI写的内容需要编辑多少？</h3>
+<p>至少，核实具体声明、调整语气以匹配你的风格、删除AI典型的措辞。对于专业内容，计划花费你节省时间的20-30%用于编辑。AI创建初稿；你让它听起来像你自己。</p>
+
+<h3>问：ChatGPT能一次性写10,000字的报告吗？</h3>
+<p>ChatGPT有输出限制（根据模型不同，每次回复约3000-4000词）。对于更长的文档，使用本文描述的大纲+逐节方法。你也可以使用ChatGPT的高级数据分析功能将各部分合并为单一文档。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：ChatGPT的研究与分析功能：网络搜索、文件上传和数据处理 →</a></p>
+</div>`,
   },
   "voice-recording-to-meeting-notes-free": {
     content: `<div class="article-meta-banner">
@@ -1250,9 +2358,98 @@ and how do I fix it?</code></pre>
 <p>Yes. Upload multiple files in the same conversation and ask comparative questions: "Compare the findings in report A with report B. Highlight contradictions and areas of agreement."</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/first-ai-coding-project-no-experience">Part 5: Custom GPTs and Automation: Build Your Own AI Assistant &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/first-ai-coding-project-no-experience">第5部分：自定义GPTs和自动化：构建你自己的AI助手 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> ChatGPT精通 · <strong>第4部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/ai-images-that-dont-look-like-ai">第3部分：用ChatGPT写作</a>——熟悉文件上传和基本提示词。</p>
+</div>
+
+<h2>超越聊天：研究和分析</h2>
+
+<p>ChatGPT不仅仅是对话AI。它还能搜索网络、分析上传的文件、处理数据和处理长文档。这些能力将它从写作助手转变为研究和分析工具。</p>
+
+<h2>ChatGPT网络搜索</h2>
+
+<p>ChatGPT的训练数据有截止日期。要获取最新信息，你必须启用网络搜索。在ChatGPT Plus上，网络搜索会自动为相关查询运行。在免费版上，它只对部分问题激活。</p>
+
+<pre><code>2026年最新的通胀数据是多少？
+比较美国各银行的当前按揭利率。
+这周有哪些新电影上映？
+欧盟AI法案执行的最新进展。</code></pre>
+
+<p>ChatGPT会搜索网络并提供带来源页面引用的答案。对于研究密集的工作，Perplexity仍然更好（专用搜索工具），但ChatGPT的搜索现在已能胜任一般需求。</p>
+
+<h2>文件上传和分析</h2>
+
+<p>ChatGPT通过输入栏中的回形针图标接受文件上传：</p>
+
+<ul>
+<li><strong>PDF：</strong> 上传合同、报告、学术论文。要求总结、关键发现或提取特定信息。</li>
+<li><strong>图片：</strong> 上传截图、文本照片、图表。ChatGPT从图片中读取文本并描述视觉内容。</li>
+<li><strong>文本文件：</strong> 上传.txt、.csv、.json、.docx文件进行分析或转换。</li>
+<li><strong>电子表格：</strong> 上传.xlsx或.csv文件进行数据分析（Plus订阅者可获得高级数据分析功能）。</li>
+</ul>
+
+<p>文件分析提示词示例：</p>
+<pre><code>我上传了一篇40页的研究论文PDF。用5个要点总结其方法论和关键发现。
+然后列出所有引用的数据来源。
+
+我上传了一个仪表盘错误的截图。这个错误是什么意思？我怎么修复？</code></pre>
+
+<h2>高级数据分析（Plus功能）</h2>
+
+<p>ChatGPT Plus订阅者获得Python代码执行环境。上传CSV并要求分析：</p>
+
+<pre><code>我上传了我公司2025年月度销售数据的CSV文件。
+1. 清洗数据（检查缺失值和异常值）
+2. 计算月度环比增长率
+3. 找出销量最高的前3个月
+4. 创建显示收入趋势的折线图
+5. 创建比较Q1-Q4业绩的柱状图
+6. 导出清洗后的数据和两个图表</code></pre>
+
+<p>ChatGPT编写并运行Python代码来执行分析。你不需要懂Python——用日常语言描述你想要什么。</p>
+
+<h2>长文档处理</h2>
+
+<p>ChatGPT GPT-5可以处理约128K token（大约400页文本）。这使得全文分析成为可能：</p>
+
+<pre><code>我上传了一份50页的合同。找出：
+1. 所有终止条款
+2. 付款条款和违约金
+3. 责任限制
+4. 任何异常或潜在问题条款
+5. 到期或续约日期</code></pre>
+
+<p>对于更长的文档（最多200K token），Claude有更大的上下文窗口。但对于大多数文档（100页以下），ChatGPT处理得很好。</p>
+
+<h2>实用研究工作流程</h2>
+
+<ol>
+<li>从网络搜索开始，收集关于你的话题的当前信息</li>
+<li>下载相关来源（文章、论文、报告）</li>
+<li>将它们上传到ChatGPT进行深入分析和交叉引用</li>
+<li>使用高级数据分析处理任何数值数据</li>
+<li>通过跨来源的对比性问题综合发现</li>
+</ol>
+
+<p>这取代了以前需要多个工具和数小时手动工作的工作量。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：我上传的文件是私密的吗？</h3>
+<p>如果你关闭了设置，OpenAI不会使用ChatGPT数据进行训练。上传到ChatGPT的文件临时存储，仅用于你当前的对话。对于高度机密的文档，改用本地AI工具（参见本站关于开源模型的文章）。</p>
+
+<h3>问：ChatGPT支持哪些文件格式？</h3>
+<p>PDF、DOCX、TXT、CSV、XLSX、JSON、PNG、JPG、WEBP、GIF、MP3、MP4等。免费用户的上传总量限制比Plus订阅者小。具体限制因文件类型而异。</p>
+
+<h3>问：ChatGPT能同时分析多个文件吗？</h3>
+<p>可以。在同一对话中上传多个文件并提出对比性问题："比较报告A和报告B的发现。指出矛盾点和一致之处。"</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/first-ai-coding-project-no-experience">第5部分：自定义GPTs和自动化：构建你自己的AI助手 →</a></p>
+</div>`,
   },
   "first-ai-coding-project-no-experience": {
     content: `<div class="article-meta-banner">
@@ -1318,9 +2515,72 @@ customer support GPT that answers accurately without hallucinating.</code></pre>
 <p>Custom GPTs have the same memory capabilities as regular ChatGPT. They can remember information across sessions if you enable memory. You can also upload knowledge files that persist permanently. Each session starts fresh within the GPT's configured instructions and knowledge.</p>
 
 <div class="next-step">
-<p><strong>End of ChatGPT Mastery learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
+<p><strong>ChatGPT精通学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> ChatGPT精通 · <strong>第5部分（共5部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/voice-recording-to-meeting-notes-free">第4部分：研究和分析</a>——你应该熟悉ChatGPT的核心功能。</p>
+</div>
+
+<h2>自定义GPTs：你的个人AI助手</h2>
+
+<p>自定义GPTs是你为特定目的配置的ChatGPT定制版本。你不需要每次写相同的指令，只需创建一次GPT，然后重复使用。它们将自定义指令、知识文件和可选的API操作组合成一个可共享的助手。</p>
+
+<h2>你可以构建什么</h2>
+<p>以下是一些实用的自定义GPT创意，无需编程：</p>
+<ul>
+<li><strong>写作教练GPT：</strong> 预设你的写作风格、品牌语调和常用编辑内容。上传过去的文章作为参考。</li>
+<li><strong>会议纪要GPT：</strong> 上传会议记录，获得结构化的摘要、行动项和决策日志。</li>
+<li><strong>社交媒体经理GPT：</strong> 配置你的品牌语调、平台指南和内容日历格式。</li>
+<li><strong>简历审阅GPT：</strong> 上传你行业的指导方针。根据特定的职位描述审阅简历。</li>
+</ul>
+
+<h2>构建你的第一个自定义GPT</h2>
+<p>你需要ChatGPT Plus（20美元/月）才能创建自定义GPTs。免费用户只能与现有的GPT聊天。</p>
+
+<ol>
+<li>打开ChatGPT，点击你的名字 → "我的GPTs"</li>
+<li>点击"创建一个GPT"——你会看到两个选项卡：创建（对话式构建器）和配置（手动设置）</li>
+<li>在创建选项卡中，描述你想要什么："我想要一个帮我写LinkedIn帖子的GPT。它应该匹配我的专业语气，推荐话题标签，并保持帖子在300字以内。"</li>
+<li>ChatGPT的GPT构建器会自动配置名称、描述和指令</li>
+<li>切换到配置进行完善：编辑指令、上传知识文件（你最好的帖子作为示例）、设置能力（网络搜索、图像生成、代码解释器）</li>
+<li>点击"保存"并选择谁可以访问：仅自己、任何有链接的人、或公开</li>
+</ol>
+
+<h2>添加知识文件</h2>
+<p>上传你的GPT会自动引用的文档。这是实用用途中最强大的功能：</p>
+<pre><code>为客服GPT上传你的产品目录、价目表和FAQ，使其能准确回答而不产生幻觉。</code></pre>
+
+<p>知识文件将你的GPT锚定在特定信息上，与在没有上下文的情况下问ChatGPT同样的问题相比，大大减少了幻觉。</p>
+
+<h2>分享和发现GPTs</h2>
+<p>GPT商店（从侧边栏的"探索GPTs"进入）展示由OpenAI合作伙伴和社区创建的公共GPTs。分类包括写作、研究、编程、教育和生活方式。</p>
+
+<p>流行的公共GPTs包括：Canva（在聊天中设计）、Code Tutor（互动编程课程）和Data Analyst（高级数据可视化）。你可以用ChatGPT账户免费使用任何公共GPT，但创建它们需要Plus订阅。</p>
+
+<h2>自动化和操作（高级）</h2>
+<p>带操作的GPT可以通过API连接到外部服务。例如：</p>
+<ul>
+<li>连接到Expedia或Kayak API的"旅行预订GPT"</li>
+<li>连接到你的客服系统（Zendesk、Intercom）的"客户支持GPT"</li>
+<li>连接到Asana或Trello的"项目经理GPT"</li>
+</ul>
+<p>设置操作需要通过OpenAI基于模式的配置创建API连接。这是自定义GPT中最技术性的部分，但不需要编写代码——你粘贴一个API文档URL，GPT构建器会处理集成。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：自定义GPTs和插件有什么不同？</h3>
+<p>不同。插件是OpenAI之前的第三方集成系统（2025年弃用）。带操作的自定义GPTs取代了插件。GPT系统集成度更高，更容易构建，不需要单独安装。</p>
+
+<h3>问：我能通过自定义GPTs赚钱吗？</h3>
+<p>OpenAI曾讨论过GPT商店收入分成计划，但截至2026年5月，没有公开的变现方案。你可以免费公开分享GPTs。如果你的GPT变得受欢迎，你会获得曝光度，但不会直接获得收入。</p>
+
+<h3>问：自定义GPT会跨会话保留记忆吗？</h3>
+<p>自定义GPT具有与常规ChatGPT相同的记忆能力。如果你启用记忆，它们可以跨会话记住信息。你也可以上传永久存在的知识文件。每个会话在GPT配置的指令和知识范围内重新开始。</p>
+
+<div class="next-step">
+<p><strong>ChatGPT精通学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+</div>`,
   },
   "etsy-seller-ai-product-descriptions": {
     content: `<div class="article-meta-banner">
@@ -1396,9 +2656,78 @@ due to QA delays."
 <p>For internal communication, no. For external client work, it depends on your industry. Professional services firms typically do not disclose. Content marketing agencies often do. When in doubt, review your client's AI usage policy.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-wedding-planning-free-tools">Part 2: AI for Project Planning and Organization &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：AI用于项目规划和组织 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI工作应用 · <strong>第1部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> 无——本路径涵盖专业人士的AI实际应用。无需技术背景。</p>
+</div>
+
+<h2>AI用于商务沟通</h2>
+
+<p>商务沟通占据工作日很大一部分时间——邮件、方案、推销词和客户消息。AI能高效处理这些，但关键在于知道如何在专业场景中引导它。</p>
+
+<h2>撰写专业邮件</h2>
+<p>同样的邮件内容需要为不同的收件人使用不同的语气。使用ChatGPT调整语气，无需从头重写：</p>
+
+<pre><code>起草一封通知客户价格上调的邮件，从每月500美元涨到550美元，从下季度开始。
+使用以下细节：90天通知期、沿用现有合同条款、为年付客户提供忠诚折扣。
+写三个版本：一个给长期合作伙伴（温暖语气）、一个给交易型客户（专业语气）、
+一个给不满意的客户（道歉语气，强调价值）。</code></pre>
+
+<h2>方案和推销词</h2>
+<p>AI在你提供结构化输入时能加速方案写作：</p>
+
+<pre><code>为一个小企业客户写一页的项目方案，他们想升级网站。结构：
+1. 问题陈述（我们观察到的问题）
+2. 解决方案建议（具体交付物）
+3. 时间线（3周）
+4. 投资金额（3,500美元）
+5. 预期成果
+语气：自信但不强势。避免技术术语。</code></pre>
+
+<h2>客户沟通模板</h2>
+<p>为常见情况建立一个可复用的模板库：</p>
+
+<pre><code>为以下常见客户情况创建模板：
+1. 项目启动会议议程
+2. 每周状态更新邮件
+3. 范围变更请求确认
+4. 延迟付款提醒（从礼貌到强硬逐步升级）
+5. 项目完成和后续步骤
+每个模板应有[方括号]中的占位字段。</code></pre>
+
+<h2>产品和服务描述</h2>
+<p>适用于电商、服务页面或营销材料：</p>
+<pre><code>为[产品]写一个产品描述。功能：[列表]。
+目标受众：[描述]。语气：以收益为导向、对话式。
+包括：标题（最多10个字）、3个关键收益（要点形式）、
+技术规格部分、行动号召语句。
+除非可验证，否则避免使用"最好"或"惊人的"等最高级词汇。</code></pre>
+
+<h2>语气校准技巧</h2>
+<p>掌握一个技巧：以不同语气生成同一消息，然后选择。</p>
+<pre><code>用4种语气写这段消息，我来选择：
+"不幸的是，由于QA测试延迟，我们需要将发布推迟2周。"
+1. 专业且透明
+2. 自信且以解决方案为导向
+3. 随意直接
+4. 道歉且安抚</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：使用AI进行客户沟通符合道德吗？</h3>
+<p>可以，但前提是你在发送前审阅和个性化每条消息。AI起草初稿；你添加个人风格。对于高风险的客户沟通，永远不要逐字发送AI输出。</p>
+
+<h3>问：AI能匹配我公司的品牌语调吗？</h3>
+<p>可以，只要你提供示例。上传3-5封过去的邮件或营销材料，让ChatGPT识别语气、词汇和句子结构的模式。然后在你的提示词中使用这些模式。自定义GPTs（见ChatGPT精通第5部分）让你永久保存品牌语调。</p>
+
+<h3>问：我应该披露我使用了AI写作吗？</h3>
+<p>对于内部沟通，不需要。对于外部客户工作，取决于你的行业。专业服务公司通常不披露。内容营销机构经常披露。如有疑问，查看客户的AI使用政策。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：AI用于项目规划和组织 →</a></p>
+</div>`,
   },
   "ai-wedding-planning-free-tools": {
     content: `<div class="article-meta-banner">
@@ -1468,9 +2797,74 @@ with emoji indicators for status.</code></pre>
 <p>No. AI does not have persistent memory of your project's state unless you provide updates. Use it as a planning assistant, not a project management system. Update the AI with your current status for each new planning session.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-travel-itinerary-real-prompts">Part 3: AI for Research and Report Writing &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：AI用于研究和报告写作 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI工作应用 · <strong>第2部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/etsy-seller-ai-product-descriptions">第1部分：商务沟通</a>——熟悉基本的AI提示词。</p>
+</div>
+
+<h2>AI用于项目规划</h2>
+
+<p>项目规划涉及时间线、预算、任务分解和资源分配——所有这些领域AI都擅长产生结构化输出。无论你是在规划工作项目还是个人活动，同样的提示词技巧都适用。</p>
+
+<h2>创建项目时间线</h2>
+<pre><code>为发布一个新移动应用功能创建3个月的项目时间线。当前状态：开发完成。剩余工作：
+QA测试（2周）、50名用户的Beta测试（3周）、
+bug修复（1周）、应用商店提交（1周）、
+营销准备（并行进行）。
+使用文本字符输出甘特图。显示任务之间的依赖关系。</code></pre>
+
+<h2>预算规划与跟踪</h2>
+<pre><code>我需要为15人规划一个部门外出活动。预算：8,000美元。
+地点：距离办公室2小时以内。时长：2天。
+创建预算明细，涵盖：场地、餐饮、活动、
+住宿、交通、应急资金（10%）。
+然后按不同价位推荐3个具体场地选项。</code></pre>
+
+<h2>任务分解与分配</h2>
+<p>AI能处理"所有需要做的事"这个通常存在于某人头脑中的练习：</p>
+<pre><code>将"组织公司黑客松"分解为具体任务。
+按阶段分组（活动前、活动当天、活动后）。对每个任务，
+估算所需小时数并建议负责人
+（组织者、技术团队、营销、HR）。标记任何需要
+在活动前2周以上开始的任务。</code></pre>
+
+<h2>决策矩阵</h2>
+<p>在多个选项中选择时，AI帮你结构化比较：</p>
+<pre><code>我们要在3个项目工具中选择：Asana、Linear和Notion。
+从以下维度比较：每用户价格、学习曲线、
+报告功能、与Slack和GitHub的集成、
+移动应用质量。我们是一个8名开发者和2名
+项目经理的团队。推荐最佳选项并给出理由。</code></pre>
+
+<h2>会议议程与引导</h2>
+<pre><code>为网站改版项目创建一个60分钟的项目启动会议议程。
+参会者：项目经理、2名设计师、3名开发者、客户方相关人员。
+包括时间分配、每个环节的讨论引导问题和期望成果。
+添加关于应提前发送的准备材料的说明。</code></pre>
+
+<h2>每周状态报告</h2>
+<pre><code>生成一个软件项目的每周状态报告模板。
+部分：本周成果、下周计划、
+阻碍事项（按严重程度分类）、指标（燃尽图数据、
+Sprint速度）、需要做出的决策。使用仪表盘风格格式，
+带表情符号状态指示器。</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：我可以在AI中保存项目计划模板吗？</h3>
+<p>可以。使用自定义GPTs（ChatGPT Plus）或Claude Projects来保存模板并重复使用。创建一个"项目规划师"助手，包含你首选格式的指令，并上传过去成功的计划作为参考。</p>
+
+<h3>问：AI适用于非软件项目吗？</h3>
+<p>绝对适用。AI是格式无关的。同样的时间线/任务/预算技巧适用于建筑项目、活动规划、营销活动、研究项目或个人项目。在提示词中调整领域特定的细节即可。</p>
+
+<h3>问：AI能实时跟踪项目进度吗？</h3>
+<p>不能。除非你提供更新，否则AI不会持续记忆项目的状态。把它用作规划助手，而不是项目管理系统。在每次新的规划会话中向AI更新当前状态。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：AI用于研究和报告写作 →</a></p>
+</div>`,
   },
   "ai-travel-itinerary-real-prompts": {
     content: `<div class="article-meta-banner">
@@ -1553,9 +2947,88 @@ available. Mark any sources you are uncertain about as
 <p>For single-topic deep research: NotebookLM (upload sources, ask grounded questions). For multi-source exploration: Perplexity Pro (web search with citations). For data analysis: ChatGPT Plus with Advanced Data Analysis. The combination of all three is more powerful than any single tool.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">Part 4: AI for Learning and Skill Development &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">第4部分：AI用于学习和技能发展 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI工作应用 · <strong>第3部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/ai-wedding-planning-free-tools">第2部分：项目规划</a>——熟悉复杂多步骤任务的结构化提示词。</p>
+</div>
+
+<h2>AI用于研究和报告写作</h2>
+
+<p>研究涉及收集信息、评估来源、综合发现和呈现结论。AI加速每个阶段，但人类在验证和批判性思维方面仍然不可或缺。</p>
+
+<h2>阶段1：研究规划</h2>
+<p>在深入之前，使用AI构建你的研究方法：</p>
+<pre><code>我需要研究"远程工作对员工生产力的影响"
+用于季度业务评审。创建研究计划：
+1. 需要回答的关键问题（5-7个问题）
+2. 我需要的数据类型（定量、定性、案例研究）
+3. 需要查阅的来源（学术、行业报告、新闻）
+4. 这个话题中需要注意的潜在偏见
+5. 组织发现的框架</code></pre>
+
+<h2>阶段2：来源分析</h2>
+<p>上传文档或粘贴网页内容供AI分析：</p>
+<pre><code>我上传了5篇关于远程工作生产力的文章。
+综合它们：
+1. 所有来源的主要发现是什么？
+2. 来源之间在哪里存在分歧？
+3. 每个来源的方法论质量如何？
+4. 哪些发现对拥有200+员工的科技公司最相关？
+5. 我应该包含哪些关键数据点或统计数据？</code></pre>
+
+<p><strong>重要提示：</strong> 对于真正的研究，使用Perplexity或NotebookLM获取基于来源的回答（请参见本站的NotebookLM vs Perplexity文章）。ChatGPT的独立知识可能产生幻觉。</p>
+
+<h2>阶段3：数据解读</h2>
+<p>如果你有数值数据，让AI帮你解读：</p>
+<pre><code>这是我们2025年Q1-Q4的员工调查数据。列：
+季度、部门、满意度评分、离职率、
+每周远程天数。分析：
+1. 远程天数与满意度之间的相关性
+2. 哪些部门变化最大
+3. 全年的趋势
+4. 任何令人惊讶的模式
+5. 推荐3个图表来可视化这些数据</code></pre>
+
+<h2>阶段4：报告写作</h2>
+<p>使用ChatGPT精通第3部分中的先列大纲技巧：</p>
+<pre><code>基于上述研究，为季度业务评审写一份执行摘要。
+受众：C级高管。最多500字。
+结构：关键发现（1段）、支持数据（2-3段）、
+建议（1段）、需要考虑的风险（1段）。
+使用平实的语言，不要术语。</code></pre>
+
+<h2>阶段5：来源验证</h2>
+<p>始终验证AI生成的引用。关键步骤：</p>
+<pre><code>对于你在上述报告中引用的每个统计数据或研究，
+提供确切来源：作者、出版物、年份、URL（如有）。
+将你不确定的任何来源标记为"[需要验证]".</code></pre>
+
+<p>然后手动验证每个来源。这能抓住最常见和最危险的AI错误之一：编造的引用。</p>
+
+<h2>研究专用提示技巧</h2>
+<ul>
+<li><strong>要求自信度：</strong>"对每个声明用1-5分评估自信度并解释原因。"</li>
+<li><strong>要求反论点：</strong>"对每个建议，列出2个它可能错误的原因。"</li>
+<li><strong>指定证据类型：</strong>"只使用同行评审研究或政府来源的统计数据。"</li>
+<li><strong>迭代发现：</strong>"只聚焦于财务影响维度的分析。"</li>
+</ul>
+
+<h2>常见问题</h2>
+
+<h3>问：我能相信AI研究来做重要决策吗？</h3>
+<p>不能，未经验证的情况下不可以。使用AI加速研究，但验证所有声明，尤其是数字、日期和引用。对于业务关键型研究，将AI视为研究助手，而不是分析师。</p>
+
+<h3>问：如何处理AI和其他来源之间的冲突信息？</h3>
+<p>相信你的主要来源胜过AI输出。如果AI与可靠来源矛盾，来源更可能是正确的。将冲突作为深入挖掘的信号——真相可能比任何单一来源提示的更加微妙。</p>
+
+<h3>问：深度研究的最佳AI工具是什么？</h3>
+<p>单一话题深度研究：NotebookLM（上传来源，提出基于上下文的问題）。多来源探索：Perplexity Pro（带引用的网络搜索）。数据分析：ChatGPT Plus带高级数据分析。三者结合比任何单一工具都强大。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">第4部分：AI用于学习和技能发展 →</a></p>
+</div>`,
   },
   "learn-english-with-ai-free-speaking-practice": {
     content: `<div class="article-meta-banner">
@@ -1639,9 +3112,91 @@ Let me practice and you correct my pronunciation.</code></pre>
 <p>Ask AI to track your progress within the conversation. At the start of each session, request a review: "Based on our previous session, what did I learn and what should I review today?" For systematic tracking, use a Custom GPT or Claude Project with instructions to maintain a learning log.</p>
 
 <div class="next-step">
-<p><strong>End of AI for Work learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
+<p><strong>AI工作应用学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI工作应用 · <strong>第4部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/ai-travel-itinerary-real-prompts">第3部分：研究和报告写作</a>——除了基本的AI熟悉度，不需要特定技能。</p>
+</div>
+
+<h2>AI作为学习伴侣</h2>
+
+<p>AI是有史以来最强大的自学工具。它提供个性化辅导、无限的口语练习、即时反馈和自适应难度——全部免费或低价。本文介绍如何有效使用AI学习语言、技术技能和职业发展。</p>
+
+<h2>语音模式学语言</h2>
+
+<p>ChatGPT的语音模式（移动端可用）让你无需真人伙伴即可练习口语。设置一个结构化的练习会话：</p>
+
+<pre><code>你是一名英语会话导师。我的水平是中级。
+我们将进行10分钟关于[话题]的对话。
+规则：
+1. 以自然语速说话，但使用简单词汇
+2. 如果我犯语法错误，在我说完后温和地纠正
+3. 偶尔要求我用更自然的英语重新表述
+4. 从我们的对话中记录3个新词汇
+5. 最后，给我一个简短的反馩总结
+
+话题：描述你最近的一次旅行或拜访过的地方。</code></pre>
+
+<p>对于ChatGPT Plus用户，高级语音模式增加了语气检测、打断功能和更自然的对话流。免费用户有基本的语音模式，适合结构化练习。</p>
+
+<h2>技能练习：面试准备</h2>
+<pre><code>模拟一次初级前端开发人员职位的技术面试。
+问我5个问题，涵盖：HTML语义化、CSS
+flexbox、JavaScript闭包、React hooks和响应式设计。
+每次回答后：
+1. 告诉我是否正确和完整
+2. 提供理想答案
+3. 给出改进建议
+4. 评分（1-5）并简要说明理由</code></pre>
+
+<h2>自适应教学的概念学习</h2>
+<p>AI能适应你当前的知识水平：</p>
+<pre><code>教我机器学习。我没有技术背景。
+从最基础开始。每个概念都使用类比。
+每个部分结束后，问我一个问题检查理解情况。
+如果我答错了，用不同的类比再解释一遍。
+只有当我表现出理解时才进入下一个话题。
+不要使用任何数学或代码。</code></pre>
+
+<h2>测试和认证准备</h2>
+<pre><code>我正在准备AWS Cloud Practitioner考试。生成
+练习题，涵盖：IAM、S3、EC2、Lambda、定价模型。
+格式：每个题4个选项的多选题。我回答后，
+解释每个选项为什么正确或错误。跨会话跟踪我的
+正确率并突出薄弱环节。</code></pre>
+
+<h2>阅读理解与分析</h2>
+<pre><code>我上传了一本商业教科书的章节。帮我学习它：
+1. 用3句话总结该章节
+2. 创建5个涵盖关键概念的学习问题
+3. 用简单的类比解释2个最难的概念
+4. 将该章节的思想与实际商业案例联系起来
+5. 建议一个记忆主要框架的口诀</code></pre>
+
+<h2>发音和口音练习</h2>
+<p>对于语言学习者，练习特定发音：</p>
+<pre><code>我在英语"th"发音上有困难。给我：
+1. 清音和浊音"th"的舌头位置描述
+2. 10组最小对比对，比较"th"与"d"和"f"音
+3. 5个在不同位置练习"th"的句子
+4. 在连读中"th"如何变化的小提示
+让我练习，你纠正我的发音。</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：AI语音练习和真人老师一样有效吗？</h3>
+<p>就练习量而言，更好——你可以随时练习，无需预约、成本或尴尬。就反馩质量而言，真人老师在发现细微错误方面仍然更胜一筹。最佳方法：使用AI进行日常练习（数量），使用真人老师进行每周深度课程（质量）。</p>
+
+<h3>问：AI能帮助高级、专业化的学习吗？</h3>
+<p>可以，但对于非常小众的话题效果递减。AI在大多数领域能很好地处理本科水平的内容。对于前沿研究或高度专业化的专业知识，AI可能缺乏深度或产生幻觉。补充领域特定来源。</p>
+
+<h3>问：如何使用AI跟踪我的学习进度？</h3>
+<p>让AI在对话中跟踪你的进度。每次会话开始时，要求回顾："基于我们之前的会话，我学到了什么？今天应该复习什么？"对于系统性的跟踪，使用自定义GPT或Claude Project，指示其维护学习日志。</p>
+
+<div class="next-step">
+<p><strong>AI工作应用学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+</div>`,
   },
   "ai-for-parents-quiet-moments": {
     content: `<div class="article-meta-banner">
@@ -1693,9 +3248,59 @@ Let me practice and you correct my pronunciation.</code></pre>
 <p>Some exist (Huckleberry for sleep, Wonder Weeks for milestones), but general-purpose AI like ChatGPT adapts better to your specific situation.</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI日常生活 · <strong>独立指南</strong></p>
+<p><strong>前置要求：</strong> 无——有一个免费的ChatGPT或Claude账户有助于跟随操作。</p>
+</div>
+
+<h2>当你有10分钟和熟睡的孩子时</h2>
+
+<p>育儿是一份没有轮班的全职工作。AI不会改变这一点，但它可以帮助那些积少成多的小事情。关键是要知道哪些任务AI能处理得足够好以节省你的时间，哪些仍然需要人类。以下是7个具体用例，附有你可以直接复制的提示词。</p>
+
+<h2>1. 2分钟规划一周食谱</h2>
+
+<pre><code>为4口之家创建5天晚餐计划。限制条件：无乳制品、每餐最多30分钟准备、使用当季春季蔬菜、包括一个孩子喜欢的"趣味"餐如塔可之夜。输出为表格，包含日期、餐点、食材和准备时间。</code></pre>
+
+<h2>2. 起草许可单和学校通知</h2>
+
+<pre><code>为我的孩子写一份参加[日期]科技馆实地考察的许可单。大巴早上8:30出发，下午3:00返回。包含紧急联系人、医疗状况和午餐偏好的部分。语气温暖但简洁。</code></pre>
+
+<h2>3. 从头规划生日派对</h2>
+
+<pre><code>为一个6岁孩子规划10位客人的生日派对。预算：150美元。地点：公寓客厅。主题：恐龙。包括：活动时间表、物资清单（带数量）、无坚果食物创意、3天准备时间线。</code></pre>
+
+<h2>4. 解释家庭作业话题</h2>
+
+<pre><code>向一个8岁的孩子解释光合作用是如何工作的。使用涉及烹饪的类比。保持在3段以内。然后给我一个6岁孩子能理解的一句话版本。</code></pre>
+
+<h2>5. 回复老师和教练</h2>
+
+<pre><code>我需要给孩子的足球教练发邮件，说明下周二因牙医预约不能参加训练。教练是志愿者。保持语气感激且简洁。</code></pre>
+
+<h2>6. 生成无聊破解活动</h2>
+
+<pre><code>给我5个4岁和7岁孩子可以一起做的无屏幕活动。材料必须是家里已有的东西。每个活动应花费15-20分钟。按混乱程度排序。</code></pre>
+
+<h2>7. 准备家长会</h2>
+
+<pre><code>我为我三年级的孩子准备了一个15分钟的家长会。生成5个好问题，按以下分类：学业进展、社交发展和需要改进的领域。避免通用问题。</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：把孩子的信息放在AI中安全吗？</h3>
+<p>避免在提示词中包含全名或确切日期。使用"[孩子]"等占位符，手动填写。ChatGPT和Claude都允许你在账户设置的数据控制中关闭使用对话进行训练的功能。</p>
+
+<h3>问：AI能从头到尾规划整个生日派对吗？</h3>
+<p>它可以规划后勤（时间线、物资、菜单），但你仍然需要执行。AI节省的是思考时间，不是执行时间。</p>
+
+<h3>问：有专门为家长设计的AI工具吗？</h3>
+<p>有些存在（Huckleberry用于睡眠，Wonder Weeks用于成长里程碑），但通用型AI如ChatGPT更能适应你的具体情况。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "free-ai-image-generators-same-prompt-test": {
     content: `<div class="article-meta-banner">
@@ -1762,9 +3367,74 @@ Let me practice and you correct my pronunciation.</code></pre>
 <p>Use the U buttons first, then "Open in Browser" and use tools like Upscayl (free) or Topaz Gigapixel for further upscaling.</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-image-dalle-firefly">Part 2: DALL-E 3 and Adobe Firefly: Browser-Based AI Image Tools &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-dalle-firefly">第2部分：DALL-E 3和Adobe Firefly：基于浏览器的AI图像工具 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI图像生成 · <strong>第1部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> 无——使用Midjourney需要Discord账户，但你可以在没有的情况下跟随学习。</p>
+</div>
+
+<h2>什么是Midjourney？</h2>
+
+<p>Midjourney是一款AI图像生成器，在当前工具中能生成最高质量的艺术图像。与DALL-E 3或Adobe Firefly不同，Midjourney通过Discord运行——你在聊天频道中输入命令，机器人返回图像。基础计划为10美元/月，免费试用25张图像后需要付费。</p>
+
+<p>在盲测审美评估中，Midjourney持续产生被认为比竞品更具艺术性、光线更好、构图更有趣的图像。其弱点是相比DALL-E 3在遵循具体文字指令方面较差。</p>
+
+<h2>在Discord上开始使用</h2>
+
+<ol>
+<li>在 <a href="https://discord.com" target="_blank" rel="noopener">discord.com</a> 创建Discord账户（免费，2分钟）</li>
+<li>访问 <a href="https://www.midjourney.com" target="_blank" rel="noopener">midjourney.com</a>，点击"加入测试版"</li>
+<li>接受邀请加入Midjourney的Discord服务器</li>
+<li>在左侧边栏中找到 <code>#newbies-xxx</code> 频道</li>
+<li>输入 <code>/subscribe</code> 查看定价并设置付款</li>
+</ol>
+
+<div class="warning-box">
+<p><strong>注意：</strong> 免费试用大约提供25次图像生成。之后，你需要付费订阅（基础版10美元/月）。</p>
+</div>
+
+<h2>你的第一个 /imagine 命令</h2>
+
+<p>在任何 <code>#newbies</code> 频道中，输入：</p>
+
+<pre><code>/imagine prompt: a serene mountain lake at sunrise, mist rising from the water, pine trees framing the shot, cinematic lighting, 8k --ar 16:9 --v 6</code></pre>
+
+<p>Midjourney大约在60秒内返回4个图像选项。在网格下方你会看到按钮：</p>
+<ul>
+<li><strong>U1-U4：</strong> 放大特定图像（更高分辨率，更多细节）</li>
+<li><strong>V1-V4：</strong> 创建特定图像的变体</li>
+<li><strong>重新生成：</strong> 生成同一提示词的4个新版本</li>
+</ul>
+
+<h2>初学者必备参数</h2>
+
+<table>
+<thead>
+<tr><th>参数</th><th>作用</th><th>示例</th></tr>
+</thead>
+<tbody>
+<tr><td><code>--ar 16:9</code></td><td>宽高比</td><td>16:9, 1:1, 2:3</td></tr>
+<tr><td><code>--v 6</code></td><td>模型版本</td><td>v6是当前版本（2026年）</td></tr>
+<tr><td><code>--stylize 250</code></td><td>艺术性vs写实性（0-1000）</td><td>越高越有创意</td></tr>
+<tr><td><code>--chaos 50</code></td><td>输出之间的变化度（0-100）</td><td>越高越多样化</td></tr>
+</tbody>
+</table>
+
+<h2>常见问题</h2>
+
+<h3>问：使用Midjourney需要Discord吗？</h3>
+<p>需要。Midjourney完全通过Discord运行。没有独立的Web生成界面。</p>
+
+<h3>问：我可以将Midjourney图像用于商业用途吗？</h3>
+<p>可以，使用付费订阅。Midjourney授予完全所有权和商业使用权。免费试用图像采用Creative Commons许可。本路径第4部分有详细说明。</p>
+
+<h3>问：如何放大用于打印？</h3>
+<p>先使用U按钮，然后"在浏览器中打开"，使用Upscayl（免费）或Topaz Gigapixel等工具进一步放大。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-image-dalle-firefly">第2部分：DALL-E 3和Adobe Firefly：基于浏览器的AI图像工具 →</a></p>
+</div>`,
   },
   "chatgpt-free-vs-plus-2026-what-you-get": {
     content: `<div class="article-meta-banner">
@@ -1839,9 +3509,82 @@ Let me practice and you correct my pronunciation.</code></pre>
 <p>If you write fewer than 30 messages daily, free tier is sufficient. For professional writing relying on GPT-5 nuance, Plus value is clear.</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
+<p><strong>前置要求：</strong> 免费的ChatGPT账户有帮助但不是必需的。</p>
+</div>
+
+<h2>2026年ChatGPT定价格局</h2>
+
+<p>自2023年以来，OpenAI多次更改免费版包含的内容。截至2026年5月，以下是每个级别确切能获得的内容，包含具体的消息限制和功能访问。</p>
+
+<h2>ChatGPT免费版（0美元/月）</h2>
+
+<ul>
+<li><strong>模型访问：</strong> GPT-4o mini无限对话。GPT-4o大约每3小时30条消息。GPT-5大约每5小时10条消息。</li>
+<li><strong>图像生成：</strong> 免费版不包含。</li>
+<li><strong>网络搜索：</strong> 有限——仅对某些查询激活。</li>
+<li><strong>文件上传：</strong> 有——图像、PDF和文本文件。</li>
+<li><strong>高级数据分析：</strong> 无。Python执行仅限Plus。</li>
+<li><strong>自定义GPTs：</strong> 可以与现有GPT聊天但不能创建新的。</li>
+<li><strong>语音模式：</strong> 包含基本语音对话。高级语音模式仅限Plus。</li>
+</ul>
+
+<p>对于每天问10-15个问题的典型用户，免费版覆盖大多数需求。主要限制是在复杂任务上达到GPT-5的使用上限。</p>
+
+<h2>ChatGPT Plus（20美元/月）</h2>
+
+<ul>
+<li><strong>无限GPT-4o和GPT-5。</strong> 最新模型无消息限制。</li>
+<li><strong>DALL-E 3：</strong> 每3小时约40次生成。</li>
+<li><strong>高级数据分析：</strong> 完整的Python环境，用于CSV/Excel分析和可视化。</li>
+<li><strong>网络搜索：</strong> 无限制——默认搜索当前事件。</li>
+<li><strong>自定义GPT创建：</strong> 完整的GPT构建器访问。</li>
+<li><strong>高级语音模式：</strong> 带语气检测的实时对话。</li>
+<li><strong>项目：</strong> 组织共享上下文的聊天。</li>
+<li><strong>优先访问：</strong> 高峰时段响应更快。</li>
+</ul>
+
+<h2>ChatGPT Pro（200美元/月）</h2>
+<p>无限GPT-5带扩展思考模式，加上实验性功能的早期访问。仅适用于每天8小时以上的专业使用。</p>
+
+<h2>2026年有哪些变化</h2>
+<ol>
+<li>免费版GPT-4o mini取代旧的GPT-3.5——免费和付费之间的差距缩小了。</li>
+<li>GPT-5现在是取代GPT-4 Turbo的高级模型。</li>
+<li>高级语音模式从实验性功能转变为核心功能。</li>
+<li>带共享上下文的项目现在在Plus上可用。</li>
+<li>所有级别的消息限制都提高了。</li>
+</ol>
+
+<h2>你应该升级吗？</h2>
+
+<div class="step-card">
+<p><strong>保持免费：</strong> 日常问答、轻度写作、偶尔研究。不需要图像生成。</p>
+</div>
+<div class="step-card">
+<p><strong>升级到Plus：</strong> 经常进行图像生成、数据分析、每日专业使用、需要高级语音模式。</p>
+</div>
+<div class="step-card">
+<p><strong>升级到Pro：</strong> 全天专业使用，需要无限顶级推理，没有任何速率限制。</p>
+</div>
+
+<h2>常见问题</h2>
+
+<h3>问：Plus在高峰时段有优先权吗？</h3>
+<p>有。Plus订阅者获得优先访问。免费用户在美国上午高流量期可能会看到容量错误。</p>
+
+<h3>问：我可以共享Plus订阅吗？</h3>
+<p>不可以，OpenAI不提供家庭计划。每个用户需要自己的订阅。</p>
+
+<h3>问：仅用于写作，Plus值得吗？</h3>
+<p>如果你每天发送少于30条消息，免费版足够了。对于依赖GPT-5细微差别的专业写作，Plus的价值很明显。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "notebooklm-vs-perplexity-research": {
     content: `<div class="article-meta-banner">
@@ -1911,13 +3654,85 @@ Let me practice and you correct my pronunciation.</code></pre>
 <h3>Q: Is Perplexity's free tier good enough?</h3>
 <p>Yes for basic research. Pro ($20/month) unlocks deeper search, higher-quality models, and file uploads.</p>
 
-<h3>Q: Can I use both together?</h3>
-<p>Yes, and this is optimal. Use Perplexity for initial exploration, then upload found sources to NotebookLM for deep analysis.</p>
+<h3>问：我可以同时使用两者吗？</h3>
+<p>可以，而且这是最佳方案。使用Perplexity进行初步探索，然后将找到的源文件上传到NotebookLM进行深入分析。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
+<p><strong>前置要求：</strong> 熟悉基本的研究任务。无需付费工具。</p>
+</div>
+
+<h2>两种不同的研究方法</h2>
+
+<p>NotebookLM和Perplexity都能帮助你研究，但它们的工作方式有根本区别。Perplexity搜索实时网络并综合带引用的答案。NotebookLM创建一个以你上传的文档为基础的个人研究助手。每个工具在不同的场景中表现出色。</p>
+
+<h2>NotebookLM的工作原理</h2>
+
+<p>NotebookLM（Google）是一个<strong>文档接地研究工具。</strong>你上传源材料（PDF、Google文档、网页链接、YouTube转录）后，AI仅基于这些来源回答。</p>
+<ul>
+<li>每个笔记本最多上传50个来源，每个最多500页</li>
+<li>自动生成Notebook Guide摘要</li>
+<li>答案包含来自你上传源的内联引用</li>
+<li>从你的来源创建学习指南、简报文档、FAQ</li>
+<li>音频概览生成来源的播客式讨论</li>
+<li>使用Google账户完全免费</li>
+</ul>
+
+<h2>Perplexity的工作原理</h2>
+
+<p>Perplexity是一个<strong>搜索接地研究工具。</strong>当你提问时，它实时搜索网络，阅读多个页面，并生成带引用的综合答案。</p>
+<ul>
+<li>每个查询都搜索实时网络</li>
+<li>内联编号引用链接到源页面</li>
+<li>Pro模式（20美元/月）使用更深入的搜索和更高质量的模型</li>
+<li>上传文件获取额外上下文</li>
+<li>集合将搜索组织到项目中</li>
+<li>免费版：无限基本搜索</li>
+</ul>
+
+<h2>正面对决：同一研究任务</h2>
+
+<p>我用两者研究了"2026年量子计算的当前状态"。</p>
+
+<div class="step-card">
+<p><strong>NotebookLM：</strong>我上传了8个来源（文章、论文、报告）。它把它们综合成一份简报文档。答案限于我的来源，但在这些范围内非常准确。</p>
+</div>
+
+<div class="step-card">
+<p><strong>Perplexity：</strong>同样的问题，不上传。它返回了一个综合答案，包含7个引用，覆盖面更广。具体细节的精度较低，但覆盖范围更广。</p>
+</div>
+
+<h2>何时使用哪个</h2>
+<table>
+<thead>
+<tr><th>场景</th><th>最佳工具</th><th>原因</th></tr>
+</thead>
+<tbody>
+<tr><td>学术文献综述</td><td>NotebookLM</td><td>上传论文，基于特定来源</td></tr>
+<tr><td>快速事实核查</td><td>Perplexity</td><td>即时网络搜索带引用</td></tr>
+<tr><td>公司研究</td><td>Perplexity</td><td>需要当前数据源</td></tr>
+<tr><td>学习教科书</td><td>NotebookLM</td><td>从上传材料中生成学习指南</td></tr>
+<tr><td>突发新闻</td><td>Perplexity</td><td>仅限实时网络搜索</td></tr>
+</tbody>
+</table>
+
+<h2>常见问题</h2>
+
+<h3>问：NotebookLM能访问互联网吗？</h3>
+<p>不能。它严格基于文档。要获取最新信息，使用Perplexity或上传最新的来源。</p>
+
+<h3>问：Perplexity的免费版够用吗？</h3>
+<p>对于基础研究，够用。Pro（20美元/月）解锁更深入的搜索、更高质量的模型和文件上传。</p>
+
+<h3>问：我可以同时使用两者吗？</h3>
+<p>可以，而且这是最佳方案。使用Perplexity进行初步探索，然后将找到的源文件上传到NotebookLM进行深入分析。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "claude-vs-chatgpt-writing-blind-test": {
     content: `<div class="article-meta-banner">
@@ -1966,13 +3781,64 @@ Let me practice and you correct my pronunciation.</code></pre>
 <h3>Q: Would results change with better prompting?</h3>
 <p>Possibly. ChatGPT's output improves with advanced techniques (role setting, style examples). The test was designed for typical user behavior.</p>
 
-<h3>Q: Which should I use for my writing?</h3>
-<p>For tone-sensitive writing (emails, proposals, creative), start with Claude. For technical or structured writing, ChatGPT is strong. Try both with your actual work.</p>
+<h3>问：我应该用哪个来写作？</h3>
+<p>对于注重语气的写作（邮件、方案、创意），从Claude开始。对于技术性或结构化写作，ChatGPT很强。用你的实际工作试试两者。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
+<p><strong>前置要求：</strong> 无——熟悉这两个工具有帮助但不是必需的。</p>
+</div>
+
+<h2>盲测实验</h2>
+
+<p>我们用Claude（Claude 4）和ChatGPT（GPT-5）生成了5个内容：一封商务邮件、一篇博客开头、一个产品描述、一条社交媒体帖子和一个创意故事。我们移除了所有标识性标签，让10位普通人（25-60岁，非技术背景）选择他们更喜欢的版本。</p>
+
+<p>结果非常明显。</p>
+
+<h2>测试1：商务邮件</h2>
+<p><strong>提示词：</strong>给客户写一封邮件，解释由于供应商问题导致项目延迟一周。保持信任。</p>
+<p><strong>胜者：Claude 8/10。</strong>受访者形容Claude的版本"更人性化"，"像是真人写的"。ChatGPT的版本"更正式"，"听起来像模板"。</p>
+
+<h2>测试2：博客引言</h2>
+<p><strong>提示词：</strong>"为什么你的晨间习惯正在破坏你的生产力"的前3段。</p>
+<p><strong>胜者：Claude 7/10。</strong>Claude以一个具体场景开头（"你按了三次贪睡按钮……"）。ChatGPT以一个概括性陈述开头。读者更喜欢具体的开头。</p>
+
+<h2>测试3：产品描述</h2>
+<p><strong>提示词：</strong>带果汁槽的竹制砧板的100字描述。</p>
+<p><strong>胜者：平局（5/5）。</strong>两者都写出了合格描述。Claude更描述性，ChatGPT更注重功能。风格不同，质量相当。</p>
+
+<h2>测试4：社交媒体帖子</h2>
+<p><strong>提示词：</strong>宣布新移动应用功能的4条推特帖子。</p>
+<p><strong>胜者：Claude 6/10。</strong>Claude的帖子有更清晰的叙事线。ChatGPT的像是单独的公告。</p>
+
+<h2>测试5：创意故事</h2>
+<p><strong>提示词：</strong>关于图书管理员发现隐藏房间的150字故事，带意外转折。</p>
+<p><strong>胜者：Claude 9/10。</strong>差距最大的一项。Claude的故事有氛围、具体细节和真正令人意外的结局。ChatGPT的则很通用。</p>
+
+<h2>总体结果</h2>
+<div class="step-card">
+<p><strong>Claude获胜：50票中的35票（70%）。ChatGPT获胜：50票中的15票（30%）。</strong></p>
+</div>
+
+<p>Claude赢得了5项测试中的4项，并在第五项中打平。差距最大的是创意写作，最小的是事实描述。受访者一致对Claude使用了"人性化"、"自然"和"不那么机械化"等词汇。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：这是公平的比较吗？</h3>
+<p>我们使用了Claude 4和GPT-5（各自的旗舰模型）。两者收到了相同的提示词，没有特殊指令或引导。测试反映了真实世界中非专业用户的使用情况，而不是提示词工程技巧。</p>
+
+<h3>问：更好的提示词会改变结果吗？</h3>
+<p>有可能。ChatGPT的输出可以通过高级技巧（角色设定、风格示例）得到改善。测试设计为反映典型用户的行为。</p>
+
+<h3>问：我应该用哪个来写作？</h3>
+<p>对于注重语气的写作（邮件、方案、创意），从Claude开始。对于技术性或结构化写作，ChatGPT很强。用你的实际工作试试两者。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "cursor-vs-copilot-complete-beginner": {
     content: `<div class="article-meta-banner">
@@ -2027,13 +3893,70 @@ Let me practice and you correct my pronunciation.</code></pre>
 <h3>Q: Which has a better free tier for learning?</h3>
 <p>Cursor's free tier (2000 completions + 50 premium requests/month) is more beginner-friendly and includes the chat feature for free.</p>
 
-<h3>Q: Can I switch from Cursor to Copilot later?</h3>
-<p>Yes. Cursor is based on VS Code. You can even install Copilot as an extension inside Cursor.</p>
+<h3>问：以后可以从Cursor切换到Copilot吗？</h3>
+<p>可以。Cursor基于VS Code。你甚至可以在Cursor内部安装Copilot作为扩展。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI对比 · <strong>独立指南</strong></p>
+<p><strong>前置要求：</strong> 无——本文假设你之前从未编程过。</p>
+</div>
+
+<h2>两种不同的AI编程方法</h2>
+
+<p>GitHub Copilot和Cursor是两个最流行的AI编程工具，但它们的工作方式截然不同。Copilot是VS Code的附加插件。Cursor是内置AI的独立编辑器，从底层就为AI而构建。对于完全的初学者来说，这个区别至关重要。</p>
+
+<h2>GitHub Copilot：插件</h2>
+<p>Copilot作为扩展集成到VS Code中。你正常编写代码，Copilot以灰色文本显示补全建议。按Tab键接受。</p>
+
+<p><strong>如何开始：</strong></p>
+<ol>
+<li>从 <a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a> 安装VS Code</li>
+<li>打开扩展（Ctrl+Shift+X），搜索"GitHub Copilot"</li>
+<li>安装并用你的GitHub账户登录</li>
+<li>开始输入代码——Copilot会建议补全</li>
+</ol>
+<p>Copilot有免费版（每月有限补全）和付费版（10美元/月，或包含在GitHub学生包里）。</p>
+
+<h2>Cursor：AI原生编辑器</h2>
+<p>Cursor是VS Code的一个分支，AI深度集成。它不只是自动补全，你可以与AI聊天讨论代码，使用自然语言命令。</p>
+
+<p><strong>如何开始：</strong></p>
+<ol>
+<li>从 <a href="https://cursor.com" target="_blank" rel="noopener">cursor.com</a> 下载</li>
+<li>按 <strong>Ctrl+K</strong> 进行内联编辑——用中文输入"创建一个点击时改变颜色的按钮"</li>
+<li>按 <strong>Ctrl+L</strong> 进行聊天——询问关于代码的问题</li>
+</ol>
+<p>Cursor免费版：每月2000次补全+50次高级请求。Pro：20美元/月。</p>
+
+<h2>哪个更不令人困惑？</h2>
+
+<p><strong>对初学者来说，Cursor胜出。</strong></p>
+<ul>
+<li><strong>无需设置。</strong>安装即可使用。Copilot需要VS Code+扩展+GitHub认证。</li>
+<li><strong>自然语言优先。</strong>按Ctrl+K输入你想要的内容。Copilot需要先输入代码才能提供建议。</li>
+<li><strong>聊天界面。</strong>按Ctrl+L提问，如"为什么这不起作用？"</li>
+<li><strong>项目理解。</strong>Cursor索引整个项目，支持跨文件修改。</li>
+</ul>
+
+<p>使用Cursor，初学者可以通过一个自然语言命令创建整个HTML页面。使用Copilot，你需要先开始编写HTML结构，它才能提供帮助。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：使用这两者需要编程知识吗？</h3>
+<p>基本的电脑技能就够了。两者都能从自然语言生成代码。如果同时学习基本的HTML，你会获得更多价值。</p>
+
+<h3>问：哪个的免费版更适合学习？</h3>
+<p>Cursor的免费版（2000次补全+50次高级请求/月）对初学者更友好，免费包含聊天功能。</p>
+
+<h3>问：以后可以从Cursor切换到Copilot吗？</h3>
+<p>可以。Cursor基于VS Code。你甚至可以在Cursor内部安装Copilot作为扩展。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "gpt5-for-regular-users": {
     content: `<div class="article-meta-banner">
@@ -2080,13 +4003,62 @@ Let me practice and you correct my pronunciation.</code></pre>
 <h3>Q: Do I need new prompts for GPT-5?</h3>
 <p>No. Existing prompts work fine. GPT-5 handles vaguer instructions better than GPT-4o.</p>
 
-<h3>Q: Is GPT-5 a separate app?</h3>
-<p>No. It replaces the existing model in ChatGPT. The model selector now shows GPT-5 instead of GPT-4o for Plus subscribers.</p>
+<h3>问：GPT-5是一个独立的应用吗？</h3>
+<p>不是。它取代了ChatGPT中的现有模型。对于Plus订阅者，模型选择器现在显示GPT-5而不是GPT-4o。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 · <strong>独立分析</strong></p>
+<p><strong>前置要求：</strong> 基本的ChatGPT熟悉度有帮助但不是必需的。</p>
+</div>
+
+<h2>GPT-5对普通用户意味着什么</h2>
+
+<p>GPT-5是OpenAI最新的旗舰模型。与之前专注于开发者指标的升级不同，GPT-5的改进在日常使用中就能看到。以下是对非开发者来说实际变化的内容。</p>
+
+<h2>1. 更少明显的错误</h2>
+<p>GPT-5在推理、数学和事实回忆方面的错误明显少于GPT-4o。内部基准测试显示提高了15-20%。对于普通用户，这意味着在问多步骤问题时需要更少的修正。</p>
+
+<h2>2. 更好的写作（但并非同类最佳）</h2>
+<p>GPT-5的写作比GPT-4o重复更少，语气控制更好。然而，在盲测中，Claude 4在创意和说服性写作方面仍然产生更自然的文本。</p>
+
+<h2>3. 深度研究模式</h2>
+<p>这是你每天都会使用的功能。启用后，GPT-5会花5-10分钟研究你的问题，阅读多个来源，并生成带引用的综合报告。</p>
+
+<pre><code>我需要一台用于照片编辑的新笔记本电脑。预算1500-2000美元。比较2026年屏幕精度、处理速度和构建质量的前3个选项。</code></pre>
+
+<p>GPT-5在深度研究模式下返回一份2000字的分析，包含具体型号比较和当前价格。这真正取代了数小时的手动研究。</p>
+
+<h2>4. 更快、更高效</h2>
+<p>GPT-5在标准响应上比GPT-4更快，同时使用更少的算力（OpenAI声称后端成本降低40%）。对用户来说，这意味着响应更快，在免费版上达到限制前能发送更多消息。</p>
+
+<h2>5. 更好的多模态理解</h2>
+<p>上传手绘示意图的照片，GPT-5将其转换为数字流程图。上传错误消息的截图，获得修复方案。图像理解明显更准确。</p>
+
+<h2>6. 什么没有改变</h2>
+<ul>
+<li>知识截止日期（仍然是2025年初——需要用网络搜索获取当前事件）</li>
+<li>幻觉（减少但未消除）</li>
+<li>图像生成（仍然通过同一管道调用DALL-E）</li>
+<li>定价（免费版有有限的GPT-5，Plus每月20美元无限使用）</li>
+</ul>
+
+<h2>常见问题</h2>
+
+<h3>问：GPT-5在免费版上可用吗？</h3>
+<p>可用，但有数量限制。免费用户大约每5小时可获得10条GPT-5消息。Plus订阅者获得无限访问。</p>
+
+<h3>问：GPT-5需要新的提示词吗？</h3>
+<p>不需要。现有的提示词完全可以正常工作。GPT-5处理模糊指令比GPT-4o更好。</p>
+
+<h3>问：GPT-5是一个独立的应用吗？</h3>
+<p>不是。它取代了ChatGPT中的现有模型。对于Plus订阅者，模型选择器现在显示GPT-5而不是GPT-4o。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "open-source-ai-models-run-on-laptop": {
     content: `<div class="article-meta-banner">
@@ -2150,13 +4122,79 @@ ollama --version</code></pre>
 <h3>Q: Do they work offline?</h3>
 <p>Yes. Once downloaded, all models run entirely offline. No data sent to any server.</p>
 
-<h3>Q: Can local models replace ChatGPT?</h3>
-<p>For 70% of daily tasks, yes. For complex reasoning or creative writing, frontier cloud models remain noticeably better. Think of local models as free, private, offline for everyday use.</p>
+<h3>问：本地模型能替代ChatGPT吗？</h3>
+<p>对于70%的日常任务，可以。对于复杂推理或创意写作，前沿云模型仍然明显更好。把本地模型看作日常使用中免费、私密、离线的选择。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 · <strong>独立指南</strong></p>
+<p><strong>前置要求：</strong> 熟悉基本终端命令。建议使用8GB+内存的笔记本电脑。</p>
+</div>
+
+<h2>为什么要在本地运行AI？</h2>
+
+<p>云端AI（ChatGPT、Claude）功能强大，但也有缺点：隐私问题、依赖网络、订阅成本和无法定制。在笔记本电脑上运行开源模型给你带来隐私、离线访问、零持续成本和可定制性。你只需要适合你硬件的正确模型。</p>
+
+<h2>开始之前：安装Ollama</h2>
+<p>Ollama是运行本地模型最简单的方式。它处理下载、模型管理，并提供简单的CLI。</p>
+
+<pre><code># 安装Ollama（Mac/Linux）
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows：从 https://ollama.com/download/windows 下载
+
+# 验证
+ollama --version</code></pre>
+
+<h2>模型1：Llama 3.2 3B（最适合大多数笔记本电脑）</h2>
+<p><strong>3B参数 | 4 GB内存 | CPU上快速运行</strong></p>
+<p>Meta的Llama 3.2 3B处理问答、摘要、头脑风暴和基本写作。不如GPT-4强大，但在日常任务中表现出乎意料地好。</p>
+<pre><code>ollama run llama3.2:3b</code></pre>
+
+<h2>模型2：Llama 3.1 8B（能力更强）</h2>
+<p><strong>8B参数 | 8 GB内存 | CPU上运行良好，GPU上快速</strong></p>
+<p>在许多基准测试中达到或超过GPT-3.5。处理复杂推理、编程和写作。在16GB的无GPU笔记本电脑上，预计速度为5-10 token/秒。</p>
+<pre><code>ollama run llama3.1:8b</code></pre>
+
+<h2>模型3：Qwen2.5 7B（最适合编程）</h2>
+<p><strong>7B参数 | 6 GB内存</strong></p>
+<p>阿里的Qwen2.5在编程和数学方面略优于Llama。同时也很好地支持多语言任务。</p>
+<pre><code>ollama run qwen2.5:7b</code></pre>
+
+<h2>模型4：Phi-3.5 3.8B（最高效）</h2>
+<p><strong>3.8B参数 | 3 GB内存 | 即使在旧笔记本电脑上也非常快</strong></p>
+<p>Microsoft的Phi-3.5使用高质量的精选训练数据。尽管体积小，但在推理方面可以与体积大两倍的模型竞争。适合8GB内存的笔记本电脑。</p>
+<pre><code>ollama run phi3.5:3.8b</code></pre>
+
+<h2>性能总结</h2>
+<table>
+<thead>
+<tr><th>模型</th><th>最低内存</th><th>质量</th><th>CPU速度</th><th>最适合</th></tr>
+</thead>
+<tbody>
+<tr><td>Phi-3.5 3.8B</td><td>3 GB</td><td>好</td><td>15-20 tok/s</td><td>旧笔记本电脑</td></tr>
+<tr><td>Llama 3.2 3B</td><td>4 GB</td><td>好</td><td>15-25 tok/s</td><td>通用用途</td></tr>
+<tr><td>Qwen2.5 7B</td><td>6 GB</td><td>很好</td><td>5-10 tok/s</td><td>编程、多语言</td></tr>
+<tr><td>Llama 3.1 8B</td><td>8 GB</td><td>很好</td><td>5-10 tok/s</td><td>推理</td></tr>
+</tbody>
+</table>
+
+<h2>常见问题</h2>
+
+<h3>问：如何将这些用于实际任务？</h3>
+<p>使用Open WebUI（Ollama的浏览器界面）或LM Studio获得类似ChatGPT的体验。Ollama也暴露REST API用于自定义集成。</p>
+
+<h3>问：它们离线工作吗？</h3>
+<p>可以。下载后，所有模型完全离线运行。不会向任何服务器发送数据。</p>
+
+<h3>问：本地模型能替代ChatGPT吗？</h3>
+<p>对于70%的日常任务，可以。对于复杂推理或创意写作，前沿云模型仍然明显更好。把本地模型看作日常使用中免费、私密、离线的选择。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "eu-ai-act-plain-english": {
     content: `<div class="article-meta-banner">
@@ -2205,13 +4243,64 @@ ollama --version</code></pre>
 <h3>Q: Does the Act ban AI in high-risk areas?</h3>
 <p>No. It requires oversight, testing, and documentation. The goal is safe deployment, not prohibition.</p>
 
-<h3>Q: Who enforces the rules?</h3>
-<p>Each EU member state's national AI authority. The European AI Office coordinates across countries.</p>
+<h3>问：谁负责执行这些规则？</h3>
+<p>各欧盟成员国的国家AI主管部门。欧洲AI办公室跨国家协调。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 · <strong>独立指南</strong></p>
+<p><strong>前置要求：</strong> 无——用通俗语言解释，无需法律背景。</p>
+</div>
+
+<h2>欧盟AI法案实际做了什么</h2>
+
+<p>欧盟的AI法案是世界上第一部全面的AI法规。它在2025-2026年间分阶段全面生效，影响你使用的每一个AI工具——即使你不住在欧洲。</p>
+
+<h2>风险金字塔</h2>
+
+<div class="step-card">
+<p><strong>最小风险</strong>（大多数AI工具）：无需额外监管。AI垃圾邮件过滤器、推荐系统、ChatGPT、Claude、Midjourney。必须发布透明度信息。</p>
+</div>
+<div class="step-card">
+<p><strong>有限风险：</strong> 必须披露AI交互。聊天机器人需要明确标注。这就是为什么ChatGPT会说"可能犯错"。</p>
+</div>
+<div class="step-card">
+<p><strong>高风险</strong>（招聘、信贷、医疗、执法）：严格要求。合规评估、人类监督、文档记录。已经生效。</p>
+</div>
+<div class="step-card">
+<p><strong>不可接受风险：</strong> 完全禁止。政府社会信用评分、公共场所实时面部识别（少数例外）、操控性AI。</p>
+</div>
+
+<h2>对你的工具意味着什么</h2>
+
+<p><strong>ChatGPT和Claude：</strong> 均被归类为通用AI。必须公布训练数据摘要、实施版权保护、标注AI生成内容（水印/元数据），并进行系统性风险评估。</p>
+
+<p><strong>Midjourney和图像生成器：</strong> 必须给AI生成的图像加水印，防止非法内容，并披露训练数据来源。Midjourney现在在所有输出中嵌入不可见元数据。</p>
+
+<p><strong>AI招聘：</strong> 系统必须在欧盟数据库中注册。候选人有知情权，知道他们被AI评估，有权要求人工审查，AI在部署前必须通过偏见测试。</p>
+
+<h2>处罚</h2>
+<p>最高罚款可达全球年收入的7%或3500万欧元（以较高者为准）。这推动了整个行业的合规性。</p>
+
+<h2>这会影响非欧盟用户吗？</h2>
+<p>间接影响，是的。公司在全球范围内实施变更，而不是维护独立的系统。透明度标签、偏见测试和安全措施惠及所有用户。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：法案会让AI变得更差吗？</h3>
+<p>大多数情况下不会。透明度要求只是用户体验的小改动。主要影响的是构建AI的公司，而不是用户。</p>
+
+<h3>问：法案是否禁止在高风险领域使用AI？</h3>
+<p>不。它要求监督、测试和文档记录。目标是安全部署，而不是禁止。</p>
+
+<h3>问：谁负责执行这些规则？</h3>
+<p>各欧盟成员国的国家AI主管部门。欧洲AI办公室跨国家协调。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "ai-jobs-that-didnt-exist-3-years-ago": {
     content: `<div class="article-meta-banner">
@@ -2254,13 +4343,58 @@ ollama --version</code></pre>
 <h3>Q: Are these roles stable or temporary?</h3>
 <p>The roles will evolve but the underlying need for AI-savvy specialists grows. Titles may change but the skillset is increasingly valuable.</p>
 
-<h3>Q: How do I start?</h3>
-<p>Use AI tools daily for real work. Build a portfolio of prompts, workflows, or edited content. Practical examples matter more than certificates.</p>
+<h3>问：我该如何开始？</h3>
+<p>每天在实际工作中使用AI工具。建立提示词、工作流程或编辑内容的作品集。实际案例比证书更重要。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 · <strong>独立分析</strong></p>
+<p><strong>前置要求：</strong> 无——为任何对AI相关职位感兴趣的人提供的职业信息。</p>
+</div>
+
+<h2>新的AI职业分类</h2>
+
+<p>三年前，"提示词工程师"还是一个笑话。现在它是一个真实的职业，有真实的薪水。以下是AI催生的最重要的职位、它们实际做什么，以及2026年的薪酬水平。</p>
+
+<h2>1. 提示词工程师</h2>
+<p>编写和测试提示词以优化AI输出。开发提示词库并记录有效模式。</p>
+<p><strong>薪资：</strong>80,000 - 175,000美元 · <strong>技能：</strong>清晰的写作、系统性测试、理解LLM行为。编程有帮助但不是必需的。</p>
+
+<h2>2. AI内容编辑</h2>
+<p>编辑和完善AI生成的内容，确保准确性、语气和品牌语调。使用AI大规模生成内容的公司发现，人工编辑不可或缺。</p>
+<p><strong>薪资：</strong>55,000 - 95,000美元 · <strong>技能：</strong>强大的编辑能力、幻觉检测、SEO知识。</p>
+
+<h2>3. AI工作流程顾问</h2>
+<p>帮助企业将AI集成到现有流程中。审计当前工作流程，推荐工具，设计实施方案。</p>
+<p><strong>薪资：</strong>90,000 - 180,000美元（作为独立顾问150-400美元/小时） · <strong>技能：</strong>流程分析、变革管理、行业专长。</p>
+
+<h2>4. AI安全与合规官</h2>
+<p>确保AI系统安全、无偏见且符合法规要求。运行红队测试并管理法规文档。</p>
+<p><strong>薪资：</strong>120,000 - 220,000美元 · <strong>技能：</strong>风险评估、法规知识（欧盟AI法案、GDPR）、AI系统理解。</p>
+
+<h2>5. 微调专家</h2>
+<p>获取基础模型并在领域特定数据上进行微调。律师事务所需要一个在合同法上微调的模型；医疗公司需要符合FDA监管的微调模型。</p>
+<p><strong>薪资：</strong>130,000 - 200,000美元 · <strong>技能：</strong>Python、机器学习基础、数据策展、LlamaFactory/Axolotl经验。</p>
+
+<h2>共同点</h2>
+<p>所有这些角色中最有价值的组合是<strong>领域专长+AI素养</strong>。没有行业经验的纯AI知识不如两者结合有价值。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：我需要计算机科学学位吗？</h3>
+<p>大多数职位不需要。提示词工程师、内容编辑和工作流程顾问不要求CS学位。</p>
+
+<h3>问：这些职位是稳定的还是暂时的？</h3>
+<p>职位会演变，但对懂AI的专业人士的根本需求在增长。职位名称可能会变化，但这些技能越来越有价值。</p>
+
+<h3>问：我该如何开始？</h3>
+<p>每天在实际工作中使用AI工具。建立提示词、工作流程或编辑内容的作品集。实际案例比证书更重要。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
   "apple-intelligence-6-months-later": {
     content: `<div class="article-meta-banner">
@@ -2311,13 +4445,66 @@ ollama --version</code></pre>
 <h3>Q: Does it require a subscription?</h3>
 <p>No. It is free with supported devices. Cost is built into hardware.</p>
 
-<h3>Q: Does Apple send my data to the cloud?</h3>
-<p>Most processing is on-device. Complex requests use Private Cloud Compute &mdash; Apple silicon servers that process without storing data. Apple cannot access your data.</p>
+<h3>问：Apple会把我的数据发送到云端吗？</h3>
+<p>大多数处理在设备上进行。复杂请求使用Private Cloud Compute——Apple芯片服务器，处理时不存储数据。Apple无法访问你的数据。</p>
 
 <div class="next-step">
-<p><strong>End of standalone article.</strong> <a href="/learn">Browse all learning paths &rarr;</a></p>
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 · <strong>独立分析</strong></p>
+<p><strong>前置要求：</strong> 拥有iOS 18.2+的iPhone有助于理解，但并非跟随分析所必需。</p>
+</div>
+
+<h2>实际交付了什么 vs 承诺了什么</h2>
+
+<p>在WWDC 2024上，Apple宣布Apple Intelligence作为一个全面的AI系统。推出过程在2025-2026年间分阶段进行。以下是实际能用的功能和仍然缺失的功能。</p>
+
+<h2>已推出的功能</h2>
+
+<h3>写作工具（iOS 18.1，2025年10月）</h3>
+<p>系统级的校对、重写和摘要功能，适用于任何应用。长按选中文本，选择写作工具，从重写、校对、友好、专业、简洁或摘要中选择。<strong>状态：</strong>套件中最有用的功能。在创意重写方面不如Claude，但系统级集成无敌。</p>
+
+<h3>通知摘要（iOS 18.1）</h3>
+<p>AI将堆叠的通知总结为可消化的预览。<strong>状态：</strong>运行良好。真正减少了通知疲劳。准确率约90%。</p>
+
+<h3>Genmoji（iOS 18.2，2025年12月）</h3>
+<p>从文本创建自定义表情符号。输入"戴太阳镜的微笑猫"，它在设备上生成。<strong>状态：</strong>完全可用，有趣，保护隐私。</p>
+
+<h3>Image Playground（iOS 18.2）</h3>
+<p>Apple的图像生成器，三种风格：动画、插画、素描。<strong>状态：</strong>已推出但令人失望。质量落后于Midjourney和DALL-E。</p>
+
+<h2>延迟或部分推出的功能</h2>
+
+<h3>Siri 2.0</h3>
+<p><strong>承诺：</strong>屏幕感知、个人上下文、跨应用操作。<strong>实际：</strong>在iOS 18.3（2026年1月）推出，延迟3个月。屏幕感知仅在Apple原生应用中有效。第三方应用集成很少。</p>
+
+<h3>ChatGPT集成</h3>
+<p><strong>承诺：</strong>Siri将复杂问题转交给ChatGPT。<strong>实际：</strong>已推出但操作繁琐。每次转交都需要手动启用。ChatGPT在单独的视图中打开。</p>
+
+<h2>仍缺失的功能</h2>
+<ul>
+<li><strong>语义照片搜索：</strong>查找"我戴着红帽子的照片"仍处于有限测试阶段，准确率低于Google Photos。</li>
+<li><strong>扩展语言支持：</strong>首发仅支持美式英语。欧洲法语和德语已推出。西班牙语、中文、阿拉伯语仍"即将推出"。</li>
+</ul>
+
+<h2>总体评价</h2>
+<p>Apple Intelligence有用但不具变革性。写作工具和通知摘要是真正的日常福利。Image Playground和Siri 2.0落后于竞品。隐私优先的做法值得称赞，但限制了能力。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：哪些iPhone支持Apple Intelligence？</h3>
+<p>iPhone 15 Pro、15 Pro Max和所有iPhone 16系列。需要A17 Pro芯片或更新型号。</p>
+
+<h3>问：需要订阅吗？</h3>
+<p>不需要。支持设备免费使用。成本已包含在硬件中。</p>
+
+<h3>问：Apple会把我的数据发送到云端吗？</h3>
+<p>大多数处理在设备上进行。复杂请求使用Private Cloud Compute——Apple芯片服务器，处理时不存储数据。Apple无法访问你的数据。</p>
+
+<div class="next-step">
+<p><strong>独立文章结束。</strong> <a href="/learn">浏览所有学习路径 →</a></p>
+</div>`,
   },
 
   // ====== Claude Code Path: Part 2 of 4 (NEW SLUG) ======
@@ -2449,13 +4636,145 @@ claude --verbose</code></pre>
 <h3>Q: Can I have different settings for different projects?</h3>
 <p>Yes. Project-level settings in <code>.claude/settings.json</code> override user-level settings in <code>~/.claude/settings.json</code>. This lets you have strict permissions for work projects and relaxed settings for personal projects.</p>
 
-<h3>Q: Is there a risk with MCP servers?</h3>
-<p>Yes. MCP servers have access to whatever systems they connect to (databases, APIs, file systems). Only install MCP servers from trusted sources. Review what permissions each server requests before installing.</p>
+<h3>问：MCP服务器有风险吗？</h3>
+<p>有。MCP服务器可以访问它们连接的任何系统（数据库、API、文件系统）。只从可信来源安装MCP服务器。在安装前检查每个服务器请求的权限。</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/claude-code-in-action">Part 3: Claude Code in Action: Building a Real Project Step by Step &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">第3部分：Claude Code实战：逐步构建真实项目 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> Claude Code · <strong>第2部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/claude-code-install-setup">第1部分：Claude Code已安装并可运行</a>——你需要在终端中能使用 <code>claude</code> 命令。</p>
+</div>
+
+<h2>超越基础：配置Claude Code</h2>
+
+<p>在第1部分中，你让Claude Code运行起来了。现在是时候为实际工作配置它了。Claude Code有几个配置层，控制它的行为、可以访问的工具以及如何与你的项目交互。</p>
+
+<h2>三层配置体系</h2>
+
+<p>Claude Code从三个位置读取设置，优先级如下：</p>
+
+<ol>
+<li><strong>项目级</strong>（项目中的<code>.claude/settings.json</code>）——覆盖其他所有</li>
+<li><strong>用户级</strong>（<code>~/.claude/settings.json</code>）——适用于你所有项目</li>
+<li><strong>环境变量</strong>——API密钥、代理设置、功能标志</li>
+</ol>
+
+<h2>设置Claude配置文件</h2>
+
+<p>创建一个项目级设置文件来控制Claude Code在你特定项目中的行为：</p>
+
+<pre><code># 在项目根目录创建.claude目录
+mkdir -p .claude
+
+# 创建设置文件
+cat > .claude/settings.json << 'EOF'
+{
+  "permissions": {
+    "allow": ["bash", "read", "edit", "glob", "grep"],
+    "deny": []
+  },
+  "model": {
+    "name": "claude-sonnet-4-20250514",
+    "maxTokens": 8192,
+    "temperature": 0.3
+  }
+}
+EOF</code></pre>
+
+<h2>MCP工具：扩展Claude Code的能力</h2>
+
+<p>MCP（Model Context Protocol）是Claude Code连接到外部工具和数据源的方式。它可以通过MCP服务器访问数据库、API、文件系统等。</p>
+
+<p>要添加MCP工具，编辑项目中的<code>.claude/settings.json</code>并添加<code>mcpServers</code>部分：</p>
+
+<pre><code>{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "your_github_pat_here"
+      }
+    }
+  }
+}</code></pre>
+
+<p>流行的MCP服务器包括：</p>
+<ul>
+<li><strong>Filesystem：</strong> 带高级权限的读、写和搜索文件</li>
+<li><strong>GitHub：</strong> 管理仓库、issue、PR和代码审查</li>
+<li><strong>PostgreSQL：</strong> 直接从Claude会话中查询数据库</li>
+<li><strong>Puppeteer：</strong> 用于测试和网页抓取的浏览器自动化</li>
+<li><strong>Slack：</strong> 在Slack频道中发送和读取消息</li>
+</ul>
+
+<h2>API密钥管理最佳实践</h2>
+
+<p>绝不硬编码API密钥在项目文件中。使用环境变量：</p>
+
+<div class="step-card">
+<h3>选项1：.env文件（最简单，适用于单个项目）</h3>
+<pre><code>echo 'ANTHROPIC_API_KEY=sk-ant-***' > .env
+echo '.env' >> .gitignore   # 防止提交密钥</code></pre>
+<p>Claude Code自动读取<code>.env</code>文件（如果存在）。</p>
+</div>
+
+<div class="step-card">
+<h3>选项2：系统环境变量（适用于全局使用）</h3>
+<pre><code># 添加到 ~/.zshrc 或 ~/.bashrc
+export ANTHROPIC_API_KEY="sk-ant-***"
+export ANTHROPIC_BASE_URL="https://api.anthropic.com/v1"</code></pre>
+</div>
+
+<h2>使用.claudeignore控制Claude Code</h2>
+
+<p>类似于<code>.gitignore</code>，<code>.claudeignore</code>文件告诉Claude Code在读取项目时跳过哪些文件：</p>
+
+<pre><code># .claudeignore
+node_modules/
+dist/
+build/
+*.min.js
+*.map
+package-lock.json
+*.log
+.env</code></pre>
+
+<p>这使Claude Code专注于你的源代码，防止它在生成的文件上浪费上下文。</p>
+
+<h2>配置的后续步骤</h2>
+
+<p>尝试这些命令来验证你的配置：</p>
+
+<pre><code># 显示当前配置
+claude config list
+
+# 测试MCP服务器连接
+claude mcp list
+
+# 以详细日志模式启动会话
+claude --verbose</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：MCP和常规工具之间有什么区别？</h3>
+<p>常规工具（read、edit、bash、glob、grep）内置于Claude Code中，默认可用。MCP服务器是外部集成，增加数据库访问、API调用或浏览器控制等功能。你根据项目需要选择安装哪些MCP服务器。</p>
+
+<h3>问：不同项目可以有不同设置吗？</h3>
+<p>可以。<code>.claude/settings.json</code>中的项目级设置覆盖<code>~/.claude/settings.json</code>中的用户级设置。这让你可以为工作项目设置严格的权限，为个人项目设置宽松的设置。</p>
+
+<h3>问：MCP服务器有风险吗？</h3>
+<p>有。MCP服务器可以访问它们连接的任何系统（数据库、API、文件系统）。只从可信来源安装MCP服务器。在安装前检查每个服务器请求的权限。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">第3部分：Claude Code实战：逐步构建真实项目 →</a></p>
+</div>`,
   },
 
   // ====== Claude Code Path: Part 3 of 4 (NEW SLUG) ======
@@ -2552,13 +4871,110 @@ xdg-open index.html  # Linux</code></pre>
 <h3>Q: Will Claude Code overwrite my changes?</h3>
 <p>Claude Code uses git to track changes. Before making modifications, it shows you what it plans to change and asks for confirmation. You can also review changes with <code>git diff</code> before committing. If you reject a change, Claude Code does not apply it.</p>
 
-<h3>Q: Can I use Claude Code with an existing project?</h3>
-<p>Yes. Navigate to any existing project, ensure it has git initialized, and run <code>claude</code>. It reads the full project structure and can start helping immediately. This is where Claude Code shines versus IDE-based tools that only see open files.</p>
+<h3>问：我能在现有项目中使用Claude Code吗？</h3>
+<p>可以。导航到任何现有项目，确保它已初始化git，然后运行<code>claude</code>。它读取完整的项目结构，可以立即开始提供帮助。这是Claude Code相对于仅能看到打开文件的IDE工具的优势所在。</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/claude-code-advanced">Part 4: Claude Code Advanced: Debugging, Refactoring, and Multi-File Workflows &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-advanced">第4部分：Claude Code高级功能：调试、重构和多文件工作流 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> Claude Code · <strong>第3部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/claude-code-install-setup">第1部分</a>（Claude Code已安装）和<a href="/article/claude-code-mcp-configuration">第2部分</a>（MCP工具已配置）。</p>
+</div>
+
+<h2>用Claude Code构建真实项目</h2>
+
+<p>配置Claude Code很有用，但真正的价值来自于用它构建东西。在本文中，我们将构建一个个人书签管理器——一个包含HTML、CSS和JavaScript的功能性Web应用——完全通过Claude Code提示词完成。你不需要手动编写任何代码。</p>
+
+<h2>项目概览</h2>
+<p>我们将构建一个"Link Vault"应用，让你可以保存、标记和搜索书签。它将使用localStorage，因此不需要服务器。最终你将拥有一个可用的单页应用。</p>
+
+<h2>第1步：搭建项目框架</h2>
+<p>创建新目录并启动Claude Code：</p>
+
+<pre><code>mkdir link-vault && cd link-vault
+git init
+claude</code></pre>
+
+<p>Claude Code启动后，给出第一个提示词：</p>
+
+<pre><code>设置一个新的Web项目，包含：index.html、style.css和app.js。
+创建index.html，使用基本的HTML5结构，链接两个文件。
+创建style.css，使用现代深色主题和卡片式布局。
+创建app.js，包含console.log("Link Vault loaded")占位符。
+用package.json初始化npm。</code></pre>
+
+<p>Claude Code会创建所有四个文件。如果你想查看，可以用<code>cat index.html</code>审阅。</p>
+
+<h2>第2步：构建书签表单</h2>
+<p>在同一会话中提示Claude Code：</p>
+
+<pre><code>在app.js中实现：
+1. 一个函数 addBookmark(url, title, tags)，保存到localStorage
+2. 一个函数 getBookmarks()，返回所有已保存的书签
+3. 一个函数 renderBookmarks()，将书签显示为卡片
+4. 在index.html中添加一个表单，包含URL、标题和标签字段
+5. 表单在提交时应调用addBookmark
+
+使用现有的深色主题使其看起来美观。标签应在每张卡片上显示为彩色徽章。</code></pre>
+
+<h2>第3步：添加搜索和筛选</h2>
+<p>现在添加搜索功能：</p>
+
+<pre><code>在app.js中添加：
+1. 在index.html中添加书签网格上方的搜索输入框
+2. 一个 filterBookmarks(query) 函数，匹配标题、URL和标签
+3. 用户输入时实时筛选（使用input事件）
+4. 没有匹配时显示"未找到结果"
+
+另外添加：在每个卡片上添加一个小X按钮来删除书签。
+删除前要求确认。</code></pre>
+
+<h2>第4步：导入和导出</h2>
+<p>添加数据可移植性：</p>
+
+<pre><code>在app.js中添加：
+1. 一个"导出"按钮，将书签下载为JSON文件
+2. 一个"导入"按钮，让用户上传JSON文件
+3. 验证导入的数据（必须有url、title字段）
+4. 显示成功消息，包含导入的书签数量
+
+在书签网格上方添加一个工具栏区来放置这些按钮。</code></pre>
+
+<h2>Claude Code的不同之处</h2>
+<p>注意在这个过程中发生了什么：</p>
+<ul>
+<li>Claude Code读取了所有项目文件，了解现有代码后才做修改</li>
+<li>它保持了HTML、CSS和JS之间一致的风格</li>
+<li>它自动处理了跨文件依赖关系（添加JS期望的CSS类）</li>
+<li>它每次更改都创建了一个git提交（用<code>git log</code>检查）</li>
+<li>当被要求修改现有代码时，它会读取并更新，而不是覆盖</li>
+</ul>
+
+<h2>测试你的应用</h2>
+<pre><code># 在浏览器中打开
+open index.html  # Mac
+# 或
+start index.html  # Windows
+# 或
+xdg-open index.html  # Linux</code></pre>
+
+<p>添加一些书签，搜索它们，导出、删除和导入。应用应该是完全可用的，且没有一行代码是手动编写的。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：Claude Code能处理多大的项目？</h3>
+<p>Claude Code的上下文窗口约为200K token。对于一个有几十个文件的项目，它可以理解完整的结构，但可能需要你指定关注哪些文件。对于大型代码库，使用<code>.claudeignore</code>排除生成的文件和依赖。</p>
+
+<h3>问：Claude Code会覆盖我的更改吗？</h3>
+<p>Claude Code使用git来跟踪更改。在修改之前，它会向你展示它计划更改的内容并请求确认。你也可以在提交前用<code>git diff</code>审查更改。如果你拒绝某个更改，Claude Code不会应用它。</p>
+
+<h3>问：我能在现有项目中使用Claude Code吗？</h3>
+<p>可以。导航到任何现有项目，确保它已初始化git，然后运行<code>claude</code>。它读取完整的项目结构，可以立即开始提供帮助。这是Claude Code相对于仅能看到打开文件的IDE工具的优势所在。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-advanced">第4部分：Claude Code高级功能：调试、重构和多文件工作流 →</a></p>
+</div>`,
   },
 
   // ====== Claude Code Path: Part 4 of 4 (NEW SLUG) ======
@@ -2679,13 +5095,131 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <h3>Q: Can Claude Code work with TypeScript?</h3>
 <p>Yes. Claude Code reads tsconfig.json, understands type definitions, and generates typed code. It handles type errors during refactoring and can fix type mismatches automatically.</p>
 
-<h3>Q: Is Claude Code suitable for production codebases?</h3>
-<p>Yes, with proper review. Always review changes with <code>git diff</code> before committing. For production work, use the <code>--permission</code> flag to require explicit approval for every file change. Start with hobby projects until you are comfortable with the workflow.</p>
+<h3>问：Claude Code适合生产代码库吗？</h3>
+<p>可以，但需要适当的审查。在提交之前，始终用<code>git diff</code>审查更改。对于生产工作，使用<code>--permission</code>标志要求每次文件更改都需明确批准。从小项目开始，直到你熟悉工作流程。</p>
 
 <div class="next-step">
-<p><strong>End of Claude Code learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
+<p><strong>Claude Code学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> Claude Code · <strong>第4部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/claude-code-in-action">第3部分</a>——熟悉Claude Code的基本项目工作流程。</p>
+</div>
+
+<h2>超越基础提示词</h2>
+
+<p>到目前为止，你已经安装了Claude Code，配置了MCP工具，并用提示词构建了一个项目。这最后一篇文章涵盖使Claude Code成为专业开发工具的高级工作流程：调试、重构、多文件操作和bash集成。</p>
+
+<h2>用Claude Code调试</h2>
+
+<p>当你的代码有bug时，描述症状并让Claude Code调查：</p>
+
+<pre><code>我在link-vault中点击导出按钮时遇到了"Uncaught TypeError: Cannot read properties of null"。
+查看app.js并找出什么为null。修复它并解释导致bug的原因。</code></pre>
+
+<p>Claude Code会：</p>
+<ol>
+<li>读取相关的源文件</li>
+<li>追踪错误到根本原因</li>
+<li>提出修复方案并解释</li>
+<li>在你确认后应用修复</li>
+</ol>
+
+<p>对于更难的bug，让Claude Code添加日志：</p>
+
+<pre><code>搜索筛选器工作不正常。在filterBookmarks()的每一步添加console.log语句，
+以便我们追踪问题。先不要改变逻辑，只添加日志。</code></pre>
+
+<p>在浏览器控制台中查看日志，然后根据证据要求修复。</p>
+
+<h2>跨文件重构</h2>
+
+<p>这是Claude Code优于单文件AI工具的地方。一个重构提示词可能看起来像：</p>
+
+<pre><code>将link-vault重构为使用适当的MVC模式：
+1. 在model.js中创建BookmarkModel类（处理localStorage操作）
+2. 在view.js中创建BookmarkView类（处理DOM渲染）
+3. 在controller.js中创建BookmarkController类（处理事件）
+4. 保留app.js作为将所有部分连接起来的入口点
+5. 保持所有现有功能和样式</code></pre>
+
+<p>Claude Code创建新文件、更新现有文件并删除过时的代码——全部在一个操作中完成。用<code>git diff --stat</code>验证更改的完整范围。</p>
+
+<h2>在Claude Code中使用Bash命令</h2>
+
+<p>Claude Code可以直接运行shell命令。这对于设置、测试和部署任务很有用：</p>
+
+<pre><code># 运行测试
+运行npm test并修复所有失败
+
+# 检查常见问题
+在src/目录上运行ESLint并修复所有错误
+
+# 优化图片
+在assets/中查找所有大于100KB的PNG文件并使用pngquant压缩，不损失质量</code></pre>
+
+<p>Claude Code执行命令，读取输出，并根据结果采取行动。对于长时间运行的命令，它会显示进度更新。</p>
+
+<h2>多文件代码审查</h2>
+
+<p>让Claude Code审查整个项目：</p>
+
+<pre><code>审查src/目录中的所有文件，检查：
+1. 潜在bug（空引用、未定义变量、竞态条件）
+2. 安全问题（XSS、SQL注入、泄露的秘密）
+3. 性能问题（不必要的重渲染、内存泄漏）
+4. 代码风格不一致
+5. 缺失的错误处理
+
+提供需要修复的问题的优先级列表。</code></pre>
+
+<p>每个问题包含文件路径、行号、严重程度和建议修复。然后你可以让Claude Code实施具体的修复。</p>
+
+<h2>使用Git历史</h2>
+
+<p>Claude Code可以分析并使用你的git历史：</p>
+
+<pre><code># 审查最近的更改
+按文件分组显示过去一周所有提交的摘要
+
+# 查找bug何时被引入
+搜索git历史，查找"export"函数最后一次被修改的时间
+
+# 压缩最近的提交
+将最近3个提交压缩为一个，附带描述性消息
+
+# 还原特定更改
+为昨天修改了app.js的更改创建一个还原提交</code></pre>
+
+<h2>项目级提示词</h2>
+
+<p>对于持续进行的项目，在<code>.claude/instructions.md</code>中创建项目级指令：</p>
+
+<pre><code># Link Vault项目规则
+
+- 使用原生JavaScript（无框架）
+- 遵循现有的MVC模式
+- 所有新功能必须包含错误处理
+- 使用CSS自定义属性设置颜色和间距
+- 保持函数在30行以内
+- 为所有公共函数编写JSDoc注释</code></pre>
+
+<p>Claude Code在每个会话中读取这个文件，并自动遵循这些指令。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：Claude Code如何处理非常大的重构任务？</h3>
+<p>Claude Code将大任务分解为步骤。它首先向你展示计划，然后逐步执行，每个阶段需要确认。如果某些地方看起来不对，你可以中途停止并要求调整。</p>
+
+<h3>问：Claude Code能处理TypeScript吗？</h3>
+<p>可以。Claude Code读取tsconfig.json，理解类型定义，并生成类型化代码。它在重构期间处理类型错误，并能自动修复类型不匹配。</p>
+
+<h3>问：Claude Code适合生产代码库吗？</h3>
+<p>可以，但需要适当的审查。在提交之前，始终用<code>git diff</code>审查更改。对于生产工作，使用<code>--permission</code>标志要求每次文件更改都需明确批准。从小项目开始，直到你熟悉工作流程。</p>
+
+<div class="next-step">
+<p><strong>Claude Code学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+</div>`,
   },
 
   // ====== AI Image Generation Path: Part 2 of 4 (NEW SLUG) ======
@@ -2777,13 +5311,105 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <h3>Q: Is Adobe Firefly's free tier worth using?</h3>
 <p>For occasional use, yes. You get 25 free generations per month. For regular use, the $5/month subscription is reasonable. Firefly is the cheapest premium AI image generator.</p>
 
-<h3>Q: Which tool produces the most photorealistic images?</h3>
-<p>Midjourney produces the most aesthetically pleasing photorealistic images. DALL-E 3 produces more accurately descriptive images but with less artistic flair. Firefly is strongest at editing existing photos rather than creating new ones from scratch.</p>
+<h3>问：哪个工具生成最逼真的图像？</h3>
+<p>Midjourney生成最美观逼真的图像。DALL-E 3生成更精确描述性的图像，但艺术感较弱。Firefly最擅长编辑现有照片，而不是从头创建新图像。</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-image-prompt-guide">Part 3: AI Image Prompt Engineering: The Complete Parameter Guide &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-prompt-guide">第3部分：AI图像提示词工程：完整参数指南 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI图像生成 · <strong>第2部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/free-ai-image-generators-same-prompt-test">第1部分：Midjourney基础</a>——熟悉基本的图像生成概念。</p>
+</div>
+
+<h2>基于浏览器的AI图像工具</h2>
+
+<p>Midjourney需要Discord且有学习曲线。DALL-E 3和Adobe Firefly在标准Web浏览器中运行，界面熟悉。这使得它们对初学者更友好，更适合文本渲染和照片编辑等特定用例。</p>
+
+<h2>DALL-E 3：ChatGPT集成</h2>
+
+<p>DALL-E 3是OpenAI的图像生成模型，通过ChatGPT Plus（20美元/月）使用。与Midjourney的Discord界面不同，DALL-E 3有一个简单的Web界面，你输入描述即可获得图像。</p>
+
+<p><strong>如何访问：</strong></p>
+<ol>
+<li>在 <a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a> 订阅ChatGPT Plus</li>
+<li>打开新聊天，从模型选择器中选择GPT-4o（带DALL-E）</li>
+<li>用自然语言输入你的图像描述——无需特殊语法</li>
+<li>ChatGPT在对话中内联生成图像</li>
+</ol>
+
+<p><strong>DALL-E 3的优势：</strong></p>
+<ul>
+<li><strong>文本渲染：</strong>当你的图像中需要文字（写着"盛大开业"的招牌、带标题的书籍封面）时，DALL-E 3是最佳工具。Midjourney在文字处理方面明显困难。</li>
+<li><strong>遵循提示词：</strong>DALL-E 3准确遵循详细指令。如果你指定"三只猫和一只狗坐在桌旁"，你会得到精确的数量。</li>
+<li><strong>自然语言：</strong>你不需要特殊的参数或语法。写平实的英文描述即可。</li>
+<li><strong>编辑：</strong>DALL-E 3支持内补（选择区域并重新生成）和外延（将图像扩展到边界之外）。</li>
+</ul>
+
+<p><strong>局限性：</strong></p>
+<ul>
+<li>对于风格化或审美图像，艺术质量低于Midjourney</li>
+<li>需要ChatGPT Plus订阅（20美元/月），而Midjourney是10美元/月</li>
+<li>对构图、光线和特定风格的控制较少</li>
+<li>分辨率通常为1024x1024（宽屏最高1792x1024）</li>
+</ul>
+
+<h2>Adobe Firefly：设计师的工具</h2>
+
+<p>Adobe Firefly是Adobe的AI图像生成器，集成到Creative Cloud中。它为已经使用Photoshop、Illustrator或其他Adobe工具的人设计。</p>
+
+<p><strong>如何访问：</strong></p>
+<ol>
+<li>访问 <a href="https://firefly.adobe.com" target="_blank" rel="noopener">firefly.adobe.com</a>（有免费版）</li>
+<li>独立订阅为5美元/月，或包含在Creative Cloud中</li>
+<li>从文生图、生成式填充、文字效果或其他模式中选择</li>
+</ol>
+
+<p><strong>Firefly的优势：</strong></p>
+<ul>
+<li><strong>商业安全：</strong>Firefly在Adobe Stock图像和公开许可的内容上训练。Adobe为商业使用提供法律赔偿。</li>
+<li><strong>生成式填充：</strong>Photoshop集成无与伦比。在任何照片中选择一个区域，描述你想要填充的内容。</li>
+<li><strong>文字效果：</strong>用自然语言提示词为文字应用样式和纹理（金箔、木纹、霓虹光）。</li>
+<li><strong>照片编辑：</strong>生成式扩展、背景去除和图像放大内置其中。</li>
+</ul>
+
+<p><strong>局限性：</strong></p>
+<ul>
+<li>艺术风格的范围比Midjourney小</li>
+<li>免费版每月限制25次生成</li>
+<li>社区和第三方资源少于Midjourney</li>
+</ul>
+
+<h2>你应该使用哪个？</h2>
+
+<table>
+<thead>
+<tr><th>用途</th><th>最佳工具</th><th>原因</th></tr>
+</thead>
+<tbody>
+<tr><td>社交媒体视觉</td><td>DALL-E 3</td><td>快速、自然提示词、种类丰富</td></tr>
+<tr><td>带文字的产品图</td><td>DALL-E 3</td><td>最佳文本渲染</td></tr>
+<tr><td>照片编辑/修图</td><td>Firefly</td><td>Photoshop中的生成式填充</td></tr>
+<tr><td>商业库存图片</td><td>Firefly</td><td>许可训练数据、赔偿保障</td></tr>
+<tr><td>艺术/概念图</td><td>Midjourney</td><td>卓越的审美质量</td></tr>
+<tr><td>书籍封面、专辑封面</td><td>Midjourney</td><td>最佳构图和风格多样性</td></tr>
+</tbody>
+</table>
+
+<h2>常见问题</h2>
+
+<h3>问：没有ChatGPT Plus能用DALL-E 3吗？</h3>
+<p>不能。DALL-E 3只能通过ChatGPT Plus（20美元/月）和OpenAI的API（按使用付费）使用。没有独立的DALL-E 3网站或免费版。</p>
+
+<h3>问：Adobe Firefly的免费版值得使用吗？</h3>
+<p>对于偶尔使用，值得。你每月获得25次免费生成。对于经常使用，5美元/月的订阅是合理的。Firefly是最便宜的高级AI图像生成器。</p>
+
+<h3>问：哪个工具生成最逼真的图像？</h3>
+<p>Midjourney生成最美观逼真的图像。DALL-E 3生成更精确描述性的图像，但艺术感较弱。Firefly最擅长编辑现有照片，而不是从头创建新图像。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-image-prompt-guide">第3部分：AI图像提示词工程：完整参数指南 →</a></p>
+</div>`,
   },
 
   // ====== AI Image Generation Path: Part 3 of 4 (NEW SLUG) ======
@@ -2892,13 +5518,122 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: What is "seed" and should I use it?</h3>
 <p>A seed is a number that determines the random starting point for image generation. Using the same seed + same prompt produces the same image. Useful when you find a composition you like and want to tweak the prompt while keeping the general layout. In Midjourney, add <code>--seed 12345</code>. In DALL-E, seeds are not exposed to users.</p>
 
-<h3>Q: How do I iterate on a specific image?</h3>
-<p>Midjourney: Use V buttons to create variations, then U to upscale the best one. Use <code>--seed</code> with modified prompts. DALL-E 3: Generate variations by asking ChatGPT "Make 4 variations of this image" or upload a generated image and ask for edits based on the existing composition.</p>
+<h3>问：如何在特定图像上进行迭代？</h3>
+<p>Midjourney：使用V按钮创建变体，然后使用U放大最佳的那个。使用修改后的提示词搭配<code>--seed</code>。DALL-E 3：让ChatGPT"生成这张图像的4个变体"或上传已生成的图像并基于现有构图要求编辑。</p>
 
 <div class="next-step">
-<p><strong>Next in this path:</strong> <a href="/article/ai-image-commercial-licensing">Part 4: AI Images for Commercial Use: Licensing, Copyright, and Best Practices &rarr;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/ai-image-commercial-licensing">第4部分：商业用AI图像：许可、版权和最佳实践 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI图像生成 · <strong>第3部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/ai-image-dalle-firefly">第2部分</a>——至少使用过一个AI图像生成器的经验。</p>
+</div>
+
+<h2>超越简单提示词</h2>
+
+<p>输入"美丽的风景"得到的是平庸的结果。通用AI图像和令人印象深刻的作品之间的区别在于提示词结构和参数知识。本指南涵盖跨Midjourney、DALL-E 3和Firefly编写有效图像提示词的完整工具集。</p>
+
+<h2>通用提示词结构</h2>
+
+<p>每个好的AI图像提示词都遵循这个结构，无论使用什么工具：</p>
+
+<pre><code>[主体] + [动作/场景] + [环境] + [光线] + [风格] + [构图] + [技术规格]</code></pre>
+
+<p>应用于Midjourney的示例：</p>
+<pre><code>/imagine prompt:
+黄昏时分站在岩石露头上的孤狼
+背景是雾蒙蒙的松树林
+戏剧性的侧光投下长长的阴影
+电影感、照片级真实感、国家地理风格
+低角度拍摄、三分法构图
+--ar 16:9 --v 6 --stylize 300</code></pre>
+
+<p>每个组件都有特定的用途，省略任何一个都会让AI做出自己的（通常是平庸的）选择。</p>
+
+<h2>主体描述</h2>
+
+<p>具体描述你的主体：</p>
+
+<div class="step-card">
+<p><strong>弱：</strong>"一个人"</p>
+<p><strong>强：</strong>"一位60多岁的女性，白发，戴老花镜，穿着绞花编织的米色毛衣，拿着陶瓷咖啡杯，温暖的笑容，可见眼角鱼尾纹"</p>
+</div>
+
+<p>AI没有"有趣"的概念——它精确生成你描述的内容。具体的描述产生具体的结果。</p>
+
+<h2>风格修饰符（跨工具）</h2>
+
+<table>
+<thead>
+<tr><th>风格</th><th>Midjourney参数</th><th>DALL-E/Firefly方法</th></tr>
+</thead>
+<tbody>
+<tr><td>照片级真实感</td><td><code>--stylize 100</code> + "photorealistic"</td><td>"照片级真实感、8K、单反、f/2.8"</td></tr>
+<tr><td>油画</td><td><code>--stylize 600</code> + "布面油画"</td><td>"油画、厚涂技法"</td></tr>
+<tr><td>动漫/漫画</td><td>--niji 6（独立模型）</td><td>"动漫风格、吉卜力工作室影响"</td></tr>
+<tr><td>3D渲染</td><td><code>--stylize 400</code> + "octane渲染"</td><td>"3D渲染、Blender、Cycles"</td></tr>
+<tr><td>水彩</td><td><code>--stylize 700</code> + "水彩"</td><td>"水彩画、松散风格"</td></tr>
+<tr><td>线稿</td><td><code>--stylize 50</code> + "线描"</td><td>"黑白线稿"</td></tr>
+</tbody>
+</table>
+
+<h2>光线和氛围</h2>
+<p>光线将平淡的图像转变为引人入胜的作品。在每个提示词中包含以下之一：</p>
+<ul>
+<li><strong>黄金时刻：</strong>温暖的日落/日出光线</li>
+<li><strong>电影光线：</strong>戏剧性的阴影、轮廓光</li>
+<li><strong>影棚柔光箱：</strong>均匀、专业的产品光线</li>
+<li><strong>霓虹/黑色电影：</strong>彩色人造光、黑暗氛围</li>
+<li><strong>逆光：</strong>主体背后的光源</li>
+<li><strong>体积光：</strong>可见的光束（上帝光）</li>
+</ul>
+
+<h2>构图和摄影术语</h2>
+
+<p>添加摄影术语能显著改善结果：</p>
+<ul>
+<li><strong>镜头类型：</strong>"特写"、"广角"、"航拍"、"极端特写"、"微距"</li>
+<li><strong>镜头：</strong>"35mm"、"85mm人像镜头"、"鱼眼"、"移轴"</li>
+<li><strong>角度：</strong>"低角度"、"鸟瞰视角"、"荷兰角"</li>
+<li><strong>构图：</strong>"三分法"、"对称"、"引导线"</li>
+</ul>
+
+<h2>Midjourney特定参数深度解析</h2>
+
+<div class="step-card">
+<table>
+<thead>
+<tr><th>参数</th><th>范围</th><th>高值效果</th></tr>
+</thead>
+<tbody>
+<tr><td><code>--stylize</code></td><td>0-1000</td><td>高 = 更多艺术诠释，更少直白</td></tr>
+<tr><td><code>--chaos</code></td><td>0-100</td><td>高 = 更多样化、不可预测的结果</td></tr>
+<tr><td><code>--weird</code></td><td>0-3000</td><td>高 = 超现实、奇特的构图</td></tr>
+<tr><td><code>--iw</code></td><td>0-3</td><td>参考图像与文本提示词的权重</td></tr>
+<tr><td><code>--no</code></td><td>文本</td><td>反向提示词：排除特定元素</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>高级参数示例：</p>
+<pre><code>/imagine prompt: futuristic cyberpunk city street at night, neon reflections
+in wet pavement, flying cars in distance --ar 21:9 --chaos 30
+--stylize 600 --no people, garbage, graffiti --v 6</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>问：DALL-E 3支持反向提示词吗？</h3>
+<p>不直接支持。DALL-E 3没有像Midjourney那样的<code>--no</code>参数。相反，你在提示词中包含你不想要的内容："一个没有岛台、没有不锈钢电器的现代厨房。"这种方法有效，但不如Midjourney的专用反向提示词可靠。</p>
+
+<h3>问：什么是"seed"，我该使用它吗？</h3>
+<p>Seed是决定图像生成随机起点的数字。使用相同的seed+相同的提示词会产生相同的图像。当你找到一个喜欢的构图并希望在保持整体布局的同时调整提示词时很有用。在Midjourney中，添加<code>--seed 12345</code>。在DALL-E中，seed不对用户开放。</p>
+
+<h3>问：如何在特定图像上进行迭代？</h3>
+<p>Midjourney：使用V按钮创建变体，然后使用U放大最佳的那个。使用修改后的提示词搭配<code>--seed</code>。DALL-E 3：让ChatGPT"生成这张图像的4个变体"或上传已生成的图像并基于现有构图要求编辑。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-image-commercial-licensing">第4部分：商业用AI图像：许可、版权和最佳实践 →</a></p>
+</div>`,
   },
 
   // ====== AI Image Generation Path: Part 4 of 4 (NEW SLUG) ======
@@ -2978,12 +5713,92 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: Does Midjourney's "all rights" license mean I own the copyright?</h3>
 <p>No. Midjourney grants you broad usage rights but cannot grant copyright because copyright requires human authorship. "All rights" in Midjourney's terms means you can use the images for almost any purpose, not that you hold copyright.</p>
 
-<h3>Q: What happens if a training data lawsuit succeeds against an AI company?</h3>
-<p>This is an active legal area. If courts rule that training on copyrighted images without permission is infringement, it could affect the legal status of images generated by those models. For maximum safety, use Firefly (licensed training data + indemnification) for critical commercial projects. For low-risk uses, existing tools are effectively safe.</p>
+<h3>问：如果针对AI公司的训练数据诉讼成功了会怎样？</h3>
+<p>这是一个活跃的法律领域。如果法院裁定在未经许可的情况下对受版权保护的图像进行训练构成侵权，这可能会影响这些模型生成的图像的法律地位。为了最大安全性，在关键商业项目中使用Firefly（许可训练数据+赔偿保障）。对于低风险用途，现有工具实际上是安全的。</p>
 
 <div class="next-step">
-<p><strong>End of AI Image Generation learning path.</strong> <a href="/learn">Explore more learning paths &rarr;</a></p>
+<p><strong>AI图像生成学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
 </div>`,
-    contentZh: zh,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>学习路径：</strong> AI图像生成 · <strong>第4部分（共4部分）</strong></p>
+<p><strong>前置要求：</strong> <a href="/article/ai-image-prompt-guide">第3部分</a>——本文涵盖在商业项目中使用AI生成图像的法律和许可考量。</p>
+</div>
+
+<h2>2026年的法律环境</h2>
+
+<p>将AI生成的图像用于商业目的涉及三个独立的问题：版权归属、平台许可条款和法律风险。答案因平台而异，并且仍在通过法院和法规不断演变。以下是你需要知道的，以便在商业项目中安全使用AI图像。</p>
+
+<h2>问题1：谁拥有版权？</h2>
+
+<p>美国版权局采取的立场是，AI生成的作品不受版权保护，因为它们缺乏人类创作性。这意味着：</p>
+<ul>
+<li>你不能为AI生成的图像注册版权</li>
+<li>你不能阻止他人使用相同或相似的AI生成图像</li>
+<li>如果你的产品包装使用AI图像，竞争对手可以合法使用非常相似的图像</li>
+</ul>
+
+<p>然而，如果你大幅修改AI输出（合成、手动编辑、添加人工创建的元素），你的修改可能是受版权保护的。一个实用的指导原则：如果人类做出的创作性选择明显改变了输出，这些更改可以受到保护。</p>
+
+<p>一些国家（英国、爱尔兰）有不同的规则，可能允许计算机生成的作品获得版权。如果你在美国以外运营，请咨询当地指南。</p>
+
+<h2>问题2：平台许可怎么说？</h2>
+
+<div class="step-card">
+<p><strong>Midjourney</strong>（10美元/月）：你拥有你生成的图像。Midjourney授予付费订阅者"所有权利"，包括商业使用。然而，Midjourney图像默认在社区画廊中公开可见，除非你支付Pro计划（30美元/月）获得隐身模式。免费试用图像根据Creative Commons非商业许可授权。</p>
+</div>
+
+<div class="step-card">
+<p><strong>DALL-E 3</strong>（通过ChatGPT Plus）：OpenAI授予你生成图像的完全所有权，可用于任何目的，包括商业用途。DALL-E图像默认不公开可见。OpenAI的条款明确说明你可以将图像用于"任何合法目的"。</p>
+</div>
+
+<div class="step-card">
+<p><strong>Adobe Firefly</strong>（5美元/月）：Firefly提供最强的商业保护。Adobe在许可内容（Adobe Stock、公开许可的作品）上训练Firefly，并提供法律赔偿：如果有人起诉你声称你的Firefly生成图像侵犯了他们的版权，Adobe将为你辩护。这在AI图像生成器中是独一无二的。</p>
+</div>
+
+<div class="step-card">
+<p><strong>Stable Diffusion / 开源</strong>（免费）：生成的图像没有来自模型创建者的许可限制。然而，由于Stable Diffusion是在互联网的广泛抓取（包括受版权保护的作品）上训练的，法律风险较高。关于训练数据的几起诉讼正在进行中。</p>
+</div>
+
+<h2>问题3：实际风险是什么？</h2>
+
+<p>在大多数使用场景下，因使用AI图像而被起诉的实际风险目前较低。针对最终用户的诉讼非常少——大多数法律行动针对的是AI公司本身。然而，风险因使用场景而异：</p>
+
+<table>
+<thead>
+<tr><th>使用场景</th><th>风险级别</th><th>建议</th></tr>
+</thead>
+<tbody>
+<tr><td>个人社交媒体</td><td>非常低</td><td>自由使用任何工具</td></tr>
+<tr><td>小企业网站</td><td>低</td><td>使用Firefly或DALL-E 3</td></tr>
+<tr><td>产品包装</td><td>中等</td><td>使用Firefly（赔偿保障）</td></tr>
+<tr><td>书籍封面/商品</td><td>中等</td><td>使用Firefly或大幅修改输出</td></tr>
+<tr><td>企业品牌</td><td>较高</td><td>使用带赔偿的Firefly；或使用传统库存图片</td></tr>
+</tbody>
+</table>
+
+<h2>商业使用最佳实践</h2>
+
+<ol>
+<li><strong>记录你的提示词</strong>——为每张商业图像保存确切的提示词、工具、设置和日期。这有助于你在需要证明图像是由AI生成时使用。</li>
+<li><strong>大幅度修改</strong>——在Photoshop或类似工具中编辑AI输出。合成多张AI图像、添加文字和调整颜色创造你可以主张的人类创作性。</li>
+<li><strong>避免商标内容</strong>——不要生成米老鼠、星球大战飞船或其他商标角色的图像。AI会欣然创建它们，但你面临商标侵权风险。</li>
+<li><strong>避免公众人物</strong>——为商业使用生成真实人物（名人、政治人物）的图像会带来形象权风险。</li>
+<li><strong>高风险项目使用Firefly</strong>——Adobe的赔偿保障是其他AI图像工具无法提供的真正保护。</li>
+</ol>
+
+<h2>常见问题</h2>
+
+<h3>问：我可以为使用AI图像制作的书籍封面注册版权吗？</h3>
+<p>在美国，版权局要求披露AI生成的材料。如果封面完全是AI生成的，你不能为AI部分注册版权。但是，如果你将AI图像与原创排版、布局和手动编辑结合，你可以为人类创作的元素注册。</p>
+
+<h3>问：Midjourney的"所有权利"许可意味着我拥有版权吗？</h3>
+<p>不是。Midjourney授予你广泛的使用权，但不能授予版权，因为版权需要人类创作性。Midjourney条款中的"所有权利"意味着你可以将图像用于几乎任何目的，而不是你持有版权。</p>
+
+<h3>问：如果针对AI公司的训练数据诉讼成功了会怎样？</h3>
+<p>这是一个活跃的法律领域。如果法院裁定在未经许可的情况下对受版权保护的图像进行训练构成侵权，这可能会影响这些模型生成的图像的法律地位。为了最大安全性，在关键商业项目中使用Firefly（许可训练数据+赔偿保障）。对于低风险用途，现有工具实际上是安全的。</p>
+
+<div class="next-step">
+<p><strong>AI图像生成学习路径结束。</strong> <a href="/learn">探索更多学习路径 →</a></p>
+</div>`,
   },
 };
