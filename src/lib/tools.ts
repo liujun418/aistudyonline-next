@@ -111,7 +111,7 @@ export const tools: Tool[] = [
     id: "chatgpt",
     name: "ChatGPT",
     description: "The most popular AI assistant for conversation, writing, coding, and problem-solving.",
-  descriptionZh: "El asistente de IA más popular para conversación, escritura, programación y resolución de problemas. [CN]",
+  descriptionZh: "最受欢迎的AI助手，适用于对话、写作、编程和问题解决。",
     category: "chatbots",
     tags: ["conversation", "writing", "coding", "analysis"],
     difficulty: "beginner",
@@ -124,16 +124,16 @@ export const tools: Tool[] = [
   companyZh: "OpenAI",
   founded: "2015",  headquarters: "San Francisco, CA",  
   descriptionLong: "ChatGPT is OpenAI's flagship conversational AI model that has transformed how millions interact with artificial intelligence. Based on GPT-4o and GPT-5, it handles text, images, audio, and code in one unified interface. With web browsing, file uploads, advanced data analysis, custom GPTs, and voice conversations, it serves as a versatile productivity tool.",
-  descriptionLongZh: "ChatGPT es el modelo de IA conversacional insignia de OpenAI. Basado en GPT-4o y GPT-5, maneja texto, imagenes, audio y codigo en una interfaz unificada con navegacion web, carga de archivos y analisis avanzado de datos.",
+  descriptionLongZh: "ChatGPT是OpenAI的旗舰对话式AI模型，基于GPT-4o和GPT-5构建，在统一界面中处理文本、图像、音频和代码，支持网页浏览、文件上传和高级数据分析。",
   advantages: [
             "Unified multimodal interface for text, images, audio, and code",
             "Extensive plugin ecosystem with custom GPTs and GPT Store",
             "Advanced data analysis with Python execution and file processing"
           ],
   advantagesZh: [
-            "Interfaz multimodal unificada para texto, imagenes, audio y codigo",
-            "Ecosistema de plugins con GPTs personalizados y GPT Store",
-            "Analisis avanzado de datos con ejecucion Python"
+            "统一多模态界面，支持文本、图像、音频和代码",
+            "丰富的插件生态系统，含自定义GPTs和GPT商店",
+            "高级数据分析，支持Python执行"
           ],
   useCases: [
             "Draft professional emails, reports, and proposals in minutes",
@@ -142,13 +142,13 @@ export const tools: Tool[] = [
             "Create lesson plans and study guides"
           ],
   useCasesZh: [
-            "Redacta correos e informes en minutos",
-            "Analiza datos con lenguaje natural",
-            "Genera y depura codigo en multiples lenguajes",
-            "Crea planes de lecciones y guias"
+            "快速起草专业邮件、报告和提案",
+            "用自然语言分析数据，无需SQL",
+            "跨语言代码生成和调试",
+            "创建课程计划和学xi指南"
           ],
   targetAudience: "Anyone who needs an AI assistant -- students, professionals, writers, developers, and creators.",
-  targetAudienceZh: "Cualquier persona que necesite un asistente de IA -- estudiantes, profesionales, escritores, desarrolladores.",
+  targetAudienceZh: "任何需要AI助手的人——学生、专业人士、写作者和开发者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -227,9 +227,9 @@ export const tools: Tool[] = [
             "Multimodal in a single interface"
           ],
   prosZh: [
-            "Nivel gratuito con GPT-4o mini",
-            "Ecosistema masivo de GPTs personalizados",
-            "Multimodal en una interfaz"
+            "免费版包含GPT-4o mini",
+            "海量自定义GPTs生态系统",
+            "单一界面的多模态能力"
           ],
   cons: [
             "Free tier has limited GPT-5 messages",
@@ -237,9 +237,9 @@ export const tools: Tool[] = [
             "No native offline mode"
           ],
   consZh: [
-            "Nivel gratuito con mensajes GPT-5 limitados",
-            "Puede dar respuestas incorrectas con confianza",
-            "Sin modo offline nativo"
+            "提供免费版本 con mensajes GPT-5 limitados",
+            "可能自信地给出错误答案",
+            "无原生离线模式"
           ],
   },
 
@@ -247,7 +247,7 @@ export const tools: Tool[] = [
     id: "claude",
     name: "Claude",
     description: "Anthropic's AI assistant focused on safety, long-form reasoning, and detailed analysis.",
-  descriptionZh: "El asistente de IA de Anthropic centrado en seguridad, razonamiento extenso y análisis detallado. [CN]",
+  descriptionZh: "Anthropic的AI助手，注重安全性、长文本推理和详细分析。",
     category: "chatbots",
     tags: ["reasoning", "analysis", "writing", "safety"],
     difficulty: "beginner",
@@ -260,7 +260,7 @@ export const tools: Tool[] = [
   companyZh: "Anthropic",
   founded: "2021",  headquarters: "San Francisco, CA",  
   descriptionLong: "Claude is Anthropic's AI assistant built on advanced language models with emphasis on safety and long-form reasoning. With a 200K+ token context window, Claude excels at processing entire books, research papers, and complex codebases. Known for nuanced writing and thoughtful analysis, it is favored by writers, researchers, and professionals.",
-  descriptionLongZh: "Claude es el asistente de IA de Anthropic con enfasis en seguridad y razonamiento extenso. Con mas de 200K tokens de contexto, destaca procesando libros completos y documentos complejos.",
+  descriptionLongZh: "Claude是Anthropic的AI助手，强调安全性和长文本推理能力。拥有超过20万令牌的上下文窗口，擅长处理整本书籍、研究论文和复杂代码库。",
   advantages: [
             "200K+ token context window for large documents",
             "Nuanced writing style producing quality prose",
@@ -268,10 +268,10 @@ export const tools: Tool[] = [
             "Excellent at complex instructions"
           ],
   advantagesZh: [
-            "Ventana de 200K+ tokens para documentos grandes",
-            "Estilo de escritura matizado de calidad",
-            "Seguridad solida con IA Constitucional",
-            "Excelente en instrucciones complejas"
+            "20万+令牌上下文窗口，可处理大型文档",
+            "细腻的写作风格，生成优质文章",
+            "宪法AI确保强大的安全性",
+            "擅长处理复杂指令"
           ],
   useCases: [
             "Analyze 100+ page research papers and legal docs",
@@ -281,13 +281,13 @@ export const tools: Tool[] = [
             "Generate detailed business reports"
           ],
   useCasesZh: [
-            "Analiza documentos de 100+ paginas",
-            "Edita contenido extenso",
-            "Depura codigo complejo paso a paso",
-            "Revisiones bibliograficas con citas"
+            "分析100页以上的研究论文和法律文档",
+            "编辑长篇幅内容，如小说和报告",
+            "逐步调试复杂代码库",
+            "带引用的文献综述"
           ],
   targetAudience: "Professionals needing detailed AI assistance -- writers, researchers, lawyers, developers, analysts.",
-  targetAudienceZh: "Profesionales que necesitan asistencia detallada de IA.",
+  targetAudienceZh: "需要详细AI辅助的专业人士——写作者、研究人员、律师、开发者和分析师。",
   pricingTiers: [
       {
         tier: "Free",
@@ -362,10 +362,10 @@ export const tools: Tool[] = [
             "Detailed structured responses"
           ],
   prosZh: [
-            "Ventana masiva para libros completos",
-            "Calidad de escritura superior",
-            "Seguridad sin sacrificar capacidad",
-            "Respuestas estructuradas"
+            "超大上下文窗口，可处理整本书籍",
+            "卓越的写作质量",
+            "不牺牲能力的安全性",
+            "详细的结构化响应"
           ],
   cons: [
             "Strict daily limits on free tier",
@@ -374,10 +374,10 @@ export const tools: Tool[] = [
             "Limited integrations"
           ],
   consZh: [
-            "Limites diarios estrictos",
-            "Sin generacion de imagenes",
-            "Mas lento en tareas complejas",
-            "Integraciones limitadas"
+            "免费版每日使用限制严格",
+            "不支持图像生成",
+            "复杂任务处理较慢",
+            "集成有限"
           ],
   },
 
@@ -385,7 +385,7 @@ export const tools: Tool[] = [
     id: "gemini",
     name: "Google Gemini",
     description: "Google's multimodal AI model with deep Google ecosystem integration.",
-  descriptionZh: "El modelo de IA multimodal de Google con integración profunda en el ecosistema Google. [CN]",
+  descriptionZh: "谷歌的多模态AI模型，深度集成谷歌生态系统。",
     category: "chatbots",
     tags: ["multimodal", "google", "reasoning", "search"],
     difficulty: "beginner",
@@ -395,10 +395,10 @@ export const tools: Tool[] = [
     useCase: "Gemini's multimodal capabilities let you upload images, audio, and video for analysis. It integrates with Google apps like Gmail, Docs, and Drive.",
     icon: "\u{1F31F}",
   company: "Google DeepMind",
-  companyZh: "Google DeepMind",
+  companyZh: "谷歌DeepMind",
   founded: "2023",  headquarters: "Mountain View, CA",  
   descriptionLong: "Gemini is Google's natively multimodal AI model family built by Google DeepMind. It processes text, images, audio, video, and code simultaneously. Deeply integrated with Gmail, Docs, Drive, and Search, Gemini offers unique advantages for Google ecosystem users with real-time search access and workspace integration.",
-  descriptionLongZh: "Gemini es la familia de modelos de IA nativamente multimodal de Google. Procesa texto, imagenes, audio, video y codigo simultaneamente, integrado con Gmail, Docs y Drive.",
+  descriptionLongZh: "Gemini是谷歌DeepMind构建的原生多模态AI模型家族，可同时处理文本、图像、音频、视频和代码。深度集成Gmail、文档、云端硬盘和搜索。",
   advantages: [
             "Native multimodal processing of text/images/audio/video",
             "Deep Google Workspace integration",
@@ -406,10 +406,10 @@ export const tools: Tool[] = [
             "Generous free tier"
           ],
   advantagesZh: [
-            "Procesamiento multimodal nativo",
-            "Integracion profunda con Workspace",
-            "Busqueda Google en tiempo real",
-            "Nivel gratuito generoso"
+            "原生多模态处理",
+            "深度集成谷歌工作区",
+            "实时谷歌搜索",
+            "慷慨的免费版本"
           ],
   useCases: [
             "Upload video for AI content analysis",
@@ -418,13 +418,13 @@ export const tools: Tool[] = [
             "Draft Gmail emails with context"
           ],
   useCasesZh: [
-            "Sube video para analisis IA",
-            "Planifica viajes con Google Maps",
-            "Analiza datos de Sheets",
-            "Redacta correos en Gmail"
+            "上传视频进行AI内容分析",
+            "集成谷歌地图规划旅行",
+            "用自然语言分析表格数据",
+            "在Gmail中撰写上下文相关的邮件"
           ],
   targetAudience: "Google users who want AI in their workflow -- Gmail, Workspace, and Android users.",
-  targetAudienceZh: "Usuarios Google que quieren IA en su flujo de trabajo.",
+  targetAudienceZh: "希望AI融入工作流程的谷歌用户——Gmail、工作区和Android用户。",
   pricingTiers: [
       {
         tier: "Free",
@@ -484,10 +484,10 @@ export const tools: Tool[] = [
             "Real-time search"
           ],
   prosZh: [
-            "Nativamente multimodal",
-            "Integracion Google perfecta",
-            "Nivel gratuito generoso",
-            "Busqueda en tiempo real"
+            "原生多模态，无需额外工具",
+            "与谷歌应用无缝集成",
+            "慷慨的免费版本",
+            "实时搜索能力"
           ],
   cons: [
             "Weaker creative writing vs Claude/ChatGPT",
@@ -495,9 +495,9 @@ export const tools: Tool[] = [
             "Advanced tier less competitive"
           ],
   consZh: [
-            "Escritura creativa debil",
-            "Preocupaciones de privacidad",
-            "Nivel avanzado menos competitivo"
+            "创意写作能力较弱",
+            "隐私问题",
+            "高级版竞争力不足"
           ],
   },
 
@@ -505,7 +505,7 @@ export const tools: Tool[] = [
     id: "deepseek",
     name: "DeepSeek",
     description: "Open-source LLM with strong reasoning capabilities and competitive performance.",
-  descriptionZh: "LLM de código abierto con sólidas capacidades de razonamiento y rendimiento competitivo. [CN]",
+  descriptionZh: "开源LLM，具有强大的推理能力和有竞争力的性能。",
     category: "chatbots",
     tags: ["reasoning", "open-source", "coding", "analysis"],
     difficulty: "intermediate",
@@ -515,10 +515,10 @@ export const tools: Tool[] = [
     useCase: "DeepSeek offers strong reasoning and coding capabilities at no cost. Its open-source nature allows self-hosting and customization.",
     icon: "\u{1F50D}",
   company: "DeepSeek",
-  companyZh: "DeepSeek",
+  companyZh: "深度求索",
   founded: "2023",  headquarters: "Hangzhou, China",  
   descriptionLong: "DeepSeek is a Chinese AI company known for powerful open-source language models. DeepSeek-R1 and V3 deliver performance comparable to leading proprietary models at a fraction of the cost. Strong in mathematics, coding, and logical reasoning, it is a favorite in the open-source community for transparency and impressive benchmarks.",
-  descriptionLongZh: "DeepSeek es una empresa china de IA con potentes modelos open-source. DeepSeek-R1 y V3 ofrecen rendimiento comparable a modelos propietarios a una fraccion del costo.",
+  descriptionLongZh: "深度求索是一家中国AI公司，以强大的开源语言模型闻名。DeepSeek-R1和V3的性能可与领先的专有模型媲美，而成本仅为其一小部分。",
   advantages: [
             "Fully open-source for self-hosting",
             "Exceptional reasoning and math",
@@ -526,10 +526,10 @@ export const tools: Tool[] = [
             "Strong coding performance"
           ],
   advantagesZh: [
-            "Completamente open-source",
-            "Razonamiento y matematicas excepcionales",
-            "API rentable",
-            "Rendimiento en codigo solido"
+            "完全开源",
+            "卓越的推理和数学能力",
+            "经济高效的API",
+            "强大的编程性能"
           ],
   useCases: [
             "Self-host LLM on your infrastructure",
@@ -538,13 +538,13 @@ export const tools: Tool[] = [
             "Code generation and debugging"
           ],
   useCasesZh: [
-            "Auto-aloja un LLM",
-            "Resuelve problemas matematicos",
-            "Construye apps de IA",
-            "Genera y depura codigo"
+            "在自己的基础设施上自行托管LLM",
+            "解决复杂数学问题",
+            "使用开放权重构建自定义AI应用",
+            "代码生成和调试"
           ],
   targetAudience: "Developers and organizations wanting powerful AI with full control over deployment and privacy.",
-  targetAudienceZh: "Desarrolladores que quieren control total sobre su IA.",
+  targetAudienceZh: "希望在部署和隐私方面拥有完全控制的开发者和组织。",
   pricingTiers: [
       {
         tier: "Free Chat",
@@ -604,10 +604,10 @@ export const tools: Tool[] = [
             "Strong reasoning ability"
           ],
   prosZh: [
-            "Chat web gratuito sin limites",
-            "Open-source para auto-alojamiento",
-            "Excelente relacion rendimiento/precio",
-            "Gran capacidad de razonamiento"
+            "免费网页聊天，无使用限制",
+            "开源，可自行托管",
+            "卓越的性价比",
+            "强大的推理能力"
           ],
   cons: [
             "Inconsistent server availability",
@@ -616,10 +616,10 @@ export const tools: Tool[] = [
             "Limited enterprise support"
           ],
   consZh: [
-            "Disponibilidad inconsistente",
-            "Conversacion menos refinada",
-            "Documentacion en chino",
-            "Soporte limitado"
+            "服务器可用性不稳定",
+            "对话能力不够精细",
+            "文档为中文",
+            "企业支持有限"
           ],
   },
 
@@ -627,7 +627,7 @@ export const tools: Tool[] = [
     id: "perplexity",
     name: "Perplexity AI",
     description: "AI-powered search engine that provides answers with real-time citations.",
-  descriptionZh: "Buscador impulsado por IA que proporciona respuestas con citas en tiempo real. [CN]",
+  descriptionZh: "AI驱动的搜索引擎，提供带实时引用的答案。",
     category: "chatbots",
     tags: ["search", "research", "citations", "real-time"],
     difficulty: "beginner",
@@ -640,7 +640,7 @@ export const tools: Tool[] = [
   companyZh: "Perplexity AI",
   founded: "2022",  headquarters: "San Francisco, CA",  
   descriptionLong: "Perplexity AI combines LLMs with real-time web search to deliver answers with inline citations. Unlike traditional search, it synthesizes multiple sources into coherent answers with references. Supports file uploads, image recognition, and pro features. Its focus on source transparency makes it a favorite for researchers and students.",
-  descriptionLongZh: "Perplexity AI combina LLMs con busqueda web en tiempo real para respuestas con citas. Sintetiza multiples fuentes en respuestas coherentes con referencias.",
+  descriptionLongZh: "Perplexity AI结合LLM与实时网络搜索，提供带有内联引用的答案。综合多个来源形成带有参考文献的连贯答案。",
   advantages: [
             "Answers with real-time citations",
             "Synthesizes multiple sources",
@@ -648,10 +648,10 @@ export const tools: Tool[] = [
             "Adjustable focus modes"
           ],
   advantagesZh: [
-            "Respuestas con citas en tiempo real",
-            "Sintetiza multiples fuentes",
-            "Analisis de archivos",
-            "Modos de enfoque"
+            "带实时引用的答案",
+            "综合多个来源",
+            "文件分析能力",
+            "可调节的聚焦模式"
           ],
   useCases: [
             "Research with cited sources",
@@ -660,13 +660,13 @@ export const tools: Tool[] = [
             "Curated news summaries"
           ],
   useCasesZh: [
-            "Investigacion con fuentes citadas",
-            "Verificacion de datos",
-            "Analisis de documentos",
-            "Resumenes de noticias"
+            "带引用来源的研究",
+            "实时搜索进行事实核查",
+            "分析上传的文档",
+            "精选新闻摘要"
           ],
   targetAudience: "Researchers, students, and journalists needing accurate cited information quickly.",
-  targetAudienceZh: "Investigadores, estudiantes y periodistas que necesitan informacion precisa con citas.",
+  targetAudienceZh: "需要快速获取准确引用信息的研究人员、学生和记者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -726,10 +726,10 @@ export const tools: Tool[] = [
             "File analysis capability"
           ],
   prosZh: [
-            "Respuestas citadas con fuentes",
-            "Excelente para verificacion",
-            "Nivel gratuito generoso",
-            "Analisis de archivos"
+            "带来源引用的答案",
+            "非常适合事实核查",
+            "慷慨的免费版本",
+            "文件分析能力"
           ],
   cons: [
             "Limited creative writing",
@@ -739,9 +739,9 @@ export const tools: Tool[] = [
           ],
   consZh: [
             "Escritura creativa limitada",
-            "Plan Pro caro",
-            "Calidad depende de busqueda",
-            "Debil para codigo"
+            "Pro版价格较高",
+            "质量依赖网络搜索",
+            "编程能力较弱"
           ],
   },
 
@@ -749,7 +749,7 @@ export const tools: Tool[] = [
     id: "midjourney",
     name: "Midjourney",
     description: "Leading AI image generator known for artistic quality and stylistic versatility.",
-  descriptionZh: "Generador de imágenes IA líder conocido por su calidad artística y versatilidad estilística. [CN]",
+  descriptionZh: "领先的AI图像生成器，以艺术质量和风格多样性闻名。",
     category: "image-generation",
     tags: ["art", "design", "creative", "high-quality"],
     difficulty: "intermediate",
@@ -759,10 +759,10 @@ export const tools: Tool[] = [
     useCase: "Midjourney produces stunning artistic images from text prompts. Best for concept art, illustrations, branding visuals, and creative projects.",
     icon: "\u{1F3A8}",
   company: "Midjourney Inc.",
-  companyZh: "Midjourney Inc.",
+  companyZh: "Midjourney",
   founded: "2021",  headquarters: "San Francisco, CA",  
   descriptionLong: "Midjourney is the highest-quality AI image generation platform, known for its distinctive artistic style. Operating through Discord and web, it excels at concept art, illustrations, and character designs. Its advanced parameter system allows fine-grained control over style, composition, and lighting, making it the go-to for professional artists.",
-  descriptionLongZh: "Midjourney es la plataforma de generacion de imagenes IA de mayor calidad. Opera via Discord y web, destacando en arte conceptual e ilustraciones.",
+  descriptionLongZh: "Midjourney是最高质量的AI图像生成平台，以其独特的艺术风格著称。通过Discord和网页运行，擅长概念艺术、插图和角色设计。",
   advantages: [
             "Highest artistic quality",
             "Advanced parameter control",
@@ -770,10 +770,10 @@ export const tools: Tool[] = [
             "Regular model updates"
           ],
   advantagesZh: [
-            "Maxima calidad artistica",
-            "Control avanzado de parametros",
-            "Comunidad de referencia",
-            "Actualizaciones regulares"
+            "最高艺术质量",
+            "高级参数控制",
+            "强大的社区参考",
+            "定期模型更新"
           ],
   useCases: [
             "Concept art for games and films",
@@ -783,13 +783,13 @@ export const tools: Tool[] = [
             "Creative prototyping"
           ],
   useCasesZh: [
-            "Arte conceptual para juegos",
-            "Visuales de marca",
-            "Ilustraciones de libros",
-            "Visualizaciones de productos"
+            "游戏和电影概念艺术",
+            "品牌视觉和营销",
+            "书籍插图",
+            "产品可视化"
           ],
   targetAudience: "Artists, designers, and creative professionals needing high-quality AI visuals.",
-  targetAudienceZh: "Artistas y disenadores que necesitan imagenes IA de alta calidad.",
+  targetAudienceZh: "需要高质量AI视觉内容的艺术家、设计师和创意专业人士。",
   pricingTiers: [
       {
         tier: "Basic",
@@ -851,10 +851,10 @@ export const tools: Tool[] = [
             "Regular updates"
           ],
   prosZh: [
-            "Mejor calidad de imagen",
-            "Control detallado de parametros",
-            "Comunidad fuerte",
-            "Actualizaciones regulares"
+            "最佳图像质量",
+            "精细的参数控制",
+            "强大的社区",
+            "定期模型更新"
           ],
   cons: [
             "Requires Discord",
@@ -863,10 +863,10 @@ export const tools: Tool[] = [
             "Limited vs SD with LoRAs"
           ],
   consZh: [
-            "Requiere Discord",
-            "Curva de aprendizaje",
-            "Sin nivel gratuito",
-            "Limitado vs SD con LoRAs"
+            "需要使用Discord",
+            "学习曲线陡峭",
+            "无免费版本",
+            "相比SD的LoRA支持有限"
           ],
   },
 
@@ -874,7 +874,7 @@ export const tools: Tool[] = [
     id: "dalle3",
     name: "DALL-E 3",
     description: "OpenAI's image generator integrated into ChatGPT with strong prompt adherence.",
-  descriptionZh: "Generador de imágenes de OpenAI integrado en ChatGPT con gran fidelidad a las instrucciones. [CN]",
+  descriptionZh: "OpenAI的图像生成器，集成在ChatGPT中，指令跟随能力强。",
     category: "image-generation",
     tags: ["openai", "chatgpt", "design", "realistic"],
     difficulty: "beginner",
@@ -887,7 +887,7 @@ export const tools: Tool[] = [
   companyZh: "OpenAI",
   founded: "2015",  headquarters: "San Francisco, CA",  
   descriptionLong: "DALL-E 3 is OpenAI's latest image generation model, integrated into ChatGPT. It excels at following complex prompts with high accuracy, generating detailed images from text. Working within ChatGPT allows iterative refinement through natural conversation. Best for quick visual ideation and integrated workflows.",
-  descriptionLongZh: "DALL-E 3 es el modelo de generacion de imagenes de OpenAI integrado en ChatGPT. Destaca siguiendo instrucciones complejas con precision.",
+  descriptionLongZh: "DALL-E 3是OpenAI最新的图像生成模型，集成在ChatGPT中。擅长高精度地跟随复杂提示词生成详细图像。",
   advantages: [
             "Integrated into ChatGPT",
             "Excellent prompt adherence",
@@ -895,10 +895,10 @@ export const tools: Tool[] = [
             "Included with ChatGPT Plus"
           ],
   advantagesZh: [
-            "Integrado en ChatGPT",
-            "Excelente adhesion a prompts",
-            "Refinamiento por conversacion",
-            "Incluido con ChatGPT Plus"
+            "集成在ChatGPT中",
+            "出色的提示词跟随能力",
+            "通过对话自然优化",
+            "包含在ChatGPT Plus中"
           ],
   useCases: [
             "Social media graphics",
@@ -907,13 +907,13 @@ export const tools: Tool[] = [
             "Marketing visuals"
           ],
   useCasesZh: [
-            "Graficos para redes sociales",
-            "Ilustraciones para blogs",
-            "Prototipos de diseno",
-            "Visuales de marketing"
+            "社交媒体图像",
+            "博客插图",
+            "设计概念原型",
+            "营销视觉"
           ],
   targetAudience: "ChatGPT users wanting integrated image generation without leaving the chat.",
-  targetAudienceZh: "Usuarios de ChatGPT que quieren generar imagenes sin salir del chat.",
+  targetAudienceZh: "希望在不离开聊天的情况下集成图像生成的ChatGPT用户。",
   pricingTiers: [
       {
         tier: "ChatGPT Free",
@@ -956,9 +956,9 @@ export const tools: Tool[] = [
             "Fast iteration and refinement"
           ],
   prosZh: [
-            "Integracion perfecta con ChatGPT",
-            "Sigue instrucciones excelentemente",
-            "Iteracion rapida"
+            "与ChatGPT无缝集成",
+            "出色的指令跟随能力",
+            "快速迭代和优化"
           ],
   cons: [
             "Requires ChatGPT subscription",
@@ -966,9 +966,9 @@ export const tools: Tool[] = [
             "Not standalone tool"
           ],
   consZh: [
-            "Requiere suscripcion ChatGPT",
-            "Menos artistico que Midjourney",
-            "No es herramienta independiente"
+            "需要ChatGPT订阅",
+            "艺术性不如Midjourney",
+            "非独立工具"
           ],
   },
 
@@ -976,7 +976,7 @@ export const tools: Tool[] = [
     id: "stable-diffusion",
     name: "Stable Diffusion",
     description: "Open-source image generation model with full local control and customization.",
-  descriptionZh: "Modelo de generación de imágenes de código abierto con control local y personalización total. [CN]",
+  descriptionZh: "开源图像生成模型，支持本地控制和完全自定义。",
     category: "image-generation",
     tags: ["open-source", "local", "customizable", "free"],
     difficulty: "advanced",
@@ -989,7 +989,7 @@ export const tools: Tool[] = [
   companyZh: "Stability AI",
   founded: "2020",  headquarters: "London, UK",  
   descriptionLong: "Stable Diffusion is a powerful open-source image generation model running locally on your hardware. Developed by Stability AI, it offers complete control with extensive community support, custom models (LoRAs, Checkpoints), and fine-tuning. Provides unlimited free generation, full privacy, and deep customization through its open ecosystem.",
-  descriptionLongZh: "Stable Diffusion es un modelo de generacion de imagenes open-source que se ejecuta localmente. Ofrece control total con extenso soporte comunitario.",
+  descriptionLongZh: "Stable Diffusion是一个强大的开源图像生成模型，可在本地硬件上运行。提供完全控制权，拥有广泛的社区支持、自定义模型和微调能力。",
   advantages: [
             "Local execution with full privacy",
             "Free and open-source",
@@ -997,10 +997,10 @@ export const tools: Tool[] = [
             "Full customization via fine-tuning"
           ],
   advantagesZh: [
-            "Ejecucion local con privacidad",
-            "Gratuito y open-source",
-            "Modelos comunitarios extensos",
-            "Personalizacion completa"
+            "本地运行，完全隐私保护",
+            "免费开源",
+            "广泛的社区模型",
+            "通过微调实现完全自定义"
           ],
   useCases: [
             "Unlimited image generation",
@@ -1010,13 +1010,13 @@ export const tools: Tool[] = [
             "AI image app building"
           ],
   useCasesZh: [
-            "Generacion ilimitada",
-            "Ajuste de modelos personalizados",
-            "Contenido sensible local",
-            "Tecnicas avanzadas"
+            "无限图像生成",
+            "自定义模型微调",
+            "本地处理敏感内容",
+            "高级技术（ControlNet等）"
           ],
   targetAudience: "Developers and power users wanting complete control over AI image generation with no restrictions.",
-  targetAudienceZh: "Desarrolladores que quieren control total sobre generacion de imagenes IA.",
+  targetAudienceZh: "希望完全控制AI图像生成且无限制的开发者和高级用户。",
   pricingTiers: [
       {
         tier: "Self-hosted",
@@ -1076,10 +1076,10 @@ export const tools: Tool[] = [
             "Deep customization"
           ],
   prosZh: [
-            "Gratuito sin limites",
-            "Privacidad total local",
-            "Ecosistema comunitario extenso",
-            "Personalizacion profunda"
+            "免费无限生成",
+            "完全本地隐私保护",
+            "广泛的社区生态系统",
+            "深度自定义"
           ],
   cons: [
             "Requires powerful GPU",
@@ -1088,10 +1088,10 @@ export const tools: Tool[] = [
             "No official mobile app"
           ],
   consZh: [
-            "Requiere GPU potente",
-            "Curva de aprendizaje",
-            "Instalacion compleja",
-            "Sin app movil oficial"
+            "需要强大的GPU",
+            "学习曲线陡峭",
+            "安装配置复杂",
+            "无官方移动应用"
           ],
   },
 
@@ -1099,7 +1099,7 @@ export const tools: Tool[] = [
     id: "adobe-firefly",
     name: "Adobe Firefly",
     description: "Adobe's generative AI suite integrated with Creative Cloud for professional design.",
-  descriptionZh: "Suite de IA generativa de Adobe integrada con Creative Cloud para diseño profesional. [CN]",
+  descriptionZh: "Adobe的生成式AI套件，集成Creative Cloud，用于专业设计。",
     category: "image-generation",
     tags: ["adobe", "design", "professional", "integration"],
     difficulty: "intermediate",
@@ -1109,10 +1109,10 @@ export const tools: Tool[] = [
     useCase: "Firefly integrates AI image generation into Adobe's design tools. Best for designers who already use Photoshop, Illustrator, or Express.",
     icon: "\u{1F525}",
   company: "Adobe Inc.",
-  companyZh: "Adobe Inc.",
+  companyZh: "Adobe（奥多比）",
   founded: "1982",  headquarters: "San Jose, CA",  
   descriptionLong: "Adobe Firefly is Adobe's generative AI family integrated into Creative Cloud. It enables designers to generate images, apply effects, and extend compositions using natural language. Commercially safe with licensed training data and enterprise-grade features, Firefly is ideal for professional design workflows in Photoshop, Illustrator, and Express.",
-  descriptionLongZh: "Adobe Firefly es la familia de IA generativa de Adobe en Creative Cloud. Permite generar imagenes y efectos con lenguaje natural. Disenado para flujos de trabajo profesionales.",
+  descriptionLongZh: "Adobe Firefly是Adobe的生成式AI家族，集成在Creative Cloud中。设计师可通过自然语言生成图像、应用效果和扩展构图。",
   advantages: [
             "Deep Creative Cloud integration",
             "Commercially safe training",
@@ -1120,10 +1120,10 @@ export const tools: Tool[] = [
             "Enterprise-grade security"
           ],
   advantagesZh: [
-            "Integracion profunda con Creative Cloud",
-            "Entrenamiento comercialmente seguro",
-            "Relleno generativo",
-            "Seguridad empresarial"
+            "深度集成Creative Cloud",
+            "商业安全的训练数据",
+            "生成式填充",
+            "企业级安全"
           ],
   useCases: [
             "Generative Fill in Photoshop",
@@ -1133,13 +1133,13 @@ export const tools: Tool[] = [
             "Brand asset variations"
           ],
   useCasesZh: [
-            "Relleno generativo en Photoshop",
-            "Graficos en Express",
-            "Efectos de texto IA",
-            "Extension de imagen"
+            "生成式填充 en Photoshop",
+            "Express中的社交媒体图像",
+            "AI文字效果",
+            "图像扩展"
           ],
   targetAudience: "Professional designers using Creative Cloud who want integrated AI capabilities.",
-  targetAudienceZh: "Disenadores profesionales de Creative Cloud que quieren IA integrada.",
+  targetAudienceZh: "使用Creative Cloud并希望集成AI能力的专业设计师。",
   pricingTiers: [
       {
         tier: "Free",
@@ -1199,10 +1199,10 @@ export const tools: Tool[] = [
             "Enterprise ready"
           ],
   prosZh: [
-            "Integracion Creative Cloud perfecta",
-            "Comercialmente seguro",
-            "Relleno generativo de primera",
-            "Listo para empresas"
+            "与Creative Cloud无缝集成",
+            "商业使用安全",
+            "生成式填充 de primera",
+            "企业级就绪"
           ],
   cons: [
             "Requires CC subscription",
@@ -1211,10 +1211,10 @@ export const tools: Tool[] = [
             "Adobe ecosystem only"
           ],
   consZh: [
-            "Requiere suscripcion CC",
-            "Creditos gratis limitados",
-            "Menos libertad artistica",
-            "Solo ecosistema Adobe"
+            "需要CC订阅",
+            "免费积分有限",
+            "艺术自由度较低",
+            "仅限Adobe生态系统"
           ],
   },
 
@@ -1222,7 +1222,7 @@ export const tools: Tool[] = [
     id: "leonardo-ai",
     name: "Leonardo AI",
     description: "AI image generation platform with fine-tuned models for games, characters, and assets.",
-  descriptionZh: "Plataforma de generación de imágenes IA con modelos ajustados para juegos, personajes y activos. [CN]",
+  descriptionZh: "AI图像生成平台，为游戏、角色和资产提供微调模型。",
     category: "image-generation",
     tags: ["gaming", "assets", "characters", "models"],
     difficulty: "intermediate",
@@ -1235,7 +1235,7 @@ export const tools: Tool[] = [
   companyZh: "Leonardo AI",
   founded: "2022",  headquarters: "Sydney, Australia",  
   descriptionLong: "Leonardo AI is a specialized image generation platform for game assets, character design, and environment art. It offers fine-tuned models for different art styles from realistic to anime. Features include AI canvas for in-painting, real-time generation, and dataset creation tools. Popular among indie game developers and content creators.",
-  descriptionLongZh: "Leonardo AI es una plataforma especializada para activos de juegos y diseno de personajes. Ofrece modelos ajustados para diferentes estilos artisticos.",
+  descriptionLongZh: "Leonardo AI是一个针对游戏资产、角色设计和环境艺术的专业图像生成平台。提供针对不同艺术风格微调的模型。",
   advantages: [
             "Specialized game asset models",
             "AI canvas for in-painting",
@@ -1243,10 +1243,10 @@ export const tools: Tool[] = [
             "Community model sharing"
           ],
   advantagesZh: [
-            "Modelos especializados para juegos",
-            "Lienzo AI para pintar",
-            "Generacion en tiempo real",
-            "Modelos comunitarios"
+            "专业游戏资产模型",
+            "AI画布用于内绘",
+            "实时生成",
+            "社区模型共享"
           ],
   useCases: [
             "Game character design",
@@ -1256,13 +1256,13 @@ export const tools: Tool[] = [
             "Custom model training"
           ],
   useCasesZh: [
-            "Diseno de personajes",
-            "Texturas de entorno",
-            "Visuales de marketing",
-            "Arte conceptual"
+            "游戏角色设计",
+            "环境纹理创建",
+            "营销视觉",
+            "概念艺术"
           ],
   targetAudience: "Game developers, indie creators, and digital artists needing specialized AI for game assets.",
-  targetAudienceZh: "Desarrolladores de juegos y artistas digitales que necesitan IA para activos.",
+  targetAudienceZh: "需要专业AI生成游戏资产的游戏开发者、独立创作者和数字艺术家。",
   pricingTiers: [
       {
         tier: "Free",
@@ -1317,10 +1317,10 @@ export const tools: Tool[] = [
             "Custom model training"
           ],
   prosZh: [
-            "Especializado en juegos",
-            "Nivel gratuito generoso",
-            "Generacion en tiempo real",
-            "Entrenamiento personalizado"
+            "专为游戏资产优化",
+            "慷慨的免费版本",
+            "实时生成",
+            "自定义模型训练"
           ],
   cons: [
             "Token limits on usage",
@@ -1329,10 +1329,10 @@ export const tools: Tool[] = [
             "Smaller community"
           ],
   consZh: [
-            "Limites de tokens",
-            "Calidad inconsistente",
-            "Menos fotorrealista",
-            "Comunidad pequena"
+            "点数使用限制",
+            "质量不稳定",
+            "输出不够照片级真实",
+            "社区规模较小"
           ],
   },
 
@@ -1340,7 +1340,7 @@ export const tools: Tool[] = [
     id: "runway",
     name: "Runway",
     description: "Professional AI video generation and editing platform with advanced motion control.",
-  descriptionZh: "Plataforma profesional de generación y edición de video con IA y control avanzado de movimiento. [CN]",
+  descriptionZh: "专业AI视频生成和编辑平台，具有高级运动控制。",
     category: "video-generation",
     tags: ["video", "editing", "motion", "professional"],
     difficulty: "intermediate",
@@ -1353,7 +1353,7 @@ export const tools: Tool[] = [
   companyZh: "Runway ML",
   founded: "2018",  headquarters: "New York, NY",  
   descriptionLong: "Runway is a professional AI video generation and editing platform with advanced motion control. It offers text-to-video, image-to-video, and video-to-video generation along with powerful editing tools like in-painting, motion tracking, and green screen removal. Used by filmmakers, content creators, and studios for rapid video production.",
-  descriptionLongZh: "Runway es una plataforma profesional de generacion y edicion de video con IA. Ofrece texto-a-video, imagen-a-video y herramientas de edicion avanzadas.",
+  descriptionLongZh: "Runway是一个专业的AI视频生成和编辑平台。提供文本转视频、图像转视频以及内绘、运动跟踪等高级编辑工具。",
   advantages: [
             "Advanced motion control",
             "Multiple generation modes",
@@ -1361,10 +1361,10 @@ export const tools: Tool[] = [
             "Real-time collaboration"
           ],
   advantagesZh: [
-            "Control avanzado de movimiento",
-            "Multiples modos de generacion",
-            "Herramientas de edicion",
-            "Colaboracion en tiempo real"
+            "高级运动控制",
+            "多种生成模式",
+            "专业编辑工具",
+            "实时协作"
           ],
   useCases: [
             "Short film and video creation",
@@ -1374,13 +1374,13 @@ export const tools: Tool[] = [
             "AI video effects"
           ],
   useCasesZh: [
-            "Creacion de cortometrajes",
-            "Contenido para redes",
-            "Eliminacion de fondos",
-            "Edicion con IA"
+            "短片和视频创作",
+            "社交媒体视频内容",
+            "视频背景移除",
+            "AI视频特效"
           ],
   targetAudience: "Video creators, filmmakers, and content producers who want AI-powered video generation and editing.",
-  targetAudienceZh: "Creadores de video y cineastas que quieren IA para video.",
+  targetAudienceZh: "需要AI驱动的视频生成和编辑的视频创作者、电影制作人和内容制作人。",
   pricingTiers: [
       {
         tier: "Free",
@@ -1445,10 +1445,10 @@ export const tools: Tool[] = [
             "Regular feature updates"
           ],
   prosZh: [
-            "Multiples modos de generacion",
-            "Herramientas profesionales",
-            "Colaboracion en tiempo real",
-            "Actualizaciones frecuentes"
+            "多种生成模式",
+            "专业编辑工具",
+            "实时协作",
+            "定期功能更新"
           ],
   cons: [
             "Expensive pro plans",
@@ -1457,10 +1457,10 @@ export const tools: Tool[] = [
             "Limited free tier"
           ],
   consZh: [
-            "Planes Pro caros",
-            "Curva de aprendizaje",
-            "Calidad variable",
-            "Nivel gratuito limitado"
+            "专业版价格较高",
+            "学习曲线陡峭",
+            "质量不稳定",
+            "提供免费版本 limitado"
           ],
   },
 
@@ -1468,7 +1468,7 @@ export const tools: Tool[] = [
     id: "pika",
     name: "Pika",
     description: "Easy-to-use AI video generator focused on quick, high-quality video creation.",
-  descriptionZh: "Generador de video IA fácil de usar centrado en la creación rápida de videos de alta calidad. [CN]",
+  descriptionZh: "易于使用的AI视频生成器，专注于快速创建高质量视频。",
     category: "video-generation",
     tags: ["video", "quick", "social-media", "easy"],
     difficulty: "beginner",
@@ -1481,7 +1481,7 @@ export const tools: Tool[] = [
   companyZh: "Pika Labs",
   founded: "2023",  headquarters: "San Francisco, CA",  
   descriptionLong: "Pika is an easy-to-use AI video generator focused on quick, high-quality video creation from text and image prompts. It excels at short-form content with features like video in-painting, style transfer, and motion control. Designed for accessibility, Pika makes AI video generation available to everyone without technical expertise.",
-  descriptionLongZh: "Pika es un generador de video IA facil de usar para creacion rapida de videos de calidad a partir de texto e imagenes.",
+  descriptionLongZh: "Pika是一个易于使用的AI视频生成器，可从文本和图像提示快速创建高质量视频。无需技术专业知识即可使用。",
   advantages: [
             "Easy to use interface",
             "Quick video generation",
@@ -1489,10 +1489,10 @@ export const tools: Tool[] = [
             "Video in-painting"
           ],
   advantagesZh: [
-            "Interfaz facil de usar",
-            "Generacion rapida",
-            "Prompts de texto e imagen",
-            "Pintura en video"
+            "易于使用的界面",
+            "快速生成",
+            "支持文本和图像提示",
+            "视频内绘"
           ],
   useCases: [
             "Short social media clips",
@@ -1501,13 +1501,13 @@ export const tools: Tool[] = [
             "Quick video prototyping"
           ],
   useCasesZh: [
-            "Clips para redes sociales",
-            "Contenido animado",
-            "Efectos creativos",
-            "Prototipos de video"
+            "社交媒体短视频",
+            "动画营销内容",
+            "创意视频特效",
+            "快速视频原型"
           ],
   targetAudience: "Social media creators and marketers who want easy AI video generation without technical skills.",
-  targetAudienceZh: "Creadores de redes sociales que quieren generacion facil de video IA.",
+  targetAudienceZh: "希望无需技术技能即可轻松生成AI视频的社交媒体创作者和营销人员。",
   pricingTiers: [
       {
         tier: "Free",
@@ -1556,10 +1556,10 @@ export const tools: Tool[] = [
             "Free tier available"
           ],
   prosZh: [
-            "Muy facil de usar",
-            "Generacion rapida",
-            "Buena para redes",
-            "Nivel gratuito"
+            "非常易于使用",
+            "快速生成",
+            "适合社交媒体",
+            "提供免费版本"
           ],
   cons: [
             "Limited video length",
@@ -1568,10 +1568,10 @@ export const tools: Tool[] = [
             "Fewer features"
           ],
   consZh: [
-            "Duracion limitada",
-            "Menos control",
-            "Menor calidad que Runway",
-            "Menos funciones"
+            "视频时长有限",
+            "对输出控制较少",
+            "质量不如Runway",
+            "功能较少"
           ],
   },
 
@@ -1579,7 +1579,7 @@ export const tools: Tool[] = [
     id: "heygen",
     name: "HeyGen",
     description: "AI video platform for creating talking avatars and professional presentations.",
-  descriptionZh: "Plataforma de video IA para crear avatares parlantes y presentaciones profesionales. [CN]",
+  descriptionZh: "AI视频平台，用于创建会说话的虚拟形象和专业演示。",
     category: "video-generation",
     tags: ["avatars", "presentation", "talking", "business"],
     difficulty: "intermediate",
@@ -1592,7 +1592,7 @@ export const tools: Tool[] = [
   companyZh: "HeyGen",
   founded: "2020",  headquarters: "Los Angeles, CA",  
   descriptionLong: "HeyGen is an AI video platform for creating talking avatars and professional presentations. It generates realistic talking-head videos from text or scripts using digital avatars. Features include multi-language support, custom avatar creation, and template-based video production. Popular for training videos, marketing content, and corporate communications.",
-  descriptionLongZh: "HeyGen es una plataforma de video IA para crear avatares parlantes. Genera videos realistas a partir de texto con avatares digitales y soporte multilingue.",
+  descriptionLongZh: "HeyGen是一个AI视频平台，用于创建会说话的虚拟形象。通过数字虚拟形象从文本生成逼真的口播视频，支持多语言。",
   advantages: [
             "Realistic talking avatars",
             "Multi-language support",
@@ -1600,10 +1600,10 @@ export const tools: Tool[] = [
             "Template library"
           ],
   advantagesZh: [
-            "Avatares parlantes realistas",
-            "Soporte multilingue",
-            "Avatares personalizados",
-            "Biblioteca de plantillas"
+            "逼真的说话虚拟形象",
+            "多语言支持",
+            "自定义虚拟形象创建",
+            "模板库"
           ],
   useCases: [
             "Training and educational videos",
@@ -1613,13 +1613,13 @@ export const tools: Tool[] = [
             "Social media avatars"
           ],
   useCasesZh: [
-            "Videos educativos",
-            "Contenido de marketing",
-            "Comunicaciones corporativas",
-            "Contenido multilingue"
+            "培训和教育视频",
+            "营销视频内容",
+            "企业沟通",
+            "多语言内容"
           ],
   targetAudience: "Businesses and content creators who need professional talking-head videos at scale.",
-  targetAudienceZh: "Empresas que necesitan videos profesionales con avatares parlantes.",
+  targetAudienceZh: "需要规模化制作专业口播视频的企业和内容创作者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -1689,10 +1689,10 @@ export const tools: Tool[] = [
             "Professional templates"
           ],
   prosZh: [
-            "Avatares realistas",
-            "Soporte multilingue",
-            "Produccion rapida",
-            "Plantillas profesionales"
+            "逼真的虚拟形象质量",
+            "多语言支持",
+            "快速视频制作",
+            "专业模板"
           ],
   cons: [
             "Expensive compared to alternatives",
@@ -1701,10 +1701,10 @@ export const tools: Tool[] = [
             "Watermark on free tier"
           ],
   consZh: [
-            "Caro vs alternativas",
-            "Avatares pueden parecer extranos",
-            "Control creativo limitado",
-            "Marca de agua gratis"
+            "相比替代方案价格较高",
+            "虚拟形象可能显得不自然",
+            "创意控制有限",
+            "免费版有水印"
           ],
   },
 
@@ -1712,7 +1712,7 @@ export const tools: Tool[] = [
     id: "jasper",
     name: "Jasper AI",
     description: "AI writing assistant built for marketing teams and content creators.",
-  descriptionZh: "Asistente de escritura IA diseñado para equipos de marketing y creadores de contenido. [CN]",
+  descriptionZh: "为营销团队和内容创作者设计的AI写作助手。",
     category: "writing",
     tags: ["marketing", "content", "copywriting", "brand"],
     difficulty: "beginner",
@@ -1725,7 +1725,7 @@ export const tools: Tool[] = [
   companyZh: "Jasper AI",
   founded: "2021",  headquarters: "Austin, TX",  
   descriptionLong: "Jasper is an AI writing assistant built for marketing teams and content creators. It specializes in creating brand-aligned copy, blog posts, social media content, and ad copy. With brand voice customization, SEO tools, and team collaboration features, Jasper helps businesses produce consistent on-brand content at scale.",
-  descriptionLongZh: "Jasper es un asistente de escritura IA para equipos de marketing. Se especializa en copy alineado con la marca, blogs y contenido para redes.",
+  descriptionLongZh: "Jasper是一款面向营销团队和内容创作者的AI写作助手。专注于创建品牌对齐的文案、博客文章和社交媒体内容。",
   advantages: [
             "Brand voice customization",
             "SEO-optimized content",
@@ -1733,10 +1733,10 @@ export const tools: Tool[] = [
             "Template library"
           ],
   advantagesZh: [
-            "Personalizacion de voz de marca",
-            "Contenido SEO",
-            "Colaboracion en equipo",
-            "Biblioteca de plantillas"
+            "品牌语气自定义",
+            "SEO优化内容",
+            "团队协作",
+            "模板库"
           ],
   useCases: [
             "Marketing copy and ads",
@@ -1746,13 +1746,13 @@ export const tools: Tool[] = [
             "Product descriptions"
           ],
   useCasesZh: [
-            "Copy de marketing",
-            "Redaccion de blogs",
-            "Contenido redes",
-            "Campanas de email"
+            "营销文案",
+            "博客文章写作",
+            "社交媒体内容",
+            "邮件营销"
           ],
   targetAudience: "Marketing teams and content creators who need consistent brand-aligned copy at scale.",
-  targetAudienceZh: "Equipos de marketing que necesitan copy consistente a escala.",
+  targetAudienceZh: "需要规模化创建一致品牌文案的营销团队和内容创作者。",
   pricingTiers: [
       {
         tier: "Creator",
@@ -1809,10 +1809,10 @@ export const tools: Tool[] = [
             "Good template variety"
           ],
   prosZh: [
-            "Consistencia de voz de marca",
-            "Integracion SEO",
-            "Funciones de equipo",
-            "Variedad de plantillas"
+            "品牌语气一致性",
+            "SEO集成",
+            "团队功能",
+            "模板种类丰富"
           ],
   cons: [
             "Expensive for individuals",
@@ -1821,10 +1821,10 @@ export const tools: Tool[] = [
             "Overkill for simple tasks"
           ],
   consZh: [
-            "Caro para individuos",
-            "Output puede ser generico",
-            "Mejores alternativas gratis",
-            "Excesivo para tareas simples"
+            "个人用户价格较高",
+            "输出可能显得模板化",
+            "有更好的免费替代方案",
+            "简单任务过于复杂"
           ],
   },
 
@@ -1832,7 +1832,7 @@ export const tools: Tool[] = [
     id: "copy-ai",
     name: "Copy.ai",
     description: "AI copywriting tool for sales, marketing, and social media content.",
-  descriptionZh: "Herramienta de copywriting IA para ventas, marketing y contenido de redes sociales. [CN]",
+  descriptionZh: "AI文案写作工具，用于销售、营销和社交媒体内容。",
     category: "writing",
     tags: ["copywriting", "sales", "marketing", "social-media"],
     difficulty: "beginner",
@@ -1845,7 +1845,7 @@ export const tools: Tool[] = [
   companyZh: "Copy.ai",
   founded: "2020",  headquarters: "San Francisco, CA",  
   descriptionLong: "Copy.ai is an AI copywriting tool for sales, marketing, and social media content. It generates sales copy, email campaigns, blog content, and social media posts quickly. With workflow automation features and a user-friendly interface, it helps marketers produce bulk content efficiently without sacrificing quality.",
-  descriptionLongZh: "Copy.ai es una herramienta de copywriting IA para ventas, marketing y redes. Genera copy de ventas, campanas de email y contenido rapido.",
+  descriptionLongZh: "Copy.ai是一款面向销售、营销和社交媒体的AI文案写作工具。可快速生成销售文案、邮件营销、博客内容和社交媒体帖子。",
   advantages: [
             "Quick content generation",
             "Workflow automation",
@@ -1853,10 +1853,10 @@ export const tools: Tool[] = [
             "User-friendly interface"
           ],
   advantagesZh: [
-            "Generacion rapida",
-            "Automatizacion de flujo",
-            "Soporte multiplataforma",
-            "Interfaz amigable"
+            "快速生成",
+            "工作流自动化",
+            "多平台支持",
+            "用户友好界面"
           ],
   useCases: [
             "Sales copy generation",
@@ -1866,13 +1866,13 @@ export const tools: Tool[] = [
             "Product descriptions"
           ],
   useCasesZh: [
-            "Copy de ventas",
-            "Campanas de email",
-            "Posts redes",
-            "Contenido blog"
+            "销售文案生成",
+            "邮件营销",
+            "社交媒体帖子",
+            "博客内容"
           ],
   targetAudience: "Marketers and sales professionals who need fast content generation for multiple platforms.",
-  targetAudienceZh: "Profesionales de marketing que necesitan contenido rapido.",
+  targetAudienceZh: "需要为多个平台快速生成内容的营销和销售专业人士。",
   pricingTiers: [
       {
         tier: "Free",
@@ -1927,10 +1927,10 @@ export const tools: Tool[] = [
             "Easy to use"
           ],
   prosZh: [
-            "Generacion rapida",
-            "Automatizaciones",
-            "Buen nivel gratuito",
-            "Facil de usar"
+            "快速生成",
+            "工作流自动化",
+            "良好的免费版本",
+            "易于使用"
           ],
   cons: [
             "Output needs editing",
@@ -1939,10 +1939,10 @@ export const tools: Tool[] = [
             "Limited long-form"
           ],
   consZh: [
-            "Output necesita edicion",
-            "Menos control de voz",
-            "Plantillas genericas",
-            "Formato largo limitado"
+            "输出需要编辑",
+            "对输出控制较少 de voz",
+            "模板较为通用",
+            "长文生成能力有限"
           ],
   },
 
@@ -1950,7 +1950,7 @@ export const tools: Tool[] = [
     id: "notion-ai",
     name: "Notion AI",
     description: "AI-powered writing and knowledge management integrated into Notion workspaces.",
-  descriptionZh: "Escritura impulsada por IA y gestión del conocimiento integrada en espacios de trabajo Notion. [CN]",
+  descriptionZh: "AI驱动的写作和知识管理，集成在Notion工作区中。",
     category: "productivity",
     tags: ["notes", "knowledge", "writing", "organization"],
     difficulty: "beginner",
@@ -1963,7 +1963,7 @@ export const tools: Tool[] = [
   companyZh: "Notion Labs",
   founded: "2013",  headquarters: "San Francisco, CA",  
   descriptionLong: "Notion AI brings AI-powered writing and knowledge management directly into your Notion workspace. It assists with drafting, summarizing, editing, and brainstorming inside your existing docs and databases. Seamlessly integrated, it can translate, fix spelling, generate action items from meeting notes, and help organize your knowledge base without switching tools.",
-  descriptionLongZh: "Notion AI integra escritura IA y gestion del conocimiento en tu espacio de trabajo Notion. Asiste con redaccion, resumen y edicion.",
+  descriptionLongZh: "Notion AI将AI驱动的写作和知识管理带入Notion工作区。辅助起草、总结、编辑，无需切换工具即可完成多项任务。",
   advantages: [
             "Integrated into Notion workspace",
             "AI writing and editing",
@@ -1971,10 +1971,10 @@ export const tools: Tool[] = [
             "Meeting notes automation"
           ],
   advantagesZh: [
-            "Integrado en Notion",
-            "Escritura y edicion IA",
-            "Gestion del conocimiento",
-            "Automacion de notas"
+            "集成在Notion中",
+            "AI写作和编辑",
+            "知识管理",
+            "会议记录自动化"
           ],
   useCases: [
             "Meeting notes summarization",
@@ -1984,13 +1984,13 @@ export const tools: Tool[] = [
             "Content translation"
           ],
   useCasesZh: [
-            "Resumen de reuniones",
-            "Redaccion de documentos",
-            "Base de conocimiento",
-            "Planificacion"
+            "会议记录总结",
+            "文档起草和编辑",
+            "知识库问答",
+            "项目规划"
           ],
   targetAudience: "Existing Notion users who want AI assistance integrated into their workspace without switching tools.",
-  targetAudienceZh: "Usuarios de Notion que quieren IA integrada en su espacio.",
+  targetAudienceZh: "希望在不切换工具的情况下将AI助手集成到工作区的现有Notion用户。",
   pricingTiers: [
       {
         tier: "Add-on",
@@ -2032,10 +2032,10 @@ export const tools: Tool[] = [
             "Non-disruptive workflow"
           ],
   prosZh: [
-            "Integracion profunda",
-            "Util para resumenes",
-            "Preguntas sobre base",
-            "Flujo no disruptivo"
+            "深度Notion集成",
+            "总结功能实用",
+            "知识库问答",
+            "不干扰现有工作流"
           ],
   cons: [
             "Requires Notion subscription",
@@ -2044,10 +2044,10 @@ export const tools: Tool[] = [
             "Notion dependency"
           ],
   consZh: [
-            "Requiere suscripcion Notion",
-            "Costo adicional",
-            "Menos potente que IA dedicada",
-            "Dependencia de Notion"
+            "需要Notion订阅",
+            "附加功能需付费",
+            "不如专用AI工具强大",
+            "依赖Notion平台"
           ],
   },
 
@@ -2055,7 +2055,7 @@ export const tools: Tool[] = [
     id: "grammarly",
     name: "Grammarly",
     description: "AI writing assistant for grammar checking, style improvement, and tone adjustment.",
-  descriptionZh: "Asistente de escritura IA para corrección gramatical, mejora de estilo y ajuste de tono. [CN]",
+  descriptionZh: "AI写作助手，用于语法检查、风格改进和语气调整。",
     category: "writing",
     tags: ["grammar", "writing", "editing", "style"],
     difficulty: "beginner",
@@ -2068,7 +2068,7 @@ export const tools: Tool[] = [
   companyZh: "Grammarly",
   founded: "2009",  headquarters: "San Francisco, CA",  
   descriptionLong: "Grammarly is an AI writing assistant for grammar checking, style improvement, and tone adjustment. It works across emails, documents, and web forms with features including real-time grammar correction, plagiarism detection, tone detection, and style suggestions. Used by millions for professional and error-free writing across all platforms.",
-  descriptionLongZh: "Grammarly es un asistente de escritura IA para correccion gramatical, mejora de estilo y ajuste de tono. Funciona en correos, documentos y formularios web.",
+  descriptionLongZh: "Grammarly是一款AI写作助手，用于语法检查、风格改进和语气调整。可跨邮件、文档和网页表单使用，提供实时语法纠正和查重功能。",
   advantages: [
             "Real-time grammar checking everywhere",
             "Tone detection and adjustment",
@@ -2076,10 +2076,10 @@ export const tools: Tool[] = [
             "Style and clarity suggestions"
           ],
   advantagesZh: [
-            "Correccion en tiempo real",
-            "Deteccion de tono",
-            "Deteccion de plagio",
-            "Sugerencias de estilo"
+            "实时语法检查",
+            "语气检测",
+            "查重检测",
+            "风格建议"
           ],
   useCases: [
             "Professional email writing",
@@ -2089,13 +2089,13 @@ export const tools: Tool[] = [
             "Creative writing refinement"
           ],
   useCasesZh: [
-            "Escritura de correos",
-            "Edicion de ensayos",
-            "Documentos profesionales",
-            "Posts redes"
+            "专业邮件写作",
+            "学术论文编辑",
+            "商业文档润色",
+            "社交媒体帖子"
           ],
   targetAudience: "Anyone who writes professionally -- students, professionals, writers, and non-native speakers wanting error-free writing.",
-  targetAudienceZh: "Cualquier persona que escribe profesionalmente -- estudiantes, profesionales y escritores.",
+  targetAudienceZh: "任何需要专业写作的人——学生、专业人士、写作者和非母语者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -2170,10 +2170,10 @@ export const tools: Tool[] = [
             "Generous free tier"
           ],
   prosZh: [
-            "Funciona en todas partes",
-            "Deteccion gramatical excelente",
-            "Analisis de tono util",
-            "Buen nivel gratuito"
+            "通过扩展随处可用",
+            "语法检测出色",
+            "语气分析实用",
+            "良好的免费版本"
           ],
   cons: [
             "Premium expensive",
@@ -2182,10 +2182,10 @@ export const tools: Tool[] = [
             "Can slow down browsers"
           ],
   consZh: [
-            "Premium caro",
-            "Preocupaciones de privacidad",
-            "Sugerencias excesivas",
-            "Ralentiza navegadores"
+            "高级版价格较高",
+            "隐私问题",
+            "建议有时过于激进",
+            "可能拖慢浏览器"
           ],
   },
 
@@ -2193,7 +2193,7 @@ export const tools: Tool[] = [
     id: "cursor",
     name: "Cursor",
     description: "AI-first code editor built on VS Code with deep AI integration for faster development.",
-  descriptionZh: "Editor de código con IA basado en VS Code con integración profunda de IA para desarrollo más rápido. [CN]",
+  descriptionZh: "基于VS Code的AI优先代码编辑器，深度集成AI以加速开发。",
     category: "coding",
     tags: ["ide", "code-generation", "vs-code", "productivity"],
     difficulty: "intermediate",
@@ -2206,7 +2206,7 @@ export const tools: Tool[] = [
   companyZh: "Anysphere",
   founded: "2022",  headquarters: "San Francisco, CA",  
   descriptionLong: "Cursor is an AI-first code editor built on VS Code with deep AI integration. It offers AI-powered autocomplete, inline editing, multi-file editing, and chat-based code generation that understands your entire codebase. With features like AI context awareness and agent mode, Cursor dramatically accelerates development speed.",
-  descriptionLongZh: "Cursor es un editor de codigo con IA basado en VS Code. Ofrece autocompletado IA, edicion inline y chat que entiende tu base de codigo.",
+  descriptionLongZh: "Cursor是一个基于VS Code的AI优先代码编辑器。提供AI驱动的自动补全、内联编辑和基于聊天的代码生成，能理解你的整个代码库。",
   advantages: [
             "VS Code compatible",
             "AI understands full codebase",
@@ -2214,10 +2214,10 @@ export const tools: Tool[] = [
             "Agent mode for complex tasks"
           ],
   advantagesZh: [
-            "Compatible con VS Code",
-            "IA entiende toda la base",
-            "Edicion multi-archivo",
-            "Modo agente"
+            "兼容VS Code",
+            "AI理解整个代码库",
+            "多文件编辑",
+            "代理模式"
           ],
   useCases: [
             "Full-stack web development",
@@ -2227,13 +2227,13 @@ export const tools: Tool[] = [
             "Rapid prototyping"
           ],
   useCasesZh: [
-            "Desarrollo web full-stack",
-            "Refactorizacion",
-            "Correccion de bugs",
-            "Aprendizaje de bases"
+            "全栈Web开发",
+            "跨文件代码重构",
+            "AI辅助Bug修复",
+            "学xi新的代码库"
           ],
   targetAudience: "Developers who want AI deeply integrated into their code editor for faster development.",
-  targetAudienceZh: "Desarrolladores que quieren IA integrada en su editor de codigo.",
+  targetAudienceZh: "希望AI深度集成到代码编辑器中以加速开发的开发者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -2283,10 +2283,10 @@ export const tools: Tool[] = [
             "Agent mode powerful"
           ],
   prosZh: [
-            "Integracion VS Code",
-            "IA consciente del codigo",
-            "Autocompletado excelente",
-            "Modo agente potente"
+            "深度VS Code集成",
+            "AI感知整个代码库",
+            "出色的自动补全",
+            "代理模式 potente"
           ],
   cons: [
             "Requires subscription for full features",
@@ -2295,10 +2295,10 @@ export const tools: Tool[] = [
             "Pro plan expensive"
           ],
   consZh: [
-            "Requiere suscripcion",
-            "Pesado en recursos",
-            "En maduracion",
-            "Plan Pro caro"
+            "完整功能需要订阅",
+            "资源占用较高",
+            "仍在不断完善中",
+            "Pro版价格较高"
           ],
   },
 
@@ -2306,7 +2306,7 @@ export const tools: Tool[] = [
     id: "github-copilot",
     name: "GitHub Copilot",
     description: "AI pair programmer from GitHub that suggests code in real-time across popular IDEs.",
-  descriptionZh: "Programador par IA de GitHub que sugiere código en tiempo real en IDEs populares. [CN]",
+  descriptionZh: "GitHub的AI配对编程器，在主流IDE中实时建议代码。",
     category: "coding",
     tags: ["code-generation", "ide", "github", "pair-programming"],
     difficulty: "intermediate",
@@ -2316,10 +2316,10 @@ export const tools: Tool[] = [
     useCase: "Copilot provides real-time code suggestions as you type. It integrates with VS Code, JetBrains, and Neovim for seamless AI-assisted development.",
     icon: "\u{1F91D}",
   company: "GitHub (Microsoft)",
-  companyZh: "GitHub (Microsoft)",
+  companyZh: "GitHub（微软）",
   founded: "2008",  headquarters: "San Francisco, CA",  
   descriptionLong: "GitHub Copilot is an AI pair programmer from GitHub that suggests code in real-time across popular IDEs including VS Code, JetBrains, and Neovim. Powered by OpenAI's Codex models, it offers context-aware code completions, chat-based coding help, and pull request summaries. Copilot has become the standard for AI-assisted development.",
-  descriptionLongZh: "GitHub Copilot es un programador par IA que sugiere codigo en tiempo real en IDEs populares. Impulsado por modelos Codex de OpenAI.",
+  descriptionLongZh: "GitHub Copilot是一个AI配对编程器，在VS Code、JetBrains和Neovim等主流IDE中实时建议代码。由OpenAI的Codex模型驱动。",
   advantages: [
             "Integrated in major IDEs",
             "Context-aware suggestions",
@@ -2327,10 +2327,10 @@ export const tools: Tool[] = [
             "PR summary generation"
           ],
   advantagesZh: [
-            "Integrado en IDEs principales",
-            "Sugerencias contextuales",
-            "Ayuda por chat",
-            "Resumenes de PR"
+            "集成在主流IDE中",
+            "上下文感知的建议",
+            "基于聊天的帮助",
+            "PR摘要生成"
           ],
   useCases: [
             "Real-time code completion",
@@ -2340,13 +2340,13 @@ export const tools: Tool[] = [
             "Test generation"
           ],
   useCasesZh: [
-            "Completado de codigo",
-            "Generacion por chat",
-            "Descripciones de PR",
-            "Explicacion de codigo"
+            "实时代码补全",
+            "基于聊天的代码生成",
+            "拉取请求描述",
+            "代码解释"
           ],
   targetAudience: "Developers using VS Code, JetBrains, or Neovim who want AI code suggestions in their existing IDE.",
-  targetAudienceZh: "Desarrolladores que usan VS Code, JetBrains o Neovim que quieren sugerencias IA.",
+  targetAudienceZh: "使用VS Code、JetBrains或Neovim并希望在现有IDE中获得AI代码建议的开发者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -2401,10 +2401,10 @@ export const tools: Tool[] = [
             "Free for students"
           ],
   prosZh: [
-            "Funciona en IDEs existentes",
-            "Completado contextual",
-            "Bueno para boilerplate",
-            "Gratis para estudiantes"
+            "在现有IDE中工作",
+            "上下文感知补全",
+            "适合样板代码",
+            "学生免费"
           ],
   cons: [
             "Less powerful than Cursor agent",
@@ -2413,10 +2413,10 @@ export const tools: Tool[] = [
             "Pro plan needed"
           ],
   consZh: [
-            "Menos potente que Cursor",
-            "Puede sugerir codigo inseguro",
-            "Contexto multi-archivo limitado",
-            "Requiere plan Pro"
+            "不如Cursor代理模式强大",
+            "可能建议不安全代码",
+            "多文件上下文有限",
+            "需要Pro计划"
           ],
   },
 
@@ -2424,7 +2424,7 @@ export const tools: Tool[] = [
     id: "replit-ai",
     name: "Replit AI",
     description: "Browser-based IDE with built-in AI agent that can build and deploy apps from prompts.",
-  descriptionZh: "IDE basado en navegador con agente IA integrado que puede construir y desplegar apps desde instrucciones. [CN]",
+  descriptionZh: "基于浏览器的IDE，内置AI代理，可从提示构建和部署应用。",
     category: "coding",
     tags: ["ide", "deploy", "no-setup", "agent"],
     difficulty: "beginner",
@@ -2437,7 +2437,7 @@ export const tools: Tool[] = [
   companyZh: "Replit",
   founded: "2016",  headquarters: "San Francisco, CA",  
   descriptionLong: "Replit AI is a browser-based IDE with a built-in AI agent that can build and deploy applications from natural language prompts. It requires zero setup -- just describe what you want and the AI agent creates, runs, and deploys the app. Perfect for beginners learning to code, rapid prototyping, and building MVPs without local development setup.",
-  descriptionLongZh: "Replit AI es un IDE en navegador con agente IA que construye y despliega apps desde prompts. Ideal para principiantes y prototipado rapido.",
+  descriptionLongZh: "Replit AI是一个基于浏览器的IDE，内置AI代理，可根据自然语言提示构建和部署应用。零设置，适合初学者和快速原型开发。",
   advantages: [
             "Zero setup browser IDE",
             "AI builds entire apps",
@@ -2445,10 +2445,10 @@ export const tools: Tool[] = [
             "Collaboration built-in"
           ],
   advantagesZh: [
-            "IDE sin configuracion",
-            "IA construye apps completas",
-            "Despliegue instantaneo",
-            "Colaboracion integrada"
+            "零设置浏览器IDE",
+            "AI构建完整应用",
+            "即时部署",
+            "内置协作功能"
           ],
   useCases: [
             "Rapid app prototyping",
@@ -2458,13 +2458,13 @@ export const tools: Tool[] = [
             "Deploying side projects"
           ],
   useCasesZh: [
-            "Prototipado rapido",
-            "Aprender a programar",
-            "Creacion de MVPs",
-            "Desarrollo colaborativo"
+            "快速应用原型开发",
+            "交互式学编程",
+            "快速构建MVP",
+            "协作开发"
           ],
   targetAudience: "Beginners learning to code and developers who want rapid prototyping without local setup.",
-  targetAudienceZh: "Principiantes que aprenden a programar y desarrolladores para prototipado rapido.",
+  targetAudienceZh: "学习编程的初学者和希望无需本地设置即可快速原型开发的开发者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -2519,10 +2519,10 @@ export const tools: Tool[] = [
             "Great for learning"
           ],
   prosZh: [
-            "Sin configuracion",
-            "IA construye apps completas",
-            "Despliegue integrado",
-            "Excelente para aprender"
+            "零设置，无需配置",
+            "AI构建完整应用",
+            "内置部署功能",
+            "非常适合学习"
           ],
   cons: [
             "Limited for complex apps",
@@ -2531,10 +2531,10 @@ export const tools: Tool[] = [
             "Less control than local"
           ],
   consZh: [
-            "Limitado para apps complejas",
-            "Limites de computo",
-            "Requiere internet",
-            "Menos control que local"
+            "复杂应用能力有限",
+            "计算资源限制",
+            "需要联网",
+            "对输出控制较少 que local"
           ],
   },
 
@@ -2542,7 +2542,7 @@ export const tools: Tool[] = [
     id: "gamma",
     name: "Gamma",
     description: "AI-powered presentation tool that creates slides, documents, and web pages from text.",
-  descriptionZh: "Herramienta de presentaciones IA que crea diapositivas, documentos y páginas web desde texto. [CN]",
+  descriptionZh: "AI驱动的演示工具，可从文本创建幻灯片、文档和网页。",
     category: "productivity",
     tags: ["presentation", "slides", "design", "documents"],
     difficulty: "beginner",
@@ -2555,7 +2555,7 @@ export const tools: Tool[] = [
   companyZh: "Gamma",
   founded: "2020",  headquarters: "San Francisco, CA",  
   descriptionLong: "Gamma is an AI-powered presentation tool that creates slides, documents, and web pages from text prompts. It generates beautifully designed content with smart layouts, images, and consistent themes automatically. Unlike traditional presentation tools, Gamma handles the design so users focus on content. Perfect for students, educators, and professionals.",
-  descriptionLongZh: "Gamma es una herramienta de presentaciones IA que crea diapositivas, documentos y paginas web desde texto. Genera disenos hermosos automaticamente.",
+  descriptionLongZh: "Gamma是一个AI驱动的演示工具，可从文本提示创建幻灯片、文档和网页。自动生成设计精美的内容，用户只需专注于内容。",
   advantages: [
             "AI generates complete presentations",
             "Smart auto-layout",
@@ -2563,10 +2563,10 @@ export const tools: Tool[] = [
             "Beautiful design templates"
           ],
   advantagesZh: [
-            "Presentaciones completas por IA",
-            "Maquetacion automatica",
-            "Tambien paginas web",
-            "Plantillas hermosas"
+            "AI生成完整演示文稿",
+            "智能自动布局",
+            "也支持网页和文档",
+            "精美的设计模板"
           ],
   useCases: [
             "Business presentations",
@@ -2576,13 +2576,13 @@ export const tools: Tool[] = [
             "Pitch decks"
           ],
   useCasesZh: [
-            "Presentaciones empresariales",
-            "Diapositivas educativas",
-            "Propuestas",
-            "Creacion de paginas web"
+            "商业演示",
+            "教育幻灯片",
+            "项目提案",
+            "网页创建"
           ],
   targetAudience: "Students, educators, and professionals who want AI-generated presentations and documents quickly.",
-  targetAudienceZh: "Estudiantes y profesionales que quieren presentaciones generadas por IA rapidamente.",
+  targetAudienceZh: "希望快速获得AI生成演示文稿和文档的学生、教育工作者和专业人士。",
   pricingTiers: [
       {
         tier: "Free",
@@ -2631,10 +2631,10 @@ export const tools: Tool[] = [
             "Easy to use"
           ],
   prosZh: [
-            "Creacion rapida",
-            "Diseno automatico hermoso",
-            "Multi-formato",
-            "Facil de usar"
+            "快速创建",
+            "自动设计精美",
+            "多格式输出",
+            "易于使用"
           ],
   cons: [
             "Limited customization",
@@ -2643,10 +2643,10 @@ export const tools: Tool[] = [
             "Subscription needed"
           ],
   consZh: [
-            "Personalizacion limitada",
-            "Menos control que PowerPoint",
-            "Disenos no siempre perfectos",
-            "Suscripcion necesaria"
+            "自定义有限",
+            "对输出控制较少 que PowerPoint",
+            "AI设计不一定完美",
+            "需要订阅"
           ],
   },
 
@@ -2654,7 +2654,7 @@ export const tools: Tool[] = [
     id: "beautiful-ai",
     name: "Beautiful.ai",
     description: "AI presentation tool with smart templates that auto-layout your content beautifully.",
-  descriptionZh: "Herramienta de presentaciones IA con plantillas inteligentes que maquetan tu contenido automáticamente. [CN]",
+  descriptionZh: "AI演示工具，智能模板自动排版你的内容。",
     category: "productivity",
     tags: ["presentation", "design", "templates", "business"],
     difficulty: "beginner",
@@ -2667,7 +2667,7 @@ export const tools: Tool[] = [
   companyZh: "Beautiful.ai",
   founded: "2015",  headquarters: "San Francisco, CA",  
   descriptionLong: "Beautiful.ai is an AI presentation tool with smart templates that auto-layout your content. As you add content, the AI automatically arranges it into professional designs with consistent spacing, alignment, and styling. It enforces design rules so presentations always look polished without manual formatting. Best for business presentations needing design consistency.",
-  descriptionLongZh: "Beautiful.ai es una herramienta de presentaciones con plantillas inteligentes que maquetan tu contenido automaticamente en disenos profesionales.",
+  descriptionLongZh: "Beautiful.ai是一款AI演示工具，智能模板自动将你的内容排版成专业设计。AI自动处理间距、对齐和样式一致性。",
   advantages: [
             "Smart auto-layout technology",
             "Design consistency enforcement",
@@ -2675,10 +2675,10 @@ export const tools: Tool[] = [
             "Team collaboration"
           ],
   advantagesZh: [
-            "Maquetacion inteligente",
-            "Consistencia de diseno",
-            "Plantillas profesionales",
-            "Colaboracion en equipo"
+            "智能自动排版",
+            "设计一致性",
+            "专业模板",
+            "团队协作"
           ],
   useCases: [
             "Business presentations",
@@ -2688,13 +2688,13 @@ export const tools: Tool[] = [
             "Brand presentations"
           ],
   useCasesZh: [
-            "Presentaciones de negocio",
-            "Deck de ventas",
-            "Pitches de inversion",
-            "Informes de equipo"
+            "商业演示",
+            "销售演示",
+            "投资人路演",
+            "团队报告"
           ],
   targetAudience: "Business professionals who need consistent, professional presentations without design skills.",
-  targetAudienceZh: "Profesionales que necesitan presentaciones profesionales consistentes sin habilidades de diseno.",
+  targetAudienceZh: "需要一致专业演示文稿但无设计技能的商业专业人士。",
   pricingTiers: [
       {
         tier: "Pro",
@@ -2748,10 +2748,10 @@ export const tools: Tool[] = [
             "Good for teams"
           ],
   prosZh: [
-            "Maquetacion automatica",
-            "Consistencia de diseno",
-            "Output profesional",
-            "Bueno para equipos"
+            "智能自动布局",
+            "设计一致性",
+            "专业输出",
+            "适合团队使用"
           ],
   cons: [
             "Less creative freedom",
@@ -2761,7 +2761,7 @@ export const tools: Tool[] = [
           ],
   consZh: [
             "Menos libertad creativa",
-            "Caro para individuos",
+            "个人用户价格较高",
             "Plantillas limitadas",
             "IA restrictiva"
           ],
@@ -2771,33 +2771,33 @@ export const tools: Tool[] = [
     id: "canva-ai",
     name: "Canva AI",
     description: "All-in-one design platform with AI features for generating images, copy, and layouts.",
-  descriptionZh: "Plataforma de diseño integral con funciones IA para generar imágenes, texto y diseños. [CN]",
+  descriptionZh: "一体化设计平台，具有AI功能，可生成图像、文案和布局。",
     category: "productivity",
     tags: ["design", "templates", "social-media", "all-in-one"],
     difficulty: "beginner",
     url: "https://www.canva.com",
     rating: r(4.7),
     pricing: "Free / $12.99/mo Pro",
-    useCase: "Canva AI includes Magic Design, Magic Write, and AI image generation. Ideal for non-designers creating social media graphics, flyers, and presentations.",
+    useCase: "Canva AI includes Magic Design, Magic Write文案生成, and AI image generation. Ideal for non-designers creating social media graphics, flyers, and presentations.",
     icon: "\u{1F3AF}",
   company: "Canva",
-  companyZh: "Canva",
+  companyZh: "Canva（可画）",
   founded: "2013",  headquarters: "Sydney, Australia",  
-  descriptionLong: "Canva AI brings AI-powered design features into the popular Canva platform. Features include Magic Design (generates complete templates from descriptions), Magic Write (AI copy generation), AI image generation, background removal, and smart resize. Canva AI makes professional design accessible to non-designers with an all-in-one platform for social media, presentations, and print.",
-  descriptionLongZh: "Canva AI integra funciones de diseno IA en la plataforma Canva. Incluye Magic Design, Magic Write y generacion de imagenes IA.",
+  descriptionLong: "Canva AI brings AI-powered design features into the popular Canva platform. Features include Magic Design (generates complete templates from descriptions), Magic Write文案生成 (AI copy generation), AI image generation, background removal, and smart resize. Canva AI makes professional design accessible to non-designers with an all-in-one platform for social media, presentations, and print.",
+  descriptionLongZh: "Canva AI将AI驱动的设计功能带入Canva平台。包含Magic Design、Magic Write文案生成、AI图像生成、背景移除和智能调整大小。",
   advantages: [
             "All-in-one design platform",
             "Magic Design from text",
-            "Magic Write copy generation",
+            "Magic Write文案生成 copy generation",
             "AI image generation",
             "Background removal"
           ],
   advantagesZh: [
-            "Plataforma integral",
-            "Magic Design desde texto",
-            "Magic Write",
-            "Generacion de imagenes IA",
-            "Eliminacion de fondos"
+            "一体化设计平台",
+            "Magic Design从文本生成",
+            "Magic Write文案生成",
+            "AI图像生成",
+            "视频背景移除"
           ],
   useCases: [
             "Social media graphics",
@@ -2807,13 +2807,13 @@ export const tools: Tool[] = [
             "Brand kits"
           ],
   useCasesZh: [
-            "Graficos redes",
-            "Diseno presentaciones",
-            "Materiales marketing",
-            "Creacion de video"
+            "社交媒体图像",
+            "演示文稿设计",
+            "营销物料",
+            "视频创作"
           ],
   targetAudience: "Non-designers and social media managers who want easy professional design with AI assistance.",
-  targetAudienceZh: "No-disenadores y community managers que quieren diseno profesional facil.",
+  targetAudienceZh: "希望借助AI轻松实现专业设计的非设计师和社交媒体管理者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -2873,10 +2873,10 @@ export const tools: Tool[] = [
             "Team collaboration"
           ],
   prosZh: [
-            "Diseno integral",
-            "Magic Design potente",
-            "Gran biblioteca de plantillas",
-            "Colaboracion"
+            "一体化设计",
+            "Magic Design功能强大",
+            "海量模板库",
+            "团队协作"
           ],
   cons: [
             "Pro subscription needed for AI",
@@ -2885,10 +2885,10 @@ export const tools: Tool[] = [
             "Brand control limited on Free"
           ],
   consZh: [
-            "Suscripcion Pro necesaria",
-            "Puede ser abrumador",
-            "Exportacion limitada",
-            "Control de marca limitado"
+            "AI功能需要Pro订阅",
+            "功能繁多可能让人不知所措",
+            "导出功能在免费版受限",
+            "免费版品牌控制有限"
           ],
   },
 
@@ -2896,7 +2896,7 @@ export const tools: Tool[] = [
     id: "elevenlabs",
     name: "ElevenLabs",
     description: "Industry-leading AI voice synthesis with realistic, expressive speech generation.",
-  descriptionZh: "Síntesis de voz IA líder en la industria con generación de voz realista y expresiva. [CN]",
+  descriptionZh: "业界领先的AI语音合成，生成逼真且富有表现力的语音。",
     category: "audio",
     tags: ["voice", "tts", "audiobooks", "realistic"],
     difficulty: "beginner",
@@ -2909,7 +2909,7 @@ export const tools: Tool[] = [
   companyZh: "ElevenLabs",
   founded: "2022",  headquarters: "New York, NY",  
   descriptionLong: "ElevenLabs is the industry-leading AI voice synthesis platform known for ultra-realistic, expressive speech generation. It offers text-to-speech, voice cloning, voice library, and multi-language narration in 29+ languages. With features like voice design, emotion control, and API access, ElevenLabs is used for audiobooks, videos, voiceovers, and content creation.",
-  descriptionLongZh: "ElevenLabs es la plataforma lider de sintesis de voz IA con generacion de voz realista y expresiva. Ofrece texto-a-voz y clonacion de voz.",
+  descriptionLongZh: "ElevenLabs是业界领先的AI语音合成平台，以超逼真、富有表现力的语音生成闻名。提供文本转语音和语音克隆功能。",
   advantages: [
             "Ultra-realistic voice quality",
             "Voice cloning technology",
@@ -2917,10 +2917,10 @@ export const tools: Tool[] = [
             "Emotion and tone control"
           ],
   advantagesZh: [
-            "Voz ultra realista",
-            "Clonacion de voz",
-            "29+ idiomas",
-            "Control de emocion"
+            "超逼真的语音质量",
+            "语音克隆",
+            "支持29+种语言",
+            "情感和语气控制"
           ],
   useCases: [
             "Audiobook narration",
@@ -2930,13 +2930,13 @@ export const tools: Tool[] = [
             "Accessibility solutions"
           ],
   useCasesZh: [
-            "Narracion de audiolibros",
-            "Locuciones de video",
-            "Voz de creador",
-            "Aprendizaje de idiomas"
+            "有声书旁白",
+            "视频配音",
+            "内容创作者语音",
+            "语言学xi音频"
           ],
   targetAudience: "Content creators, publishers, and developers needing realistic AI voice generation for audio content.",
-  targetAudienceZh: "Creadores de contenido, editores y desarrolladores que necesitan generación de voz AI realista para contenido de audio.",
+  targetAudienceZh: "需要为音频内容生成逼真AI语音的内容创作者、出版商和开发者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -2991,10 +2991,10 @@ export const tools: Tool[] = [
             "Good API"
           ],
   prosZh: [
-            "Voces IA mas realistas",
-            "Clonacion excelente",
-            "Soporte multilingue",
-            "Buena API"
+            "最逼真的AI语音",
+            "出色的语音克隆",
+            "多语言支持",
+            "良好的API"
           ],
   cons: [
             "Expensive for high usage",
@@ -3003,10 +3003,10 @@ export const tools: Tool[] = [
             "Long processing for long text"
           ],
   consZh: [
-            "Caro para uso intensivo",
-            "Preocupaciones eticas",
-            "Nivel gratuito limitado",
-            "Procesamiento lento"
+            "高使用量费用较高",
+            "语音克隆伦理问题",
+            "提供免费版本 limitado",
+            "长文本处理较慢"
           ],
   },
 
@@ -3014,7 +3014,7 @@ export const tools: Tool[] = [
     id: "suno",
     name: "Suno",
     description: "AI music generation that creates original songs with lyrics from text prompts.",
-  descriptionZh: "Generación de música IA que crea canciones originales con letras a partir de texto. [CN]",
+  descriptionZh: "AI音乐生成，从文本提示创建带歌词的原创歌曲。",
     category: "audio",
     tags: ["music", "song", "creative", "audio"],
     difficulty: "beginner",
@@ -3027,7 +3027,7 @@ export const tools: Tool[] = [
   companyZh: "Suno",
   founded: "2022",  headquarters: "Cambridge, MA",  
   descriptionLong: "Suno is an AI music generation platform that creates original songs with vocals and instruments from text prompts. It can generate complete songs in various genres including pop, rock, hip-hop, electronic, and classical. Users provide lyrics or let Suno generate them, choose a style, and the AI produces a complete musical composition. Great for content creators and music exploration.",
-  descriptionLongZh: "Suno es una plataforma de generacion de musica IA que crea canciones originales con voces e instrumentos desde prompts de texto.",
+  descriptionLongZh: "Suno是一个AI音乐生成平台，从文本提示创建带有歌声和乐器的原创歌曲。支持流行、摇滚、嘻哈等多种风格。",
   advantages: [
             "Complete song generation",
             "Multiple genres supported",
@@ -3035,10 +3035,10 @@ export const tools: Tool[] = [
             "Fast creation process"
           ],
   advantagesZh: [
-            "Cancion completa",
-            "Multiples generos",
-            "Letras incluidas",
-            "Proceso rapido"
+            "完整歌曲生成",
+            "多种音乐风格",
+            "包含歌词生成",
+            "创作速度快"
           ],
   useCases: [
             "Background music creation",
@@ -3048,13 +3048,13 @@ export const tools: Tool[] = [
             "Personal enjoyment"
           ],
   useCasesZh: [
-            "Musica de fondo",
-            "Canciones para creadores",
-            "Exploracion musical",
-            "Inspiracion creativa"
+            "背景音乐创作",
+            "内容创作者的开场曲",
+            "音乐探索",
+            "创意灵感"
           ],
   targetAudience: "Content creators, musicians exploring AI, and anyone wanting original AI-generated music.",
-  targetAudienceZh: "Creadores de contenido, músicos que exploran IA y cualquier persona que quiera música original generada por IA.",
+  targetAudienceZh: "内容创作者、探索AI的音乐人以及任何想要AI生成原创音乐的人。",
   pricingTiers: [
       {
         tier: "Free",
@@ -3103,10 +3103,10 @@ export const tools: Tool[] = [
             "Good quality output"
           ],
   prosZh: [
-            "Canciones completas",
-            "Multiples generos",
-            "Facil de usar",
-            "Buena calidad"
+            "生成完整歌曲",
+            "多种音乐风格",
+            "易于使用",
+            "输出质量不错"
           ],
   cons: [
             "Limited control over details",
@@ -3115,10 +3115,10 @@ export const tools: Tool[] = [
             "Free tier limitations"
           ],
   consZh: [
-            "Control limitado",
-            "No para musica profesional",
-            "Canciones similares",
-            "Limitaciones gratis"
+            "细节控制有限",
+            "不适合专业音乐制作",
+            "歌曲听感相似",
+            "免费版功能限制"
           ],
   },
 
@@ -3126,7 +3126,7 @@ export const tools: Tool[] = [
     id: "murf-ai",
     name: "Murf AI",
     description: "AI voiceover platform with natural-sounding voices for professional content creation.",
-  descriptionZh: "Plataforma de locución IA con voces naturales para creación de contenido profesional. [CN]",
+  descriptionZh: "AI配音平台，提供自然声音，用于专业内容创作。",
     category: "audio",
     tags: ["voiceover", "tts", "professional", "narration"],
     difficulty: "beginner",
@@ -3139,7 +3139,7 @@ export const tools: Tool[] = [
   companyZh: "Murf AI",
   founded: "2020",  headquarters: "Boston, MA",  
   descriptionLong: "Murf AI is a voiceover platform with natural-sounding AI voices for professional content creation. It offers 120+ voices across 20+ languages with features like pitch control, emphasis adjustment, and pause insertion. Murf is widely used for e-learning, presentations, advertising, and corporate videos with a user-friendly editor.",
-  descriptionLongZh: "Murf AI es una plataforma de locucion con voces IA naturales. Ofrece 120+ voces en 20+ idiomas con control de tono y enfasis.",
+  descriptionLongZh: "Murf AI是一个AI配音平台，提供自然听感的AI语音。提供120多种声音、20多种语言，支持音调控制和强调调整。",
   advantages: [
             "120+ natural voices",
             "20+ languages",
@@ -3147,10 +3147,10 @@ export const tools: Tool[] = [
             "User-friendly editor"
           ],
   advantagesZh: [
-            "120+ voces naturales",
-            "20+ idiomas",
-            "Control de tono y enfasis",
-            "Editor facil"
+            "120多种自然声音",
+            "20多种语言",
+            "音调和强调控制",
+            "用户友好的编辑器"
           ],
   useCases: [
             "E-learning narration",
@@ -3160,13 +3160,13 @@ export const tools: Tool[] = [
             "Advertising audio"
           ],
   useCasesZh: [
-            "Narracion educativa",
-            "Locucion de videos",
-            "Capacitacion corporativa",
-            "Creacion de podcasts"
+            "在线教育旁白",
+            "视频配音",
+            "企业培训",
+            "播客创作"
           ],
   targetAudience: "Content creators, educators, and businesses needing professional voiceovers without hiring voice actors.",
-  targetAudienceZh: "Creadores de contenido, educadores y empresas que necesitan locuciones profesionales sin contratar actores de voz.",
+  targetAudienceZh: "需要专业配音但又不想聘请配音演员的内容创作者、教育工作者和企业。",
   pricingTiers: [
       {
         tier: "Free",
@@ -3216,10 +3216,10 @@ export const tools: Tool[] = [
             "Multi-language"
           ],
   prosZh: [
-            "Muchas opciones de voz",
-            "Sonido natural",
-            "Buen control de edicion",
-            "Multilingue"
+            "多种声音选择",
+            "声音自然",
+            "编辑控制良好",
+            "多语言支持"
           ],
   cons: [
             "Can be robotic at times",
@@ -3228,10 +3228,10 @@ export const tools: Tool[] = [
             "Voice quality varies"
           ],
   consZh: [
-            "A veces roboticas",
-            "Caro funciones completas",
-            "Nivel gratuito limitado",
-            "Calidad variable"
+            "部分声音仍显机械",
+            "完整功能价格较高",
+            "提供免费版本 limitado",
+            "质量不稳定"
           ],
   },
 
@@ -3239,7 +3239,7 @@ export const tools: Tool[] = [
     id: "deeplearning-ai",
     name: "DeepLearning.AI",
     description: "World-class AI education platform offering courses from Andrew Ng and industry experts.",
-  descriptionZh: "Plataforma de educación en IA de clase mundial con cursos de Andrew Ng y expertos de la industria. [CN]",
+  descriptionZh: "世界级的AI教育平台，提供吴恩达和行业专家的课程。",
     category: "learning",
     tags: ["courses", "education", "deep-learning", "certificate"],
     difficulty: "intermediate",
@@ -3252,7 +3252,7 @@ export const tools: Tool[] = [
   companyZh: "DeepLearning.AI",
   founded: "2017",  headquarters: "Palo Alto, CA",  
   descriptionLong: "DeepLearning.AI offers world-class AI education founded by Andrew Ng, one of the most influential figures in machine learning. It provides structured courses from beginner to advanced levels including the famous Deep Learning Specialization, Generative AI for Everyone, and more. Courses feature video lectures, quizzes, and hands-on projects. The gold standard for learning AI fundamentals.",
-  descriptionLongZh: "DeepLearning.AI ofrece educacion en IA de clase mundial fundada por Andrew Ng. Cursos estructurados desde principiante a avanzado.",
+  descriptionLongZh: "DeepLearning.AI提供由吴恩达创办的世界级AI教育。提供从初级到高级的结构化课程，包含视频讲座、测验和动手项目。",
   advantages: [
             "Taught by Andrew Ng",
             "Structured learning paths",
@@ -3260,10 +3260,10 @@ export const tools: Tool[] = [
             "Industry-recognized certificates"
           ],
   advantagesZh: [
-            "Ensenado por Andrew Ng",
-            "Rutas de aprendizaje",
-            "Proyectos practicos",
-            "Certificados reconocidos"
+            "由吴恩达授课",
+            "结构化的学习路径",
+            "动手项目",
+            "行业认可的证书"
           ],
   useCases: [
             "Starting AI learning journey",
@@ -3273,13 +3273,13 @@ export const tools: Tool[] = [
             "ML fundamentals"
           ],
   useCasesZh: [
-            "Inicio en IA",
-            "Dominio de deep learning",
-            "Habilidades de IA generativa",
-            "Transicion a carrera IA"
+            "开启AI学xi之旅",
+            "掌握深度学习",
+            "生成式AI技能",
+            "转型AI职业"
           ],
   targetAudience: "Anyone wanting to learn AI from scratch -- beginners to experienced developers seeking structured courses.",
-  targetAudienceZh: "Cualquier persona que quiera aprender IA desde cero -- principiantes hasta desarrolladores experimentados que buscan cursos estructurados.",
+  targetAudienceZh: "任何想从零学习AI的人——从初学者到寻求结构化课程的有经验开发者。",
   pricingTiers: [
       {
         tier: "Audit",
@@ -3329,10 +3329,10 @@ export const tools: Tool[] = [
             "Certificate value"
           ],
   prosZh: [
-            "Instruccion de clase mundial",
-            "Curriculum estructurado",
-            "Proyectos practicos",
-            "Valor del certificado"
+            "世界级教学",
+            "结构化课程",
+            "动手项目",
+            "证书有含金量"
           ],
   cons: [
             "Can be expensive",
@@ -3341,10 +3341,10 @@ export const tools: Tool[] = [
             "Some content dated"
           ],
   consZh: [
-            "Puede ser caro",
-            "Los cursos toman tiempo",
-            "Enfoque academico",
-            "Contenido desactualizado"
+            "费用可能较高",
+            "课程耗时较长",
+            "偏学术导向",
+            "部分内容有些过时"
           ],
   },
 
@@ -3352,7 +3352,7 @@ export const tools: Tool[] = [
     id: "fast-ai",
     name: "fast.ai",
     description: "Practical deep learning education with a top-down teaching approach for developers.",
-  descriptionZh: "Educación práctica en deep learning con un enfoque de enseñanza descendente para desarrolladores. [CN]",
+  descriptionZh: "实用的深度学习教育，采用自上而下的教学方法。",
     category: "learning",
     tags: ["courses", "practical", "free", "deep-learning"],
     difficulty: "intermediate",
@@ -3365,7 +3365,7 @@ export const tools: Tool[] = [
   companyZh: "fast.ai",
   founded: "2016",  headquarters: "San Francisco, CA",  
   descriptionLong: "fast.ai provides practical deep learning education with a unique top-down teaching approach. Their famous Practical Deep Learning for Coders course teaches you to build production-ready models from lesson one without requiring heavy math prerequisites. All courses are free and focus on getting results quickly. The fast.ai library abstracts complexity while maintaining flexibility.",
-  descriptionLongZh: "fast.ai ofrece educacion practica en deep learning con enfoque descendente. Ensena a construir modelos listos para produccion desde la primera leccion.",
+  descriptionLongZh: "fast.ai提供实用的深度学习教育，采用自上而下的方法。从第一课就开始教授构建可投入生产的模型，无需大量数学先修知识。",
   advantages: [
             "Free high-quality courses",
             "Top-down practical approach",
@@ -3373,10 +3373,10 @@ export const tools: Tool[] = [
             "Active community"
           ],
   advantagesZh: [
-            "Cursos gratis de calidad",
-            "Enfoque practico",
-            "Modelos productivos temprano",
-            "Comunidad activa"
+            "免费高质量课程",
+            "实用方法，从实践入手",
+            "早期就能构建生产级模型",
+            "活跃社区"
           ],
   useCases: [
             "Learning deep learning practically",
@@ -3385,13 +3385,13 @@ export const tools: Tool[] = [
             "Teaching DL concepts"
           ],
   useCasesZh: [
-            "Aprendizaje profundo practico",
-            "Construir modelos produccion",
-            "Exploracion investigacion IA",
-            "Ensenanza DL"
+            "实用学深度学习",
+            "构建生产级ML模型",
+            "AI研究探索",
+            "教授深度学习概念"
           ],
   targetAudience: "Developers wanting to learn deep learning with a practical code-first approach.",
-  targetAudienceZh: "Desarrolladores que quieren aprender deep learning con un enfoque práctico y centrado en código.",
+  targetAudienceZh: "希望通过实用的代码优先方法学习深度学习的开发者。",
   pricingTiers: [
       {
         tier: "All Courses",
@@ -3431,10 +3431,10 @@ export const tools: Tool[] = [
             "Great for coders"
           ],
   prosZh: [
-            "Completamente gratis",
-            "Enfoque practico",
-            "Modelos reales rapido",
-            "Excelente para programadores"
+            "完全免费",
+            "实用方法，从实践入手",
+            "快速构建真实模型",
+            "非常适合程序员"
           ],
   cons: [
             "Not for absolute beginners",
@@ -3443,10 +3443,10 @@ export const tools: Tool[] = [
             "Self-paced no certification"
           ],
   consZh: [
-            "No para principiantes absolutos",
-            "Menos profundidad teorica",
-            "Solo Python",
-            "Sin certificacion"
+            "不适合完全零基础初学者",
+            "理论深度较少",
+            "仅限Python",
+            "无认证证书"
           ],
   },
 
@@ -3454,7 +3454,7 @@ export const tools: Tool[] = [
     id: "langchain",
     name: "LangChain",
     description: "Framework for building LLM-powered applications with composable chains and agents.",
-  descriptionZh: "Framework para construir aplicaciones impulsadas por LLM con cadenas y agentes componibles. [CN]",
+  descriptionZh: "用可组合的链和代理构建LLM驱动应用的框架。",
     category: "coding",
     tags: ["framework", "llm", "agents", "python"],
     difficulty: "advanced",
@@ -3464,10 +3464,10 @@ export const tools: Tool[] = [
     useCase: "LangChain builds applications on top of LLMs. Use it to create chatbots, RAG systems, AI agents, and automated workflows with chain composition.",
     icon: "\u{26D3}️",
   company: "LangChain Inc.",
-  companyZh: "LangChain Inc.",
+  companyZh: "LangChain",
   founded: "2022",  headquarters: "San Francisco, CA",  
   descriptionLong: "LangChain is a framework for building LLM-powered applications with composable chains and agents. It provides tools for prompt management, memory, retrieval-augmented generation (RAG), tool calling, and multi-agent systems. With LangSmith for debugging and LangGraph for stateful agents, it has become the standard framework for production LLM applications.",
-  descriptionLongZh: "LangChain es un framework para construir aplicaciones impulsadas por LLM con cadenas y agentes componibles. Es el estandar para aplicaciones LLM en produccion.",
+  descriptionLongZh: "LangChain是一个用可组合链和代理构建LLM驱动应用的框架。已成为生产级LLM应用的标准框架，提供RAG、代理系统等工具。",
   advantages: [
             "Standard LLM framework",
             "RAG support built-in",
@@ -3475,10 +3475,10 @@ export const tools: Tool[] = [
             "LangSmith debugging"
           ],
   advantagesZh: [
-            "Framework LLM estandar",
-            "Soporte RAG integrado",
-            "Orquestacion multi-agente",
-            "Depuracion LangSmith"
+            "标准LLM框架",
+            "内置RAG支持",
+            "多代理编排",
+            "LangSmith调试"
           ],
   useCases: [
             "Building RAG applications",
@@ -3488,13 +3488,13 @@ export const tools: Tool[] = [
             "Workflow automation"
           ],
   useCasesZh: [
-            "Apps de RAG",
-            "Chatbots IA",
-            "Sistemas multi-agente",
-            "Preguntas sobre documentos"
+            "构建RAG应用",
+            "创建AI聊天机器人",
+            "多代理系统",
+            "文档问答"
           ],
   targetAudience: "Developers building production LLM applications who need a structured framework for chains and agents.",
-  targetAudienceZh: "Desarrolladores que construyen aplicaciones LLM en producción y necesitan un framework estructurado para cadenas y agentes.",
+  targetAudienceZh: "构建生产级LLM应用的开发者，需要一个结构化的链和代理框架。",
   pricingTiers: [
       {
         tier: "Open Source",
@@ -3549,10 +3549,10 @@ export const tools: Tool[] = [
             "Strong community"
           ],
   prosZh: [
-            "Framework estandar",
-            "Soporte RAG excelente",
-            "Desarrollo activo",
-            "Comunidad fuerte"
+            "行业标准框架",
+            "RAG支持出色",
+            "积极开发中",
+            "强大的社区"
           ],
   cons: [
             "Fast-changing API",
@@ -3561,10 +3561,10 @@ export const tools: Tool[] = [
             "Documentation can lag"
           ],
   consZh: [
-            "API cambiante",
-            "Puede ser complejo",
-            "Excesivo para apps simples",
-            "Documentacion atrasada"
+            "API变化快",
+            "可能过于复杂",
+            "简单应用大材小用",
+            "文档更新滞后"
           ],
   },
 
@@ -3572,7 +3572,7 @@ export const tools: Tool[] = [
     id: "huggingface",
     name: "Hugging Face",
     description: "Leading platform for open-source AI models, datasets, and collaborative ML development.",
-  descriptionZh: "Plataforma líder para modelos de IA de código abierto, datasets y desarrollo colaborativo de ML. [CN]",
+  descriptionZh: "开源AI模型、数据集和协作ML开发的领先平台。",
     category: "industry",
     tags: ["models", "open-source", "community", "mlops"],
     difficulty: "advanced",
@@ -3584,19 +3584,19 @@ export const tools: Tool[] = [
   company: "Hugging Face",
   companyZh: "Hugging Face",
   founded: "2016",  headquarters: "New York, NY",  
-  descriptionLong: "Hugging Face is the leading platform for open-source AI models, datasets, and collaborative ML development. Often called the GitHub of AI, it hosts 500K+ models, 150K+ datasets, and Spaces apps. The Transformers library provides a unified API for thousands of models. Essential for ML engineers and AI researchers for model discovery, sharing, and deployment.",
-  descriptionLongZh: "Hugging Face es la plataforma lider para modelos de IA open-source. Con 500K+ modelos, 150K+ datasets y Spaces, es esencial para ingenieros ML.",
+  descriptionLong: "Hugging Face is the leading platform for open-source AI models, datasets, and collaborative ML development. Often called the GitHub of AI, it hosts 500K+ models, 15万+数据集, and Spaces apps. The Transformers library provides a unified API for thousands of models. Essential for ML engineers and AI researchers for model discovery, sharing, and deployment.",
+  descriptionLongZh: "Hugging Face是开源AI模型、数据集和协作ML开发的领先平台。托管50万+模型、15万+数据集和Spaces应用，是ML工程师的必备工具。",
   advantages: [
             "500K+ open-source models",
-            "150K+ datasets",
+            "15万+数据集",
             "Spaces for demo apps",
             "Transformers library"
           ],
   advantagesZh: [
-            "500K+ modelos",
-            "150K+ datasets",
-            "Spaces para demos",
-            "Biblioteca Transformers"
+            "50万+开源模型",
+            "15万+数据集",
+            "Spaces演示应用",
+            "Transformers库"
           ],
   useCases: [
             "Model discovery and download",
@@ -3606,14 +3606,14 @@ export const tools: Tool[] = [
             "Deploying model demos"
           ],
   useCasesZh: [
-            "Descubrimiento de modelos",
-            "Ajuste de modelos abiertos",
-            "Compartir datasets",
-            "Colaboracion investigacion ML",
-            "Desplegar demos"
+            "模型发现和下载",
+            "微调开放模型",
+            "数据集共享",
+            "ML研究协作",
+            "部署模型演示"
           ],
   targetAudience: "ML engineers, AI researchers, and developers who work with open-source AI models and datasets.",
-  targetAudienceZh: "Ingenieros de ML, investigadores de IA y desarrolladores que trabajan con modelos y datasets de IA de código abierto.",
+  targetAudienceZh: "使用开源AI模型和数据集的ML工程师、AI研究人员和开发者。",
   pricingTiers: [
       {
         tier: "Free",
@@ -3668,10 +3668,10 @@ export const tools: Tool[] = [
             "Spaces for demos"
           ],
   prosZh: [
-            "Gran repositorio de modelos",
-            "Comunidad fuerte",
-            "Transformers estandar",
-            "Spaces para demos"
+            "海量模型仓库",
+            "强大的社区",
+            "Transformers行业标准",
+            "Spaces演示应用"
           ],
   cons: [
             "Can be overwhelming",
@@ -3680,10 +3680,10 @@ export const tools: Tool[] = [
             "Dependency on platform"
           ],
   consZh: [
-            "Puede ser abrumador",
-            "Las funciones Pro cuestan dinero",
-            "La calidad del modelo varía",
-            "Dependencia de la plataforma"
+            "功能繁多可能让人不知所措",
+            "Pro功能需要付费",
+            "模型质量参差不齐",
+            "依赖平台"
           ],
   },
   // ====== Content Creation (8) ======
@@ -3994,7 +3994,7 @@ export const tools: Tool[] = [
     useCase: "ClipDrop offers AI-powered image cleaning, relighting, background removal, and text-to-image generation in one toolkit.",
     icon: "\uD83D\uDD8C\uFE0F",
     company: "ClipDrop (Init ML)",
-    companyZh: "ClipDrop (Init ML)",
+    companyZh: "ClipDrop（Init ML）",
     founded: "2021",
     headquarters: "Paris, France",
     descriptionLong: "ClipDrop is an AI design toolkit by Init ML that offers image cleanup, relighting, background removal, text-to-image generation, and object removal. The apps work via web and mobile with a focus on quick, one-click fixes. Integrates with popular design tools via API and plugins. Useful for designers and content creators who need fast image adjustments.",
@@ -4046,7 +4046,7 @@ export const tools: Tool[] = [
     ],
     extensions: [
       { name: "CapCut Desktop", description: "Windows and Mac app", descriptionZh: "Windows和Mac应用" },
-      { name: "CapCut Mobile", description: "iOS and Android app", descriptionZh: "iOS and Android app" },
+      { name: "CapCut Mobile", description: "iOS and Android app", descriptionZh: "iOS和Android应用" },
     ],
     skills: ["video editing", "social media content", "captions", "short-form video", "motion graphics"],
     pros: ["Free with powerful features", "AI captions excellent", "Easy to use", "Great for TikTok"],
@@ -4445,7 +4445,7 @@ export const tools: Tool[] = [
     useCase: "Tabnine provides AI code completions that run on your local machine, keeping code private while boosting productivity.",
     icon: "\uD83D\uDD12",
     company: "Tabnine (Codota)",
-    companyZh: "Tabnine (Codota)",
+    companyZh: "Tabnine（Codota）",
     founded: "2013",
     headquarters: "Tel Aviv, Israel",
     descriptionLong: "Tabnine is an AI code completion tool that runs locally for privacy and supports multiple IDEs including VS Code, JetBrains, and Vim. It offers whole-line and full-function completions based on your codebase context. The key differentiator is privacy -- models run on your machine, so code never leaves your environment. Pro tier offers team models trained on your codebase.",
@@ -4484,7 +4484,7 @@ export const tools: Tool[] = [
     useCase: "Codeium offers free AI code completion and chat for developers with support for 70+ languages and 40+ IDEs.",
     icon: "\uD83D\uDCA1",
     company: "Codeium (Exafunction)",
-    companyZh: "Codeium (Exafunction)",
+    companyZh: "Codeium（Exafunction）",
     founded: "2022",
     headquarters: "Mountain View, CA",
     descriptionLong: "Codeium is a free AI code completion and chat tool for developers, supporting 70+ languages and 40+ IDEs. It offers fast code completions, AI chat for code questions, and code search across your codebase. Generous free tier with unlimited completions differentiates it from competitors. Pro tier adds priority support and higher limits.",
