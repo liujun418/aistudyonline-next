@@ -466,6 +466,22 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
+  // ====== Claude Code Companion: Top 7 Skills Guide ======
+  {
+    slug: "claude-code-top-7-skills",
+    title: "Claude Code's Top 7 Skills: A Complete Guide to the Most Powerful Extensions",
+    titleZh: "Claude Code 七大技能：最强扩展完整指南",
+    description:
+      "Explore the 7 must-install skills for Claude Code — from document processing and frontend design to skill creation and debugging — that transform it into a truly proficient AI teammate.",
+    descriptionZh:
+      "探索Claude Code的7个必装技能——从文档处理、前端设计到技能创建和调试——将其转变为真正娴熟的AI队友。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "skills", "extensions", "productivity", "coding"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "cursor"],
+    date: "2026-05-22",
+  },
+
   // ====== AI Image Generation Path (Part 2/4) ======
   {
     slug: "ai-image-dalle-firefly",

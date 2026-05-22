@@ -5222,6 +5222,138 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 </div>`,
   },
 
+  // ====== Claude Code Companion: Top 7 Skills Guide ======
+  "claude-code-top-7-skills": {
+    content: `<div class="article-meta-banner">
+<p><strong>Companion Article:</strong> Claude Code Skills Guide</p>
+<p><strong>Prerequisites:</strong> <a href="/article/claude-code-install-setup">Claude Code installed</a> and basic familiarity with the <code>claude</code> command. If you have followed <a href="/article/claude-code-mcp-configuration">Part 2 (MCP configuration)</a>, even better.</p>
+</div>
+
+<h2>Why Skills Matter in Claude Code</h2>
+
+<p>Claude Code is powerful out of the box, but its true potential unlocks through <strong>skills</strong> — modular extensions that add specialized capabilities. With over 2,400 skills available in the ecosystem, knowing which ones to install can make the difference between a good AI coding assistant and an extraordinary one. This guide covers the 7 skills every Claude Code user should know about, from official Anthropic offerings to community-driven power tools.</p>
+
+<h2>1. Document-skills (Official)</h2>
+
+<p>Developed by Anthropic, <strong>Document-skills</strong> is a production-grade tool for document processing. It seamlessly handles <strong>Word, Excel, PowerPoint, and PDF</strong> files, enabling text extraction, table parsing, OCR recognition, and document encryption. If your workflow involves processing reports, extracting data from spreadsheets, or analyzing PDF contracts, this skill is indispensable.</p>
+
+<h2>2. Frontend Design (Official)</h2>
+
+<p>Also an official Anthropic offering, <strong>Frontend Design</strong> is one of the most popular skills with over <strong>110,000 weekly installations</strong>. It addresses a common pain point: AI-generated interfaces that all look the same. This skill forces Claude to define a specific visual direction — Brutalism, Maximalism, Retro-futurism, and more — and avoid overused fonts. The result is more distinctive, production-ready UIs that stand out. It pairs well with tools like <a href="/tools/cursor">Cursor</a> for frontend-heavy projects.</p>
+
+<h2>3. UI-UX-Pro-Max</h2>
+
+<p><strong>UI-UX-Pro-Max</strong> provides a research-backed design knowledge base covering color schemes, font pairings, chart types, and UX guidelines. It is <strong>cross-platform compatible</strong>, supporting major frameworks including React, Vue, Next.js, Flutter, and SwiftUI. When tasked with creating a tech-inspired dashboard, it suggests well-documented design combinations rather than arbitrary ones — saving hours of trial and error.</p>
+
+<h2>4. Find-skills</h2>
+
+<p>With over 2,400 skills available, finding the right one is a challenge in itself. <strong>Find-skills</strong> acts as an internal search engine for the skill ecosystem. It semantically scans installed skills based on your described needs, recommends the most suitable options, and explains how to invoke them. No more scrolling through endless lists — just describe what you need, and Find-skills handles the rest.</p>
+
+<h2>5. Skill-Creator (Official)</h2>
+
+<p>Anthropic's official <strong>meta-skill</strong> for building other skills, <strong>Skill-Creator</strong> guides users through a structured process — from requirement gathering and documentation to testing and optimization. It includes tools to refine trigger descriptions, ensuring Claude can properly invoke the created skills. This is the go-to tool for teams that want to institutionalize their unique workflows, creating repeatable, shareable skill packages.</p>
+
+<h2>6. Superpowers</h2>
+
+<p>The most popular community-driven project in the Claude Code ecosystem, <strong>Superpowers</strong> has amassed over <strong>120,000 GitHub stars</strong>. It enforces a five-stage software development lifecycle: brainstorming, design, planning, coding, and validation — plus test-driven development. This structured approach prevents Claude from rushing into code writing, reducing rework and boosting overall efficiency. For a practical look at how Claude Code handles real projects, see <a href="/article/claude-code-in-action">Claude Code in Action</a>.</p>
+
+<h2>7. PUA (Pressure-Urgency-Accountability)</h2>
+
+<p>Inspired by corporate workplace culture, <strong>PUA</strong> implements a 4-level pressure system that pushes Claude to explore more solutions. After two failures, it switches problem-solving approaches; after three, it enforces a 7-point checklist. Leveraging methodologies from top tech companies (Huawei's root cause analysis, Amazon's Working Backwards), it helps Claude break through bottlenecks during debugging and complex problem-solving. Tests show a <strong>3&ndash;4x increase in solution exploration</strong> when using this skill.</p>
+
+<h2>Combining Skills for Maximum Impact</h2>
+
+<p>These seven skills are not mutually exclusive. In practice, the most effective Claude Code users combine them:</p>
+<ul>
+<li>Use <strong>Find-skills</strong> to discover the right tool for your current task</li>
+<li>Pair <strong>Frontend Design</strong> with <strong>UI-UX-Pro-Max</strong> for complete design-to-code workflows</li>
+<li>Use <strong>Skill-Creator</strong> to package custom workflows discovered through <strong>Superpowers</strong></li>
+<li>Apply <strong>PUA</strong> when stuck on a particularly tough bug or architecture decision</li>
+<li>Leverage <strong>Document-skills</strong> when your project involves processing real-world files</li>
+</ul>
+
+<p>Together, they address pain points in document handling, design, workflow management, and debugging, transforming <a href="/tools/claude">Claude Code</a> into a truly proficient AI teammate. For advanced techniques like custom slash commands and CI/CD integration, continue to <a href="/article/claude-code-advanced">Advanced Claude Code</a>.</p>
+
+<h2>FAQ</h2>
+
+<h3>Q: Are these skills free to install?</h3>
+<p>Yes, all seven skills listed here are free to install through Claude Code's skill marketplace. You only pay for your Anthropic API usage when running Claude Code itself. Installation is done via the <code>skills</code> command inside a Claude Code session.</p>
+
+<h3>Q: Can I use these skills with Cursor or other AI coding tools?</h3>
+<p>No. These skills are specific to Claude Code's ecosystem. However, similar concepts exist in other tools — for example, <a href="/tools/cursor">Cursor</a> has its own extension system, and GitHub Copilot supports custom rules. The skills described here are exclusive to the Claude Code environment.</p>
+
+<h3>Q: Will installing too many skills slow down Claude Code?</h3>
+<p>Skills are loaded on demand, not all at once. Installing dozens of skills does not noticeably affect performance. However, having too many active skills can sometimes lead to conflicting instructions. Use <strong>Find-skills</strong> to manage your installed set and disable ones you rarely use.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> See these skills in action — <a href="/article/claude-code-in-action">Claude Code in Action: Build a Real Project from Scratch →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>配套文章：</strong> Claude Code 技能指南</p>
+<p><strong>前置要求：</strong> 已<a href="/article/claude-code-install-setup">安装Claude Code</a>并基本熟悉<code>claude</code>命令。如果你已阅读<a href="/article/claude-code-mcp-configuration">第2部分（MCP配置）</a>，效果更佳。</p>
+</div>
+
+<h2>为什么技能对Claude Code如此重要</h2>
+
+<p>Claude Code开箱即用已经非常强大，但其真正的潜力通过<strong>技能（skills）</strong>——添加专门能力的模块化扩展——得以释放。生态系统中已有超过2,400种技能可用，知道安装哪些技能可以决定你拥有的是一个好的AI编码助手还是一个卓越的AI编码助手。本指南涵盖每个Claude Code用户都应了解的7大技能，从Anthropic官方提供到社区驱动的强大工具。</p>
+
+<h2>1. Document-skills（官方）</h2>
+
+<p>由Anthropic开发的<strong>Document-skills</strong>是一个生产级的文档处理工具。它无缝处理<strong>Word、Excel、PowerPoint和PDF</strong>文件，支持文本提取、表格解析、OCR识别和文档加密。如果你的工作涉及处理报告、从电子表格提取数据或分析PDF合同，这个技能不可或缺。</p>
+
+<h2>2. Frontend Design（官方）</h2>
+
+<p>同样是Anthropic的官方产品，<strong>Frontend Design</strong>是最受欢迎的技能之一，每周安装量超过<strong>11万次</strong>。它解决了一个常见痛点：AI生成的界面看起来都千篇一律。这个技能迫使Claude定义特定的视觉方向——粗野主义、极繁主义、复古未来主义等——并避免使用过度使用的字体。结果是更具特色、可投入生产的UI。它很适合与<a href="/tools/cursor">Cursor</a>等工具配合用于前端密集型项目。</p>
+
+<h2>3. UI-UX-Pro-Max</h2>
+
+<p><strong>UI-UX-Pro-Max</strong>提供了一个研究支持的设计知识库，涵盖配色方案、字体搭配、图表类型和UX指南。它<strong>跨平台兼容</strong>，支持React、Vue、Next.js、Flutter和SwiftUI等主流框架。当被要求创建科技风格仪表板时，它会推荐有充分文档支持的设计组合，而非随意搭配——节省数小时的试错时间。</p>
+
+<h2>4. Find-skills</h2>
+
+<p>有超过2,400种技能可用时，找到合适的技能本身就是个挑战。<strong>Find-skills</strong>充当技能生态系统的内部搜索引擎。它根据你描述的需求语义扫描已安装的技能，推荐最合适的选项，并解释如何调用它们。不再需要滚动浏览无尽的列表——只需描述你需要什么，Find-skills会处理剩下的事情。</p>
+
+<h2>5. Skill-Creator（官方）</h2>
+
+<p>Anthropic官方用于构建其他技能的<strong>元技能</strong>，<strong>Skill-Creator</strong>引导用户完成结构化流程——从需求收集和文档编写到测试和优化。它包含优化触发描述的工具，确保Claude能够正确调用创建的技能。这是希望将独特工作流程制度化的团队的首选工具，用于创建可重复、可共享的技能包。</p>
+
+<h2>6. Superpowers</h2>
+
+<p>Claude Code生态中最受欢迎的社区驱动项目，<strong>Superpowers</strong>已累积超过<strong>12万GitHub星标</strong>。它强制执行五阶段软件开发周期：头脑风暴、设计、规划、编码和验证——加上测试驱动开发。这种结构化方法防止Claude仓促进入编码阶段，减少返工并提高整体效率。要了解Claude Code在实际项目中的表现，请参阅<a href="/article/claude-code-in-action">Claude Code实战</a>。</p>
+
+<h2>7. PUA（压力-紧迫-问责）</h2>
+
+<p>受企业文化启发，<strong>PUA</strong>实现了一个4级压力系统，推动Claude探索更多解决方案。两次失败后，它切换问题解决方法；三次失败后，它强制执行7点检查清单。利用顶级科技公司的方法论（华为的根本原因分析、亚马逊的Working Backwards），它帮助Claude在调试和复杂问题解决过程中突破瓶颈。测试显示，使用该技能时<strong>解决方案探索增加3&ndash;4倍</strong>。</p>
+
+<h2>组合技能以获得最大效果</h2>
+
+<p>这七个技能并非互斥。实际上，最有效的Claude Code用户会组合使用它们：</p>
+<ul>
+<li>使用<strong>Find-skills</strong>发现适合当前任务的工具</li>
+<li>将<strong>Frontend Design</strong>与<strong>UI-UX-Pro-Max</strong>结合，实现设计到编码的完整工作流</li>
+<li>使用<strong>Skill-Creator</strong>将在<strong>Superpowers</strong>中发现的自定义工作流程打包</li>
+<li>在遇到特别棘手的bug或架构决策时应用<strong>PUA</strong></li>
+<li>当项目涉及处理实际文件时利用<strong>Document-skills</strong></li>
+</ul>
+
+<p>它们共同解决了文档处理、设计、工作流管理和调试方面的痛点，将<a href="/tools/claude">Claude Code</a>转变为一个真正娴熟的AI队友。有关自定义Slash命令和CI/CD集成等高级技巧，请继续阅读<a href="/article/claude-code-advanced">高级Claude Code</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：这些技能安装是免费的吗？</h3>
+<p>是的，这里列出的七个技能都可以通过Claude Code的技能市场免费安装。你只需要为运行Claude Code本身的Anthropic API使用量付费。安装通过Claude Code会话内的<code>skills</code>命令完成。</p>
+
+<h3>问：我可以在Cursor或其他AI编码工具中使用这些技能吗？</h3>
+<p>不能。这些技能是Claude Code生态系统特有的。不过，其他工具也有类似的概念——例如，<a href="/tools/cursor">Cursor</a>有自己的扩展系统，GitHub Copilot支持自定义规则。这里描述的技能是Claude Code环境独有的。</p>
+
+<h3>问：安装太多技能会拖慢Claude Code吗？</h3>
+<p>技能是按需加载的，而非一次性全部加载。安装几十个技能不会明显影响性能。然而，同时激活太多技能有时会导致指令冲突。使用<strong>Find-skills</strong>来管理已安装的技能集，并禁用那些很少使用的技能。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> 在实战中了解这些技能 —— <a href="/article/claude-code-in-action">Claude Code实战：从零构建一个真实项目 →</a></p>
+</div>`,
+  },
+
   // ====== AI Image Generation Path: Part 2 of 4 (NEW SLUG) ======
   "ai-image-dalle-firefly": {
     content: `<div class="article-meta-banner">
