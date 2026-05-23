@@ -217,7 +217,7 @@ Use HTML, CSS, and JavaScript in a single file.</code></pre>
 
 <h2>Step 3: Add Your API Key (2 minutes)</h2>
 
-<p>The AI will create a file for environment variables. You need an Anthropic API key (from console.anthropic.com) to make the AI generated cards work. The AI agent will prompt you with instructions on where to paste the key.</p>
+
 
 <p>If you do not have an API key, you can still test the app — the AI can add mock data so the interface works without a real API call.</p>
 
@@ -288,7 +288,7 @@ Use HTML, CSS, and JavaScript in a single file.</code></pre>
 
 <h2>第三步：添加你的API密钥（2分钟）</h2>
 
-<p>AI会创建一个环境变量文件。你需要一个Anthropic API密钥（从console.anthropic.com获取）才能使AI生成的卡片生效。AI agent会提示你在哪里粘贴密钥。</p>
+
 
 <p>如果你没有API密钥，仍然可以测试应用——AI可以添加模拟数据，使界面无需真实API调用也能正常工作。</p>
 
@@ -440,11 +440,11 @@ Use HTML, CSS, and JavaScript in a single file.</code></pre>
   <li><strong>Minimal risk:</strong> No additional requirements. Covers AI-powered spam filters, video game AI, and other low-impact uses.</li>
 </ul>
 
-<p>Most tools you use — ChatGPT, Claude, Midjourney — fall into the "limited risk" category. The biggest change is that these tools must now clearly label AI-generated content and tell you when you are interacting with an AI rather than a human.</p>
+
 
 <h2>Content Labeling: What You Will Actually See</h2>
 
-<p>Starting May 2026, AI-generated images, video, and audio must be labeled as AI-generated. If you use Midjourney or DALL-E, the image metadata will include a marker indicating AI provenance. Social media platforms must label AI-generated content in users' feeds.</p>
+
 
 <p>For text-based tools like ChatGPT and Claude, the requirement is simpler: they must disclose that you are talking to an AI. Most already do this, but the difference is that it is now legally required rather than voluntary.</p>
 
@@ -460,7 +460,7 @@ Use HTML, CSS, and JavaScript in a single file.</code></pre>
 
 <p>This is the most contentious area. The Act requires AI companies to disclose training data sources, but the requirement is limited — they must publish summaries of copyrighted material used in training. The full list of sources does not have to be public. This is a compromise between transparency and trade secrecy.</p>
 
-<p>For users, the practical effect is unclear for now. If you generate an image in Midjourney and use it commercially, the Act does not change your legal position — copyright law regarding AI-generated content remains unresolved globally. The Act focuses on what companies must do, not on what users are allowed to do with AI output.</p>
+
 
 <h2>Non-EU Impact: Why the Act Matters Everywhere</h2>
 
@@ -483,15 +483,15 @@ Use HTML, CSS, and JavaScript in a single file.</code></pre>
   <li><strong>最低风险：</strong>没有额外要求。涵盖AI驱动的垃圾邮件过滤器、电子游戏AI等低影响用途。</li>
 </ul>
 
-<p>你使用的大多数工具——ChatGPT、Claude、Midjourney——属于"有限风险"类别。最大的变化是这些工具现在必须清晰地标注AI生成的内容，并告诉你何时在与AI而非人类交互。</p>
+
 
 <h2>内容标注：你实际会看到什么</h2>
 
-<p>从2026年5月开始，AI生成的图像、视频和音频必须标注为AI生成。如果你使用Midjourney或DALL-E，图像元数据将包含一个指示AI来源的标记。社交媒体平台必须在用户信息流中标注AI生成的内容。</p>
+
 
 <p>对于基于文本的工具（如ChatGPT和Claude），要求更简单：它们必须披露你在与AI对话。大多数工具已经这样做了，但区别在于现在这是法律要求而非自愿行为。</p>
 
-<p>在实践中，你可能不会注意到太多变化。OpenAI几个月前就给图像添加了"由AI生成"的标识。Claude已经告诉你它是一个AI助手。法案使这在整个行业内统一化，并增加了执法力度——未能标注的公司可能面临高达全球收入3%的罚款。</p>
+
 
 <h2>对免费用户与付费用户的影响</h2>
 
@@ -503,7 +503,7 @@ Use HTML, CSS, and JavaScript in a single file.</code></pre>
 
 <p>这是争议最大的领域。法案要求AI公司披露训练数据来源，但要求是有限的——他们必须发布训练中使用的受版权保护材料的摘要。完整的来源列表不需要公开。这是在透明度和商业机密之间的妥协。</p>
 
-<p>对用户来说，实际影响目前尚不明朗。如果你在Midjourney中生成图像并用于商业目的，法案不会改变你的法律地位——关于AI生成内容的版权法在全球范围内仍未解决。法案关注的是公司必须做什么，而不是用户被允许用AI输出做什么。</p>
+
 
 <h2>欧盟以外的影响：为什么法案在任何地方都重要</h2>
 

@@ -596,7 +596,7 @@ Processing starts:
 <p><strong>What happened:</strong> ChatGPT had seen countless examples of legal citations in its training data. When asked for relevant cases, it generated plausible-looking citations &mdash; because that is the most statistically likely pattern. It had no way of knowing these cases did not exist.</p>
 
 <h3>Case 2: The Hallucinated Product Description</h3>
-<p>A small business owner asked an AI to write a product description for a "silicone baking mat with temperature guide." The AI generated: "Features a built-in thermochromatic strip that changes color when the mat reaches 400&deg;F &mdash; a patented innovation from our R&amp;D team." None of this was true. The product had no such feature. If published, this would constitute false advertising.</p>
+
 
 <p><strong>What happened:</strong> The AI combined patterns from other product descriptions (temperature-sensitive strips are real in other products) with the prompt's keywords. It "filled in" the details with plausible-sounding features that did not exist.</p>
 
@@ -693,7 +693,7 @@ Processing starts:
 <p><strong>发生了什么：</strong> ChatGPT在训练数据中看到过无数法律引用的例子。当被要求提供相关案例时，它生成了看似合理的引文——因为这是统计上最可能的模式。它无法知道这些案件并不存在。</p>
 
 <h3>案例2：编造的产品描述</h3>
-<p>一位小企业主让AI为一个"带温度指南的硅胶烘焙垫"写产品描述。AI生成道："内置热致变色条，当烤垫达到400°F时变色——来自我们研发团队的专利创新。"这完全不真实。该产品没有这样的功能。如果发布，将构成虚假广告。</p>
+
 
 <p><strong>发生了什么：</strong> AI将其他产品描述中的模式（温度敏感条在其他产品中是真实存在的）与提示中的关键词组合起来。它用听起来合理但不存在的细节"填补"了描述。</p>
 
@@ -2170,7 +2170,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <h2>FAQ</h2>
 
 <h3>Q: Is it plagiarism to use AI for writing?</h3>
-<p>Not legally. AI-generated text is not copyrightable (US Copyright Office), so using it is not copyright infringement. However, many publications require AI disclosure. For academic work, check your institution's policy &mdash; most prohibit submitting AI-generated text as original work.</p>
+
 
 <h3>Q: How much editing should I do on AI-written content?</h3>
 <p>At minimum, fact-check specific claims, adjust tone to match your voice, and remove AI-typical phrases. For professional content, plan on spending 20-30% of the time you saved on editing. The AI creates the first draft; you make it sound like you.</p>
@@ -2256,7 +2256,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <h2>常见问题</h2>
 
 <h3>问：用AI写作算抄袭吗？</h3>
-<p>从法律上说不是。AI生成的文本不受版权保护（美国版权局），所以使用AI生成的文本不构成版权侵权。然而，许多出版物要求披露使用了AI。对于学术工作，请查看你所在机构的规定——大多数禁止将AI生成的文本作为原创作品提交。</p>
+
 
 <h3>问：AI写的内容需要编辑多少？</h3>
 <p>至少，核实具体声明、调整语气以匹配你的风格、删除AI典型的措辞。对于专业内容，计划花费你节省时间的20-30%用于编辑。AI创建初稿；你让它听起来像你自己。</p>
@@ -2919,7 +2919,7 @@ supporting data (2-3 paragraphs), recommendations (1 paragraph),
 risks to consider (1 paragraph). Use plain language, no jargon.</code></pre>
 
 <h2>Stage 5: Source Verification</h2>
-<p>Always verify AI-generated citations. A critical step:</p>
+
 <pre><code>For every statistic or study you cited in the report above,
 provide the exact source: author, publication, year, URL if
 available. Mark any sources you are uncertain about as
@@ -3000,7 +3000,7 @@ available. Mark any sources you are uncertain about as
 使用平实的语言，不要术语。</code></pre>
 
 <h2>阶段5：来源验证</h2>
-<p>始终验证AI生成的引用。关键步骤：</p>
+
 <pre><code>对于你在上述报告中引用的每个统计数据或研究，
 提供确切来源：作者、出版物、年份、URL（如有）。
 将你不确定的任何来源标记为"[需要验证]".</code></pre>
@@ -4223,9 +4223,9 @@ ollama --version</code></pre>
 
 <h2>What It Means for Your Tools</h2>
 
-<p><strong>ChatGPT and Claude:</strong> Both classified as general-purpose AI. Must publish training data summaries, implement copyright safeguards, label AI-generated content (watermarks/metadata), and conduct systemic risk assessments.</p>
 
-<p><strong>Midjourney and Image Generators:</strong> Must watermark AI-generated images, prevent illegal content, and disclose training data sources. Midjourney now embeds invisible metadata in all outputs.</p>
+
+
 
 <p><strong>AI in Hiring:</strong> Systems must register in an EU database. Candidates have the right to know they are evaluated by AI, request human review, and the AI must be bias-tested before deployment.</p>
 
@@ -4275,9 +4275,9 @@ ollama --version</code></pre>
 
 <h2>对你的工具意味着什么</h2>
 
-<p><strong>ChatGPT和Claude：</strong> 均被归类为通用AI。必须公布训练数据摘要、实施版权保护、标注AI生成内容（水印/元数据），并进行系统性风险评估。</p>
 
-<p><strong>Midjourney和图像生成器：</strong> 必须给AI生成的图像加水印，防止非法内容，并披露训练数据来源。Midjourney现在在所有输出中嵌入不可见元数据。</p>
+
+
 
 <p><strong>AI招聘：</strong> 系统必须在欧盟数据库中注册。候选人有知情权，知道他们被AI评估，有权要求人工审查，AI在部署前必须通过偏见测试。</p>
 
@@ -4317,7 +4317,7 @@ ollama --version</code></pre>
 <p><strong>Salary:</strong> $80,000 - $175,000 &middot; <strong>Skills:</strong> Clear writing, systematic testing, understanding of LLM behavior. Coding helpful but not required.</p>
 
 <h2>2. AI Content Editor</h2>
-<p>Edits and refines AI-generated content for accuracy, tone, and brand voice. Companies using AI for content at scale discovered that human editing is essential.</p>
+
 <p><strong>Salary:</strong> $55,000 - $95,000 &middot; <strong>Skills:</strong> Strong editing, hallucination detection, SEO knowledge.</p>
 
 <h2>3. AI Workflow Consultant</h2>
@@ -4363,7 +4363,7 @@ ollama --version</code></pre>
 <p><strong>薪资：</strong>80,000 - 175,000美元 · <strong>技能：</strong>清晰的写作、系统性测试、理解LLM行为。编程有帮助但不是必需的。</p>
 
 <h2>2. AI内容编辑</h2>
-<p>编辑和完善AI生成的内容，确保准确性、语气和品牌语调。使用AI大规模生成内容的公司发现，人工编辑不可或缺。</p>
+
 <p><strong>薪资：</strong>55,000 - 95,000美元 · <strong>技能：</strong>强大的编辑能力、幻觉检测、SEO知识。</p>
 
 <h2>3. AI工作流程顾问</h2>
@@ -5239,7 +5239,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <h2>2. Frontend Design (Official)</h2>
 
-<p>Also an official Anthropic offering, <strong>Frontend Design</strong> is one of the most popular skills with over <strong>110,000 weekly installations</strong>. It addresses a common pain point: AI-generated interfaces that all look the same. This skill forces Claude to define a specific visual direction — Brutalism, Maximalism, Retro-futurism, and more — and avoid overused fonts. The result is more distinctive, production-ready UIs that stand out. It pairs well with tools like <a href="/tools/cursor">Cursor</a> for frontend-heavy projects.</p>
+
 
 <h2>3. UI-UX-Pro-Max</h2>
 
@@ -5303,7 +5303,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <h2>2. Frontend Design（官方）</h2>
 
-<p>同样是Anthropic的官方产品，<strong>Frontend Design</strong>是最受欢迎的技能之一，每周安装量超过<strong>11万次</strong>。它解决了一个常见痛点：AI生成的界面看起来都千篇一律。这个技能迫使Claude定义特定的视觉方向——粗野主义、极繁主义、复古未来主义等——并避免使用过度使用的字体。结果是更具特色、可投入生产的UI。它很适合与<a href="/tools/cursor">Cursor</a>等工具配合用于前端密集型项目。</p>
+
 
 <h2>3. UI-UX-Pro-Max</h2>
 
@@ -5772,16 +5772,16 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
   "ai-image-commercial-licensing": {
     content: `<div class="article-meta-banner">
 <p><strong>Learning Path:</strong> AI Image Generation &middot; <strong>Part 4 of 4</strong></p>
-<p><strong>Prerequisites:</strong> <a href="/article/ai-image-prompt-guide">Part 3</a> &mdash; this article covers legal and licensing considerations for using AI-generated images in commercial projects.</p>
+
 </div>
 
 <h2>The Legal Landscape in 2026</h2>
 
-<p>Using AI-generated images for commercial purposes involves three separate questions: copyright ownership, platform licensing terms, and legal risk. The answers differ by platform and are still evolving through courts and regulation. Here is what you need to know to use AI images safely in commercial projects.</p>
+
 
 <h2>Question 1: Who Owns the Copyright?</h2>
 
-<p>The US Copyright Office has taken the position that AI-generated works are not copyrightable because they lack human authorship. This means:</p>
+
 <ul>
 <li>You cannot register copyright for an AI-generated image</li>
 <li>You cannot prevent others from using the same or similar AI-generated images</li>
@@ -5840,7 +5840,7 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h2>FAQ</h2>
 
 <h3>Q: Can I register copyright for a book cover made with AI images?</h3>
-<p>In the US, the Copyright Office requires disclosure of AI-generated material. If the cover is entirely AI-generated, you cannot register copyright for the AI portions. However, if you combine AI images with original typography, layout, and manual edits, you can register the human-authored elements.</p>
+
 
 <h3>Q: Does Midjourney's "all rights" license mean I own the copyright?</h3>
 <p>No. Midjourney grants you broad usage rights but cannot grant copyright because copyright requires human authorship. "All rights" in Midjourney's terms means you can use the images for almost any purpose, not that you hold copyright.</p>
@@ -5853,16 +5853,16 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 </div>`,
     contentZh: `<div class="article-meta-banner">
 <p><strong>学习路径：</strong> AI图像生成 · <strong>第4部分（共4部分）</strong></p>
-<p><strong>前置要求：</strong> <a href="/article/ai-image-prompt-guide">第3部分</a>——本文涵盖在商业项目中使用AI生成图像的法律和许可考量。</p>
+
 </div>
 
 <h2>2026年的法律环境</h2>
 
-<p>将AI生成的图像用于商业目的涉及三个独立的问题：版权归属、平台许可条款和法律风险。答案因平台而异，并且仍在通过法院和法规不断演变。以下是你需要知道的，以便在商业项目中安全使用AI图像。</p>
+
 
 <h2>问题1：谁拥有版权？</h2>
 
-<p>美国版权局采取的立场是，AI生成的作品不受版权保护，因为它们缺乏人类创作性。这意味着：</p>
+
 <ul>
 <li>你不能为AI生成的图像注册版权</li>
 <li>你不能阻止他人使用相同或相似的AI生成图像</li>
@@ -5921,7 +5921,7 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h2>常见问题</h2>
 
 <h3>问：我可以为使用AI图像制作的书籍封面注册版权吗？</h3>
-<p>在美国，版权局要求披露AI生成的材料。如果封面完全是AI生成的，你不能为AI部分注册版权。但是，如果你将AI图像与原创排版、布局和手动编辑结合，你可以为人类创作的元素注册。</p>
+
 
 <h3>问：Midjourney的"所有权利"许可意味着我拥有版权吗？</h3>
 <p>不是。Midjourney授予你广泛的使用权，但不能授予版权，因为版权需要人类创作性。Midjourney条款中的"所有权利"意味着你可以将图像用于几乎任何目的，而不是你持有版权。</p>
@@ -6678,7 +6678,7 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 
 <p>So, stop grinding endlessly or struggling to manage a team. Embrace these tools, become the "variable" in your entrepreneurial journey, and let AI do the heavy lifting for your overseas website business.</p>
 
-<blockquote><p>（注：文档部分内容可能由 AI 生成）</p></blockquote>
+<blockquote></blockquote>
 
 <div class="next-step">
 <p><strong>Next Step:</strong> Explore more AI tools for freelancers: <a href="/article/ai-for-freelancers">AI for Freelancers &#x2192;</a></p>
@@ -6886,7 +6886,7 @@ git merge new-feature</code></pre>
 
 <p>Git undertakes local version recording and file management, while GitHub realizes remote storage and multi-party collaboration. Mastering basic initialization, submission, push, pull and branch control commands can meet most personal development and team cooperation demands. Standard version control habits can effectively reduce code loss risk, improve development efficiency, and build standardized management mode suitable for AI projects, web development and other technical creation work.</p>
 
-<blockquote><p>（注：文档部分内容可能由 AI 生成）</p></blockquote>
+<blockquote></blockquote>
 
 <div class="next-step">
 <p><strong>Next Step:</strong> Learn Claude Code installation and setup: <a href="/article/claude-code-install-setup">Claude Code Install &amp; Setup &#x2192;</a></p>
