@@ -43,5 +43,3 @@ Turn off redundant explanation, detailed principle deduction and excessive resul
 ## Application Value \&amp; Usage Suggestion
 
 Browser control powered by Claude Code balances easy operation and low cost\. It is suitable for developers, content creators and industry practitioners to streamline repetitive web work\. By mastering token\-saving control methods, users can maximize task volume under limited token quota, improve daily work automation level, and create more practical productivity tools based on browser operation functions\.
-
-> （注：文档部分内容可能由 AI 生成）

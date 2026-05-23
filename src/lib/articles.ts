@@ -593,4 +593,84 @@ export const articles: Article[] = [
     toolsMentioned: ["claude"],
     date: "2026-05-22",
   },
+
+  // ====== Article: 5 AI Tools to Build Your One-Person Overseas Business ======
+  {
+    slug: "5-ai-tools-one-person-overseas-business",
+    title: "5 AI Tools to Build Your One-Person Overseas Business: Let Claude Code Work for You While You Sleep",
+    titleZh: "5款AI工具打造你的单人海外业务：让Claude Code在你睡觉时为你工作",
+    description:
+      "Discover 5 powerful AI tools — Deer-Flow, Prompt Optimizer, Agents, Ruflo, and Letta — that together form a complete one-person AI company for overseas entrepreneurs.",
+    descriptionZh:
+      "发现5款强大的AI工具——Deer-Flow、Prompt Optimizer、Agents、Ruflo和Letta——它们共同构成一个完整的单人AI公司，助力海外创业者。",
+    category: "ai-use-cases",
+    tags: ["ai-tools", "overseas-business", "one-person-company", "automation", "productivity"],
+    difficulty: "beginner",
+    toolsMentioned: ["deer-flow", "prompt-optimizer", "openagents", "ruflo", "letta", "claude"],
+    date: "2026-05-23",
+  },
+
+  // ====== Article: Git & GitHub Beginner's Guide ======
+  {
+    slug: "git-github-beginners-guide",
+    title: "Git & GitHub Beginner's Guide: Core Concepts & Operation",
+    titleZh: "Git与GitHub初学者指南：核心概念与操作",
+    description:
+      "A complete beginner guide to Git and GitHub covering core concepts, workflow, essential commands, branch management, and common troubleshooting tips.",
+    descriptionZh:
+      "Git和GitHub的完整初学者指南，涵盖核心概念、工作流程、基本命令、分支管理和常见故障排除技巧。",
+    category: "ai-tutorials",
+    tags: ["git", "github", "version-control", "beginner", "tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-05-23",
+  },
+
+  // ====== Article: OpenAI's Strategic Counterattack ======
+  {
+    slug: "openai-strategic-counterattack-openclaw-codex",
+    title: "OpenAI's Strategic Counterattack: How OpenClaw Integration and Codex Innovations Are Reshaping the AI Developer Landscape",
+    titleZh: "OpenAI的战略反击：OpenClaw集成与Codex创新如何重塑AI开发者格局",
+    description:
+      "An in-depth analysis of OpenAI's latest moves — OpenClaw integration, Codex pixel pet, autonomous iteration, and one-click migration — reshaping the AI developer tools market.",
+    descriptionZh:
+      "深入分析OpenAI的最新举措——OpenClaw集成、Codex像素宠物、自主迭代和一键迁移——重塑AI开发者工具市场。",
+    category: "ai-news",
+    tags: ["openai", "openclaw", "codex", "strategy", "developer-tools"],
+    difficulty: "intermediate",
+    toolsMentioned: ["openclaw", "chatgpt", "claude"],
+    date: "2026-05-23",
+  },
+
+  // ====== Article: Practical Explanation of Agent, Skill and Harness ======
+  {
+    slug: "agent-skill-harness-explained",
+    title: "Practical Explanation of Agent, Skill and Harness in Modern AI Development",
+    titleZh: "现代AI开发中Agent、Skill和Harness的实用解释",
+    description:
+      "A detailed breakdown of three core AI automation concepts — Agent, Skill, and Harness — with definitions, operational logic, and practical Python code examples.",
+    descriptionZh:
+      "详细解析三个核心AI自动化概念——Agent、Skill和Harness——包括定义、操作逻辑和实际Python代码示例。",
+    category: "ai-basics",
+    tags: ["agent", "skill", "harness", "ai-automation", "python"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-05-23",
+  },
+
+  // ====== Article: Unlock Hidden Potentials: 5 AI+HTML Hacks ======
+  {
+    slug: "5-ai-html-hacks-overseas-websites",
+    title: "Unlock Hidden Potentials: 5 Practical AI+HTML Hacks for Overseas Websites",
+    titleZh: "解锁隐藏潜力：面向海外网站的5个实用AI+HTML技巧",
+    description:
+      "5 actionable AI+HTML use cases for overseas websites — real-time language localization, dynamic content personalization, FAQ chatbot, AI email templates, and smart form validation.",
+    descriptionZh:
+      "面向海外网站的5个实用的AI+HTML用例——实时语言本地化、动态内容个性化、FAQ聊天机器人、AI邮件模板和智能表单验证。",
+    category: "ai-use-cases",
+    tags: ["ai-html", "overseas-websites", "localization", "chatbot", "form-validation"],
+    difficulty: "intermediate",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-23",
+  },
 ];

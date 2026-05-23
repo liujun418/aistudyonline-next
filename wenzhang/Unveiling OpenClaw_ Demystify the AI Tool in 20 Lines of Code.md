@@ -38,4 +38,3 @@ OpenClaw is neither all \- powerful nor useless\. Its effectiveness depends on w
 
 In short, OpenClaw is a powerful paradigm, but its true potential lies in how command \- and API \- driven our world becomes\.
 
-> （注：文档部分内容可能由 AI 生成）

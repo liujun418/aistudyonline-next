@@ -60,4 +60,3 @@ Embodied intelligence gives AI a \&\#34;body\&\#34; to interact with the physica
 
 By mastering these concepts, you’ll understand the \&\#34;operating system\&\#34; of modern AI and be ready to leverage its power in your work or projects\. The AI landscape is shifting from generating content to taking action—don’t get left behind\!
 
-> （注：文档部分内容可能由 AI 生成）
