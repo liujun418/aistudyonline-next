@@ -1,7 +1,7 @@
 "use client";
 
 import ShareButtons from "@/components/ShareButtons";
-import CopyCodeButton from "@/components/CopyCodeButton";
+import CodeBlocks from "@/components/CodeBlocks";
 
 import Link from "next/link";
 import { blogPosts, type BlogPost } from "@/lib/blog-posts";
@@ -102,7 +102,7 @@ export default function BlogDetailClient({
 
       {/* Blog Header */}
       <article>
-          <CopyCodeButton />
+          <CodeBlocks />
         <div className="mb-3 flex items-center gap-3">
           <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${catColor}`}>
             {catLabel}

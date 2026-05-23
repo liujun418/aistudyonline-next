@@ -101,9 +101,62 @@ body {
 }
 .dark .article-content blockquote { color: #a3a3a3; }
 
+/* Code block wrapper — copy btn stays fixed, pre scrolls independently */
+.code-block-wrapper {
+  position: relative;
+  margin: 1.25rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #282c34;
+}
+.dark .code-block-wrapper {
+  border-color: #374151;
+}
+
+.code-lang-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #abb2bf;
+  background: #21252b;
+  border-bottom-right-radius: 0.35rem;
+  pointer-events: none;
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  z-index: 2;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #abb2bf;
+  background: #3a3f4b;
+  border: 1px solid #4b5263;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  line-height: 1.4;
+}
+.code-copy-btn:hover {
+  background: #4b5263;
+  color: #fff;
+}
+
 /* Code blocks */
 .article-content pre {
-  margin: 1.25rem 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
   overflow-x: auto;
   border-radius: 0.5rem;
   border: 1px solid var(--border);
