@@ -114,7 +114,7 @@ npm --version</code></pre>
 <h3>Mac / Linux (Terminal)</h3>
 
 <pre><code># Add to your shell config file (use .zshrc for zsh, .bashrc for bash)
-echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' >> ~/.zshrc
+echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' &gt;&gt; ~/.zshrc
 
 # Apply immediately
 source ~/.zshrc</code></pre>
@@ -124,7 +124,7 @@ source ~/.zshrc</code></pre>
 <p><strong>Method 2: Project-level config</strong> — only applies to the current project, useful when you use different keys for different projects:</p>
 
 <pre><code># Create a .env file in your project root
-echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' > .env</code></pre>
+echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' &gt; .env</code></pre>
 
 <p>Claude Code automatically reads the <code>.env</code> file when it starts.</p>
 </div>
@@ -294,7 +294,7 @@ npm --version</code></pre>
 <h3>Mac / Linux (Terminal)</h3>
 
 <pre><code># 添加到 shell 配置文件中（zsh 用户用 .zshrc，bash 用户用 .bashrc）
-echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' >> ~/.zshrc
+echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' &gt;&gt; ~/.zshrc
 
 # 立即生效
 source ~/.zshrc</code></pre>
@@ -304,7 +304,7 @@ source ~/.zshrc</code></pre>
 <p><strong>方式二：项目级配置</strong>——只在当前项目中生效，适用于多个项目用不同 key 的情况：</p>
 
 <pre><code># 在项目根目录创建 .env 文件
-echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' > .env</code></pre>
+echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' &gt; .env</code></pre>
 
 <p>Claude Code 启动时会自动读取 <code>.env</code> 文件。</p>
 </div>
@@ -4669,7 +4669,7 @@ claude --verbose</code></pre>
 mkdir -p .claude
 
 # 创建设置文件
-cat > .claude/settings.json << 'EOF'
+cat &gt; .claude/settings.json &lt;&lt; 'EOF'
 {
   "permissions": {
     "allow": ["bash", "read", "edit", "glob", "grep"],
@@ -4720,8 +4720,8 @@ EOF</code></pre>
 
 <div class="step-card">
 <h3>选项1：.env文件（最简单，适用于单个项目）</h3>
-<pre><code>echo 'ANTHROPIC_API_KEY=sk-ant-***' > .env
-echo '.env' >> .gitignore   # 防止提交密钥</code></pre>
+<pre><code>echo 'ANTHROPIC_API_KEY=sk-ant-***' &gt; .env
+echo '.env' &gt;&gt; .gitignore   # 防止提交密钥</code></pre>
 <p>Claude Code自动读取<code>.env</code>文件（如果存在）。</p>
 </div>
 
@@ -6949,7 +6949,7 @@ git merge new-feature</code></pre>
 <p>OpenAI has also introduced a one-click migration feature in Codex, allowing developers to import their workflows, plugins, and project configurations from other AI code tools.</p>
 
 <pre><code># Migrate to Codex in Three Steps
-1. Go to Codex settings > General > Import Agent Config.
+1. Go to Codex settings &gt; General &gt; Import Agent Config.
 2. Select the source tool and authorize the import.
 3. Wait for the migration to complete – all your plugins, agents, and project settings will be available in Codex.</code></pre>
 
@@ -7013,7 +7013,7 @@ git commit -m '{"openclaw": "metadata"}'
 <p>Define a basic file query skill that can be invoked by the agent to obtain local document information</p>
 
 <pre><code>class FileQuerySkill:
-    def execute(self, file_path: str) -> str:
+    def execute(self, file_path: str) -&gt; str:
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
@@ -7130,20 +7130,20 @@ if __name__ == "__main__":
 
 <h3>Implementation Code</h3>
 
-<pre><code><!-- HTML: Language Switcher UI -->
-<div class="language-switcher">
-  <button onclick="switchLanguage('en')">English</button>
-  <button onclick="switchLanguage('es')">Español</button>
-  <button onclick="switchLanguage('fr')">Français</button>
-  <button onclick="switchLanguage('de')">Deutsch</button>
-</div>
-<div id="content">
-  <h1>Welcome to Our Global Platform</h1>
-  <p>Discover exclusive products tailored to your needs, with worldwide shipping and 24/7 support.</p>
-</div>
+<pre><code>&lt;!-- HTML: Language Switcher UI --&gt;
+&lt;div class="language-switcher"&gt;
+  &lt;button onclick="switchLanguage('en')"&gt;English&lt;/button&gt;
+  &lt;button onclick="switchLanguage('es')"&gt;Español&lt;/button&gt;
+  &lt;button onclick="switchLanguage('fr')"&gt;Français&lt;/button&gt;
+  &lt;button onclick="switchLanguage('de')"&gt;Deutsch&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id="content"&gt;
+  &lt;h1&gt;Welcome to Our Global Platform&lt;/h1&gt;
+  &lt;p&gt;Discover exclusive products tailored to your needs, with worldwide shipping and 24/7 support.&lt;/p&gt;
+&lt;/div&gt;
 
-<!-- JavaScript + AI Translation Logic (Uses OpenAI API) -->
-<script>
+&lt;!-- JavaScript + AI Translation Logic (Uses OpenAI API) --&gt;
+&lt;script&gt;
 async function switchLanguage(targetLang) {
   const contentElements = document.querySelectorAll('#content h1, #content p');
   const apiKey = 'your-openai-api-key'; // Replace with your API key
@@ -7170,7 +7170,7 @@ async function switchLanguage(targetLang) {
     element.textContent = data.choices[0].message.content;
   }
 }
-</script></code></pre>
+&lt;/script&gt;</code></pre>
 
 <h3>Key Benefit: Automatically adapts to 100+ languages, ideal for targeting European, Latin American, or Asian markets without rebuilding pages.</h3>
 
@@ -7180,13 +7180,13 @@ async function switchLanguage(targetLang) {
 
 <h3>Implementation Code</h3>
 
-<pre><code><!-- HTML: Dynamic Content Container -->
-<div id="personalized-content">
-  <p>Loading recommendations just for you...</p>
-</div>
+<pre><code>&lt;!-- HTML: Dynamic Content Container --&gt;
+&lt;div id="personalized-content"&gt;
+  &lt;p&gt;Loading recommendations just for you...&lt;/p&gt;
+&lt;/div&gt;
 
-<!-- JavaScript + AI Personalization -->
-<script>
+&lt;!-- JavaScript + AI Personalization --&gt;
+&lt;script&gt;
 async function loadPersonalizedContent() {
   // Collect user data (location, device, browsing history)
   const userData = {
@@ -7218,16 +7218,16 @@ async function loadPersonalizedContent() {
 
 // Helper: Get user location (simplified)
 function getLocation() {
-  return new Promise((resolve) => {
-    navigator.geolocation.getCurrentPosition(pos => {
+  return new Promise((resolve) =&gt; {
+    navigator.geolocation.getCurrentPosition(pos =&gt; {
       resolve(pos.coords.country);
-    }, () => resolve('US'));
+    }, () =&gt; resolve('US'));
   });
 }
 
 // Run on page load
 window.onload = loadPersonalizedContent;
-</script></code></pre>
+&lt;/script&gt;</code></pre>
 
 <h3>Key Benefit: Boosts engagement by 30-50% (per industry data) by showing users content they’re more likely to interact with.</h3>
 
@@ -7237,23 +7237,23 @@ window.onload = loadPersonalizedContent;
 
 <h3>Implementation Code</h3>
 
-<pre><code><!-- HTML: Chatbot Widget -->
-<div class="chatbot-widget">
-  <button id="chatbot-toggle">💬 Need Help?</button>
-  <div id="chatbot-window" style="display: none;">
-    <div id="chatbot-messages"></div>
-    <input type="text" id="chatbot-input" placeholder="Ask your question...">
-    <button onclick="sendChatMessage()">Send</button>
-  </div>
-</div>
+<pre><code>&lt;!-- HTML: Chatbot Widget --&gt;
+&lt;div class="chatbot-widget"&gt;
+  &lt;button id="chatbot-toggle"&gt;💬 Need Help?&lt;/button&gt;
+  &lt;div id="chatbot-window" style="display: none;"&gt;
+    &lt;div id="chatbot-messages"&gt;&lt;/div&gt;
+    &lt;input type="text" id="chatbot-input" placeholder="Ask your question..."&gt;
+    &lt;button onclick="sendChatMessage()"&gt;Send&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-<!-- JavaScript + AI Chat Logic -->
-<script>
+&lt;!-- JavaScript + AI Chat Logic --&gt;
+&lt;script&gt;
 const chatbotToggle = document.getElementById('chatbot-toggle');
 const chatbotWindow = document.getElementById('chatbot-window');
 
 // Toggle chatbot visibility
-chatbotToggle.addEventListener('click', () => {
+chatbotToggle.addEventListener('click', () =&gt; {
   chatbotWindow.style.display = chatbotWindow.style.display === 'none' ? 'block' : 'none';
 });
 
@@ -7264,7 +7264,7 @@ async function sendChatMessage() {
   
   // Add user message to chat
   const messagesContainer = document.getElementById('chatbot-messages');
-  messagesContainer.innerHTML += \`<div class="user-message">You: \${message}</div>\`;
+  messagesContainer.innerHTML += \`&lt;div class="user-message"&gt;You: \${message}&lt;/div&gt;\`;
   input.value = '';
   
   // Call AI for response
@@ -7289,10 +7289,10 @@ async function sendChatMessage() {
   
   const data = await response.json();
   const aiResponse = data.choices[0].message.content;
-  messagesContainer.innerHTML += \`<div class="ai-message">Support: \${aiResponse}</div>\`;
+  messagesContainer.innerHTML += \`&lt;div class="ai-message"&gt;Support: \${aiResponse}&lt;/div&gt;\`;
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
-</script></code></pre>
+&lt;/script&gt;</code></pre>
 
 <h3>Key Benefit: Reduces customer support tickets by 40% and improves user satisfaction—critical for overseas audiences in different time zones.</h3>
 
@@ -7313,27 +7313,27 @@ async function sendChatMessage() {
 
 <h3>Example Output Snippet (Generated by AI)</h3>
 
-<pre><code><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summer Sale - Up to 50% Off!</title>
-  <style>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Summer Sale - Up to 50% Off!&lt;/title&gt;
+  &lt;style&gt;
     body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
     .hero { width: 100%; border-radius: 8px; }
     .cta { background-color: #FF6B6B; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; margin: 20px 0; }
-  </style>
-</head>
-<body>
-  <img src="[Hero Image URL]" alt="Summer Sale" class="hero">
-  <h1>Up to 50% Off Summer Collection</h1>
-  <p>Shop our latest dresses, swimwear, and accessories—perfect for your overseas adventures!</p>
-  <!-- Product Cards Generated Here -->
-  <a href="https://your-website.com/sale" class="cta">Shop Now</a>
-  <p>Unsubscribe <a href="[Unsubscribe Link]">here</a>. Our address: 123 Global St, New York, NY 10001, USA.</p>
-</body>
-</html></code></pre>
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;img src="[Hero Image URL]" alt="Summer Sale" class="hero"&gt;
+  &lt;h1&gt;Up to 50% Off Summer Collection&lt;/h1&gt;
+  &lt;p&gt;Shop our latest dresses, swimwear, and accessories—perfect for your overseas adventures!&lt;/p&gt;
+  &lt;!-- Product Cards Generated Here --&gt;
+  &lt;a href="https://your-website.com/sale" class="cta"&gt;Shop Now&lt;/a&gt;
+  &lt;p&gt;Unsubscribe &lt;a href="[Unsubscribe Link]"&gt;here&lt;/a&gt;. Our address: 123 Global St, New York, NY 10001, USA.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <h3>Key Benefit: Saves hours of design work and ensures emails are optimized for overseas audiences (CAN-SPAM/GDPR compliant).</h3>
 
@@ -7343,18 +7343,18 @@ async function sendChatMessage() {
 
 <h3>Implementation Code</h3>
 
-<pre><code><!-- HTML: Checkout Form -->
-<form id="checkout-form">
-  <input type="text" id="full-name" placeholder="Full Name" required>
-  <input type="email" id="email" placeholder="Email Address" required>
-  <input type="text" id="shipping-address" placeholder="Shipping Address" required>
-  <button type="submit">Complete Order</button>
-</form>
-<div id="validation-feedback"></div>
+<pre><code>&lt;!-- HTML: Checkout Form --&gt;
+&lt;form id="checkout-form"&gt;
+  &lt;input type="text" id="full-name" placeholder="Full Name" required&gt;
+  &lt;input type="email" id="email" placeholder="Email Address" required&gt;
+  &lt;input type="text" id="shipping-address" placeholder="Shipping Address" required&gt;
+  &lt;button type="submit"&gt;Complete Order&lt;/button&gt;
+&lt;/form&gt;
+&lt;div id="validation-feedback"&gt;&lt;/div&gt;
 
-<!-- JavaScript + AI Form Validation -->
-<script>
-document.getElementById('checkout-form').addEventListener('submit', async (e) => {
+&lt;!-- JavaScript + AI Form Validation --&gt;
+&lt;script&gt;
+document.getElementById('checkout-form').addEventListener('submit', async (e) =&gt; {
   e.preventDefault();
   const feedback = document.getElementById('validation-feedback');
   feedback.textContent = 'Validating your information...';
@@ -7393,7 +7393,7 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =>
     feedback.textContent = validationResult;
   }
 });
-</script></code></pre>
+&lt;/script&gt;</code></pre>
 
 <h3>Key Benefit: Reduces form abandonment by 25% by providing clear, helpful feedback instead of generic "invalid input" messages.</h3>
 

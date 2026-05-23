@@ -8,6 +8,7 @@ import ToolCard from "@/components/ToolCard";
 import ArticleCard from "@/components/ArticleCard";
 import AdUnit from "@/components/AdUnit";
 import ShareButtons from "@/components/ShareButtons";
+import CopyCodeButton from "@/components/CopyCodeButton";
 
 interface ArticleLayoutProps {
   article: Article;
@@ -87,6 +88,7 @@ export default function ArticleLayout({
       <div className="flex flex-col gap-8 lg:flex-row">
         {/* Main content 2/3 */}
         <article className="min-w-0 flex-1 lg:w-2/3">
+          <CopyCodeButton />
           {/* Header */}
           <div className="mb-6">
             {cat && (
