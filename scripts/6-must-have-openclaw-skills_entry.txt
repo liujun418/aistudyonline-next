@@ -1,0 +1,239 @@
+	// ====== 6-must-have-openclaw-skills ======
+	"6-must-have-openclaw-skills": {
+		content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials &middot; <strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Prerequisites:</strong> Basic familiarity with OpenClaw CLI</p>
+</div>
+
+<p>OpenClaw, a powerful AI tool ecosystem, offers thousands of skills in its store, but there are 6 base skills that stand out for their high installation rates and practicality. These skills cover browser automation, web search, self-improvement, skill discovery, security auditing, and email management, forming a solid foundation for your AI workflow. Let’s dive into each one with practical insights and usage guides.</p>
+
+<h2>1. Agent-Browser: Let AI Take Control of Browsers</h2>
+
+<p><strong>Functionality</strong>: This skill enables AI to automate browser operations. It can click buttons, fill out forms, take full-page screenshots, and download files in batches. Even dynamically rendered pages are no problem, making it feel like giving AI a pair of hands to interact with the web.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Automate web-based tasks like filling out daily reports on enterprise platforms.</li>
+<li>Batch download product images or data sheets from e-commerce websites.</li>
+<li>Capture full-page screenshots of competitor web pages for analysis.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install agent-browser</code></pre>
+
+<h2>2. Tavily-Search: Ad-Free AI-Exclusive Web Search</h2>
+
+<p><strong>Functionality</strong>: It provides real-time web search results without ads. The output is structured, making it easy for AI to consume, and it automatically extracts key information from web pages. This ensures your AI is always working with the latest and most accurate information.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Research the latest market trends in overseas regions for your e-commerce business.</li>
+<li>Fetch up-to-date news and data for content creation targeting international audiences.</li>
+<li>Gather product feedback and reviews from global forums.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install tavily-search</code></pre>
+
+<h2>3. Self-Improving Agent: AI That Learns and Evolves</h2>
+
+<p><strong>Functionality</strong>: This skill allows AI to remember your coding style, habits, and preferences. It learns from mistakes to automatically fix issues and retains memory across conversations, getting smarter and more efficient the more you use it.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Let it learn your unique writing style for creating consistent marketing copy.</li>
+<li>Have it remember your code conventions to assist in development tasks.</li>
+<li>Improve its accuracy in handling repeated tasks by learning from past errors.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install self-improving-agent</code></pre>
+
+<h2>4. Find-Skills: Discover and Manage Skills Seamlessly</h2>
+
+<p><strong>Functionality</strong>: It works like an app store for OpenClaw skills. You can search for skills using natural language, get recommendations based on leaderboards, and manage installations, upgrades, and rollbacks all in one place.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Search for skills to automate social media posting for your overseas accounts.</li>
+<li>Find translation skills optimized for specific languages like Spanish or German.</li>
+<li>Batch update all installed skills to their latest versions.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install find-skills</code></pre>
+
+<h2>5. Skill-Vetter: Secure Your AI Toolchain</h2>
+
+<p><strong>Functionality</strong>: Before installing any skill, this tool scans it for malicious code, checks for unauthorized permission requests, and prevents privacy leaks. It also provides a security score report, acting as a gatekeeper for your AI tools.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Scan new skills before installing to ensure they don’t access sensitive business data.</li>
+<li>Use it to audit existing skills for potential security risks.</li>
+<li>Comply with data privacy regulations in regions like the EU by preventing unauthorized data access.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install skill-vetter</code></pre>
+
+<h2>6. Email Management: AI-Powered Email Handler</h2>
+
+<p><strong>Functionality</strong>: This skill lets AI read, write, classify, and manage your emails. It can draft responses to common emails and supports major email platforms like Gmail, Outlook, 163, and QQ.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Automatically classify customer inquiries from different regions into separate folders.</li>
+<li>Let AI draft responses to routine business emails in multiple languages.</li>
+<li>Prioritize and flag important emails for immediate attention.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install email-management</code></pre>
+
+<h2>One Command to Install All 6 Skills</h2>
+
+<p>For those who want to get started quickly, you can install all these base skills with a single command:</p>
+
+<pre><code class="language-bash">claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management</code></pre>
+
+<p>These 6 skills form a robust foundation for anyone using OpenClaw, whether you’re running an overseas e-commerce business, managing international content, or handling global customer support. By leveraging these skills, you can automate tasks, access accurate information, ensure security, and boost overall productivity in your AI-driven workflows.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is OpenClaw and why should I use it?</h3>
+<p>OpenClaw is an open-source AI agent framework that combines LLMs with command execution loops to turn natural language into automated workflows. Read our article <a href="/article/openclaw-demystified-20-lines">Unveiling OpenClaw: Demystify the AI Tool in 20 Lines of Code</a>.</p>
+
+<h3>Q: Are these 6 skills enough for daily work?</h3>
+<p>These 6 skills form a robust foundation for most AI-driven workflows. Browser automation, web search, self-improvement, skill discovery, security auditing, and email management cover the majority of daily tasks for overseas business operations.</p>
+
+<h3>Q: How does OpenClaw compare to other AI tools?</h3>
+<p>OpenClaw's strength lies in its skill ecosystem and flexibility. For a broader comparison of AI development tools, see <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI's Strategic Counterattack: OpenClaw Integration and Codex Innovations</a>.</p>
+<div class="next-step">
+<p><strong>Next Step:</strong> Learn more about <a href="/article/openclaw-demystified-20-lines">how OpenClaw works under the hood</a> or explore <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI's strategic moves</a>.</p>
+</div>`,
+		contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI 教程 &middot; <strong>难度：</strong> 中级</p>
+<p><strong>前置要求：</strong> 熟悉 OpenClaw 命令行基本操作</p>
+</div>
+
+<p>OpenClaw, a powerful AI tool ecosystem, offers thousands of skills in its store, but there are 6 base skills that stand out for their high installation rates and practicality. These skills cover browser automation, web search, self-improvement, skill discovery, security auditing, and email management, forming a solid foundation for your AI workflow. Let’s dive into each one with practical insights and usage guides.</p>
+
+<h2>1. Agent-Browser: Let AI Take Control of Browsers</h2>
+
+<p><strong>Functionality</strong>: This skill enables AI to automate browser operations. It can click buttons, fill out forms, take full-page screenshots, and download files in batches. Even dynamically rendered pages are no problem, making it feel like giving AI a pair of hands to interact with the web.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Automate web-based tasks like filling out daily reports on enterprise platforms.</li>
+<li>Batch download product images or data sheets from e-commerce websites.</li>
+<li>Capture full-page screenshots of competitor web pages for analysis.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install agent-browser</code></pre>
+
+<h2>2. Tavily-Search: Ad-Free AI-Exclusive Web Search</h2>
+
+<p><strong>Functionality</strong>: It provides real-time web search results without ads. The output is structured, making it easy for AI to consume, and it automatically extracts key information from web pages. This ensures your AI is always working with the latest and most accurate information.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Research the latest market trends in overseas regions for your e-commerce business.</li>
+<li>Fetch up-to-date news and data for content creation targeting international audiences.</li>
+<li>Gather product feedback and reviews from global forums.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install tavily-search</code></pre>
+
+<h2>3. Self-Improving Agent: AI That Learns and Evolves</h2>
+
+<p><strong>Functionality</strong>: This skill allows AI to remember your coding style, habits, and preferences. It learns from mistakes to automatically fix issues and retains memory across conversations, getting smarter and more efficient the more you use it.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Let it learn your unique writing style for creating consistent marketing copy.</li>
+<li>Have it remember your code conventions to assist in development tasks.</li>
+<li>Improve its accuracy in handling repeated tasks by learning from past errors.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install self-improving-agent</code></pre>
+
+<h2>4. Find-Skills: Discover and Manage Skills Seamlessly</h2>
+
+<p><strong>Functionality</strong>: It works like an app store for OpenClaw skills. You can search for skills using natural language, get recommendations based on leaderboards, and manage installations, upgrades, and rollbacks all in one place.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Search for skills to automate social media posting for your overseas accounts.</li>
+<li>Find translation skills optimized for specific languages like Spanish or German.</li>
+<li>Batch update all installed skills to their latest versions.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install find-skills</code></pre>
+
+<h2>5. Skill-Vetter: Secure Your AI Toolchain</h2>
+
+<p><strong>Functionality</strong>: Before installing any skill, this tool scans it for malicious code, checks for unauthorized permission requests, and prevents privacy leaks. It also provides a security score report, acting as a gatekeeper for your AI tools.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Scan new skills before installing to ensure they don’t access sensitive business data.</li>
+<li>Use it to audit existing skills for potential security risks.</li>
+<li>Comply with data privacy regulations in regions like the EU by preventing unauthorized data access.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install skill-vetter</code></pre>
+
+<h2>6. Email Management: AI-Powered Email Handler</h2>
+
+<p><strong>Functionality</strong>: This skill lets AI read, write, classify, and manage your emails. It can draft responses to common emails and supports major email platforms like Gmail, Outlook, 163, and QQ.</p>
+
+<p><strong>Practical Use Cases</strong>:</p>
+
+<ul>
+<li>Automatically classify customer inquiries from different regions into separate folders.</li>
+<li>Let AI draft responses to routine business emails in multiple languages.</li>
+<li>Prioritize and flag important emails for immediate attention.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+
+<pre><code class="language-bash">claw install email-management</code></pre>
+
+<h2>One Command to Install All 6 Skills</h2>
+
+<p>For those who want to get started quickly, you can install all these base skills with a single command:</p>
+
+<pre><code class="language-bash">claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management</code></pre>
+
+<p>These 6 skills form a robust foundation for anyone using OpenClaw, whether you’re running an overseas e-commerce business, managing international content, or handling global customer support. By leveraging these skills, you can automate tasks, access accurate information, ensure security, and boost overall productivity in your AI-driven workflows.</p>
+
+<h2>常见问题</h2>
+
+<h3>问：什么是 OpenClaw？我为什么需要使用它？</h3>
+<p>OpenClaw 是一个开源的 AI 代理框架，它将大语言模型与命令执行循环相结合，将自然语言指令转化为自动化工作流程。要了解核心原理，推荐阅读 <a href="/article/openclaw-demystified-20-lines">揭开 OpenClaw 面纱：20 行代码讲透这个 AI 工具</a>。</p>
+
+<h3>问：这 6 个技能真的能覆盖日常工作的主要需求吗？</h3>
+<p>是的，这 6 个技能为大多数 AI 驱动的工作流程提供了坚实基础。浏览器自动化、网络搜索、自我进化、技能发现、安全审计和邮件管理覆盖了海外业务运营中大部分日常任务。</p>
+
+<h3>问：OpenClaw 与其他 AI 开发工具相比有什么优势？</h3>
+<p>OpenClaw 最大的优势在于其灵活的技能生态系统。与功能固定的单一 AI 工具不同，OpenClaw 允许通过安装不同技能来组合能力。全面对比分析请参考 <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI 的战略反击：OpenClaw 集成与 Codex 创新</a>。</p>
+<div class="next-step">
+<p><strong>下一篇：</strong> 深入了解 <a href="/article/openclaw-demystified-20-lines">OpenClaw 的核心工作原理</a>，或探索 <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI 在 AI 工具市场的最新战略动作</a>。</p>
+</div>`,
+	},

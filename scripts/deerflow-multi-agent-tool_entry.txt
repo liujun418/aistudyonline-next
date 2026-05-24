@@ -1,0 +1,189 @@
+	// ====== deerflow-multi-agent-tool ======
+	"deerflow-multi-agent-tool": {
+		content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools &middot; <strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Prerequisites:</strong> Basic knowledge of Python and Docker</p>
+</div>
+
+<p>In the realm of AI tools, efficiency and scalability are paramount, especially for those aiming to leverage AI for business growth in global markets. Enter <strong>DeerFlow</strong>, an open-source project that’s revolutionizing how we handle tasks with its parallel multi-agent architecture. Let’s dive into how this tool can be a game-changer for your workflow, complete with practical steps and code snippets.</p>
+
+<h2>What is DeerFlow?</h2>
+
+<p>DeerFlow is an open-source intelligent agent framework developed by a team of engineers in China. It stands out with its <strong>parallel multi-agent architecture</strong>—when you assign a task, it automatically splits it into sub-tasks and dispatches multiple AIs to work on them simultaneously, then aggregates the results back to you. This is a stark contrast to traditional AI tools that process tasks serially (one after another), leading to significant time savings.</p>
+
+<p>Within just ten days of its release, DeerFlow topped GitHub’s trending list and has garnered over <strong>47,000 stars</strong>, a testament to its popularity and utility.</p>
+
+<h2>Core Features and Practical Benefits</h2>
+
+<h3>1. Parallel Task Execution for Unmatched Speed</h3>
+
+<p>Traditional AI tools suffer from a major flaw: the more tasks you have, the slower they get, as they process tasks one by one. DeerFlow smashes this norm. Whether you run 1 task or 100 tasks, the time taken is nearly the same. For example, a single task might take 10 seconds, and 100 tasks also take around 10 seconds—because it doesn’t queue tasks.</p>
+
+<p>This is ideal for time-sensitive projects, such as generating multiple reports or processing bulk data for your overseas clients.</p>
+
+<h3>2. Sandboxed Execution with Zero Contamination</h3>
+
+<p>DeerFlow runs all operations, including code execution, file writing, and bash command execution, within Docker containers. This means:</p>
+
+<ul>
+<li><strong>Zero contamination</strong>: Any changes or operations stay within the container. Deleting the container leaves no traces.</li>
+<li><strong>Full auditability</strong>: Every action is trackable, which is crucial for compliance and debugging.</li>
+</ul>
+<p>To initialize DeerFlow and run a task in a sandbox, use this Python snippet:</p>
+
+<pre><code class="language-python">from deerflow.client import DeerFlowClient
+client = DeerFlowClient()
+
+# Execute a research task and stream the result
+for event in client.stream(
+    &quot;Research the 2025 AI Agent framework comparison and generate a report&quot;,
+    thread_id=&quot;research-001&quot;
+):
+    if event.type == &quot;message-tuple&quot;:
+        content = event.data.get(&quot;content&quot;, &quot;&quot;)
+        print(content, end=&quot;&quot;, flush=True)</code></pre>
+
+<h3>3. Seamless Model Compatibility</h3>
+
+<p>Switching AI models is a breeze with DeerFlow. You only need to modify one line of configuration, no code changes required. This is perfect if you want to test different models for your overseas audience, such as switching between models optimized for English vs. other languages.</p>
+
+<p>Here’s how you change the model in the configuration file:</p>
+
+<pre><code class="language-yaml"># Before
+model: &quot;model-a-latest&quot;
+base_url: &quot;https://api.model-a.com/v1&quot;
+
+# After switching to another model
+model: &quot;model-b-pro&quot;
+base_url: &quot;https://api.model-b.com/v1&quot;</code></pre>
+
+<h3>4. Personalized and Persistent Memory (Local-First)</h3>
+
+<p>DeerFlow remembers your preferences, tech stack, and style. This “memory” is stored locally, so you can delete it anytime for privacy. For instance, if you’re building a website for a European market, it will remember your design preferences and tech stack (like Python, LangGraph, Docker) across sessions.</p>
+
+<h3>5. Nested AI Collaboration (Easter Egg)</h3>
+
+<p>You can even use DeerFlow directly in programming assistants like Claude Code. This lets you delegate tasks from one AI to DeerFlow’s agents, creating a “nested AI” workflow. Install the integration with this command:</p>
+
+<pre><code class="language-bash">npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code></pre>
+
+<p>Then, in Claude Code, use the <code>/claude-to-deerflow</code> command to assign tasks without leaving the terminal.</p>
+
+<h2>How to Leverage DeerFlow for Your Overseas Business</h2>
+
+<ol>
+<li><strong>Task Decomposition</strong>: The biggest hurdle for many is breaking down complex tasks. DeerFlow excels here—just input your high-level request (e.g., “Create a market analysis report for our new product in the US”), and it will split it into sub-tasks like research, data analysis, and report writing.</li>
+<li><strong>Bulk Content Generation</strong>: For e-commerce or content marketing, use DeerFlow to generate multiple product descriptions, blog posts, or social media captions in parallel.</li>
+<li><strong>Automated Testing and Deployment</strong>: Run automated tests or deployments for your overseas websites/apps in parallel, reducing release cycles.</li>
+</ol>
+<h2>Conclusion</h2>
+
+<p>DeerFlow is more than just an AI tool—it’s a productivity powerhouse for anyone looking to scale their operations globally. Its parallel architecture, sandboxed execution, and model flexibility make it a must-have in your tech stack. Head to its <a href="https://github.com/bytedance/deer-flow">GitHub repository</a> to get started and watch your workflow efficiency soar.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What makes DeerFlow different from other multi-agent frameworks?</h3>
+<p>Its parallel execution architecture. Most AI tools process tasks sequentially, but DeerFlow dispatches multiple agents simultaneously. This means the more tasks you have, the greater the time savings compared to traditional serial processing.</p>
+
+<h3>Q: Do I need Docker to use DeerFlow?</h3>
+<p>Yes, DeerFlow uses Docker containers for sandboxed execution. This ensures zero contamination and full auditability. All operations including code execution, file writing, and bash commands run inside containers.</p>
+
+<h3>Q: How does DeerFlow integrate with Claude Code?</h3>
+<p>DeerFlow offers a Claude Code integration via the <code>/claude-to-deerflow</code> command. You can install it using: <code>npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code>. See <a href="/article/top-10-claude-code-commands">Top 10 Claude Code Commands</a> for more Claude Code tips.</p>
+<div class="next-step">
+<p><strong>Next Step:</strong> Explore <a href="/tools/deer-flow">Deer-Flow tool page</a> or read <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business</a>.</p>
+</div>`,
+		contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI 工具 &middot; <strong>难度：</strong> 中级</p>
+<p><strong>前置要求：</strong> 基本的 Python 和 Docker 知识</p>
+</div>
+
+<p>In the realm of AI tools, efficiency and scalability are paramount, especially for those aiming to leverage AI for business growth in global markets. Enter <strong>DeerFlow</strong>, an open-source project that’s revolutionizing how we handle tasks with its parallel multi-agent architecture. Let’s dive into how this tool can be a game-changer for your workflow, complete with practical steps and code snippets.</p>
+
+<h2>What is DeerFlow?</h2>
+
+<p>DeerFlow is an open-source intelligent agent framework developed by a team of engineers in China. It stands out with its <strong>parallel multi-agent architecture</strong>—when you assign a task, it automatically splits it into sub-tasks and dispatches multiple AIs to work on them simultaneously, then aggregates the results back to you. This is a stark contrast to traditional AI tools that process tasks serially (one after another), leading to significant time savings.</p>
+
+<p>Within just ten days of its release, DeerFlow topped GitHub’s trending list and has garnered over <strong>47,000 stars</strong>, a testament to its popularity and utility.</p>
+
+<h2>Core Features and Practical Benefits</h2>
+
+<h3>1. Parallel Task Execution for Unmatched Speed</h3>
+
+<p>Traditional AI tools suffer from a major flaw: the more tasks you have, the slower they get, as they process tasks one by one. DeerFlow smashes this norm. Whether you run 1 task or 100 tasks, the time taken is nearly the same. For example, a single task might take 10 seconds, and 100 tasks also take around 10 seconds—because it doesn’t queue tasks.</p>
+
+<p>This is ideal for time-sensitive projects, such as generating multiple reports or processing bulk data for your overseas clients.</p>
+
+<h3>2. Sandboxed Execution with Zero Contamination</h3>
+
+<p>DeerFlow runs all operations, including code execution, file writing, and bash command execution, within Docker containers. This means:</p>
+
+<ul>
+<li><strong>Zero contamination</strong>: Any changes or operations stay within the container. Deleting the container leaves no traces.</li>
+<li><strong>Full auditability</strong>: Every action is trackable, which is crucial for compliance and debugging.</li>
+</ul>
+<p>To initialize DeerFlow and run a task in a sandbox, use this Python snippet:</p>
+
+<pre><code class="language-python">from deerflow.client import DeerFlowClient
+client = DeerFlowClient()
+
+# Execute a research task and stream the result
+for event in client.stream(
+    &quot;Research the 2025 AI Agent framework comparison and generate a report&quot;,
+    thread_id=&quot;research-001&quot;
+):
+    if event.type == &quot;message-tuple&quot;:
+        content = event.data.get(&quot;content&quot;, &quot;&quot;)
+        print(content, end=&quot;&quot;, flush=True)</code></pre>
+
+<h3>3. Seamless Model Compatibility</h3>
+
+<p>Switching AI models is a breeze with DeerFlow. You only need to modify one line of configuration, no code changes required. This is perfect if you want to test different models for your overseas audience, such as switching between models optimized for English vs. other languages.</p>
+
+<p>Here’s how you change the model in the configuration file:</p>
+
+<pre><code class="language-yaml"># Before
+model: &quot;model-a-latest&quot;
+base_url: &quot;https://api.model-a.com/v1&quot;
+
+# After switching to another model
+model: &quot;model-b-pro&quot;
+base_url: &quot;https://api.model-b.com/v1&quot;</code></pre>
+
+<h3>4. Personalized and Persistent Memory (Local-First)</h3>
+
+<p>DeerFlow remembers your preferences, tech stack, and style. This “memory” is stored locally, so you can delete it anytime for privacy. For instance, if you’re building a website for a European market, it will remember your design preferences and tech stack (like Python, LangGraph, Docker) across sessions.</p>
+
+<h3>5. Nested AI Collaboration (Easter Egg)</h3>
+
+<p>You can even use DeerFlow directly in programming assistants like Claude Code. This lets you delegate tasks from one AI to DeerFlow’s agents, creating a “nested AI” workflow. Install the integration with this command:</p>
+
+<pre><code class="language-bash">npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code></pre>
+
+<p>Then, in Claude Code, use the <code>/claude-to-deerflow</code> command to assign tasks without leaving the terminal.</p>
+
+<h2>How to Leverage DeerFlow for Your Overseas Business</h2>
+
+<ol>
+<li><strong>Task Decomposition</strong>: The biggest hurdle for many is breaking down complex tasks. DeerFlow excels here—just input your high-level request (e.g., “Create a market analysis report for our new product in the US”), and it will split it into sub-tasks like research, data analysis, and report writing.</li>
+<li><strong>Bulk Content Generation</strong>: For e-commerce or content marketing, use DeerFlow to generate multiple product descriptions, blog posts, or social media captions in parallel.</li>
+<li><strong>Automated Testing and Deployment</strong>: Run automated tests or deployments for your overseas websites/apps in parallel, reducing release cycles.</li>
+</ol>
+<h2>Conclusion</h2>
+
+<p>DeerFlow is more than just an AI tool—it’s a productivity powerhouse for anyone looking to scale their operations globally. Its parallel architecture, sandboxed execution, and model flexibility make it a must-have in your tech stack. Head to its <a href="https://github.com/bytedance/deer-flow">GitHub repository</a> to get started and watch your workflow efficiency soar.</p>
+
+<h2>常见问题</h2>
+
+<h3>问：DeerFlow 与其他多智能体框架的核心区别是什么？</h3>
+<p>其核心区别在于并行执行架构。大多数 AI 工具按顺序逐个处理任务，而 DeerFlow 能同时派发多个智能体并行工作。这意味着任务越多，DeerFlow 相比于传统串行处理的时间节省就越明显。</p>
+
+<h3>问：使用 DeerFlow 必须安装 Docker 吗？</h3>
+<p>是的，DeerFlow 依赖 Docker 容器实现沙箱隔离执行，保证了操作的零污染和完全可审计性。所有操作（包括代码执行、文件写入和 bash 命令）都在容器内运行。</p>
+
+<h3>问：DeerFlow 如何与 Claude Code 集成？</h3>
+<p>DeerFlow 通过 <code>/claude-to-deerflow</code> 命令提供 Claude Code 集成。安装命令：<code>npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code>。更多 Claude Code 技巧请参考 <a href="/article/top-10-claude-code-commands">Top 10 Claude Code 命令</a>。</p>
+<div class="next-step">
+<p><strong>下一篇：</strong> 查看 <a href="/tools/deer-flow">Deer-Flow 工具详情页</a> 或阅读 <a href="/article/5-ai-tools-one-person-overseas-business">5 款 AI 工具打造你的单人海外业务</a>。</p>
+</div>`,
+	},
