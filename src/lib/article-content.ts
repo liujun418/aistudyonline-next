@@ -6683,10 +6683,74 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <div class="next-step">
 <p><strong>Next Step:</strong> Explore more AI tools for freelancers: <a href="/article/ai-for-freelancers">AI for Freelancers &#x2192;</a></p>
 </div>`,
-    contentZh: `<p>本文详细介绍5 AI Tools to Build Your One-Person Overseas Business: Let Claude Code Work for You While You Sleep。涵盖实用场景分析、代码示例和分步操作指南，帮助您充分利用AI工具提升海外业务效率。</p>
+    contentZh: `<p>在全球创业的舞台上，尤其是对于搭建出海网站的创业者来说，效率是成功的关键。你不需要日夜操劳，也不需要管理庞大的团队。借助这5款AI工具，你可以建立一个人的AI公司，让人工智能处理繁重的工作，而你专注于战略决策。本文将深入探讨每款工具如何为你的出海网站项目提速增效。</p>
+
+<h2>1. Deer-Flow：你的AI市场研究分析师</h2>
+
+<p>当你启动一个出海网站时，了解目标市场、竞争对手和行业趋势至关重要。<strong>Deer-Flow</strong>（拥有65,800颗星的开源项目）可以作为你的专属AI研究员。</p>
+
+<p>使用方法很简单，只需发出如下指令：</p>
+
+<pre><code>Research the latest e-commerce trends in the European market, compare top 5 competitors' websites, and generate a 30-page report.</code></pre>
+
+<p>Deer-Flow会自动扫描网络，收集相关文章和数据，并生成一份全面的报告。这为你节省了大量的手动调研时间，提供可执行的洞察，帮助你制定网站的定位和营销策略。</p>
+
+<h2>2. Prompt-Optimizer：把你的想法转化为AI能理解的指令</h2>
+
+<p>并非每个人都是AI提示工程专家，但<strong>Prompt-Optimizer</strong>（28,300颗星）弥补了这一差距。它能把你的日常语言请求转换为专业的AI指令。</p>
+
+<p>例如，如果你想为你的跨境电商网站撰写一条爆款产品描述，只需这样说：</p>
+
+<pre><code>Write a viral product description for my handmade jewelry collection targeting young women in the US.</code></pre>
+
+<p>Prompt-Optimizer会将其转换为详细的AI指令：</p>
+
+<pre><code>Generate a viral product description for a handmade jewelry collection, optimized for young women in the US market, including 6 relevant hashtags and an engaging hook within the first 8 characters.</code></pre>
+
+<p>这样可以确保像Claude这样的AI工具精确理解你的需求，从而为你的网站生成高质量内容。</p>
+
+<h2>3. Agents：80多名专业AI员工随时为你服务</h2>
+
+<p>运营一个出海网站涉及多项任务——前端开发、数据分析、SEO、营销等等。<strong>Agents</strong>（34,900颗星）为你提供了一支80多名AI员工的团队，每人专精于不同领域。</p>
+
+<p>假设你需要优化网站的SEO。你可以用如下指令部署SEO专家Agent：</p>
+
+<pre><code>Analyze my website [your-website-url] for SEO issues, suggest keyword optimizations, and create a backlink strategy for the fashion niche.</code></pre>
+
+<p>AI SEO专家会进行深入分析并提出可执行的方案。类似地，你可以使用前端工程师Agent修复网站Bug，使用数据分析师Agent追踪用户行为，使用营销专家Agent策划社交媒体活动。</p>
+
+<h2>4. Claude-Flow（现已更名为Ruflo）：你的AI项目经理</h2>
+
+<p>出海网站项目可能很复杂，涉及多个阶段和任务。<strong>Claude-Flow</strong>（现更名为Ruflo，45,720颗星）充当你的AI总经理，将项目分解为可管理的任务并分配给合适的AI员工。</p>
+
+<p>假设你想在网站上推出一个新产品系列。给Claude-Flow下达如下指令：</p>
+
+<pre><code>Launch a new organic skincare product line targeting eco-conscious consumers in Australia. Break down the project into tasks, assign to relevant AI employees, and ensure automatic验收 (acceptance).</code></pre>
+
+<p>Claude-Flow会将项目分解为市场调研、产品页面设计、SEO优化、营销活动创建等步骤，将每个任务分配给合适的AI Agent（来自Agents工具），并确保无缝协作和自动质量检查。</p>
+
+<h2>5. Letta：不断进化、学习你偏好的AI大脑</h2>
+
+<p>对于出海网站来说，一致性至关重要。<strong>Letta</strong>（22,490颗星）是一个不断进化的AI大脑，它会随着时间学习你的偏好、工作风格和习惯。</p>
+
+<p>举例来说，如果你偏好某种语气来写网站博客文章，或者对产品描述有特定要求，Letta会记住这些。即使你开启新的对话或任务，也无需重新解释你的偏好。只需这样开始：</p>
+
+<pre><code>Write a blog post about the benefits of sustainable fashion, using the tone and structure we've used before.</code></pre>
+
+<p>Letta会生成与你既有风格完全一致的内容。</p>
+
+<h2>组建你的一个人AI公司，助力出海成功</h2>
+
+<p>单独来看，这些工具都很强大；但组合在一起，它们就构成了一个完整的AI公司。Deer-Flow负责调研，Prompt-Optimizer转化你的想法，Agents提供专业人才，Claude-Flow管理项目，Letta确保一致性。</p>
+
+<p>想象一下：你在睡前分配一个项目，醒来时它已经全部完成了。你是老板，Claude Code是CEO，80多名AI员工负责执行。无论你运营的是电商网站、内容博客还是面向海外用户的SaaS平台，这套AI工具组合都能彻底革新你的工作流程。</p>
+
+<p>所以，别再没日没夜地苦干或费力管理团队了。拥抱这些工具，成为你创业旅程中的"变量"，让AI为你的出海网站业务扛起重担。</p>
+
+<blockquote></blockquote>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 探索更多AI自由职业者工具：<a href="/article/ai-for-freelancers">AI自由职业者指南 &#x2192;</a></p>
+<p><strong>下一步：</strong> 探索更多面向自由职业者的AI工具：<a href="/article/ai-for-freelancers">AI自由职业者指南 &#x2192;</a></p>
 </div>`,
   },
 
@@ -6891,10 +6955,178 @@ git merge new-feature</code></pre>
 <div class="next-step">
 <p><strong>Next Step:</strong> Learn Claude Code installation and setup: <a href="/article/claude-code-install-setup">Claude Code Install &amp; Setup &#x2192;</a></p>
 </div>`,
-    contentZh: `<p>本文详细介绍Git & GitHub Beginner's Guide: Core Concepts & Operation。涵盖实用场景分析、代码示例和分步操作指南，帮助您充分利用AI工具提升海外业务效率。</p>
+    contentZh: `<p>Git和GitHub已成为现代开发者不可或缺的工具，广泛应用于代码版本控制、团队协作和远程项目管理。本文系统梳理了基础概念、工作流程逻辑以及常用操作命令，帮助学习者从零开始构建完整的知识体系，在日常开发和AI项目部署中高效运用这些工具。</p>
+
+<h2>基础核心概念</h2>
+
+<h3>Git</h3>
+
+<p>Git是一个运行在本地计算机上的分布式版本控制系统。它记录代码文件的每一次修改，支持历史版本回滚、独立开发分支的创建以及本地离线编辑。它追踪文件变更，不依赖网络连接，并为所有项目内容保留完整的修改日志。</p>
+
+<h3>GitHub</h3>
+
+<p>GitHub是一个基于Git技术构建的云端托管平台。它远程存储本地Git仓库，实现多人团队代码协作、公共项目共享、代码审查和远程文件同步。开发者可以在该平台上上传本地项目、下载开源资源并统一管理团队项目。</p>
+
+<h3>关键区别</h3>
+
+<p>Git专注于本地文件版本追踪和修改管理，而GitHub充当远程存储和协作服务载体。所有本地操作依赖Git命令，跨设备共享和团队协作依赖GitHub远程仓库。</p>
+
+<h2>基本工作流程框架</h2>
+
+<p>标准操作流程涵盖本地文件编辑、本地版本提交、远程仓库同步和版本迭代。整个过程遵循以下逻辑链条：</p>
+
+<ol>
+  <li>初始化本地Git仓库</li>
+</ol>
+
+<ol>
+  <li>将修改后的文件添加到暂存区</li>
+</ol>
+
+<ol>
+  <li>将文件提交到本地版本库并留下备注</li>
+</ol>
+
+<ol>
+  <li>将本地项目与远程GitHub仓库绑定</li>
+</ol>
+
+<ol>
+  <li>将本地代码推送到远程云端仓库</li>
+</ol>
+
+<ol>
+  <li>将远程更新内容拉取回本地设备</li>
+</ol>
+
+<h2>实用命令操作教程</h2>
+
+<p>以下列出所有常用的可执行命令，采用标准代码块格式，可直接在终端中执行。</p>
+
+<h3>1. 本地环境初始化</h3>
+
+<p>创建并激活本地Git管理空间</p>
+
+<pre><code># Enter target project folder
+cd your-project-folder
+
+# Initialize local Git repository
+git init</code></pre>
+
+<h3>2. 文件暂存与本地提交</h3>
+
+<p>记录变更并生成正式的本地版本记录</p>
+
+<pre><code># Add single file to staging area
+git add index.js
+
+# Add all modified files in the folder
+git add .
+
+# Submit version with descriptive comment
+git commit -m "Complete basic page layout function"</code></pre>
+
+<h3>3. 远程仓库连接</h3>
+
+<p>将本地项目与新创建的GitHub远程仓库绑定</p>
+
+<pre><code># Link local folder with remote GitHub repository address
+git remote add origin https://github.com/username/repository-name.git
+
+# Check current bound remote warehouse information
+git remote -v</code></pre>
+
+<h3>4. 代码推送到远程服务器</h3>
+
+<p>将本地已完成版本上传到GitHub云端存储</p>
+
+<pre><code># Push local main branch code to remote repository
+git push origin main</code></pre>
+
+<h3>5. 拉取远程更新代码</h3>
+
+<p>将远程最新修改内容同步到本地工作区</p>
+
+<pre><code>git pull origin main</code></pre>
+
+<h3>6. 基本版本检查命令</h3>
+
+<p>查看修改状态和历史提交记录</p>
+
+<pre><code># Check current file modification status
+git status
+
+# Browse all historical version commit logs
+git log</code></pre>
+
+<h2>分支管理实用技巧</h2>
+
+<p>分支功能是并行开发的核心，避免了正式项目与新功能开发之间的直接干扰。可以创建独立分支来开发新功能、调试缺陷，完成后再将稳定内容合并回主分支。</p>
+
+<pre><code># Create new development branch
+git dev new-feature
+
+# Switch to specified branch
+git checkout new-feature
+
+# Merge developed branch into main branch
+git checkout main
+git merge new-feature</code></pre>
+
+<h2>日常应用场景</h2>
+
+<ol>
+  <li><strong>个人项目版本备份</strong></li>
+</ol>
+
+<p>定期提交并推送本地代码到GitHub，防止设备故障导致文件丢失；当代码出现错误时，可以回滚到任意历史稳定版本。</p>
+
+<ol>
+  <li><strong>开源资源下载与学习</strong></li>
+</ol>
+
+<p>使用clone命令从GitHub下载优秀的公开AI项目和开发案例，在本地学习框架结构和功能逻辑。</p>
+
+<pre><code>git clone https://github.com/example/openai-demo.git</code></pre>
+
+<ol>
+  <li><strong>团队协作开发</strong></li>
+</ol>
+
+<p>多位开发者创建独立分支各自开发模块，分别提交代码，在GitHub上进行在线代码审查，最后将所有内容统一合并到正式项目中。</p>
+
+<ol>
+  <li><strong>AI项目部署管理</strong></li>
+</ol>
+
+<p>通过Git版本控制管理模型文件、配置文档和服务代码，将迭代优化后的AI程序同步到远程仓库，方便跨设备部署和项目维护。</p>
+
+<h2>常见问题排查技巧</h2>
+
+<ul>
+  <li>当远程绑定地址错误时，重置远程仓库链接</li>
+</ul>
+
+<pre><code>git remote set-url origin new-repository-url</code></pre>
+
+<ul>
+  <li>放弃未提交的本地修改，将文件恢复到最新提交的版本</li>
+</ul>
+
+<pre><code>git reset --hard HEAD</code></pre>
+
+<ul>
+  <li>解决代码冲突：比较冲突内容，手动保留有效代码，然后重新提交并推送版本。</li>
+</ul>
+
+<h2>总结</h2>
+
+<p>Git承担本地版本记录和文件管理，GitHub实现远程存储和多端协作。掌握基本的初始化、提交、推送、拉取和分支控制命令，可以满足大多数个人开发和团队协作需求。规范的版本控制习惯能有效降低代码丢失风险，提升开发效率，为AI项目、Web开发等技术创作工作构建标准化的管理模式。</p>
+
+<blockquote></blockquote>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 学习Claude Code安装与配置：<a href="/article/claude-code-install-setup">Claude Code安装与配置 &#x2192;</a></p>
+<p><strong>下一步：</strong> 学习Claude Code安装与配置：<a href="/article/claude-code-install-setup">Claude Code安装与配置 &#x2192;</a></p>
 </div>`,
   },
 
@@ -6975,10 +7207,80 @@ git commit -m '{"openclaw": "metadata"}'
 <div class="next-step">
 <p><strong>Next Step:</strong> Understand OpenClaw better: <a href="/article/openclaw-demystified-20-lines">OpenClaw Demystified in 20 Lines &#x2192;</a></p>
 </div>`,
-    contentZh: `<p>本文详细介绍OpenAI's Strategic Counterattack: How OpenClaw Integration and Codex Innovations Are Reshaping the AI Developer Landscape。涵盖实用场景分析、代码示例和分步操作指南，帮助您充分利用AI工具提升海外业务效率。</p>
+    contentZh: `<p>在竞争激烈的AI开发者工具市场中，OpenAI推出了一系列影响深远的更新，彻底改变了游戏规则。本文将深入剖析OpenAI的战略举措，重点关注OpenClaw的集成、Codex的创新功能，以及对出海开发者的实际意义。</p>
+
+<h2>OpenClaw集成：打破全球开发者的门槛</h2>
+
+<p>最具突破性的举措之一是将OpenClaw与ChatGPT无缝集成。开发者现在可以使用现有的ChatGPT账号登录OpenClaw，无需单独注册或付费。对于出海开发者来说，这改变了游戏规则——他们可以利用OpenClaw的能力，而无需面对新的账号系统或额外成本。</p>
+
+<pre><code># How to Use OpenClaw with Your ChatGPT Account
+1. Ensure you have a ChatGPT Plus subscription.
+2. Visit the OpenClaw platform and select "Login with ChatGPT".
+3. Authorize the connection – all your usage quotas are deducted from your ChatGPT subscription.</code></pre>
+
+<p>这种集成不仅减少了摩擦，还确保开发者可以在现有工作流中访问OpenClaw的功能，使分布在多个地区的团队更容易采用。</p>
+
+<h2>Codex的像素宠物：提升开发者参与度的实用工具</h2>
+
+<p>Codex新增的像素宠物功能不仅仅是一个噱头——它是一个提升开发者生产力的实用工具。在Codex界面中输入<code>/pet</code>命令，开发者可以召唤一个像素风格的宠物，它充当可视化的状态指示器。</p>
+
+<pre><code># Summon and Use Your Codex Pet
+1. In the Codex command bar, type \`/pet\` and press enter.
+2. Choose from 8 preset pets or use the \`hatch-pet\` skill to create a custom one:</code></pre>
+
+<p>skill-installer hatch-pet</p>
+
+<pre><code>3. The pet's animations will reflect Codex's status – busy when processing, idle when waiting for input.</code></pre>
+
+<p>对于跨时区工作的出海开发者来说，这个功能提供了关于Codex活动状态的快速视觉提示，减少了频繁切换窗口检查进度的需要。它还增加了个性化的元素，使开发环境更具吸引力。</p>
+
+<h2>自主迭代：重新定义开发者工作流</h2>
+
+<p>Codex新增的<code>/goal</code>命令引入了自主迭代功能，这改变了开发者处理编码任务的方式。开发者无需逐一下达指令，只需设定一个高层次目标，Codex就会自动将其分解为任务、编写代码并进行调试。</p>
+
+<pre><code># Using the /goal Command for Autonomous Development
+1. In Codex, enter:</code></pre>
+
+<p>/goal Build a user management system with Google OAuth login</p>
+
+<pre><code>2. Codex will:
+- Decompose the goal into sub-tasks (e.g., set up authentication, create user models).
+- Write and test the code.
+- Debug issues and iterate automatically.
+3. Monitor progress via your Codex pet or progress notifications.</code></pre>
+
+<p>这对于在复杂项目上协作的海外团队尤其有价值。它让开发者专注于高层次策略，而Codex处理实现细节，从而加快开发周期并减少错误。</p>
+
+<h2>一键迁移：降低入门门槛</h2>
+
+<p>OpenAI还在Codex中引入了一键迁移功能，允许开发者从其他AI代码工具导入工作流、插件和项目配置。</p>
+
+<pre><code># Migrate to Codex in Three Steps
+1. Go to Codex settings &gt; General &gt; Import Agent Config.
+2. Select the source tool and authorize the import.
+3. Wait for the migration to complete – all your plugins, agents, and project settings will be available in Codex.</code></pre>
+
+<p>这个功能是对Anthropic早期尝试用类似迁移工具抢夺用户的直接回应。对于想要从其他平台切换到Codex的开发者来说，这显著降低了转换成本，使他们更容易采纳OpenAI的生态系统。</p>
+
+<h2>竞争格局：开放生态 vs. 封闭生态</h2>
+
+<p>Anthropic试图阻止OpenClaw的激进手段——包括代码级禁令和账号限制——适得其反。相比之下，OpenAI的开放姿态赢得了开发者的青睐。例如，一位开发者仅仅因为在Git提交中提到了"OpenClaw"就被Claude Code封禁，这凸显了Anthropic的强硬手段。</p>
+
+<pre><code># Example of Anthropic's Overly Strict Ban
+// A developer's empty repository with a Git commit message containing "OpenClaw"
+git commit -m '{"openclaw": "metadata"}'
+// Result: Claude Code banned the account and zeroed out usage credits.</code></pre>
+
+<p>这种强硬做法将开发者推向了OpenAI更开放的生态系统，在那里创新和协作受到鼓励而非限制。</p>
+
+<h2>结论：拥抱OpenAI生态，赢得全球市场</h2>
+
+<p>OpenAI最近的更新——集成OpenClaw、推出Codex宠物和自主迭代功能、以及实现一键迁移——展示了其主导AI开发者工具市场的清晰战略。对于出海开发者来说，这些功能提供了实际的好处：减少摩擦、提升生产力、创造更具吸引力的开发体验。</p>
+
+<p>随着AI行业从纯模型竞争转向生态系统和工作流之战，OpenAI专注于构建全面、用户友好的生态系统的策略使其处于领先地位。想要走向全球的开发者应考虑利用这些工具来简化工作流、更有效地协作，并在快速演变的AI格局中保持领先。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 深入理解OpenClaw：<a href="/article/openclaw-demystified-20-lines">20行代码揭秘OpenClaw &#x2192;</a></p>
+<p><strong>下一步：</strong> 更好地理解OpenClaw：<a href="/article/openclaw-demystified-20-lines">20行代码揭秘OpenClaw &#x2192;</a></p>
 </div>`,
   },
 
@@ -7113,10 +7415,120 @@ if __name__ == "__main__":
 <div class="next-step">
 <p><strong>Next Step:</strong> Learn 12 core AI concepts: <a href="/article/12-core-ai-concepts-guide">12 Core AI Concepts Guide &#x2192;</a></p>
 </div>`,
-    contentZh: `<p>本文详细介绍Practical Explanation of Agent, Skill and Harness in Modern AI Development。涵盖实用场景分析、代码示例和分步操作指南，帮助您充分利用AI工具提升海外业务效率。</p>
+    contentZh: `<p>随着AI智能自动化的不断发展，三个核心术语——Agent（智能体）、Skill（技能）和Harness（运行框架）——已成为构建自动化任务系统的基础概念。本文详细阐述它们的定义、功能差异和实际应用逻辑，结合可用的操作逻辑和示例代码，帮助开发者快速掌握这些模块，并将其应用于日常AI编程和工作流部署中。</p>
+
+<h2>三大核心模块的基本定义</h2>
+
+<h3>AI Agent（智能体）</h3>
+
+<p>Agent是一个自主智能执行主体。它能够独立感知任务需求、分析目标、做出决策判断，并在无需持续人工指令干预的情况下完成整套工作。它充当整个智能系统的核心大脑，负责整体任务调度、进度控制和结果反馈。</p>
+
+<h3>AI Skill（技能）</h3>
+
+<p>Skill指的是独立的功能能力单元。每个技能对应一个单一专业功能，例如文件读取、网页抓取、数据计算、图像解析和代码编译。Skill是可重用的功能组件，可以被Agent自由调用和组合，以实现多样化的复杂需求。</p>
+
+<h3>Harness（运行框架）</h3>
+
+<p>Harness充当统一的运行载体和操作框架。它承担Agent和Skill之间的连接、调度和环境管理。它规范了调用规则、资源分配、日志记录和异常处理，确保所有模块在系统内稳定运行和有序交互。</p>
+
+<h2>模块间的运行关系</h2>
+
+<p>操作逻辑遵循一个清晰的闭环。用户首先向Harness框架提交总体任务。Harness将需求分发给内置的AI Agent。Agent将复杂任务拆解为多个独立的子任务，根据子任务属性匹配对应的Skill功能，并发送调用指令。Skill执行完具体操作后，将数据结果返回给Agent。最后，Agent汇总所有信息，通过Harness将最终输出反馈给用户。</p>
+
+<p>这种分层设计实现了职责分离。Agent专注于决策，Skill专注于具体执行，Harness保障稳定运行，极大地提高了系统的可扩展性和维护效率。</p>
+
+<h2>实际使用与示例实现</h2>
+
+<h3>1. 简单的Skill定义代码</h3>
+
+<p>定义一个基础的文件查询技能，Agent可以调用它来获取本地文档信息</p>
+
+<pre><code>class FileQuerySkill:
+    def execute(self, file_path: str) -&gt; str:
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            return f"File loaded successfully: {content[:200]}"
+        except Exception as e:
+            return f"File access failed: {str(e)}"</code></pre>
+
+<h3>2. Agent任务调度逻辑</h3>
+
+<p>智能Agent分析需求并自动调用匹配的技能来完成组合任务</p>
+
+<pre><code>class TaskAgent:
+    def __init__(self):
+        self.skills = {"file_query": FileQuerySkill()}
+
+    def handle_task(self, user_demand: str):
+        if "read file" in user_demand.lower():
+            return self.skills["file_query"].execute("demo.txt")
+        return "Unsupported task type"</code></pre>
+
+<h3>3. Harness运行时管理模块</h3>
+
+<p>统一框架加载Agent、管理资源并处理任务访问请求</p>
+
+<pre><code>class SystemHarness:
+    def __init__(self):
+        self.running_agent = TaskAgent()
+
+    def run_task(self, demand: str):
+        print("System harness starts task distribution")
+        result = self.running_agent.handle_task(demand)
+        print("Task execution completed")
+        return result
+
+# Actual startup command
+if __name__ == "__main__":
+    ai_system = SystemHarness()
+    final_output = ai_system.run_task("read file")
+    print(final_output)</code></pre>
+
+<h2>实际应用场景</h2>
+
+<ol>
+  <li><strong>自动代码开发</strong></li>
+</ol>
+
+<p>Agent拆解编程需求，分别调用编码、调试和测试技能，Harness管理运行环境和版本记录，实现项目自动编写。</p>
+
+<ol>
+  <li><strong>批量数据处理</strong></li>
+</ol>
+
+<p>主Agent分类数据处理任务，批量调用解析、计算和存储技能，框架统一监控运行状态，避免任务崩溃。</p>
+
+<ol>
+  <li><strong>浏览器与本地工具控制</strong></li>
+</ol>
+
+<p>匹配页面点击、内容提取和表单提交技能。Agent判断操作步骤，Harness维护会话连接，完成无人值守的Web自动化工作。</p>
+
+<h2>核心使用技巧</h2>
+
+<ol>
+  <li>将独立功能拆分为单独的Skill，方便后续功能更新和重复调用。</li>
+</ol>
+
+<ol>
+  <li>在Agent内部设置明确的任务判断规则，减少无效匹配，提高响应速度。</li>
+</ol>
+
+<ol>
+  <li>在Harness框架中添加异常捕获和日志记录，模块交互异常时能快速定位故障。</li>
+</ol>
+
+<ol>
+  <li>根据业务需求扩展新的Skill，Agent可以自动适配和组合功能，无需重写整体逻辑。</li>
+</ol>
+
+<h2>总结</h2>
+
+<p>Agent、Skill和Harness构成了当前AI自动化系统的标准架构。Agent主宰整体决策，Skill承担具体执行能力，Harness维护系统稳定运行。掌握它们的匹配关系并编写简单的调用代码，可以帮助用户快速构建轻量级智能任务系统，而模块化结构也支持为复杂的商业AI项目持续扩展功能。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 学习12个核心AI概念：<a href="/article/12-core-ai-concepts-guide">12个核心AI概念指南 &#x2192;</a></p>
+<p><strong>下一步：</strong> 学习12个核心AI概念：<a href="/article/12-core-ai-concepts-guide">12个核心AI概念指南 &#x2192;</a></p>
 </div>`,
   },
 
