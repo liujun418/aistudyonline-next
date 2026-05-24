@@ -13,6 +13,30 @@ function localized(locale: string, en: string, zh: string): string {
   return en;
 }
 
+function parseFAQ(content: string): Array<{ question: string; answer: string }> | null {
+  const faqHeading = /<h2[^>]*>(?:Frequently Asked Questions|常见问题)<\/h2>/i;
+  if (!faqHeading.test(content)) return null;
+
+  const parts = content.split(faqHeading);
+  if (parts.length < 2) return null;
+
+  // Get everything after FAQ heading until the next h2
+  const faqSection = parts[1].split(/<h2[^>]*>/i)[0];
+
+  const faqs: Array<{ question: string; answer: string }> = [];
+  const pairRe = /<h3[^>]*>(.*?)<\/h3>\s*<p[^>]*>(.*?)<\/p>/gi;
+  let m;
+  while ((m = pairRe.exec(faqSection)) !== null) {
+    const question = m[1].replace(/<[^>]*>/g, "").trim();
+    const answer = m[2].replace(/<[^>]*>/g, "").trim();
+    if (question && answer) {
+      faqs.push({ question, answer });
+    }
+  }
+
+  return faqs.length > 0 ? faqs : null;
+}
+
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
   for (const locale of ["en", "zh"]) {
@@ -168,6 +192,30 @@ export default async function ArticlePage({
           ]),
         }}
       />
+
+      {(() => {
+        const faqs = parseFAQ(localizedContent);
+        if (!faqs) return null;
+        return (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: f.answer,
+                  },
+                })),
+              }),
+            }}
+          />
+        );
+      })()}
 
       <ArticleLayout
         article={article}

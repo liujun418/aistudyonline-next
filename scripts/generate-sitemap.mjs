@@ -9,8 +9,14 @@ function esc(s) {
           .replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function addUrl(loc, lastmod, prio, freq) {
-  return `<url><loc>${esc(loc)}</loc><lastmod>${lastmod}</lastmod><priority>${prio}</priority><changefreq>${freq}</changefreq></url>`;
+function addUrlWithHreflang(loc, pathSuffix, lastmod, prio, freq) {
+  const enUrl = `${SITE}/en${pathSuffix}`;
+  const zhUrl = `${SITE}/zh${pathSuffix}`;
+  const altEn = `<xhtml:link rel="alternate" hreflang="en" href="${esc(enUrl)}"/>`;
+  const altZh = `<xhtml:link rel="alternate" hreflang="zh" href="${esc(zhUrl)}"/>`;
+  const altX  = `<xhtml:link rel="alternate" hreflang="x-default" href="${esc(enUrl)}"/>`;
+  const url = loc === "en" ? enUrl : zhUrl;
+  return `<url><loc>${esc(url)}</loc>${altEn}${altZh}${altX}<lastmod>${lastmod}</lastmod><priority>${prio}</priority><changefreq>${freq}</changefreq></url>`;
 }
 
 // Parse articles with dates
@@ -51,39 +57,39 @@ let xml = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>';
 xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">';
 
 // Homepages (en + zh)
-xml += addUrl(`${SITE}/en`, today, "1.0", "daily");
-xml += addUrl(`${SITE}/zh`, today, "1.0", "daily");
+xml += addUrlWithHreflang("en", "", today, "1.0", "daily");
+xml += addUrlWithHreflang("zh", "", today, "1.0", "daily");
 
 // Listing pages
 for (const loc of ["en", "zh"]) {
   for (const p of ["/tools", "/models", "/learn", "/blog"]) {
-    xml += addUrl(`${SITE}/${loc}${p}`, today, "0.9", "weekly");
+    xml += addUrlWithHreflang(loc, p, today, "0.9", "weekly");
   }
   // Static pages
   for (const p of ["/about", "/privacy", "/terms", "/refund"]) {
-    xml += addUrl(`${SITE}/${loc}/${p}`, today, "0.5", "monthly");
+    xml += addUrlWithHreflang(loc, "/" + p, today, "0.5", "monthly");
   }
   // Categories
   for (const c of categoryIds) {
-    xml += addUrl(`${SITE}/${loc}/learn/${c}`, today, "0.8", "weekly");
+    xml += addUrlWithHreflang(loc, "/learn/" + c, today, "0.8", "weekly");
   }
   // Articles (with real dates)
   for (const a of articles) {
     const d = a.date + "T00:00:00+00:00";
-    xml += addUrl(`${SITE}/${loc}/article/${a.slug}`, d, "0.8", "weekly");
+    xml += addUrlWithHreflang(loc, "/article/" + a.slug, d, "0.8", "weekly");
   }
   // Tools
   for (const s of toolSlugs) {
-    xml += addUrl(`${SITE}/${loc}/tools/${s}`, today, "0.8", "weekly");
+    xml += addUrlWithHreflang(loc, "/tools/" + s, today, "0.8", "weekly");
   }
   // Models
   for (const s of modelSlugs) {
-    xml += addUrl(`${SITE}/${loc}/models/${s}`, today, "0.8", "weekly");
+    xml += addUrlWithHreflang(loc, "/models/" + s, today, "0.8", "weekly");
   }
   // Blog posts (with real dates)
   for (const b of blogs) {
     const d = b.date + "T00:00:00+00:00";
-    xml += addUrl(`${SITE}/${loc}/blog/${b.slug}`, d, "0.7", "monthly");
+    xml += addUrlWithHreflang(loc, "/blog/" + b.slug, d, "0.7", "monthly");
   }
 }
 

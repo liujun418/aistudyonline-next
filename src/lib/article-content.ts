@@ -469,6 +469,18 @@ Processing starts:
 <h3>Q: Can I run an LLM on my own computer?</h3>
 <p>Yes, but with caveats. Small models like Llama 3.2 3B or Microsoft Phi-3 can run on a modern laptop (8GB+ RAM) using tools like Ollama or LM Studio. Frontier models like GPT-4 require data center-scale hardware and cannot run locally. There is a growing ecosystem of capable small models that work offline and respect your privacy &mdash; at the cost of some capability compared to cloud models.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: How does an LLM know the answer without searching the internet?</h3>
+<p>LLMs do not search the internet or a database for answers. They predict the most likely next word based on patterns learned from billions of text examples during training. Think of it as advanced autocomplete, not a search engine. This is why LLMs can sound confident even when wrong.</p>
+
+<h3>Q: What is the difference between a token and a word?</h3>
+<p>A token is roughly 0.75 words on average. LLMs process text in tokens, not whole words. Your API bill is calculated by total tokens used — both the input you send and the output the model generates.</p>
+
+<h3>Q: Can I run an LLM on my laptop without internet?</h3>
+<p>Yes, you can run smaller open-source LLMs locally using Ollama or LM Studio. Models with 7 billion parameters or fewer can run on a modern laptop with 8GB+ RAM. Large models like GPT-4 or Claude require cloud servers.</p>
+
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-hallucinations-explained-with-examples">Part 2: AI Hallucinations Explained: Why ChatGPT Makes Stuff Up (With Real Examples) →</a></p>
 </div>`,
@@ -670,6 +682,18 @@ Processing starts:
 
 <h3>Q: Is a hallucination the same as a bug in the software?</h3>
 <p>No. A software bug is when code does not do what it was designed to do. Hallucination is when the model does exactly what it was designed to do (predict likely tokens) but that behavior produces an incorrect statement from a human perspective. It is a feature of the architecture, not a flaw in the implementation. This is why "fixing" hallucinations is fundamentally harder than fixing a normal software bug.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Why does ChatGPT make up facts when it sounds so confident?</h3>
+<p>LLMs do not distinguish between true and false — they only predict the statistically most likely next word. When the model lacks reliable training data, it still generates a plausible-sounding answer. Confidence is built into the architecture.</p>
+
+<h3>Q: How do I reduce hallucinations when using AI for research?</h3>
+<p>Ask the AI to cite sources or show its reasoning step by step. Use chain-of-thought prompting. For important facts, cross-check with a web search. Tools like Perplexity hallucinate less because they search the web in real time.</p>
+
+<h3>Q: Are some AI models more prone to hallucinations than others?</h3>
+<p>Yes. Smaller and older models hallucinate more. Claude and GPT-4 generally hallucinate less than GPT-3.5 or Llama 2. Models that can search the web hallucinate less on recent topics.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/how-to-choose-right-ai-tool">Part 3: Which AI Tool Should You Use? A Decision Framework for Beginners →</a></p>
@@ -948,6 +972,18 @@ Processing starts:
 
 <h3>Q: Can I use free tiers indefinitely, or do they expire?</h3>
 <p>ChatGPT, Claude, and Gemini free tiers are ongoing &mdash; they do not expire after a trial period. You get permanently reduced access to the latest models but can use them indefinitely. Perplexity's free tier is also permanent. Midjourney is the only one that requires payment after a short free trial. This is a change from 2023-2024 when free tiers were more limited.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Should I use ChatGPT, Claude, or Perplexity for everyday tasks?</h3>
+<p>For creative writing and detailed analysis, Claude follows complex instructions better. For general conversation, ChatGPT works well. For research needing up-to-date sources, use Perplexity or ChatGPT with web search. Try each and see what fits.</p>
+
+<h3>Q: What is the cheapest way to try multiple AI tools?</h3>
+<p>Start with free tiers. ChatGPT offers GPT-4o mini free. Claude offers limited free access. Perplexity has a free basic plan. Using multiple free tiers costs nothing and helps you compare before committing to a paid plan.</p>
+
+<h3>Q: Do I need different AI tools for coding, writing, and image generation?</h3>
+<p>Not necessarily. ChatGPT and Claude handle both coding and writing. For image generation you need a separate tool like DALL-E, Midjourney, or Stable Diffusion. Some platforms like Poe let you access multiple models under one subscription.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">Part 4: Free vs Paid AI Tools: When It's Actually Worth Paying (and When It's Not) →</a></p>
@@ -1303,6 +1339,18 @@ Processing starts:
 <h3>Q: What about the API? Is it cheaper than subscriptions for heavy use?</h3>
 <p>For very heavy use (thousands of queries per day), the API can be cheaper. For example, running automated tasks through Claude's API costs roughly $3-15 per million input tokens depending on the model. A developer running millions of tokens per month would pay less via API than the $20 subscription. But the subscription includes the chat interface, projects, file uploads, and other features the API does not provide. For most people, the subscription is better value; for automated/scaled use, the API wins.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Is ChatGPT free enough for daily use, or do I need Plus?</h3>
+<p>ChatGPT free gives you GPT-4o mini with reasonable rate limits. You need Plus ($20/month) if you hit rate limits often, need GPT-4o for complex tasks, or want file uploads, DALL-E, or advanced data analysis.</p>
+
+<h3>Q: What features do you lose by sticking with free AI tools?</h3>
+<p>Free tiers limit message rate, model quality (GPT-4o mini vs GPT-4o), context window, file uploads, web browsing, and image generation. You also miss priority access during peak usage.</p>
+
+<h3>Q: When does paying for an AI tool actually save you money?</h3>
+<p>If you spend 5+ hours per week on AI-assisted work, $20/month pays for itself. A freelancer saving 3 hours/week at $25/hour gains $300/month in value. Paid plans also remove time-wasting rate limits.</p>
+
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-myths-people-still-believe">Part 5: 5 AI Myths Your Non-Techie Friends Still Believe (and What's Actually True) →</a></p>
 </div>`,
@@ -1539,6 +1587,18 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 <h3>Q: Why is NVIDIA so valuable if GPUs were already common?</h3>
 <p>NVIDIA's market cap surpassed $3 trillion because AI demand created exponential GPU growth. Data centers now buy GPUs at unprecedented scale. Competitors AMD and Intel are racing to catch up, but NVIDIA's CUDA software ecosystem gives it a massive advantage for AI workloads.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Why is NVIDIA the most important company in AI right now?</h3>
+<p>NVIDIA designs the GPUs that almost all AI companies use to train models. Training GPT-4 required about 25,000 NVIDIA A100 GPUs running for months. NVIDIA's CUDA platform also makes it easy to write AI code for their GPUs.</p>
+
+<h3>Q: Do I need a good GPU to use AI tools like ChatGPT?</h3>
+<p>No. When you use ChatGPT or Claude, the AI runs on the company's servers. You only need a powerful GPU if you want to run AI models like Stable Diffusion or Llama locally on your own computer.</p>
+
+<h3>Q: What is the difference between VRAM and regular RAM for AI?</h3>
+<p>VRAM is memory on your graphics card for storing AI models during processing. For AI work, VRAM is the bottleneck — a 13 billion parameter model needs about 8GB of VRAM just to load. If VRAM runs out, the model won't run regardless of system RAM.</p>
+
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
@@ -1704,6 +1764,18 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <h3>Q: If AI has built-in bias, should I still use it?</h3>
 <p>Yes, but with awareness. All human-generated information has bias &mdash; news articles, textbooks, government reports, Wikipedia. The problem with AI is that its biases are harder to detect because the model presents information as neutral. Use AI for what it is good at (drafting, brainstorming, summarizing, coding) while maintaining skepticism about factual claims and being aware that the model's "neutral" tone may conceal underlying training data skew. Cross-checking important information remains essential.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Will AI replace all programmers within 5 years?</h3>
+<p>No. AI tools boost programmer productivity by automating boilerplate code, but architecture decisions, security reviews, and business understanding still need humans. The role is shifting from writing code to directing AI.</p>
+
+<h3>Q: Is AI actually thinking or just pretending?</h3>
+<p>AI is not conscious. It is a statistical pattern matcher that generates text based on probabilities learned from training data. When AI seems to reason or show emotion, it is simulating behaviors. There is no awareness behind the output.</p>
+
+<h3>Q: Do AI image generators steal artwork from real artists?</h3>
+<p>AI models train on billions of images including artwork. Whether this constitutes theft is legally unsettled — several lawsuits are ongoing in 2026. Many artists now use tools like Glaze to protect their work.</p>
 
 <div class="next-step">
 <p><strong>AI Basics path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
@@ -1877,6 +1949,18 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <h3>Q: Does ChatGPT have a mobile app?</h3>
 <p>Yes. ChatGPT has official iOS and Android apps with voice input support. The app syncs history with the web version. Advanced Voice Mode (real-time conversation with tone detection) is available on Plus.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can ChatGPT Voice Mode help me practice for a real job interview?</h3>
+<p>Yes. It creates a realistic conversation, asks interview questions, and responds naturally. For best results, give it the job description and ask it to simulate a real interview with behavioral and technical questions.</p>
+
+<h3>Q: Do I need ChatGPT Plus to use Voice Mode?</h3>
+<p>Voice Mode is available on both free and Plus plans. Plus users get more conversation time and GPT-4o voice capabilities. Free users have limited monthly minutes. It is available on the ChatGPT mobile app, not the web version.</p>
+
+<h3>Q: Can Voice Mode understand non-native English speakers?</h3>
+<p>Yes. It uses OpenAI's Whisper model trained on diverse accents. It handles grammar mistakes well and can help you improve English by suggesting alternative phrasings during conversation.</p>
+
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-projects-organize-chats">Part 2: How to Write Prompts That Actually Work: The 5-Point Framework →</a></p>
 </div>`,
@@ -2017,6 +2101,18 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <h3>Q: Does the framework work on ChatGPT, Claude, and Gemini equally?</h3>
 <p>Yes. The framework addresses how LLMs process instructions, not platform-specific features. All major models respond better to structured prompts. Claude is slightly more tolerant of vague prompts than ChatGPT, but both benefit from the framework.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the difference between a Claude Project and a regular chat?</h3>
+<p>A Project is a persistent workspace with reference documents, custom instructions, and organized chats. Regular chats are standalone conversations with no shared context. Projects are ideal for ongoing work like developing a website.</p>
+
+<h3>Q: How many custom instructions can I add to a Claude Project?</h3>
+<p>Up to 20,000 characters per Project. These act as a system prompt applying to every conversation, ensuring Claude remembers your preferences without repeating them each time.</p>
+
+<h3>Q: Can I share Claude Projects with my team?</h3>
+<p>As of 2026, Projects are personal by default. Team collaboration requires Claude for Work (team) plan. Free and Pro plans support only individual Projects.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-images-that-dont-look-like-ai">Part 3: ChatGPT for Writing: Emails, Reports, and Creative Projects →</a></p>
@@ -2177,6 +2273,18 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <h3>Q: Can ChatGPT write a 10,000-word report in one go?</h3>
 <p>ChatGPT has output limits (roughly 3000-4000 words per response depending on the model). For longer documents, use the outline + section-by-section approach described in this article. You can also use ChatGPT's Advanced Data Analysis to combine sections into a single document.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: How do I make AI images look less generated and more natural?</h3>
+<p>Avoid asking for perfection. Real photos have imperfections — slightly blurry backgrounds, asymmetrical lighting, skin texture. Add phrases like natural lighting and candid shot. Lower the stylization parameter if supported.</p>
+
+<h3>Q: What are the best AI image generators for photorealistic results?</h3>
+<p>Midjourney V6 produces the most photorealistic results. DALL-E 3 in ChatGPT creates good photorealism. Adobe Firefly excels with a Creative Cloud subscription. For free options, Stable Diffusion XL can produce stunning real-looking images.</p>
+
+<h3>Q: Why do AI images always get hands and fingers wrong?</h3>
+<p>AI struggles with hands because they are small, highly articulated, and appear in many configurations but rarely with consistent labels. The model doesn't intuitively understand hand structure. Complex poses still fail regularly.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/voice-recording-to-meeting-notes-free">Part 4: ChatGPT for Research and Analysis: Web Search, File Upload, and Data →</a></p>
@@ -2357,6 +2465,18 @@ and how do I fix it?</code></pre>
 <h3>Q: Can ChatGPT analyze multiple files at once?</h3>
 <p>Yes. Upload multiple files in the same conversation and ask comparative questions: "Compare the findings in report A with report B. Highlight contradictions and areas of agreement."</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Which free AI tool is best for transcribing meeting recordings?</h3>
+<p>OpenAI's Whisper (free, open-source) is most accurate. Otter.ai has a generous free plan that transcribes, summarizes, and extracts tasks. Google's Live Transcribe works well for Android users.</p>
+
+<h3>Q: Can ChatGPT turn a voice recording into structured meeting notes?</h3>
+<p>Yes. Paste the transcription into ChatGPT and ask it to format with sections like Key Decisions, Action Items, and Open Questions. Use GPT-4 for longer transcripts needing a larger context window.</p>
+
+<h3>Q: How accurate is AI transcription for meetings with multiple speakers?</h3>
+<p>Modern tools achieve 90-95% accuracy for clear recordings with distinct speakers. Accuracy drops with background noise, heavy accents, or overlapping speech. Tools like Otter.ai identify different speakers automatically.</p>
+
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/first-ai-coding-project-no-experience">Part 5: Custom GPTs and Automation: Build Your Own AI Assistant →</a></p>
 </div>`,
@@ -2514,6 +2634,18 @@ customer support GPT that answers accurately without hallucinating.</code></pre>
 <h3>Q: Do Custom GPTs retain memory across sessions?</h3>
 <p>Custom GPTs have the same memory capabilities as regular ChatGPT. They can remember information across sessions if you enable memory. You can also upload knowledge files that persist permanently. Each session starts fresh within the GPT's configured instructions and knowledge.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can someone with zero coding experience build a real app using AI?</h3>
+<p>Yes. Describe what you want in plain English to Claude Code or ChatGPT. The AI generates the code, explains it, and helps fix errors. Start with a simple project like a personal website or to-do list app.</p>
+
+<h3>Q: What is the best AI tool for a complete beginner to learn coding?</h3>
+<p>Claude Code is excellent — it explains code as it creates it. ChatGPT with GPT-4o is also beginner-friendly through its web interface. Cursor is good for an IDE-like experience. All three guide you through the process.</p>
+
+<h3>Q: How do I deploy my AI-generated app so others can use it?</h3>
+<p>For simple websites use Vercel or Netlify (free tiers). For web apps with a backend, try Railway or Render. The AI tool used to build the app can walk you through deployment step by step.</p>
+
 <div class="next-step">
 <p><strong>ChatGPT Mastery path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
@@ -2655,6 +2787,18 @@ due to QA delays."
 <h3>Q: Should I disclose that I used AI for business writing?</h3>
 <p>For internal communication, no. For external client work, it depends on your industry. Professional services firms typically do not disclose. Content marketing agencies often do. When in doubt, review your client's AI usage policy.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can AI write product descriptions that rank well in Etsy search?</h3>
+<p>Yes, but include keywords buyers search for. Give the AI your product's features, materials, and occasion. Ask it to naturally incorporate high-traffic keywords. Edit and personalize the output before publishing.</p>
+
+<h3>Q: Will Etsy penalize my shop for using AI-generated descriptions?</h3>
+<p>Etsy's policy as of 2026 allows AI-assisted content but requires it represents your actual product. Edit AI-generated descriptions rather than publishing verbatim. Add your brand voice and specific details.</p>
+
+<h3>Q: How long should an Etsy product description be for best SEO?</h3>
+<p>Aim for 150-300 words. Include key keywords in the first 100 words. List features as bullet points, then add paragraphs about materials and care. Etsy's algorithm considers text relevance for ranking.</p>
+
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-wedding-planning-free-tools">Part 2: AI for Project Planning and Organization: From Timelines to Budgets →</a></p>
 </div>`,
@@ -2795,6 +2939,18 @@ with emoji indicators for status.</code></pre>
 
 <h3>Q: Can AI track project progress in real time?</h3>
 <p>No. AI does not have persistent memory of your project's state unless you provide updates. Use it as a planning assistant, not a project management system. Update the AI with your current status for each new planning session.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can AI really plan a wedding well enough to replace a human planner?</h3>
+<p>AI excels at structured planning: timelines, vendor comparisons, budget spreadsheets, and to-do lists. However, AI cannot negotiate contracts, inspect venues, or handle emergencies. Use AI for research, keep a human for coordination.</p>
+
+<h3>Q: What are the best free AI tools for wedding planning?</h3>
+<p>ChatGPT (free) handles timelines and checklists. Claude (free) creates detailed budget spreadsheets. Canva's AI helps design invitations. Google Gemini searches for local vendors in real time.</p>
+
+<h3>Q: How do I write a good prompt for AI wedding planning?</h3>
+<p>Be specific: date, location, guest count, budget, theme. The more context you give, the more useful the suggestions. For example, create a 6-month timeline for a 120-guest outdoor wedding with a $30,000 eco-friendly budget.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-travel-itinerary-real-prompts">Part 3: AI for Research and Report Writing: Find, Analyze, and Summarize →</a></p>
@@ -2945,6 +3101,18 @@ available. Mark any sources you are uncertain about as
 
 <h3>Q: What is the best AI tool for in-depth research?</h3>
 <p>For single-topic deep research: NotebookLM (upload sources, ask grounded questions). For multi-source exploration: Perplexity Pro (web search with citations). For data analysis: ChatGPT Plus with Advanced Data Analysis. The combination of all three is more powerful than any single tool.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: How detailed can AI make a travel itinerary?</h3>
+<p>AI can generate hour-by-hour itineraries including restaurants, transportation, costs, and backup plans. The more constraints you give, the more useful. Ask for specific like budget accommodations and local food options.</p>
+
+<h3>Q: Does AI know about local restaurants and hidden gems, not just tourist spots?</h3>
+<p>Training data includes travel blogs and local review sites, so AI knows about off-the-beaten-path options. Knowledge may be outdated. For current recommendations, use ChatGPT with web browsing.</p>
+
+<h3>Q: Can AI help me rebook flights and hotels if my trip changes?</h3>
+<p>AI cannot directly modify reservations but can guide you: which sites to visit, cancellation policies, and how to talk to customer service. Some AI travel tools are starting to integrate booking capabilities.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/learn-english-with-ai-free-speaking-practice">Part 4: AI for Learning and Skill Development: Language, Tech, and More →</a></p>
@@ -3111,6 +3279,18 @@ Let me practice and you correct my pronunciation.</code></pre>
 <h3>Q: How do I track my learning progress with AI?</h3>
 <p>Ask AI to track your progress within the conversation. At the start of each session, request a review: "Based on our previous session, what did I learn and what should I review today?" For systematic tracking, use a Custom GPT or Claude Project with instructions to maintain a learning log.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can AI replace a real English tutor for speaking practice?</h3>
+<p>AI is excellent for daily low-pressure conversation practice and grammar correction. ChatGPT Voice Mode lets you practice anytime. However, AI cannot provide structured curriculum or pronunciation feedback like a human tutor.</p>
+
+<h3>Q: Which AI tool is best for English conversation practice?</h3>
+<p>ChatGPT Voice Mode is most popular — it responds naturally, corrects grammar politely, and adapts to your level. Claude works well for text-based practice with detailed corrections. For pronunciation, try ELSA Speak.</p>
+
+<h3>Q: How do I ask AI to correct my English without interrupting the conversation?</h3>
+<p>Add this instruction: have a natural conversation with me in English. If I make a grammar mistake, correct me naturally and keep a list of mistakes at the end. This tracks errors without breaking flow.</p>
+
 <div class="next-step">
 <p><strong>AI for Work path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
@@ -3247,6 +3427,18 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Are there AI tools designed specifically for parents?</h3>
 <p>Some exist (Huckleberry for sleep, Wonder Weeks for milestones), but general-purpose AI like ChatGPT adapts better to your specific situation.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Is it safe to let my child interact with AI like ChatGPT?</h3>
+<p>ChatGPT and Claude require users 13+ with parental consent. For younger children, use kid-specific tools like Khanmigo. Always supervise AI interactions. Despite safeguards, AI can generate inappropriate content.</p>
+
+<h3>Q: What are the best AI activities to keep kids entertained and learning?</h3>
+<p>AI can create personalized bedtime stories with your child as the main character, generate coloring pages, explain homework, create trivia quizzes, and simulate conversations with historical figures. Make it interactive.</p>
+
+<h3>Q: How do I stop AI from giving answers and make it teach instead?</h3>
+<p>Use a prompt: you are a patient tutor for a 10-year-old. Never give the answer directly. Ask guiding questions and give hints. Save as custom instruction so you don't retype each time.</p>
+
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
@@ -3365,6 +3557,18 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <h3>Q: How do I upscale for printing?</h3>
 <p>Use the U buttons first, then "Open in Browser" and use tools like Upscayl (free) or Topaz Gigapixel for further upscaling.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Which free AI image generator produces the best results?</h3>
+<p>DALL-E 3 (free via Bing Image Creator) gives the most reliable results. Stable Diffusion WebUI gives most control if you have a GPU. Leonardo.ai has a generous free tier with good quality.</p>
+
+<h3>Q: Can I use free AI-generated images for commercial projects?</h3>
+<p>It varies. DALL-E 3 via Bing Image Creator grants full commercial rights. Stable Diffusion images are free for commercial use. Midjourney free trial has restrictions. Check each tool's terms before commercial use.</p>
+
+<h3>Q: Why do different AI image generators produce different results from the same prompt?</h3>
+<p>Each was trained on different datasets with different architectures. Midjourney favors artistic outputs. DALL-E 3 focuses on prompt adherence. Stable Diffusion has thousands of community models each with its own style.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-image-dalle-firefly">Part 2: DALL-E vs Firefly vs Midjourney: Which AI Image Generator Should You Use? →</a></p>
@@ -3507,6 +3711,18 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <h3>Q: Is Plus worth it for writing only?</h3>
 <p>If you write fewer than 30 messages daily, free tier is sufficient. For professional writing relying on GPT-5 nuance, Plus value is clear.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Is ChatGPT free enough for a small business owner to use daily?</h3>
+<p>The free plan gives GPT-4o mini with limits. For daily tasks like drafting emails and basic research, it works fine. You'll want Plus if you need to upload PDFs, analyze data, or generate images.</p>
+
+<h3>Q: What is the most compelling feature in ChatGPT Plus that free users don't get?</h3>
+<p>File uploads with data analysis is the biggest differentiator. Plus can analyze spreadsheets, PDFs, and images. Free users only have text conversations. This feature alone justifies $20/month for many professionals.</p>
+
+<h3>Q: Can I try ChatGPT Plus for a month and cancel if I don't like it?</h3>
+<p>Yes. It's a monthly subscription with no commitment. One month is enough to evaluate if the extra features are worth it. Many users find they can't go back after trying Plus.</p>
 
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
@@ -3657,6 +3873,18 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Can I use both together?</h3>
 <p>Yes, and that is actually the best approach. Use Perplexity for initial exploration, then upload the sources you find to NotebookLM for deep analysis.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the main difference between NotebookLM and Perplexity?</h3>
+<p>NotebookLM is a personal research assistant that only knows documents you upload — it cannot search the web. Perplexity searches the internet in real time and cites sources. Use NotebookLM for deep analysis of your materials.</p>
+
+<h3>Q: Which tool is better for academic research papers?</h3>
+<p>NotebookLM is better for analyzing papers you have — generating study guides and audio discussions. Perplexity is better for literature reviews. Many researchers use both: Perplexity to find sources, NotebookLM to analyze.</p>
+
+<h3>Q: Does NotebookLM really turn documents into a podcast?</h3>
+<p>Yes. Its Audio Overview generates a realistic podcast discussion between two AI hosts from your documents. The voices and conversational style are surprisingly natural. Great for reviewing documents during commutes.</p>
+
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
@@ -3784,6 +4012,18 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Which should I use for writing?</h3>
 <p>For tone-sensitive writing (emails, proposals, creative), start with Claude. For technical or structured writing, ChatGPT is strong. Try both with your actual work.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Which AI writes better long-form content like articles and reports?</h3>
+<p>Claude generally produces better long-form content. Its larger context window (up to 200K tokens) maintains coherence across long documents. For articles over 1,500 words, Claude tends to give more consistent results.</p>
+
+<h3>Q: Can the average person tell the difference between AI-written and human-written content?</h3>
+<p>In blind tests, most cannot reliably distinguish high-quality AI writing from human writing for straightforward articles. AI writing signs: overly balanced structure, lack of personal anecdotes, repetitive phrasing.</p>
+
+<h3>Q: Which AI tool is better for editing and improving existing writing?</h3>
+<p>Both work well. Claude is better at preserving your voice while fixing grammar. ChatGPT tends to rewrite more heavily. For editing, ask AI to improve clarity, fix grammar, keep original tone, and show changes.</p>
+
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
@@ -3896,6 +4136,18 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h3>Q: Can I switch from Cursor to Copilot later?</h3>
 <p>Yes. Cursor is based on VS Code. You can even install Copilot as an extension inside Cursor.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need to know how to code to use Cursor or Copilot?</h3>
+<p>Cursor is more beginner-friendly — it is a full editor with AI built in. Copilot is an autocomplete plugin assuming you know how to code. For absolute beginners, start with Cursor.</p>
+
+<h3>Q: Can I use Cursor and Copilot together?</h3>
+<p>Yes. Since Cursor is a VS Code fork, you can install the Copilot extension in it. Some use Copilot for autocomplete and Cursor's Chat for larger feature requests. Note: you pay for both subscriptions.</p>
+
+<h3>Q: Which tool has better support for non-English languages?</h3>
+<p>Both handle non-English code comments fine. Cursor has better support for non-English prompting because its AI chat understands many languages. Copilot is language-agnostic as it works with code syntax.</p>
+
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
@@ -4005,6 +4257,18 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <h3>Q: Is GPT-5 a separate application?</h3>
 <p>No. It replaces the existing model in ChatGPT. For Plus subscribers, the model selector now shows GPT-5 instead of GPT-4o.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need ChatGPT Plus to access GPT-5?</h3>
+<p>OpenAI typically releases new models first to Plus subscribers, then to free users with reduced capability. Plus ($20/month) likely gets full GPT-5 access first. Check OpenAI's blog for current availability.</p>
+
+<h3>Q: How is GPT-5 different from GPT-4 for everyday tasks?</h3>
+<p>GPT-5 is expected to be more reliable with fewer hallucinations and better reasoning. For everyday tasks like writing emails, the difference may be subtle. For coding applications, improvements are more noticeable.</p>
+
+<h3>Q: Will GPT-5 make older models like GPT-3.5 completely obsolete?</h3>
+<p>Not for all uses. GPT-3.5 is useful for simple, high-volume tasks because it's much cheaper and faster. Many businesses still use GPT-3.5 for customer service chatbots where cutting-edge accuracy isn't needed.</p>
 
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
@@ -4124,6 +4388,18 @@ ollama --version</code></pre>
 
 <h3>Q: Can local models replace ChatGPT?</h3>
 <p>For 70% of everyday tasks, yes. For complex reasoning or creative writing, frontier cloud models are still significantly better. Think of local models as a free, private, offline option for everyday use.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the best open-source AI model to run on a laptop with 8GB RAM?</h3>
+<p>Models in the 3-7 billion parameter range work well. Llama 3.2 (3B), Phi-3 (3.8B), and Qwen2.5 (7B) are excellent. Use quantized versions to reduce memory. Ollama makes installation simple.</p>
+
+<h3>Q: Do I need internet to run local AI models?</h3>
+<p>No, that's the main advantage. Once downloaded, they run entirely offline. Initial download needs internet (2-8GB), but after that everything runs locally with zero data leaving your machine.</p>
+
+<h3>Q: How do local AI models compare to cloud services like ChatGPT?</h3>
+<p>A 7B parameter local model performs roughly as well as GPT-3.5. GPT-4 and Claude are in a different league. Local models excel at focused tasks but struggle with creative writing and complex reasoning.</p>
 
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
@@ -4246,6 +4522,18 @@ ollama --version</code></pre>
 <h3>Q: Who enforces these rules?</h3>
 <p>National AI authorities in each EU member state. The European AI Office coordinates across countries.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Does the EU AI Act apply to my small business outside Europe?</h3>
+<p>If your AI system affects EU users, the Act likely applies regardless of where you are located. Non-compliance can result in fines up to 35 million euros or 7% of global revenue. Small businesses with minimal-risk AI face lighter requirements.</p>
+
+<h3>Q: What AI practices are completely banned under the EU AI Act?</h3>
+<p>The Act bans AI that manipulates behavior, exploits vulnerable groups, enables government social scoring, and uses real-time biometric surveillance in public spaces. These are unacceptable risk and prohibited entirely.</p>
+
+<h3>Q: Do I need to register my AI tool with EU authorities?</h3>
+<p>High-risk AI systems (employment, credit scoring, law enforcement) must be registered. Limited-risk systems (chatbots) need transparency disclosures. Most consumer AI falls into limited or minimal risk categories.</p>
+
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
 </div>`,
@@ -4345,6 +4633,18 @@ ollama --version</code></pre>
 
 <h3>Q: How do I get started?</h3>
 <p>Use AI tools in your daily work. Build a portfolio of prompts, workflows, or edited content. Real examples matter more than certificates.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need a computer science degree to get a job in AI?</h3>
+<p>Not necessarily. Prompt Engineer and AI Ethics Specialist value domain expertise over coding. A lawyer can become an AI compliance specialist. A teacher can become an AI curriculum designer. Technical roles still need programming skills.</p>
+
+<h3>Q: What is the salary range for a Prompt Engineer in 2026?</h3>
+<p>Salaries range from $80,000 to $200,000+ depending on location and experience. Entry-level starts around $80,000-$120,000. Senior roles at major AI companies exceed $250,000.</p>
+
+<h3>Q: Which AI job has the lowest barrier to entry for career changers?</h3>
+<p>AI Content Specialist or AI Trainer are most accessible. These need strong writing skills rather than programming. AI companies need people to create training data and evaluate model outputs.</p>
 
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
@@ -4447,6 +4747,18 @@ ollama --version</code></pre>
 
 <h3>Q: Does Apple send my data to the cloud?</h3>
 <p>Most processing happens on-device. Complex requests use Private Cloud Compute — Apple silicon servers that do not store data during processing. Apple cannot access your data.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need an iPhone 16 to use Apple Intelligence features?</h3>
+<p>Apple Intelligence works on iPhone 15 Pro and newer (A17 Pro chip+), plus M-series iPads and Macs. Basic features like Writing Tools need iOS 18.2+. Check Apple's compatibility list as it expands.</p>
+
+<h3>Q: Can Apple Intelligence summarize my voicemail and notifications?</h3>
+<p>Yes. It summarizes voicemails, prioritizes notifications, and provides email summaries. These work on compatible devices with iOS 18.2+. All summaries generate on-device for privacy.</p>
+
+<h3>Q: Is Apple Intelligence actually private compared to other AI services?</h3>
+<p>Yes, significantly more private. Most processing is on-device. Cloud requests use Apple Silicon servers that don't store data. The trade-off is less capability than GPT-4 or Claude for complex tasks.</p>
 
 <div class="next-step">
 <p><strong>Standalone article.</strong> <a href="/learn">Browse all learning paths →</a></p>
@@ -4638,6 +4950,18 @@ claude --verbose</code></pre>
 
 <h3>Q: Do MCP servers have risks?</h3>
 <p>Yes. MCP servers can access any system they connect to (databases, APIs, file systems). Only install MCP servers from trusted sources. Check each server requested permissions before installing.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is MCP and why do I need to configure it for Claude Code?</h3>
+<p>MCP (Model Context Protocol) lets Claude Code connect to external tools like databases, file systems, and APIs. Without MCP it only reads project files. With MCP it can query databases or create GitHub issues.</p>
+
+<h3>Q: Do all MCP servers need to be installed globally or per-project?</h3>
+<p>Both. Global config in claude.json applies to all projects. Per-project in .claude/settings.local.json. Per-project is recommended for sensitive tools like database access.</p>
+
+<h3>Q: Is it safe to give Claude Code MCP access to my production database?</h3>
+<p>Generally no. Use a read-only database user or a staging database. Create a dedicated user with SELECT-only if Claude Code only needs to read. For writes, implement human approval steps.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-code-in-action">Part 3: Claude Code in Action: Build a Real Project from Scratch →</a></p>
@@ -4874,6 +5198,18 @@ xdg-open index.html  # Linux</code></pre>
 <h3>Q: Can I use Claude Code on existing projects?</h3>
 <p>Yes. Navigate to any existing project, make sure it has git initialized, then run <code>claude</code>. It reads the full project structure and can start helping immediately.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can Claude Code build a complete website from scratch without me writing code?</h3>
+<p>Yes. Describe what you want in plain English. Claude Code generates the full project: HTML, CSS, JavaScript, config files, and deployment setup. The more specific you are, the better the result.</p>
+
+<h3>Q: How do I fix bugs using Claude Code's debugging features?</h3>
+<p>When you encounter an error, type fix. Claude Code reads the error, traces to the source, and proposes a fix. For harder bugs, ask it to add logging or run specific tests.</p>
+
+<h3>Q: Does Claude Code work with any programming language or just JavaScript?</h3>
+<p>It works with virtually any language: Python, JavaScript, TypeScript, Go, Rust, Java, C++, Ruby, PHP, and more. It reads file extensions to understand the language. Commands are the same regardless.</p>
+
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/claude-code-advanced">Part 4: Advanced Claude Code: Custom Slash Commands, Hooks, and CI/CD Integration →</a></p>
 </div>`,
@@ -5098,6 +5434,18 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <h3>Q: Is Claude Code safe for production codebases?</h3>
 <p>Yes, but with proper review. Always review changes with <code>git diff</code> before committing. For production work, use the <code>--permission</code> flag to require explicit approval for each file change. Start with small projects until you are comfortable with the workflow.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What are custom slash commands in Claude Code and how do I create one?</h3>
+<p>Custom slash commands are shortcuts for frequently used tasks. Define them in CLAUDE.md or Claude Code configuration. For example, define /deploy to run your deployment script with description and action.</p>
+
+<h3>Q: How do Claude Code hooks work for automating my workflow?</h3>
+<p>Hooks run automatically at specific points. Pre-commit hooks run before saving. Post-deploy hooks after deployment. Configure hooks to run tests, format code, send notifications, or update docs.</p>
+
+<h3>Q: Can I integrate Claude Code with my existing CI/CD pipeline?</h3>
+<p>Yes. Integrate with GitHub Actions, GitLab CI, or Jenkins. Automatically review pull requests, run tests, and generate release notes. Headless mode runs in automated environments without human interaction.</p>
+
 <div class="next-step">
 <p><strong>Claude Code path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
@@ -5254,6 +5602,18 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <h3>Q: Will installing too many skills slow down Claude Code?</h3>
 <p>Skills are loaded on demand, not all at once. Installing dozens of skills does not noticeably affect performance. However, having too many active skills can sometimes lead to conflicting instructions.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What exactly is a Claude Code skill and where do I find them?</h3>
+<p>A skill is a plugin adding specific capability to Claude Code. Available from Anthropic's official skill registry and community repositories on GitHub. Install via npx skills add skill-name.</p>
+
+<h3>Q: Do the top 7 skills work with any Claude Code version?</h3>
+<p>Designed for the latest version, backward compatible with v1.x+. Some skills need specific model versions. Check each skill's requirements before installation.</p>
+
+<h3>Q: Can I use these 7 skills simultaneously in one session?</h3>
+<p>Yes. Multiple skills activate in the same session. Claude Code routes requests to the appropriate skill based on context. No practical limit on how many you can enable.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/claude-code-in-action">Claude Code in Action: Build a Real Project from Scratch →</a></p>
 </div>`,
@@ -5383,6 +5743,18 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <h3>Q: Which tool generates the most realistic images?</h3>
 <p>Midjourney produces the most beautiful, realistic images. DALL-E 3 generates more precisely descriptive images but with less artistic flair. Firefly is best at editing existing photos rather than creating new ones from scratch.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Which AI image generator is best for commercial product photography?</h3>
+<p>Adobe Firefly is best — it integrates with Photoshop, uses licensed training data, and offers precise control. DALL-E 3 is great for mockups. Midjourney excels at artistic and marketing imagery.</p>
+
+<h3>Q: Can I use DALL-E or Firefly images in my online store without legal issues?</h3>
+<p>OpenAI grants full commercial rights for DALL-E 3. Adobe Firefly offers commercial usage through Content Credentials. Midjourney terms depend on your plan. Don't upload trademarked characters for generation.</p>
+
+<h3>Q: What are the key pricing differences between DALL-E, Firefly, and Midjourney?</h3>
+<p>DALL-E 3 is included with ChatGPT Plus ($20/month). Firefly is in Creative Cloud ($55/month). Midjourney starts at $10/month. For heavy use, Firefly's Photoshop integration justifies its higher cost.</p>
 
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-image-prompt-guide">Part 3: The Ultimate AI Image Prompt Guide: Techniques That Actually Work →</a></p>
@@ -5591,6 +5963,18 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: How do I iterate on a specific image?</h3>
 <p>Midjourney: Use the V buttons to create variations, then U to upscale the best one. Use modified prompts with <code>--seed</code>. DALL-E 3: Ask ChatGPT to "generate 4 variations of this image" or upload or upload previously generated images and ask for edits based on the existing composition.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the most important thing to include in an AI image prompt?</h3>
+<p>The subject and its environment. A weak prompt like a cat gives AI too much freedom. A strong prompt specifies: subject, action, environment, lighting, and style. Specificity produces predictable results.</p>
+
+<h3>Q: What are negative prompts and how do I use them?</h3>
+<p>Negative prompts tell AI what NOT to include: ugly, deformed, blurry, extra limbs, watermark. Stable Diffusion and Midjourney support negative prompting. This significantly improves quality by steering AI away from common failures.</p>
+
+<h3>Q: How long should an AI image prompt be for best results?</h3>
+<p>20-50 words works best. Under 10 words gives AI too much freedom. Over 100 words can confuse it. Use: subject + action + environment + lighting + style + technical parameters.</p>
+
 <div class="next-step">
 <p><strong>Next in this path:</strong> <a href="/article/ai-image-commercial-licensing">Part 4: AI Image Copyright and Commercial Licensing: What You Can and Can't Sell →</a></p>
 </div>`,
@@ -5786,6 +6170,18 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: What if the training data lawsuits against AI companies succeed?</h3>
 <p>This is an active legal area. If courts rule that training on copyrighted images without permission constitutes infringement, it could affect the legal status of images these models generate. For maximum safety, use Firefly (licensed training data) for critical commercial projects.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can I sell AI-generated images on stock photo websites?</h3>
+<p>As of 2026, Shutterstock and Adobe Stock accept AI images but require disclosure. Getty Images only accepts its own AI generator's images. Read each platform's AI policy before submitting.</p>
+
+<h3>Q: Do I need to copyright my AI-generated images?</h3>
+<p>US copyright for AI images is limited. Works created entirely by AI without human input cannot be copyrighted. If you significantly modify AI outputs, you may qualify for partial copyright. Consult a lawyer.</p>
+
+<h3>Q: What if an AI image I use commercially resembles a copyrighted work?</h3>
+<p>This is a real legal risk. AI can reproduce training data elements including copyrighted images. If you receive a cease-and-desist, remove the image immediately. Adobe Firefly reduces this risk as it trains only on licensed content.</p>
+
 <div class="next-step">
 <p><strong>AI Image Generation path completed.</strong> <a href="/learn">Explore more learning paths →</a></p>
 </div>`,
@@ -5928,6 +6324,18 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: Will AI agents replace software developers?</h3>
 <p>Not entirely. AI agents will automate large portions of coding and testing, but human oversight remains essential for architecture design, requirement analysis, and strategic decisions. The role of developers will shift from writing every line of code to orchestrating AI agents.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What exactly is an AI agent that Google announced 93 of?</h3>
+<p>An AI agent performs multi-step tasks independently rather than just answering questions. For example, it can research a topic, write a report, create a presentation, and email it — all without human intervention at each step.</p>
+
+<h3>Q: When will Google's AI agents be available to regular users?</h3>
+<p>Some launched at Google I/O 2026, others roll out gradually. Workspace agents are available to Business subscribers first. Consumer agents roll out over several months. Check the Google Workspace blog for timelines.</p>
+
+<h3>Q: How is Google's approach different from Microsoft's AI copilots?</h3>
+<p>Google's agents are more autonomous — they perform entire workflows across multiple apps. Microsoft's Copilot is embedded inside individual Office apps. Google's trip agent handles Search, Maps, Docs, and Calendar together.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/open-source-ai-models-run-on-laptop">Open Source AI Models in 2026: Which Ones You Can Actually Run on Your Laptop →</a></p>
 </div>`,
@@ -6046,6 +6454,18 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: Do I need to understand all these concepts to use AI tools?</h3>
 <p>No. You can use tools like ChatGPT, Claude, or DeepSeek without knowing any of these concepts. However, understanding them helps you choose the right tool, write better prompts, and debug issues.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the most important AI concept a beginner should learn first?</h3>
+<p>Tokens are the most important concept. They determine how you are billed, input length limits, and how AI processes language. Understanding tokens helps you optimize prompts, estimate costs, and choose the right model.</p>
+
+<h3>Q: What is the practical difference between RAG and fine-tuning?</h3>
+<p>RAG lets AI search external documents in real time before answering. Fine-tuning permanently trains the model on specific data. RAG is cheaper and easier to update. Fine-tuning is better for consistent behavior without extra context.</p>
+
+<h3>Q: Do I need to understand all 12 concepts to use AI tools effectively?</h3>
+<p>Not at all. You can use ChatGPT productively without knowing these concepts. But understanding tokens helps write better prompts. Understanding context windows avoids length limits. Each concept incrementally improves your results.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/llms-in-plain-english">LLMs in Plain English →</a></p>
 </div>`,
@@ -6149,6 +6569,18 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <h3>Q: Can I use OpenClaw with any LLM?</h3>
 <p>Yes. OpenClaw works with any LLM that has an API endpoint. You can use OpenAI, Anthropic Claude, or any model available through OpenRouter.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need to know programming to use OpenClaw?</h3>
+<p>Basic command-line skills suffice. Install via npm, configure your API key, and run commands. The 20-line demo needs no programming knowledge. Customizing for specific uses requires some JavaScript.</p>
+
+<h3>Q: What AI models can I use with OpenClaw?</h3>
+<p>OpenClaw supports OpenAI (GPT-4, GPT-4o), Anthropic (Claude), and open-source models via compatible APIs. Configure by setting API key and endpoint. Switching models is a key advantage.</p>
+
+<h3>Q: Can OpenClaw be used for web automation and browser control?</h3>
+<p>Yes. OpenClaw includes browser automation through its skill system. Use Playwright or Puppeteer to create automation skills. Browser automation is one of the most popular community extensions.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills Guide →</a></p>
 </div>`,
@@ -6240,6 +6672,18 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p>Domestic LLMs are optimized for Mandarin and perform best with Chinese-language content. For English-language applications, international packages generally offer superior performance, larger context windows, and more comprehensive documentation.</p>
 <h3>Q: What hidden costs should I watch for when choosing an LLM package?</h3>
 <p>Watch for: API call limits that reset monthly but charge overage fees, context window upgrades locked behind premium tiers, additional charges for multimodal features, data storage fees, and restrictions on commercial use of generated content.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the best value AI subscription for a student on a budget?</h3>
+<p>ChatGPT Plus ($20/month) offers the best balance of capability and cost. Claude Pro ($20/month) offers excellent writing help. Free tiers of ChatGPT, Claude, and Gemini cover basic needs for zero cost.</p>
+
+<h3>Q: How do Chinese domestic LLM services compare to international ones?</h3>
+<p>Chinese services like DeepSeek and Qwen offer competitive performance at lower prices for Chinese tasks. They have stricter content filters. For Chinese applications, domestic services often outperform international models.</p>
+
+<h3>Q: Should I subscribe to one AI service or use multiple free tiers?</h3>
+<p>Multiple free tiers give different strengths at no cost. For intensive work use, a single paid subscription is more convenient. Power users keep one paid subscription plus several free accounts.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools: When It's Actually Worth Paying →</a></p>
@@ -6337,6 +6781,18 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p>With proper optimization techniques — simplified commands, scoped operations, reusable templates — users typically see 40-60% reduction in token consumption compared to naive prompting.</p>
 <h3>Q: Can Claude Code handle complex multi-step workflows like form submissions?</h3>
 <p>Yes. Claude Code can execute chained operations across multiple pages, including form filling, data extraction, navigation between sites, and file downloads.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need to know Playwright or Puppeteer to use Claude Code for browser automation?</h3>
+<p>No. Claude Code writes Playwright scripts from natural language descriptions. Tell it what to automate and it generates and runs the script. Refine behavior in plain English.</p>
+
+<h3>Q: Can Claude Code automate any website, including those behind login?</h3>
+<p>Yes. It handles login forms, cookies, and authenticated workflows. For sites with CAPTCHA or two-factor authentication, you may need to handle those manually or use additional tools.</p>
+
+<h3>Q: Is browser automation through Claude Code safe for production?</h3>
+<p>For testing it's very useful. For production, review and harden generated scripts. Common issues: hardcoded selectors breaking when sites update. Treat as a rapid prototyping tool.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills →</a></p>
@@ -6451,6 +6907,18 @@ Write a blog post about the benefits of sustainable fashion, using the tone and 
 <p>They can replace many routine tasks but not entirely. For complex projects, you may still need human oversight for architecture decisions, quality assurance, and creative direction. These tools excel at automating repetitive work.</p>
 <h3>Q: How much do these tools cost in total?</h3>
 <p>Most are open-source or offer free tiers. Deer-Flow, Prompt-Optimizer, Agents, and Letta are open-source. Claude-Flow (Ruflo) has a free tier. You will mainly pay for API usage when running them with LLMs like Claude or GPT.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need a large budget to start an overseas business with AI tools?</h3>
+<p>No. Most tools have generous free tiers. Together they cover business needs for under $50/month total. The biggest expense is domain registration and hosting, under $100/year.</p>
+
+<h3>Q: Can AI tools really replace hiring employees for my overseas business?</h3>
+<p>For the first 6-12 months, AI tools can replace content writing, design, customer service, and data analysis roles. However, AI can't handle physical tasks or complex negotiations.</p>
+
+<h3>Q: Which of the 5 tools is most important for someone selling products online?</h3>
+<p>ChatGPT or Claude for product descriptions and customer emails has the highest impact. Second is Canva for product images and social media graphics. Start with these two.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Agent, Skill, and Harness in AI Development →</a></p>
@@ -6664,6 +7132,18 @@ git reset --hard HEAD
 <p>Git is the version control system that runs locally on your computer. GitHub is a cloud platform that hosts Git repositories online. You can use Git without GitHub, but GitHub requires Git.</p>
 <h3>Q: Do I need to use the command line for Git?</h3>
 <p>There are GUI tools like GitHub Desktop, Sourcetree, and VS Code's built-in Git support. However, learning basic command-line commands gives you more control and is essential for server environments.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the difference between Git and GitHub?</h3>
+<p>Git is version control software on your computer that tracks local file changes. GitHub is a cloud platform hosting Git repositories, adding pull requests and code reviews. You need Git to use GitHub, but you can use Git without GitHub.</p>
+
+<h3>Q: What does git pull do and why should I use it before starting work?</h3>
+<p>Git pull downloads latest changes from the remote repository and merges them locally. Always pull before starting work to avoid merge conflicts. A quick pull saves hours of conflict resolution later.</p>
+
+<h3>Q: Is Git only for programmers or can designers and writers use it too?</h3>
+<p>Git is useful for anyone with digital files. Designers track file versions. Writers manage drafts and collaborate. GitHub supports Illustrator and PDF files. Core concepts apply to any file-based work.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/claude-code-install-setup">Claude Code Install & Setup →</a></p>
@@ -6892,6 +7372,18 @@ git commit -m '{"openclaw": "metadata"}'
 <h3>Q: How does OpenAI's one-click migration work in practice?</h3>
 <p>The migration feature allows you to import workflows, plugins, and configurations from other AI code tools. Simply go to Codex settings, select Import Agent Config, choose your source tool, and authorize the import.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is OpenClaw Codex and how is it different from regular OpenClaw?</h3>
+<p>OpenClaw Codex is OpenAI's enhanced version with deeper integration into OpenAI's models and services. Regular OpenClaw is model-agnostic. Codex is optimized exclusively for OpenAI's models.</p>
+
+<h3>Q: Why is OpenAI investing in open-source frameworks like OpenClaw?</h3>
+<p>Facing competition from free open-source models, OpenAI integrates with popular frameworks to make its paid API the most convenient choice. It's a defensive strategy for its developer ecosystem.</p>
+
+<h3>Q: How does this OpenAI strategy affect me as a regular AI user?</h3>
+<p>Competition means better AI tools at lower prices. OpenAI, Google, and open-source projects compete, driving innovation and cost reduction. The downside: ecosystem fragmentation and non-transferable skills.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/openclaw-demystified-20-lines">OpenClaw Demystified in 20 Lines →</a></p>
 </div>`,
@@ -7070,6 +7562,18 @@ if __name__ == "__main__":
 <p>Yes. The modular design means you can add new skills by implementing the skill interface and registering it with the harness. The agent can automatically discover and use new skills.</p>
 <h3>Q: How do I handle errors in an agent system?</h3>
 <p>Error handling should be implemented at the harness level with try-catch blocks, logging, and fallback mechanisms. The harness monitors all agent and skill operations, captures exceptions, and can trigger recovery procedures.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is the difference between an AI Agent and a Skill?</h3>
+<p>An AI Agent plans and executes multi-step tasks autonomously. A Skill is a specific capability the agent can use, like searching the web. The agent is the brain that decides, skills are the hands that execute.</p>
+
+<h3>Q: What is a Harness in AI development?</h3>
+<p>A Harness is the runtime environment connecting agents to their skills and managing execution. It handles security permissions, resource limits, and error recovery. Examples: Claude Code's tool system and OpenClaw's skill framework.</p>
+
+<h3>Q: Do I need to build agents from scratch or use existing ones?</h3>
+<p>Rarely from scratch. Most platforms provide pre-built agents and skill libraries. Claude Code has built-in skills. OpenClaw has community-contributed skills. Assemble custom agents by combining existing skills.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/12-core-ai-concepts-guide">12 Core AI Concepts Guide →</a></p>
@@ -7462,6 +7966,18 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =&
 <h3>Q: Can these hacks work with any backend platform?</h3>
 <p>Yes. The code snippets are front-end HTML/JavaScript implementations. They work with any backend — WordPress, Shopify, custom PHP, or Node.js. The AI calls happen client-side or can be moved server-side.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need to know HTML to use these AI hacks?</h3>
+<p>Basic HTML knowledge helps but is not required. ChatGPT and Claude generate HTML code from plain English descriptions. Just copy, paste, and test.</p>
+
+<h3>Q: Can I use these HTML hacks on any website platform?</h3>
+<p>Best on sites with custom HTML injection: WordPress, Shopify, or self-hosted sites. Wix or Squarespace have limited custom HTML support. For full control, host on Vercel or Netlify.</p>
+
+<h3>Q: How do I add AI chat functionality to my overseas website?</h3>
+<p>The article has a complete AI chat widget HTML snippet. Replace the placeholder API key, customize styling, and paste into your site's HTML. The widget handles messaging and responses.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
 </div>`,
@@ -7813,6 +8329,18 @@ print(compare_token_efficiency("data analysis", MuseSpark(), CompetitorModel()))
 <h3>Q: How can overseas businesses benefit from Meta's AI advancements?</h3>
 <p>Meta's AI ecosystem offers content localization across Facebook/Instagram/WhatsApp, 24/7 AI-powered customer service, and AI-driven ad optimization for different cultural and linguistic audiences.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Who is Alexander Wang and why does his return to Meta matter?</h3>
+<p>Wang is a prominent AI researcher. His return to Meta signals serious commitment to AGI. His large-scale AI expertise could accelerate Meta's AI development, competing with OpenAI and Google.</p>
+
+<h3>Q: What does superintelligence mean in this context?</h3>
+<p>Superintelligence refers to AI surpassing human-level capability across most economically valuable cognitive tasks. This is a long-term research direction, not currently available. True superintelligence does not exist yet.</p>
+
+<h3>Q: How does Meta's AI strategy differ from OpenAI and Google?</h3>
+<p>Meta focuses on open-source AI, releasing models like Llama for free. OpenAI and Google keep best models proprietary. Meta believes open ecosystem attracts more developers, like Android vs iOS.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/ai-workforce-virtual-employees">AI Workforce: Virtual AI Employees →</a></p>
 </div>`,
@@ -7992,6 +8520,18 @@ python ai_staff_run.py stop
 <p>Not entirely. AI employees excel at repetitive, rule-based tasks and data processing. For creative strategy, complex problem-solving, and relationship management, human oversight remains essential.</p>
 <h3>Q: How do I ensure AI employees work securely?</h3>
 <p>Use sandbox environments, set clear permission boundaries, audit operation logs regularly, and never give AI employees access to sensitive credentials or financial systems without human approval.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can AI virtual employees really replace human workers for business tasks?</h3>
+<p>AI virtual employees excel at structured digital tasks: content creation, data entry, customer service, and scheduling. They work 24/7 at a fraction of human cost. They cannot handle physical tasks or complex negotiations.</p>
+
+<h3>Q: How do I hire and manage a virtual AI employee?</h3>
+<p>Define the role through Claude Code or an AI agent framework. Interact through natural language commands. Management involves reviewing outputs, refining instructions, and updating knowledge base.</p>
+
+<h3>Q: What is the cost comparison between AI employees and real employees?</h3>
+<p>AI virtual employees cost $20-$200/month. US human employees cost $4,000-$10,000/month including benefits. AI is 20x+ cheaper but supplements rather than replaces human workers.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools for One-Person Overseas Business →</a></p>
@@ -8228,6 +8768,18 @@ curl -X GET "https://tool-api.example.com/export?spaceId=space_0089&amp;format=z
 <p>The tool supports multiple formats including PDF, TXT, Markdown, webpage snapshots, and local notes. You can batch import multiple documents at once.</p>
 <h3>Q: How is the search different from regular keyword search?</h3>
 <p>The tool uses intelligent semantic matching to accurately locate target content based on meaning, not just keywords. This means you can ask questions in natural language and get relevant answers.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is an AI knowledge base and how is it different from a regular database?</h3>
+<p>An AI knowledge base stores documents an AI model searches when answering questions. Unlike databases with exact matches, AI knowledge bases use semantic search to find relevant info even with different phrasing.</p>
+
+<h3>Q: Which free AI knowledge base tool is best for a small business?</h3>
+<p>Free tiers of Guru or Document360 work well. For simple needs, use ChatGPT's Projects with uploaded documents. For more control, use open-source LangChain with ChromaDB.</p>
+
+<h3>Q: How many documents can I store in a free AI knowledge base?</h3>
+<p>Free tiers limit to 50-200 documents or 1-5GB. Open-source on your own hardware has no limits. Cloud free tiers are generous enough for a small business's core documentation.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
@@ -8468,6 +9020,18 @@ claw install agent-browser tavily-search self-improving-agent find-skills skill-
 <p>Yes. You can install all six base skills with a single command: claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management</p>
 <h3>Q: Do these skills work with any LLM provider?</h3>
 <p>Yes. OpenClaw supports multiple LLM providers including OpenAI, Anthropic Claude, and others. The skills work regardless of which LLM you configure as the backend.</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: What is an OpenClaw skill and how do I install these 6?</h3>
+<p>An OpenClaw skill is a plugin adding specific capability. Install via npx skills add skill-name. The 6 skills cover file operations, web search, browser automation, code execution, data processing, and API integration.</p>
+
+<h3>Q: Do all 6 OpenClaw skills work with any AI model?</h3>
+<p>Most are model-agnostic. Skills needing vision may work better with certain models. Browser automation skills depend more on Playwright and Docker than the AI model.</p>
+
+<h3>Q: Can I create my own OpenClaw skills or only use pre-built ones?</h3>
+<p>OpenClaw is designed for extensibility. Create custom skills via the development template. A skill is a JavaScript module with specific hooks. Community has hundreds on GitHub.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/openclaw-demystified-20-lines">Unveiling OpenClaw: Demystify the AI Tool in 20 Lines →</a></p>
@@ -8713,6 +9277,18 @@ claude skill install &lt;skill-name&gt; --global
 <h3>Q: Can I use Claude Code commands in any project?</h3>
 <p>Yes. Claude Code commands work in any directory. For project-specific configuration, use /init to generate a CLAUDE.md file that documents project-specific commands and standards.</p>
 
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need to memorize all 10 Claude Code commands?</h3>
+<p>No. Use natural language without remembering commands. Start with /help and fix. As you use it more, you'll naturally pick up others for your workflow.</p>
+
+<h3>Q: What is the most useful Claude Code command for a beginner?</h3>
+<p>The fix command. When code errors, type fix and Claude analyzes the error and proposes a solution. Removes the most frustrating part of learning to code.</p>
+
+<h3>Q: Can I create custom commands in Claude Code?</h3>
+<p>Yes. Supports custom slash commands through its skill/hook system. Define in CLAUDE.md or through installed skills. For example, create /deploy to run your deployment script.</p>
+
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Top 7 Skills Guide →</a></p>
 </div>`,
@@ -8915,6 +9491,18 @@ npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
 <p>Traditional AI tools process tasks serially (one after another). DeerFlow splits tasks into sub-tasks and dispatches multiple AI agents simultaneously. Whether you run 1 task or 100 tasks, the time taken is nearly the same.</p>
 <h3>Q: Can I use DeerFlow with Claude Code?</h3>
 <p>Yes. DeerFlow offers a Claude Code integration via the /claude-to-deerflow command. Install it using: npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</p>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need a powerful computer to run DeerFlow locally?</h3>
+<p>DeerFlow's agents run on remote AI APIs, so your local computer only orchestrates. A standard laptop with 8GB RAM is sufficient. Heavy computation happens in the cloud via API calls.</p>
+
+<h3>Q: Can I use DeerFlow with a free AI model or does it require paid APIs?</h3>
+<p>DeerFlow works with any LLM API including free options. Configure it with open-source models via OpenRouter or Groq which offer free tiers. For production, paid APIs ensure reliability.</p>
+
+<h3>Q: What is the difference between DeerFlow's parallel agents and a single AI chat?</h3>
+<p>Single AI chat processes tasks sequentially. DeerFlow spawns multiple agents simultaneously working on different parts in parallel. This makes DeerFlow dramatically faster for complex multi-step projects.</p>
 
 <div class="next-step">
 <p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
