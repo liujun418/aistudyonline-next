@@ -2007,4 +2007,68 @@ export const models: AIModel[] = [
     githubUrl: "https://github.com/google/gemma_pytorch",
     icon: "\u{1F48E}",
   },
+
+	// ========================================
+	// Meta Muse Spark (added 2026-05-24)
+	// ========================================
+	{
+		id: "muse-spark",
+		name: "Muse Spark",
+		nameZh: "Muse Spark",
+		developer: "Meta AI",
+		developerZh: "Meta AI",
+		releaseDate: "2026",
+		category: "conversation",
+		description: "Meta's advanced AI model with exceptional token efficiency, rivaling top-tier labs while using far fewer tokens.",
+		descriptionZh: "Meta \u7684\u9ad8\u7ea7AI\u6a21\u578b\uff0c\u5177\u6709\u5353\u8d8a\u7684Token\u6548\u7387\uff0c\u4f7f\u7528\u8fdc\u5c11\u4e8e\u540c\u7ea7\u7684Token\u5373\u53ef\u5ab2\u7f8e\u9876\u7ea7\u5b9e\u9a8c\u5ba4\u7684\u7ed3\u679c\u3002",
+		descriptionLong: "Muse Spark is Meta AI's flagship model developed by Meta Superintelligence Labs (MSL) under the leadership of Alexander Wang. It features exceptional token efficiency \u2014 delivering results on par with top-tier labs while using far fewer tokens, thanks to its optimized architecture. Currently closed-source due to safety protocols, Meta plans to release an open-source variant. Muse Spark powers Meta's ecosystem including content localization, customer service AI, and ad optimization for global businesses.",
+		descriptionLongZh: "Muse Spark \u662f Meta AI \u5728 Alexander Wang \u9886\u5bfc\u7684 Meta \u8d85\u7ea7\u667a\u80fd\u5b9e\u9a8c\u5ba4\uff08MSL\uff09\u4e0b\u5f00\u53d1\u7684\u65d7\u8230\u6a21\u578b\u3002\u5b83\u62e5\u6709\u5353\u8d8a\u7684Token\u6548\u7387\u2014\u2014\u51ed\u501f\u4f18\u5316\u7684\u67b6\u6784\uff0c\u4f7f\u7528\u8fdc\u5c11\u4e8e\u540c\u7ea7\u7684Token\u5373\u53ef\u8fbe\u5230\u4e0e\u9876\u7ea7\u5b9e\u9a8c\u5ba4\u76f8\u5ab2\u7f8e\u7684\u7ed3\u679c\u3002\u76ee\u524d\u7531\u4e8e\u5b89\u5168\u534f\u8bae\u4fdd\u6301\u95ed\u6e90\uff0cMeta \u8ba1\u5212\u53d1\u5e03\u5f00\u6e90\u7248\u672c\u3002Muse Spark \u9a71\u52a8\u7740 Meta \u751f\u6001\u7cfb\u7edf\uff0c\u5305\u62ec\u5185\u5bb9\u672c\u5730\u5316\u3001\u5ba2\u670dAI\u548c\u5168\u7403\u4e1a\u52a1\u5e7f\u544a\u4f18\u5316\u3002",
+		parameters: "Undisclosed",
+		contextWindow: "Undisclosed",
+		modalities: ["text"],
+		languages: ["English", "Chinese", "Spanish", "Arabic", "French", "German", "50+ languages"],
+		openSource: false,
+		pricing: "N/A (not yet publicly available)",
+		pricingZh: "N/A\uff08\u5c1a\u672a\u516c\u5f00\u53d1\u5e03\uff09",
+		pricingTiers: [],
+		strengths: [
+			"Exceptional token efficiency, outperforming competitors on cost per task",
+			"Optimized architecture for faster inference",
+			"Deep integration with Meta's ecosystem (Facebook, Instagram, WhatsApp)",
+			"Strong multilingual capabilities for global business",
+		],
+		strengthsZh: [
+			"\u5353\u8d8a\u7684Token\u6548\u7387\uff0c\u4efb\u52a1\u6210\u672c\u4f4e\u4e8e\u7ade\u4e89\u5bf9\u624b",
+			"\u4f18\u5316\u67b6\u6784\u5b9e\u73b0\u66f4\u5feb\u63a8\u7406",
+			"\u4e0e Meta \u751f\u6001\uff08Facebook\u3001Instagram\u3001WhatsApp\uff09\u6df1\u5ea6\u96c6\u6210",
+			"\u9762\u5411\u5168\u7403\u4e1a\u52a1\u7684\u5f3a\u5927\u591a\u8bed\u8a00\u80fd\u529b",
+		],
+		weaknesses: [
+			"Currently closed-source with no public API",
+			"Limited independent verification of benchmarks",
+			"Tied to Meta's ecosystem, limited third-party integration",
+			"No confirmed pricing or availability timeline",
+		],
+		weaknessesZh: [
+			"\u76ee\u524d\u95ed\u6e90\uff0c\u65e0\u516c\u5f00API",
+			"\u57fa\u51c6\u6d4b\u8bd5\u7f3a\u4e4f\u72ec\u7acb\u9a8c\u8bc1",
+			"\u7ed1\u5b9a Meta \u751f\u6001\uff0c\u7b2c\u4e09\u65b9\u96c6\u6210\u6709\u9650",
+			"\u65e0\u786e\u8ba4\u7684\u5b9a\u4ef7\u6216\u53ef\u7528\u65f6\u95f4\u8868",
+		],
+		bestFor: [
+			"Multilingual content creation and localization",
+			"AI-powered customer service across regions",
+			"Ad campaign optimization for global audiences",
+			"Businesses already using Meta's advertising ecosystem",
+		],
+		bestForZh: [
+			"\u591a\u8bed\u8a00\u5185\u5bb9\u521b\u4f5c\u548c\u672c\u5730\u5316",
+			"\u8de8\u533a\u57df\u7684AI\u9a71\u52a8\u5ba2\u670d",
+			"\u9762\u5411\u5168\u7403\u53d7\u4f17\u7684\u5e7f\u544a\u6d3b\u52a8\u4f18\u5316",
+			"\u5df2\u4f7f\u7528 Meta \u5e7f\u544a\u751f\u6001\u7684\u4f01\u4e1a",
+		],
+		url: "https://ai.meta.com",
+		icon: "\u{1F4A1}",
+	},
+
 ];
