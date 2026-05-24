@@ -9588,4 +9588,538 @@ npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
 </div>`,
 	},
 
+		// ====== 12 Essential Claude Code Terminal Commands ======
+		"12-claude-code-terminal-commands": {
+			content: `<div class="article-meta-banner">
+	<p><strong>Category:</strong> AI Tutorials · Difficulty: Beginner</p>
+	<p><strong>What you'll learn:</strong> 12 practical Claude Code terminal commands across three tiers — from beginner essentials like /init and /help to advanced power-user tricks like /exclude and /reload — that boost efficiency and prevent common coding pitfalls.</p>
+	</div>
+
+	<p>If you've been using <a href="/tools/claude">Claude Code</a> just to type out requirements, you're missing out on a suite of terminal commands that can drastically improve your AI coding workflow. Many developers use Claude Code for months without realizing these hidden commands, leading to low efficiency and avoidable mistakes — like AI messing up core code, conversations going off-track, or not knowing how to undo broken changes. Let's break down 12 practical terminal commands for Claude Code, categorized into three tiers for beginners, regular developers, and advanced users.</p>
+	<h2>Tier 1: Beginner-Friendly Commands (Daily Development Essentials)</h2>
+	<p>These commands are zero-friction and essential for everyday coding tasks.</p>
+	<h3>1. /init — Project Initialization Wizard</h3>
+	<p>Kickstart new projects with this command. It automatically identifies your tech stack and directory structure, then generates a <code>CLAUDE.md</code> file to store project context. For a full <a href="/article/claude-code-install-setup">Claude Code installation and setup guide</a>, check out the first article in our series.</p>
+	<pre><code class="language-plaintext">/init</code></pre>
+	<p>Use it as the first command for any new project to set a solid foundation.</p>
+	<h3>2. /help — Official Command Reference</h3>
+	<p>Forgot how a command works? <code>/help</code> pulls up the official documentation instantly.</p>
+	<pre><code class="language-plaintext">/help [command]</code></pre>
+	<p>Replace <code>[command]</code> with the command you need help with (e.g., <code>/help /diff</code>).</p>
+	<h3>3. /clear — Reset Conversation</h3>
+	<p>Wipe current session history and reset the chat state. Perfect for switching projects or requirements without opening a new window.</p>
+	<pre><code class="language-plaintext">/clear</code></pre>
+	<h3>4. /ls — List Project Directory</h3>
+	<p>Get a full overview of your project's file structure without manually navigating folders. Helps AI and you stay oriented.</p>
+	<pre><code class="language-plaintext">/ls</code></pre>
+	<h2>Tier 2: Must-Know Commands for Avoiding Pitfalls (Development Staples)</h2>
+	<p>These commands tackle common pain points like tracking code changes, undoing mistakes, and keeping conversations focused.</p>
+	<h3>5. /diff — Track Code Changes</h3>
+	<p>See exactly what files and lines AI modified. Verify changes before saving to prevent unexpected edits to core code. This is especially useful when <a href="/article/claude-code-in-action">building real projects with Claude Code</a>.</p>
+	<pre><code class="language-plaintext">/diff</code></pre>
+	<h3>6. /undo — Undo Last Changes</h3>
+	<p>Rescue your project from broken edits. This command undoes all recent file changes made by AI.</p>
+	<pre><code class="language-plaintext">/undo</code></pre>
+	<h3>7. /compact — Streamline Context</h3>
+	<p>Prevent AI from going off-topic by trimming irrelevant conversation history. Keeps discussions focused on core requirements.</p>
+	<pre><code class="language-plaintext">/compact</code></pre>
+	<h3>8. /mode — Switch Interaction Modes</h3>
+	<p>Toggle between <code>plan</code> (planning), <code>edit</code> (coding), and <code>ask</code> (Q&amp;A) modes. Use <code>/mode ask</code> for a read-only Q&amp;A mode to avoid accidental code changes.</p>
+	<pre><code class="language-plaintext">/mode ask</code></pre>
+	<h2>Tier 3: Advanced Commands for Power Users (Critical Scenario Savers)</h2>
+	<p>These lesser-known commands solve niche but crucial problems like protecting files and resetting project states.</p>
+	<h3>9. /exclude — Lock Critical Files/Directories</h3>
+	<p>Prevent AI from modifying sensitive files (e.g., core configs or dependencies). Specify paths to lock. For more on securing your workspace, read our <a href="/article/claude-code-mcp-configuration">MCP server configuration guide</a>.</p>
+	<pre><code class="language-plaintext">/exclude path/to/file-or-directory</code></pre>
+	<h3>10. /reset — Full Project Reset</h3>
+	<p>Go beyond <code>/clear</code> — this command resets both conversation history and temporary project states. Ideal for completely fresh project starts.</p>
+	<pre><code class="language-plaintext">/reset</code></pre>
+	<h3>11. /cat — View File Contents</h3>
+	<p>Quickly inspect a file's full content by specifying its path — no need to open it manually.</p>
+	<pre><code class="language-plaintext">/cat path/to/file</code></pre>
+	<h3>12. /reload — Sync Manual File Changes</h3>
+	<p>If you edit files outside Claude Code, <code>/reload</code> ensures AI uses the latest versions.</p>
+	<pre><code class="language-plaintext">/reload</code></pre>
+	<h2>Why These Commands Matter</h2>
+	<p>These 12 commands cover every stage of development: project setup, daily coding, debugging, and risk management. They eliminate guesswork, prevent costly mistakes, and keep your workflow efficient. Whether you're a beginner or an expert, integrating these commands into your Claude Code routine will save time and headaches. For a deeper dive, check out our <a href="/article/top-10-claude-code-commands">top Claude Code commands guide</a> and the <a href="/article/claude-code-advanced">advanced Claude Code features article</a>.</p>
+	<p>Save this guide and refer back to it whenever you need to streamline your AI coding process!</p>
+
+	<h2>Frequently Asked Questions</h2>
+
+	<h3>Q: What is the difference between /clear and /reset in Claude Code?</h3>
+	<p><code>/clear</code> only resets the current conversation history while keeping the project context intact. <code>/reset</code> goes further by resetting both conversation history and temporary project states, making it ideal for starting completely fresh on a project without restarting the terminal.</p>
+
+	<h3>Q: Can I use Claude Code commands like /undo and /diff on any operating system?</h3>
+	<p>Yes, all Claude Code commands work identically across Windows (PowerShell), macOS (Terminal), and Linux. Commands like <code>/diff</code> and <code>/undo</code> operate on the project files regardless of your operating system.</p>
+
+	<h3>Q: How do I protect important files from accidental AI modifications?</h3>
+	<p>Use the <code>/exclude</code> command followed by the file or directory path to lock critical files. You can also use <code>/mode ask</code> for a read-only Q&amp;A session to prevent any accidental modifications while discussing your code.</p>
+
+	<div class="next-step">
+	<p><strong>Next:</strong> <a href="/article/top-10-claude-code-commands">Top 10 Claude Code Commands →</a></p>
+	</div>`,
+			contentZh: `<div class="article-meta-banner">
+	<p><strong>分类：</strong> AI教程 · 难度：初级</p>
+	<p><strong>你将学到：</strong> 12个实用的Claude Code终端命令，分为三个等级——从/init和/help等初学者必备命令到/exclude和/reload等高级技巧——提升效率并避免常见编码陷阱。</p>
+	</div>
+
+	<p>如果你仅仅用Claude Code来输入需求，那你错过了一整套能大幅提升AI编码工作流程的终端命令。许多开发者使用Claude Code数月却不知道这些隐藏命令，导致效率低下和可避免的错误——比如AI搞乱核心代码、对话偏离主题、或者不知道如何撤销糟糕的修改。让我们来解析12个实用的Claude Code终端命令，分为三个等级：初学者、日常开发者和高级用户。</p>
+	<h2>等级一：初学者友好命令（日常开发必备）</h2>
+	<p>这些命令零门槛，是日常编码任务的基础。</p>
+	<h3>1. /init — 项目初始化向导</h3>
+	<p>用此命令快速启动新项目。它会自动识别你的技术栈和目录结构，然后生成一个<code>CLAUDE.md</code>文件来存储项目上下文。完整的<a href="/article/claude-code-install-setup">Claude Code安装与设置指南</a>请参考我们系列的第一篇文章。</p>
+	<pre><code class="language-plaintext">/init</code></pre>
+	<p>在任何新项目中将它作为第一个命令使用，建立坚实的基础。</p>
+	<h3>2. /help — 官方命令参考</h3>
+	<p>忘记某个命令怎么用了？<code>/help</code>会立即显示官方文档。</p>
+	<pre><code class="language-plaintext">/help [command]</code></pre>
+	<p>将<code>[command]</code>替换为你需要的命令（例如<code>/help /diff</code>）。</p>
+	<h3>3. /clear — 重置对话</h3>
+	<p>清除当前会话历史并重置聊天状态。非常适合在切换项目或需求时使用，无需打开新窗口。</p>
+	<pre><code class="language-plaintext">/clear</code></pre>
+	<h3>4. /ls — 列出项目目录</h3>
+	<p>全面查看项目的文件结构，无需手动浏览文件夹。帮助AI和你保持方向感。</p>
+	<pre><code class="language-plaintext">/ls</code></pre>
+	<h2>等级二：必知命令，避免陷阱（开发必备）</h2>
+	<p>这些命令解决常见的痛点，如跟踪代码更改、撤销错误和保持对话专注。</p>
+	<h3>5. /diff — 跟踪代码更改</h3>
+	<p>精确查看AI修改了哪些文件和行。在保存前验证更改，防止对核心代码的意外编辑。这在<a href="/article/claude-code-in-action">用Claude Code构建真实项目</a>时尤其有用。</p>
+	<pre><code class="language-plaintext">/diff</code></pre>
+	<h3>6. /undo — 撤销上次更改</h3>
+	<p>从错误的编辑中拯救你的项目。此命令撤销AI所做的所有最近文件更改。</p>
+	<pre><code class="language-plaintext">/undo</code></pre>
+	<h3>7. /compact — 精简上下文</h3>
+	<p>通过裁剪不相关的对话历史来防止AI偏离主题。保持讨论聚焦于核心需求。</p>
+	<pre><code class="language-plaintext">/compact</code></pre>
+	<h3>8. /mode — 切换交互模式</h3>
+	<p>在<code>plan</code>（规划）、<code>edit</code>（编码）和<code>ask</code>（问答）模式之间切换。使用<code>/mode ask</code>进行只读问答模式，避免意外修改代码。</p>
+	<pre><code class="language-plaintext">/mode ask</code></pre>
+	<h2>等级三：高级用户命令（关键场景救星）</h2>
+	<p>这些鲜为人知的命令解决小众但关键的问题，如保护文件和重置项目状态。</p>
+	<h3>9. /exclude — 锁定关键文件/目录</h3>
+	<p>防止AI修改敏感文件（如核心配置或依赖项）。指定要锁定的路径。更多关于保护工作区的信息，请阅读我们的<a href="/article/claude-code-mcp-configuration">MCP服务器配置指南</a>。</p>
+	<pre><code class="language-plaintext">/exclude path/to/file-or-directory</code></pre>
+	<h3>10. /reset — 完全项目重置</h3>
+	<p>超越<code>/clear</code>——此命令重置对话历史和临时项目状态。适合完全重新开始项目。</p>
+	<pre><code class="language-plaintext">/reset</code></pre>
+	<h3>11. /cat — 查看文件内容</h3>
+	<p>通过指定路径快速查看文件的全部内容——无需手动打开。</p>
+	<pre><code class="language-plaintext">/cat path/to/file</code></pre>
+	<h3>12. /reload — 同步手动文件更改</h3>
+	<p>如果你在Claude Code之外编辑了文件，<code>/reload</code>确保AI使用最新版本。</p>
+	<pre><code class="language-plaintext">/reload</code></pre>
+	<h2>为什么这些命令很重要</h2>
+	<p>这12个命令涵盖了开发的每个阶段：项目设置、日常编码、调试和风险管理。它们消除了猜测、防止代价高昂的错误，并保持你的工作流程高效。无论你是初学者还是专家，将这些命令整合到你的Claude Code日常使用中都将节省时间和减少麻烦。深入了解，请查看我们的<a href="/article/top-10-claude-code-commands">Claude Code顶级命令指南</a>和<a href="/article/claude-code-advanced">高级Claude Code功能文章</a>。</p>
+	<p>保存本指南，每当你需要优化AI编码流程时都可以参考！</p>
+
+	<h2>常见问题</h2>
+
+	<h3>问：Claude Code中/clear和/reset有什么区别？</h3>
+	<p><code>/clear</code>只重置当前对话历史，保持项目上下文不变。<code>/reset</code>更进一步，同时重置对话历史和临时项目状态，非常适合在不重启终端的情况下完全重新开始一个项目。</p>
+
+	<h3>问：我可以在任何操作系统上使用/undo和/diff等Claude Code命令吗？</h3>
+	<p>是的，所有Claude Code命令在Windows（PowerShell）、macOS（终端）和Linux上都以相同方式工作。<code>/diff</code>和<code>/undo</code>等命令对项目文件进行操作，不受操作系统影响。</p>
+
+	<h3>问：如何防止Claude Code意外修改重要文件？</h3>
+	<p>使用<code>/exclude</code>命令后跟文件或目录路径来锁定关键文件。你也可以使用<code>/mode ask</code>进入只读问答模式，在讨论代码时防止任何意外修改。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/top-10-claude-code-commands">十大Claude Code命令 →</a></p>
+	</div>`,
+		},
+
+
+		// ====== Claude Code Overseas Business Guide ======
+		"claude-code-overseas-business-guide": {
+			content: `<div class="article-meta-banner">
+	<p><strong>Category:</strong> AI Use Cases · Difficulty: Beginner</p>
+	<p><strong>What you'll learn:</strong> How to use Claude Code for overseas business — from installation and model configuration to essential commands, hooks, and practical automation use cases.</p>
+	</div>
+
+	<p>In the fast-paced world of overseas business, leveraging AI tools like <a href="/tools/claude">Claude Code</a> can be a game-changer. This guide will walk you through how to use Claude Code to streamline workflows, automate tasks, and enhance productivity, with a focus on practical, actionable steps.</p>
+	<h2>1. Installation and Setup</h2>
+	<h3>Installing Claude Code</h3>
+	<p>To get started, install Claude Code via its official documentation. Depending on your operating system:</p>
+	<p><strong>macOS/Linux</strong>: Open your terminal and run the following command:</p>
+	<pre><code class="language-bash">curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+	<p><strong>Windows</strong>: Use PowerShell (recommended over CMD for Unix-style command compatibility) and execute:</p>
+	<pre><code class="language-powershell">iwr -useb https://claude.ai/install.ps1 | iex</code></pre>
+	<p>For a step-by-step walkthrough, see our <a href="/article/claude-code-install-setup">Claude Code installation guide</a>.</p>
+	<h3>Setting Up CC Switch for Model Configuration</h3>
+	<p>CC Switch is a tool to manage and switch between different AI models (critical for accessing domestic models in overseas contexts).</p>
+	<p><strong>macOS Installation</strong>:</p>
+	<pre><code class="language-bash">brew tap frg1023/ccswitch && brew install --cask cc-switch</code></pre>
+	<p><strong>Windows Installation</strong>: Visit the <a href="https://github.com/frg1023/cc-switch/releases">CC Switch release page</a>, download <code>CC-Switch-vX.X.X-Windows.msi</code>, and follow the installation wizard.</p>
+	<p>Once installed, configure your preferred model (e.g., MiniMax 2.7):</p>
+	<ol>
+	<li>Open CC Switch and click the "+" button.</li>
+	<li>Select your model (e.g., MiniMax).</li>
+	<li>Enter your API key (retrieve from the MiniMax dashboard after subscribing to a plan, e.g., the 49 CNY plan is recommended for starters).</li>
+	</ol>
+	<h2>2. Modes of Operation</h2>
+	<p>Claude Code operates in three key modes, each suited to different tasks:</p>
+	<h3>Default Mode</h3>
+	<p>In this mode, Claude Code requires explicit approval for every action (e.g., file creation, edits). To use it:</p>
+	<ol>
+	<li>Launch Claude Code in your terminal: <code>claude</code></li>
+	<li>When prompted, trust the workspace folder.</li>
+	<li>Issue a command (e.g., create a folder and file). Claude Code will generate the necessary bash commands and ask for your approval before execution.</li>
+	</ol>
+	<h3>Dangerously Skip Permissions Mode (Full Access)</h3>
+	<p>For automated, uninterrupted task execution:</p>
+	<pre><code class="language-bash">claude --dangerously-skip-permissions</code></pre>
+	<p>This mode skips manual approvals. For example, to create a folder and file, Claude Code will execute the command directly.</p>
+	<h3>Plan Mode</h3>
+	<p>Use this mode to outline tasks before execution (ideal for complex projects or broad tasks). Claude Code will generate a step-by-step plan. You can then choose to execute it with or without manual approval.</p>
+	<h2>3. Essential Commands and Features</h2>
+	<h3>init Command: Project Initialization</h3>
+	<p>The <code>init</code> command generates a <code>CLAUDE.md</code> file, which acts as a "playbook" for your project (outlining key rules and context for the AI). Run it in your project directory:</p>
+	<pre><code class="language-bash">claude init</code></pre>
+	<p>This command analyzes your codebase and creates <code>CLAUDE.md</code> to guide the AI's actions (e.g., coding standards, forbidden commands like <code>rm -rf</code>).</p>
+	<h3>Agent Creation</h3>
+	<p>Create specialized AI agents for repeated tasks (e.g., a "Technical Co-Founder" agent for project planning). Launch the agent creation workflow with <code>claude agents</code>, select "Create new agent," and describe the agent's role. For a deeper understanding of agents, read our guide on <a href="/article/agent-skill-harness-explained">Agent, Skill and Harness</a>.</p>
+	<h3>Skills, MCP, and Plugins</h3>
+	<p><strong>MCP (Model Context Protocol)</strong>: Defines what the AI can do. <strong>Skills</strong>: Define how the AI should perform tasks. <strong>Plugins</strong>: Extend functionality (e.g., the Codex plugin for code review).</p>
+	<p>To manage skills: <code>/claude skills</code>. To install a plugin:</p>
+	<pre><code class="language-bash">/plugin marketplace add openai/codex-plugin.cc
+/plugin install codex@openai-codex
+/reload-plugins</code></pre>
+	<h3>Hooks (Automation Scripts)</h3>
+	<p>Hooks are scripts that trigger automatically during tool interactions. There are two types: <strong>Pre-tool Hooks</strong> (run before a tool is invoked) and <strong>Post-tool Hooks</strong> (run after a tool completes).</p>
+	<h2>4. Practical Use Cases for Overseas Businesses</h2>
+	<h3>Data Analysis and Scraping</h3>
+	<p>Use Claude Code to automate data collection from overseas markets. For example, scrape daily tech news from TechCrunch and summarize it in a CSV file:</p>
+	<pre><code class="language-python">import requests
+from bs4 import BeautifulSoup
+import csv
+
+url = "https://techcrunch.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+articles = soup.select(".post-block")
+
+with open("tech_news.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Title", "Link"])
+    for article in articles:
+        title = article.select_one(".post-block__title").text.strip()
+        link = article.select_one(".post-block__title a")["href"]
+        writer.writerow([title, link])</code></pre>
+	<h3>File Management and Collaboration</h3>
+	<p>For teams working on overseas projects, use Claude Code to organize files and automate Git workflows. For example, initialize a Git repo, add all files, and commit with a message.</p>
+	<h3>Scheduled Tasks with loop</h3>
+	<p>Automate recurring tasks (e.g., daily market research). Claude Code can create cron jobs and necessary scripts to run scheduled tasks automatically.</p>
+	<h2>5. Tips for Optimization</h2>
+	<p><strong>Token Savings</strong>: Keep <code>CLAUDE.md</code> concise. Split large guides into separate files and reference them in <code>CLAUDE.md</code> (progressive disclosure).</p>
+	<p><strong>Avoiding Bugs</strong>: Use <code>init</code> regularly to update project context. Leverage hooks to validate inputs/outputs.</p>
+	<p><strong>Skill Curation</strong>: Limit installed skills to essential ones (e.g., web scraping, file management) to avoid decision paralysis.</p>
+	<p>By mastering Claude Code's features and integrating them into your overseas business workflows, you can automate tedious tasks, reduce errors, and focus on high-value strategic work. For more tools to build your solo overseas business, check out <a href="/article/5-ai-tools-one-person-overseas-business">5 AI tools for one-person overseas businesses</a> and our guide on <a href="/article/ai-workforce-virtual-employees">building an AI workforce</a>.</p>
+
+	<h2>Frequently Asked Questions</h2>
+
+	<h3>Q: Do I need a paid Anthropic subscription to use Claude Code for my overseas business?</h3>
+	<p>Yes, Claude Code requires an Anthropic API Key (paid), which is separate from the Claude.ai web subscription. You can set a spending limit starting at $20/month.</p>
+
+	<h3>Q: Can I use Chinese domestic AI models with Claude Code?</h3>
+	<p>Yes. With CC Switch, you can route Claude Code to domestic models like MiniMax. This is especially useful for overseas businesses that need cost-effective access to local models.</p>
+
+	<h3>Q: What is the best Claude Code mode for automating overseas business tasks?</h3>
+	<p>For fully automated tasks, use <code>claude --dangerously-skip-permissions</code>. For scenarios requiring safety checks, use <code>claude --permission-mode auto</code>, which uses AI to assess operation safety before execution.</p>
+
+	<div class="next-step">
+	<p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
+	</div>`,
+			contentZh: `<div class="article-meta-banner">
+	<p><strong>分类：</strong> AI应用场景 · 难度：初级</p>
+	<p><strong>你将学到：</strong> 如何使用Claude Code提升海外业务效率——涵盖安装、模型配置、操作模式、基本命令、钩子和实用自动化用例。</p>
+	</div>
+
+	<p>在快节奏的海外业务世界中，利用像<a href="/tools/claude">Claude Code</a>这样的AI工具可以改变游戏规则。本指南将带你了解如何使用Claude Code来简化工作流程、自动化任务和提升生产力，重点放在实用、可操作的实际步骤上。</p>
+	<h2>1. 安装与设置</h2>
+	<h3>安装Claude Code</h3>
+	<p>首先，通过官方文档安装Claude Code。根据你的操作系统：</p>
+	<p><strong>macOS/Linux</strong>：打开终端并运行以下命令：</p>
+	<pre><code class="language-bash">curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+	<p><strong>Windows</strong>：使用PowerShell（推荐，因为它支持Unix风格命令兼容性）执行：</p>
+	<pre><code class="language-powershell">iwr -useb https://claude.ai/install.ps1 | iex</code></pre>
+	<p>详细的分步指南，请查看我们的<a href="/article/claude-code-install-setup">Claude Code安装指南</a>。</p>
+	<h3>设置CC Switch进行模型配置</h3>
+	<p>CC Switch是一个管理和切换不同AI模型的工具（对于在海外业务中访问国内模型至关重要）。</p>
+	<p><strong>macOS安装</strong>：</p>
+	<pre><code class="language-bash">brew tap frg1023/ccswitch && brew install --cask cc-switch</code></pre>
+	<p><strong>Windows安装</strong>：访问<a href="https://github.com/frg1023/cc-switch/releases">CC Switch发布页面</a>，下载<code>CC-Switch-vX.X.X-Windows.msi</code>并按照安装向导操作。</p>
+	<p>安装完成后，配置你偏好的模型（例如MiniMax 2.7）：</p>
+	<ol>
+	<li>打开CC Switch并点击"+"按钮。</li>
+	<li>选择你的模型（例如MiniMax）。</li>
+	<li>输入你的API密钥（从MiniMax控制面板获取，建议初学者选择49元套餐）。</li>
+	</ol>
+	<h2>2. 操作模式</h2>
+	<p>Claude Code有三种关键操作模式，适用于不同的任务：</p>
+	<h3>默认模式</h3>
+	<p>在此模式下，Claude Code要求每个操作（如文件创建、编辑）都获得明确批准。使用方式：启动Claude Code后，AI会生成必要的bash命令并请求你的批准后再执行。</p>
+	<h3>危险跳过权限模式（完全访问）</h3>
+	<p>用于自动化、不间断的任务执行：</p>
+	<pre><code class="language-bash">claude --dangerously-skip-permissions</code></pre>
+	<p>此模式跳过手动审批。例如创建文件夹和文件，Claude Code将直接执行命令。</p>
+	<h3>规划模式</h3>
+	<p>在执行前先概述任务（适用于复杂项目或广泛任务）。Claude Code会生成逐步计划，然后你可以选择带审批或不带审批地执行。</p>
+	<h2>3. 基本命令与功能</h2>
+	<h3>init命令：项目初始化</h3>
+	<p><code>init</code>命令生成一个<code>CLAUDE.md</code>文件，作为项目的"策略手册"（概述AI的关键规则和上下文）。在项目目录中运行：</p>
+	<pre><code class="language-bash">claude init</code></pre>
+	<h3>创建Agent</h3>
+	<p>为各种重复性任务创建专门的AI代理。启动代理创建工作流，选择"创建新代理"并描述其角色。要深入理解代理概念，请阅读我们的<a href="/article/agent-skill-harness-explained">Agent、Skill和Harness解析指南</a>。</p>
+	<h3>技能、MCP和插件</h3>
+	<p><strong>MCP（模型上下文协议）</strong>：定义AI能做什么。<strong>技能</strong>：定义AI如何执行任务。<strong>插件</strong>：扩展功能（例如用于代码审查的Codex插件）。</p>
+	<h3>钩子（自动化脚本）</h3>
+	<p>钩子是在工具交互过程中自动触发的脚本。有两种类型：工具前钩子（在调用工具前运行）和工具后钩子（在工具完成后运行）。</p>
+	<h2>4. 海外业务实用场景</h2>
+	<h3>数据分析和抓取</h3>
+	<p>使用Claude Code自动化海外市场数据收集。例如从TechCrunch抓取每日科技新闻并汇总到CSV文件中。你可以让Claude编写Python爬虫脚本，自动抓取网页内容，提取标题和链接等信息，然后将结果保存为结构化文件。这种方式比手动收集数据快数十倍，而且可以定时运行，让你持续掌握海外市场动态。</p>
+	<h3>文件管理与协作</h3>
+	<p>对于海外项目团队，使用Claude Code组织文件和自动化Git工作流程。例如初始化和配置Git仓库、自动添加和提交文件、管理分支和合并请求。Claude Code可以理解你的项目结构，帮助维护清晰的文件组织，并自动执行重复的版本控制操作，让团队协作更高效。</p>
+	<h3>用loop设置定时任务</h3>
+	<p>自动化重复性任务（如每日市场调研）。Claude Code可以创建cron作业和必要的脚本来自动运行定时任务。例如每天早上9点自动抓取AI行业新闻、每周生成海外市场分析报告、或定时检查网站状态。你只需要描述需求，Claude就会生成完整的脚本和定时配置。</p>
+	<h2>5. 优化技巧</h2>
+	<p><strong>Token节省</strong>：保持<code>CLAUDE.md</code>简洁。将大型指南拆分为独立文件并在<code>CLAUDE.md</code>中引用它们（渐进式披露）。这样Claude在每次对话时无需加载全部内容，既能节省Token又能提高响应速度。</p>
+	<p><strong>避免Bug</strong>：定期使用<code>init</code>更新项目上下文，确保Claude始终了解项目的最新状态。同时利用钩子在工具调用前后自动验证输入和输出，防止错误操作影响项目文件。</p>
+	<p><strong>技能筛选</strong>：将安装的技能限制在必要的范围内（如网页抓取、文件管理），避免决策瘫痪。技能越多并不意味着效率越高，精选少量高质量技能往往比安装大量技能更有效。</p>
+	<p>掌握Claude Code的功能并将其整合到你的海外业务工作流程中，你可以自动化繁琐任务、减少错误并专注于高价值的战略工作。从简单的数据抓取开始，逐步扩展到完整的自动化工作流——Claude Code可以帮助你在单人创业或小团队运营中实现大企业的效率水平。更多单人海外业务工具，请查看<a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务</a>和我们的<a href="/article/ai-workforce-virtual-employees">构建AI劳动力指南</a>。</p>
+
+	<h2>常见问题</h2>
+
+	<h3>问：使用Claude Code开展海外业务需要付费的Anthropic订阅吗？</h3>
+	<p>是的，Claude Code需要Anthropic API密钥（付费），这与Claude.ai网页订阅是分开的。你可以设置最低20美元/月的消费限额。</p>
+
+	<h3>问：我可以在Claude Code中使用国产AI模型吗？</h3>
+	<p>可以。通过CC Switch，你可以将Claude Code路由到国产模型如MiniMax。这对于需要经济高效地使用本地模型的海外业务尤其有用。</p>
+
+	<h3>问：哪种Claude Code模式最适合自动化海外业务任务？</h3>
+	<p>对于完全自动化的任务，使用<code>claude --dangerously-skip-permissions</code>。对于需要安全检查的场景，使用<code>claude --permission-mode auto</code>，它会在执行前用AI评估操作安全性。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 →</a></p>
+	</div>`,
+		},
+
+
+		// ====== Harness Automating Video Creation ======
+		"harness-automating-video-creation": {
+			content: `<div class="article-meta-banner">
+	<p><strong>Category:</strong> AI Use Cases · Difficulty: Intermediate</p>
+	<p><strong>What you'll learn:</strong> How to leverage Harness and agent technologies to automate knowledge explanation video creation — from script writing and visual design to audio synthesis and screen recording.</p>
+	</div>
+
+	<p>In the realm of content creation, especially for technical knowledge explanation videos, achieving automation while ensuring quality and consistency can be challenging. This article dives into how to leverage <a href="/tools/claude">Harness</a> and agent technologies to automate the process of turning an article into a polished knowledge video, with practical steps and code snippets.</p>
+	<h2>Introduction: Why Harness for Video Creation?</h2>
+	<p>Creating technical knowledge videos often involves tedious steps: scripting, visual design, animation, and audio synchronization. With Harness, we can orchestrate agents to handle these tasks automatically. The core advantage lies in <strong>controllability</strong> — unlike AI video generation models, web-based video creation via Harness allows precise control over elements like font, color, frame duration, and dynamic effects. This approach is also more stable and cost-effective than relying on unstable video model "draws."</p>
+	<h2>The Workflow: From Article to Video</h2>
+	<p>The entire process is divided into four stages, with human checkpoints to ensure quality.</p>
+	<h3>1. Content Editing: Script and Development Plan</h3>
+	<p>First, convert the technical article into a <strong>conversational script</strong> (suited for video narration) and a <strong>development plan</strong> (outlining visual steps and chapters).</p>
+	<p><strong>Script Transformation</strong>: Rewrite formal technical prose into short, conversational, second-person sentences.</p>
+	<p><strong>Development Plan</strong>: Break the script into visual steps and chapters. Each paragraph maps to a specific screen step, and several steps form a chapter focused on one topic.</p>
+	<p>To automate this, use the <code>web-video-presentation</code> skill. For more on skills and harnesses, see our <a href="/article/agent-skill-harness-explained">practical explanation of Agent, Skill and Harness</a>.</p>
+	<h3>2. Human Checkpoint: Validate and Adjust</h3>
+	<p>After generating the script and development plan, the agent pauses for human review. You need to confirm whether revisions are needed, which visual theme to use, and how to prepare materials.</p>
+	<h3>3. Web Development and Audio Synthesis</h3>
+	<p>Once confirmed, the agent develops web pages for each chapter and handles audio:</p>
+	<p><strong>Web Development</strong>: Each chapter is developed in an isolated folder (to avoid conflicts). The agent uses HTML, CSS, and JavaScript to create dynamic visual pages.</p>
+	<p><strong>Audio Synthesis</strong>: If auto-synthesis is needed, the agent extracts text from the script and uses the MiniMax CLI for TTS (Text-to-Speech):</p>
+	<pre><code class="language-bash"># Install MiniMax CLI
+curl -fsSL https://raw.githubusercontent.com/minimax-ai/cli/main/install.sh | bash
+# Synthesize audio
+mmx tts --text "Your script text here" --output "audio.mp3"</code></pre>
+	<h3>4. Screen Recording: Generate the Final Video</h3>
+	<p>Open the web pages in a browser, play the synthesized audio, and record the screen. To automate playback and recording, use a tool like <code>ffmpeg</code>:</p>
+	<pre><code class="language-bash">ffmpeg -f avfoundation -i "1:0" -f lavfi -i anullsrc -c:v libx264 -c:a aac -t 60 -y output.mp4</code></pre>
+	<h2>Technical Implementation: Harness Components</h2>
+	<p>A robust Harness for this workflow includes six core components.</p>
+	<h3>1. Context Management</h3>
+	<p>To prevent information overload, split content into stage-specific documents. For example: <code>script-style.md</code> (read during scripting), <code>chapter-guide.md</code> (read during web development), <code>audio-spec.md</code> (read during audio synthesis).</p>
+	<h3>2. State and Memory</h3>
+	<p>Use files like <code>outline.md</code> to store key decisions (e.g., chapter structure, pacing). When developing later chapters, the agent references this file to maintain consistency.</p>
+	<h3>3. Tool System</h3>
+	<p>Leverage basic file operations (<code>read_file</code>, <code>write_file</code>) and specialized tools like the MiniMax CLI. To avoid conflicts in multi-agent parallel development, each chapter is in an isolated folder with unique CSS prefixes.</p>
+	<h2>Practical Setup: Tools and Configuration</h2>
+	<h3>1. Claude Code (or Compatible Agents)</h3>
+	<p>Install Claude Code and configure it to use domestic models (e.g., MiniMax) via <code>cc-switch</code>. For agent skills and setup, check out the <a href="/article/claude-code-top-7-skills">top 7 Claude Code skills guide</a>.</p>
+	<h3>2. MiniMax CLI for Audio Synthesis</h3>
+	<p>As shown earlier, the MiniMax CLI simplifies TTS. Ensure you have a valid API key from the MiniMax platform.</p>
+	<h3>3. Skill Installation: web-video-presentation</h3>
+	<p>Download and install the skill from GitHub: <code>git clone https://github.com/ConardLi/garden-skills.git</code></p>
+	<p>By leveraging Harness, agents, and web technologies, you can automate the creation of knowledge explanation videos from articles. This approach offers unmatched control, stability, and efficiency — empowering content creators to focus on storytelling rather than tedious production tasks. For more on agent-based automation, read about <a href="/article/openclaw-demystified-20-lines">OpenClaw demystified</a> and see <a href="/article/claude-code-in-action">Claude Code in action</a>.</p>
+
+	<h2>Frequently Asked Questions</h2>
+
+	<h3>Q: Do I need programming experience to use Harness for video creation?</h3>
+	<p>Basic familiarity with HTML, CSS, and command-line tools is helpful but not strictly required. The agent handles most technical work — you primarily need to review and approve outputs at each checkpoint.</p>
+
+	<h3>Q: Can I use this workflow with any AI assistant or only Claude Code?</h3>
+	<p>While this guide uses Claude Code as the primary agent, the Harness approach is compatible with any AI coding assistant that supports skill plugins and file operations.</p>
+
+	<h3>Q: How long does it take to create a video using this automated Harness workflow?</h3>
+	<p>For a typical 5-10 minute knowledge video, the automated process takes about 1-2 hours, compared to 8-12 hours manually. Most of the time is spent on human review checkpoints and screen recording.</p>
+
+	<div class="next-step">
+	<p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Practical Explanation of Agent, Skill and Harness →</a></p>
+	</div>`,
+			contentZh: `<div class="article-meta-banner">
+	<p><strong>分类：</strong> AI应用场景 · 难度：中级</p>
+	<p><strong>你将学到：</strong> 如何利用Harness和代理技术自动化知识讲解视频创作——从脚本编写、视觉设计到音频合成和屏幕录制。</p>
+	</div>
+
+	<p>在内容创作领域，特别是技术知识讲解视频，在确保质量和一致性的同时实现自动化是一项挑战。传统的视频制作流程需要脚本撰写、视觉设计、动画制作和音频录制等多个环节，每个环节都需要专业人员和大量时间投入。本文将深入探讨如何利用Harness和代理技术，将文章自动转化为精美的知识视频，包含实际步骤和代码示例。</p>
+	<h2>引言：为什么用Harness创建视频？</h2>
+	<p>创建技术知识视频通常涉及繁琐的步骤：脚本编写、视觉设计、动画和音频同步。有了Harness，我们可以编排代理来自动处理这些任务。核心优势在于<strong>可控性</strong>——与AI视频生成模型不同，通过Harness进行基于Web的视频创建可以精确控制字体、颜色、帧时长和动态效果等元素。这种方法比依赖不稳定的视频模型"生成"更稳定、更具成本效益，特别适合需要定期更新内容的教程类视频制作。</p>
+	<h2>工作流程：从文章到视频</h2>
+	<p>整个过程分为四个阶段，每个阶段都有人工检查点以确保质量。</p>
+	<h3>1. 内容编辑：脚本和开发计划</h3>
+	<p>首先，将技术文章转换为<strong>对话式脚本</strong>（适合视频旁白）和<strong>开发计划</strong>（概述视觉步骤和章节）。</p>
+	<p><strong>脚本转换</strong>：将正式的技术散文改写成简短、对话式的第二人称句子。</p>
+	<p><strong>开发计划</strong>：将脚本拆分为视觉步骤和章节。每个段落映射到一个特定屏幕步骤，多个步骤组成一个章节。有关技能和Harness的更多信息，请参阅我们的<a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解析</a>。</p>
+	<h3>2. 人工检查点：验证和调整</h3>
+	<p>生成脚本和开发计划后，代理暂停等待人工审核。你需要确认以下几个关键点：脚本和开发计划是否需要修改、选择使用哪个视觉主题（技能提供多个预设计主题）、以及如何准备素材（如图片和图表）。你还需决定是顺序开发各章节还是并行开发，这对整体进度有重要影响。</p>
+	<h3>3. Web开发和音频合成</h3>
+	<p>确认后，代理为每个章节开发Web页面并处理音频。每个章节在独立文件夹中开发（避免冲突），使用HTML、CSS和JavaScript创建动态视觉页面。开发者可以在样式中自定义字体和配色方案，例如通过CSS变量定义主色调和强调色。音频合成方面，如果启用自动合成，代理会从脚本中提取文本并使用MiniMax CLI进行文字转语音（TTS），生成与视觉内容同步的旁白音频，确保最终视频中的声音和画面完美配合。</p>
+	<h3>4. 屏幕录制：生成最终视频</h3>
+	<p>在浏览器中打开Web页面，播放合成的音频，并录制屏幕。这能确保音频和画面的完美同步。要自动化播放和录制过程，可以使用<code>ffmpeg</code>等工具进行屏幕录制，配合音频输入源，生成最终的MP4视频文件。录制完成后还可以进行简单的剪辑和后期处理，添加片头片尾或字幕。</p>
+	<h2>技术实现：Harness组件</h2>
+	<p>用于此工作流的健壮Harness包括六个核心组件：上下文管理、状态和内存、工具系统等。每个组件都有特定的职责，确保视频创作流程的每个环节都有可靠支持。</p>
+	<h3>1. 上下文管理</h3>
+	<p>为防止信息过载，将内容拆分为特定阶段的文档。例如<code>script-style.md</code>（仅在脚本编写时读取）、<code>chapter-guide.md</code>（仅在Web开发时读取）、<code>audio-spec.md</code>（仅在音频合成时读取）。这种方式确保代理始终访问最相关的信息，避免在编写脚本时被Web开发细节干扰。</p>
+	<h3>2. 状态和内存</h3>
+	<p>使用<code>outline.md</code>等文件存储关键决策（如章节结构、节奏和视觉风格）。在开发后续章节时，代理引用此文件以保持一致性。例如outline.md中记录"第一章使用蓝色主题、第二章使用绿色主题"，所有后续章节开发都会自动遵循这一约定，确保整体视觉风格统一。</p>
+	<h3>3. 工具系统</h3>
+	<p>利用基本文件操作（<code>read_file</code>、<code>write_file</code>）和MiniMax CLI等专门工具进行音频合成。为避免多代理并行开发的冲突，每个章节使用独立文件夹和唯一CSS前缀（如<code>chapter-1-container</code>、<code>chapter-2-container</code>），确保样式互不干扰。</p>
+	<h2>实际设置：工具和配置</h2>
+	<p>安装Claude Code并通过<code>cc-switch</code>配置为使用国内模型（如MiniMax），降低API调用成本。关于代理技能和设置，请查看<a href="/article/claude-code-top-7-skills">Claude Code七大技能指南</a>。此外还需要安装MiniMax CLI用于文字转语音，以及从GitHub下载<code>web-video-presentation</code>技能包来增强代理的视频创作能力。有了这些工具，代理就可以自动完成从脚本生成到页面开发的全流程工作。</p>
+	<p>通过利用Harness、代理和Web技术，你可以从文章自动化创建知识讲解视频。这种方法提供了无与伦比的控制性、稳定性和效率——让内容创作者专注于讲故事而非繁琐的制作任务。无论是制作教程视频、产品演示还是技术讲座，这套自动化工作流都能大幅缩短制作周期，同时保持专业水准的输出质量。更多基于代理的自动化，请阅读<a href="/article/openclaw-demystified-20-lines">OpenClaw解析</a>和<a href="/article/claude-code-in-action">Claude Code实战</a>。</p>
+
+	<h2>常见问题</h2>
+
+	<h3>问：使用Harness创建视频需要编程经验吗？</h3>
+	<p>熟悉HTML、CSS和命令行工具有帮助但不是必需的。代理会处理大部分技术工作——你主要在检查点审核和批准输出。</p>
+
+	<h3>问：这个工作流程只能用在Claude Code上，还是可以用其他AI助手？</h3>
+	<p>虽然本指南以Claude Code为主要代理，但Harness方法兼容任何支持技能插件和文件操作的AI编码助手。</p>
+
+	<h3>问：使用这个自动化Harness工作流创建一个视频需要多长时间？</h3>
+	<p>对于典型的5-10分钟知识视频，自动化过程大约需要1-2小时，而手动需要8-12小时。大部分时间花在人工审核检查点和屏幕录制上。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解析 →</a></p>
+	</div>`,
+		},
+
+
+		// ====== Oh-My-ClaudeCode (OMC) Guide ======
+		"oh-my-claudecode-omc-guide": {
+			content: `<div class="article-meta-banner">
+	<p><strong>Category:</strong> AI Tutorials · Difficulty: Intermediate</p>
+	<p><strong>What you'll learn:</strong> How Oh-My-ClaudeCode (OMC) transforms Claude Code into a full AI development team with 32 specialized agents, three core modes, and smart model routing for token savings.</p>
+	</div>
+
+	<p>If you're still using <a href="/tools/claude">Claude Code</a> alone for your programming tasks, you're missing out on a powerful enhancement that can transform your AI coding experience — <strong>Oh-My-ClaudeCode (OMC)</strong>. This tool is not a replacement for Claude Code but a supercharged plugin that turns it into an unstoppable AI development army. Let's dive into its core features and how you can leverage them for practical, efficient coding.</p>
+	<h2>What is OMC?</h2>
+	<p>OMC is not a new tool nor a replacement for Claude Code. It's a <strong>super enhancement plugin</strong> for Claude Code, turning a single "programmer" into a full-fledged AI development team. While native Claude Code works like a solo coder, OMC provides a squad of AI agents — including architects, developers, testers, security auditors, and documentation engineers — who auto-divide tasks and collaborate seamlessly.</p>
+	<h2>32 Smart Agents: Specialized Roles for Efficient Work</h2>
+	<p>The heart of OMC lies in its <strong>32 built-in intelligent Agents</strong>, each with a dedicated role to ensure clear division of labor:</p>
+	<ul>
+	<li><strong>Architect Agent</strong>: Handles tech stack selection and project architecture design.</li>
+	<li><strong>Executor Agent</strong>: Writes, modifies, and refactors code.</li>
+	<li><strong>Tester Agent</strong>: Automatically generates test cases and runs tests to find bugs.</li>
+	<li><strong>Security Agent</strong>: Audits code for vulnerabilities and checks dependency risks.</li>
+	<li><strong>Writer Agent</strong>: Creates READMEs and API documentation.</li>
+	</ul>
+	<p><strong>Practical Example</strong>: To build a login feature, simply say "Help me build a user login function with email and password validation." OMC will split this task among the relevant Agents, who work in parallel — slashing development time drastically.</p>
+	<h2>Three Core Modes for Different Scenarios</h2>
+	<p>OMC offers three modes to suit various project needs:</p>
+	<h3>1. Team Mode</h3>
+	<p>Ideal for end-to-end project development. It automatically handles planning, design, development, testing, and delivery without manual intervention. Use it when you need to build a complete app from scratch.</p>
+	<h3>2. Ultrapilot Mode</h3>
+	<p>Allows up to 5 Agents to work simultaneously, boosting speed by 3-5x. Perfect for complex projects like e-commerce platforms or SaaS tools.</p>
+	<h3>3. Ralph Mode</h3>
+	<p>Focuses on perfection. It repeats validation and modification until the task meets standards. Use this for critical components like financial algorithms or healthcare systems.</p>
+	<h2>Magic Keywords: Zero Learning Curve</h2>
+	<p>OMC uses natural language <strong>magic keywords</strong> to activate features, so you don't need to memorize complex commands:</p>
+	<ul>
+	<li><code>autopilot</code>: Triggers full-process automated development.</li>
+	<li><code>refactor</code>: Initiates global code refactoring.</li>
+	<li><code>document</code>: Generates complete project documentation.</li>
+	<li><code>security check</code>: Performs automatic security audits.</li>
+	</ul>
+	<h2>Smart Model Routing: Save Costs Smartly</h2>
+	<p>OMC optimizes cost-efficiency by automatically selecting the right AI model based on task complexity. Simple tasks (e.g., text formatting) use fast, low-cost models like Haiku. Complex tasks (e.g., architecture design) use powerful models like Opus. This can save you <strong>30-50% on token costs</strong> long-term.</p>
+	<p>To get started with OMC, first ensure you have Claude Code set up with our <a href="/article/claude-code-install-setup">installation guide</a>. For more commands and skills, see our <a href="/article/top-10-claude-code-commands">top Claude Code commands</a> and the <a href="/article/claude-code-top-7-skills">top 7 skills guide</a>. You can also explore <a href="/article/claude-code-in-action">Claude Code in action</a> and <a href="/article/claude-code-advanced">advanced Claude Code features</a>.</p>
+
+	<h2>Frequently Asked Questions</h2>
+
+	<h3>Q: Is Oh-My-ClaudeCode free to use?</h3>
+	<p>OMC itself is an open-source plugin and is free to install. However, it requires Claude Code (which needs an Anthropic API key) and may incur API costs based on your usage of AI models.</p>
+
+	<h3>Q: Do I need to install all 32 OMC agents to use the plugin?</h3>
+	<p>No. OMC comes with all 32 agents pre-configured. You don't need to install them individually — the plugin automatically selects the right agents based on your task, making it ready to use out of the box.</p>
+
+	<h3>Q: Can OMC work with other AI coding tools besides Claude Code?</h3>
+	<p>While OMC is specifically designed as a Claude Code enhancement, its multi-agent approach can be adapted for other AI coding assistants that support plugin architectures.</p>
+
+	<div class="next-step">
+	<p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills Guide →</a></p>
+	</div>`,
+			contentZh: `<div class="article-meta-banner">
+	<p><strong>分类：</strong> AI教程 · 难度：中级</p>
+	<p><strong>你将学到：</strong> Oh-My-ClaudeCode（OMC）如何通过32个专业代理、三种核心模式和智能模型路由，将Claude Code转变为完整的AI开发团队并节省Token成本。</p>
+	</div>
+
+	<p>如果你仍然单独使用<a href="/tools/claude">Claude Code</a>进行编程任务，那你错过了一个可以改变AI编码体验的强大增强工具——<strong>Oh-My-ClaudeCode（OMC）</strong>。这个工具不是Claude Code的替代品，而是一个超级增强插件，将其变成一支不可阻挡的AI开发大军。让我们深入了解其核心功能以及如何利用它们进行高效编码。</p>
+	<h2>什么是OMC？</h2>
+	<p>OMC既不是新工具也不是Claude Code的替代产品。它是Claude Code的<strong>超级增强插件</strong>，将单个"程序员"转变为一个完整的AI开发团队。原生Claude Code像是一个独立开发者，而OMC提供了一支AI代理队伍——包括架构师、开发者、测试员、安全审计员和文档工程师——他们自动分工、无缝协作。</p>
+	<h2>32个智能代理：高效工作的专业角色</h2>
+	<p>OMC的核心在于其<strong>32个内置智能代理</strong>，每个都有专门的职责，确保明确的分工：</p>
+	<ul>
+	<li><strong>架构师代理</strong>：处理技术栈选择和项目架构设计。</li>
+	<li><strong>执行者代理</strong>：编写、修改和重构代码。</li>
+	<li><strong>测试者代理</strong>：自动生成测试用例并运行测试以发现Bug。</li>
+	<li><strong>安全代理</strong>：审计代码漏洞并检查依赖风险。</li>
+	<li><strong>文档代理</strong>：创建README和API文档。</li>
+	</ul>
+	<h2>三种核心模式，应对不同场景</h2>
+	<p>OMC提供三种模式以适应不同项目需求：</p>
+	<h3>1. 团队模式</h3>
+	<p>适合端到端项目开发。自动处理规划、设计、开发、测试和交付，无需人工干预，让你可以专注于更重要的决策工作。</p>
+	<h3>2. 超级飞行员模式</h3>
+	<p>允许最多5个代理同时工作，将速度提升3-5倍。非常适合电商平台或SaaS工具等复杂项目，大幅缩短开发周期。</p>
+	<h3>3. Ralph模式</h3>
+	<p>专注于完美。重复验证和修改直到任务达标。适用于金融算法或医疗系统等关键组件。</p>
+	<h2>魔法关键词：零学习曲线</h2>
+	<p>OMC使用自然语言<strong>魔法关键词</strong>激活功能，无需记忆复杂命令：</p>
+	<ul>
+	<li><code>autopilot</code>：触发全流程自动化开发。</li>
+	<li><code>refactor</code>：启动全局代码重构。</li>
+	<li><code>document</code>：生成完整项目文档。</li>
+	<li><code>security check</code>：执行自动安全审计。</li>
+	</ul>
+	<h2>智能模型路由：聪明省钱</h2>
+	<p>OMC通过根据任务复杂度自动选择正确的AI模型来优化成本效率。简单任务使用快速低成本的模型如Haiku，复杂任务使用强大的模型如Opus。这种智能路由策略长期可节省<strong>30-50%的Token成本</strong>。</p>
+	<p>要开始使用OMC，首先确保已按我们的<a href="/article/claude-code-install-setup">安装指南</a>设置好Claude Code。更多命令和技能，请查看<a href="/article/top-10-claude-code-commands">Claude Code顶级命令</a>和<a href="/article/claude-code-top-7-skills">七大技能指南</a>。你还可以了解<a href="/article/claude-code-in-action">Claude Code实战</a>和<a href="/article/claude-code-advanced">高级Claude Code功能</a>。</p>
+	<p>开始使用OMC后，你会发现日常编码效率有质的飞跃。原本需要多次对话才能完成的大型功能，OMC通过多代理协作可以一次性搞定。从项目初始化到代码审查、从文档生成到安全审计，OMC覆盖了软件开发的完整生命周期。建议你先从一个小功能开始尝试，逐步将OMC融入到日常开发流程中，很快你就会发现离不开它了。</p>
+
+	<h2>常见问题</h2>
+
+	<h3>问：Oh-My-ClaudeCode是免费使用的吗？</h3>
+	<p>OMC本身是开源插件，免费安装和使用。但它需要依赖Claude Code（需要有效的Anthropic API密钥），并可能根据AI模型的使用量产生API调用费用。</p>
+
+	<h3>问：我需要安装全部32个OMC代理才能使用插件吗？</h3>
+	<p>不需要。OMC自带全部32个预配置代理。你无需单独安装——插件会根据你的任务自动选择合适的代理，开箱即用。</p>
+
+	<h3>问：OMC可以和其他AI编码工具一起使用吗？</h3>
+	<p>OMC是专门为Claude Code设计的增强插件，但其多代理方法可以适配其他支持插件架构的AI编码助手。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/claude-code-top-7-skills">Claude Code七大技能指南 →</a></p>
+	</div>`,
+		},
+
 };

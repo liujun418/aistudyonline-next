@@ -770,4 +770,68 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
+	// ====== Article: 12 Essential Claude Code Terminal Commands ======
+	{
+		slug: "12-claude-code-terminal-commands",
+		title: "12 Essential Claude Code Terminal Commands to Boost Efficiency and Avoid Pitfalls",
+		titleZh: "12个必备Claude Code终端命令：提升效率、避免陷阱",
+		description:
+			"Discover 12 practical Claude Code terminal commands across three tiers — from beginner essentials like /init and /help to advanced power-user tricks like /exclude and /reload — that boost your AI coding efficiency and prevent common mistakes.",
+		descriptionZh:
+			"探索12个实用的Claude Code终端命令，分为三个等级——从/init和/help等初学者必备命令到/exclude和/reload等高级技巧——提升你的AI编码效率，避免常见错误。",
+		category: "ai-tutorials",
+		tags: ["claude-code", "terminal-commands", "cli", "productivity", "beginner"],
+		difficulty: "beginner",
+		toolsMentioned: ["claude"],
+		date: "2026-05-24",
+	},
+
+	// ====== Article: Claude Code Overseas Business Guide ======
+	{
+		slug: "claude-code-overseas-business-guide",
+		title: "Claude Code: A Comprehensive Guide to Boosting Productivity for Overseas Businesses",
+		titleZh: "Claude Code：助力海外业务提升效率的全面指南",
+		description:
+			"A complete guide to using Claude Code for overseas businesses — covering installation, model configuration, modes of operation, essential commands, hooks, and practical automation use cases for global entrepreneurs.",
+		descriptionZh:
+			"一份面向海外业务的Claude Code完整使用指南——涵盖安装、模型配置、操作模式、基本命令、钩子和面向全球创业者的实用自动化用例。",
+		category: "ai-use-cases",
+		tags: ["claude-code", "overseas-business", "productivity", "automation", "cli"],
+		difficulty: "beginner",
+		toolsMentioned: ["claude"],
+		date: "2026-05-24",
+	},
+
+	// ====== Article: Harness Automating Video Creation ======
+	{
+		slug: "harness-automating-video-creation",
+		title: "Harness in Practice: Automating Knowledge Explanation Video Creation",
+		titleZh: "Harness实战：自动化知识讲解视频创作",
+		description:
+			"Learn how to leverage Harness and agent technologies to automate the creation of technical knowledge explanation videos — from script writing and visual design to audio synthesis and screen recording.",
+		descriptionZh:
+			"学习如何利用Harness和代理技术自动化创建技术知识讲解视频——从脚本编写、视觉设计到音频合成和屏幕录制。",
+		category: "ai-use-cases",
+		tags: ["harness", "video-creation", "automation", "agents", "content-creation"],
+		difficulty: "intermediate",
+		toolsMentioned: ["claude"],
+		date: "2026-05-24",
+	},
+
+	// ====== Article: Oh-My-ClaudeCode (OMC) Guide ======
+	{
+		slug: "oh-my-claudecode-omc-guide",
+		title: "Unlock Ultimate AI Coding Efficiency with Oh-My-ClaudeCode (OMC)",
+		titleZh: "用Oh-My-ClaudeCode（OMC）解锁终极AI编码效率",
+		description:
+			"Discover Oh-My-ClaudeCode (OMC), the super-enhancement plugin that turns Claude Code into a full AI development team — with 32 specialized agents, three core modes, and smart model routing for token savings.",
+		descriptionZh:
+			"了解Oh-My-ClaudeCode（OMC），这个超级增强插件将Claude Code转变为完整的AI开发团队——拥有32个专业代理、三种核心模式和智能模型路由以节省Token。",
+		category: "ai-tutorials",
+		tags: ["claude-code", "omc", "oh-my-claudecode", "plugin", "agents", "productivity"],
+		difficulty: "intermediate",
+		toolsMentioned: ["claude"],
+		date: "2026-05-24",
+	},
+
 ];
