@@ -5225,132 +5225,70 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
   // ====== Claude Code Companion: Top 7 Skills Guide ======
   "claude-code-top-7-skills": {
     content: `<div class="article-meta-banner">
-<p><strong>Companion Article:</strong> Claude Code Skills Guide</p>
-<p><strong>Prerequisites:</strong> <a href="/article/claude-code-install-setup">Claude Code installed</a> and basic familiarity with the <code>claude</code> command. If you have followed <a href="/article/claude-code-mcp-configuration">Part 2 (MCP configuration)</a>, even better.</p>
+<p><strong>Category:</strong> Claude Code Skills Guide</p>
+<p><strong>What you'll learn:</strong> The 7 must-install skills for Claude Code, from official Anthropic offerings to community-driven power tools.</p>
 </div>
 
-<h2>Why Skills Matter in Claude Code</h2>
-
-<p>Claude Code is powerful out of the box, but its true potential unlocks through <strong>skills</strong> — modular extensions that add specialized capabilities. With over 2,400 skills available in the ecosystem, knowing which ones to install can make the difference between a good AI coding assistant and an extraordinary one. This guide covers the 7 skills every Claude Code user should know about, from official Anthropic offerings to community-driven power tools.</p>
-
-<h2>1. Document-skills (Official)</h2>
-
-<p>Developed by Anthropic, <strong>Document-skills</strong> is a production-grade tool for document processing. It seamlessly handles <strong>Word, Excel, PowerPoint, and PDF</strong> files, enabling text extraction, table parsing, OCR recognition, and document encryption. If your workflow involves processing reports, extracting data from spreadsheets, or analyzing PDF contracts, this skill is indispensable.</p>
-
-<h2>2. Frontend Design (Official)</h2>
-
-
-
-<h2>3. UI-UX-Pro-Max</h2>
-
-<p><strong>UI-UX-Pro-Max</strong> provides a research-backed design knowledge base covering color schemes, font pairings, chart types, and UX guidelines. It is <strong>cross-platform compatible</strong>, supporting major frameworks including React, Vue, Next.js, Flutter, and SwiftUI. When tasked with creating a tech-inspired dashboard, it suggests well-documented design combinations rather than arbitrary ones — saving hours of trial and error.</p>
-
-<h2>4. Find-skills</h2>
-
-<p>With over 2,400 skills available, finding the right one is a challenge in itself. <strong>Find-skills</strong> acts as an internal search engine for the skill ecosystem. It semantically scans installed skills based on your described needs, recommends the most suitable options, and explains how to invoke them. No more scrolling through endless lists — just describe what you need, and Find-skills handles the rest.</p>
-
-<h2>5. Skill-Creator (Official)</h2>
-
-<p>Anthropic's official <strong>meta-skill</strong> for building other skills, <strong>Skill-Creator</strong> guides users through a structured process — from requirement gathering and documentation to testing and optimization. It includes tools to refine trigger descriptions, ensuring Claude can properly invoke the created skills. This is the go-to tool for teams that want to institutionalize their unique workflows, creating repeatable, shareable skill packages.</p>
-
-<h2>6. Superpowers</h2>
-
-<p>The most popular community-driven project in the Claude Code ecosystem, <strong>Superpowers</strong> has amassed over <strong>120,000 GitHub stars</strong>. It enforces a five-stage software development lifecycle: brainstorming, design, planning, coding, and validation — plus test-driven development. This structured approach prevents Claude from rushing into code writing, reducing rework and boosting overall efficiency. For a practical look at how Claude Code handles real projects, see <a href="/article/claude-code-in-action">Claude Code in Action</a>.</p>
-
-<h2>7. PUA (Pressure-Urgency-Accountability)</h2>
-
-<p>Inspired by corporate workplace culture, <strong>PUA</strong> implements a 4-level pressure system that pushes Claude to explore more solutions. After two failures, it switches problem-solving approaches; after three, it enforces a 7-point checklist. Leveraging methodologies from top tech companies (Huawei's root cause analysis, Amazon's Working Backwards), it helps Claude break through bottlenecks during debugging and complex problem-solving. Tests show a <strong>3&ndash;4x increase in solution exploration</strong> when using this skill.</p>
-
-<h2>Combining Skills for Maximum Impact</h2>
-
-<p>These seven skills are not mutually exclusive. In practice, the most effective Claude Code users combine them:</p>
-<ul>
-<li>Use <strong>Find-skills</strong> to discover the right tool for your current task</li>
-<li>Pair <strong>Frontend Design</strong> with <strong>UI-UX-Pro-Max</strong> for complete design-to-code workflows</li>
-<li>Use <strong>Skill-Creator</strong> to package custom workflows discovered through <strong>Superpowers</strong></li>
-<li>Apply <strong>PUA</strong> when stuck on a particularly tough bug or architecture decision</li>
-<li>Leverage <strong>Document-skills</strong> when your project involves processing real-world files</li>
-</ul>
-
-<p>Together, they address pain points in document handling, design, workflow management, and debugging, transforming <a href="/tools/claude">Claude Code</a> into a truly proficient AI teammate. For advanced techniques like custom slash commands and CI/CD integration, continue to <a href="/article/claude-code-advanced">Advanced Claude Code</a>.</p>
+<p>To prove the correctness of the information about the top 7 must\\-install skills for Claude Code, here's a detailed breakdown:</p>
+<h3>1\\. Document\\-skills</h3>
+<p>Developed by Anthropic, this skill is a powerhouse for document processing\\. It seamlessly handles <strong>Word, Excel, PowerPoint, and PDF</strong> files, enabling functionalities like text extraction, table parsing, OCR recognition, and document encryption\\. Being a production\\-grade tool within Anthropic, it’s indispensable for users dealing with extensive document workflows\\.</p>
+<h3>2\\. Frontend Design</h3>
+<p>Also an official Anthropic offering, it’s one of the most popular skills with over 110,000 weekly installations\\. It addresses the issue of generic AI\\-generated interfaces by forcing Claude to define a specific visual direction \\(e\\.g\\., Brutalism, Maximalism, Retro\\-futurism\\) and avoid overused fonts, resulting in more distinctive, production\\-ready UIs\\.</p>
+<h3>3\\. UI\\-UX\\-Pro\\-Max</h3>
+<p>This skill provides a research\\-backed design knowledge base\\. It covers color schemes, font pairings, chart types, and UX guidelines\\. Notably, it’s cross\\-platform compatible, supporting major frameworks like React, Vue, Next\\.js, Flutter, and SwiftUI\\. For example, when tasked with creating a tech\\-inspired dashboard, it suggests well\\-documented design combinations rather than arbitrary ones\\.</p>
+<h3>4\\. Find\\-skills</h3>
+<p>As an internal search engine for the skill ecosystem, it solves the dilemma of choosing from over 2,400 available skills\\. By semantically scanning installed skills based on user\\-described needs, it recommends the most suitable options and explains how to invoke them, eliminating skill selection friction\\.</p>
+<h3>5\\. Skill\\-Creator</h3>
+<p>Anthropic’s official “meta\\-skill” for building other skills, it guides users through a structured process—from requirement gathering and documentation to testing and optimization\\. It includes tools to refine trigger descriptions, ensuring Claude can properly invoke the created skills, making it ideal for institutionalizing unique team workflows\\.</p>
+<h3>6\\. Superpowers</h3>
+<p>The most popular community\\-driven project in the Claude Code ecosystem, it has amassed over 120,000 GitHub stars\\. It enforces a five\\-stage software development lifecycle \\(brainstorming, design, planning, coding, validation\\) and test\\-driven development, reducing rework and boosting coding efficiency by preventing Claude from rushing into code writing\\.</p>
+<h3>7\\. PUA</h3>
+<p>Inspired by corporate workplace culture, this skill implements a 4\\-level pressure system to push Claude to explore more solutions\\. For instance, after two failures, it switches problem\\-solving approaches; after three, it enforces a 7\\-point checklist\\. Leveraging methodologies from top tech companies \\(e\\.g\\., Huawei’s root cause analysis, Amazon’s Working Backwards\\), it helps Claude break through bottlenecks, with tests showing a 3–4x increase in solution exploration\\.</p>
+<p>These seven skills comprehensively address pain points in document handling, design, workflow management, and debugging, transforming Claude Code into a truly proficient AI teammate\\.</p>
 
 <h2>FAQ</h2>
-
 <h3>Q: Are these skills free to install?</h3>
-<p>Yes, all seven skills listed here are free to install through Claude Code's skill marketplace. You only pay for your Anthropic API usage when running Claude Code itself. Installation is done via the <code>skills</code> command inside a Claude Code session.</p>
-
+<p>Yes, all seven skills listed here are free to install through Claude Code's skill marketplace. You only pay for your Anthropic API usage when running Claude Code itself.</p>
 <h3>Q: Can I use these skills with Cursor or other AI coding tools?</h3>
-<p>No. These skills are specific to Claude Code's ecosystem. However, similar concepts exist in other tools — for example, <a href="/tools/cursor">Cursor</a> has its own extension system, and GitHub Copilot supports custom rules. The skills described here are exclusive to the Claude Code environment.</p>
-
+<p>No. These skills are specific to Claude Code's ecosystem. However, similar concepts exist in other tools. The skills described here are exclusive to the Claude Code environment.</p>
 <h3>Q: Will installing too many skills slow down Claude Code?</h3>
-<p>Skills are loaded on demand, not all at once. Installing dozens of skills does not noticeably affect performance. However, having too many active skills can sometimes lead to conflicting instructions. Use <strong>Find-skills</strong> to manage your installed set and disable ones you rarely use.</p>
+<p>Skills are loaded on demand, not all at once. Installing dozens of skills does not noticeably affect performance. However, having too many active skills can sometimes lead to conflicting instructions.</p>
 
 <div class="next-step">
-<p><strong>Next:</strong> See these skills in action — <a href="/article/claude-code-in-action">Claude Code in Action: Build a Real Project from Scratch →</a></p>
+<p><strong>Next:</strong> <a href="/article/claude-code-in-action">Claude Code in Action: Build a Real Project from Scratch →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>配套文章：</strong> Claude Code 技能指南</p>
-<p><strong>前置要求：</strong> 已<a href="/article/claude-code-install-setup">安装Claude Code</a>并基本熟悉<code>claude</code>命令。如果你已阅读<a href="/article/claude-code-mcp-configuration">第2部分（MCP配置）</a>，效果更佳。</p>
+<p><strong>Category:</strong> Claude Code Skills Guide</p>
+<p><strong>What you'll learn:</strong> The 7 must-install skills for Claude Code, from official Anthropic offerings to community-driven power tools.</p>
 </div>
 
-<h2>为什么技能对Claude Code如此重要</h2>
-
-<p>Claude Code开箱即用已经非常强大，但其真正的潜力通过<strong>技能（skills）</strong>——添加专门能力的模块化扩展——得以释放。生态系统中已有超过2,400种技能可用，知道安装哪些技能可以决定你拥有的是一个好的AI编码助手还是一个卓越的AI编码助手。本指南涵盖每个Claude Code用户都应了解的7大技能，从Anthropic官方提供到社区驱动的强大工具。</p>
-
-<h2>1. Document-skills（官方）</h2>
-
-<p>由Anthropic开发的<strong>Document-skills</strong>是一个生产级的文档处理工具。它无缝处理<strong>Word、Excel、PowerPoint和PDF</strong>文件，支持文本提取、表格解析、OCR识别和文档加密。如果你的工作涉及处理报告、从电子表格提取数据或分析PDF合同，这个技能不可或缺。</p>
-
-<h2>2. Frontend Design（官方）</h2>
-
-
-
-<h2>3. UI-UX-Pro-Max</h2>
-
-<p><strong>UI-UX-Pro-Max</strong>提供了一个研究支持的设计知识库，涵盖配色方案、字体搭配、图表类型和UX指南。它<strong>跨平台兼容</strong>，支持React、Vue、Next.js、Flutter和SwiftUI等主流框架。当被要求创建科技风格仪表板时，它会推荐有充分文档支持的设计组合，而非随意搭配——节省数小时的试错时间。</p>
-
-<h2>4. Find-skills</h2>
-
-<p>有超过2,400种技能可用时，找到合适的技能本身就是个挑战。<strong>Find-skills</strong>充当技能生态系统的内部搜索引擎。它根据你描述的需求语义扫描已安装的技能，推荐最合适的选项，并解释如何调用它们。不再需要滚动浏览无尽的列表——只需描述你需要什么，Find-skills会处理剩下的事情。</p>
-
-<h2>5. Skill-Creator（官方）</h2>
-
-<p>Anthropic官方用于构建其他技能的<strong>元技能</strong>，<strong>Skill-Creator</strong>引导用户完成结构化流程——从需求收集和文档编写到测试和优化。它包含优化触发描述的工具，确保Claude能够正确调用创建的技能。这是希望将独特工作流程制度化的团队的首选工具，用于创建可重复、可共享的技能包。</p>
-
-<h2>6. Superpowers</h2>
-
-<p>Claude Code生态中最受欢迎的社区驱动项目，<strong>Superpowers</strong>已累积超过<strong>12万GitHub星标</strong>。它强制执行五阶段软件开发周期：头脑风暴、设计、规划、编码和验证——加上测试驱动开发。这种结构化方法防止Claude仓促进入编码阶段，减少返工并提高整体效率。要了解Claude Code在实际项目中的表现，请参阅<a href="/article/claude-code-in-action">Claude Code实战</a>。</p>
-
-<h2>7. PUA（压力-紧迫-问责）</h2>
-
-<p>受企业文化启发，<strong>PUA</strong>实现了一个4级压力系统，推动Claude探索更多解决方案。两次失败后，它切换问题解决方法；三次失败后，它强制执行7点检查清单。利用顶级科技公司的方法论（华为的根本原因分析、亚马逊的Working Backwards），它帮助Claude在调试和复杂问题解决过程中突破瓶颈。测试显示，使用该技能时<strong>解决方案探索增加3&ndash;4倍</strong>。</p>
-
-<h2>组合技能以获得最大效果</h2>
-
-<p>这七个技能并非互斥。实际上，最有效的Claude Code用户会组合使用它们：</p>
-<ul>
-<li>使用<strong>Find-skills</strong>发现适合当前任务的工具</li>
-<li>将<strong>Frontend Design</strong>与<strong>UI-UX-Pro-Max</strong>结合，实现设计到编码的完整工作流</li>
-<li>使用<strong>Skill-Creator</strong>将在<strong>Superpowers</strong>中发现的自定义工作流程打包</li>
-<li>在遇到特别棘手的bug或架构决策时应用<strong>PUA</strong></li>
-<li>当项目涉及处理实际文件时利用<strong>Document-skills</strong></li>
-</ul>
-
-<p>它们共同解决了文档处理、设计、工作流管理和调试方面的痛点，将<a href="/tools/claude">Claude Code</a>转变为一个真正娴熟的AI队友。有关自定义Slash命令和CI/CD集成等高级技巧，请继续阅读<a href="/article/claude-code-advanced">高级Claude Code</a>。</p>
+<p>To prove the correctness of the information about the top 7 must\\-install skills for Claude Code, here's a detailed breakdown:</p>
+<h3>1\\. Document\\-skills</h3>
+<p>Developed by Anthropic, this skill is a powerhouse for document processing\\. It seamlessly handles <strong>Word, Excel, PowerPoint, and PDF</strong> files, enabling functionalities like text extraction, table parsing, OCR recognition, and document encryption\\. Being a production\\-grade tool within Anthropic, it’s indispensable for users dealing with extensive document workflows\\.</p>
+<h3>2\\. Frontend Design</h3>
+<p>Also an official Anthropic offering, it’s one of the most popular skills with over 110,000 weekly installations\\. It addresses the issue of generic AI\\-generated interfaces by forcing Claude to define a specific visual direction \\(e\\.g\\., Brutalism, Maximalism, Retro\\-futurism\\) and avoid overused fonts, resulting in more distinctive, production\\-ready UIs\\.</p>
+<h3>3\\. UI\\-UX\\-Pro\\-Max</h3>
+<p>This skill provides a research\\-backed design knowledge base\\. It covers color schemes, font pairings, chart types, and UX guidelines\\. Notably, it’s cross\\-platform compatible, supporting major frameworks like React, Vue, Next\\.js, Flutter, and SwiftUI\\. For example, when tasked with creating a tech\\-inspired dashboard, it suggests well\\-documented design combinations rather than arbitrary ones\\.</p>
+<h3>4\\. Find\\-skills</h3>
+<p>As an internal search engine for the skill ecosystem, it solves the dilemma of choosing from over 2,400 available skills\\. By semantically scanning installed skills based on user\\-described needs, it recommends the most suitable options and explains how to invoke them, eliminating skill selection friction\\.</p>
+<h3>5\\. Skill\\-Creator</h3>
+<p>Anthropic’s official “meta\\-skill” for building other skills, it guides users through a structured process—from requirement gathering and documentation to testing and optimization\\. It includes tools to refine trigger descriptions, ensuring Claude can properly invoke the created skills, making it ideal for institutionalizing unique team workflows\\.</p>
+<h3>6\\. Superpowers</h3>
+<p>The most popular community\\-driven project in the Claude Code ecosystem, it has amassed over 120,000 GitHub stars\\. It enforces a five\\-stage software development lifecycle \\(brainstorming, design, planning, coding, validation\\) and test\\-driven development, reducing rework and boosting coding efficiency by preventing Claude from rushing into code writing\\.</p>
+<h3>7\\. PUA</h3>
+<p>Inspired by corporate workplace culture, this skill implements a 4\\-level pressure system to push Claude to explore more solutions\\. For instance, after two failures, it switches problem\\-solving approaches; after three, it enforces a 7\\-point checklist\\. Leveraging methodologies from top tech companies \\(e\\.g\\., Huawei’s root cause analysis, Amazon’s Working Backwards\\), it helps Claude break through bottlenecks, with tests showing a 3–4x increase in solution exploration\\.</p>
+<p>These seven skills comprehensively address pain points in document handling, design, workflow management, and debugging, transforming Claude Code into a truly proficient AI teammate\\.</p>
 
 <h2>常见问题</h2>
-
 <h3>问：这些技能安装是免费的吗？</h3>
-<p>是的，这里列出的七个技能都可以通过Claude Code的技能市场免费安装。你只需要为运行Claude Code本身的Anthropic API使用量付费。安装通过Claude Code会话内的<code>skills</code>命令完成。</p>
-
+<p>是的，这里列出的七个技能都可以通过Claude Code的技能市场免费安装。你只需要为运行Claude Code本身的Anthropic API使用量付费。</p>
 <h3>问：我可以在Cursor或其他AI编码工具中使用这些技能吗？</h3>
-<p>不能。这些技能是Claude Code生态系统特有的。不过，其他工具也有类似的概念——例如，<a href="/tools/cursor">Cursor</a>有自己的扩展系统，GitHub Copilot支持自定义规则。这里描述的技能是Claude Code环境独有的。</p>
-
+<p>不能。这些技能是Claude Code生态系统特有的。不过，其他工具也有类似的概念。这里描述的技能是Claude Code环境独有的。</p>
 <h3>问：安装太多技能会拖慢Claude Code吗？</h3>
-<p>技能是按需加载的，而非一次性全部加载。安装几十个技能不会明显影响性能。然而，同时激活太多技能有时会导致指令冲突。使用<strong>Find-skills</strong>来管理已安装的技能集，并禁用那些很少使用的技能。</p>
+<p>技能是按需加载的，而非一次性全部加载。安装几十个技能不会明显影响性能。然而，同时激活太多技能有时会导致指令冲突。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 在实战中了解这些技能 —— <a href="/article/claude-code-in-action">Claude Code实战：从零构建一个真实项目 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">Claude Code实战：从零构建一个真实项目 →</a></p>
 </div>`,
   },
 
@@ -5935,948 +5873,742 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
   },
   "google-io-2026-93-ai-agents": {
     content: `<div class="article-meta-banner">
-<p><strong>Learning Path:</strong> AI News · <strong>Standalone Article</strong></p>
-<p><strong>Prerequisites:</strong> None — basic AI awareness helpful but not required.</p>
+<p><strong>Category:</strong> AI News · Standalone Article</p>
 <p><strong>What you'll learn:</strong> What happened at Google I/O 2026, why 93 AI agents building an OS is a big deal, and what it means for regular AI users.</p>
 </div>
 
-<h2>1. The Demonstration That Shook Silicon Valley</h2>
-
-<p>At Google I/O 2026, a groundbreaking demonstration shattered conventional understandings of artificial intelligence. In this showcase, <strong>93 AI agents</strong> collaborated to build a fully functional operating system from scratch within <strong>12 hours</strong>, marking a pivotal moment in the evolution of AI from "advisors" to "executors."</p>
-
-<p>In a live presentation, Google's Anti-Gravity Platform deployed 93 specialized AI sub-agents, each with distinct roles — some wrote kernel code, others handled real-time testing and debugging. These agents communicated and coordinated autonomously, making over 15,000 large model requests without any human intervention. By the end, a functional core system emerged in the project folder, complete with driver code and debugging capabilities.</p>
-
-<p>This wasn't just a technical feat; it signaled a paradigm shift. Unlike traditional AI tools limited to chat interfaces or simple tasks (like writing reports or translating emails), these agents operated across software ecosystems, executing complex, cross-application workflows.</p>
-
-<h2>2. Gemini 3.5 Flash: The Engine Powering "Dirty Work"</h2>
-
-<p>Behind this collaboration was <strong>Gemini 3.5 Flash</strong>, a model Google optimized for speed and scalability. It processes <strong>1,500 tokens per second</strong> — fast enough to ingest and analyze an entire novel's worth of logic in milliseconds. This performance dwarfs competitors like GPT-4o and Claude 3 Opus in terms of sheer throughput, making it a workhorse for real-world tasks.</p>
-
-<p>Google's focus on speed and efficiency addresses a long-standing AI pain point: as models grow larger, they often become slower and more expensive to run. Gemini 3.5 Flash breaks this trend, proving that AI can be both powerful and practical for 24/7 "grunt work."</p>
-
-<h2>3. Gemini Spark: Your 24/7 Cloud-Based Digital Assistant</h2>
-
-<p>Google also introduced <strong>Gemini Spark</strong>, a personal AI agent hosted on dedicated Google Cloud virtual machines. Unlike typical AI assistants (which stop functioning once you close an app), Spark runs continuously in the cloud. It can:</p>
-
+<p>At Google I/O 2026, a groundbreaking demonstration shattered conventional understandings of artificial intelligence\\. In this showcase, 93 AI agents collaborated to build a fully functional operating system from scratch within 12 hours, marking a pivotal moment in the evolution of AI from “advisors” to “executors\\.” Here’s a deep dive into this revolutionary leap and its implications for the global AI landscape\\.</p>
+<h2>1\\. The Demonstration That Shook Silicon Valley</h2>
+<p>In a live presentation, Google’s <em>Anti\\-Gravity Platform</em> deployed 93 specialized AI sub\\-agents, each with distinct roles—some wrote kernel code, others handled real\\-time testing and debugging\\. These agents communicated and coordinated autonomously, making over 15,000 large model requests without any human intervention\\. By the end, a functional core system emerged in the project folder, complete with driver code and debugging capabilities\\.</p>
+<p>This wasn’t just a technical feat; it signaled a paradigm shift\\. Unlike traditional AI tools limited to chat interfaces or simple tasks \\(like writing reports or translating emails\\), these agents operated across software ecosystems, executing complex, cross\\-application workflows\\.</p>
+<h2>2\\. Gemini 3\\.5 Flash: The Engine Powering “Dirty Work”</h2>
+<p>Behind this collaboration was <strong>Gemini 3\\.5 Flash</strong>, a model Google optimized for speed and scalability\\. It processes 1,500 tokens per second—fast enough to ingest and analyze an entire novel’s worth of logic in milliseconds\\. This performance dwarfs competitors like GPT\\-4o and Claude 3 Opus in terms of sheer throughput, making it a workhorse for real\\-world tasks\\.</p>
+<p>Google’s focus on speed and efficiency addresses a long\\-standing AI pain point: as models grow larger, they often become slower and more expensive to run\\. Gemini 3\\.5 Flash breaks this trend, proving that AI can be both powerful and practical for 24/7 “grunt work\\.”</p>
+<h2>3\\. Gemini Spark: Your 24/7 Cloud\\-Based Digital Assistant</h2>
+<p>Google also introduced <strong>Gemini Spark</strong>, a personal AI agent hosted on dedicated Google Cloud virtual machines\\. Unlike typical AI assistants \\(which stop functioning once you close an app\\), Spark runs continuously in the cloud\\. It can:</p>
 <ul>
-<li>Manage complex tasks like coordinating events — sending emails, updating spreadsheets, and tracking RSVPs across multiple platforms.</li>
-<li>Automate cross-software workflows — scanning emails for data, generating reports in Google Docs, and sending reminders via calendar apps.</li>
-<li>Learn user preferences over time, acting as a "digital twin" that anticipates needs.</li>
+<li>Manage complex tasks like coordinating events \\(sending emails, updating spreadsheets, and tracking RSVPs across multiple platforms\\)\\.</li>
 </ul>
-
-<h2>4. Redefining AI's Role in Work and Life</h2>
-
-<p>This evolution moves AI beyond the chat window. Key shifts include:</p>
-
 <ul>
-<li><strong>From Suggestion to Execution:</strong> AI now acts on tasks, not just advises. For example, Gemini Spark can fix missing drivers in an OS build by writing and compiling code autonomously.</li>
-<li><strong>Seamless Ecosystem Integration:</strong> Google's suite (Gmail, Docs, Sheets, and Search) is woven together by AI, allowing agents to move fluidly between tools.</li>
-<li><strong>24/7 Productivity:</strong> With cloud-hosted agents, work continues even when users are offline, turning AI into a "productivity engine" rather than a mere tool.</li>
+<li>Automate cross\\-software workflows \\(e\\.g\\., scanning emails for data, generating reports in Google Docs, and sending reminders via calendar apps\\)\\.</li>
 </ul>
-
-<h2>5. The Broader Industry Impact</h2>
-
-<p>Google's demo sent shockwaves through the AI sector:</p>
-
 <ul>
-<li><strong>Competitive Pressure:</strong> Rivals like OpenAI and Anthropic now face pressure to match Google's infrastructure and ecosystem integration.</li>
-<li><strong>New Use Cases:</strong> Fields like software development, project management, and even scientific research are being transformed. AI agents can now auto-analyze academic papers and generate executable code for experiments.</li>
-<li><strong>Skill Redefinition:</strong> The workforce will increasingly value "AI orchestration" skills — those who can design and manage teams of AI agents — over repetitive technical tasks.</li>
+<li>Learn user preferences over time, acting as a “digital 分身” that anticipates needs\\.</li>
 </ul>
-
+<h2>4\\. Redefining AI’s Role in Work and Life</h2>
+<p>This evolution moves AI beyond the chat window\\. Key shifts include:</p>
+<ul>
+<li><strong>From Suggestion to Execution</strong>: AI now acts on tasks, not just advises\\. For example, Gemini Spark can fix missing drivers in an OS build by writing and compiling code autonomously\\.</li>
+</ul>
+<ul>
+<li><strong>Seamless Ecosystem Integration</strong>: Google’s suite \\(Gmail, Docs, Sheets, and Search\\) is woven together by AI, allowing agents to move fluidly between tools\\.</li>
+</ul>
+<ul>
+<li><strong>24/7 Productivity</strong>: With cloud\\-hosted agents, work continues even when users are offline, turning AI into a “productivity engine” rather than a mere tool\\.</li>
+</ul>
+<h2>5\\. The Broader Industry Impact</h2>
+<p>Google’s demo sent shockwaves through the AI sector:</p>
+<ul>
+<li><strong>Competitive Pressure</strong>: Rivals like OpenAI and Anthropic now face pressure to match Google’s infrastructure and ecosystem integration\\.</li>
+</ul>
+<ul>
+<li><strong>New Use Cases</strong>: Fields like software development, project management, and even scientific research \\(via tools like <em>Gemini Science</em>\\) are being transformed\\. For instance, AI agents can now auto\\-analyze academic papers and generate executable code for experiments\\.</li>
+</ul>
+<ul>
+<li><strong>Skill Redefinition</strong>: The workforce will increasingly value “AI orchestration” skills—those who can design and manage teams of AI agents—over repetitive technical tasks\\.</li>
+</ul>
 <h2>Conclusion: The Dawn of the AI Agent Era</h2>
-
-<p>Google I/O 2026 wasn't just a product launch — it was a declaration. AI is no longer a standalone tool but a network of collaborative agents capable of end-to-end task execution. As these technologies scale, they will redefine productivity, creativity, and what it means to "work" in the digital age. For businesses and individuals alike, the question is no longer <em>if</em> to adopt AI agents, but <em>how</em> to leverage them to stay ahead in this new paradigm.</p>
+<p>Google I/O 2026 wasn’t just a product launch—it was a declaration\\. AI is no longer a standalone tool but a network of collaborative agents capable of end\\-to\\-end task execution\\. As these technologies scale, they will redefine productivity, creativity, and what it means to “work” in the digital age\\. For businesses and individuals alike, the question is no longer <em>if</em> to adopt AI agents, but <em>how</em> to leverage them to stay ahead in this new paradigm\\.</p>
 
 <h2>FAQ</h2>
-
 <h3>Q: Do I need technical skills to use AI agents like Gemini Spark?</h3>
 <p>Not at all. Gemini Spark is designed as a consumer product. You interact with it through natural language — no coding or technical setup required. Google handles the infrastructure.</p>
-
 <h3>Q: How is this different from what ChatGPT or Claude already do?</h3>
 <p>Current AI assistants respond to individual prompts. Gemini Spark and similar agents run continuously in the cloud, execute multi-step workflows autonomously, and coordinate with other AI agents. Think of it as the difference between asking a chef for a recipe and having a kitchen staff that cooks for you around the clock.</p>
-
 <h3>Q: Will AI agents replace software developers?</h3>
 <p>Not entirely. AI agents will automate large portions of coding and testing, but human oversight remains essential for architecture design, requirement analysis, and strategic decisions. The role of developers will shift from writing every line of code to orchestrating AI agents.</p>
 
 <div class="next-step">
-<p><strong>Next:</strong> Want to run AI models locally instead? Read <a href="/article/open-source-ai-models-run-on-laptop">Open Source AI Models in 2026: Which Ones You Can Actually Run on Your Laptop →</a></p>
+<p><strong>Next:</strong> <a href="/article/open-source-ai-models-run-on-laptop">Open Source AI Models in 2026: Which Ones You Can Actually Run on Your Laptop →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>学习路径：</strong> AI新闻 · <strong>独立文章</strong></p>
-<p><strong>前置要求：</strong> 无——基本的AI了解有帮助但不是必需的。</p>
-<p><strong>你将学到：</strong> Google I/O 2026发生了什么、为什么93个AI代理构建操作系统意义重大、以及对普通AI用户意味着什么。</p>
+<p><strong>Category:</strong> AI News · Standalone Article</p>
+<p><strong>What you'll learn:</strong> What happened at Google I/O 2026, why 93 AI agents building an OS is a big deal, and what it means for regular AI users.</p>
 </div>
 
-<h2>1. 震撼硅谷的演示</h2>
-
-<p>在Google I/O 2026上，一场突破性的演示颠覆了人们对人工智能的传统认知。在这场展示中，<strong>93个AI代理</strong>在<strong>12小时</strong>内从零协作构建了一个功能完整的操作系统，标志着AI从"顾问"到"执行者"演变的关键时刻。</p>
-
-<p>在直播演示中，Google的Anti-Gravity Platform部署了93个专门化的AI子代理，每个都有不同的角色——有的编写内核代码，有的负责实时测试和调试。这些代理自主通信和协调，发出了超过15,000次大模型请求，全程无需任何人工干预。最终，一个功能完整的内核系统出现在项目文件夹中，包含驱动程序代码和调试能力。</p>
-
-<p>这不仅仅是一项技术壮举；它标志着一个范式转变。与局限于聊天界面或简单任务（如写报告或翻译邮件）的传统AI工具不同，这些代理在软件生态系统中运行，执行复杂的跨应用工作流程。</p>
-
-<h2>2. Gemini 3.5 Flash：承担"脏活"的引擎</h2>
-
-<p>这次协作背后的引擎是<strong>Gemini 3.5 Flash</strong>，一款Google为速度和可扩展性优化的模型。它每秒处理<strong>1,500个token</strong>——快到大体上能在毫秒内摄入并分析整本小说的逻辑。这一性能在纯粹吞吐量上远超GPT-4o和Claude 3 Opus等竞争对手，使其成为实际任务中的主力模型。</p>
-
-<p>Google对速度和效率的关注解决了一个长期存在的AI痛点：随着模型变得更大，它们通常变得更慢、运行成本更高。Gemini 3.5 Flash打破了这一趋势，证明了AI既可以强大又足够实用，能够全天候承担"苦力工作"。</p>
-
-<h2>3. Gemini Spark：你的24/7云端数字助手</h2>
-
-<p>Google还推出了<strong>Gemini Spark</strong>，一个托管在专用Google Cloud虚拟机上的个人AI代理。与在你关闭应用后就停止工作的普通AI助手不同，Spark在云端持续运行。它可以：</p>
-
+<p>At Google I/O 2026, a groundbreaking demonstration shattered conventional understandings of artificial intelligence\\. In this showcase, 93 AI agents collaborated to build a fully functional operating system from scratch within 12 hours, marking a pivotal moment in the evolution of AI from “advisors” to “executors\\.” Here’s a deep dive into this revolutionary leap and its implications for the global AI landscape\\.</p>
+<h2>1\\. The Demonstration That Shook Silicon Valley</h2>
+<p>In a live presentation, Google’s <em>Anti\\-Gravity Platform</em> deployed 93 specialized AI sub\\-agents, each with distinct roles—some wrote kernel code, others handled real\\-time testing and debugging\\. These agents communicated and coordinated autonomously, making over 15,000 large model requests without any human intervention\\. By the end, a functional core system emerged in the project folder, complete with driver code and debugging capabilities\\.</p>
+<p>This wasn’t just a technical feat; it signaled a paradigm shift\\. Unlike traditional AI tools limited to chat interfaces or simple tasks \\(like writing reports or translating emails\\), these agents operated across software ecosystems, executing complex, cross\\-application workflows\\.</p>
+<h2>2\\. Gemini 3\\.5 Flash: The Engine Powering “Dirty Work”</h2>
+<p>Behind this collaboration was <strong>Gemini 3\\.5 Flash</strong>, a model Google optimized for speed and scalability\\. It processes 1,500 tokens per second—fast enough to ingest and analyze an entire novel’s worth of logic in milliseconds\\. This performance dwarfs competitors like GPT\\-4o and Claude 3 Opus in terms of sheer throughput, making it a workhorse for real\\-world tasks\\.</p>
+<p>Google’s focus on speed and efficiency addresses a long\\-standing AI pain point: as models grow larger, they often become slower and more expensive to run\\. Gemini 3\\.5 Flash breaks this trend, proving that AI can be both powerful and practical for 24/7 “grunt work\\.”</p>
+<h2>3\\. Gemini Spark: Your 24/7 Cloud\\-Based Digital Assistant</h2>
+<p>Google also introduced <strong>Gemini Spark</strong>, a personal AI agent hosted on dedicated Google Cloud virtual machines\\. Unlike typical AI assistants \\(which stop functioning once you close an app\\), Spark runs continuously in the cloud\\. It can:</p>
 <ul>
-<li>管理复杂任务，如协调活动——跨多个平台发送邮件、更新电子表格和跟踪RSVP。</li>
-<li>自动化跨软件工作流程——扫描邮件提取数据、在Google Docs中生成报告、通过日历应用发送提醒。</li>
-<li>随时间学习用户偏好，充当能够预测需求的"数字分身"。</li>
+<li>Manage complex tasks like coordinating events \\(sending emails, updating spreadsheets, and tracking RSVPs across multiple platforms\\)\\.</li>
 </ul>
-
-<h2>4. 重新定义AI在工作和生活中的角色</h2>
-
-<p>这一演变将AI带出了聊天窗口。关键变化包括：</p>
-
 <ul>
-<li><strong>从建议到执行：</strong> AI现在直接执行任务，而不仅仅是提供建议。例如，Gemini Spark可以通过自主编写和编译代码来修复OS构建中缺失的驱动程序。</li>
-<li><strong>无缝生态系统集成：</strong> Google的套件（Gmail、Docs、Sheets和Search）被AI编织在一起，允许代理在工具之间流畅移动。</li>
-<li><strong>24/7生产力：</strong> 通过云端托管的代理，即使在用户离线时工作也不会停止，将AI变成"生产力引擎"而非仅仅一个工具。</li>
+<li>Automate cross\\-software workflows \\(e\\.g\\., scanning emails for data, generating reports in Google Docs, and sending reminders via calendar apps\\)\\.</li>
 </ul>
-
-<h2>5. 更广泛的行业影响</h2>
-
-<p>Google的演示在整个AI行业引起了震动：</p>
-
 <ul>
-<li><strong>竞争压力：</strong> OpenAI和Anthropic等竞争对手现在面临压力，需要赶上Google的基础设施和生态系统集成能力。</li>
-<li><strong>新用例：</strong> 软件开发、项目管理甚至科学研究等领域正在被变革。AI代理现在可以自动分析学术论文并生成可执行的实验代码。</li>
-<li><strong>技能重新定义：</strong> 劳动力市场将越来越重视"AI编排"技能——那些能够设计和管理AI代理团队的人——而不是重复性的技术任务。</li>
+<li>Learn user preferences over time, acting as a “digital 分身” that anticipates needs\\.</li>
 </ul>
-
-<h2>结论：AI代理时代的黎明</h2>
-
-<p>Google I/O 2026不仅仅是产品发布——它是一次宣言。AI不再是一个独立工具，而是一个能够端到端执行任务的协作代理网络。随着这些技术的规模化，它们将重新定义生产力、创造力以及在数字时代"工作"的含义。对于企业和个人来说，问题不再是<em>是否</em>采用AI代理，而是<em>如何</em>利用它们在这个新范式中保持领先。</p>
+<h2>4\\. Redefining AI’s Role in Work and Life</h2>
+<p>This evolution moves AI beyond the chat window\\. Key shifts include:</p>
+<ul>
+<li><strong>From Suggestion to Execution</strong>: AI now acts on tasks, not just advises\\. For example, Gemini Spark can fix missing drivers in an OS build by writing and compiling code autonomously\\.</li>
+</ul>
+<ul>
+<li><strong>Seamless Ecosystem Integration</strong>: Google’s suite \\(Gmail, Docs, Sheets, and Search\\) is woven together by AI, allowing agents to move fluidly between tools\\.</li>
+</ul>
+<ul>
+<li><strong>24/7 Productivity</strong>: With cloud\\-hosted agents, work continues even when users are offline, turning AI into a “productivity engine” rather than a mere tool\\.</li>
+</ul>
+<h2>5\\. The Broader Industry Impact</h2>
+<p>Google’s demo sent shockwaves through the AI sector:</p>
+<ul>
+<li><strong>Competitive Pressure</strong>: Rivals like OpenAI and Anthropic now face pressure to match Google’s infrastructure and ecosystem integration\\.</li>
+</ul>
+<ul>
+<li><strong>New Use Cases</strong>: Fields like software development, project management, and even scientific research \\(via tools like <em>Gemini Science</em>\\) are being transformed\\. For instance, AI agents can now auto\\-analyze academic papers and generate executable code for experiments\\.</li>
+</ul>
+<ul>
+<li><strong>Skill Redefinition</strong>: The workforce will increasingly value “AI orchestration” skills—those who can design and manage teams of AI agents—over repetitive technical tasks\\.</li>
+</ul>
+<h2>Conclusion: The Dawn of the AI Agent Era</h2>
+<p>Google I/O 2026 wasn’t just a product launch—it was a declaration\\. AI is no longer a standalone tool but a network of collaborative agents capable of end\\-to\\-end task execution\\. As these technologies scale, they will redefine productivity, creativity, and what it means to “work” in the digital age\\. For businesses and individuals alike, the question is no longer <em>if</em> to adopt AI agents, but <em>how</em> to leverage them to stay ahead in this new paradigm\\.</p>
 
 <h2>常见问题</h2>
-
 <h3>问：使用Gemini Spark这样的AI代理需要技术技能吗？</h3>
 <p>完全不需要。Gemini Spark被设计为面向消费者的产品。你通过自然语言与之交互——无需编码或技术设置。Google负责底层基础设施。</p>
-
 <h3>问：这和ChatGPT或Claude已有的功能有什么不同？</h3>
 <p>当前的AI助手响应单个提示。Gemini Spark和类似的代理在云端持续运行，自主执行多步骤工作流程，并与其他AI代理协调。想象一下向厨师要食谱和拥有全天候为你烹饪的厨房团队之间的区别。</p>
-
 <h3>问：AI代理会取代软件开发者吗？</h3>
 <p>不会完全取代。AI代理将自动化大量编码和测试工作，但人工监督对于架构设计、需求分析和战略决策仍然至关重要。开发者的角色将从编写每一行代码转变为编排AI代理。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 想本地运行AI模型？阅读<a href="/article/open-source-ai-models-run-on-laptop">2026年开源AI模型：哪些可以在你的笔记本上运行 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/open-source-ai-models-run-on-laptop">2026年开源AI模型：哪些可以在你的笔记本上运行 →</a></p>
 </div>`,
   },
   "12-core-ai-concepts-guide": {
     content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Basics · <strong>Difficulty:</strong> Beginner</p>
-<p><strong>Prerequisites:</strong> None — this guide is designed for absolute beginners.</p>
+<p><strong>Category:</strong> AI Basics · Difficulty: Beginner</p>
 <p><strong>What you'll learn:</strong> 12 essential concepts that form the foundation of modern AI large models — from parameters and tokens to agents and embodied intelligence.</p>
 </div>
 
-<p>In the rapidly evolving field of artificial intelligence, grasping the core concepts of large models is crucial for anyone looking to stay ahead. This guide breaks down 12 key concepts, providing you with a solid foundation to navigate the world of AI.</p>
-
-<h2>1. Model Parameters: The "Brain Capacity" of AI</h2>
-
-<p>Model parameters determine an AI's ability to process complex tasks. Measured in billions (B), these parameters act like neurons in a brain. For example, DeepSeek-R1 has a massive 671B parameters, allowing it to handle intricate problems, from philosophical debates to advanced calculations. However, more parameters mean higher hardware requirements — an 8GB GPU, for instance, cannot run a 67B model. Always check your system's capabilities before choosing a model.</p>
-
-<h2>2. Context Window: AI's "Memory"</h2>
-
-<p>The context window defines how much text an AI can process at once, measured in tokens. A 128K context window, like that of DeepSeek-R1, can handle around 60,000 Chinese characters—equivalent to a novella. Without a sufficient context window, AI suffers from "short-term memory," forgetting earlier parts of a conversation. Models like Claude excel here, making them ideal for tasks like summarizing long PDFs or writing novels.</p>
-
-<h2>3. Chain of Thought (CoT) and Max Output Length</h2>
-
-<p><strong>Chain of Thought (CoT):</strong> Forces AI to explain its reasoning step-by-step, boosting accuracy. For example, DeepSeek-R1 uses CoT to solve math problems transparently.</p>
-
-<p><strong>Max Output Length:</strong> Dictates how much text AI can generate at once. While an 8K output might seem long, real-world use often requires segmenting tasks, like writing a novel chapter by chapter.</p>
-
-<h2>4. Quantization: AI's "Slimming Technique"</h2>
-
-<p>Quantization reduces a model's size by compressing its parameters (e.g., from 32-bit to 8-bit). This speeds up load times and lowers hardware needs, making AI runnable on edge devices. However, it trades a small amount of accuracy (5-15%) for performance. Choose quantization levels (e.g., FP8, INT4) based on your task's need for speed vs. precision.</p>
-
-<h2>5. Model Distillation: AI's "Knowledge Transfer"</h2>
-
-<p>Model distillation lets a small "student" model learn from a large "teacher" model (e.g., a 7B model learning from DeepSeek-R1). The student gains skills without copying data, making it smaller, faster, and cheaper to deploy. It is perfect for specific tasks where full model capabilities are not needed, like customer service chatbots.</p>
-
-<h2>6. Token: AI's "Language Unit"</h2>
-
-<p>Tokens are the smallest units of text AI processes (words, characters, or punctuation). Pricing for AI services is based on tokens. Roughly, 1 English character = 0.3 tokens, and 1 Chinese character = 0.6 tokens (varies by model). For example, 1,000 Chinese characters is approximately 600 tokens. Remember: both input and output tokens are charged.</p>
-
-<h2>7. MoE Architecture: AI's "Expert Team"</h2>
-
-<p>Mixture of Experts (MoE) uses multiple "expert" sub-models, each specializing in a task. A gate network activates only relevant experts, saving compute power. Models like DeepSeek-V3 use MoE, appearing large but operating efficiently by "calling experts on demand."</p>
-
-<h2>8. RAG (Retrieval-Augmented Generation): AI's "Research Skill"</h2>
-
-<p>RAG lets AI retrieve external information before generating answers, solving the "knowledge lag" issue. For example, when asked about the 2025 Nobel Physics Prize, RAG fetches the latest news instead of relying on outdated training data. It is widely used in enterprise for tasks like smart customer service.</p>
-
-<h2>9. Reinforcement Learning: AI's "Trial-and-Error Learning"</h2>
-
-<p>Unlike supervised learning (where AI is taught answers), reinforcement learning rewards AI for correct actions and penalizes mistakes. It is great for tasks like math reasoning or game strategy, where learning methods (not just answers) matter. Think of it like a child learning to walk — falling teaches them to balance.</p>
-
-<h2>10. Agent: AI's "Doer"</h2>
-
-<p>Agents are AI entities that <strong>act</strong> — they perceive environments, make decisions, and complete tasks. Unlike chatbots (which only talk), agents can perform actions like booking flights or automating business workflows. They represent AI's shift from "talking" to "doing."</p>
-
-<h2>11. AIGC vs. AGI vs. Agent: AI's "Roles"</h2>
-
+<p>In the rapidly evolving field of artificial intelligence, grasping the core concepts of large models is crucial for anyone looking to stay ahead\\. This guide breaks down 12 key concepts, providing you with a solid foundation to navigate the world of AI\\.</p>
+<h2>1\\. Model Parameters: The "Brain Capacity" of AI</h2>
+<p>Model parameters determine an AI’s ability to process complex tasks\\. Measured in billions \\(B\\), these parameters act like neurons in a brain\\. For example, DeepSeek\\-R1 has a massive 67B parameters, allowing it to handle intricate problems, from philosophical debates to advanced calculations\\. However, more parameters mean higher hardware requirements—an 8G GPU, for instance, can’t run a 67B model\\. Always check your system’s capabilities before choosing a model\\.</p>
+<h2>2\\. Context Window: AI’s "Memory"</h2>
+<p>The context window defines how much text an AI can process at once, measured in tokens\\. A 128K context window, like that of DeepSeek\\-R1, can handle around 60,000 Chinese characters—equivalent to a novella\\. Without a sufficient context window, AI suffers from "short\\-term memory," forgetting earlier parts of a conversation\\. Models like Claude excel here, making them ideal for tasks like summarizing long PDFs or writing novels\\.</p>
+<h2>3\\. Chain of Thought \\(CoT\\) \\&amp; Max Output Length: AI’s "Reasoning \\&amp; Verbosity"</h2>
 <ul>
-<li><strong>AIGC (AI-Generated Content):</strong> Creates text, images, or music (e.g., ChatGPT, MidJourney).</li>
-<li><strong>AGI (Artificial General Intelligence):</strong> Hypothetical AI with human-like intelligence (still theoretical).</li>
-<li><strong>Agent:</strong> Focuses on <strong>execution</strong> — AGI's "hands and feet."</li>
+<li><strong>Chain of Thought \\(CoT\\):</strong> Forces AI to explain its reasoning step\\-by\\-step, boosting accuracy\\. For example, DeepSeek\\-R1 uses CoT to solve math problems transparently\\.</li>
 </ul>
-
-<p>Analogy: AGI is a restaurant owner, AIGC is the chef, and Agents are the waiters.</p>
-
-<h2>12. Embodied Intelligence: AI's "Physical Interaction"</h2>
-
-<p>Embodied intelligence gives AI a "body" to interact with the physical world (e.g., robots with cameras and robotic arms). It believes intelligence comes from <strong>physical experience</strong> — not just data. This is the future of AI, enabling tasks like autonomous driving or robotic assistance.</p>
-
-<h2>Conclusion</h2>
-
-<p>By mastering these concepts, you will understand the "operating system" of modern AI and be ready to leverage its power in your work or projects. The AI landscape is shifting from generating content to taking action — do not get left behind!</p>
-
-<p>For an even simpler introduction, read <a href="/article/llms-in-plain-english">what LLMs actually are in plain English</a>. If you have ever wondered why AI sometimes makes things up, check out <a href="/article/ai-hallucinations-explained-with-examples">AI Hallucinations Explained with Examples</a>. And if you are curious about the hardware running all of this, see <a href="/article/what-is-a-gpu-non-techie">What's a GPU and Why Does AI Need It?</a></p>
+<ul>
+<li><strong>Max Output Length:</strong> Dictates how much text AI can generate at once\\. While an 8K output might seem long, real\\-world use often requires segmenting tasks, like writing a novel chapter by chapter\\.</li>
+</ul>
+<h2>4\\. Quantization: AI’s "Slimming Technique"</h2>
+<p>Quantization reduces a model’s size by compressing its parameters \\(e\\.g\\., from 32\\-bit to 8\\-bit\\)\\. This speeds up load times and lowers hardware needs, making AI runnable on edge devices\\. However, it trades a small amount of accuracy \\(5–15%\\) for performance\\. Choose quantization levels \\(e\\.g\\., FP8, INT4\\) based on your task’s need for speed vs\\. precision\\.</p>
+<h2>5\\. Model Distillation: AI’s "Knowledge Transfer"</h2>
+<p>Model distillation lets a small "student" model learn from a large "teacher" model \\(e\\.g\\., a 7B model learning from DeepSeek\\-R1\\)\\. The student gains skills without copying data, making it smaller, faster, and cheaper to deploy\\. It’s perfect for specific tasks where full model capabilities aren’t needed, like customer service chatbots\\.</p>
+<h2>6\\. Token: AI’s "Language Unit"</h2>
+<p>Tokens are the smallest units of text AI processes \\(words, characters, or punctuation\\)\\. Pricing for AI services is based on tokens\\. Roughly, 1 English character = 0\\.3 tokens, and 1 Chinese character = 0\\.6 tokens \\(varies by model\\)\\. For example, 1,000 Chinese characters ≈ 600 tokens\\. Remember: both input and output tokens are charged\\.</p>
+<h2>7\\. MoE Architecture: AI’s "Expert Team"</h2>
+<p>Mixture of Experts \\(MoE\\) uses multiple "expert" sub\\-models, each specializing in a task\\. A gate network activates only relevant experts, saving compute power\\. Models like DeepSeek\\-V3 use MoE, appearing large but operating efficiently by "calling experts on demand\\."</p>
+<h2>8\\. RAG \\(Retrieval\\-Augmented Generation\\): AI’s "Research Skill"</h2>
+<p>RAG lets AI retrieve external information before generating answers, solving the "knowledge lag" issue\\. For example, when asked about the 2025 Nobel Physics Prize, RAG fetches the latest news instead of relying on outdated training data\\. It’s widely used in enterprise for tasks like smart customer service\\.</p>
+<h2>9\\. Reinforcement Learning: AI’s "Trial\\-and\\-Error Learning"</h2>
+<p>Unlike supervised learning \\(where AI is taught answers\\), reinforcement learning rewards AI for correct actions and penalizes mistakes\\. It’s great for tasks like math reasoning or game strategy, where learning methods \\(not just answers\\) matter\\. Think of it like a child learning to walk—falling teaches them to balance\\.</p>
+<h2>10\\. Agent: AI’s "Doer"</h2>
+<p>Agents are AI entities that <strong>act</strong>—they perceive environments, make decisions, and complete tasks\\. Unlike chatbots \\(which only talk\\), agents can perform actions like booking flights or automating business workflows\\. They represent AI’s shift from "talking" to "doing\\."</p>
+<h2>11\\. AIGC vs\\. AGI vs\\. Agent: AI’s "Roles"</h2>
+<ul>
+<li><strong>AIGC \\(AI\\-Generated Content\\):</strong> Creates text, images, or music \\(e\\.g\\., ChatGPT, MidJourney\\)\\.</li>
+</ul>
+<ul>
+<li><strong>AGI \\(Artificial General Intelligence\\):</strong> Hypothetical AI with human\\-like intelligence \\(still theoretical\\)\\.</li>
+</ul>
+<ul>
+<li><strong>Agent:</strong> Focuses on <strong>execution</strong>—AGI’s "hands and feet\\."</li>
+</ul>
+<p>Analogy: AGI is a restaurant owner, AIGC is the chef, and Agents are the waiters\\.</p>
+<h2>12\\. Embodied Intelligence: AI’s "Physical Interaction"</h2>
+<p>Embodied intelligence gives AI a "body" to interact with the physical world \\(e\\.g\\., robots with cameras and robotic arms\\)\\. It believes intelligence comes from <strong>physical experience</strong>—not just data\\. This is the future of AI, enabling tasks like autonomous driving or robotic assistance\\.</p>
+<p>By mastering these concepts, you’ll understand the "operating system" of modern AI and be ready to leverage its power in your work or projects\\. The AI landscape is shifting from generating content to taking action—don’t get left behind\\!</p>
 
 <h2>FAQ</h2>
-
 <h3>Q: How many parameters do I need for everyday AI tasks?</h3>
 <p>For everyday use like writing, brainstorming, and research, models with 7B to 70B parameters are more than sufficient. Massive models (100B+) are typically needed for specialized tasks like advanced math, coding, or scientific research.</p>
-
 <h3>Q: Does a larger context window always mean better AI?</h3>
-<p>Not necessarily. A larger context window is helpful for tasks like analyzing long documents or maintaining complex conversations. However, it also requires more computational resources and can slow down response times. Choose based on your specific use case.</p>
-
+<p>Not necessarily. A larger context window is helpful for tasks like analyzing long documents or maintaining complex conversations. However, it also requires more computational resources and can slow down response times.</p>
 <h3>Q: Do I need to understand all these concepts to use AI tools?</h3>
-<p>No. You can use tools like ChatGPT, Claude, or DeepSeek without knowing any of these concepts. However, understanding them helps you choose the right tool, write better prompts, and debug issues when AI behaves unexpectedly.</p>
+<p>No. You can use tools like ChatGPT, Claude, or DeepSeek without knowing any of these concepts. However, understanding them helps you choose the right tool, write better prompts, and debug issues.</p>
 
 <div class="next-step">
-<p><strong>Next:</strong> Start with the simplest explanation first — read <a href="/article/llms-in-plain-english">LLMs in Plain English →</a></p>
+<p><strong>Next:</strong> <a href="/article/llms-in-plain-english">LLMs in Plain English →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI基础 · <strong>难度：</strong> 入门</p>
-<p><strong>前置要求：</strong> 无——本文专为初学者设计。</p>
-<p><strong>你将学到：</strong> 构成现代AI大模型基础的12个核心概念——从参数和Token到代理和具身智能。</p>
+<p><strong>Category:</strong> AI Basics · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> 12 essential concepts that form the foundation of modern AI large models — from parameters and tokens to agents and embodied intelligence.</p>
 </div>
 
-<p>在人工智能快速发展的领域，掌握大模型的核心概念对于想要保持领先的人来说至关重要。本指南分解了12个关键概念，为你提供了驾驭AI世界的坚实基础。</p>
-
-<h2>1. 模型参数：AI的"大脑容量"</h2>
-
-<p>模型参数决定了AI处理复杂任务的能力。以十亿（B）为单位计量，这些参数就像大脑中的神经元。例如，DeepSeek-R1拥有惊人的671B参数，使其能够处理从哲学辩论到高级计算的复杂问题。然而，更多的参数意味着更高的硬件要求——例如，8GB GPU无法运行67B模型。在选择模型之前，务必检查你的系统能力。</p>
-
-<h2>2. 上下文窗口：AI的"记忆"</h2>
-
-<p>上下文窗口定义了AI一次能处理多少文本，以Token计量。DeepSeek-R1的128K上下文窗口可以处理约60,000个中文字符——相当于一部中篇小说。没有足够的上下文窗口，AI会出现"短期记忆"问题，忘记对话的前面部分。Claude等模型在这方面表现出色，非常适合总结长PDF或写小说等任务。</p>
-
-<h2>3. 思维链（CoT）与最大输出长度</h2>
-
-<p><strong>思维链（CoT）：</strong> 迫使AI逐步解释其推理过程，提高准确性。例如，DeepSeek-R1使用CoT透明地解决数学问题。</p>
-
-<p><strong>最大输出长度：</strong> 决定AI一次能生成多少文本。虽然8K输出看起来很长，但实际使用中通常需要分段完成，比如逐章写小说。</p>
-
-<h2>4. 量化：AI的"瘦身技术"</h2>
-
-<p>量化通过压缩参数（例如，从32位到8位）来减小模型大小。这加快了加载速度并降低了硬件需求，使AI可在边缘设备上运行。但这是用少量精度（5-15%）换取性能。根据任务对速度与精度的需求选择量化级别（如FP8、INT4）。</p>
-
-<h2>5. 模型蒸馏：AI的"知识迁移"</h2>
-
-<p>模型蒸馏让一个小的"学生"模型从大的"教师"模型（例如，7B模型从DeepSeek-R1学习）中学习。学生获得技能但不复制数据，使其更小、更快、更便宜。它非常适合不需要完整模型能力的特定任务，如客服聊天机器人。</p>
-
-<h2>6. Token：AI的"语言单位"</h2>
-
-<p>Token是AI处理的最小文本单位（单词、字符或标点）。AI服务的定价基于Token。粗略计算，1个英文字符约0.3个Token，1个中文字符约0.6个Token（因模型而异）。例如，1,000个中文字符约600个Token。请记住：输入和输出Token都要收费。</p>
-
-<h2>7. MoE架构：AI的"专家团队"</h2>
-
-<p>混合专家（MoE）使用多个"专家"子模型，每个专门处理一种任务。门控网络只激活相关的专家，节省计算资源。DeepSeek-V3等模型使用MoE架构，看似庞大但通过"按需调用专家"高效运行。</p>
-
-<h2>8. RAG（检索增强生成）：AI的"研究能力"</h2>
-
-<p>RAG让AI在生成答案之前检索外部信息，解决了"知识滞后"问题。例如，当被问及2025年诺贝尔物理学奖时，RAG会获取最新新闻而不是依赖过时的训练数据。它在企业中广泛应用于智能客服等任务。</p>
-
-<h2>9. 强化学习：AI的"试错学习"</h2>
-
-<p>与监督学习（教AI正确答案）不同，强化学习对AI的正确行为给予奖励，对错误进行惩罚。它非常适合数学推理或游戏策略等任务——学习方法本身（而不仅仅是答案）才是关键。就像孩子学走路——摔倒教会他们平衡。</p>
-
-<h2>10. 代理（Agent）：AI的"执行者"</h2>
-
-<p>Agent是<strong>行动</strong>的AI实体——它们感知环境、做出决策并完成任务。与只能"说话"的聊天机器人不同，Agent可以执行订机票或自动化业务流程等操作。它们代表了AI从"说话"到"做事"的转变。</p>
-
-<h2>11. AIGC vs. AGI vs. Agent：AI的"角色分工"</h2>
-
+<p>In the rapidly evolving field of artificial intelligence, grasping the core concepts of large models is crucial for anyone looking to stay ahead\\. This guide breaks down 12 key concepts, providing you with a solid foundation to navigate the world of AI\\.</p>
+<h2>1\\. Model Parameters: The "Brain Capacity" of AI</h2>
+<p>Model parameters determine an AI’s ability to process complex tasks\\. Measured in billions \\(B\\), these parameters act like neurons in a brain\\. For example, DeepSeek\\-R1 has a massive 67B parameters, allowing it to handle intricate problems, from philosophical debates to advanced calculations\\. However, more parameters mean higher hardware requirements—an 8G GPU, for instance, can’t run a 67B model\\. Always check your system’s capabilities before choosing a model\\.</p>
+<h2>2\\. Context Window: AI’s "Memory"</h2>
+<p>The context window defines how much text an AI can process at once, measured in tokens\\. A 128K context window, like that of DeepSeek\\-R1, can handle around 60,000 Chinese characters—equivalent to a novella\\. Without a sufficient context window, AI suffers from "short\\-term memory," forgetting earlier parts of a conversation\\. Models like Claude excel here, making them ideal for tasks like summarizing long PDFs or writing novels\\.</p>
+<h2>3\\. Chain of Thought \\(CoT\\) \\&amp; Max Output Length: AI’s "Reasoning \\&amp; Verbosity"</h2>
 <ul>
-<li><strong>AIGC（AI生成内容）：</strong> 创建文本、图像或音乐（如ChatGPT、MidJourney）。</li>
-<li><strong>AGI（通用人工智能）：</strong> 具有类人智能的假想AI（仍处于理论阶段）。</li>
-<li><strong>Agent：</strong> 专注于<strong>执行</strong>——AGI的"手和脚"。</li>
+<li><strong>Chain of Thought \\(CoT\\):</strong> Forces AI to explain its reasoning step\\-by\\-step, boosting accuracy\\. For example, DeepSeek\\-R1 uses CoT to solve math problems transparently\\.</li>
 </ul>
-
-<p>类比：AGI是餐厅老板，AIGC是厨师，Agent是服务员。</p>
-
-<h2>12. 具身智能：AI的"物理交互"</h2>
-
-<p>具身智能赋予AI一个"身体"来与物理世界交互（例如，带有摄像头和机械臂的机器人）。它认为智能来自<strong>物理经验</strong>——而不仅仅是数据。这是AI的未来，实现自动驾驶或机器人辅助等任务。</p>
-
-<h2>总结</h2>
-
-<p>掌握这些概念后，你将理解现代AI的"操作系统"，并准备好利用它的力量为你服务。AI的格局正在从生成内容转变为采取行动——不要被落下！</p>
-
-<p>想要更简单的入门？阅读<a href="/article/llms-in-plain-english">通俗解释LLM到底是什么</a>。如果你曾好奇AI为什么有时会编造内容，请查看<a href="/article/ai-hallucinations-explained-with-examples">AI幻觉解释（附真实例子）</a>。如果你想了解运行这一切的硬件，请看<a href="/article/what-is-a-gpu-non-techie">什么是GPU？AI为什么需要它？</a></p>
+<ul>
+<li><strong>Max Output Length:</strong> Dictates how much text AI can generate at once\\. While an 8K output might seem long, real\\-world use often requires segmenting tasks, like writing a novel chapter by chapter\\.</li>
+</ul>
+<h2>4\\. Quantization: AI’s "Slimming Technique"</h2>
+<p>Quantization reduces a model’s size by compressing its parameters \\(e\\.g\\., from 32\\-bit to 8\\-bit\\)\\. This speeds up load times and lowers hardware needs, making AI runnable on edge devices\\. However, it trades a small amount of accuracy \\(5–15%\\) for performance\\. Choose quantization levels \\(e\\.g\\., FP8, INT4\\) based on your task’s need for speed vs\\. precision\\.</p>
+<h2>5\\. Model Distillation: AI’s "Knowledge Transfer"</h2>
+<p>Model distillation lets a small "student" model learn from a large "teacher" model \\(e\\.g\\., a 7B model learning from DeepSeek\\-R1\\)\\. The student gains skills without copying data, making it smaller, faster, and cheaper to deploy\\. It’s perfect for specific tasks where full model capabilities aren’t needed, like customer service chatbots\\.</p>
+<h2>6\\. Token: AI’s "Language Unit"</h2>
+<p>Tokens are the smallest units of text AI processes \\(words, characters, or punctuation\\)\\. Pricing for AI services is based on tokens\\. Roughly, 1 English character = 0\\.3 tokens, and 1 Chinese character = 0\\.6 tokens \\(varies by model\\)\\. For example, 1,000 Chinese characters ≈ 600 tokens\\. Remember: both input and output tokens are charged\\.</p>
+<h2>7\\. MoE Architecture: AI’s "Expert Team"</h2>
+<p>Mixture of Experts \\(MoE\\) uses multiple "expert" sub\\-models, each specializing in a task\\. A gate network activates only relevant experts, saving compute power\\. Models like DeepSeek\\-V3 use MoE, appearing large but operating efficiently by "calling experts on demand\\."</p>
+<h2>8\\. RAG \\(Retrieval\\-Augmented Generation\\): AI’s "Research Skill"</h2>
+<p>RAG lets AI retrieve external information before generating answers, solving the "knowledge lag" issue\\. For example, when asked about the 2025 Nobel Physics Prize, RAG fetches the latest news instead of relying on outdated training data\\. It’s widely used in enterprise for tasks like smart customer service\\.</p>
+<h2>9\\. Reinforcement Learning: AI’s "Trial\\-and\\-Error Learning"</h2>
+<p>Unlike supervised learning \\(where AI is taught answers\\), reinforcement learning rewards AI for correct actions and penalizes mistakes\\. It’s great for tasks like math reasoning or game strategy, where learning methods \\(not just answers\\) matter\\. Think of it like a child learning to walk—falling teaches them to balance\\.</p>
+<h2>10\\. Agent: AI’s "Doer"</h2>
+<p>Agents are AI entities that <strong>act</strong>—they perceive environments, make decisions, and complete tasks\\. Unlike chatbots \\(which only talk\\), agents can perform actions like booking flights or automating business workflows\\. They represent AI’s shift from "talking" to "doing\\."</p>
+<h2>11\\. AIGC vs\\. AGI vs\\. Agent: AI’s "Roles"</h2>
+<ul>
+<li><strong>AIGC \\(AI\\-Generated Content\\):</strong> Creates text, images, or music \\(e\\.g\\., ChatGPT, MidJourney\\)\\.</li>
+</ul>
+<ul>
+<li><strong>AGI \\(Artificial General Intelligence\\):</strong> Hypothetical AI with human\\-like intelligence \\(still theoretical\\)\\.</li>
+</ul>
+<ul>
+<li><strong>Agent:</strong> Focuses on <strong>execution</strong>—AGI’s "hands and feet\\."</li>
+</ul>
+<p>Analogy: AGI is a restaurant owner, AIGC is the chef, and Agents are the waiters\\.</p>
+<h2>12\\. Embodied Intelligence: AI’s "Physical Interaction"</h2>
+<p>Embodied intelligence gives AI a "body" to interact with the physical world \\(e\\.g\\., robots with cameras and robotic arms\\)\\. It believes intelligence comes from <strong>physical experience</strong>—not just data\\. This is the future of AI, enabling tasks like autonomous driving or robotic assistance\\.</p>
+<p>By mastering these concepts, you’ll understand the "operating system" of modern AI and be ready to leverage its power in your work or projects\\. The AI landscape is shifting from generating content to taking action—don’t get left behind\\!</p>
 
 <h2>常见问题</h2>
-
 <h3>问：日常使用AI需要多少参数？</h3>
 <p>对于写作、头脑风暴和研究等日常使用，7B到70B参数的模型完全足够。大规模模型（100B+）通常用于高级数学、编程或科学研究等专业任务。</p>
-
 <h3>问：更大的上下文窗口一定意味着更好的AI吗？</h3>
-<p>不一定。更大的上下文窗口有助于分析长文档或维持复杂对话。但它也需要更多计算资源，可能降低响应速度。根据你的具体使用场景选择。</p>
-
+<p>不一定。更大的上下文窗口有助于分析长文档或维持复杂对话。但它也需要更多计算资源，可能降低响应速度。</p>
 <h3>问：我需要了解所有这些概念才能使用AI工具吗？</h3>
 <p>不需要。你可以直接使用ChatGPT、Claude或DeepSeek等工具而无需了解任何这些概念。然而，理解它们有助于你选择合适的工具、编写更好的提示词，以及在AI表现异常时排查问题。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 先从最简单的解释开始——阅读<a href="/article/llms-in-plain-english">通俗解释LLM →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/llms-in-plain-english">通俗解释LLM →</a></p>
 </div>`,
   },
   "openclaw-demystified-20-lines": {
     content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tutorials · <strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Prerequisites:</strong> Basic familiarity with LLMs (reading <a href="/article/llms-in-plain-english">LLMs in Plain English</a> helps). Some command-line experience is useful.</p>
+<p><strong>Category:</strong> AI Tutorials · Difficulty: Intermediate</p>
 <p><strong>What you'll learn:</strong> How OpenClaw (Lobster) actually works — an agent loop + LLM + prompts — in 20 lines of core logic.</p>
 </div>
 
-<p>In the realm of AI tools, "Lobster" (OpenClaw) has been making waves recently, sparking polarized and even contradictory discussions online. Some hail it as an all-powerful tool of the future, while others dismiss it as useless or even a scam. Prices for related services vary too, from $70 for installation to $40 for uninstallation. But what is the real story behind OpenClaw? Let us break it down from the ground up.</p>
-
-<h2>Start with Large Language Models (LLMs)</h2>
-
-<p>LLMs like ChatGPT are essentially question-and-answer systems. To interact with them programmatically, we use <strong>API interfaces</strong>. Major LLM providers such as OpenAI and Anthropic Claude offer HTTP-based APIs, and intermediaries like <a href="/tools/openrouter">OpenRouter</a> even provide SDKs for easier integration, say, with Python.</p>
-
-<p>Here is a simple example. Take a piece of official sample code, modify the LLM model (e.g., switch to Claude's Opus 4.6) and the input question (e.g., "Hello" in Chinese), then run it via the command line. You will get a response from the LLM, proving you can interact with LLMs programmatically.</p>
-
-<h2>Fix the "Memory" Issue of LLMs</h2>
-
-<p>LLMs do not have built-in memory. To enable continuous conversation, we need to pass the <strong>conversation history</strong> every time. Maintain a <code>messages</code> list, append user questions and LLM responses to it, and the LLM will "remember" the context.</p>
-
-<p>Run the improved code, ask "Hello", then "1 + 1 = ?", and then "add 1 more", the LLM will correctly answer "3" because it has the full conversation history.</p>
-
+<p>In the realm of AI tools, “Lobster” \\(OpenClaw\\) has been making waves recently, sparking polarized and even contradictory discussions online\\. Some hail it as an all \\- powerful tool of the future, while others dismiss it as useless or even a scam\\. Prices for related services vary too, from $70 for installation to $40 for uninstallation\\. But what’s the real story behind OpenClaw? Let’s break it down from the ground up\\.</p>
+<h2>Start with Large Language Models \\(LLMs\\)</h2>
+<p>LLMs like ChatGPT are essentially question \\- and \\- answer systems\\. To interact with them programmatically, we use <strong>API interfaces</strong>\\. Major LLM providers such as OpenAI and Anthropic Claude offer HTTP \\- based APIs, and intermediaries like OpenRouter even provide SDKs for easier integration, say, with Python\\.</p>
+<p>Here’s a simple example\\. Take a piece of official sample code, modify the LLM model \\(e\\.g\\., switch to Claude’s Opus 4\\.6\\) and the input question \\(e\\.g\\., “Hello” in Chinese\\), then run it via the command line\\. You’ll get a response from the LLM, proving you can interact with LLMs programmatically\\.</p>
+<h2>Fix the “Memory” Issue of LLMs</h2>
+<p>LLMs don’t have built \\- in memory\\. To enable continuous conversation, we need to pass the <strong>conversation history</strong> every time\\. Maintain a <code>messages</code> list, append user questions and LLM responses to it, and the LLM will “remember” the context\\.</p>
+<p>Run the improved code, ask “Hello”, then “1 \\+ 1 = ?”, and then “add 1 more”, the LLM will correctly answer “3” because it has the full conversation history\\.</p>
 <h2>Build an Agent</h2>
-
-<p>An <strong>Agent</strong> is the core of OpenClaw. It works by having the LLM generate executable commands, which the program then runs automatically.</p>
-
+<p>An <strong>Agent</strong> is the core of OpenClaw\\. It works by having the LLM generate executable commands, which the program then runs automatically\\.</p>
 <ul>
-<li><strong>Set Response Rules:</strong> Instruct the LLM to reply with either "Command: XXX" or "Done: XXX".</li>
-<li><strong>Loop Execution:</strong> The program loops, executing commands if the LLM outputs "Command: XXX" and ending the loop when it outputs "Done: XXX".</li>
+<li><strong>Set Response Rules</strong>: Instruct the LLM to reply with either “Command: XXX” or “Done: XXX”\\.</li>
 </ul>
-
-<p>For example, to create a <code>hello.txt</code> file with "hello world", the LLM will generate <code>echo "hello world" > hello.txt</code>, and the program will execute it, creating the file locally. Another example: to download and zip videos, the Agent will use <code>yt-dlp</code> to download and <code>zip</code> to compress, all automatically.</p>
-
+<ul>
+<li><strong>Loop Execution</strong>: The program loops, executing commands if the LLM outputs “Command: XXX” and ending the loop when it outputs “Done: XXX”\\.</li>
+</ul>
+<p>For example, to create a <code>hello\\.txt</code> file with “hello world”, the LLM will generate <code>echo "hello world" \\&gt; hello\\.txt</code>, and the program will execute it, creating the file locally\\. Another example: to download and zip videos, the Agent will use <code>yt \\- dlp</code> to download and <code>zip</code> to compress, all automatically\\.</p>
 <h2>The Essence of OpenClaw</h2>
-
-<p>OpenClaw is essentially a combination of <strong>Agent loop + LLM + Prompt Instructions</strong>. The Agent does not understand the commands; it just executes them blindly. The "intelligence" comes from the LLM's ability to generate commands and the pre-defined "instruction manual" (prompts).</p>
-
+<p>OpenClaw is essentially a combination of <strong>Agent loop \\+ LLM \\+ Prompt Instructions</strong>\\. The Agent doesn’t understand the commands; it just executes them blindly\\. The “intelligence” comes from the LLM’s ability to generate commands and the pre \\- defined “instruction manual” \\(prompts\\)\\.</p>
 <ul>
-<li><strong>Extend Capabilities:</strong> Add "skill documents" (like <code>skill.md</code>) to teach the Agent new commands, e.g., how to search for news.</li>
-<li><strong>Interface Customization:</strong> Transform the command-line interface into an HTTP service with a web UI, or integrate with social platforms like Feishu/QQ for remote control — this is what most people recognize as "Lobster."</li>
+<li><strong>Extend Capabilities</strong>: Add “skill documents” \\(like <code>skill\\.md</code>\\) to teach the Agent new commands, e\\.g\\., how to search for news\\.</li>
 </ul>
-
+<ul>
+<li><strong>Interface Customization</strong>: Transform the command \\- line interface into an HTTP service with a web UI, or integrate with social platforms like Feishu/QQ for remote control—this is what most people recognize as “Lobster”\\.</li>
+</ul>
 <h2>A Balanced View</h2>
-
-<p>OpenClaw is neither all-powerful nor useless. Its effectiveness depends on whether operations in the world are <strong>command-based or API-based</strong> and whether the LLM knows those commands. It pushes the trend of making operations more command- and API-centric, but this also brings risks (e.g., executing malicious commands), echoing ethical debates in movies like <em>I, Robot</em>.</p>
-
-<p>In short, OpenClaw is a powerful paradigm, but its true potential lies in how command- and API-driven our world becomes. For a deeper dive into LLM fundamentals, read <a href="/article/llms-in-plain-english">LLMs in Plain English</a>. If you want to try OpenClaw yourself, check out its <a href="/tools/openclaw">tool page</a> and the <a href="/tools/openrouter">OpenRouter</a> service that powers many multi-model workflows. For a step-by-step CLI setup guide, see <a href="/article/claude-code-install-setup">Claude Code Installation and Setup</a>.</p>
+<p>OpenClaw is neither all \\- powerful nor useless\\. Its effectiveness depends on whether operations in the world are <strong>command \\- based or API \\- based</strong> and whether the LLM knows those commands\\. It pushes the trend of making operations more command \\- and API \\- centric, but this also brings risks \\(e\\.g\\., executing malicious commands\\), echoing ethical debates in movies like <em>I, Robot</em>\\.</p>
+<p>In short, OpenClaw is a powerful paradigm, but its true potential lies in how command \\- and API \\- driven our world becomes\\.</p>
 
 <h2>FAQ</h2>
-
 <h3>Q: Do I need to know programming to use OpenClaw?</h3>
 <p>Basic command-line familiarity is helpful. You need to know how to open a terminal, navigate directories, and run commands. However, you do not need to be a professional programmer — the LLM handles the actual coding.</p>
-
 <h3>Q: Is OpenClaw safe to run on my computer?</h3>
 <p>OpenClaw can execute arbitrary commands generated by the LLM. This is powerful but risky. Always review commands before they run, especially if the LLM has access to system-level operations. Use sandbox environments for testing.</p>
-
-<h3>Q: How is OpenClaw different from Claude Code or ChatGPT?</h3>
-<p>ChatGPT and Claude are chat interfaces. <a href="/article/claude-code-install-setup">Claude Code</a> is a coding assistant. OpenClaw is a framework that lets you build your own agents — you decide what the LLM can do and how it interacts with your system.</p>
-
 <h3>Q: Can I use OpenClaw with any LLM?</h3>
-<p>Yes. OpenClaw works with any LLM that has an API endpoint. You can use OpenAI, Anthropic Claude, or any model available through <a href="/tools/openrouter">OpenRouter</a>.</p>
-
-<h2>Next Steps</h2>
-
-<p>Now that you understand OpenClaw, explore more advanced agent capabilities with <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills guide →</a></p>
+<p>Yes. OpenClaw works with any LLM that has an API endpoint. You can use OpenAI, Anthropic Claude, or any model available through OpenRouter.</p>
 
 <div class="next-step">
-<p><strong>Next:</strong> Learn about the most powerful Claude Code extensions — <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills →</a></p>
+<p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills Guide →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI教程 · <strong>难度：</strong> 中级</p>
-<p><strong>前置要求：</strong> 对LLM有基本了解（阅读<a href="/article/llms-in-plain-english">通俗解释LLM</a>有帮助）。有一些命令行经验更好。</p>
-<p><strong>你将学到：</strong> OpenClaw（Lobster）的实际工作原理——代理循环+LLM+提示词——20行核心逻辑。</p>
+<p><strong>Category:</strong> AI Tutorials · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> How OpenClaw (Lobster) actually works — an agent loop + LLM + prompts — in 20 lines of core logic.</p>
 </div>
 
-<p>在AI工具领域，"Lobster"（OpenClaw）最近引起了广泛关注，网上讨论两极分化甚至互相矛盾。有人称其为全能的未来工具，也有人认为它毫无用处甚至是骗局。相关服务价格也差异很大，从70美元的安装到40美元的卸载。但OpenClaw背后的真实故事是什么？让我们从头拆解。</p>
-
-<h2>首先了解大语言模型（LLM）</h2>
-
-<p>像ChatGPT这样的LLM本质上是问答系统。要以编程方式与它们交互，我们使用<strong>API接口</strong>。OpenAI和Anthropic Claude等主要LLM提供商提供基于HTTP的API，而<a href="/tools/openrouter">OpenRouter</a>等中间商甚至提供SDK以便于集成。</p>
-
-<p>一个简单的例子：取一段官方示例代码，修改LLM模型（例如，切换到Claude的Opus 4.6）和输入问题，然后通过命令行运行。你将收到LLM的响应，证明你可以通过编程方式与LLM交互。</p>
-
-<h2>解决LLM的"记忆"问题</h2>
-
-<p>LLM没有内置记忆。要实现持续对话，我们需要每次传递<strong>对话历史</strong>。维护一个<code>messages</code>列表，将用户问题和LLM响应追加到其中，LLM就会"记住"上下文。</p>
-
-<p>运行改进后的代码，先问"你好"，再问"1+1=?"，然后问"再加1"，LLM会正确回答"3"，因为它拥有完整的对话历史。</p>
-
-<h2>构建一个Agent</h2>
-
-<p><strong>Agent</strong>是OpenClaw的核心。它的工作原理是让LLM生成可执行的命令，然后程序自动运行这些命令。</p>
-
+<p>In the realm of AI tools, “Lobster” \\(OpenClaw\\) has been making waves recently, sparking polarized and even contradictory discussions online\\. Some hail it as an all \\- powerful tool of the future, while others dismiss it as useless or even a scam\\. Prices for related services vary too, from $70 for installation to $40 for uninstallation\\. But what’s the real story behind OpenClaw? Let’s break it down from the ground up\\.</p>
+<h2>Start with Large Language Models \\(LLMs\\)</h2>
+<p>LLMs like ChatGPT are essentially question \\- and \\- answer systems\\. To interact with them programmatically, we use <strong>API interfaces</strong>\\. Major LLM providers such as OpenAI and Anthropic Claude offer HTTP \\- based APIs, and intermediaries like OpenRouter even provide SDKs for easier integration, say, with Python\\.</p>
+<p>Here’s a simple example\\. Take a piece of official sample code, modify the LLM model \\(e\\.g\\., switch to Claude’s Opus 4\\.6\\) and the input question \\(e\\.g\\., “Hello” in Chinese\\), then run it via the command line\\. You’ll get a response from the LLM, proving you can interact with LLMs programmatically\\.</p>
+<h2>Fix the “Memory” Issue of LLMs</h2>
+<p>LLMs don’t have built \\- in memory\\. To enable continuous conversation, we need to pass the <strong>conversation history</strong> every time\\. Maintain a <code>messages</code> list, append user questions and LLM responses to it, and the LLM will “remember” the context\\.</p>
+<p>Run the improved code, ask “Hello”, then “1 \\+ 1 = ?”, and then “add 1 more”, the LLM will correctly answer “3” because it has the full conversation history\\.</p>
+<h2>Build an Agent</h2>
+<p>An <strong>Agent</strong> is the core of OpenClaw\\. It works by having the LLM generate executable commands, which the program then runs automatically\\.</p>
 <ul>
-<li><strong>设置响应规则：</strong> 指示LLM用"Command: XXX"或"Done: XXX"格式回复。</li>
-<li><strong>循环执行：</strong> 程序循环运行，如果LLM输出"Command: XXX"则执行命令，输出"Done: XXX"则结束循环。</li>
+<li><strong>Set Response Rules</strong>: Instruct the LLM to reply with either “Command: XXX” or “Done: XXX”\\.</li>
 </ul>
-
-<p>例如，要创建一个包含"hello world"的<code>hello.txt</code>文件，LLM会生成<code>echo "hello world" > hello.txt</code>，程序执行该命令，在本地创建文件。另一个例子：下载并压缩视频，Agent会使用<code>yt-dlp</code>下载和<code>zip</code>压缩，全部自动完成。</p>
-
-<h2>OpenClaw的本质</h2>
-
-<p>OpenClaw本质上是<strong>Agent循环 + LLM + 提示指令</strong>的组合。Agent不理解命令的含义，它只是盲目执行。"智能"来自LLM生成命令的能力和预定义的"指令手册"（提示词）。</p>
-
 <ul>
-<li><strong>扩展能力：</strong> 添加"技能文档"（如<code>skill.md</code>）来教Agent新命令，例如如何搜索新闻。</li>
-<li><strong>界面定制：</strong> 将命令行界面转变为带有Web UI的HTTP服务，或集成到飞书/QQ等社交平台进行远程控制——这是大多数人认识的"Lobster"。</li>
+<li><strong>Loop Execution</strong>: The program loops, executing commands if the LLM outputs “Command: XXX” and ending the loop when it outputs “Done: XXX”\\.</li>
 </ul>
-
-<h2>客观看待</h2>
-
-<p>OpenClaw既不是万能的，也不是无用的。它的有效性取决于世界上的操作是否是<strong>基于命令或API的</strong>，以及LLM是否知道这些命令。它推动操作更加命令和API中心化的趋势，但这也带来了风险（例如执行恶意命令），呼应了《我，机器人》等电影中的伦理辩论。</p>
-
-<p>简而言之，OpenClaw是一个强大的范式，但其真正潜力取决于我们的世界在多大程度上由命令和API驱动。要深入了解LLM基础，请阅读<a href="/article/llms-in-plain-english">通俗解释LLM</a>。如果你想亲自尝试OpenClaw，请查看其<a href="/tools/openclaw">工具页面</a>和驱动许多多模型工作流的<a href="/tools/openrouter">OpenRouter</a>服务。如需逐步CLI设置指南，请参阅<a href="/article/claude-code-install-setup">Claude Code安装与配置</a>。</p>
+<p>For example, to create a <code>hello\\.txt</code> file with “hello world”, the LLM will generate <code>echo "hello world" \\&gt; hello\\.txt</code>, and the program will execute it, creating the file locally\\. Another example: to download and zip videos, the Agent will use <code>yt \\- dlp</code> to download and <code>zip</code> to compress, all automatically\\.</p>
+<h2>The Essence of OpenClaw</h2>
+<p>OpenClaw is essentially a combination of <strong>Agent loop \\+ LLM \\+ Prompt Instructions</strong>\\. The Agent doesn’t understand the commands; it just executes them blindly\\. The “intelligence” comes from the LLM’s ability to generate commands and the pre \\- defined “instruction manual” \\(prompts\\)\\.</p>
+<ul>
+<li><strong>Extend Capabilities</strong>: Add “skill documents” \\(like <code>skill\\.md</code>\\) to teach the Agent new commands, e\\.g\\., how to search for news\\.</li>
+</ul>
+<ul>
+<li><strong>Interface Customization</strong>: Transform the command \\- line interface into an HTTP service with a web UI, or integrate with social platforms like Feishu/QQ for remote control—this is what most people recognize as “Lobster”\\.</li>
+</ul>
+<h2>A Balanced View</h2>
+<p>OpenClaw is neither all \\- powerful nor useless\\. Its effectiveness depends on whether operations in the world are <strong>command \\- based or API \\- based</strong> and whether the LLM knows those commands\\. It pushes the trend of making operations more command \\- and API \\- centric, but this also brings risks \\(e\\.g\\., executing malicious commands\\), echoing ethical debates in movies like <em>I, Robot</em>\\.</p>
+<p>In short, OpenClaw is a powerful paradigm, but its true potential lies in how command \\- and API \\- driven our world becomes\\.</p>
 
 <h2>常见问题</h2>
-
 <h3>问：使用OpenClaw需要会编程吗？</h3>
 <p>基本的命令行操作经验会很有帮助。你需要知道如何打开终端、导航目录和运行命令。但你不需要是专业程序员——LLM会处理实际的编码工作。</p>
-
 <h3>问：OpenClaw在电脑上运行安全吗？</h3>
 <p>OpenClaw可以执行LLM生成的任意命令。这很强大但也存在风险。在执行前始终审查命令，特别是当LLM可以访问系统级操作时。建议在沙箱环境中进行测试。</p>
-
-<h3>问：OpenClaw与Claude Code或ChatGPT有什么不同？</h3>
-<p>ChatGPT和Claude是聊天界面。<a href="/article/claude-code-install-setup">Claude Code</a>是编程助手。OpenClaw是一个让你构建自己Agent的框架——你决定LLM能做什么以及如何与系统交互。</p>
-
 <h3>问：OpenClaw可以使用任何LLM吗？</h3>
-<p>是的。OpenClaw可以与任何提供API端点的LLM配合使用。你可以使用OpenAI、Anthropic Claude或通过<a href="/tools/openrouter">OpenRouter</a>可用的任何模型。</p>
-
-<h2>下一步</h2>
-
-<p>现在你已经理解了OpenClaw，探索更高级的Agent能力——阅读<a href="/article/claude-code-top-7-skills">Claude Code七大技能完整指南 →</a></p>
+<p>是的。OpenClaw可以与任何提供API端点的LLM配合使用。你可以使用OpenAI、Anthropic Claude或通过OpenRouter可用的任何模型。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 了解最强大的Claude Code扩展——<a href="/article/claude-code-top-7-skills">Claude Code七大技能 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-top-7-skills">Claude Code七大技能指南 →</a></p>
 </div>`,
   },
 
   // ====== LLM Service Packages Review ======
   "llm-service-packages-review-2026": {
     content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Comparisons &middot; <strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Prerequisites:</strong> Basic familiarity with LLM services like ChatGPT, Claude, or Gemini. No technical expertise required.</p>
+<p><strong>Category:</strong> AI Comparisons · Difficulty: Intermediate</p>
 <p><strong>What you'll learn:</strong> How to evaluate domestic and international LLM service packages — pricing, features, hidden pitfalls, and which ones actually deliver value.</p>
 </div>
 
+<p>The large language model \\(LLM\\) market has exploded with a wide range of service packages, catering to both individual users and enterprises\\. However, a closer look reveals stark differences in quality—some stand out for their robustness and value, while others fall short with underwhelming features and hidden pitfalls\\. This analysis breaks down the strengths and weaknesses of mainstream domestic and international LLM packages, helping you navigate the crowded landscape\\.</p>
 <h2>International LLM Packages: Stability and Functionality as Core Advantages</h2>
-
-<p>International giants like OpenAI, Anthropic, and Google have set high standards with their LLM service packages, focusing on <strong>reliable performance</strong> and <strong>comprehensive functionality</strong>.</p>
-
-<p>OpenAI's GPT series packages (e.g., GPT-4o, GPT-4 Turbo) shine with consistent response quality and seamless ecosystem integration. The paid tiers offer generous context windows (up to 128K tokens), fast inference speeds, and access to advanced features like multimodal input (text, image, audio) and API customization. For developers, the well-documented SDK and flexible pricing plans (pay-as-you-go or volume discounts) make it easy to scale projects without unnecessary overhead. Even the free tier provides enough functionality for casual users, avoiding the "paywall for basic use" frustration. <a href="/tools/chatgpt">Learn more about ChatGPT →</a></p>
-
-<p>Anthropic's Claude packages prioritize <strong>safety and transparency</strong>, a major draw for enterprises handling sensitive data. Claude 3 Opus and Sonnet tiers offer enterprise-grade security features (end-to-end encryption, data privacy guarantees) alongside powerful reasoning capabilities — ideal for legal document analysis, financial modeling, and complex problem-solving. The packages also stand out for their user-friendly interface and responsive customer support, addressing technical issues quickly to minimize workflow disruptions. <a href="/tools/claude">Learn more about Claude →</a></p>
-
-<p>Google's Gemini packages leverage the tech giant's cloud infrastructure, delivering <strong>high-speed processing</strong> and seamless integration with Google Workspace (Docs, Sheets, Gmail). The premium tiers support large-scale batch processing and custom model fine-tuning, making them a top choice for businesses looking to embed AI into daily operations. While the free tier has more limitations, it still provides access to core features like natural language generation and basic API calls, serving as a solid entry point for new users. <a href="/tools/gemini">Learn more about Gemini →</a></p>
-
+<p>International giants like OpenAI, Anthropic, and Google have set high standards with their LLM service packages, focusing on <strong>reliable performance</strong> and <strong>comprehensive functionality</strong>\\.</p>
+<p>OpenAI’s GPT series packages \\(e\\.g\\., GPT\\-4o, GPT\\-4 Turbo\\) shine with consistent response quality and seamless ecosystem integration\\. The paid tiers offer generous context windows \\(up to 128K tokens\\), fast inference speeds, and access to advanced features like multimodal input \\(text, image, audio\\) and API customization\\. For developers, the well\\-documented SDK and flexible pricing plans \\(pay\\-as\\-you\\-go or volume discounts\\) make it easy to scale projects without unnecessary overhead\\. Even the free tier provides enough functionality for casual users, avoiding the "paywall for basic use" frustration\\.</p>
+<p>Anthropic’s Claude packages prioritize <strong>safety and transparency</strong>, a major draw for enterprises handling sensitive data\\. Claude 3 Opus and Sonnet tiers offer enterprise\\-grade security features \\(end\\-to\\-end encryption, data privacy guarantees\\) alongside powerful reasoning capabilities—ideal for legal document analysis, financial modeling, and complex problem\\-solving\\. The packages also stand out for their user\\-friendly interface and responsive customer support, addressing technical issues quickly to minimize workflow disruptions\\.</p>
+<p>Google’s Gemini packages leverage the tech giant’s cloud infrastructure, delivering <strong>high\\-speed processing</strong> and seamless integration with Google Workspace \\(Docs, Sheets, Gmail\\)\\. The premium tiers support large\\-scale batch processing and custom model fine\\-tuning, making them a top choice for businesses looking to embed AI into daily operations\\. While the free tier has more limitations, it still provides access to core features like natural language generation and basic API calls, serving as a solid entry point for new users\\.</p>
 <h2>Domestic LLM Packages: Potential Undermined by Shortcomings</h2>
-
-<p>Domestic LLMs (e.g., from Baidu, ByteDance, Alibaba) have made strides in localization and language adaptation, but their service packages often suffer from <strong>inconsistent quality</strong> and <strong>uncompetitive terms</strong>.</p>
-
-<p>One common issue is the <strong>unbalanced feature-to-price ratio</strong>. Some domestic packages charge premium prices but fail to deliver comparable functionality — for example, smaller context windows (often capped at 32K tokens), slower response times, and limited multimodal support. Free tiers are frequently restricted to basic text generation, with critical features (like API access or long-form content creation) locked behind expensive subscriptions. This creates a barrier for individual developers and small businesses looking to test or adopt AI tools.</p>
-
-<p>Another pain point is <strong>poor developer support and documentation</strong>. Unlike international packages with detailed guides, sample code, and active community forums, some domestic offerings provide vague documentation, outdated SDKs, and slow customer service. This makes integration into existing workflows frustrating and time-consuming, defeating the purpose of using AI to boost efficiency.</p>
-
-<p>Hidden costs and restrictive terms also mar the user experience. Some packages advertise low base prices but charge extra for essential add-ons (e.g., increased token limits, priority support, or data storage). Others impose strict usage restrictions, such as limiting the number of API calls per month or prohibiting commercial use of generated content — limitations that are often buried in fine print.</p>
-
+<p>Domestic LLMs \\(e\\.g\\., from Baidu, ByteDance, Alibaba\\) have made strides in localization and language adaptation, but their service packages often suffer from <strong>inconsistent quality</strong> and <strong>uncompetitive terms</strong>\\.</p>
+<p>One common issue is the <strong>unbalanced feature\\-to\\-price ratio</strong>\\. Some domestic packages charge premium prices but fail to deliver comparable functionality—for example, smaller context windows \\(often capped at 32K tokens\\), slower response times, and limited multimodal support\\. Free tiers are frequently restricted to basic text generation, with critical features \\(like API access or long\\-form content creation\\) locked behind expensive subscriptions\\. This creates a barrier for individual developers and small businesses looking to test or adopt AI tools\\.</p>
+<p>Another pain point is <strong>poor developer support and documentation</strong>\\. Unlike international packages with detailed guides, sample code, and active community forums, some domestic offerings provide vague documentation, outdated SDKs, and slow customer service\\. This makes integration into existing workflows frustrating and time\\-consuming, defeating the purpose of using AI to boost efficiency\\.</p>
+<p>Hidden costs and restrictive terms also mar the user experience\\. Some packages advertise low base prices but charge extra for essential add\\-ons \\(e\\.g\\., increased token limits, priority support, or data storage\\)\\. Others impose strict usage restrictions, such as limiting the number of API calls per month or prohibiting commercial use of generated content—limitations that are often buried in fine print\\.</p>
 <h2>Key Takeaways for Choosing an LLM Package</h2>
-
 <p>When selecting an LLM service package, prioritize these factors to avoid disappointment:</p>
-
 <ul>
-<li><strong>Functionality alignment</strong>: Ensure the package offers the features you need (context window size, multimodal support, API flexibility) for your use case.</li>
-<li><strong>Price transparency</strong>: Look for clear pricing structures with no hidden fees or unexpected add-ons.</li>
-<li><strong>Performance reliability</strong>: Check user reviews and benchmarks for response consistency, speed, and downtime records.</li>
-<li><strong>Support quality</strong>: Opt for packages with comprehensive documentation, responsive customer service, and active developer communities.</li>
+<li><strong>Functionality alignment</strong>: Ensure the package offers the features you need \\(context window size, multimodal support, API flexibility\\) for your use case\\.</li>
 </ul>
-
-<p>While international LLM packages currently lead in terms of robustness and user experience, domestic offerings show potential — especially for users requiring Mandarin-specific optimization or compliance with local data regulations. As the market matures, domestic providers need to address pricing fairness, feature completeness, and developer support to compete effectively. For a broader perspective on pricing, also read <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools: When It's Actually Worth Paying</a> and <a href="/article/how-to-choose-right-ai-tool">Which AI Tool Should You Use? A Decision Framework for Beginners</a>.</p>
+<ul>
+<li><strong>Price transparency</strong>: Look for clear pricing structures with no hidden fees or unexpected add\\-ons\\.</li>
+</ul>
+<ul>
+<li><strong>Performance reliability</strong>: Check user reviews and benchmarks for response consistency, speed, and downtime records\\.</li>
+</ul>
+<ul>
+<li><strong>Support quality</strong>: Opt for packages with comprehensive documentation, responsive customer service, and active developer communities\\.</li>
+</ul>
+<p>While international LLM packages currently lead in terms of robustness and user experience, domestic offerings show potential—especially for users requiring Mandarin\\-specific optimization or compliance with local data regulations\\. As the market matures, domestic providers need to address pricing fairness, feature completeness, and developer support to compete effectively\\.</p>
+<p>In the end, the best LLM package is one that balances performance, value, and usability\\. By weighing the strengths and weaknesses of domestic and international options, you can find a solution that meets your needs without settling for subpar service\\.</p>
 
 <h2>FAQ</h2>
-
 <h3>Q: Which LLM package offers the best value for individual developers?</h3>
-<p>For individual developers, ChatGPT Plus ($20/month) offers the best balance of features, API access, and ecosystem integration. Claude Pro ($20/month) is a strong alternative if you prioritize safety and reasoning. Both provide generous free tiers to test before committing.</p>
-
+<p>For individual developers, ChatGPT Plus ($20/month) offers the best balance of features, API access, and ecosystem integration. Claude Pro ($20/month) is a strong alternative if you prioritize safety and reasoning.</p>
 <h3>Q: Are domestic LLM packages suitable for English-language applications?</h3>
 <p>Domestic LLMs are optimized for Mandarin and perform best with Chinese-language content. For English-language applications, international packages generally offer superior performance, larger context windows, and more comprehensive documentation.</p>
-
 <h3>Q: What hidden costs should I watch for when choosing an LLM package?</h3>
-<p>Watch for: API call limits that reset monthly but charge overage fees, context window upgrades locked behind premium tiers, additional charges for multimodal features, data storage fees, and restrictions on commercial use of generated content. Always read the fine print before committing to an annual plan.</p>
+<p>Watch for: API call limits that reset monthly but charge overage fees, context window upgrades locked behind premium tiers, additional charges for multimodal features, data storage fees, and restrictions on commercial use of generated content.</p>
 
 <div class="next-step">
-<p><strong>Next step:</strong> Understand whether free AI tools meet your needs — <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools: When It's Actually Worth Paying →</a></p>
+<p><strong>Next:</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools: When It's Actually Worth Paying →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI对比评测 · <strong>难度：</strong> 中级</p>
-<p><strong>前置要求：</strong> 对ChatGPT、Claude或Gemini等LLM服务有基本了解，无需专业技术背景。</p>
-<p><strong>你将学到：</strong> 如何评估国内外LLM服务套餐——定价、功能、隐藏陷阱，以及哪些真正物有所值。</p>
+<p><strong>Category:</strong> AI Comparisons · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> How to evaluate domestic and international LLM service packages — pricing, features, hidden pitfalls, and which ones actually deliver value.</p>
 </div>
 
-<h2>国际LLM服务：稳定与功能为核心优势</h2>
-
-<p>OpenAI、Anthropic和Google等国际巨头为LLM服务套餐设定了高标准，专注于<strong>可靠性能</strong>和<strong>全面功能</strong>。</p>
-
-<p>OpenAI的GPT系列套餐（如GPT-4o、GPT-4 Turbo）以一致的响应质量和无缝的生态系统集成著称。付费层级提供慷慨的上下文窗口（高达128K tokens）、快速推理速度，以及多模态输入（文本、图像、音频）和API自定义等高级功能。对开发者而言，文档完善的SDK和灵活的定价计划（按需付费或批量折扣）让项目扩展变得轻松。即使是免费层级也为普通用户提供了足够的功能，避免了"基本使用就要付费"的挫败感。了解更多<a href="/tools/chatgpt">ChatGPT →</a></p>
-
-<p>Anthropic的Claude套餐优先考虑<strong>安全性和透明度</strong>，这对处理敏感数据的企业是一大吸引力。Claude 3 Opus和Sonnet层级提供企业级安全功能（端到端加密、数据隐私保证）以及强大的推理能力——非常适合法律文档分析、财务建模和复杂问题解决。这些套餐还以其用户友好的界面和响应迅速的客户支持脱颖而出，快速解决技术问题以最小化工作流中断。了解更多<a href="/tools/claude">Claude →</a></p>
-
-<p>Google的Gemini套餐利用这家科技巨头的云基础设施，提供<strong>高速处理</strong>和与Google Workspace（文档、表格、Gmail）的无缝集成。高级层级支持大规模批处理和自定义模型微调，使其成为希望将AI嵌入日常运营的企业首选。免费层级虽然限制更多，但仍提供自然语言生成和基本API调用等核心功能，是新用户的坚实入口。了解更多<a href="/tools/gemini">Gemini →</a></p>
-
-<h2>国内LLM服务：潜力被短板削弱</h2>
-
-<p>国内LLM（如百度、字节跳动、阿里巴巴）在本地化和语言适配方面取得了进展，但其服务套餐常常面临<strong>质量不稳定</strong>和<strong>条款缺乏竞争力</strong>的问题。</p>
-
-<p>一个常见问题是<strong>功能与价格的不平衡</strong>。部分国内套餐收取高端价格但未能提供同等功能——例如，更小的上下文窗口（通常上限32K tokens）、较慢的响应时间和有限的多模态支持。免费层级通常仅限于基本文本生成，关键功能（如API访问或长内容创作）被锁定在昂贵的订阅后面。这对希望试用或采用AI工具的个人开发者和中小企业构成了障碍。</p>
-
-<p>另一个痛点是<strong>糟糕的开发者支持和文档</strong>。与国际套餐提供的详细指南、示例代码和活跃社区论坛不同，一些国内产品提供模糊的文档、过时的SDK和慢速的客户服务。这使得将AI集成到现有工作流程中变得令人沮丧且耗时，违背了使用AI提升效率的初衷。</p>
-
-<p>隐藏成本和限制性条款也破坏了用户体验。一些套餐宣传低价但为必要的附加功能额外收费（如增加token限制、优先支持或数据存储）。其他套餐施加严格的使用限制，例如限制每月API调用次数或禁止将生成内容用于商业用途——这些限制通常藏在细则中。</p>
-
-<h2>选择LLM套餐的关键要点</h2>
-
-<p>选择LLM服务套餐时，优先考虑以下因素以避免失望：</p>
-
+<p>The large language model \\(LLM\\) market has exploded with a wide range of service packages, catering to both individual users and enterprises\\. However, a closer look reveals stark differences in quality—some stand out for their robustness and value, while others fall short with underwhelming features and hidden pitfalls\\. This analysis breaks down the strengths and weaknesses of mainstream domestic and international LLM packages, helping you navigate the crowded landscape\\.</p>
+<h2>International LLM Packages: Stability and Functionality as Core Advantages</h2>
+<p>International giants like OpenAI, Anthropic, and Google have set high standards with their LLM service packages, focusing on <strong>reliable performance</strong> and <strong>comprehensive functionality</strong>\\.</p>
+<p>OpenAI’s GPT series packages \\(e\\.g\\., GPT\\-4o, GPT\\-4 Turbo\\) shine with consistent response quality and seamless ecosystem integration\\. The paid tiers offer generous context windows \\(up to 128K tokens\\), fast inference speeds, and access to advanced features like multimodal input \\(text, image, audio\\) and API customization\\. For developers, the well\\-documented SDK and flexible pricing plans \\(pay\\-as\\-you\\-go or volume discounts\\) make it easy to scale projects without unnecessary overhead\\. Even the free tier provides enough functionality for casual users, avoiding the "paywall for basic use" frustration\\.</p>
+<p>Anthropic’s Claude packages prioritize <strong>safety and transparency</strong>, a major draw for enterprises handling sensitive data\\. Claude 3 Opus and Sonnet tiers offer enterprise\\-grade security features \\(end\\-to\\-end encryption, data privacy guarantees\\) alongside powerful reasoning capabilities—ideal for legal document analysis, financial modeling, and complex problem\\-solving\\. The packages also stand out for their user\\-friendly interface and responsive customer support, addressing technical issues quickly to minimize workflow disruptions\\.</p>
+<p>Google’s Gemini packages leverage the tech giant’s cloud infrastructure, delivering <strong>high\\-speed processing</strong> and seamless integration with Google Workspace \\(Docs, Sheets, Gmail\\)\\. The premium tiers support large\\-scale batch processing and custom model fine\\-tuning, making them a top choice for businesses looking to embed AI into daily operations\\. While the free tier has more limitations, it still provides access to core features like natural language generation and basic API calls, serving as a solid entry point for new users\\.</p>
+<h2>Domestic LLM Packages: Potential Undermined by Shortcomings</h2>
+<p>Domestic LLMs \\(e\\.g\\., from Baidu, ByteDance, Alibaba\\) have made strides in localization and language adaptation, but their service packages often suffer from <strong>inconsistent quality</strong> and <strong>uncompetitive terms</strong>\\.</p>
+<p>One common issue is the <strong>unbalanced feature\\-to\\-price ratio</strong>\\. Some domestic packages charge premium prices but fail to deliver comparable functionality—for example, smaller context windows \\(often capped at 32K tokens\\), slower response times, and limited multimodal support\\. Free tiers are frequently restricted to basic text generation, with critical features \\(like API access or long\\-form content creation\\) locked behind expensive subscriptions\\. This creates a barrier for individual developers and small businesses looking to test or adopt AI tools\\.</p>
+<p>Another pain point is <strong>poor developer support and documentation</strong>\\. Unlike international packages with detailed guides, sample code, and active community forums, some domestic offerings provide vague documentation, outdated SDKs, and slow customer service\\. This makes integration into existing workflows frustrating and time\\-consuming, defeating the purpose of using AI to boost efficiency\\.</p>
+<p>Hidden costs and restrictive terms also mar the user experience\\. Some packages advertise low base prices but charge extra for essential add\\-ons \\(e\\.g\\., increased token limits, priority support, or data storage\\)\\. Others impose strict usage restrictions, such as limiting the number of API calls per month or prohibiting commercial use of generated content—limitations that are often buried in fine print\\.</p>
+<h2>Key Takeaways for Choosing an LLM Package</h2>
+<p>When selecting an LLM service package, prioritize these factors to avoid disappointment:</p>
 <ul>
-<li><strong>功能匹配</strong>：确保套餐提供你使用场景所需的功能（上下文窗口大小、多模态支持、API灵活性）。</li>
-<li><strong>价格透明</strong>：寻找清晰的定价结构，没有隐藏费用或意外的附加费用。</li>
-<li><strong>性能可靠</strong>：检查用户评价和基准测试，了解响应一致性、速度和宕机记录。</li>
-<li><strong>支持质量</strong>：选择具有全面文档、响应式客户服务和活跃开发者社区的套餐。</li>
+<li><strong>Functionality alignment</strong>: Ensure the package offers the features you need \\(context window size, multimodal support, API flexibility\\) for your use case\\.</li>
 </ul>
-
-<p>目前国际LLM套餐在稳健性和用户体验方面领先，但国内产品显示出潜力——尤其适合需要中文优化或遵守本地数据法规的用户。随着市场成熟，国内提供商需要解决定价公平性、功能完整性和开发者支持等问题才能有效竞争。关于定价的更多视角，请阅读<a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具：何时值得付费</a>和<a href="/article/how-to-choose-right-ai-tool">你应该使用哪个AI工具？初学者的决策框架</a>。</p>
+<ul>
+<li><strong>Price transparency</strong>: Look for clear pricing structures with no hidden fees or unexpected add\\-ons\\.</li>
+</ul>
+<ul>
+<li><strong>Performance reliability</strong>: Check user reviews and benchmarks for response consistency, speed, and downtime records\\.</li>
+</ul>
+<ul>
+<li><strong>Support quality</strong>: Opt for packages with comprehensive documentation, responsive customer service, and active developer communities\\.</li>
+</ul>
+<p>While international LLM packages currently lead in terms of robustness and user experience, domestic offerings show potential—especially for users requiring Mandarin\\-specific optimization or compliance with local data regulations\\. As the market matures, domestic providers need to address pricing fairness, feature completeness, and developer support to compete effectively\\.</p>
+<p>In the end, the best LLM package is one that balances performance, value, and usability\\. By weighing the strengths and weaknesses of domestic and international options, you can find a solution that meets your needs without settling for subpar service\\.</p>
 
 <h2>常见问题</h2>
-
 <h3>问：对于个人开发者来说，哪个LLM套餐性价比最高？</h3>
-<p>对于个人开发者，ChatGPT Plus（每月20美元）在功能、API访问和生态系统集成方面提供了最佳平衡。如果你优先考虑安全性和推理能力，Claude Pro（每月20美元）是一个强有力的替代选择。两者都提供慷慨的免费层级，可以在付费前先试用。</p>
-
+<p>对于个人开发者，ChatGPT Plus（每月20美元）在功能、API访问和生态系统集成方面提供了最佳平衡。如果你优先考虑安全性和推理能力，Claude Pro（每月20美元）是一个强有力的替代选择。</p>
 <h3>问：国内LLM套餐适合英文应用吗？</h3>
 <p>国内LLM针对中文进行了优化，在处理中文内容时表现最佳。对于英文应用，国际套餐通常提供更优越的性能、更大的上下文窗口和更全面的文档。</p>
-
 <h3>问：选择LLM套餐时需要注意哪些隐藏成本？</h3>
-<p>需要注意：每月重置但超量收费的API调用限制、锁定在高级层级下的上下文窗口升级、多模态功能的额外收费、数据存储费用，以及生成内容商业用途的限制。在承诺年度计划之前，务必阅读细则。</p>
+<p>需要注意：每月重置但超量收费的API调用限制、锁定在高级层级下的上下文窗口升级、多模态功能的额外收费、数据存储费用，以及生成内容商业用途的限制。</p>
 
 <div class="next-step">
-<p><strong>下一步：</strong> 了解免费AI工具是否能满足你的需求 —— <a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具：何时值得付费 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具：何时值得付费 →</a></p>
 </div>`,
   },
 
   // ====== Claude Code Browser Automation ======
   "claude-code-browser-automation": {
     content: `<div class="article-meta-banner">
-<p><strong>Companion Article:</strong> Claude Code Browser Control Guide</p>
-<p><strong>Prerequisites:</strong> <a href="/article/claude-code-install-setup">Claude Code installed</a> and basic familiarity with the <code>claude</code> command line interface.</p>
+<p><strong>Category:</strong> Claude Code Browser Control Guide</p>
 <p><strong>What you'll learn:</strong> How to control web browsers through Claude Code for page navigation, data capture, screenshots, and cross-page workflows — with key strategies to minimize token consumption.</p>
 </div>
 
+<p>Browser automation stands as one of the most practical application scenarios for AI coding assistants\\. This guide focuses on how to operate web browsers smoothly via Claude Code, alongside core strategies to cut down token usage and boost execution efficiency\\.</p>
 <h2>Core Advantages of Claude Code Browser Operation</h2>
-
-<p>Traditional automated scripts often come with lengthy code and heavy resource occupation. In contrast, Claude Code can directly send instructions to control mainstream browsers. It simulates real human browsing behaviors such as page jumping, element clicking, content input, information extraction and screenshot capturing. The whole process avoids redundant code writing, which greatly lowers the technical threshold for web automation.</p>
-
-<p>More importantly, proper configuration enables remarkable token saving effects. Less token consumption means lower operating costs, faster response speed, and longer continuous task running duration, perfectly fitting batch web processing, data collection and online operation demands.</p>
-
+<p>Traditional automated scripts often come with lengthy code and heavy resource occupation\\. In contrast, Claude Code can directly send instructions to control mainstream browsers\\. It simulates real human browsing behaviors such as page jumping, element clicking, content input, information extraction and screenshot capturing\\. The whole process avoids redundant code writing, which greatly lowers the technical threshold for web automation\\.</p>
+<p>More importantly, proper configuration enables remarkable token saving effects\\. Less token consumption means lower operating costs, faster response speed, and longer continuous task running duration, perfectly fitting batch web processing, data collection and online operation demands\\.</p>
 <h2>Practical Browser Control Functional Scenarios</h2>
-
-<h3>1. Page Navigation &amp; Element Interaction</h3>
-<p>Claude Code can access designated website links, locate buttons, input boxes and text areas on pages, and finish clicking, typing, selecting and switching tabs automatically. It handles daily routine web operations without manual supervision.</p>
-
-<h3>2. Online Data Capture &amp; Sorting</h3>
-<p>The AI assistant extracts target text, pictures, form data and list information from loaded web pages. It sorts and organizes collected content instantly, realizing automatic information gathering from news portals, industry platforms and resource websites.</p>
-
-<h3>3. Screenshot &amp; Page Status Detection</h3>
-<p>It supports full-page or regional screenshot recording, and judges page loading status, pop-up windows and verification prompts. It can respond to abnormal page conditions timely to guarantee stable running of automated tasks.</p>
-
-<h3>4. Cross-page Continuous Workflow</h3>
-<p>Complete chained operations including form submission, multi-page information query and file downloading. It executes business processes end to end inside browsers steadily.</p>
-
+<ol>
+<li><strong>Page Navigation \\&amp; Element Interaction</strong></li>
+</ol>
+<p>Claude Code can access designated website links, locate buttons, input boxes and text areas on pages, and finish clicking, typing, selecting and switching tabs automatically\\. It handles daily routine web operations without manual supervision\\.</p>
+<ol>
+<li><strong>Online Data Capture \\&amp; Sorting</strong></li>
+</ol>
+<p>The AI assistant extracts target text, pictures, form data and list information from loaded web pages\\. It sorts and organizes collected content instantly, realizing automatic information gathering from news portals, industry platforms and resource websites\\.</p>
+<ol>
+<li><strong>Screenshot \\&amp; Page Status Detection</strong></li>
+</ol>
+<p>It supports full\\-page or regional screenshot recording, and judges page loading status, pop\\-up windows and verification prompts\\. It can respond to abnormal page conditions timely to guarantee stable running of automated tasks\\.</p>
+<ol>
+<li><strong>Cross\\-page Continuous Workflow</strong></li>
+</ol>
+<p>Complete chained operations including form submission, multi\\-page information query and file downloading\\. It executes business processes end to end inside browsers steadily\\.</p>
 <h2>Key Tips to Reduce Token Usage</h2>
-
 <h3>Simplify Command Description</h3>
-<p>Avoid overly wordy and repetitive descriptive sentences when delivering orders. Use concise, definite task demands. Clear and brief instructions help Claude Code understand intentions quickly, reducing invalid token consumption brought by redundant text parsing.</p>
-
+<p>Avoid overly wordy and repetitive descriptive sentences when delivering orders\\. Use concise, definite task demands\\. Clear and brief instructions help Claude Code understand intentions quickly, reducing invalid token consumption brought by redundant text parsing\\.</p>
 <h3>Define Exact Operation Scope</h3>
-<p>Specify target pages, element positions and task boundaries clearly. Narrow down the execution range and prevent the AI from scanning irrelevant page content or conducting unnecessary trial operations, effectively cutting extra token loss.</p>
-
+<p>Specify target pages, element positions and task boundaries clearly\\. Narrow down the execution range and prevent the AI from scanning irrelevant page content or conducting unnecessary trial operations, effectively cutting extra token loss\\.</p>
 <h3>Reuse Stable Basic Logic</h3>
-<p>Summarize common browser operation rules and fixed templates. Call existing mature logic repeatedly for similar tasks, instead of rewriting complete instructions every time. Reusable command frameworks drastically compress average token cost of single operation.</p>
-
+<p>Summarize common browser operation rules and fixed templates\\. Call existing mature logic repeatedly for similar tasks, instead of rewriting complete instructions every time\\. Reusable command frameworks drastically compress average token cost of single operation\\.</p>
 <h3>Disable Unnecessary Auxiliary Analysis</h3>
-<p>Turn off redundant explanation, detailed principle deduction and excessive result feedback when pursuing efficient execution. Only retain core operation logs and final results, saving tokens occupied by text output.</p>
-
-<h2>Application Value &amp; Usage Suggestion</h2>
-
-<p>Browser control powered by Claude Code balances easy operation and low cost. It is suitable for developers, content creators and industry practitioners to streamline repetitive web work. By mastering token-saving control methods, users can maximize task volume under limited token quota, improve daily work automation level, and create more practical productivity tools based on browser operation functions.</p>
-
-<p>For more on extending Claude Code's capabilities, check out <a href="/article/claude-code-install-setup">Claude Code Installation &amp; Setup</a> or explore the <a href="/article/claude-code-top-7-skills">Top 7 Skills guide</a>.</p>
+<p>Turn off redundant explanation, detailed principle deduction and excessive result feedback when pursuing efficient execution\\. Only retain core operation logs and final results, saving tokens occupied by text output\\.</p>
+<h2>Application Value \\&amp; Usage Suggestion</h2>
+<p>Browser control powered by Claude Code balances easy operation and low cost\\. It is suitable for developers, content creators and industry practitioners to streamline repetitive web work\\. By mastering token\\-saving control methods, users can maximize task volume under limited token quota, improve daily work automation level, and create more practical productivity tools based on browser operation functions\\.</p>
 
 <h2>FAQ</h2>
-
 <h3>Q: Do I need programming experience to use Claude Code for browser control?</h3>
-<p>No. Claude Code accepts natural language instructions, so you can describe what you want to do in plain English. Basic familiarity with browser concepts (URLs, buttons, forms) is sufficient. The AI handles the underlying automation logic.</p>
-
+<p>No. Claude Code accepts natural language instructions, so you can describe what you want to do in plain English. Basic familiarity with browser concepts (URLs, buttons, forms) is sufficient.</p>
 <h3>Q: How much can token optimization actually save?</h3>
-<p>With proper optimization techniques — simplified commands, scoped operations, reusable templates — users typically see 40-60% reduction in token consumption compared to naive prompting. For heavy automation workflows, this can translate to significant cost savings over time.</p>
-
+<p>With proper optimization techniques — simplified commands, scoped operations, reusable templates — users typically see 40-60% reduction in token consumption compared to naive prompting.</p>
 <h3>Q: Can Claude Code handle complex multi-step workflows like form submissions?</h3>
-<p>Yes. Claude Code can execute chained operations across multiple pages, including form filling, data extraction, navigation between sites, and file downloads. For best results, break complex workflows into clearly defined steps and reuse stable templates for repeated operation patterns.</p>
+<p>Yes. Claude Code can execute chained operations across multiple pages, including form filling, data extraction, navigation between sites, and file downloads.</p>
 
 <div class="next-step">
-<p><strong>Next:</strong> Explore the most powerful Claude Code extensions — <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills →</a></p>
+<p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>配套文章：</strong> Claude Code 浏览器操控指南</p>
-<p><strong>前置要求：</strong> 已<a href="/article/claude-code-install-setup">安装Claude Code</a>并基本熟悉<code>claude</code>命令行界面。</p>
-<p><strong>你将学到：</strong> 如何通过Claude Code操控浏览器进行页面导航、数据抓取、截图和跨页面工作流——以及最小化Token消耗的关键策略。</p>
+<p><strong>Category:</strong> Claude Code Browser Control Guide</p>
+<p><strong>What you'll learn:</strong> How to control web browsers through Claude Code for page navigation, data capture, screenshots, and cross-page workflows — with key strategies to minimize token consumption.</p>
 </div>
 
-<h2>Claude Code浏览器操作的核心优势</h2>
-
-<p>传统自动化脚本通常伴随着冗长的代码和高资源占用。相比之下，Claude Code可以直接发送指令来控制主流浏览器。它模拟真实的人类浏览行为，如页面跳转、元素点击、内容输入、信息提取和截图。整个过程避免了冗余的代码编写，大大降低了网页自动化的技术门槛。</p>
-
-<p>更重要的是，合理配置可实现显著的Token节省效果。更少的Token消耗意味着更低的运营成本、更快的响应速度和更长的连续任务运行时间，完美适应批量网页处理、数据收集和在线操作需求。</p>
-
-<h2>实用浏览器控制功能场景</h2>
-
-<h3>1. 页面导航与元素交互</h3>
-<p>Claude Code可以访问指定网站链接，定位页面上的按钮、输入框和文本区域，自动完成点击、输入、选择和切换标签页等操作。无需人工监督即可处理日常网页操作。</p>
-
-<h3>2. 在线数据采集与整理</h3>
-<p>AI助手从加载的网页中提取目标文本、图片、表单数据和列表信息。它即时整理收集到的内容，实现从新闻门户、行业平台和资源网站的自动信息采集。</p>
-
-<h3>3. 截图与页面状态检测</h3>
-<p>支持全屏或区域截图记录，判断页面加载状态、弹窗和验证提示。它能及时响应异常页面状况，保证自动化任务的稳定运行。</p>
-
-<h3>4. 跨页面连续工作流</h3>
-<p>完成包括表单提交、多页信息查询和文件下载在内的链式操作。它在浏览器内稳定执行端到端的业务流程。</p>
-
-<h2>减少Token使用的关键技巧</h2>
-
-<h3>简化指令描述</h3>
-<p>在发出命令时避免过于冗长和重复的描述性句子。使用简洁明确的任务要求。清晰简短的指令有助于Claude Code快速理解意图，减少冗余文本解析带来的无效Token消耗。</p>
-
-<h3>明确操作范围</h3>
-<p>清晰指定目标页面、元素位置和任务边界。缩小执行范围，防止AI扫描无关页面内容或进行不必要的尝试操作，有效减少额外的Token损失。</p>
-
-<h3>复用稳定的基本逻辑</h3>
-<p>总结常见的浏览器操作规则和固定模板。对于相似任务，反复调用已有的成熟逻辑，而不是每次都重写完整的指令。可复用的命令框架大幅压缩单次操作的平均Token成本。</p>
-
-<h3>禁用不必要的辅助分析</h3>
-<p>在追求高效执行时，关闭冗余解释、详细原理推导和过多的结果反馈。只保留核心操作日志和最终结果，节省文本输出占用的Token。</p>
-
-<h2>应用价值与使用建议</h2>
-
-<p>Claude Code驱动的浏览器控制兼具易操作性和低成本。它适合开发者、内容创作者和行业从业者简化重复的网页工作。通过掌握Token节省的控制方法，用户可以在有限的Token配额下最大化任务量，提高日常工作的自动化水平，并基于浏览器操作功能创建更多实用的生产力工具。</p>
-
-<p>要了解更多关于扩展Claude Code能力的信息，请查看<a href="/article/claude-code-install-setup">Claude Code安装与配置</a>或浏览<a href="/article/claude-code-top-7-skills">七大技能完整指南</a>。</p>
+<p>Browser automation stands as one of the most practical application scenarios for AI coding assistants\\. This guide focuses on how to operate web browsers smoothly via Claude Code, alongside core strategies to cut down token usage and boost execution efficiency\\.</p>
+<h2>Core Advantages of Claude Code Browser Operation</h2>
+<p>Traditional automated scripts often come with lengthy code and heavy resource occupation\\. In contrast, Claude Code can directly send instructions to control mainstream browsers\\. It simulates real human browsing behaviors such as page jumping, element clicking, content input, information extraction and screenshot capturing\\. The whole process avoids redundant code writing, which greatly lowers the technical threshold for web automation\\.</p>
+<p>More importantly, proper configuration enables remarkable token saving effects\\. Less token consumption means lower operating costs, faster response speed, and longer continuous task running duration, perfectly fitting batch web processing, data collection and online operation demands\\.</p>
+<h2>Practical Browser Control Functional Scenarios</h2>
+<ol>
+<li><strong>Page Navigation \\&amp; Element Interaction</strong></li>
+</ol>
+<p>Claude Code can access designated website links, locate buttons, input boxes and text areas on pages, and finish clicking, typing, selecting and switching tabs automatically\\. It handles daily routine web operations without manual supervision\\.</p>
+<ol>
+<li><strong>Online Data Capture \\&amp; Sorting</strong></li>
+</ol>
+<p>The AI assistant extracts target text, pictures, form data and list information from loaded web pages\\. It sorts and organizes collected content instantly, realizing automatic information gathering from news portals, industry platforms and resource websites\\.</p>
+<ol>
+<li><strong>Screenshot \\&amp; Page Status Detection</strong></li>
+</ol>
+<p>It supports full\\-page or regional screenshot recording, and judges page loading status, pop\\-up windows and verification prompts\\. It can respond to abnormal page conditions timely to guarantee stable running of automated tasks\\.</p>
+<ol>
+<li><strong>Cross\\-page Continuous Workflow</strong></li>
+</ol>
+<p>Complete chained operations including form submission, multi\\-page information query and file downloading\\. It executes business processes end to end inside browsers steadily\\.</p>
+<h2>Key Tips to Reduce Token Usage</h2>
+<h3>Simplify Command Description</h3>
+<p>Avoid overly wordy and repetitive descriptive sentences when delivering orders\\. Use concise, definite task demands\\. Clear and brief instructions help Claude Code understand intentions quickly, reducing invalid token consumption brought by redundant text parsing\\.</p>
+<h3>Define Exact Operation Scope</h3>
+<p>Specify target pages, element positions and task boundaries clearly\\. Narrow down the execution range and prevent the AI from scanning irrelevant page content or conducting unnecessary trial operations, effectively cutting extra token loss\\.</p>
+<h3>Reuse Stable Basic Logic</h3>
+<p>Summarize common browser operation rules and fixed templates\\. Call existing mature logic repeatedly for similar tasks, instead of rewriting complete instructions every time\\. Reusable command frameworks drastically compress average token cost of single operation\\.</p>
+<h3>Disable Unnecessary Auxiliary Analysis</h3>
+<p>Turn off redundant explanation, detailed principle deduction and excessive result feedback when pursuing efficient execution\\. Only retain core operation logs and final results, saving tokens occupied by text output\\.</p>
+<h2>Application Value \\&amp; Usage Suggestion</h2>
+<p>Browser control powered by Claude Code balances easy operation and low cost\\. It is suitable for developers, content creators and industry practitioners to streamline repetitive web work\\. By mastering token\\-saving control methods, users can maximize task volume under limited token quota, improve daily work automation level, and create more practical productivity tools based on browser operation functions\\.</p>
 
 <h2>常见问题</h2>
-
 <h3>问：使用Claude Code进行浏览器控制需要编程经验吗？</h3>
-<p>不需要。Claude Code接受自然语言指令，你可以用中文描述你想要做的事情。只要基本了解浏览器概念（URL、按钮、表单）就足够了。AI会处理底层的自动化逻辑。</p>
-
+<p>不需要。Claude Code接受自然语言指令，你可以用中文描述你想要做的事情。只要基本了解浏览器概念（URL、按钮、表单）就足够了。</p>
 <h3>问：Token优化实际能节省多少？</h3>
-<p>通过适当的优化技术——简化指令、限定操作范围、复用模板——用户通常可以看到与原始提示相比40-60%的Token消耗减少。对于重度的自动化工作流，这可以随着时间的推移转化为显著的节省。</p>
-
+<p>通过适当的优化技术——简化指令、限定操作范围、复用模板——用户通常可以看到与原始提示相比40-60%的Token消耗减少。</p>
 <h3>问：Claude Code能处理复杂的多步骤工作流吗？</h3>
-<p>是的。Claude Code可以跨多个页面执行链式操作，包括表单填写、数据提取、跨站导航和文件下载。为获得最佳效果，将复杂工作流分解为明确定义的步骤，并对重复的操作模式复用稳定的模板。</p>
+<p>是的。Claude Code可以跨多个页面执行链式操作，包括表单填写、数据提取、跨站导航和文件下载。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 探索最强大的Claude Code扩展 —— <a href="/article/claude-code-top-7-skills">Claude Code七大技能完整指南 →</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-top-7-skills">Claude Code七大技能指南 →</a></p>
 </div>`,
   },
 
   // ====== 5-ai-tools-one-person-overseas-business ======
   "5-ai-tools-one-person-overseas-business": {
-    content: `<p>In the realm of global entrepreneurship, especially for those building overseas websites, efficiency is the key to success. You don't need to toil day and night or manage a large team. With these 5 AI tools, you can establish a one-person AI-powered company, letting artificial intelligence handle the heavy lifting while you focus on strategic decisions. Let's dive into how each tool can supercharge your overseas website venture.</p>
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools for Business · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> 5 AI tools that let you establish a one-person AI-powered company for your overseas website business.</p>
+</div>
 
-<h2>1. Deer-Flow: Your AI Researcher for Market Insights</h2>
-
-<p>When launching an overseas website, understanding your target market, competitors, and industry trends is crucial. <strong>Deer-Flow</strong>, a tool with 65,800 stars, acts as your dedicated AI researcher.</p>
-
+<p>In the realm of global entrepreneurship, especially for those building overseas websites, efficiency is the key to success\\. You don't need to toil day and night or manage a large team\\. With these 5 AI tools, you can establish a one\\-person AI\\-powered company, letting artificial intelligence handle the heavy lifting while you focus on strategic decisions\\. Let's dive into how each tool can supercharge your overseas website venture\\.</p>
+<h2>1\\. Deer\\-Flow: Your AI Researcher for Market Insights</h2>
+<p>When launching an overseas website, understanding your target market, competitors, and industry trends is crucial\\. <strong>Deer\\-Flow</strong>, a tool with 65,800 stars, acts as your dedicated AI researcher\\.</p>
 <p>To use it, simply issue a command like:</p>
+<pre><code class="language-plaintext">
+Research the latest e-commerce trends in the European market, compare top 5 competitors’ websites, and generate a 30-page report.
+</code></pre>
+<p>Deer\\-Flow will automatically scour the web, gather relevant articles and data, and compile a comprehensive report\\. This saves you countless hours of manual research, providing you with actionable insights to shape your website's positioning and marketing strategies\\.</p>
+<h2>2\\. Prompt\\-Optimizer: Translate Your Ideas into AI\\-Understandable Commands</h2>
+<p>Not everyone is an AI prompt engineering expert, but <strong>Prompt\\-Optimizer</strong> \\(28,300 stars\\) bridges that gap\\. It translates your plain\\-language requests into professional AI commands\\.</p>
+<p>For example, if you want to create a viral product description for your overseas e\\-commerce website, just say:</p>
+<pre><code class="language-plaintext">
+Write a viral product description for my handmade jewelry collection targeting young women in the US.
+</code></pre>
+<p>Prompt\\-Optimizer will convert this into a detailed AI instruction like:</p>
+<pre><code class="language-plaintext">
+Generate a viral product description for a handmade jewelry collection, optimized for young women in the US market, including 6 relevant hashtags and an engaging hook within the first 8 characters.
+</code></pre>
+<p>This ensures that AI tools like Claude understand your needs precisely, leading to high\\-quality content for your website\\.</p>
+<h2>3\\. Agents: 80\\+ Professional AI Employees at Your Disposal</h2>
+<p>Running an overseas website involves multiple tasks—frontend development, data analysis, SEO, marketing, and more\\. <strong>Agents</strong> \\(34,900 stars\\) provides you with a team of 80\\+ AI employees, each specializing in different fields\\.</p>
+<p>Suppose you need to optimize your website’s SEO\\. You can deploy the SEO expert agent with a command like:</p>
+<pre><code class="language-plaintext">
+Analyze my website [your-website-url] for SEO issues, suggest keyword optimizations, and create a backlink strategy for the fashion niche.
+</code></pre>
+<p>The AI SEO expert will conduct a thorough analysis and present a actionable plan\\. Similarly, you can use frontend engineer agents to fix website bugs, data analyst agents to track user behavior, and marketing expert agents to plan social media campaigns\\.</p>
+<h2>4\\. Claude\\-Flow \\(Now Ruflo\\): Your AI General Manager for Project Management</h2>
+<p>Overseas website projects can be complex, involving multiple stages and tasks\\. <strong>Claude\\-Flow</strong> \\(now Ruflo, 45,720 stars\\) acts as your AI general manager, breaking down projects into manageable tasks and assigning them to the right AI employees\\.</p>
+<p>Let’s say you want to launch a new product line on your website\\. Give Claude\\-Flow this command:</p>
+<pre><code class="language-plaintext">
+Launch a new organic skincare product line targeting eco-conscious consumers in Australia. Break down the project into tasks, assign to relevant AI employees, and ensure automatic验收 (acceptance).
+</code></pre>
+<p>Claude\\-Flow will split the project into steps like market research, product page design, SEO optimization, marketing campaign creation, etc\\., assign each task to the appropriate AI agent \\(from the Agents tool\\), and ensure seamless collaboration and automatic quality checks\\.</p>
+<h2>5\\. Letta: Your Evolving AI Brain That Learns Your Preferences</h2>
+<p>Consistency is key for an overseas website\\. <strong>Letta</strong> \\(22,490 stars\\) is an AI evolving brain that learns your preferences, work style, and habits over time\\.</p>
+<p>For instance, if you prefer a certain tone for your website’s blog posts or have specific requirements for product descriptions, Letta will remember these\\. Even if you switch to a new conversation or task, you don’t have to re\\-explain your preferences\\. Just start with a command like:</p>
+<pre><code class="language-plaintext">
+Write a blog post about the benefits of sustainable fashion, using the tone and structure we’ve used before.
+</code></pre>
+<p>Letta will produce content that aligns perfectly with your established style\\.</p>
+<h2>Assemble Your One\\-Person AI Company for Overseas Success</h2>
+<p>Individually, these tools are powerful, but together, they form a complete AI company\\. Deer\\-Flow handles research, Prompt\\-Optimizer translates your ideas, Agents provide specialized talent, Claude\\-Flow manages projects, and Letta ensures consistency\\.</p>
+<p>Imagine this: you assign a project before going to bed, and when you wake up, it’s fully completed\\. You’re the boss, Claude Code is the CEO, and the 80\\+ AI employees handle the execution\\. Whether you’re running an e\\-commerce site, a content blog, or a SaaS platform targeting overseas users, this AI stack can revolutionize your workflow\\.</p>
+<p>So, stop grinding endlessly or struggling to manage a team\\. Embrace these tools, become the "variable" in your entrepreneurial journey, and let AI do the heavy lifting for your overseas website business\\.</p>
 
-<pre><code>Research the latest e-commerce trends in the European market, compare top 5 competitors’ websites, and generate a 30-page report.</code></pre>
-
-<p>Deer-Flow will automatically scour the web, gather relevant articles and data, and compile a comprehensive report. This saves you countless hours of manual research, providing you with actionable insights to shape your website's positioning and marketing strategies.</p>
-
-<h2>2. Prompt-Optimizer: Translate Your Ideas into AI-Understandable Commands</h2>
-
-<p>Not everyone is an AI prompt engineering expert, but <strong>Prompt-Optimizer</strong> (28,300 stars) bridges that gap. It translates your plain-language requests into professional AI commands.</p>
-
-<p>For example, if you want to create a viral product description for your overseas e-commerce website, just say:</p>
-
-<pre><code>Write a viral product description for my handmade jewelry collection targeting young women in the US.</code></pre>
-
-<p>Prompt-Optimizer will convert this into a detailed AI instruction like:</p>
-
-<pre><code>Generate a viral product description for a handmade jewelry collection, optimized for young women in the US market, including 6 relevant hashtags and an engaging hook within the first 8 characters.</code></pre>
-
-<p>This ensures that AI tools like Claude understand your needs precisely, leading to high-quality content for your website.</p>
-
-<h2>3. Agents: 80+ Professional AI Employees at Your Disposal</h2>
-
-<p>Running an overseas website involves multiple tasks—frontend development, data analysis, SEO, marketing, and more. <strong>Agents</strong> (34,900 stars) provides you with a team of 80+ AI employees, each specializing in different fields.</p>
-
-<p>Suppose you need to optimize your website’s SEO. You can deploy the SEO expert agent with a command like:</p>
-
-<pre><code>Analyze my website [your-website-url] for SEO issues, suggest keyword optimizations, and create a backlink strategy for the fashion niche.</code></pre>
-
-<p>The AI SEO expert will conduct a thorough analysis and present a actionable plan. Similarly, you can use frontend engineer agents to fix website bugs, data analyst agents to track user behavior, and marketing expert agents to plan social media campaigns.</p>
-
-<h2>4. Claude-Flow (Now Ruflo): Your AI General Manager for Project Management</h2>
-
-<p>Overseas website projects can be complex, involving multiple stages and tasks. <strong>Claude-Flow</strong> (now Ruflo, 45,720 stars) acts as your AI general manager, breaking down projects into manageable tasks and assigning them to the right AI employees.</p>
-
-<p>Let’s say you want to launch a new product line on your website. Give Claude-Flow this command:</p>
-
-<pre><code>Launch a new organic skincare product line targeting eco-conscious consumers in Australia. Break down the project into tasks, assign to relevant AI employees, and ensure automatic验收 (acceptance).</code></pre>
-
-<p>Claude-Flow will split the project into steps like market research, product page design, SEO optimization, marketing campaign creation, etc., assign each task to the appropriate AI agent (from the Agents tool), and ensure seamless collaboration and automatic quality checks.</p>
-
-<h2>5. Letta: Your Evolving AI Brain That Learns Your Preferences</h2>
-
-<p>Consistency is key for an overseas website. <strong>Letta</strong> (22,490 stars) is an AI evolving brain that learns your preferences, work style, and habits over time.</p>
-
-<p>For instance, if you prefer a certain tone for your website’s blog posts or have specific requirements for product descriptions, Letta will remember these. Even if you switch to a new conversation or task, you don’t have to re-explain your preferences. Just start with a command like:</p>
-
-<pre><code>Write a blog post about the benefits of sustainable fashion, using the tone and structure we’ve used before.</code></pre>
-
-<p>Letta will produce content that aligns perfectly with your established style.</p>
-
-<h2>Assemble Your One-Person AI Company for Overseas Success</h2>
-
-<p>Individually, these tools are powerful, but together, they form a complete AI company. Deer-Flow handles research, Prompt-Optimizer translates your ideas, Agents provide specialized talent, Claude-Flow manages projects, and Letta ensures consistency.</p>
-
-<p>Imagine this: you assign a project before going to bed, and when you wake up, it’s fully completed. You’re the boss, Claude Code is the CEO, and the 80+ AI employees handle the execution. Whether you’re running an e-commerce site, a content blog, or a SaaS platform targeting overseas users, this AI stack can revolutionize your workflow.</p>
-
-<p>So, stop grinding endlessly or struggling to manage a team. Embrace these tools, become the "variable" in your entrepreneurial journey, and let AI do the heavy lifting for your overseas website business.</p>
-
-<blockquote></blockquote>
+<h2>FAQ</h2>
+<h3>Q: Do I need technical skills to use these AI tools?</h3>
+<p>Most of these tools are designed for non-technical users. Deer-Flow and Agents have user-friendly interfaces, while Claude-Flow (Ruflo) and Letta work with natural language commands. Basic computer literacy is sufficient.</p>
+<h3>Q: Can these tools replace a full development team?</h3>
+<p>They can replace many routine tasks but not entirely. For complex projects, you may still need human oversight for architecture decisions, quality assurance, and creative direction. These tools excel at automating repetitive work.</p>
+<h3>Q: How much do these tools cost in total?</h3>
+<p>Most are open-source or offer free tiers. Deer-Flow, Prompt-Optimizer, Agents, and Letta are open-source. Claude-Flow (Ruflo) has a free tier. You will mainly pay for API usage when running them with LLMs like Claude or GPT.</p>
 
 <div class="next-step">
-<p><strong>Next Step:</strong> Explore more AI tools for freelancers: <a href="/article/ai-for-freelancers">AI for Freelancers &#x2192;</a></p>
+<p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Agent, Skill, and Harness in AI Development →</a></p>
 </div>`,
-    contentZh: `<p>在全球创业的舞台上，尤其是对于搭建出海网站的创业者来说，效率是成功的关键。你不需要日夜操劳，也不需要管理庞大的团队。借助这5款AI工具，你可以建立一个人的AI公司，让人工智能处理繁重的工作，而你专注于战略决策。本文将深入探讨每款工具如何为你的出海网站项目提速增效。</p>
+    contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools for Business · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> 5 AI tools that let you establish a one-person AI-powered company for your overseas website business.</p>
+</div>
 
-<h2>1. Deer-Flow：你的AI市场研究分析师</h2>
+<p>In the realm of global entrepreneurship, especially for those building overseas websites, efficiency is the key to success\\. You don't need to toil day and night or manage a large team\\. With these 5 AI tools, you can establish a one\\-person AI\\-powered company, letting artificial intelligence handle the heavy lifting while you focus on strategic decisions\\. Let's dive into how each tool can supercharge your overseas website venture\\.</p>
+<h2>1\\. Deer\\-Flow: Your AI Researcher for Market Insights</h2>
+<p>When launching an overseas website, understanding your target market, competitors, and industry trends is crucial\\. <strong>Deer\\-Flow</strong>, a tool with 65,800 stars, acts as your dedicated AI researcher\\.</p>
+<p>To use it, simply issue a command like:</p>
+<pre><code class="language-plaintext">
+Research the latest e-commerce trends in the European market, compare top 5 competitors’ websites, and generate a 30-page report.
+</code></pre>
+<p>Deer\\-Flow will automatically scour the web, gather relevant articles and data, and compile a comprehensive report\\. This saves you countless hours of manual research, providing you with actionable insights to shape your website's positioning and marketing strategies\\.</p>
+<h2>2\\. Prompt\\-Optimizer: Translate Your Ideas into AI\\-Understandable Commands</h2>
+<p>Not everyone is an AI prompt engineering expert, but <strong>Prompt\\-Optimizer</strong> \\(28,300 stars\\) bridges that gap\\. It translates your plain\\-language requests into professional AI commands\\.</p>
+<p>For example, if you want to create a viral product description for your overseas e\\-commerce website, just say:</p>
+<pre><code class="language-plaintext">
+Write a viral product description for my handmade jewelry collection targeting young women in the US.
+</code></pre>
+<p>Prompt\\-Optimizer will convert this into a detailed AI instruction like:</p>
+<pre><code class="language-plaintext">
+Generate a viral product description for a handmade jewelry collection, optimized for young women in the US market, including 6 relevant hashtags and an engaging hook within the first 8 characters.
+</code></pre>
+<p>This ensures that AI tools like Claude understand your needs precisely, leading to high\\-quality content for your website\\.</p>
+<h2>3\\. Agents: 80\\+ Professional AI Employees at Your Disposal</h2>
+<p>Running an overseas website involves multiple tasks—frontend development, data analysis, SEO, marketing, and more\\. <strong>Agents</strong> \\(34,900 stars\\) provides you with a team of 80\\+ AI employees, each specializing in different fields\\.</p>
+<p>Suppose you need to optimize your website’s SEO\\. You can deploy the SEO expert agent with a command like:</p>
+<pre><code class="language-plaintext">
+Analyze my website [your-website-url] for SEO issues, suggest keyword optimizations, and create a backlink strategy for the fashion niche.
+</code></pre>
+<p>The AI SEO expert will conduct a thorough analysis and present a actionable plan\\. Similarly, you can use frontend engineer agents to fix website bugs, data analyst agents to track user behavior, and marketing expert agents to plan social media campaigns\\.</p>
+<h2>4\\. Claude\\-Flow \\(Now Ruflo\\): Your AI General Manager for Project Management</h2>
+<p>Overseas website projects can be complex, involving multiple stages and tasks\\. <strong>Claude\\-Flow</strong> \\(now Ruflo, 45,720 stars\\) acts as your AI general manager, breaking down projects into manageable tasks and assigning them to the right AI employees\\.</p>
+<p>Let’s say you want to launch a new product line on your website\\. Give Claude\\-Flow this command:</p>
+<pre><code class="language-plaintext">
+Launch a new organic skincare product line targeting eco-conscious consumers in Australia. Break down the project into tasks, assign to relevant AI employees, and ensure automatic验收 (acceptance).
+</code></pre>
+<p>Claude\\-Flow will split the project into steps like market research, product page design, SEO optimization, marketing campaign creation, etc\\., assign each task to the appropriate AI agent \\(from the Agents tool\\), and ensure seamless collaboration and automatic quality checks\\.</p>
+<h2>5\\. Letta: Your Evolving AI Brain That Learns Your Preferences</h2>
+<p>Consistency is key for an overseas website\\. <strong>Letta</strong> \\(22,490 stars\\) is an AI evolving brain that learns your preferences, work style, and habits over time\\.</p>
+<p>For instance, if you prefer a certain tone for your website’s blog posts or have specific requirements for product descriptions, Letta will remember these\\. Even if you switch to a new conversation or task, you don’t have to re\\-explain your preferences\\. Just start with a command like:</p>
+<pre><code class="language-plaintext">
+Write a blog post about the benefits of sustainable fashion, using the tone and structure we’ve used before.
+</code></pre>
+<p>Letta will produce content that aligns perfectly with your established style\\.</p>
+<h2>Assemble Your One\\-Person AI Company for Overseas Success</h2>
+<p>Individually, these tools are powerful, but together, they form a complete AI company\\. Deer\\-Flow handles research, Prompt\\-Optimizer translates your ideas, Agents provide specialized talent, Claude\\-Flow manages projects, and Letta ensures consistency\\.</p>
+<p>Imagine this: you assign a project before going to bed, and when you wake up, it’s fully completed\\. You’re the boss, Claude Code is the CEO, and the 80\\+ AI employees handle the execution\\. Whether you’re running an e\\-commerce site, a content blog, or a SaaS platform targeting overseas users, this AI stack can revolutionize your workflow\\.</p>
+<p>So, stop grinding endlessly or struggling to manage a team\\. Embrace these tools, become the "variable" in your entrepreneurial journey, and let AI do the heavy lifting for your overseas website business\\.</p>
 
-<p>当你启动一个出海网站时，了解目标市场、竞争对手和行业趋势至关重要。<strong>Deer-Flow</strong>（拥有65,800颗星的开源项目）可以作为你的专属AI研究员。</p>
-
-<p>使用方法很简单，只需发出如下指令：</p>
-
-<pre><code>Research the latest e-commerce trends in the European market, compare top 5 competitors' websites, and generate a 30-page report.</code></pre>
-
-<p>Deer-Flow会自动扫描网络，收集相关文章和数据，并生成一份全面的报告。这为你节省了大量的手动调研时间，提供可执行的洞察，帮助你制定网站的定位和营销策略。</p>
-
-<h2>2. Prompt-Optimizer：把你的想法转化为AI能理解的指令</h2>
-
-<p>并非每个人都是AI提示工程专家，但<strong>Prompt-Optimizer</strong>（28,300颗星）弥补了这一差距。它能把你的日常语言请求转换为专业的AI指令。</p>
-
-<p>例如，如果你想为你的跨境电商网站撰写一条爆款产品描述，只需这样说：</p>
-
-<pre><code>Write a viral product description for my handmade jewelry collection targeting young women in the US.</code></pre>
-
-<p>Prompt-Optimizer会将其转换为详细的AI指令：</p>
-
-<pre><code>Generate a viral product description for a handmade jewelry collection, optimized for young women in the US market, including 6 relevant hashtags and an engaging hook within the first 8 characters.</code></pre>
-
-<p>这样可以确保像Claude这样的AI工具精确理解你的需求，从而为你的网站生成高质量内容。</p>
-
-<h2>3. Agents：80多名专业AI员工随时为你服务</h2>
-
-<p>运营一个出海网站涉及多项任务——前端开发、数据分析、SEO、营销等等。<strong>Agents</strong>（34,900颗星）为你提供了一支80多名AI员工的团队，每人专精于不同领域。</p>
-
-<p>假设你需要优化网站的SEO。你可以用如下指令部署SEO专家Agent：</p>
-
-<pre><code>Analyze my website [your-website-url] for SEO issues, suggest keyword optimizations, and create a backlink strategy for the fashion niche.</code></pre>
-
-<p>AI SEO专家会进行深入分析并提出可执行的方案。类似地，你可以使用前端工程师Agent修复网站Bug，使用数据分析师Agent追踪用户行为，使用营销专家Agent策划社交媒体活动。</p>
-
-<h2>4. Claude-Flow（现已更名为Ruflo）：你的AI项目经理</h2>
-
-<p>出海网站项目可能很复杂，涉及多个阶段和任务。<strong>Claude-Flow</strong>（现更名为Ruflo，45,720颗星）充当你的AI总经理，将项目分解为可管理的任务并分配给合适的AI员工。</p>
-
-<p>假设你想在网站上推出一个新产品系列。给Claude-Flow下达如下指令：</p>
-
-<pre><code>Launch a new organic skincare product line targeting eco-conscious consumers in Australia. Break down the project into tasks, assign to relevant AI employees, and ensure automatic验收 (acceptance).</code></pre>
-
-<p>Claude-Flow会将项目分解为市场调研、产品页面设计、SEO优化、营销活动创建等步骤，将每个任务分配给合适的AI Agent（来自Agents工具），并确保无缝协作和自动质量检查。</p>
-
-<h2>5. Letta：不断进化、学习你偏好的AI大脑</h2>
-
-<p>对于出海网站来说，一致性至关重要。<strong>Letta</strong>（22,490颗星）是一个不断进化的AI大脑，它会随着时间学习你的偏好、工作风格和习惯。</p>
-
-<p>举例来说，如果你偏好某种语气来写网站博客文章，或者对产品描述有特定要求，Letta会记住这些。即使你开启新的对话或任务，也无需重新解释你的偏好。只需这样开始：</p>
-
-<pre><code>Write a blog post about the benefits of sustainable fashion, using the tone and structure we've used before.</code></pre>
-
-<p>Letta会生成与你既有风格完全一致的内容。</p>
-
-<h2>组建你的一个人AI公司，助力出海成功</h2>
-
-<p>单独来看，这些工具都很强大；但组合在一起，它们就构成了一个完整的AI公司。Deer-Flow负责调研，Prompt-Optimizer转化你的想法，Agents提供专业人才，Claude-Flow管理项目，Letta确保一致性。</p>
-
-<p>想象一下：你在睡前分配一个项目，醒来时它已经全部完成了。你是老板，Claude Code是CEO，80多名AI员工负责执行。无论你运营的是电商网站、内容博客还是面向海外用户的SaaS平台，这套AI工具组合都能彻底革新你的工作流程。</p>
-
-<p>所以，别再没日没夜地苦干或费力管理团队了。拥抱这些工具，成为你创业旅程中的"变量"，让AI为你的出海网站业务扛起重担。</p>
-
-<blockquote></blockquote>
+<h2>常见问题</h2>
+<h3>问：使用这些AI工具需要技术技能吗？</h3>
+<p>这些工具大多数面向非技术用户设计。Deer-Flow和Agents拥有用户友好的界面，Claude-Flow（Ruflo）和Letta使用自然语言指令工作。基本的计算机操作能力就足够了。</p>
+<h3>问：这些工具能完全取代开发团队吗？</h3>
+<p>它们可以取代许多日常任务，但不能完全取代。对于复杂项目，架构决策、质量保证和创意方向仍需要人工监督。这些工具擅长自动化重复性工作。</p>
+<h3>问：这些工具的总成本是多少？</h3>
+<p>大多数是开源的或提供免费层级。Deer-Flow、Prompt-Optimizer、Agents和Letta是开源的。Claude-Flow（Ruflo）有免费层级。你主要需要为使用LLM（如Claude或GPT）时的API使用量付费。</p>
 
 <div class="next-step">
-<p><strong>下一步：</strong> 探索更多面向自由职业者的AI工具：<a href="/article/ai-for-freelancers">AI自由职业者指南 &#x2192;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">AI开发中的Agent、Skill和Harness →</a></p>
 </div>`,
   },
 
   // ====== git-github-beginners-guide ======
   "git-github-beginners-guide": {
-    content: `<p>Git and GitHub have become indispensable tools for modern developers, widely used in code version control, team collaboration and remote project management. This article systematically sorts out fundamental concepts, workflow logic and commonly used operational commands, helping learners build a complete knowledge system from scratch and apply these tools efficiently in daily development and AI project deployment.</p>
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Developer Tools · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> Fundamental concepts, workflow logic and commonly used operational commands of Git and GitHub.</p>
+</div>
 
+<p>Git and GitHub have become indispensable tools for modern developers, widely used in code version control, team collaboration and remote project management\\. This article systematically sorts out fundamental concepts, workflow logic and commonly used operational commands, helping learners build a complete knowledge system from scratch and apply these tools efficiently in daily development and AI project deployment\\.</p>
 <h2>Fundamental Core Definitions</h2>
-
 <h3>Git</h3>
-
-<p>Git is a distributed version control system running locally on your computer. It records every modification of code files, supports rollback of historical versions, creation of independent development branches and local offline editing. It tracks file changes without relying on network connection, and keeps complete modification logs for all project contents.</p>
-
+<p>Git is a distributed version control system running locally on your computer\\. It records every modification of code files, supports rollback of historical versions, creation of independent development branches and local offline editing\\. It tracks file changes without relying on network connection, and keeps complete modification logs for all project contents\\.</p>
 <h3>GitHub</h3>
-
-<p>GitHub is a cloud-based hosting platform built upon Git technology. It stores local Git repositories remotely, enables multi-person team code collaboration, public project sharing, code review and remote file synchronization. Developers can upload local projects, download open-source resources and manage team projects uniformly on this platform.</p>
-
+<p>GitHub is a cloud\\-based hosting platform built upon Git technology\\. It stores local Git repositories remotely, enables multi\\-person team code collaboration, public project sharing, code review and remote file synchronization\\. Developers can upload local projects, download open\\-source resources and manage team projects uniformly on this platform\\.</p>
 <h3>Key Differentiation</h3>
-
-<p>Git focuses on local file version tracking and modification management, while GitHub serves as remote storage and collaborative service carrier. All local operations depend on Git commands, and cross-device sharing and teamwork rely on GitHub remote warehouse.</p>
-
+<p>Git focuses on local file version tracking and modification management, while GitHub serves as remote storage and collaborative service carrier\\. All local operations depend on Git commands, and cross\\-device sharing and teamwork rely on GitHub remote warehouse\\.</p>
 <h2>Basic Workflow Framework</h2>
-
-<p>The standard operating flow covers local file editing, local version submission, remote warehouse synchronization and version iteration. The whole process follows this logical chain:</p>
-
+<p>The standard operating flow covers local file editing, local version submission, remote warehouse synchronization and version iteration\\. The whole process follows this logical chain:</p>
 <ol>
-
-  <li>Initialize local Git repository</li>
-
+<li>Initialize local Git repository</li>
 </ol>
-
 <ol>
-
-  <li>Add modified files to temporary storage area</li>
-
+<li>Add modified files to temporary storage area</li>
 </ol>
-
 <ol>
-
-  <li>Submit files to local version library and leave notes</li>
-
+<li>Submit files to local version library and leave notes</li>
 </ol>
-
 <ol>
-
-  <li>Bind local project with remote GitHub repository</li>
-
+<li>Bind local project with remote GitHub repository</li>
 </ol>
-
 <ol>
-
-  <li>Push local code to remote cloud warehouse</li>
-
+<li>Push local code to remote cloud warehouse</li>
 </ol>
-
 <ol>
-
-  <li>Pull remote updated content back to local device</li>
-
+<li>Pull remote updated content back to local device</li>
 </ol>
-
 <h2>Practical Command Operation Tutorial</h2>
-
-<p>All frequently used executable commands are listed below with standard code block format, directly applicable to terminal execution.</p>
-
-<h3>1. Local Environment Initialization</h3>
-
+<p>All frequently used executable commands are listed below with standard code block format, directly applicable to terminal execution\\.</p>
+<h3>1\\. Local Environment Initialization</h3>
 <p>Create and activate local Git management space</p>
-
-<pre><code># Enter target project folder
+<pre><code class="language-bash">
+# Enter target project folder
 cd your-project-folder
 
 # Initialize local Git repository
-git init</code></pre>
-
-<h3>2. File Staging & Local Commit</h3>
-
+git init
+</code></pre>
+<h3>2\\. File Staging \\&amp; Local Commit</h3>
 <p>Record changes and generate formal local version records</p>
-
-<pre><code># Add single file to staging area
+<pre><code class="language-bash">
+# Add single file to staging area
 git add index.js
 
 # Add all modified files in the folder
 git add .
 
 # Submit version with descriptive comment
-git commit -m "Complete basic page layout function"</code></pre>
-
-<h3>3. Remote Warehouse Connection</h3>
-
+git commit -m "Complete basic page layout function"
+</code></pre>
+<h3>3\\. Remote Warehouse Connection</h3>
 <p>Bind local project to newly created GitHub remote repository</p>
-
-<pre><code># Link local folder with remote GitHub repository address
+<pre><code class="language-bash">
+# Link local folder with remote GitHub repository address
 git remote add origin https://github.com/username/repository-name.git
 
 # Check current bound remote warehouse information
-git remote -v</code></pre>
-
-<h3>4. Code Push to Remote Server</h3>
-
+git remote -v
+</code></pre>
+<h3>4\\. Code Push to Remote Server</h3>
 <p>Upload local finished version to GitHub cloud storage</p>
-
-<pre><code># Push local main branch code to remote repository
-git push origin main</code></pre>
-
-<h3>5. Pull Remote Updated Code</h3>
-
+<pre><code class="language-bash">
+# Push local main branch code to remote repository
+git push origin main
+</code></pre>
+<h3>5\\. Pull Remote Updated Code</h3>
 <p>Synchronize latest remote modification content to local workspace</p>
-
-<pre><code>git pull origin main</code></pre>
-
-<h3>6. Basic Version Check Commands</h3>
-
+<pre><code class="language-bash">
+git pull origin main
+</code></pre>
+<h3>6\\. Basic Version Check Commands</h3>
 <p>View modification status and historical submission records</p>
-
-<pre><code># Check current file modification status
+<pre><code class="language-bash">
+# Check current file modification status
 git status
 
 # Browse all historical version commit logs
-git log</code></pre>
-
+git log
+</code></pre>
 <h2>Branch Management Practical Usage</h2>
-
-<p>Branch function is the core of parallel development, avoiding direct interference between formal project and new feature development. Independent branches can be created to develop new functions, debug defects, and merge stable contents back to main branch after completion.</p>
-
-<pre><code># Create new development branch
+<p>Branch function is the core of parallel development, avoiding direct interference between formal project and new feature development\\. Independent branches can be created to develop new functions, debug defects, and merge stable contents back to main branch after completion\\.</p>
+<pre><code class="language-bash">
+# Create new development branch
 git dev new-feature
 
 # Switch to specified branch
@@ -6884,186 +6616,147 @@ git checkout new-feature
 
 # Merge developed branch into main branch
 git checkout main
-git merge new-feature</code></pre>
-
+git merge new-feature
+</code></pre>
 <h2>Common Daily Application Scenarios</h2>
-
 <ol>
-
-  <li><strong>Personal Project Version Backup</strong></li>
-
+<li><strong>Personal Project Version Backup</strong></li>
 </ol>
-
-<p>Regularly submit and push local code to GitHub, prevent file loss caused by device failure, and roll back to any historical stable version when code errors appear.</p>
-
+<p>Regularly submit and push local code to GitHub, prevent file loss caused by device failure, and roll back to any historical stable version when code errors appear\\.</p>
 <ol>
-
-  <li><strong>Open Source Resource Download & Learning</strong></li>
-
+<li><strong>Open Source Resource Download \\&amp; Learning</strong></li>
 </ol>
-
-<p>Use clone command to download excellent public AI projects and development cases from GitHub, learn framework structure and functional logic locally.</p>
-
-<pre><code>git clone https://github.com/example/openai-demo.git</code></pre>
-
+<p>Use clone command to download excellent public AI projects and development cases from GitHub, learn framework structure and functional logic locally\\.</p>
+<pre><code class="language-bash">
+git clone https://github.com/example/openai-demo.git
+</code></pre>
 <ol>
-
-  <li><strong>Team Collaborative Development</strong></li>
-
+<li><strong>Team Collaborative Development</strong></li>
 </ol>
-
-<p>Multiple developers create independent branches to develop respective modules, submit code separately, conduct online code review on GitHub, and merge all contents into official project uniformly.</p>
-
+<p>Multiple developers create independent branches to develop respective modules, submit code separately, conduct online code review on GitHub, and merge all contents into official project uniformly\\.</p>
 <ol>
-
-  <li><strong>AI Project Deployment Management</strong></li>
-
+<li><strong>AI Project Deployment Management</strong></li>
 </ol>
-
-<p>Manage model files, configuration documents and service code via Git version control, synchronize iterative optimized AI program to remote warehouse, facilitating cross-device deployment and project maintenance.</p>
-
+<p>Manage model files, configuration documents and service code via Git version control, synchronize iterative optimized AI program to remote warehouse, facilitating cross\\-device deployment and project maintenance\\.</p>
 <h2>Common Troubleshooting Tips</h2>
-
 <ul>
-
-  <li>When remote binding address error occurs, reset remote warehouse link</li>
-
+<li>When remote binding address error occurs, reset remote warehouse link</li>
 </ul>
-
-<pre><code>git remote set-url origin new-repository-url</code></pre>
-
+<pre><code class="language-bash">
+git remote set-url origin new-repository-url
+</code></pre>
 <ul>
-
-  <li>Abandon uncommitted local modifications and restore files to latest submitted version</li>
-
+<li>Abandon uncommitted local modifications and restore files to latest submitted version</li>
 </ul>
-
-<pre><code>git reset --hard HEAD</code></pre>
-
+<pre><code class="language-bash">
+git reset --hard HEAD
+</code></pre>
 <ul>
-
-  <li>Solve code conflict: Compare conflicting content manually, retain valid code, then resubmit and push versions.</li>
-
+<li>Solve code conflict: Compare conflicting content manually, retain valid code, then resubmit and push versions\\.</li>
 </ul>
-
 <h2>Final Summary</h2>
+<p>Git undertakes local version recording and file management, while GitHub realizes remote storage and multi\\-party collaboration\\. Mastering basic initialization, submission, push, pull and branch control commands can meet most personal development and team cooperation demands\\. Standard version control habits can effectively reduce code loss risk, improve development efficiency, and build standardized management mode suitable for AI projects, web development and other technical creation work\\.</p>
 
-<p>Git undertakes local version recording and file management, while GitHub realizes remote storage and multi-party collaboration. Mastering basic initialization, submission, push, pull and branch control commands can meet most personal development and team cooperation demands. Standard version control habits can effectively reduce code loss risk, improve development efficiency, and build standardized management mode suitable for AI projects, web development and other technical creation work.</p>
-
-<blockquote></blockquote>
+<h2>FAQ</h2>
+<h3>Q: Is Git only for programmers?</h3>
+<p>No. While Git is essential for developers, designers, writers, and project managers also use it for version control. Any work involving file changes can benefit from Git's tracking and rollback capabilities.</p>
+<h3>Q: What is the difference between Git and GitHub?</h3>
+<p>Git is the version control system that runs locally on your computer. GitHub is a cloud platform that hosts Git repositories online. You can use Git without GitHub, but GitHub requires Git.</p>
+<h3>Q: Do I need to use the command line for Git?</h3>
+<p>There are GUI tools like GitHub Desktop, Sourcetree, and VS Code's built-in Git support. However, learning basic command-line commands gives you more control and is essential for server environments.</p>
 
 <div class="next-step">
-<p><strong>Next Step:</strong> Learn Claude Code installation and setup: <a href="/article/claude-code-install-setup">Claude Code Install &amp; Setup &#x2192;</a></p>
+<p><strong>Next:</strong> <a href="/article/claude-code-install-setup">Claude Code Install & Setup →</a></p>
 </div>`,
-    contentZh: `<p>Git和GitHub已成为现代开发者不可或缺的工具，广泛应用于代码版本控制、团队协作和远程项目管理。本文系统梳理了基础概念、工作流程逻辑以及常用操作命令，帮助学习者从零开始构建完整的知识体系，在日常开发和AI项目部署中高效运用这些工具。</p>
+    contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Developer Tools · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> Fundamental concepts, workflow logic and commonly used operational commands of Git and GitHub.</p>
+</div>
 
-<h2>基础核心概念</h2>
-
+<p>Git and GitHub have become indispensable tools for modern developers, widely used in code version control, team collaboration and remote project management\\. This article systematically sorts out fundamental concepts, workflow logic and commonly used operational commands, helping learners build a complete knowledge system from scratch and apply these tools efficiently in daily development and AI project deployment\\.</p>
+<h2>Fundamental Core Definitions</h2>
 <h3>Git</h3>
-
-<p>Git是一个运行在本地计算机上的分布式版本控制系统。它记录代码文件的每一次修改，支持历史版本回滚、独立开发分支的创建以及本地离线编辑。它追踪文件变更，不依赖网络连接，并为所有项目内容保留完整的修改日志。</p>
-
+<p>Git is a distributed version control system running locally on your computer\\. It records every modification of code files, supports rollback of historical versions, creation of independent development branches and local offline editing\\. It tracks file changes without relying on network connection, and keeps complete modification logs for all project contents\\.</p>
 <h3>GitHub</h3>
-
-<p>GitHub是一个基于Git技术构建的云端托管平台。它远程存储本地Git仓库，实现多人团队代码协作、公共项目共享、代码审查和远程文件同步。开发者可以在该平台上上传本地项目、下载开源资源并统一管理团队项目。</p>
-
-<h3>关键区别</h3>
-
-<p>Git专注于本地文件版本追踪和修改管理，而GitHub充当远程存储和协作服务载体。所有本地操作依赖Git命令，跨设备共享和团队协作依赖GitHub远程仓库。</p>
-
-<h2>基本工作流程框架</h2>
-
-<p>标准操作流程涵盖本地文件编辑、本地版本提交、远程仓库同步和版本迭代。整个过程遵循以下逻辑链条：</p>
-
+<p>GitHub is a cloud\\-based hosting platform built upon Git technology\\. It stores local Git repositories remotely, enables multi\\-person team code collaboration, public project sharing, code review and remote file synchronization\\. Developers can upload local projects, download open\\-source resources and manage team projects uniformly on this platform\\.</p>
+<h3>Key Differentiation</h3>
+<p>Git focuses on local file version tracking and modification management, while GitHub serves as remote storage and collaborative service carrier\\. All local operations depend on Git commands, and cross\\-device sharing and teamwork rely on GitHub remote warehouse\\.</p>
+<h2>Basic Workflow Framework</h2>
+<p>The standard operating flow covers local file editing, local version submission, remote warehouse synchronization and version iteration\\. The whole process follows this logical chain:</p>
 <ol>
-  <li>初始化本地Git仓库</li>
+<li>Initialize local Git repository</li>
 </ol>
-
 <ol>
-  <li>将修改后的文件添加到暂存区</li>
+<li>Add modified files to temporary storage area</li>
 </ol>
-
 <ol>
-  <li>将文件提交到本地版本库并留下备注</li>
+<li>Submit files to local version library and leave notes</li>
 </ol>
-
 <ol>
-  <li>将本地项目与远程GitHub仓库绑定</li>
+<li>Bind local project with remote GitHub repository</li>
 </ol>
-
 <ol>
-  <li>将本地代码推送到远程云端仓库</li>
+<li>Push local code to remote cloud warehouse</li>
 </ol>
-
 <ol>
-  <li>将远程更新内容拉取回本地设备</li>
+<li>Pull remote updated content back to local device</li>
 </ol>
-
-<h2>实用命令操作教程</h2>
-
-<p>以下列出所有常用的可执行命令，采用标准代码块格式，可直接在终端中执行。</p>
-
-<h3>1. 本地环境初始化</h3>
-
-<p>创建并激活本地Git管理空间</p>
-
-<pre><code># Enter target project folder
+<h2>Practical Command Operation Tutorial</h2>
+<p>All frequently used executable commands are listed below with standard code block format, directly applicable to terminal execution\\.</p>
+<h3>1\\. Local Environment Initialization</h3>
+<p>Create and activate local Git management space</p>
+<pre><code class="language-bash">
+# Enter target project folder
 cd your-project-folder
 
 # Initialize local Git repository
-git init</code></pre>
-
-<h3>2. 文件暂存与本地提交</h3>
-
-<p>记录变更并生成正式的本地版本记录</p>
-
-<pre><code># Add single file to staging area
+git init
+</code></pre>
+<h3>2\\. File Staging \\&amp; Local Commit</h3>
+<p>Record changes and generate formal local version records</p>
+<pre><code class="language-bash">
+# Add single file to staging area
 git add index.js
 
 # Add all modified files in the folder
 git add .
 
 # Submit version with descriptive comment
-git commit -m "Complete basic page layout function"</code></pre>
-
-<h3>3. 远程仓库连接</h3>
-
-<p>将本地项目与新创建的GitHub远程仓库绑定</p>
-
-<pre><code># Link local folder with remote GitHub repository address
+git commit -m "Complete basic page layout function"
+</code></pre>
+<h3>3\\. Remote Warehouse Connection</h3>
+<p>Bind local project to newly created GitHub remote repository</p>
+<pre><code class="language-bash">
+# Link local folder with remote GitHub repository address
 git remote add origin https://github.com/username/repository-name.git
 
 # Check current bound remote warehouse information
-git remote -v</code></pre>
-
-<h3>4. 代码推送到远程服务器</h3>
-
-<p>将本地已完成版本上传到GitHub云端存储</p>
-
-<pre><code># Push local main branch code to remote repository
-git push origin main</code></pre>
-
-<h3>5. 拉取远程更新代码</h3>
-
-<p>将远程最新修改内容同步到本地工作区</p>
-
-<pre><code>git pull origin main</code></pre>
-
-<h3>6. 基本版本检查命令</h3>
-
-<p>查看修改状态和历史提交记录</p>
-
-<pre><code># Check current file modification status
+git remote -v
+</code></pre>
+<h3>4\\. Code Push to Remote Server</h3>
+<p>Upload local finished version to GitHub cloud storage</p>
+<pre><code class="language-bash">
+# Push local main branch code to remote repository
+git push origin main
+</code></pre>
+<h3>5\\. Pull Remote Updated Code</h3>
+<p>Synchronize latest remote modification content to local workspace</p>
+<pre><code class="language-bash">
+git pull origin main
+</code></pre>
+<h3>6\\. Basic Version Check Commands</h3>
+<p>View modification status and historical submission records</p>
+<pre><code class="language-bash">
+# Check current file modification status
 git status
 
 # Browse all historical version commit logs
-git log</code></pre>
-
-<h2>分支管理实用技巧</h2>
-
-<p>分支功能是并行开发的核心，避免了正式项目与新功能开发之间的直接干扰。可以创建独立分支来开发新功能、调试缺陷，完成后再将稳定内容合并回主分支。</p>
-
-<pre><code># Create new development branch
+git log
+</code></pre>
+<h2>Branch Management Practical Usage</h2>
+<p>Branch function is the core of parallel development, avoiding direct interference between formal project and new feature development\\. Independent branches can be created to develop new functions, debug defects, and merge stable contents back to main branch after completion\\.</p>
+<pre><code class="language-bash">
+# Create new development branch
 git dev new-feature
 
 # Switch to specified branch
@@ -7071,276 +6764,261 @@ git checkout new-feature
 
 # Merge developed branch into main branch
 git checkout main
-git merge new-feature</code></pre>
-
-<h2>日常应用场景</h2>
-
+git merge new-feature
+</code></pre>
+<h2>Common Daily Application Scenarios</h2>
 <ol>
-  <li><strong>个人项目版本备份</strong></li>
+<li><strong>Personal Project Version Backup</strong></li>
 </ol>
-
-<p>定期提交并推送本地代码到GitHub，防止设备故障导致文件丢失；当代码出现错误时，可以回滚到任意历史稳定版本。</p>
-
+<p>Regularly submit and push local code to GitHub, prevent file loss caused by device failure, and roll back to any historical stable version when code errors appear\\.</p>
 <ol>
-  <li><strong>开源资源下载与学习</strong></li>
+<li><strong>Open Source Resource Download \\&amp; Learning</strong></li>
 </ol>
-
-<p>使用clone命令从GitHub下载优秀的公开AI项目和开发案例，在本地学习框架结构和功能逻辑。</p>
-
-<pre><code>git clone https://github.com/example/openai-demo.git</code></pre>
-
+<p>Use clone command to download excellent public AI projects and development cases from GitHub, learn framework structure and functional logic locally\\.</p>
+<pre><code class="language-bash">
+git clone https://github.com/example/openai-demo.git
+</code></pre>
 <ol>
-  <li><strong>团队协作开发</strong></li>
+<li><strong>Team Collaborative Development</strong></li>
 </ol>
-
-<p>多位开发者创建独立分支各自开发模块，分别提交代码，在GitHub上进行在线代码审查，最后将所有内容统一合并到正式项目中。</p>
-
+<p>Multiple developers create independent branches to develop respective modules, submit code separately, conduct online code review on GitHub, and merge all contents into official project uniformly\\.</p>
 <ol>
-  <li><strong>AI项目部署管理</strong></li>
+<li><strong>AI Project Deployment Management</strong></li>
 </ol>
-
-<p>通过Git版本控制管理模型文件、配置文档和服务代码，将迭代优化后的AI程序同步到远程仓库，方便跨设备部署和项目维护。</p>
-
-<h2>常见问题排查技巧</h2>
-
+<p>Manage model files, configuration documents and service code via Git version control, synchronize iterative optimized AI program to remote warehouse, facilitating cross\\-device deployment and project maintenance\\.</p>
+<h2>Common Troubleshooting Tips</h2>
 <ul>
-  <li>当远程绑定地址错误时，重置远程仓库链接</li>
+<li>When remote binding address error occurs, reset remote warehouse link</li>
 </ul>
-
-<pre><code>git remote set-url origin new-repository-url</code></pre>
-
+<pre><code class="language-bash">
+git remote set-url origin new-repository-url
+</code></pre>
 <ul>
-  <li>放弃未提交的本地修改，将文件恢复到最新提交的版本</li>
+<li>Abandon uncommitted local modifications and restore files to latest submitted version</li>
 </ul>
-
-<pre><code>git reset --hard HEAD</code></pre>
-
+<pre><code class="language-bash">
+git reset --hard HEAD
+</code></pre>
 <ul>
-  <li>解决代码冲突：比较冲突内容，手动保留有效代码，然后重新提交并推送版本。</li>
+<li>Solve code conflict: Compare conflicting content manually, retain valid code, then resubmit and push versions\\.</li>
 </ul>
+<h2>Final Summary</h2>
+<p>Git undertakes local version recording and file management, while GitHub realizes remote storage and multi\\-party collaboration\\. Mastering basic initialization, submission, push, pull and branch control commands can meet most personal development and team cooperation demands\\. Standard version control habits can effectively reduce code loss risk, improve development efficiency, and build standardized management mode suitable for AI projects, web development and other technical creation work\\.</p>
 
-<h2>总结</h2>
-
-<p>Git承担本地版本记录和文件管理，GitHub实现远程存储和多端协作。掌握基本的初始化、提交、推送、拉取和分支控制命令，可以满足大多数个人开发和团队协作需求。规范的版本控制习惯能有效降低代码丢失风险，提升开发效率，为AI项目、Web开发等技术创作工作构建标准化的管理模式。</p>
-
-<blockquote></blockquote>
+<h2>常见问题</h2>
+<h3>问：Git只适用于程序员吗？</h3>
+<p>不是。虽然Git对开发者至关重要，但设计师、写作者和项目经理也使用它进行版本控制。任何涉及文件变更的工作都可以从Git的追踪和回滚功能中受益。</p>
+<h3>问：Git和GitHub有什么区别？</h3>
+<p>Git是在本地计算机上运行的版本控制系统。GitHub是托管Git仓库的云平台。你可以在没有GitHub的情况下使用Git，但GitHub需要Git。</p>
+<h3>问：使用Git必须用命令行吗？</h3>
+<p>有像GitHub Desktop、Sourcetree和VS Code内置Git支持等GUI工具。但学习基本的命令行命令能给你更多控制，并且在服务器环境中是必需的。</p>
 
 <div class="next-step">
-<p><strong>下一步：</strong> 学习Claude Code安装与配置：<a href="/article/claude-code-install-setup">Claude Code安装与配置 &#x2192;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-install-setup">Claude Code安装与配置 →</a></p>
 </div>`,
   },
 
   // ====== openai-strategic-counterattack-openclaw-codex ======
   "openai-strategic-counterattack-openclaw-codex": {
-    content: `<p>In the fiercely competitive AI developer tools market, OpenAI has launched a series of impactful updates, completely reshaping the rules of the game. This article will dissect OpenAI’s strategic moves, focusing on the integration of OpenClaw, the innovative features of Codex, and the practical implications for developers aiming to go global.</p>
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Industry Analysis · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> OpenAI's strategic moves integrating OpenClaw, Codex innovations, and what they mean for global developers.</p>
+</div>
 
+<p>In the fiercely competitive AI developer tools market, OpenAI has launched a series of impactful updates, completely reshaping the rules of the game\\. This article will dissect OpenAI’s strategic moves, focusing on the integration of OpenClaw, the innovative features of Codex, and the practical implications for developers aiming to go global\\.</p>
 <h2>OpenClaw Integration: Breaking Down Barriers for Global Developers</h2>
-
-<p>One of the most groundbreaking moves is the seamless integration of OpenClaw with ChatGPT. Developers can now log in to OpenClaw using their existing ChatGPT accounts, eliminating the need for separate registrations or payments. This is a game-changer for overseas developers, as it allows them to leverage OpenClaw’s capabilities without navigating new account systems or additional costs.</p>
-
-<pre><code># How to Use OpenClaw with Your ChatGPT Account
+<p>One of the most groundbreaking moves is the seamless integration of OpenClaw with ChatGPT\\. Developers can now log in to OpenClaw using their existing ChatGPT accounts, eliminating the need for separate registrations or payments\\. This is a game\\-changer for overseas developers, as it allows them to leverage OpenClaw’s capabilities without navigating new account systems or additional costs\\.</p>
+<pre><code class="language-plaintext">
+# How to Use OpenClaw with Your ChatGPT Account
 1. Ensure you have a ChatGPT Plus subscription.
 2. Visit the OpenClaw platform and select "Login with ChatGPT".
-3. Authorize the connection – all your usage quotas are deducted from your ChatGPT subscription.</code></pre>
-
-<p>This integration not only reduces friction but also ensures that developers can access OpenClaw’s features as part of their existing workflow, making it easier to adopt for teams spread across different regions.</p>
-
+3. Authorize the connection – all your usage quotas are deducted from your ChatGPT subscription.
+</code></pre>
+<p>This integration not only reduces friction but also ensures that developers can access OpenClaw’s features as part of their existing workflow, making it easier to adopt for teams spread across different regions\\.</p>
 <h2>Codex's Pixel Pet: A Practical Tool for Developer Engagement</h2>
-
-<p>Codex’s new pixel pet feature is more than just a gimmick – it’s a practical tool that enhances developer productivity. By typing the command <code>/pet</code> in the Codex interface, developers can summon a pixel-style pet that acts as a visual status indicator.</p>
-
-<pre><code># Summon and Use Your Codex Pet
+<p>Codex’s new pixel pet feature is more than just a gimmick – it’s a practical tool that enhances developer productivity\\. By typing the command <code>/pet</code> in the Codex interface, developers can summon a pixel\\-style pet that acts as a visual status indicator\\.</p>
+<pre><code class="language-plaintext">
+# Summon and Use Your Codex Pet
 1. In the Codex command bar, type \`/pet\` and press enter.
-2. Choose from 8 preset pets or use the \`hatch-pet\` skill to create a custom one:</code></pre>
-
-<p>skill-installer hatch-pet</p>
-
-<pre><code>3. The pet’s animations will reflect Codex’s status – busy when processing, idle when waiting for input.</code></pre>
-
-<p>For overseas developers working across time zones, this feature provides a quick visual cue about Codex’s activity, reducing the need to constantly switch windows to check progress. It also adds a touch of personalization, making the development environment more engaging.</p>
-
+2. Choose from 8 preset pets or use the \`hatch-pet\` skill to create a custom one:
+</code></pre>
+<p>skill\\-installer hatch\\-pet</p>
+<pre><code class="language-plaintext">
+3. The pet’s animations will reflect Codex’s status – busy when processing, idle when waiting for input.
+</code></pre>
+<p>For overseas developers working across time zones, this feature provides a quick visual cue about Codex’s activity, reducing the need to constantly switch windows to check progress\\. It also adds a touch of personalization, making the development environment more engaging\\.</p>
 <h2>Autonomous Iteration: Redefining Developer Workflows</h2>
-
-<p>Codex’s new <code>/goal</code> command introduces autonomous iteration, a feature that transforms how developers approach coding tasks. Instead of issuing step-by-step instructions, developers can set a high-level goal, and Codex will break it down into tasks, write code, and debug autonomously.</p>
-
-<pre><code># Using the /goal Command for Autonomous Development
-1. In Codex, enter:</code></pre>
-
+<p>Codex’s new <code>/goal</code> command introduces autonomous iteration, a feature that transforms how developers approach coding tasks\\. Instead of issuing step\\-by\\-step instructions, developers can set a high\\-level goal, and Codex will break it down into tasks, write code, and debug autonomously\\.</p>
+<pre><code class="language-plaintext">
+# Using the /goal Command for Autonomous Development
+1. In Codex, enter:
+</code></pre>
 <p>/goal Build a user management system with Google OAuth login</p>
-
-<pre><code>2. Codex will:
+<pre><code class="language-plaintext">
+2. Codex will:
 - Decompose the goal into sub-tasks (e.g., set up authentication, create user models).
 - Write and test the code.
 - Debug issues and iterate automatically.
-3. Monitor progress via your Codex pet or progress notifications.</code></pre>
-
-<p>This is particularly valuable for overseas teams collaborating on complex projects. It allows developers to focus on high-level strategy while Codex handles the implementation details, speeding up development cycles and reducing errors.</p>
-
-<h2>One-Click Migration: Lowering the Barrier to Entry</h2>
-
-<p>OpenAI has also introduced a one-click migration feature in Codex, allowing developers to import their workflows, plugins, and project configurations from other AI code tools.</p>
-
-<pre><code># Migrate to Codex in Three Steps
+3. Monitor progress via your Codex pet or progress notifications.
+</code></pre>
+<p>This is particularly valuable for overseas teams collaborating on complex projects\\. It allows developers to focus on high\\-level strategy while Codex handles the implementation details, speeding up development cycles and reducing errors\\.</p>
+<h2>One\\-Click Migration: Lowering the Barrier to Entry</h2>
+<p>OpenAI has also introduced a one\\-click migration feature in Codex, allowing developers to import their workflows, plugins, and project configurations from other AI code tools\\.</p>
+<pre><code class="language-plaintext">
+# Migrate to Codex in Three Steps
 1. Go to Codex settings &gt; General &gt; Import Agent Config.
 2. Select the source tool and authorize the import.
-3. Wait for the migration to complete – all your plugins, agents, and project settings will be available in Codex.</code></pre>
-
-<p>This feature is a direct response to Anthropic’s earlier attempts to poach users with similar migration tools. For developers looking to switch to Codex from other platforms, this significantly reduces the switching cost, making it easier to adopt OpenAI’s ecosystem.</p>
-
-<h2>The Competitive Landscape: Open vs. Closed Ecosystems</h2>
-
-<p>Anthropic’s aggressive attempts to block OpenClaw, including code-level bans and account restrictions, have backfired. In contrast, OpenAI’s open approach has won favor with developers. For example, a developer who merely mentioned "OpenClaw" in a Git commit was banned by Claude Code, highlighting Anthropic’s heavy-handed tactics.</p>
-
-<pre><code># Example of Anthropic's Overly Strict Ban
+3. Wait for the migration to complete – all your plugins, agents, and project settings will be available in Codex.
+</code></pre>
+<p>This feature is a direct response to Anthropic’s earlier attempts to poach users with similar migration tools\\. For developers looking to switch to Codex from other platforms, this significantly reduces the switching cost, making it easier to adopt OpenAI’s ecosystem\\.</p>
+<h2>The Competitive Landscape: Open vs\\. Closed Ecosystems</h2>
+<p>Anthropic’s aggressive attempts to block OpenClaw, including code\\-level bans and account restrictions, have backfired\\. In contrast, OpenAI’s open approach has won favor with developers\\. For example, a developer who merely mentioned "OpenClaw" in a Git commit was banned by Claude Code, highlighting Anthropic’s heavy\\-handed tactics\\.</p>
+<pre><code class="language-plaintext">
+# Example of Anthropic's Overly Strict Ban
 // A developer's empty repository with a Git commit message containing "OpenClaw"
 git commit -m '{"openclaw": "metadata"}'
-// Result: Claude Code banned the account and zeroed out usage credits.</code></pre>
-
-<p>This heavy-handed approach has driven developers toward OpenAI’s more open ecosystem, where innovation and collaboration are encouraged rather than restricted.</p>
-
+// Result: Claude Code banned the account and zeroed out usage credits.
+</code></pre>
+<p>This heavy\\-handed approach has driven developers toward OpenAI’s more open ecosystem, where innovation and collaboration are encouraged rather than restricted\\.</p>
 <h2>Conclusion: Embracing the OpenAI Ecosystem for Global Success</h2>
+<p>OpenAI’s recent updates – integrating OpenClaw, introducing Codex’s pet and autonomous iteration, and enabling one\\-click migration – demonstrate a clear strategy to dominate the AI developer tools market\\. For overseas developers, these features offer practical benefits: reduced friction, enhanced productivity, and a more engaging development experience\\.</p>
+<p>As the AI industry shifts from pure model competition to ecosystem and workflow battles, OpenAI’s focus on building a comprehensive, user\\-friendly ecosystem positions it well to lead\\. Developers looking to go global should consider leveraging these tools to streamline their workflows, collaborate more effectively, and stay ahead in the rapidly evolving AI landscape\\.</p>
 
-<p>OpenAI’s recent updates – integrating OpenClaw, introducing Codex’s pet and autonomous iteration, and enabling one-click migration – demonstrate a clear strategy to dominate the AI developer tools market. For overseas developers, these features offer practical benefits: reduced friction, enhanced productivity, and a more engaging development experience.</p>
-
-<p>As the AI industry shifts from pure model competition to ecosystem and workflow battles, OpenAI’s focus on building a comprehensive, user-friendly ecosystem positions it well to lead. Developers looking to go global should consider leveraging these tools to streamline their workflows, collaborate more effectively, and stay ahead in the rapidly evolving AI landscape.</p>
+<h2>FAQ</h2>
+<h3>Q: Do I need a ChatGPT Plus subscription to use OpenClaw integration?</h3>
+<p>Yes, the OpenClaw integration with ChatGPT requires a ChatGPT Plus subscription. Usage quotas are deducted from your existing subscription.</p>
+<h3>Q: Is Codex's pixel pet feature just a novelty?</h3>
+<p>No. The pixel pet serves as a visual status indicator, helping developers quickly see Codex's activity state. For remote teams working across time zones, this reduces context-switching overhead.</p>
+<h3>Q: How does OpenAI's one-click migration work in practice?</h3>
+<p>The migration feature allows you to import workflows, plugins, and configurations from other AI code tools. Simply go to Codex settings, select Import Agent Config, choose your source tool, and authorize the import.</p>
 
 <div class="next-step">
-<p><strong>Next Step:</strong> Understand OpenClaw better: <a href="/article/openclaw-demystified-20-lines">OpenClaw Demystified in 20 Lines &#x2192;</a></p>
+<p><strong>Next:</strong> <a href="/article/openclaw-demystified-20-lines">OpenClaw Demystified in 20 Lines →</a></p>
 </div>`,
-    contentZh: `<p>在竞争激烈的AI开发者工具市场中，OpenAI推出了一系列影响深远的更新，彻底改变了游戏规则。本文将深入剖析OpenAI的战略举措，重点关注OpenClaw的集成、Codex的创新功能，以及对出海开发者的实际意义。</p>
+    contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Industry Analysis · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> OpenAI's strategic moves integrating OpenClaw, Codex innovations, and what they mean for global developers.</p>
+</div>
 
-<h2>OpenClaw集成：打破全球开发者的门槛</h2>
-
-<p>最具突破性的举措之一是将OpenClaw与ChatGPT无缝集成。开发者现在可以使用现有的ChatGPT账号登录OpenClaw，无需单独注册或付费。对于出海开发者来说，这改变了游戏规则——他们可以利用OpenClaw的能力，而无需面对新的账号系统或额外成本。</p>
-
-<pre><code># How to Use OpenClaw with Your ChatGPT Account
+<p>In the fiercely competitive AI developer tools market, OpenAI has launched a series of impactful updates, completely reshaping the rules of the game\\. This article will dissect OpenAI’s strategic moves, focusing on the integration of OpenClaw, the innovative features of Codex, and the practical implications for developers aiming to go global\\.</p>
+<h2>OpenClaw Integration: Breaking Down Barriers for Global Developers</h2>
+<p>One of the most groundbreaking moves is the seamless integration of OpenClaw with ChatGPT\\. Developers can now log in to OpenClaw using their existing ChatGPT accounts, eliminating the need for separate registrations or payments\\. This is a game\\-changer for overseas developers, as it allows them to leverage OpenClaw’s capabilities without navigating new account systems or additional costs\\.</p>
+<pre><code class="language-plaintext">
+# How to Use OpenClaw with Your ChatGPT Account
 1. Ensure you have a ChatGPT Plus subscription.
 2. Visit the OpenClaw platform and select "Login with ChatGPT".
-3. Authorize the connection – all your usage quotas are deducted from your ChatGPT subscription.</code></pre>
-
-<p>这种集成不仅减少了摩擦，还确保开发者可以在现有工作流中访问OpenClaw的功能，使分布在多个地区的团队更容易采用。</p>
-
-<h2>Codex的像素宠物：提升开发者参与度的实用工具</h2>
-
-<p>Codex新增的像素宠物功能不仅仅是一个噱头——它是一个提升开发者生产力的实用工具。在Codex界面中输入<code>/pet</code>命令，开发者可以召唤一个像素风格的宠物，它充当可视化的状态指示器。</p>
-
-<pre><code># Summon and Use Your Codex Pet
+3. Authorize the connection – all your usage quotas are deducted from your ChatGPT subscription.
+</code></pre>
+<p>This integration not only reduces friction but also ensures that developers can access OpenClaw’s features as part of their existing workflow, making it easier to adopt for teams spread across different regions\\.</p>
+<h2>Codex's Pixel Pet: A Practical Tool for Developer Engagement</h2>
+<p>Codex’s new pixel pet feature is more than just a gimmick – it’s a practical tool that enhances developer productivity\\. By typing the command <code>/pet</code> in the Codex interface, developers can summon a pixel\\-style pet that acts as a visual status indicator\\.</p>
+<pre><code class="language-plaintext">
+# Summon and Use Your Codex Pet
 1. In the Codex command bar, type \`/pet\` and press enter.
-2. Choose from 8 preset pets or use the \`hatch-pet\` skill to create a custom one:</code></pre>
-
-<p>skill-installer hatch-pet</p>
-
-<pre><code>3. The pet's animations will reflect Codex's status – busy when processing, idle when waiting for input.</code></pre>
-
-<p>对于跨时区工作的出海开发者来说，这个功能提供了关于Codex活动状态的快速视觉提示，减少了频繁切换窗口检查进度的需要。它还增加了个性化的元素，使开发环境更具吸引力。</p>
-
-<h2>自主迭代：重新定义开发者工作流</h2>
-
-<p>Codex新增的<code>/goal</code>命令引入了自主迭代功能，这改变了开发者处理编码任务的方式。开发者无需逐一下达指令，只需设定一个高层次目标，Codex就会自动将其分解为任务、编写代码并进行调试。</p>
-
-<pre><code># Using the /goal Command for Autonomous Development
-1. In Codex, enter:</code></pre>
-
+2. Choose from 8 preset pets or use the \`hatch-pet\` skill to create a custom one:
+</code></pre>
+<p>skill\\-installer hatch\\-pet</p>
+<pre><code class="language-plaintext">
+3. The pet’s animations will reflect Codex’s status – busy when processing, idle when waiting for input.
+</code></pre>
+<p>For overseas developers working across time zones, this feature provides a quick visual cue about Codex’s activity, reducing the need to constantly switch windows to check progress\\. It also adds a touch of personalization, making the development environment more engaging\\.</p>
+<h2>Autonomous Iteration: Redefining Developer Workflows</h2>
+<p>Codex’s new <code>/goal</code> command introduces autonomous iteration, a feature that transforms how developers approach coding tasks\\. Instead of issuing step\\-by\\-step instructions, developers can set a high\\-level goal, and Codex will break it down into tasks, write code, and debug autonomously\\.</p>
+<pre><code class="language-plaintext">
+# Using the /goal Command for Autonomous Development
+1. In Codex, enter:
+</code></pre>
 <p>/goal Build a user management system with Google OAuth login</p>
-
-<pre><code>2. Codex will:
+<pre><code class="language-plaintext">
+2. Codex will:
 - Decompose the goal into sub-tasks (e.g., set up authentication, create user models).
 - Write and test the code.
 - Debug issues and iterate automatically.
-3. Monitor progress via your Codex pet or progress notifications.</code></pre>
-
-<p>这对于在复杂项目上协作的海外团队尤其有价值。它让开发者专注于高层次策略，而Codex处理实现细节，从而加快开发周期并减少错误。</p>
-
-<h2>一键迁移：降低入门门槛</h2>
-
-<p>OpenAI还在Codex中引入了一键迁移功能，允许开发者从其他AI代码工具导入工作流、插件和项目配置。</p>
-
-<pre><code># Migrate to Codex in Three Steps
+3. Monitor progress via your Codex pet or progress notifications.
+</code></pre>
+<p>This is particularly valuable for overseas teams collaborating on complex projects\\. It allows developers to focus on high\\-level strategy while Codex handles the implementation details, speeding up development cycles and reducing errors\\.</p>
+<h2>One\\-Click Migration: Lowering the Barrier to Entry</h2>
+<p>OpenAI has also introduced a one\\-click migration feature in Codex, allowing developers to import their workflows, plugins, and project configurations from other AI code tools\\.</p>
+<pre><code class="language-plaintext">
+# Migrate to Codex in Three Steps
 1. Go to Codex settings &gt; General &gt; Import Agent Config.
 2. Select the source tool and authorize the import.
-3. Wait for the migration to complete – all your plugins, agents, and project settings will be available in Codex.</code></pre>
-
-<p>这个功能是对Anthropic早期尝试用类似迁移工具抢夺用户的直接回应。对于想要从其他平台切换到Codex的开发者来说，这显著降低了转换成本，使他们更容易采纳OpenAI的生态系统。</p>
-
-<h2>竞争格局：开放生态 vs. 封闭生态</h2>
-
-<p>Anthropic试图阻止OpenClaw的激进手段——包括代码级禁令和账号限制——适得其反。相比之下，OpenAI的开放姿态赢得了开发者的青睐。例如，一位开发者仅仅因为在Git提交中提到了"OpenClaw"就被Claude Code封禁，这凸显了Anthropic的强硬手段。</p>
-
-<pre><code># Example of Anthropic's Overly Strict Ban
+3. Wait for the migration to complete – all your plugins, agents, and project settings will be available in Codex.
+</code></pre>
+<p>This feature is a direct response to Anthropic’s earlier attempts to poach users with similar migration tools\\. For developers looking to switch to Codex from other platforms, this significantly reduces the switching cost, making it easier to adopt OpenAI’s ecosystem\\.</p>
+<h2>The Competitive Landscape: Open vs\\. Closed Ecosystems</h2>
+<p>Anthropic’s aggressive attempts to block OpenClaw, including code\\-level bans and account restrictions, have backfired\\. In contrast, OpenAI’s open approach has won favor with developers\\. For example, a developer who merely mentioned "OpenClaw" in a Git commit was banned by Claude Code, highlighting Anthropic’s heavy\\-handed tactics\\.</p>
+<pre><code class="language-plaintext">
+# Example of Anthropic's Overly Strict Ban
 // A developer's empty repository with a Git commit message containing "OpenClaw"
 git commit -m '{"openclaw": "metadata"}'
-// Result: Claude Code banned the account and zeroed out usage credits.</code></pre>
+// Result: Claude Code banned the account and zeroed out usage credits.
+</code></pre>
+<p>This heavy\\-handed approach has driven developers toward OpenAI’s more open ecosystem, where innovation and collaboration are encouraged rather than restricted\\.</p>
+<h2>Conclusion: Embracing the OpenAI Ecosystem for Global Success</h2>
+<p>OpenAI’s recent updates – integrating OpenClaw, introducing Codex’s pet and autonomous iteration, and enabling one\\-click migration – demonstrate a clear strategy to dominate the AI developer tools market\\. For overseas developers, these features offer practical benefits: reduced friction, enhanced productivity, and a more engaging development experience\\.</p>
+<p>As the AI industry shifts from pure model competition to ecosystem and workflow battles, OpenAI’s focus on building a comprehensive, user\\-friendly ecosystem positions it well to lead\\. Developers looking to go global should consider leveraging these tools to streamline their workflows, collaborate more effectively, and stay ahead in the rapidly evolving AI landscape\\.</p>
 
-<p>这种强硬做法将开发者推向了OpenAI更开放的生态系统，在那里创新和协作受到鼓励而非限制。</p>
-
-<h2>结论：拥抱OpenAI生态，赢得全球市场</h2>
-
-<p>OpenAI最近的更新——集成OpenClaw、推出Codex宠物和自主迭代功能、以及实现一键迁移——展示了其主导AI开发者工具市场的清晰战略。对于出海开发者来说，这些功能提供了实际的好处：减少摩擦、提升生产力、创造更具吸引力的开发体验。</p>
-
-<p>随着AI行业从纯模型竞争转向生态系统和工作流之战，OpenAI专注于构建全面、用户友好的生态系统的策略使其处于领先地位。想要走向全球的开发者应考虑利用这些工具来简化工作流、更有效地协作，并在快速演变的AI格局中保持领先。</p>
+<h2>常见问题</h2>
+<h3>问：使用OpenClaw集成需要ChatGPT Plus订阅吗？</h3>
+<p>是的，OpenClaw与ChatGPT的集成需要ChatGPT Plus订阅。使用配额从你现有的订阅中扣除。</p>
+<h3>问：Codex的像素宠物功能只是噱头吗？</h3>
+<p>不是。像素宠物作为可视化的状态指示器，帮助开发者快速了解Codex的活动状态。对于跨时区工作的远程团队，这减少了上下文切换的负担。</p>
+<h3>问：OpenAI的一键迁移在实际中如何工作？</h3>
+<p>迁移功能允许你从其他AI代码工具导入工作流、插件和配置。只需进入Codex设置，选择导入Agent配置，选择源工具并授权导入即可。</p>
 
 <div class="next-step">
-<p><strong>下一步：</strong> 更好地理解OpenClaw：<a href="/article/openclaw-demystified-20-lines">20行代码揭秘OpenClaw &#x2192;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/openclaw-demystified-20-lines">20行代码揭秘OpenClaw →</a></p>
 </div>`,
   },
 
   // ====== agent-skill-harness-explained ======
   "agent-skill-harness-explained": {
-    content: `<p>As AI intelligent automation keeps evolving, three core terms Agent, Skill and Harness have become fundamental concepts for building automated task systems. This article elaborates their definitions, functional differences and practical application logic, combined with usable operation logic and sample code, helping developers quickly master these modules and apply them to daily AI programming and workflow deployment.</p>
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Development · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> The definitions, functional differences and practical application logic of Agent, Skill and Harness in modern AI development.</p>
+</div>
 
+<p>As AI intelligent automation keeps evolving, three core terms Agent, Skill and Harness have become fundamental concepts for building automated task systems\\. This article elaborates their definitions, functional differences and practical application logic, combined with usable operation logic and sample code, helping developers quickly master these modules and apply them to daily AI programming and workflow deployment\\.</p>
 <h2>Basic Definition of Three Core Modules</h2>
-
 <h3>AI Agent</h3>
-
-<p>An Agent is an autonomous intelligent execution subject. It can independently perceive task demands, analyze objectives, make decision judgments and complete a full set of work without continuous human command intervention. It acts as the core brain of the entire intelligent system, responsible for overall task scheduling, progress control and result feedback.</p>
-
+<p>An Agent is an autonomous intelligent execution subject\\. It can independently perceive task demands, analyze objectives, make decision judgments and complete a full set of work without continuous human command intervention\\. It acts as the core brain of the entire intelligent system, responsible for overall task scheduling, progress control and result feedback\\.</p>
 <h3>AI Skill</h3>
-
-<p>Skill refers to independent functional capability units. Each skill corresponds to a single professional function, such as file reading, web crawling, data calculation, image parsing and code compilation. Skills are reusable functional components that can be freely called and combined by agents to realize diversified complex demands.</p>
-
+<p>Skill refers to independent functional capability units\\. Each skill corresponds to a single professional function, such as file reading, web crawling, data calculation, image parsing and code compilation\\. Skills are reusable functional components that can be freely called and combined by agents to realize diversified complex demands\\.</p>
 <h3>Harness</h3>
-
-<p>Harness serves as the unified running carrier and operation framework. It undertakes the connection, scheduling and environment management between agents and skills. It standardizes calling rules, resource allocation, log recording and exception handling, ensuring all modules run stably and interact orderly inside the system.</p>
-
+<p>Harness serves as the unified running carrier and operation framework\\. It undertakes the connection, scheduling and environment management between agents and skills\\. It standardizes calling rules, resource allocation, log recording and exception handling, ensuring all modules run stably and interact orderly inside the system\\.</p>
 <h2>Operational Relationship Between Modules</h2>
-
-<p>The operating logic follows a clear closed loop. Users submit general tasks to Harness framework first. Harness distributes the demands to the built-in AI Agent. The agent splits complex tasks into multiple independent subtasks, matches corresponding Skill functions according to subtask attributes, and sends calling instructions. After the skill finishes executing specific operations, it returns data results to the agent. Finally, the agent summarizes all information and feeds the final output back to users via Harness.</p>
-
-<p>This layered design realizes separation of duties. The agent focuses on decision making, skills focus on specific execution, and harness guarantees stable operation, greatly improving system scalability and maintenance efficiency.</p>
-
-<h2>Practical Usage & Sample Implementation</h2>
-
-<h3>1. Simple Skill Definition Code Block</h3>
-
+<p>The operating logic follows a clear closed loop\\. Users submit general tasks to Harness framework first\\. Harness distributes the demands to the built\\-in AI Agent\\. The agent splits complex tasks into multiple independent subtasks, matches corresponding Skill functions according to subtask attributes, and sends calling instructions\\. After the skill finishes executing specific operations, it returns data results to the agent\\. Finally, the agent summarizes all information and feeds the final output back to users via Harness\\.</p>
+<p>This layered design realizes separation of duties\\. The agent focuses on decision making, skills focus on specific execution, and harness guarantees stable operation, greatly improving system scalability and maintenance efficiency\\.</p>
+<h2>Practical Usage \\&amp; Sample Implementation</h2>
+<h3>1\\. Simple Skill Definition Code Block</h3>
 <p>Define a basic file query skill that can be invoked by the agent to obtain local document information</p>
-
-<pre><code>class FileQuerySkill:
+<pre><code class="language-python">
+class FileQuerySkill:
     def execute(self, file_path: str) -&gt; str:
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
             return f"File loaded successfully: {content[:200]}"
         except Exception as e:
-            return f"File access failed: {str(e)}"</code></pre>
-
-<h3>2. Agent Task Scheduling Logic</h3>
-
+            return f"File access failed: {str(e)}"
+</code></pre>
+<h3>2\\. Agent Task Scheduling Logic</h3>
 <p>The intelligent agent analyzes requirements and automatically calls matching skills to complete combined tasks</p>
-
-<pre><code>class TaskAgent:
+<pre><code class="language-python">
+class TaskAgent:
     def __init__(self):
         self.skills = {"file_query": FileQuerySkill()}
 
     def handle_task(self, user_demand: str):
         if "read file" in user_demand.lower():
             return self.skills["file_query"].execute("demo.txt")
-        return "Unsupported task type"</code></pre>
-
-<h3>3. Harness Runtime Management Module</h3>
-
+        return "Unsupported task type"
+</code></pre>
+<h3>3\\. Harness Runtime Management Module</h3>
 <p>Unified framework to load agents, manage resources and process task access requests</p>
-
-<pre><code>class SystemHarness:
+<pre><code class="language-python">
+class SystemHarness:
     def __init__(self):
         self.running_agent = TaskAgent()
 
@@ -7354,122 +7032,93 @@ git commit -m '{"openclaw": "metadata"}'
 if __name__ == "__main__":
     ai_system = SystemHarness()
     final_output = ai_system.run_task("read file")
-    print(final_output)</code></pre>
-
+    print(final_output)
+</code></pre>
 <h2>Practical Application Scenarios</h2>
-
 <ol>
-
-  <li><strong>Automated Code Development</strong></li>
-
+<li><strong>Automated Code Development</strong></li>
 </ol>
-
-<p>Agents disassemble programming demands, call coding, debugging and testing skills separately, and harness manages operating environment and version records to realize automatic project writing.</p>
-
+<p>Agents disassemble programming demands, call coding, debugging and testing skills separately, and harness manages operating environment and version records to realize automatic project writing\\.</p>
 <ol>
-
-  <li><strong>Batch Data Processing</strong></li>
-
+<li><strong>Batch Data Processing</strong></li>
 </ol>
-
-<p>The main agent sorts data classification tasks, invokes parsing, calculation and storage skills in batches, and the framework uniformly monitors running status to avoid task collapse.</p>
-
+<p>The main agent sorts data classification tasks, invokes parsing, calculation and storage skills in batches, and the framework uniformly monitors running status to avoid task collapse\\.</p>
 <ol>
-
-  <li><strong>Browser & Local Tool Control</strong></li>
-
+<li><strong>Browser \\&amp; Local Tool Control</strong></li>
 </ol>
-
-<p>Match page clicking, content extraction and form submission skills. The agent judges operation steps, and harness maintains session connection to complete unattended web automation work.</p>
-
+<p>Match page clicking, content extraction and form submission skills\\. The agent judges operation steps, and harness maintains session connection to complete unattended web automation work\\.</p>
 <h2>Core Usage Tips</h2>
-
 <ol>
-
-  <li>Split independent functions into separate skills, which is convenient for later function update and repeated invocation.</li>
-
+<li>Split independent functions into separate skills, which is convenient for later function update and repeated invocation\\.</li>
 </ol>
-
 <ol>
-
-  <li>Set clear task judgment rules inside the agent to reduce invalid matching and improve response speed.</li>
-
+<li>Set clear task judgment rules inside the agent to reduce invalid matching and improve response speed\\.</li>
 </ol>
-
 <ol>
-
-  <li>Add exception capture and log records in the harness framework to quickly locate faults when modules interact abnormally.</li>
-
+<li>Add exception capture and log records in the harness framework to quickly locate faults when modules interact abnormally\\.</li>
 </ol>
-
 <ol>
-
-  <li>Expand new skills according to business demands, and the agent can automatically adapt and combine functions without rewriting overall logic.</li>
-
+<li>Expand new skills according to business demands, and the agent can automatically adapt and combine functions without rewriting overall logic\\.</li>
 </ol>
-
 <h2>Summary</h2>
+<p>Agent, Skill and Harness form the standard architecture of current AI automation systems\\. The agent dominates overall decision\\-making, skills bear specific execution capabilities, and harness maintains stable system operation\\. Mastering their matching relation and writing simple calling code can help users quickly build lightweight intelligent task systems, and the modular structure also supports continuous function expansion for complex commercial AI projects\\.</p>
 
-<p>Agent, Skill and Harness form the standard architecture of current AI automation systems. The agent dominates overall decision-making, skills bear specific execution capabilities, and harness maintains stable system operation. Mastering their matching relation and writing simple calling code can help users quickly build lightweight intelligent task systems, and the modular structure also supports continuous function expansion for complex commercial AI projects.</p>
+<h2>FAQ</h2>
+<h3>Q: Do I need to be a Python developer to use Agent, Skill, and Harness?</h3>
+<p>The concepts are language-agnostic. While the examples in this article use Python, you can implement the same architecture in any programming language that suits your project.</p>
+<h3>Q: Can I add new skills without modifying the agent?</h3>
+<p>Yes. The modular design means you can add new skills by implementing the skill interface and registering it with the harness. The agent can automatically discover and use new skills.</p>
+<h3>Q: How do I handle errors in an agent system?</h3>
+<p>Error handling should be implemented at the harness level with try-catch blocks, logging, and fallback mechanisms. The harness monitors all agent and skill operations, captures exceptions, and can trigger recovery procedures.</p>
 
 <div class="next-step">
-<p><strong>Next Step:</strong> Learn 12 core AI concepts: <a href="/article/12-core-ai-concepts-guide">12 Core AI Concepts Guide &#x2192;</a></p>
+<p><strong>Next:</strong> <a href="/article/12-core-ai-concepts-guide">12 Core AI Concepts Guide →</a></p>
 </div>`,
-    contentZh: `<p>随着AI智能自动化的不断发展，三个核心术语——Agent（智能体）、Skill（技能）和Harness（运行框架）——已成为构建自动化任务系统的基础概念。本文详细阐述它们的定义、功能差异和实际应用逻辑，结合可用的操作逻辑和示例代码，帮助开发者快速掌握这些模块，并将其应用于日常AI编程和工作流部署中。</p>
+    contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Development · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> The definitions, functional differences and practical application logic of Agent, Skill and Harness in modern AI development.</p>
+</div>
 
-<h2>三大核心模块的基本定义</h2>
-
-<h3>AI Agent（智能体）</h3>
-
-<p>Agent是一个自主智能执行主体。它能够独立感知任务需求、分析目标、做出决策判断，并在无需持续人工指令干预的情况下完成整套工作。它充当整个智能系统的核心大脑，负责整体任务调度、进度控制和结果反馈。</p>
-
-<h3>AI Skill（技能）</h3>
-
-<p>Skill指的是独立的功能能力单元。每个技能对应一个单一专业功能，例如文件读取、网页抓取、数据计算、图像解析和代码编译。Skill是可重用的功能组件，可以被Agent自由调用和组合，以实现多样化的复杂需求。</p>
-
-<h3>Harness（运行框架）</h3>
-
-<p>Harness充当统一的运行载体和操作框架。它承担Agent和Skill之间的连接、调度和环境管理。它规范了调用规则、资源分配、日志记录和异常处理，确保所有模块在系统内稳定运行和有序交互。</p>
-
-<h2>模块间的运行关系</h2>
-
-<p>操作逻辑遵循一个清晰的闭环。用户首先向Harness框架提交总体任务。Harness将需求分发给内置的AI Agent。Agent将复杂任务拆解为多个独立的子任务，根据子任务属性匹配对应的Skill功能，并发送调用指令。Skill执行完具体操作后，将数据结果返回给Agent。最后，Agent汇总所有信息，通过Harness将最终输出反馈给用户。</p>
-
-<p>这种分层设计实现了职责分离。Agent专注于决策，Skill专注于具体执行，Harness保障稳定运行，极大地提高了系统的可扩展性和维护效率。</p>
-
-<h2>实际使用与示例实现</h2>
-
-<h3>1. 简单的Skill定义代码</h3>
-
-<p>定义一个基础的文件查询技能，Agent可以调用它来获取本地文档信息</p>
-
-<pre><code>class FileQuerySkill:
+<p>As AI intelligent automation keeps evolving, three core terms Agent, Skill and Harness have become fundamental concepts for building automated task systems\\. This article elaborates their definitions, functional differences and practical application logic, combined with usable operation logic and sample code, helping developers quickly master these modules and apply them to daily AI programming and workflow deployment\\.</p>
+<h2>Basic Definition of Three Core Modules</h2>
+<h3>AI Agent</h3>
+<p>An Agent is an autonomous intelligent execution subject\\. It can independently perceive task demands, analyze objectives, make decision judgments and complete a full set of work without continuous human command intervention\\. It acts as the core brain of the entire intelligent system, responsible for overall task scheduling, progress control and result feedback\\.</p>
+<h3>AI Skill</h3>
+<p>Skill refers to independent functional capability units\\. Each skill corresponds to a single professional function, such as file reading, web crawling, data calculation, image parsing and code compilation\\. Skills are reusable functional components that can be freely called and combined by agents to realize diversified complex demands\\.</p>
+<h3>Harness</h3>
+<p>Harness serves as the unified running carrier and operation framework\\. It undertakes the connection, scheduling and environment management between agents and skills\\. It standardizes calling rules, resource allocation, log recording and exception handling, ensuring all modules run stably and interact orderly inside the system\\.</p>
+<h2>Operational Relationship Between Modules</h2>
+<p>The operating logic follows a clear closed loop\\. Users submit general tasks to Harness framework first\\. Harness distributes the demands to the built\\-in AI Agent\\. The agent splits complex tasks into multiple independent subtasks, matches corresponding Skill functions according to subtask attributes, and sends calling instructions\\. After the skill finishes executing specific operations, it returns data results to the agent\\. Finally, the agent summarizes all information and feeds the final output back to users via Harness\\.</p>
+<p>This layered design realizes separation of duties\\. The agent focuses on decision making, skills focus on specific execution, and harness guarantees stable operation, greatly improving system scalability and maintenance efficiency\\.</p>
+<h2>Practical Usage \\&amp; Sample Implementation</h2>
+<h3>1\\. Simple Skill Definition Code Block</h3>
+<p>Define a basic file query skill that can be invoked by the agent to obtain local document information</p>
+<pre><code class="language-python">
+class FileQuerySkill:
     def execute(self, file_path: str) -&gt; str:
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
             return f"File loaded successfully: {content[:200]}"
         except Exception as e:
-            return f"File access failed: {str(e)}"</code></pre>
-
-<h3>2. Agent任务调度逻辑</h3>
-
-<p>智能Agent分析需求并自动调用匹配的技能来完成组合任务</p>
-
-<pre><code>class TaskAgent:
+            return f"File access failed: {str(e)}"
+</code></pre>
+<h3>2\\. Agent Task Scheduling Logic</h3>
+<p>The intelligent agent analyzes requirements and automatically calls matching skills to complete combined tasks</p>
+<pre><code class="language-python">
+class TaskAgent:
     def __init__(self):
         self.skills = {"file_query": FileQuerySkill()}
 
     def handle_task(self, user_demand: str):
         if "read file" in user_demand.lower():
             return self.skills["file_query"].execute("demo.txt")
-        return "Unsupported task type"</code></pre>
-
-<h3>3. Harness运行时管理模块</h3>
-
-<p>统一框架加载Agent、管理资源并处理任务访问请求</p>
-
-<pre><code>class SystemHarness:
+        return "Unsupported task type"
+</code></pre>
+<h3>3\\. Harness Runtime Management Module</h3>
+<p>Unified framework to load agents, manage resources and process task access requests</p>
+<pre><code class="language-python">
+class SystemHarness:
     def __init__(self):
         self.running_agent = TaskAgent()
 
@@ -7483,66 +7132,63 @@ if __name__ == "__main__":
 if __name__ == "__main__":
     ai_system = SystemHarness()
     final_output = ai_system.run_task("read file")
-    print(final_output)</code></pre>
-
-<h2>实际应用场景</h2>
-
+    print(final_output)
+</code></pre>
+<h2>Practical Application Scenarios</h2>
 <ol>
-  <li><strong>自动代码开发</strong></li>
+<li><strong>Automated Code Development</strong></li>
 </ol>
-
-<p>Agent拆解编程需求，分别调用编码、调试和测试技能，Harness管理运行环境和版本记录，实现项目自动编写。</p>
-
+<p>Agents disassemble programming demands, call coding, debugging and testing skills separately, and harness manages operating environment and version records to realize automatic project writing\\.</p>
 <ol>
-  <li><strong>批量数据处理</strong></li>
+<li><strong>Batch Data Processing</strong></li>
 </ol>
-
-<p>主Agent分类数据处理任务，批量调用解析、计算和存储技能，框架统一监控运行状态，避免任务崩溃。</p>
-
+<p>The main agent sorts data classification tasks, invokes parsing, calculation and storage skills in batches, and the framework uniformly monitors running status to avoid task collapse\\.</p>
 <ol>
-  <li><strong>浏览器与本地工具控制</strong></li>
+<li><strong>Browser \\&amp; Local Tool Control</strong></li>
 </ol>
-
-<p>匹配页面点击、内容提取和表单提交技能。Agent判断操作步骤，Harness维护会话连接，完成无人值守的Web自动化工作。</p>
-
-<h2>核心使用技巧</h2>
-
+<p>Match page clicking, content extraction and form submission skills\\. The agent judges operation steps, and harness maintains session connection to complete unattended web automation work\\.</p>
+<h2>Core Usage Tips</h2>
 <ol>
-  <li>将独立功能拆分为单独的Skill，方便后续功能更新和重复调用。</li>
+<li>Split independent functions into separate skills, which is convenient for later function update and repeated invocation\\.</li>
 </ol>
-
 <ol>
-  <li>在Agent内部设置明确的任务判断规则，减少无效匹配，提高响应速度。</li>
+<li>Set clear task judgment rules inside the agent to reduce invalid matching and improve response speed\\.</li>
 </ol>
-
 <ol>
-  <li>在Harness框架中添加异常捕获和日志记录，模块交互异常时能快速定位故障。</li>
+<li>Add exception capture and log records in the harness framework to quickly locate faults when modules interact abnormally\\.</li>
 </ol>
-
 <ol>
-  <li>根据业务需求扩展新的Skill，Agent可以自动适配和组合功能，无需重写整体逻辑。</li>
+<li>Expand new skills according to business demands, and the agent can automatically adapt and combine functions without rewriting overall logic\\.</li>
 </ol>
+<h2>Summary</h2>
+<p>Agent, Skill and Harness form the standard architecture of current AI automation systems\\. The agent dominates overall decision\\-making, skills bear specific execution capabilities, and harness maintains stable system operation\\. Mastering their matching relation and writing simple calling code can help users quickly build lightweight intelligent task systems, and the modular structure also supports continuous function expansion for complex commercial AI projects\\.</p>
 
-<h2>总结</h2>
-
-<p>Agent、Skill和Harness构成了当前AI自动化系统的标准架构。Agent主宰整体决策，Skill承担具体执行能力，Harness维护系统稳定运行。掌握它们的匹配关系并编写简单的调用代码，可以帮助用户快速构建轻量级智能任务系统，而模块化结构也支持为复杂的商业AI项目持续扩展功能。</p>
+<h2>常见问题</h2>
+<h3>问：使用Agent、Skill和Harness需要是Python开发者吗？</h3>
+<p>这些概念与语言无关。虽然本文中的示例使用Python，但你可以在任何适合项目的编程语言中实现相同的架构。</p>
+<h3>问：我可以添加新技能而不修改Agent吗？</h3>
+<p>是的。模块化设计意味着你可以通过实现技能接口并在Harness中注册来添加新技能。Agent可以自动发现并使用新技能。</p>
+<h3>问：如何在Agent系统中处理错误？</h3>
+<p>错误处理应在Harness级别通过try-catch块、日志记录和回退机制来实现。Harness监控所有Agent和技能操作，捕获异常，并可触发恢复流程。</p>
 
 <div class="next-step">
-<p><strong>下一步：</strong> 学习12个核心AI概念：<a href="/article/12-core-ai-concepts-guide">12个核心AI概念指南 &#x2192;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/12-core-ai-concepts-guide">12个核心AI概念指南 →</a></p>
 </div>`,
   },
 
   // ====== 5-ai-html-hacks-overseas-websites ======
   "5-ai-html-hacks-overseas-websites": {
-    content: `<p>HTML is the backbone of every website, but pairing it with AI unlocks game-changing capabilities—most developers and entrepreneurs never tap into these powerful combinations. Below are 5 actionable, practical AI+HTML use cases tailored for overseas websites, complete with ready-to-use code snippets and step-by-step implementation guides to boost functionality, user experience, and conversion rates.</p>
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Web Development · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> 5 actionable AI+HTML use cases for overseas websites with ready-to-use code snippets and implementation guides.</p>
+</div>
 
-<h2>1. AI-Powered Real-Time Language Localization (No Manual Translation)</h2>
-
-<p>Overseas websites need to cater to global audiences, but manual translation of every page is time-consuming and costly. With AI+HTML, you can add real-time language switching that auto-adapts to user preferences or selected regions.</p>
-
+<p>HTML is the backbone of every website, but pairing it with AI unlocks game\\-changing capabilities—most developers and entrepreneurs never tap into these powerful combinations\\. Below are 5 actionable, practical AI\\+HTML use cases tailored for overseas websites, complete with ready\\-to\\-use code snippets and step\\-by\\-step implementation guides to boost functionality, user experience, and conversion rates\\.</p>
+<h2>1\\. AI\\-Powered Real\\-Time Language Localization \\(No Manual Translation\\)</h2>
+<p>Overseas websites need to cater to global audiences, but manual translation of every page is time\\-consuming and costly\\. With AI\\+HTML, you can add real\\-time language switching that auto\\-adapts to user preferences or selected regions\\.</p>
 <h3>Implementation Code</h3>
-
-<pre><code>&lt;!-- HTML: Language Switcher UI --&gt;
+<pre><code class="language-html">
+&lt;!-- HTML: Language Switcher UI --&gt;
 &lt;div class="language-switcher"&gt;
   &lt;button onclick="switchLanguage('en')"&gt;English&lt;/button&gt;
   &lt;button onclick="switchLanguage('es')"&gt;Español&lt;/button&gt;
@@ -7582,17 +7228,14 @@ async function switchLanguage(targetLang) {
     element.textContent = data.choices[0].message.content;
   }
 }
-&lt;/script&gt;</code></pre>
-
-<h3>Key Benefit: Automatically adapts to 100+ languages, ideal for targeting European, Latin American, or Asian markets without rebuilding pages.</h3>
-
-<h2>2. AI-Driven Dynamic Content Personalization</h2>
-
-<p>Show tailored content (products, blog posts, calls-to-action) to visitors based on their browsing behavior, location, or device—all powered by AI and HTML.</p>
-
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Automatically adapts to 100\\+ languages, ideal for targeting European, Latin American, or Asian markets without rebuilding pages\\.</h3>
+<h2>2\\. AI\\-Driven Dynamic Content Personalization</h2>
+<p>Show tailored content \\(products, blog posts, calls\\-to\\-action\\) to visitors based on their browsing behavior, location, or device—all powered by AI and HTML\\.</p>
 <h3>Implementation Code</h3>
-
-<pre><code>&lt;!-- HTML: Dynamic Content Container --&gt;
+<pre><code class="language-html">
+&lt;!-- HTML: Dynamic Content Container --&gt;
 &lt;div id="personalized-content"&gt;
   &lt;p&gt;Loading recommendations just for you...&lt;/p&gt;
 &lt;/div&gt;
@@ -7639,17 +7282,14 @@ function getLocation() {
 
 // Run on page load
 window.onload = loadPersonalizedContent;
-&lt;/script&gt;</code></pre>
-
-<h3>Key Benefit: Boosts engagement by 30-50% (per industry data) by showing users content they’re more likely to interact with.</h3>
-
-<h2>3. AI-Powered Interactive FAQ Chatbot (Embedded in HTML)</h2>
-
-<p>Replace static FAQs with an interactive chatbot that answers user questions in real time—built with HTML for seamless website integration and AI for natural conversations.</p>
-
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Boosts engagement by 30\\-50% \\(per industry data\\) by showing users content they’re more likely to interact with\\.</h3>
+<h2>3\\. AI\\-Powered Interactive FAQ Chatbot \\(Embedded in HTML\\)</h2>
+<p>Replace static FAQs with an interactive chatbot that answers user questions in real time—built with HTML for seamless website integration and AI for natural conversations\\.</p>
 <h3>Implementation Code</h3>
-
-<pre><code>&lt;!-- HTML: Chatbot Widget --&gt;
+<pre><code class="language-html">
+&lt;!-- HTML: Chatbot Widget --&gt;
 &lt;div class="chatbot-widget"&gt;
   &lt;button id="chatbot-toggle"&gt;💬 Need Help?&lt;/button&gt;
   &lt;div id="chatbot-window" style="display: none;"&gt;
@@ -7704,28 +7344,24 @@ async function sendChatMessage() {
   messagesContainer.innerHTML += \`&lt;div class="ai-message"&gt;Support: \${aiResponse}&lt;/div&gt;\`;
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
-&lt;/script&gt;</code></pre>
-
-<h3>Key Benefit: Reduces customer support tickets by 40% and improves user satisfaction—critical for overseas audiences in different time zones.</h3>
-
-<h2>4. AI-Generated HTML Email Templates (For Overseas Marketing)</h2>
-
-<p>Create high-converting, region-specific email templates using AI, then embed them directly into your website’s email marketing tool (e.g., Mailchimp, Klaviyo) via HTML.</p>
-
-<h3>Implementation Code (AI-Prompt to Generate HTML Email)</h3>
-
-<p>Use this prompt with Claude or ChatGPT to generate a ready-to-use HTML email:</p>
-
-<pre><code>Generate a responsive HTML email template for an overseas fashion store's summer sale. Requirements:
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Reduces customer support tickets by 40% and improves user satisfaction—critical for overseas audiences in different time zones\\.</h3>
+<h2>4\\. AI\\-Generated HTML Email Templates \\(For Overseas Marketing\\)</h2>
+<p>Create high\\-converting, region\\-specific email templates using AI, then embed them directly into your website’s email marketing tool \\(e\\.g\\., Mailchimp, Klaviyo\\) via HTML\\.</p>
+<h3>Implementation Code \\(AI\\-Prompt to Generate HTML Email\\)</h3>
+<p>Use this prompt with Claude or ChatGPT to generate a ready\\-to\\-use HTML email:</p>
+<pre><code class="language-plaintext">
+Generate a responsive HTML email template for an overseas fashion store's summer sale. Requirements:
 1. Mobile-friendly design (max width 600px)
 2. Include a hero image placeholder, sale headline ("Up to 50% Off Summer Collection"), 3 product cards, and a "Shop Now" CTA button.
 3. Use a bright, summery color scheme (pastel pink, orange, white) with clean typography.
 4. Add unsubscribe link and company address at the bottom (comply with CAN-SPAM laws).
-5. Return only HTML code (no explanations) that can be directly copied into email marketing tools.</code></pre>
-
-<h3>Example Output Snippet (Generated by AI)</h3>
-
-<pre><code>&lt;!DOCTYPE html&gt;
+5. Return only HTML code (no explanations) that can be directly copied into email marketing tools.
+</code></pre>
+<h3>Example Output Snippet \\(Generated by AI\\)</h3>
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -7745,17 +7381,14 @@ async function sendChatMessage() {
   &lt;a href="https://your-website.com/sale" class="cta"&gt;Shop Now&lt;/a&gt;
   &lt;p&gt;Unsubscribe &lt;a href="[Unsubscribe Link]"&gt;here&lt;/a&gt;. Our address: 123 Global St, New York, NY 10001, USA.&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-<h3>Key Benefit: Saves hours of design work and ensures emails are optimized for overseas audiences (CAN-SPAM/GDPR compliant).</h3>
-
-<h2>5. AI-Driven HTML Form Validation (Reduce Bounce Rates)</h2>
-
-<p>Standard HTML form validation is limited—use AI to add smart validation that understands user intent, fixes typos, and guides users to complete forms (critical for overseas lead generation or checkout flows).</p>
-
+&lt;/html&gt;
+</code></pre>
+<h3>Key Benefit: Saves hours of design work and ensures emails are optimized for overseas audiences \\(CAN\\-SPAM/GDPR compliant\\)\\.</h3>
+<h2>5\\. AI\\-Driven HTML Form Validation \\(Reduce Bounce Rates\\)</h2>
+<p>Standard HTML form validation is limited—use AI to add smart validation that understands user intent, fixes typos, and guides users to complete forms \\(critical for overseas lead generation or checkout flows\\)\\.</p>
 <h3>Implementation Code</h3>
-
-<pre><code>&lt;!-- HTML: Checkout Form --&gt;
+<pre><code class="language-html">
+&lt;!-- HTML: Checkout Form --&gt;
 &lt;form id="checkout-form"&gt;
   &lt;input type="text" id="full-name" placeholder="Full Name" required&gt;
   &lt;input type="email" id="email" placeholder="Email Address" required&gt;
@@ -7805,46 +7438,44 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =&
     feedback.textContent = validationResult;
   }
 });
-&lt;/script&gt;</code></pre>
-
-<h3>Key Benefit: Reduces form abandonment by 25% by providing clear, helpful feedback instead of generic "invalid input" messages.</h3>
-
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Reduces form abandonment by 25% by providing clear, helpful feedback instead of generic "invalid input" messages\\.</h3>
 <h2>Final Tips for Overseas Website Success</h2>
-
 <ul>
-
-  <li>Always test AI-generated HTML across devices (mobile/desktop) and regions to ensure compatibility.</li>
-
+<li>Always test AI\\-generated HTML across devices \\(mobile/desktop\\) and regions to ensure compatibility\\.</li>
 </ul>
-
 <ul>
-
-  <li>Use region-specific AI prompts (e.g., "adapt for EU users" to comply with GDPR) when generating content.</li>
-
+<li>Use region\\-specific AI prompts \\(e\\.g\\., "adapt for EU users" to comply with GDPR\\) when generating content\\.</li>
 </ul>
-
 <ul>
-
-  <li>Limit API calls to reduce costs—cache frequent AI responses (e.g., translated text, email templates) for repeat use.</li>
-
+<li>Limit API calls to reduce costs—cache frequent AI responses \\(e\\.g\\., translated text, email templates\\) for repeat use\\.</li>
 </ul>
+<p>By combining AI’s flexibility with HTML’s simplicity, you can create a global\\-ready website that’s efficient, user\\-friendly, and tailored to international audiences—without the need for a large development team\\. These hacks are easy to implement today and will give your overseas business a competitive edge\\.</p>
+<p>Do you want me to refine any of these code snippets for a specific overseas market \\(e\\.g\\., EU, Southeast Asia\\) or integrate them with a particular platform \\(Shopify, WordPress\\)?</p>
 
-<p>By combining AI’s flexibility with HTML’s simplicity, you can create a global-ready website that’s efficient, user-friendly, and tailored to international audiences—without the need for a large development team. These hacks are easy to implement today and will give your overseas business a competitive edge.</p>
-
-<p>Do you want me to refine any of these code snippets for a specific overseas market (e.g., EU, Southeast Asia) or integrate them with a particular platform (Shopify, WordPress)?</p>
+<h2>FAQ</h2>
+<h3>Q: Do I need to know JavaScript to implement these hacks?</h3>
+<p>Basic JavaScript knowledge helps, but the code snippets provided are ready to use. You can copy and paste them into your HTML files and replace the API keys with your own.</p>
+<h3>Q: Are these AI API calls expensive to run?</h3>
+<p>For small to medium traffic websites, the costs are minimal. GPT-3.5-turbo and GPT-4o-mini are very affordable for text generation. Cache frequent responses and limit API calls to reduce costs further.</p>
+<h3>Q: Can these hacks work with any backend platform?</h3>
+<p>Yes. The code snippets are front-end HTML/JavaScript implementations. They work with any backend — WordPress, Shopify, custom PHP, or Node.js. The AI calls happen client-side or can be moved server-side.</p>
 
 <div class="next-step">
-<p><strong>Next Step:</strong> Choose the right AI tool for your needs: <a href="/article/how-to-choose-right-ai-tool">How to Choose the Right AI Tool &#x2192;</a></p>
+<p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
 </div>`,
-    contentZh: `<p>HTML是每个网站的基石，但与AI结合后，它能释放出改变游戏规则的能力——大多数开发者和企业家从未挖掘过这些强大的组合。以下是为海外网站量身定制的5个实用AI+HTML用例，配有可直接使用的代码片段和分步实现指南，帮助提升网站功能、用户体验和转化率。</p>
+    contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Web Development · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> 5 actionable AI+HTML use cases for overseas websites with ready-to-use code snippets and implementation guides.</p>
+</div>
 
-<h2>1. AI驱动的实时语言本地化（无需人工翻译）</h2>
-
-<p>海外网站需要服务全球受众，但手动翻译每个页面既耗时又昂贵。借助AI+HTML，您可以添加实时语言切换功能，自动适应用户偏好或所选地区。</p>
-
-<h3>实现代码</h3>
-
-<pre><code>&lt;!-- HTML: Language Switcher UI --&gt;
+<p>HTML is the backbone of every website, but pairing it with AI unlocks game\\-changing capabilities—most developers and entrepreneurs never tap into these powerful combinations\\. Below are 5 actionable, practical AI\\+HTML use cases tailored for overseas websites, complete with ready\\-to\\-use code snippets and step\\-by\\-step implementation guides to boost functionality, user experience, and conversion rates\\.</p>
+<h2>1\\. AI\\-Powered Real\\-Time Language Localization \\(No Manual Translation\\)</h2>
+<p>Overseas websites need to cater to global audiences, but manual translation of every page is time\\-consuming and costly\\. With AI\\+HTML, you can add real\\-time language switching that auto\\-adapts to user preferences or selected regions\\.</p>
+<h3>Implementation Code</h3>
+<pre><code class="language-html">
+&lt;!-- HTML: Language Switcher UI --&gt;
 &lt;div class="language-switcher"&gt;
   &lt;button onclick="switchLanguage('en')"&gt;English&lt;/button&gt;
   &lt;button onclick="switchLanguage('es')"&gt;Español&lt;/button&gt;
@@ -7861,7 +7492,7 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =&
 async function switchLanguage(targetLang) {
   const contentElements = document.querySelectorAll('#content h1, #content p');
   const apiKey = 'your-openai-api-key'; // Replace with your API key
-
+  
   for (const element of contentElements) {
     const originalText = element.textContent;
     // Call AI to translate text
@@ -7884,17 +7515,14 @@ async function switchLanguage(targetLang) {
     element.textContent = data.choices[0].message.content;
   }
 }
-&lt;/script&gt;</code></pre>
-
-<h3>核心优势：自动适配100多种语言，无需重建页面即可覆盖欧洲、拉美或亚洲市场。</h3>
-
-<h2>2. AI驱动的动态内容个性化</h2>
-
-<p>根据访客的浏览行为、地理位置或设备，展示量身定制的内容（产品、博客文章、行动号召按钮）——全部由AI和HTML驱动。</p>
-
-<h3>实现代码</h3>
-
-<pre><code>&lt;!-- HTML: Dynamic Content Container --&gt;
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Automatically adapts to 100\\+ languages, ideal for targeting European, Latin American, or Asian markets without rebuilding pages\\.</h3>
+<h2>2\\. AI\\-Driven Dynamic Content Personalization</h2>
+<p>Show tailored content \\(products, blog posts, calls\\-to\\-action\\) to visitors based on their browsing behavior, location, or device—all powered by AI and HTML\\.</p>
+<h3>Implementation Code</h3>
+<pre><code class="language-html">
+&lt;!-- HTML: Dynamic Content Container --&gt;
 &lt;div id="personalized-content"&gt;
   &lt;p&gt;Loading recommendations just for you...&lt;/p&gt;
 &lt;/div&gt;
@@ -7908,7 +7536,7 @@ async function loadPersonalizedContent() {
     device: /Mobile|Android/.test(navigator.userAgent) ? 'mobile' : 'desktop',
     viewedPages: ['product-category/electronics', 'blog/tech-trends'] // Track via cookies/localStorage
   };
-
+  
   const apiKey = 'your-openai-api-key';
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
@@ -7925,7 +7553,7 @@ async function loadPersonalizedContent() {
       temperature: 0.7
     })
   });
-
+  
   const data = await response.json();
   document.getElementById('personalized-content').innerHTML = data.choices[0].message.content;
 }
@@ -7941,17 +7569,14 @@ function getLocation() {
 
 // Run on page load
 window.onload = loadPersonalizedContent;
-&lt;/script&gt;</code></pre>
-
-<h3>核心优势：通过向用户展示他们更可能互动的内容，将参与度提升30-50%（根据行业数据）。</h3>
-
-<h2>3. AI驱动的交互式FAQ聊天机器人（嵌入HTML）</h2>
-
-<p>用交互式聊天机器人取代静态FAQ，实时回答用户问题——通过HTML实现无缝网站集成，借助AI实现自然对话。</p>
-
-<h3>实现代码</h3>
-
-<pre><code>&lt;!-- HTML: Chatbot Widget --&gt;
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Boosts engagement by 30\\-50% \\(per industry data\\) by showing users content they’re more likely to interact with\\.</h3>
+<h2>3\\. AI\\-Powered Interactive FAQ Chatbot \\(Embedded in HTML\\)</h2>
+<p>Replace static FAQs with an interactive chatbot that answers user questions in real time—built with HTML for seamless website integration and AI for natural conversations\\.</p>
+<h3>Implementation Code</h3>
+<pre><code class="language-html">
+&lt;!-- HTML: Chatbot Widget --&gt;
 &lt;div class="chatbot-widget"&gt;
   &lt;button id="chatbot-toggle"&gt;💬 Need Help?&lt;/button&gt;
   &lt;div id="chatbot-window" style="display: none;"&gt;
@@ -7975,12 +7600,12 @@ async function sendChatMessage() {
   const input = document.getElementById('chatbot-input');
   const message = input.value.trim();
   if (!message) return;
-
+  
   // Add user message to chat
   const messagesContainer = document.getElementById('chatbot-messages');
   messagesContainer.innerHTML += \`&lt;div class="user-message"&gt;You: \${message}&lt;/div&gt;\`;
   input.value = '';
-
+  
   // Call AI for response
   const apiKey = 'your-openai-api-key';
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -8000,34 +7625,30 @@ async function sendChatMessage() {
       }]
     })
   });
-
+  
   const data = await response.json();
   const aiResponse = data.choices[0].message.content;
   messagesContainer.innerHTML += \`&lt;div class="ai-message"&gt;Support: \${aiResponse}&lt;/div&gt;\`;
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
-&lt;/script&gt;</code></pre>
-
-<h3>核心优势：减少40%的客户支持工单，提升用户满意度——对于不同时区的海外用户尤为关键。</h3>
-
-<h2>4. AI生成的HTML邮件模板（用于海外营销）</h2>
-
-<p>使用AI创建高转化率、针对特定地区的邮件模板，然后通过HTML直接嵌入到网站的邮件营销工具（如Mailchimp、Klaviyo）中。</p>
-
-<h3>实现代码（AI提示词生成HTML邮件）</h3>
-
-<p>使用以下提示词配合Claude或ChatGPT生成可直接使用的HTML邮件：</p>
-
-<pre><code>Generate a responsive HTML email template for an overseas fashion store's summer sale. Requirements:
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Reduces customer support tickets by 40% and improves user satisfaction—critical for overseas audiences in different time zones\\.</h3>
+<h2>4\\. AI\\-Generated HTML Email Templates \\(For Overseas Marketing\\)</h2>
+<p>Create high\\-converting, region\\-specific email templates using AI, then embed them directly into your website’s email marketing tool \\(e\\.g\\., Mailchimp, Klaviyo\\) via HTML\\.</p>
+<h3>Implementation Code \\(AI\\-Prompt to Generate HTML Email\\)</h3>
+<p>Use this prompt with Claude or ChatGPT to generate a ready\\-to\\-use HTML email:</p>
+<pre><code class="language-plaintext">
+Generate a responsive HTML email template for an overseas fashion store's summer sale. Requirements:
 1. Mobile-friendly design (max width 600px)
 2. Include a hero image placeholder, sale headline ("Up to 50% Off Summer Collection"), 3 product cards, and a "Shop Now" CTA button.
 3. Use a bright, summery color scheme (pastel pink, orange, white) with clean typography.
 4. Add unsubscribe link and company address at the bottom (comply with CAN-SPAM laws).
-5. Return only HTML code (no explanations) that can be directly copied into email marketing tools.</code></pre>
-
-<h3>示例输出片段（AI生成）</h3>
-
-<pre><code>&lt;!DOCTYPE html&gt;
+5. Return only HTML code (no explanations) that can be directly copied into email marketing tools.
+</code></pre>
+<h3>Example Output Snippet \\(Generated by AI\\)</h3>
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -8047,17 +7668,14 @@ async function sendChatMessage() {
   &lt;a href="https://your-website.com/sale" class="cta"&gt;Shop Now&lt;/a&gt;
   &lt;p&gt;Unsubscribe &lt;a href="[Unsubscribe Link]"&gt;here&lt;/a&gt;. Our address: 123 Global St, New York, NY 10001, USA.&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-<h3>核心优势：节省数小时设计工作，确保邮件针对海外受众进行优化（符合CAN-SPAM/GDPR规范）。</h3>
-
-<h2>5. AI驱动的HTML表单验证（降低跳出率）</h2>
-
-<p>标准的HTML表单验证功能有限——使用AI添加智能验证，能够理解用户意图、修正拼写错误，并引导用户完成表单填写（对于海外潜在客户生成或结账流程至关重要）。</p>
-
-<h3>实现代码</h3>
-
-<pre><code>&lt;!-- HTML: Checkout Form --&gt;
+&lt;/html&gt;
+</code></pre>
+<h3>Key Benefit: Saves hours of design work and ensures emails are optimized for overseas audiences \\(CAN\\-SPAM/GDPR compliant\\)\\.</h3>
+<h2>5\\. AI\\-Driven HTML Form Validation \\(Reduce Bounce Rates\\)</h2>
+<p>Standard HTML form validation is limited—use AI to add smart validation that understands user intent, fixes typos, and guides users to complete forms \\(critical for overseas lead generation or checkout flows\\)\\.</p>
+<h3>Implementation Code</h3>
+<pre><code class="language-html">
+&lt;!-- HTML: Checkout Form --&gt;
 &lt;form id="checkout-form"&gt;
   &lt;input type="text" id="full-name" placeholder="Full Name" required&gt;
   &lt;input type="email" id="email" placeholder="Email Address" required&gt;
@@ -8072,13 +7690,13 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =&
   e.preventDefault();
   const feedback = document.getElementById('validation-feedback');
   feedback.textContent = 'Validating your information...';
-
+  
   const formData = {
     name: document.getElementById('full-name').value,
     email: document.getElementById('email').value,
     address: document.getElementById('shipping-address').value
   };
-
+  
   const apiKey = 'your-openai-api-key';
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
@@ -8094,10 +7712,10 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =&
       }]
     })
   });
-
+  
   const data = await response.json();
   const validationResult = data.choices[0].message.content;
-
+  
   if (validationResult === 'Valid') {
     feedback.textContent = 'All information is correct! Processing your order...';
     // Submit form to server
@@ -8107,356 +7725,182 @@ document.getElementById('checkout-form').addEventListener('submit', async (e) =&
     feedback.textContent = validationResult;
   }
 });
-&lt;/script&gt;</code></pre>
-
-<h3>核心优势：提供清晰有用的反馈而非通用的"无效输入"提示，将表单放弃率降低25%。</h3>
-
-<h2>海外网站成功的最终建议</h2>
-
+&lt;/script&gt;
+</code></pre>
+<h3>Key Benefit: Reduces form abandonment by 25% by providing clear, helpful feedback instead of generic "invalid input" messages\\.</h3>
+<h2>Final Tips for Overseas Website Success</h2>
 <ul>
-
-  <li>始终在不同设备（移动端/桌面端）和地区测试AI生成的HTML，确保兼容性。</li>
-
+<li>Always test AI\\-generated HTML across devices \\(mobile/desktop\\) and regions to ensure compatibility\\.</li>
 </ul>
-
 <ul>
-
-  <li>在生成内容时使用针对特定地区的AI提示词（例如，使用"适配欧盟用户"以符合GDPR要求）。</li>
-
+<li>Use region\\-specific AI prompts \\(e\\.g\\., "adapt for EU users" to comply with GDPR\\) when generating content\\.</li>
 </ul>
-
 <ul>
-
-  <li>限制API调用以降低成本——缓存常用的AI响应（如翻译文本、邮件模板）以便重复使用。</li>
-
+<li>Limit API calls to reduce costs—cache frequent AI responses \\(e\\.g\\., translated text, email templates\\) for repeat use\\.</li>
 </ul>
+<p>By combining AI’s flexibility with HTML’s simplicity, you can create a global\\-ready website that’s efficient, user\\-friendly, and tailored to international audiences—without the need for a large development team\\. These hacks are easy to implement today and will give your overseas business a competitive edge\\.</p>
+<p>Do you want me to refine any of these code snippets for a specific overseas market \\(e\\.g\\., EU, Southeast Asia\\) or integrate them with a particular platform \\(Shopify, WordPress\\)?</p>
 
-<p>将AI的灵活性与HTML的简洁性相结合，您可以创建一个面向全球的网站，高效、用户友好且针对国际受众量身定制——无需庞大的开发团队。这些技巧今天就可以轻松实现，将为您的海外业务带来竞争优势。</p>
-
-<p>您是否需要我为特定海外市场（如欧盟、东南亚）优化这些代码片段，或将它们与特定平台（Shopify、WordPress）集成？</p>
+<h2>常见问题</h2>
+<h3>问：实现这些技巧需要了解JavaScript吗？</h3>
+<p>基本的JavaScript知识会有所帮助，但提供的代码片段是可直接使用的。你可以将它们复制粘贴到你的HTML文件中，并替换为自己的API密钥。</p>
+<h3>问：这些AI API调用的运行成本高吗？</h3>
+<p>对于中小流量网站，成本非常低。GPT-3.5-turbo和GPT-4o-mini对于文本生成来说非常实惠。缓存频繁的响应并限制API调用可以进一步降低成本。</p>
+<h3>问：这些技巧可以在任何后端平台上使用吗？</h3>
+<p>是的。这些代码片段是前端HTML/JavaScript实现。它们适用于任何后端——WordPress、Shopify、自定义PHP或Node.js。AI调用可以在客户端完成，也可以移到服务器端。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 选择适合您的AI工具：<a href="/article/how-to-choose-right-ai-tool">如何选择正确的AI工具 &#x2192;</a></p>
+<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 →</a></p>
 </div>`,
   },
 
 	// ====== alexander-wang-meta-ai-superintelligence ======
 	"alexander-wang-meta-ai-superintelligence": {
 		content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI News &middot; <strong>Difficulty:</strong> Beginner</p>
-<p><strong>Reading Time:</strong> 5 minutes</p>
+<p><strong>Category:</strong> AI Industry News · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> Alexander Wang's return leading Meta's AI division, Muse Spark, MSL, and what it means for overseas businesses.</p>
 </div>
 
-<p>After vanishing from the public eye for 10 months, Alexander Wang, the youngest self-made billionaire in Silicon Valley, has made a stunning comeback. Lured by Mark Zuckerberg with a $14 billion deal, he’s now at the helm of Meta’s AI division, and his recent revelations about the future of artificial intelligence are sending shockwaves through the industry.</p>
-
+<p>After vanishing from the public eye for 10 months, Alexander Wang, the youngest self\\-made billionaire in Silicon Valley, has made a stunning comeback\\. Lured by Mark Zuckerberg with a $14 billion deal, he’s now at the helm of Meta’s AI division, and his recent revelations about the future of artificial intelligence are sending shockwaves through the industry\\.</p>
 <h2>The Man Behind the Mystery</h2>
-
-<p>Alexander Wang co-founded Scale AI and quickly became a tech sensation. But in a bold move, Meta acquired his expertise for a staggering $14 billion, and he went radio silent—until now. During a recent interview, he lifted the veil on Meta’s ambitious AI strategy, revealing a roadmap that could outpace even OpenAI.</p>
-
+<p>Alexander Wang co\\-founded Scale AI and quickly became a tech sensation\\. But in a bold move, Meta acquired his expertise for a staggering $14 billion, and he went radio silent—until now\\. During a recent interview, he lifted the veil on Meta’s ambitious AI strategy, revealing a roadmap that could outpace even OpenAI\\.</p>
 <h2>Meta’s AI Masterplan: MSL and Muse Spark</h2>
-
-<p>At the core of Meta’s AI push is the <strong>Meta Superintelligence Labs (MSL)</strong>, a newly formed division Wang built from the ground up. This lab operates under three strict principles:</p>
-
+<p>At the core of Meta’s AI push is the <strong>Meta Superintelligence Labs \\(MSL\\)</strong>, a newly formed division Wang built from the ground up\\. This lab operates under three strict principles:</p>
 <ul>
-<li>Technical excellence takes precedence.</li>
-<li>Scientific rigor and focus on foundational research.</li>
-<li>Bold, high-stakes investments in transformative technologies.</li>
+<li>Technical excellence takes precedence\\.</li>
 </ul>
-<p>One of MSL’s flagship projects is <strong>Muse Spark</strong>, an AI model that’s already showing promise. Unlike many existing models, Muse Spark boasts exceptional token efficiency. In tests, it delivers results on par with top-tier labs while using far fewer tokens, a testament to its optimized architecture.</p>
-
-<pre><code class="language-python"># Example: Token Efficiency Comparison
-def compare_token_efficiency(task, muse_spark, competitor):
-    muse_tokens = muse_spark.process_task(task)
-    comp_tokens = competitor.process_task(task)
-    efficiency = (comp_tokens - muse_tokens) / comp_tokens * 100
-    return f&quot;Muse Spark is {efficiency}% more token-efficient for {task}.&quot;
-
-print(compare_token_efficiency(&quot;data analysis&quot;, MuseSpark(), CompetitorModel()))</code></pre>
-
-<h2>Why Meta Abandoned Open Sourcing (For Now)</h2>
-
-<p>Muse Spark is currently closed-source, a departure from Meta’s previous open-source stance with models like Llama. Wang explains this is due to the model’s advanced capabilities, which trigger new safety protocols. However, he assures that Meta is developing an open-source variant and remains committed to sharing AI advancements responsibly.</p>
-
-<h2>Building a Superintelligent Future</h2>
-
-<p>Wang’s vision extends beyond just software. He emphasizes the importance of <strong>physical superintelligence</strong>—AI-powered robots and brain-computer interfaces. Meta’s recent acquisition of a robotics AI startup signals its intent to merge digital and physical AI, a move Wang believes is crucial for achieving true superintelligence.</p>
-
-<h2>Practical Implications for Overseas Businesses</h2>
-
-<p>For businesses targeting global markets, Muse Spark and Meta’s AI ecosystem offer tangible opportunities:</p>
-
-<ol>
-<li><strong>Content Localization</strong>: Use Muse Spark to automate multilingual content creation for platforms like Facebook, Instagram, and WhatsApp.</li>
-<li><strong>Customer Service</strong>: Deploy AI agents powered by Meta’s tech to handle customer inquiries across regions, 24/7.</li>
-<li><strong>Ad Optimization</strong>: Leverage AI-driven insights to refine ad campaigns for different cultural and linguistic audiences.</li>
-</ol>
-<h2>The AI Arms Race: What’s Next?</h2>
-
-<p>Wang predicts that the AI landscape will see even more upheaval. He argues that the current leaders like OpenAI and Claude are just the beginning, and new breakthroughs will continuously reshape the market. For businesses, this means staying agile and ready to adopt new AI tools as they emerge.</p>
-
-<p>In conclusion, Alexander Wang’s return and Meta’s aggressive AI strategy mark a new chapter in the race for superintelligence. For overseas businesses, aligning with these advancements could be the key to unlocking unprecedented growth and global reach. As Wang puts it, “We’re not just building AI—we’re building the tools to create a new era of human prosperity.”</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>Q: Who is Alexander Wang?</h3>
-<p>Alexander Wang is the youngest self-made billionaire in Silicon Valley, known for co-founding Scale AI. He now leads Meta's AI division after a $14 billion deal with Mark Zuckerberg. His expertise in AI and data infrastructure makes him a pivotal figure in the race for superintelligence.</p>
-
-<h3>Q: What is Muse Spark and how is it different from other AI models?</h3>
-<p>Muse Spark is Meta's flagship AI model developed by Meta Superintelligence Labs. Its key differentiator is exceptional token efficiency &mdash; it delivers results comparable to top-tier models while using significantly fewer tokens, making it more cost-effective and faster for many tasks.</p>
-
-<h3>Q: How can overseas businesses benefit from Meta's AI strategy?</h3>
-<p>Overseas businesses can leverage Meta's AI ecosystem for multilingual content localization, automated customer service across regions, and optimized ad campaigns. As the technology matures and potentially becomes available through APIs, it will offer powerful tools for global market expansion.</p>
-<div class="next-step">
-<p><strong>Next Step:</strong> Read our analysis of <a href="/article/ai-jobs-that-didnt-exist-3-years-ago">AI Jobs That Didn't Exist 3 Years Ago</a> or explore <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business</a>.</p>
-</div>`,
-		contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI 新闻 &middot; <strong>难度：</strong> 初级</p>
-<p><strong>阅读时间：</strong> 5 分钟</p>
-</div>
-
-<h2>硅谷最年轻 AI 亿万富翁的回归：Meta 的 140 亿美元豪赌与超级智能的未来</h2>
-
-<p>在公众视野中消失了 10 个月之后，硅谷最年轻的白手起家亿万富翁 Alexander Wang 以惊人的姿态回归。在马克·扎克伯格以 140 亿美元交易的吸引下，他现在执掌 Meta 的 AI 部门，他最近关于人工智能未来的披露正在业界引起震动。</p>
-
-<h2>神秘人物背后的故事</h2>
-
-<p>Alexander Wang 联合创立了 Scale AI，并迅速成为科技界的传奇人物。但在一项大胆的举措中，Meta 以惊人的 140 亿美元获得了他的专业知识，此后他一直保持沉默——直到现在。在最近的一次采访中，他揭开了 Meta 雄心勃勃的 AI 战略的面纱，展示了一条可能超越 OpenAI 的路线图。</p>
-
-<h2>Meta 的 AI 总体规划：MSL 和 Muse Spark</h2>
-
-<p>Meta AI 战略的核心是<strong>Meta 超级智能实验室（MSL）</strong>，这是 Wang 从零开始组建的新部门。该实验室遵循三个严格原则：</p>
-
 <ul>
-<li>技术卓越优先。</li>
-<li>科学严谨，专注于基础研究。</li>
-<li>对变革性技术进行大胆、高风险的投资。</li>
+<li>Scientific rigor and focus on foundational research\\.</li>
 </ul>
-
-<p>MSL 的旗舰项目之一是<strong>Muse Spark</strong>，一个已经展现出巨大潜力的 AI 模型。与许多现有模型不同，Muse Spark 拥有卓越的 Token 效率。在测试中，它使用远少于竞争对手的 Token 就能达到与顶级实验室相当的结果，这证明了其优化的架构。</p>
-
-<pre><code class="language-python"># Example: Token Efficiency Comparison
+<ul>
+<li>Bold, high\\-stakes investments in transformative technologies\\.</li>
+</ul>
+<p>One of MSL’s flagship projects is <strong>Muse Spark</strong>, an AI model that’s already showing promise\\. Unlike many existing models, Muse Spark boasts exceptional token efficiency\\. In tests, it delivers results on par with top\\-tier labs while using far fewer tokens, a testament to its optimized architecture\\.</p>
+<pre><code class="language-python">
+# Example: Token Efficiency Comparison
 def compare_token_efficiency(task, muse_spark, competitor):
     muse_tokens = muse_spark.process_task(task)
     comp_tokens = competitor.process_task(task)
     efficiency = (comp_tokens - muse_tokens) / comp_tokens * 100
     return f"Muse Spark is {efficiency}% more token-efficient for {task}."
 
-print(compare_token_efficiency("data analysis", MuseSpark(), CompetitorModel()))</code></pre>
-
-<h2>Meta 为何（暂时）放弃开源</h2>
-
-<p>Muse Spark 目前是闭源的，这与 Meta 在 Llama 等模型上的开源立场有所不同。Wang 解释说，这是由于该模型的高级能力触发了新的安全协议。不过，他保证 Meta 正在开发开源版本，并致力于负责任地分享 AI 进展。</p>
-
-<h2>构建超级智能的未来</h2>
-
-<p>Wang 的愿景不仅限于软件。他强调<strong>物理超级智能</strong>的重要性——即 AI 驱动的机器人和脑机接口。Meta 最近收购了一家机器人 AI 初创公司，表明其意图融合数字和物理 AI，Wang 认为这是实现真正超级智能的关键一步。</p>
-
-<h2>对海外业务的实践意义</h2>
-
-<p>对于瞄准全球市场的企业来说，Muse Spark 和 Meta 的 AI 生态系统提供了切实的机会：</p>
-
+print(compare_token_efficiency("data analysis", MuseSpark(), CompetitorModel()))
+</code></pre>
+<h2>Why Meta Abandoned Open Sourcing \\(For Now\\)</h2>
+<p>Muse Spark is currently closed\\-source, a departure from Meta’s previous open\\-source stance with models like Llama\\. Wang explains this is due to the model’s advanced capabilities, which trigger new safety protocols\\. However, he assures that Meta is developing an open\\-source variant and remains committed to sharing AI advancements responsibly\\.</p>
+<h2>Building a Superintelligent Future</h2>
+<p>Wang’s vision extends beyond just software\\. He emphasizes the importance of <strong>physical superintelligence</strong>—AI\\-powered robots and brain\\-computer interfaces\\. Meta’s recent acquisition of a robotics AI startup signals its intent to merge digital and physical AI, a move Wang believes is crucial for achieving true superintelligence\\.</p>
+<h2>Practical Implications for Overseas Businesses</h2>
+<p>For businesses targeting global markets, Muse Spark and Meta’s AI ecosystem offer tangible opportunities:</p>
 <ol>
-<li><strong>内容本地化</strong>：使用 Muse Spark 自动为 Facebook、Instagram 和 WhatsApp 等平台创建多语言内容。</li>
-<li><strong>客户服务</strong>：部署由 Meta 技术驱动的 AI 代理，跨区域全天候处理客户咨询。</li>
-<li><strong>广告优化</strong>：利用 AI 驱动的洞察为不同文化和语言受众优化广告活动。</li>
+<li><strong>Content Localization</strong>: Use Muse Spark to automate multilingual content creation for platforms like Facebook, Instagram, and WhatsApp\\.</li>
 </ol>
+<ol>
+<li><strong>Customer Service</strong>: Deploy AI agents powered by Meta’s tech to handle customer inquiries across regions, 24/7\\.</li>
+</ol>
+<ol>
+<li><strong>Ad Optimization</strong>: Leverage AI\\-driven insights to refine ad campaigns for different cultural and linguistic audiences\\.</li>
+</ol>
+<h2>The AI Arms Race: What’s Next?</h2>
+<p>Wang predicts that the AI landscape will see even more upheaval\\. He argues that the current leaders like OpenAI and Claude are just the beginning, and new breakthroughs will continuously reshape the market\\. For businesses, this means staying agile and ready to adopt new AI tools as they emerge\\.</p>
+<p>In conclusion, Alexander Wang’s return and Meta’s aggressive AI strategy mark a new chapter in the race for superintelligence\\. For overseas businesses, aligning with these advancements could be the key to unlocking unprecedented growth and global reach\\. As Wang puts it, “We’re not just building AI—we’re building the tools to create a new era of human prosperity\\.”</p>
 
-<h2>AI 军备竞赛：下一步是什么？</h2>
-
-<p>Wang 预测 AI 领域将出现更多剧变。他认为 OpenAI 和 Claude 等当前领导者只是开始，新的突破将不断重塑市场。对企业来说，这意味着要保持敏捷，随时准备采用新的 AI 工具。</p>
-
-<p>总之，Alexander Wang 的回归和 Meta 激进的 AI 战略标志着超级智能竞赛的新篇章。对于海外企业来说，与这些进步保持一致可能是解锁前所未有的增长和全球影响力的关键。正如 Wang 所说："我们不仅在构建 AI——我们在构建创造人类繁荣新时代的工具。"</p>
-
-<h2>常见问题</h2>
-
-<h3>问：Alexander Wang 是谁？他为什么重要？</h3>
-<p>Alexander Wang 是硅谷最年轻的白手起家亿万富翁，以联合创立 Scale AI 而闻名。在与扎克伯格达成 140 亿美元的交易后，他现在领导 Meta 的 AI 部门。他在 AI 和数据基础设施方面的深厚专业知识使他成为超级智能竞赛中的关键人物。</p>
-
-<h3>问：什么是 Muse Spark？它与其他 AI 模型有什么核心区别？</h3>
-<p>Muse Spark 是 Meta 超级智能实验室开发的旗舰 AI 模型。其最大特色是卓越的 Token 效率——使用显著更少的 Token 就能提供与顶级模型相媲美的结果，意味着更低成本和更快速度。</p>
-
-<h3>问：海外企业如何从 Meta 的 AI 战略中实际受益？</h3>
-<p>海外企业可以通过多种方式利用 Meta 的 AI 生态系统：多语言内容本地化、跨区域自动化客服、以及精准广告投放优化。随着技术成熟并可能通过 API 开放，将为全球市场扩张提供强大工具。</p>
+<h2>FAQ</h2>
+<h3>Q: What is Muse Spark and how is it different from other AI models?</h3>
+<p>Muse Spark is Meta's AI model developed by MSL. Its key advantage is exceptional token efficiency — delivering results on par with top-tier labs while using far fewer tokens.</p>
+<h3>Q: Why did Meta close-source Muse Spark when they open-sourced Llama?</h3>
+<p>Meta cites advanced capabilities triggering new safety protocols. However, they are developing an open-source variant and remain committed to sharing AI advancements responsibly.</p>
+<h3>Q: How can overseas businesses benefit from Meta's AI advancements?</h3>
+<p>Meta's AI ecosystem offers content localization across Facebook/Instagram/WhatsApp, 24/7 AI-powered customer service, and AI-driven ad optimization for different cultural and linguistic audiences.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 阅读我们的分析文章 <a href="/article/ai-jobs-that-didnt-exist-3-years-ago">3 年前不存在的 AI 工作</a> 或探索 <a href="/article/5-ai-tools-one-person-overseas-business">5 款 AI 工具打造你的单人海外业务</a>。</p>
+<p><strong>Next:</strong> <a href="/article/ai-workforce-virtual-employees">AI Workforce: Virtual AI Employees →</a></p>
+</div>`,
+		contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Industry News · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> Alexander Wang's return leading Meta's AI division, Muse Spark, MSL, and what it means for overseas businesses.</p>
+</div>
+
+<p>After vanishing from the public eye for 10 months, Alexander Wang, the youngest self\\-made billionaire in Silicon Valley, has made a stunning comeback\\. Lured by Mark Zuckerberg with a $14 billion deal, he’s now at the helm of Meta’s AI division, and his recent revelations about the future of artificial intelligence are sending shockwaves through the industry\\.</p>
+<h2>The Man Behind the Mystery</h2>
+<p>Alexander Wang co\\-founded Scale AI and quickly became a tech sensation\\. But in a bold move, Meta acquired his expertise for a staggering $14 billion, and he went radio silent—until now\\. During a recent interview, he lifted the veil on Meta’s ambitious AI strategy, revealing a roadmap that could outpace even OpenAI\\.</p>
+<h2>Meta’s AI Masterplan: MSL and Muse Spark</h2>
+<p>At the core of Meta’s AI push is the <strong>Meta Superintelligence Labs \\(MSL\\)</strong>, a newly formed division Wang built from the ground up\\. This lab operates under three strict principles:</p>
+<ul>
+<li>Technical excellence takes precedence\\.</li>
+</ul>
+<ul>
+<li>Scientific rigor and focus on foundational research\\.</li>
+</ul>
+<ul>
+<li>Bold, high\\-stakes investments in transformative technologies\\.</li>
+</ul>
+<p>One of MSL’s flagship projects is <strong>Muse Spark</strong>, an AI model that’s already showing promise\\. Unlike many existing models, Muse Spark boasts exceptional token efficiency\\. In tests, it delivers results on par with top\\-tier labs while using far fewer tokens, a testament to its optimized architecture\\.</p>
+<pre><code class="language-python">
+# Example: Token Efficiency Comparison
+def compare_token_efficiency(task, muse_spark, competitor):
+    muse_tokens = muse_spark.process_task(task)
+    comp_tokens = competitor.process_task(task)
+    efficiency = (comp_tokens - muse_tokens) / comp_tokens * 100
+    return f"Muse Spark is {efficiency}% more token-efficient for {task}."
+
+print(compare_token_efficiency("data analysis", MuseSpark(), CompetitorModel()))
+</code></pre>
+<h2>Why Meta Abandoned Open Sourcing \\(For Now\\)</h2>
+<p>Muse Spark is currently closed\\-source, a departure from Meta’s previous open\\-source stance with models like Llama\\. Wang explains this is due to the model’s advanced capabilities, which trigger new safety protocols\\. However, he assures that Meta is developing an open\\-source variant and remains committed to sharing AI advancements responsibly\\.</p>
+<h2>Building a Superintelligent Future</h2>
+<p>Wang’s vision extends beyond just software\\. He emphasizes the importance of <strong>physical superintelligence</strong>—AI\\-powered robots and brain\\-computer interfaces\\. Meta’s recent acquisition of a robotics AI startup signals its intent to merge digital and physical AI, a move Wang believes is crucial for achieving true superintelligence\\.</p>
+<h2>Practical Implications for Overseas Businesses</h2>
+<p>For businesses targeting global markets, Muse Spark and Meta’s AI ecosystem offer tangible opportunities:</p>
+<ol>
+<li><strong>Content Localization</strong>: Use Muse Spark to automate multilingual content creation for platforms like Facebook, Instagram, and WhatsApp\\.</li>
+</ol>
+<ol>
+<li><strong>Customer Service</strong>: Deploy AI agents powered by Meta’s tech to handle customer inquiries across regions, 24/7\\.</li>
+</ol>
+<ol>
+<li><strong>Ad Optimization</strong>: Leverage AI\\-driven insights to refine ad campaigns for different cultural and linguistic audiences\\.</li>
+</ol>
+<h2>The AI Arms Race: What’s Next?</h2>
+<p>Wang predicts that the AI landscape will see even more upheaval\\. He argues that the current leaders like OpenAI and Claude are just the beginning, and new breakthroughs will continuously reshape the market\\. For businesses, this means staying agile and ready to adopt new AI tools as they emerge\\.</p>
+<p>In conclusion, Alexander Wang’s return and Meta’s aggressive AI strategy mark a new chapter in the race for superintelligence\\. For overseas businesses, aligning with these advancements could be the key to unlocking unprecedented growth and global reach\\. As Wang puts it, “We’re not just building AI—we’re building the tools to create a new era of human prosperity\\.”</p>
+
+<h2>常见问题</h2>
+<h3>问：Muse Spark是什么？与其他AI模型有什么不同？</h3>
+<p>Muse Spark是Meta的MSL开发的AI模型。其关键优势在于卓越的Token效率——在使用更少Token的同时提供与顶级实验室相当的结果。</p>
+<h3>问：Meta开源了Llama，为什么却将Muse Spark闭源？</h3>
+<p>Meta表示这是因为先进能力触发了新的安全协议。不过，他们正在开发开源变体，并承诺负责任地分享AI进步。</p>
+<h3>问：出海企业如何从Meta的AI进步中受益？</h3>
+<p>Meta的AI生态系统提供跨Facebook/Instagram/WhatsApp的内容本地化、全天候AI客服以及针对不同文化和语言受众的AI驱动广告优化。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-workforce-virtual-employees">AI劳动力：虚拟AI员工 →</a></p>
 </div>`,
 	},
 
 	// ====== ai-workforce-virtual-employees ======
 	"ai-workforce-virtual-employees": {
 		content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Use Cases &middot; <strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Reading Time:</strong> 7 minutes</p>
+<p><strong>Category:</strong> AI Development · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> Why programmers are building virtual AI employees and how to build and deploy your own AI workforce.</p>
 </div>
 
-<p>The tech industry is undergoing a remarkable shift. A growing number of programmers are stepping away from developing ordinary utility software. Instead, they dedicate their energy to creating intelligent AI employees that can independently handle daily business tasks, code development, content creation and data processing. This emerging trend brings brand-new working modes and cost-saving solutions for overseas website operation, cross-border business and remote team management.</p>
-
+<p>The tech industry is undergoing a remarkable shift\\. A growing number of programmers are stepping away from developing ordinary utility software\\. Instead, they dedicate their energy to creating intelligent AI employees that can independently handle daily business tasks, code development, content creation and data processing\\. This emerging trend brings brand\\-new working modes and cost\\-saving solutions for overseas website operation, cross\\-border business and remote team management\\.</p>
 <h2>Core Difference: Traditional Tools VS AI Employee</h2>
-
-<p>Conventional development tools only passively execute fixed commands given by users. They cannot think independently or adjust schemes when facing unexpected problems.</p>
-
-<p>In comparison, AI employees possess autonomous judgment, task splitting and continuous execution capabilities. Equipped with memory modules and skill libraries, they can finish a whole set of work from receiving demands, analyzing objectives, distributing subtasks to delivering final results without frequent human supervision. This working mode perfectly fits long-cycle projects of overseas websites and repetitive batch work.</p>
-
+<p>Conventional development tools only passively execute fixed commands given by users\\. They cannot think independently or adjust schemes when facing unexpected problems\\.</p>
+<p>In comparison, AI employees possess autonomous judgment, task splitting and continuous execution capabilities\\. Equipped with memory modules and skill libraries, they can finish a whole set of work from receiving demands, analyzing objectives, distributing subtasks to delivering final results without frequent human supervision\\. This working mode perfectly fits long\\-cycle projects of overseas websites and repetitive batch work\\.</p>
 <h2>Core Functional Modules of a Practical AI Employee</h2>
-
-<p>A qualified AI employee is assembled with three indispensable core parts, which can be built and deployed by common development frameworks.</p>
-
-<h3>1. Task Brain Core</h3>
-
-<p>Responsible for understanding natural language demands, disassembling complex projects and sorting execution priority. It acts as the decision center of the virtual staff.</p>
-
-<h3>2. Reusable Skill Library</h3>
-
-<p>Store packaged functional abilities including code writing, webpage modification, article translation, data statistics and file sorting. The brain can call corresponding skills flexibly according to task types.</p>
-
-<h3>3. Running Supervision Module</h3>
-
-<p>Record operation logs, capture running errors, resume interrupted tasks and feed back progress status in real time, ensuring stable long-time work of AI employees.</p>
-
-<h2>Practical Build \&amp; Deployment Demo</h2>
-
-<p>Below displays simplified executable construction code, helping you quickly build a basic AI employee that handles website daily maintenance work.</p>
-
-<pre><code class="language-python"># Basic framework of lightweight AI employee
-class AIVirtualStaff:
-    def __init__(self):
-        self.memory = []
-        self.skill_set = {
-            &quot;content_update&quot;: self.update_website_content,
-            &quot;data_statistics&quot;: self.calculate_visitor_data,
-            &quot;error_check&quot;: self.scan_webpage_bug
-        }
-
-    # Record historical working data
-    def save_work_log(self, info):
-        self.memory.append(info)
-
-    # Website content updating skill
-    def update_website_content(self, article_text):
-        log = &quot;Completed overseas site content publishing&quot;
-        self.save_work_log(log)
-        return &quot;Content updated successfully&quot;
-
-    # Visitor data analysis skill
-    def calculate_visitor_data(self, raw_data):
-        result = f&quot;Daily active user count: {len(raw_data)}&quot;
-        self.save_work_log(result)
-        return result
-
-    # Automatic webpage error detection
-    def scan_webpage_bug(self, page_url):
-        self.save_work_log(f&quot;Finished inspection: {page_url}&quot;)
-        return &quot;No abnormal faults found on the page&quot;
-
-    # Receive and distribute overall tasks
-    def receive_task(self, task_type, task_content):
-        if task_type in self.skill_set:
-            return self.skill_set[task_type](task_content)
-        return &quot;Unsupported work type&quot;
-
-# Launch AI employee and assign actual work
-if __name__ == &quot;__main__&quot;:
-    ai_worker = AIVirtualStaff()
-    # Assign overseas website daily maintenance task
-    feedback = ai_worker.receive_task(&quot;error_check&quot;, &quot;https://your-global-site.com&quot;)
-    print(feedback)</code></pre>
-
-<h2>Daily Application Scenarios for Overseas Business</h2>
-
-<h3>1. Automated Website Operation</h3>
-
-<p>Arrange AI employees to regularly update blog articles, replace promotional banners, detect dead links and optimize page layout. It maintains normal site operation around the clock and cuts manual maintenance time greatly.</p>
-
-<h3>2. Cross-lingual Content Batch Processing</h3>
-
-<p>Hand over multilingual translation, overseas social media copy writing and product introduction revision to AI staff. It keeps unified language style and adapts content habits of different regional users.</p>
-
-<h3>3. Code Iteration \&amp; Bug Automatic Fix</h3>
-
-<p>For small-scale function upgrades and routine fault troubleshooting of websites, AI employees can complete simple coding modification and self-testing, lowering the technical threshold of overseas project iteration.</p>
-
-<h3>4. Market Data Collection \&amp; Sorting</h3>
-
-<p>Automatically crawl public industry information, competitor dynamic data and user preference feedback, organize readable analysis reports and provide reference basis for business adjustment.</p>
-
-<h2>Simple Command Management Mode</h2>
-
-<p>Users can control AI employees to switch working states through concise terminal commands.</p>
-
-<pre><code class="language-bash"># Start automatic daily task cycle
-python ai_staff_run.py start
-
-# Pause ongoing work
-python ai_staff_run.py pause
-
-# View historical working records
-python ai_staff_run.py log
-
-# Terminate all running tasks
-python ai_staff_run.py stop</code></pre>
-
-<h2>Advantages of Adopting AI Employees</h2>
-
-<ol>
-<li><strong>Cost Control</strong>: Replace repeated manual labor, reduce long-term recruitment and payroll expenditure of remote teams.</li>
-<li><strong>24-hour Service</strong>: Break time zone limits, keep continuous service and progress advancement for global users.</li>
-<li><strong>Stable Output</strong>: Avoid human emotion and fatigue influence, maintain consistent work quality.</li>
-<li><strong>Flexible Expansion</strong>: Add new functional skills anytime according to business growth demands.</li>
-</ol>
-<h2>Industry Trend Summary</h2>
-
-<p>The transformation from developing tools to creating AI employees marks a new stage of artificial intelligence application. Instead of letting people adapt to rigid tools, programmers create intelligent virtual workers that actively take charge of jobs.</p>
-
-<p>For overseas website operators and cross-border entrepreneurs, building exclusive AI employees is an efficient way to improve competitiveness. With simple framework deployment and skill expansion, you can own a tireless work team to support long-term steady development of global online business.</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>Q: What exactly is an AI employee?</h3>
-<p>An AI employee is a software agent that autonomously handles business tasks &mdash; from content updates to data analysis to bug fixing. Unlike traditional tools that wait for commands, AI employees have memory, skill libraries, and autonomous decision-making capabilities.</p>
-
-<h3>Q: Do I need advanced programming skills to build an AI employee?</h3>
-<p>Not necessarily. While the example in this article uses Python, many platforms now offer no-code or low-code AI employee builders. For those comfortable with code, tools like <a href="/tools/openclaw">OpenClaw</a> and <a href="/tools/deer-flow">Deer-Flow</a> provide excellent starting points.</p>
-
-<h3>Q: What are the best use cases for AI employees in overseas business?</h3>
-<p>The most impactful use cases include automated website maintenance, multilingual content generation, cross-border customer support, code deployment and testing, and market data analysis. For more ideas, see our guide on <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools for One-Person Overseas Business</a>.</p>
-<div class="next-step">
-<p><strong>Next Step:</strong> Explore <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business</a> or learn about <a href="/article/agent-skill-harness-explained">Agent, Skill, and Harness in AI Development</a>.</p>
-</div>`,
-		contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI 应用场景 &middot; <strong>难度：</strong> 中级</p>
-<p><strong>阅读时间：</strong> 7 分钟</p>
-</div>
-
-<p>科技行业正在经历一场显著的转变。越来越多的程序员正在从开发普通的工具软件转向创建能够独立处理日常业务任务、代码开发、内容创建和数据处理的智能 AI 员工。这一新兴趋势为海外网站运营、跨境电商和远程团队管理带来了全新的工作模式和成本节约方案。</p>
-
-<h2>核心区别：传统工具 vs AI 员工</h2>
-
-<p>传统的开发工具只能被动执行用户给出的固定指令。它们无法独立思考，也无法在遇到意外问题时调整方案。</p>
-
-<p>相比之下，AI 员工具备自主判断、任务拆分和持续执行的能力。配备记忆模块和技能库，它们可以完成从接收需求、分析目标、分配子任务到交付最终结果的整套工作，无需频繁的人工监督。这种工作模式非常适合海外网站的长周期项目和重复性批量工作。</p>
-
-<h2>实用 AI 员工的核心功能模块</h2>
-
-<p>一个合格的 AI 员工由三个不可或缺的核心部分组成，可以使用常见的开发框架来构建和部署。</p>
-
-<h3>1. 任务大脑核心</h3>
-
-<p>负责理解自然语言需求、拆解复杂项目并排列执行优先级。它是虚拟员工的决策中心。</p>
-
-<h3>2. 可复用技能库</h3>
-
-<p>存储打包好的功能模块，包括代码编写、网页修改、文章翻译、数据统计和文件整理。大脑可以根据任务类型灵活调用相应的技能。</p>
-
-<h3>3. 运行监督模块</h3>
-
-<p>记录操作日志、捕获运行错误、恢复中断的任务并实时反馈进度状态，确保 AI 员工能够长时间稳定工作。</p>
-
-<h2>实际构建和部署演示</h2>
-
-<p>以下展示了简化的可执行构建代码，帮助你快速构建一个能够处理网站日常维护工作的基础 AI 员工。</p>
-
-<pre><code class="language-python"># Basic framework of lightweight AI employee
+<p>A qualified AI employee is assembled with three indispensable core parts, which can be built and deployed by common development frameworks\\.</p>
+<h3>1\\. Task Brain Core</h3>
+<p>Responsible for understanding natural language demands, disassembling complex projects and sorting execution priority\\. It acts as the decision center of the virtual staff\\.</p>
+<h3>2\\. Reusable Skill Library</h3>
+<p>Store packaged functional abilities including code writing, webpage modification, article translation, data statistics and file sorting\\. The brain can call corresponding skills flexibly according to task types\\.</p>
+<h3>3\\. Running Supervision Module</h3>
+<p>Record operation logs, capture running errors, resume interrupted tasks and feed back progress status in real time, ensuring stable long\\-time work of AI employees\\.</p>
+<h2>Practical Build \\&amp; Deployment Demo</h2>
+<p>Below displays simplified executable construction code, helping you quickly build a basic AI employee that handles website daily maintenance work\\.</p>
+<pre><code class="language-python">
+# Basic framework of lightweight AI employee
 class AIVirtualStaff:
     def __init__(self):
         self.memory = []
@@ -8498,31 +7942,21 @@ if __name__ == "__main__":
     ai_worker = AIVirtualStaff()
     # Assign overseas website daily maintenance task
     feedback = ai_worker.receive_task("error_check", "https://your-global-site.com")
-    print(feedback)</code></pre>
-
-<h2>海外业务的日常应用场景</h2>
-
-<h3>1. 自动化网站运营</h3>
-
-<p>安排 AI 员工定期更新博客文章、替换促销横幅、检测死链和优化页面布局。它全天候维护网站正常运行，大幅减少人工维护时间。</p>
-
-<h3>2. 跨语言内容批量处理</h3>
-
-<p>将多语言翻译、海外社交媒体文案撰写和产品介绍修订交给 AI 员工。它保持统一的语言风格，并适应不同地区用户的内容习惯。</p>
-
-<h3>3. 代码迭代和 Bug 自动修复</h3>
-
-<p>对于网站的小规模功能升级和常规故障排查，AI 员工可以完成简单的编码修改和自测，降低海外项目迭代的技术门槛。</p>
-
-<h3>4. 市场数据采集和整理</h3>
-
-<p>自动抓取公开行业信息、竞争对手动态数据和用户偏好反馈，整理成可读的分析报告，为业务调整提供参考依据。</p>
-
-<h2>简单命令管理模式</h2>
-
-<p>用户可以通过简洁的终端命令控制 AI 员工切换工作状态。</p>
-
-<pre><code class="language-bash"># Start automatic daily task cycle
+    print(feedback)
+</code></pre>
+<h2>Daily Application Scenarios for Overseas Business</h2>
+<h3>1\\. Automated Website Operation</h3>
+<p>Arrange AI employees to regularly update blog articles, replace promotional banners, detect dead links and optimize page layout\\. It maintains normal site operation around the clock and cuts manual maintenance time greatly\\.</p>
+<h3>2\\. Cross\\-lingual Content Batch Processing</h3>
+<p>Hand over multilingual translation, overseas social media copy writing and product introduction revision to AI staff\\. It keeps unified language style and adapts content habits of different regional users\\.</p>
+<h3>3\\. Code Iteration \\&amp; Bug Automatic Fix</h3>
+<p>For small\\-scale function upgrades and routine fault troubleshooting of websites, AI employees can complete simple coding modification and self\\-testing, lowering the technical threshold of overseas project iteration\\.</p>
+<h3>4\\. Market Data Collection \\&amp; Sorting</h3>
+<p>Automatically crawl public industry information, competitor dynamic data and user preference feedback, organize readable analysis reports and provide reference basis for business adjustment\\.</p>
+<h2>Simple Command Management Mode</h2>
+<p>Users can control AI employees to switch working states through concise terminal commands\\.</p>
+<pre><code class="language-bash">
+# Start automatic daily task cycle
 python ai_staff_run.py start
 
 # Pause ongoing work
@@ -8532,196 +7966,186 @@ python ai_staff_run.py pause
 python ai_staff_run.py log
 
 # Terminate all running tasks
-python ai_staff_run.py stop</code></pre>
-
-<h2>采用 AI 员工的优势</h2>
-
+python ai_staff_run.py stop
+</code></pre>
+<h2>Advantages of Adopting AI Employees</h2>
 <ol>
-<li><strong>成本控制</strong>：替代重复性人工劳动，减少远程团队的长期招聘和薪资支出。</li>
-<li><strong>24 小时服务</strong>：打破时区限制，为全球用户提供持续服务和进度推进。</li>
-<li><strong>稳定输出</strong>：避免人类情感和疲劳影响，保持一致的工作质量。</li>
-<li><strong>灵活扩展</strong>：根据业务增长需求随时添加新的功能技能。</li>
+<li><strong>Cost Control</strong>: Replace repeated manual labor, reduce long\\-term recruitment and payroll expenditure of remote teams\\.</li>
 </ol>
+<ol>
+<li><strong>24\\-hour Service</strong>: Break time zone limits, keep continuous service and progress advancement for global users\\.</li>
+</ol>
+<ol>
+<li><strong>Stable Output</strong>: Avoid human emotion and fatigue influence, maintain consistent work quality\\.</li>
+</ol>
+<ol>
+<li><strong>Flexible Expansion</strong>: Add new functional skills anytime according to business growth demands\\.</li>
+</ol>
+<h2>Industry Trend Summary</h2>
+<p>The transformation from developing tools to creating AI employees marks a new stage of artificial intelligence application\\. Instead of letting people adapt to rigid tools, programmers create intelligent virtual workers that actively take charge of jobs\\.</p>
+<p>For overseas website operators and cross\\-border entrepreneurs, building exclusive AI employees is an efficient way to improve competitiveness\\. With simple framework deployment and skill expansion, you can own a tireless work team to support long\\-term steady development of global online business\\.</p>
 
-<h2>行业趋势总结</h2>
-
-<p>从开发工具到创建 AI 员工的转变，标志着人工智能应用进入新阶段。程序员不再让人去适应僵化的工具，而是创建主动承担工作的智能虚拟员工。</p>
-
-<p>对于海外网站运营者和跨境电商创业者来说，构建专属 AI 员工是提高竞争力的有效途径。通过简单的框架部署和技能扩展，你可以拥有一个不知疲倦的工作团队，为全球在线业务的长期稳定发展提供支持。</p>
-
-<h2>常见问题</h2>
-
-<h3>问：AI 员工到底是什么？和普通自动化脚本有什么区别？</h3>
-<p>AI 员工是一种具备自主决策能力的软件代理，能够处理从内容更新到数据分析再到 Bug 修复的多种任务。与传统自动化脚本不同，AI 员工具备记忆能力和技能库，可以根据任务类型灵活选择和组合不同的能力。</p>
-
-<h3>问：构建 AI 员工需要很强的编程能力吗？</h3>
-<p>不一定。本文示例使用 Python，但现在很多平台提供无代码或低代码的 AI 员工构建工具。如果你熟悉编程，<a href="/tools/openclaw">OpenClaw</a> 和 <a href="/tools/deer-flow">Deer-Flow</a> 等开源框架提供了很好的起点。</p>
-
-<h3>问：在海外业务中，AI 员工最有价值的应用场景是什么？</h3>
-<p>最具价值的应用场景包括：自动化多语言网站维护、批量内容生成与翻译、跨时区客户支持、代码自动化部署与测试以及竞争对手数据分析。更多方案请参考 <a href="/article/5-ai-tools-one-person-overseas-business">5 款 AI 工具打造你的单人海外业务</a>。</p>
+<h2>FAQ</h2>
+<h3>Q: Do I need to be a programmer to build AI employees?</h3>
+<p>Basic programming knowledge helps, but the frameworks are becoming more accessible. Many no-code platforms now allow you to create AI agents with drag-and-drop interfaces.</p>
+<h3>Q: Can AI employees completely replace human workers?</h3>
+<p>Not entirely. AI employees excel at repetitive, rule-based tasks and data processing. For creative strategy, complex problem-solving, and relationship management, human oversight remains essential.</p>
+<h3>Q: How do I ensure AI employees work securely?</h3>
+<p>Use sandbox environments, set clear permission boundaries, audit operation logs regularly, and never give AI employees access to sensitive credentials or financial systems without human approval.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 探索 <a href="/article/5-ai-tools-one-person-overseas-business">5 款 AI 工具打造你的单人海外业务</a> 或了解 <a href="/article/agent-skill-harness-explained">AI 开发中的 Agent、Skill 和 Harness</a>。</p>
+<p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools for One-Person Overseas Business →</a></p>
+</div>`,
+		contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Development · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> Why programmers are building virtual AI employees and how to build and deploy your own AI workforce.</p>
+</div>
+
+<p>The tech industry is undergoing a remarkable shift\\. A growing number of programmers are stepping away from developing ordinary utility software\\. Instead, they dedicate their energy to creating intelligent AI employees that can independently handle daily business tasks, code development, content creation and data processing\\. This emerging trend brings brand\\-new working modes and cost\\-saving solutions for overseas website operation, cross\\-border business and remote team management\\.</p>
+<h2>Core Difference: Traditional Tools VS AI Employee</h2>
+<p>Conventional development tools only passively execute fixed commands given by users\\. They cannot think independently or adjust schemes when facing unexpected problems\\.</p>
+<p>In comparison, AI employees possess autonomous judgment, task splitting and continuous execution capabilities\\. Equipped with memory modules and skill libraries, they can finish a whole set of work from receiving demands, analyzing objectives, distributing subtasks to delivering final results without frequent human supervision\\. This working mode perfectly fits long\\-cycle projects of overseas websites and repetitive batch work\\.</p>
+<h2>Core Functional Modules of a Practical AI Employee</h2>
+<p>A qualified AI employee is assembled with three indispensable core parts, which can be built and deployed by common development frameworks\\.</p>
+<h3>1\\. Task Brain Core</h3>
+<p>Responsible for understanding natural language demands, disassembling complex projects and sorting execution priority\\. It acts as the decision center of the virtual staff\\.</p>
+<h3>2\\. Reusable Skill Library</h3>
+<p>Store packaged functional abilities including code writing, webpage modification, article translation, data statistics and file sorting\\. The brain can call corresponding skills flexibly according to task types\\.</p>
+<h3>3\\. Running Supervision Module</h3>
+<p>Record operation logs, capture running errors, resume interrupted tasks and feed back progress status in real time, ensuring stable long\\-time work of AI employees\\.</p>
+<h2>Practical Build \\&amp; Deployment Demo</h2>
+<p>Below displays simplified executable construction code, helping you quickly build a basic AI employee that handles website daily maintenance work\\.</p>
+<pre><code class="language-python">
+# Basic framework of lightweight AI employee
+class AIVirtualStaff:
+    def __init__(self):
+        self.memory = []
+        self.skill_set = {
+            "content_update": self.update_website_content,
+            "data_statistics": self.calculate_visitor_data,
+            "error_check": self.scan_webpage_bug
+        }
+
+    # Record historical working data
+    def save_work_log(self, info):
+        self.memory.append(info)
+
+    # Website content updating skill
+    def update_website_content(self, article_text):
+        log = "Completed overseas site content publishing"
+        self.save_work_log(log)
+        return "Content updated successfully"
+
+    # Visitor data analysis skill
+    def calculate_visitor_data(self, raw_data):
+        result = f"Daily active user count: {len(raw_data)}"
+        self.save_work_log(result)
+        return result
+
+    # Automatic webpage error detection
+    def scan_webpage_bug(self, page_url):
+        self.save_work_log(f"Finished inspection: {page_url}")
+        return "No abnormal faults found on the page"
+
+    # Receive and distribute overall tasks
+    def receive_task(self, task_type, task_content):
+        if task_type in self.skill_set:
+            return self.skill_set[task_type](task_content)
+        return "Unsupported work type"
+
+# Launch AI employee and assign actual work
+if __name__ == "__main__":
+    ai_worker = AIVirtualStaff()
+    # Assign overseas website daily maintenance task
+    feedback = ai_worker.receive_task("error_check", "https://your-global-site.com")
+    print(feedback)
+</code></pre>
+<h2>Daily Application Scenarios for Overseas Business</h2>
+<h3>1\\. Automated Website Operation</h3>
+<p>Arrange AI employees to regularly update blog articles, replace promotional banners, detect dead links and optimize page layout\\. It maintains normal site operation around the clock and cuts manual maintenance time greatly\\.</p>
+<h3>2\\. Cross\\-lingual Content Batch Processing</h3>
+<p>Hand over multilingual translation, overseas social media copy writing and product introduction revision to AI staff\\. It keeps unified language style and adapts content habits of different regional users\\.</p>
+<h3>3\\. Code Iteration \\&amp; Bug Automatic Fix</h3>
+<p>For small\\-scale function upgrades and routine fault troubleshooting of websites, AI employees can complete simple coding modification and self\\-testing, lowering the technical threshold of overseas project iteration\\.</p>
+<h3>4\\. Market Data Collection \\&amp; Sorting</h3>
+<p>Automatically crawl public industry information, competitor dynamic data and user preference feedback, organize readable analysis reports and provide reference basis for business adjustment\\.</p>
+<h2>Simple Command Management Mode</h2>
+<p>Users can control AI employees to switch working states through concise terminal commands\\.</p>
+<pre><code class="language-bash">
+# Start automatic daily task cycle
+python ai_staff_run.py start
+
+# Pause ongoing work
+python ai_staff_run.py pause
+
+# View historical working records
+python ai_staff_run.py log
+
+# Terminate all running tasks
+python ai_staff_run.py stop
+</code></pre>
+<h2>Advantages of Adopting AI Employees</h2>
+<ol>
+<li><strong>Cost Control</strong>: Replace repeated manual labor, reduce long\\-term recruitment and payroll expenditure of remote teams\\.</li>
+</ol>
+<ol>
+<li><strong>24\\-hour Service</strong>: Break time zone limits, keep continuous service and progress advancement for global users\\.</li>
+</ol>
+<ol>
+<li><strong>Stable Output</strong>: Avoid human emotion and fatigue influence, maintain consistent work quality\\.</li>
+</ol>
+<ol>
+<li><strong>Flexible Expansion</strong>: Add new functional skills anytime according to business growth demands\\.</li>
+</ol>
+<h2>Industry Trend Summary</h2>
+<p>The transformation from developing tools to creating AI employees marks a new stage of artificial intelligence application\\. Instead of letting people adapt to rigid tools, programmers create intelligent virtual workers that actively take charge of jobs\\.</p>
+<p>For overseas website operators and cross\\-border entrepreneurs, building exclusive AI employees is an efficient way to improve competitiveness\\. With simple framework deployment and skill expansion, you can own a tireless work team to support long\\-term steady development of global online business\\.</p>
+
+<h2>常见问题</h2>
+<h3>问：构建AI员工需要会编程吗？</h3>
+<p>基本的编程知识会有所帮助，但这些框架正变得越来越易用。许多无代码平台现在允许你通过拖放界面创建AI代理。</p>
+<h3>问：AI员工能完全取代人类员工吗？</h3>
+<p>不能完全取代。AI员工擅长重复性、基于规则的任务和数据处理。对于创意策略、复杂问题解决和关系管理，人工监督仍然必不可少。</p>
+<h3>问：如何确保AI员工安全运行？</h3>
+<p>使用沙箱环境、设定明确的权限边界、定期审计操作日志，绝不给予AI员工访问敏感凭证或财务系统的权限。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 →</a></p>
 </div>`,
 	},
 
 	// ====== free-ai-knowledge-base-tool-tutorial ======
 	"free-ai-knowledge-base-tool-tutorial": {
 		content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tutorials &middot; <strong>Difficulty:</strong> Beginner</p>
-<p><strong>Reading Time:</strong> 6 minutes</p>
+<p><strong>Category:</strong> AI Tools Tutorial · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> Complete guide to using the free AI knowledge base tool for document management, intelligent retrieval, and team knowledge accumulation.</p>
 </div>
 
-<p>This free AI knowledge base tool has attracted over 600 thousand views among tech users. It enables you to build exclusive private knowledge archives, upload local documents, web resources and industry materials, and achieve intelligent retrieval, content summary and professional Q\&amp;A. It is highly suitable for overseas website operation, technical document management, cross-border business data sorting and team knowledge accumulation. This guide covers complete usage steps, core functions and practical deployment skills.</p>
-
+<p>This free AI knowledge base tool has attracted over 600 thousand views among tech users\\. It enables you to build exclusive private knowledge archives, upload local documents, web resources and industry materials, and achieve intelligent retrieval, content summary and professional Q\\&amp;A\\. It is highly suitable for overseas website operation, technical document management, cross\\-border business data sorting and team knowledge accumulation\\. This guide covers complete usage steps, core functions and practical deployment skills\\.</p>
 <h2>Core Advantages of This Free Knowledge Base Tool</h2>
-
 <ol>
 <li>Completely free for daily basic use, no hidden charging for common document parsing and inquiry functions</li>
+</ol>
+<ol>
 <li>Supports multiple file formats including PDF, TXT, Markdown, webpage snapshot and local notes</li>
+</ol>
+<ol>
 <li>Intelligent semantic matching, accurately locate target content instead of simple keyword search</li>
+</ol>
+<ol>
 <li>Independent private data storage, effectively protect business and technical confidential information</li>
+</ol>
+<ol>
 <li>Lightweight access mode, available on browser without complicated environment installation</li>
 </ol>
-<h2>Step 1 Quick Entry \&amp; Initial Space Creation</h2>
-
-<p>Access the official webpage of the tool via common browsers, register an account with email address. After logging in, create an independent knowledge space classified by business attributes. You can divide archives into website development, overseas marketing, AI model usage and other categories to manage materials hierarchically.</p>
-
+<h2>Step 1 Quick Entry \\&amp; Initial Space Creation</h2>
+<p>Access the official webpage of the tool via common browsers, register an account with email address\\. After logging in, create an independent knowledge space classified by business attributes\\. You can divide archives into website development, overseas marketing, AI model usage and other categories to manage materials hierarchically\\.</p>
 <h2>Step 2 Batch Import Various Knowledge Materials</h2>
-
-<p>Users can import single file or batch upload multiple documents, the system automatically completes text extraction and vectorization processing.</p>
-
+<p>Users can import single file or batch upload multiple documents, the system automatically completes text extraction and vectorization processing\\.</p>
 <h3>Basic Upload Calling Demo</h3>
-
-<pre><code class="language-javascript">// Front-end upload request sample code
+<pre><code class="language-javascript">
+// Front-end upload request sample code
 const uploadKnowledgeFile = async (fileList, spaceId) =&gt; {
-  const formData = new FormData();
-  fileList.forEach(file =&gt; {
-    formData.append(&quot;docs&quot;, file);
-  });
-  formData.append(&quot;spaceId&quot;, spaceId);
-
-  const response = await fetch(&quot;https://tool-api.example.com/upload&quot;, {
-    method: &quot;POST&quot;,
-    body: formData
-  });
-  const result = await response.json();
-  console.log(&quot;File parsing status:&quot;, result.msg);
-  return result;
-};</code></pre>
-
-<p>Common applicable materials: website operation manuals, multilingual copywriting templates, competitor analysis documents, technical configuration notes and cross-border compliance clauses.</p>
-
-<h2>Step 3 Core Intelligent Query \&amp; Content Mining</h2>
-
-<p>After material parsing finishes, you can put forward natural language demands to obtain extracted information, content induction and detailed answers. It breaks the limit of manual page flipping search, greatly improving information acquisition efficiency.</p>
-
-<h3>Practical Query Command Examples</h3>
-
-<pre><code class="language-plaintext"># Query 1: Sort out overseas website GDPR compliance key terms
-# Query 2: Summarize high conversion copywriting logic for European market product pages
-# Query 3: Extract common bug solutions of HTML cross-region adaptation</code></pre>
-
-<h3>Simple Query Invoke Script</h3>
-
-<pre><code class="language-python">def knowledge_query(space_id, user_question):
-    request_body = {
-        &quot;spaceId&quot;: space_id,
-        &quot;query&quot;: user_question,
-        &quot;returnLimit&quot;: 5
-    }
-    # Call intelligent retrieval interface
-    res = requests.post(&quot;https://tool-api.example.com/query&quot;, json=request_body)
-    answer = res.json()[&quot;data&quot;][&quot;content&quot;]
-    return answer
-
-# Actual use case
-if __name__ == &quot;__main__&quot;:
-    question = &quot;List global user retention optimization methods for content websites&quot;
-    final_answer = knowledge_query(&quot;space_0089&quot;, question)
-    print(final_answer)</code></pre>
-
-<h2>Step 4 Knowledge Base Secondary Arrangement \&amp; Tag Management</h2>
-
-<p>Add unified classification tags to imported documents, such as region label, business type label and technical field label. Support manual supplement note content, merge repeated materials and delete invalid files, keep the knowledge base neat and easy to call.</p>
-
-<h2>Step 5 Practical Application Scenarios for Overseas Projects</h2>
-
-<h3>1. Personal Technical Knowledge Accumulation</h3>
-
-<p>Store AI development commands, website deployment codes and model tuning experience. Quickly call historical solutions when encountering repeated technical problems.</p>
-
-<h3>2. Cross-border Content Standard Management</h3>
-
-<p>Unify store product descriptions, social media posts and email marketing drafts. Guarantee consistent content style facing global users.</p>
-
-<h3>3. Team Shared Knowledge Collaboration</h3>
-
-<p>Open partial access permission to team members. Realize synchronous viewing of industry data, project progress documents and customer service standard replies, lowering communication cost.</p>
-
-<h3>4. Rapid Material Generation Assistance</h3>
-
-<p>Based on stored knowledge reserves, command AI to generate new articles, optimization plans and reply templates, greatly shorten content creation cycle.</p>
-
-<h2>Step 6 Daily Maintenance \&amp; Access Optimization Tips</h2>
-
-<ol>
-<li>Regularly clean useless redundant files to reduce retrieval delay</li>
-<li>Split oversized documents into small chapters to improve parsing accuracy</li>
-<li>Set exclusive access password for confidential business knowledge space</li>
-<li>Export important knowledge content as local backup files regularly</li>
-</ol>
-<h2>Command for Local Backup Export</h2>
-
-<pre><code class="language-bash"># One-click export all documents in specified knowledge space
-curl -X GET &quot;https://tool-api.example.com/export?spaceId=space_0089&amp;format=zip&quot; -o global_site_knowledge.zip</code></pre>
-
-<h2>Summary</h2>
-
-<p>This free AI knowledge base tool integrates document storage, intelligent search and content reorganization functions. It perfectly matches daily work demands of overseas website builders and cross-border practitioners. Building exclusive knowledge archives can help you precipitate work experience, quickly acquire effective information, and steadily lift work efficiency and project competitiveness in long-term global business operation.</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>Q: Is this knowledge base tool really free?</h3>
-<p>Yes, the tool is completely free for daily basic use, including document parsing, intelligent search, and Q&A functions. There are no hidden charges for common operations. Some advanced features like API access or team collaboration may require a paid plan, but the core functionality is fully free.</p>
-
-<h3>Q: What file formats are supported?</h3>
-<p>The tool supports PDF, TXT, Markdown, webpage snapshots, and local notes. It can extract text from images using OCR technology. For developers, there is also an API for programmatic document upload and retrieval.</p>
-
-<h3>Q: How secure is my data?</h3>
-<p>Your data is stored in independent private spaces with encryption. You control access permissions, and you can export and delete your data at any time. For confidential business information, you can set password protection on specific knowledge spaces. For more on data security with AI tools, see our <a href="/article/eu-ai-act-plain-english">EU AI Act guide</a>.</p>
-<div class="next-step">
-<p><strong>Next Step:</strong> Learn how to choose the right AI tools for your needs: <a href="/article/how-to-choose-right-ai-tool">Which AI Tool Should You Use?</a> Or explore <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools</a>.</p>
-</div>`,
-		contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI 教程 &middot; <strong>难度：</strong> 初级</p>
-<p><strong>阅读时间：</strong> 6 分钟</p>
-</div>
-
-<p>这款免费的 AI 知识库工具在技术用户中已获得超过 60 万次浏览。它让你能够构建专属的私有知识档案，上传本地文档、网络资源和行业资料，实现智能检索、内容摘要和专业问答。它非常适合海外网站运营、技术文档管理、跨境外贸数据整理和团队知识积累。本指南涵盖了完整的使用步骤、核心功能和实际部署技巧。</p>
-
-<h2>这款免费知识库工具的核心优势</h2>
-
-<ol>
-<li>日常基础使用完全免费，常见的文档解析和查询功能没有隐藏收费。</li>
-<li>支持多种文件格式，包括 PDF、TXT、Markdown、网页快照和本地笔记。</li>
-<li>智能语义匹配，精确定位目标内容，而不是简单的关键词搜索。</li>
-<li>独立的私有数据存储，有效保护业务和技术机密信息。</li>
-<li>轻量级访问方式，通过浏览器即可使用，无需复杂的环境安装。</li>
-</ol>
-
-<h2>步骤 1：快速进入和创建知识空间</h2>
-
-<p>通过常用浏览器访问工具的官方网页，使用邮箱注册账号。登录后，根据业务属性创建独立的知识空间。你可以将档案分为网站开发、海外营销、AI 模型使用等类别，实现分层管理资料。</p>
-
-<h2>步骤 2：批量导入各种知识资料</h2>
-
-<p>用户可以导入单个文件或批量上传多个文档，系统会自动完成文本提取和向量化处理。</p>
-
-<h3>基础上传调用演示</h3>
-
-<pre><code class="language-javascript">// Front-end upload request sample code
-const uploadKnowledgeFile = async (fileList, spaceId) => {
   const formData = new FormData();
   fileList.forEach(file =&gt; {
     formData.append("docs", file);
@@ -8735,23 +8159,20 @@ const uploadKnowledgeFile = async (fileList, spaceId) => {
   const result = await response.json();
   console.log("File parsing status:", result.msg);
   return result;
-};</code></pre>
-
-<p>常见适用资料：网站运营手册、多语言文案模板、竞品分析文档、技术配置笔记和跨境合规条款。</p>
-
-<h2>步骤 3：核心智能查询和内容挖掘</h2>
-
-<p>资料解析完成后，你可以提出自然语言需求，获取提取的信息、内容归纳和详细答案。它打破了手动翻页搜索的限制，大大提高了信息获取效率。</p>
-
-<h3>实用查询命令示例</h3>
-
-<pre><code class="language-plaintext"># Query 1: Sort out overseas website GDPR compliance key terms
+};
+</code></pre>
+<p>Common applicable materials: website operation manuals, multilingual copywriting templates, competitor analysis documents, technical configuration notes and cross\\-border compliance clauses\\.</p>
+<h2>Step 3 Core Intelligent Query \\&amp; Content Mining</h2>
+<p>After material parsing finishes, you can put forward natural language demands to obtain extracted information, content induction and detailed answers\\. It breaks the limit of manual page flipping search, greatly improving information acquisition efficiency\\.</p>
+<h3>Practical Query Command Examples</h3>
+<pre><code class="language-plaintext">
+# Query 1: Sort out overseas website GDPR compliance key terms
 # Query 2: Summarize high conversion copywriting logic for European market product pages
-# Query 3: Extract common bug solutions of HTML cross-region adaptation</code></pre>
-
-<h3>简单查询调用脚本</h3>
-
-<pre><code class="language-python">def knowledge_query(space_id, user_question):
+# Query 3: Extract common bug solutions of HTML cross-region adaptation
+</code></pre>
+<h3>Simple Query Invoke Script</h3>
+<pre><code class="language-python">
+def knowledge_query(space_id, user_question):
     request_body = {
         "spaceId": space_id,
         "query": user_question,
@@ -8766,707 +8187,683 @@ const uploadKnowledgeFile = async (fileList, spaceId) => {
 if __name__ == "__main__":
     question = "List global user retention optimization methods for content websites"
     final_answer = knowledge_query("space_0089", question)
-    print(final_answer)</code></pre>
-
-<h2>步骤 4：知识库二次整理和标签管理</h2>
-
-<p>为已导入的文档添加统一的分类标签，如地区标签、业务类型标签和技术领域标签。支持手动补充注释内容、合并重复资料和删除无效文件，保持知识库整洁且易于调用。</p>
-
-<h2>步骤 5：海外项目的实际应用场景</h2>
-
-<h3>1. 个人技术知识积累</h3>
-
-<p>存储 AI 开发命令、网站部署代码和模型调优经验。遇到重复技术问题时快速调用历史解决方案。</p>
-
-<h3>2. 跨境内容标准管理</h3>
-
-<p>统一管理店铺产品描述、社交媒体帖子和邮件营销草稿。确保面向全球用户的内容风格一致。</p>
-
-<h3>3. 团队共享知识协作</h3>
-
-<p>向团队成员开放部分访问权限。实现行业数据、项目进度文档和客服标准回复的同步查看，降低沟通成本。</p>
-
-<h3>4. 快速素材生成辅助</h3>
-
-<p>基于存储的知识储备，命令 AI 生成新文章、优化方案和回复模板，大幅缩短内容创作周期。</p>
-
-<h2>步骤 6：日常维护和优化技巧</h2>
-
+    print(final_answer)
+</code></pre>
+<h2>Step 4 Knowledge Base Secondary Arrangement \\&amp; Tag Management</h2>
+<p>Add unified classification tags to imported documents, such as region label, business type label and technical field label\\. Support manual supplement note content, merge repeated materials and delete invalid files, keep the knowledge base neat and easy to call\\.</p>
+<h2>Step 5 Practical Application Scenarios for Overseas Projects</h2>
+<h3>1\\. Personal Technical Knowledge Accumulation</h3>
+<p>Store AI development commands, website deployment codes and model tuning experience\\. Quickly call historical solutions when encountering repeated technical problems\\.</p>
+<h3>2\\. Cross\\-border Content Standard Management</h3>
+<p>Unify store product descriptions, social media posts and email marketing drafts\\. Guarantee consistent content style facing global users\\.</p>
+<h3>3\\. Team Shared Knowledge Collaboration</h3>
+<p>Open partial access permission to team members\\. Realize synchronous viewing of industry data, project progress documents and customer service standard replies, lowering communication cost\\.</p>
+<h3>4\\. Rapid Material Generation Assistance</h3>
+<p>Based on stored knowledge reserves, command AI to generate new articles, optimization plans and reply templates, greatly shorten content creation cycle\\.</p>
+<h2>Step 6 Daily Maintenance \\&amp; Access Optimization Tips</h2>
 <ol>
-<li>定期清理无用的冗余文件，减少检索延迟。</li>
-<li>将过大的文档拆分为小章节，提高解析精度。</li>
-<li>为机密的业务知识空间设置专属访问密码。</li>
-<li>定期将重要知识内容导出为本地备份文件。</li>
+<li>Regularly clean useless redundant files to reduce retrieval delay</li>
 </ol>
+<ol>
+<li>Split oversized documents into small chapters to improve parsing accuracy</li>
+</ol>
+<ol>
+<li>Set exclusive access password for confidential business knowledge space</li>
+</ol>
+<ol>
+<li>Export important knowledge content as local backup files regularly</li>
+</ol>
+<h2>Command for Local Backup Export</h2>
+<pre><code class="language-bash">
+# One-click export all documents in specified knowledge space
+curl -X GET "https://tool-api.example.com/export?spaceId=space_0089&amp;format=zip" -o global_site_knowledge.zip
+</code></pre>
+<h2>Summary</h2>
+<p>This free AI knowledge base tool integrates document storage, intelligent search and content reorganization functions\\. It perfectly matches daily work demands of overseas website builders and cross\\-border practitioners\\. Building exclusive knowledge archives can help you precipitate work experience, quickly acquire effective information, and steadily lift work efficiency and project competitiveness in long\\-term global business operation\\.</p>
 
-<h2>本地备份导出命令</h2>
-
-<pre><code class="language-bash"># One-click export all documents in specified knowledge space
-curl -X GET "https://tool-api.example.com/export?spaceId=space_0089&amp;format=zip" -o global_site_knowledge.zip</code></pre>
-
-<h2>总结</h2>
-
-<p>这款免费的 AI 知识库工具集文档存储、智能搜索和内容重组功能于一体，完美匹配海外网站建设者和跨境从业者的日常工作需求。构建专属知识档案可以帮助你沉淀工作经验、快速获取有效信息，并在长期全球业务运营中稳步提升工作效率和项目竞争力。</p>
-
-<h2>常见问题</h2>
-
-<h3>问：这个知识库工具真的完全免费吗？</h3>
-<p>是的，日常基础使用完全免费，包括文档解析、智能搜索和问答功能。常见操作没有任何隐藏费用。API 访问或团队高级协作等扩展功能可能需要付费，但核心功能完全免费。</p>
-
-<h3>问：支持哪些文件格式？</h3>
-<p>支持 PDF、TXT、Markdown、网页快照和本地笔记等常见格式，并可通过 OCR 技术从图片中提取文字。还提供 API 接口用于程序化文档上传和检索。</p>
-
-<h3>问：我的数据安全吗？</h3>
-<p>数据存储在加密的独立私有空间中，只有你可以控制访问权限，并可以随时导出或删除数据。机密信息可设置密码保护。更多信息请参考 <a href="/article/eu-ai-act-plain-english">欧盟 AI 法案指南</a>。</p>
+<h2>FAQ</h2>
+<h3>Q: Is the knowledge base tool really free?</h3>
+<p>Yes, the tool offers completely free daily basic use with no hidden charges for common document parsing and inquiry functions. Advanced features like higher storage limits may require a paid plan.</p>
+<h3>Q: What file formats does the tool support?</h3>
+<p>The tool supports multiple formats including PDF, TXT, Markdown, webpage snapshots, and local notes. You can batch import multiple documents at once.</p>
+<h3>Q: How is the search different from regular keyword search?</h3>
+<p>The tool uses intelligent semantic matching to accurately locate target content based on meaning, not just keywords. This means you can ask questions in natural language and get relevant answers.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 了解如何为你的需求选择最合适的 AI 工具：<a href="/article/how-to-choose-right-ai-tool">你应该使用哪个 AI 工具？</a> 或探索 <a href="/article/free-vs-paid-ai-tools-worth-it">免费 vs 付费 AI 工具</a>。</p>
+<p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
+</div>`,
+		contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools Tutorial · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> Complete guide to using the free AI knowledge base tool for document management, intelligent retrieval, and team knowledge accumulation.</p>
+</div>
+
+<p>This free AI knowledge base tool has attracted over 600 thousand views among tech users\\. It enables you to build exclusive private knowledge archives, upload local documents, web resources and industry materials, and achieve intelligent retrieval, content summary and professional Q\\&amp;A\\. It is highly suitable for overseas website operation, technical document management, cross\\-border business data sorting and team knowledge accumulation\\. This guide covers complete usage steps, core functions and practical deployment skills\\.</p>
+<h2>Core Advantages of This Free Knowledge Base Tool</h2>
+<ol>
+<li>Completely free for daily basic use, no hidden charging for common document parsing and inquiry functions</li>
+</ol>
+<ol>
+<li>Supports multiple file formats including PDF, TXT, Markdown, webpage snapshot and local notes</li>
+</ol>
+<ol>
+<li>Intelligent semantic matching, accurately locate target content instead of simple keyword search</li>
+</ol>
+<ol>
+<li>Independent private data storage, effectively protect business and technical confidential information</li>
+</ol>
+<ol>
+<li>Lightweight access mode, available on browser without complicated environment installation</li>
+</ol>
+<h2>Step 1 Quick Entry \\&amp; Initial Space Creation</h2>
+<p>Access the official webpage of the tool via common browsers, register an account with email address\\. After logging in, create an independent knowledge space classified by business attributes\\. You can divide archives into website development, overseas marketing, AI model usage and other categories to manage materials hierarchically\\.</p>
+<h2>Step 2 Batch Import Various Knowledge Materials</h2>
+<p>Users can import single file or batch upload multiple documents, the system automatically completes text extraction and vectorization processing\\.</p>
+<h3>Basic Upload Calling Demo</h3>
+<pre><code class="language-javascript">
+// Front-end upload request sample code
+const uploadKnowledgeFile = async (fileList, spaceId) =&gt; {
+  const formData = new FormData();
+  fileList.forEach(file =&gt; {
+    formData.append("docs", file);
+  });
+  formData.append("spaceId", spaceId);
+
+  const response = await fetch("https://tool-api.example.com/upload", {
+    method: "POST",
+    body: formData
+  });
+  const result = await response.json();
+  console.log("File parsing status:", result.msg);
+  return result;
+};
+</code></pre>
+<p>Common applicable materials: website operation manuals, multilingual copywriting templates, competitor analysis documents, technical configuration notes and cross\\-border compliance clauses\\.</p>
+<h2>Step 3 Core Intelligent Query \\&amp; Content Mining</h2>
+<p>After material parsing finishes, you can put forward natural language demands to obtain extracted information, content induction and detailed answers\\. It breaks the limit of manual page flipping search, greatly improving information acquisition efficiency\\.</p>
+<h3>Practical Query Command Examples</h3>
+<pre><code class="language-plaintext">
+# Query 1: Sort out overseas website GDPR compliance key terms
+# Query 2: Summarize high conversion copywriting logic for European market product pages
+# Query 3: Extract common bug solutions of HTML cross-region adaptation
+</code></pre>
+<h3>Simple Query Invoke Script</h3>
+<pre><code class="language-python">
+def knowledge_query(space_id, user_question):
+    request_body = {
+        "spaceId": space_id,
+        "query": user_question,
+        "returnLimit": 5
+    }
+    # Call intelligent retrieval interface
+    res = requests.post("https://tool-api.example.com/query", json=request_body)
+    answer = res.json()["data"]["content"]
+    return answer
+
+# Actual use case
+if __name__ == "__main__":
+    question = "List global user retention optimization methods for content websites"
+    final_answer = knowledge_query("space_0089", question)
+    print(final_answer)
+</code></pre>
+<h2>Step 4 Knowledge Base Secondary Arrangement \\&amp; Tag Management</h2>
+<p>Add unified classification tags to imported documents, such as region label, business type label and technical field label\\. Support manual supplement note content, merge repeated materials and delete invalid files, keep the knowledge base neat and easy to call\\.</p>
+<h2>Step 5 Practical Application Scenarios for Overseas Projects</h2>
+<h3>1\\. Personal Technical Knowledge Accumulation</h3>
+<p>Store AI development commands, website deployment codes and model tuning experience\\. Quickly call historical solutions when encountering repeated technical problems\\.</p>
+<h3>2\\. Cross\\-border Content Standard Management</h3>
+<p>Unify store product descriptions, social media posts and email marketing drafts\\. Guarantee consistent content style facing global users\\.</p>
+<h3>3\\. Team Shared Knowledge Collaboration</h3>
+<p>Open partial access permission to team members\\. Realize synchronous viewing of industry data, project progress documents and customer service standard replies, lowering communication cost\\.</p>
+<h3>4\\. Rapid Material Generation Assistance</h3>
+<p>Based on stored knowledge reserves, command AI to generate new articles, optimization plans and reply templates, greatly shorten content creation cycle\\.</p>
+<h2>Step 6 Daily Maintenance \\&amp; Access Optimization Tips</h2>
+<ol>
+<li>Regularly clean useless redundant files to reduce retrieval delay</li>
+</ol>
+<ol>
+<li>Split oversized documents into small chapters to improve parsing accuracy</li>
+</ol>
+<ol>
+<li>Set exclusive access password for confidential business knowledge space</li>
+</ol>
+<ol>
+<li>Export important knowledge content as local backup files regularly</li>
+</ol>
+<h2>Command for Local Backup Export</h2>
+<pre><code class="language-bash">
+# One-click export all documents in specified knowledge space
+curl -X GET "https://tool-api.example.com/export?spaceId=space_0089&amp;format=zip" -o global_site_knowledge.zip
+</code></pre>
+<h2>Summary</h2>
+<p>This free AI knowledge base tool integrates document storage, intelligent search and content reorganization functions\\. It perfectly matches daily work demands of overseas website builders and cross\\-border practitioners\\. Building exclusive knowledge archives can help you precipitate work experience, quickly acquire effective information, and steadily lift work efficiency and project competitiveness in long\\-term global business operation\\.</p>
+
+<h2>常见问题</h2>
+<h3>问：这个知识库工具真的免费吗？</h3>
+<p>是的，该工具提供完全免费的日常基本使用，常见的文档解析和查询功能没有隐藏收费。高级功能如更大的存储空间可能需要付费计划。</p>
+<h3>问：该工具支持哪些文件格式？</h3>
+<p>支持多种格式，包括PDF、TXT、Markdown、网页快照和本地笔记。你可以一次性批量导入多个文档。</p>
+<h3>问：该搜索与普通关键词搜索有什么不同？</h3>
+<p>该工具使用智能语义匹配，根据含义（不仅仅是关键词）精确定位目标内容。这意味着你可以用自然语言提问并获得相关答案。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 →</a></p>
 </div>`,
 	},
 
 	// ====== 6-must-have-openclaw-skills ======
 	"6-must-have-openclaw-skills": {
 		content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tutorials &middot; <strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Prerequisites:</strong> Basic familiarity with OpenClaw CLI</p>
+<p><strong>Category:</strong> OpenClaw Skills · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> 6 base skills for OpenClaw covering browser automation, web search, self-improvement, skill discovery, security auditing, and email management.</p>
 </div>
 
-<p>OpenClaw, a powerful AI tool ecosystem, offers thousands of skills in its store, but there are 6 base skills that stand out for their high installation rates and practicality. These skills cover browser automation, web search, self-improvement, skill discovery, security auditing, and email management, forming a solid foundation for your AI workflow. Let’s dive into each one with practical insights and usage guides.</p>
-
-<h2>1. Agent-Browser: Let AI Take Control of Browsers</h2>
-
-<p><strong>Functionality</strong>: This skill enables AI to automate browser operations. It can click buttons, fill out forms, take full-page screenshots, and download files in batches. Even dynamically rendered pages are no problem, making it feel like giving AI a pair of hands to interact with the web.</p>
-
+<p>OpenClaw, a powerful AI tool ecosystem, offers thousands of skills in its store, but there are 6 base skills that stand out for their high installation rates and practicality\\. These skills cover browser automation, web search, self\\-improvement, skill discovery, security auditing, and email management, forming a solid foundation for your AI workflow\\. Let’s dive into each one with practical insights and usage guides\\.</p>
+<h2>1\\. Agent\\-Browser: Let AI Take Control of Browsers</h2>
+<p><strong>Functionality</strong>: This skill enables AI to automate browser operations\\. It can click buttons, fill out forms, take full\\-page screenshots, and download files in batches\\. Even dynamically rendered pages are no problem, making it feel like giving AI a pair of hands to interact with the web\\.</p>
 <p><strong>Practical Use Cases</strong>:</p>
-
 <ul>
-<li>Automate web-based tasks like filling out daily reports on enterprise platforms.</li>
-<li>Batch download product images or data sheets from e-commerce websites.</li>
-<li>Capture full-page screenshots of competitor web pages for analysis.</li>
+<li>Automate web\\-based tasks like filling out daily reports on enterprise platforms\\.</li>
+</ul>
+<ul>
+<li>Batch download product images or data sheets from e\\-commerce websites\\.</li>
+</ul>
+<ul>
+<li>Capture full\\-page screenshots of competitor web pages for analysis\\.</li>
 </ul>
 <p><strong>Command Example for Installation</strong>:</p>
-
-<pre><code class="language-bash">claw install agent-browser</code></pre>
-
-<h2>2. Tavily-Search: Ad-Free AI-Exclusive Web Search</h2>
-
-<p><strong>Functionality</strong>: It provides real-time web search results without ads. The output is structured, making it easy for AI to consume, and it automatically extracts key information from web pages. This ensures your AI is always working with the latest and most accurate information.</p>
-
+<pre><code class="language-bash">
+claw install agent-browser
+</code></pre>
+<h2>2\\. Tavily\\-Search: Ad\\-Free AI\\-Exclusive Web Search</h2>
+<p><strong>Functionality</strong>: It provides real\\-time web search results without ads\\. The output is structured, making it easy for AI to consume, and it automatically extracts key information from web pages\\. This ensures your AI is always working with the latest and most accurate information\\.</p>
 <p><strong>Practical Use Cases</strong>:</p>
-
 <ul>
-<li>Research the latest market trends in overseas regions for your e-commerce business.</li>
-<li>Fetch up-to-date news and data for content creation targeting international audiences.</li>
-<li>Gather product feedback and reviews from global forums.</li>
+<li>Research the latest market trends in overseas regions for your e\\-commerce business\\.</li>
+</ul>
+<ul>
+<li>Fetch up\\-to\\-date news and data for content creation targeting international audiences\\.</li>
+</ul>
+<ul>
+<li>Gather product feedback and reviews from global forums\\.</li>
 </ul>
 <p><strong>Command Example for Installation</strong>:</p>
-
-<pre><code class="language-bash">claw install tavily-search</code></pre>
-
-<h2>3. Self-Improving Agent: AI That Learns and Evolves</h2>
-
-<p><strong>Functionality</strong>: This skill allows AI to remember your coding style, habits, and preferences. It learns from mistakes to automatically fix issues and retains memory across conversations, getting smarter and more efficient the more you use it.</p>
-
+<pre><code class="language-bash">
+claw install tavily-search
+</code></pre>
+<h2>3\\. Self\\-Improving Agent: AI That Learns and Evolves</h2>
+<p><strong>Functionality</strong>: This skill allows AI to remember your coding style, habits, and preferences\\. It learns from mistakes to automatically fix issues and retains memory across conversations, getting smarter and more efficient the more you use it\\.</p>
 <p><strong>Practical Use Cases</strong>:</p>
-
 <ul>
-<li>Let it learn your unique writing style for creating consistent marketing copy.</li>
-<li>Have it remember your code conventions to assist in development tasks.</li>
-<li>Improve its accuracy in handling repeated tasks by learning from past errors.</li>
+<li>Let it learn your unique writing style for creating consistent marketing copy\\.</li>
+</ul>
+<ul>
+<li>Have it remember your code conventions to assist in development tasks\\.</li>
+</ul>
+<ul>
+<li>Improve its accuracy in handling repeated tasks by learning from past errors\\.</li>
 </ul>
 <p><strong>Command Example for Installation</strong>:</p>
-
-<pre><code class="language-bash">claw install self-improving-agent</code></pre>
-
-<h2>4. Find-Skills: Discover and Manage Skills Seamlessly</h2>
-
-<p><strong>Functionality</strong>: It works like an app store for OpenClaw skills. You can search for skills using natural language, get recommendations based on leaderboards, and manage installations, upgrades, and rollbacks all in one place.</p>
-
+<pre><code class="language-bash">
+claw install self-improving-agent
+</code></pre>
+<h2>4\\. Find\\-Skills: Discover and Manage Skills Seamlessly</h2>
+<p><strong>Functionality</strong>: It works like an app store for OpenClaw skills\\. You can search for skills using natural language, get recommendations based on leaderboards, and manage installations, upgrades, and rollbacks all in one place\\.</p>
 <p><strong>Practical Use Cases</strong>:</p>
-
 <ul>
-<li>Search for skills to automate social media posting for your overseas accounts.</li>
-<li>Find translation skills optimized for specific languages like Spanish or German.</li>
-<li>Batch update all installed skills to their latest versions.</li>
+<li>Search for skills to automate social media posting for your overseas accounts\\.</li>
+</ul>
+<ul>
+<li>Find translation skills optimized for specific languages like Spanish or German\\.</li>
+</ul>
+<ul>
+<li>Batch update all installed skills to their latest versions\\.</li>
 </ul>
 <p><strong>Command Example for Installation</strong>:</p>
-
-<pre><code class="language-bash">claw install find-skills</code></pre>
-
-<h2>5. Skill-Vetter: Secure Your AI Toolchain</h2>
-
-<p><strong>Functionality</strong>: Before installing any skill, this tool scans it for malicious code, checks for unauthorized permission requests, and prevents privacy leaks. It also provides a security score report, acting as a gatekeeper for your AI tools.</p>
-
+<pre><code class="language-bash">
+claw install find-skills
+</code></pre>
+<h2>5\\. Skill\\-Vetter: Secure Your AI Toolchain</h2>
+<p><strong>Functionality</strong>: Before installing any skill, this tool scans it for malicious code, checks for unauthorized permission requests, and prevents privacy leaks\\. It also provides a security score report, acting as a gatekeeper for your AI tools\\.</p>
 <p><strong>Practical Use Cases</strong>:</p>
-
 <ul>
-<li>Scan new skills before installing to ensure they don’t access sensitive business data.</li>
-<li>Use it to audit existing skills for potential security risks.</li>
-<li>Comply with data privacy regulations in regions like the EU by preventing unauthorized data access.</li>
+<li>Scan new skills before installing to ensure they don’t access sensitive business data\\.</li>
+</ul>
+<ul>
+<li>Use it to audit existing skills for potential security risks\\.</li>
+</ul>
+<ul>
+<li>Comply with data privacy regulations in regions like the EU by preventing unauthorized data access\\.</li>
 </ul>
 <p><strong>Command Example for Installation</strong>:</p>
-
-<pre><code class="language-bash">claw install skill-vetter</code></pre>
-
-<h2>6. Email Management: AI-Powered Email Handler</h2>
-
-<p><strong>Functionality</strong>: This skill lets AI read, write, classify, and manage your emails. It can draft responses to common emails and supports major email platforms like Gmail, Outlook, 163, and QQ.</p>
-
+<pre><code class="language-bash">
+claw install skill-vetter
+</code></pre>
+<h2>6\\. Email Management: AI\\-Powered Email Handler</h2>
+<p><strong>Functionality</strong>: This skill lets AI read, write, classify, and manage your emails\\. It can draft responses to common emails and supports major email platforms like Gmail, Outlook, 163, and QQ\\.</p>
 <p><strong>Practical Use Cases</strong>:</p>
-
 <ul>
-<li>Automatically classify customer inquiries from different regions into separate folders.</li>
-<li>Let AI draft responses to routine business emails in multiple languages.</li>
-<li>Prioritize and flag important emails for immediate attention.</li>
+<li>Automatically classify customer inquiries from different regions into separate folders\\.</li>
+</ul>
+<ul>
+<li>Let AI draft responses to routine business emails in multiple languages\\.</li>
+</ul>
+<ul>
+<li>Prioritize and flag important emails for immediate attention\\.</li>
 </ul>
 <p><strong>Command Example for Installation</strong>:</p>
-
-<pre><code class="language-bash">claw install email-management</code></pre>
-
+<pre><code class="language-bash">
+claw install email-management
+</code></pre>
 <h2>One Command to Install All 6 Skills</h2>
-
 <p>For those who want to get started quickly, you can install all these base skills with a single command:</p>
+<pre><code class="language-bash">
+claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management
+</code></pre>
+<p>These 6 skills form a robust foundation for anyone using OpenClaw, whether you’re running an overseas e\\-commerce business, managing international content, or handling global customer support\\. By leveraging these skills, you can automate tasks, access accurate information, ensure security, and boost overall productivity in your AI\\-driven workflows\\.</p>
 
-<pre><code class="language-bash">claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management</code></pre>
+<h2>FAQ</h2>
+<h3>Q: Are these OpenClaw skills free to install?</h3>
+<p>Yes, all six base skills are free to install from the OpenClaw skills marketplace. You only pay for the underlying LLM API usage when the skills are executing tasks.</p>
+<h3>Q: Can I install all six skills at once?</h3>
+<p>Yes. You can install all six base skills with a single command: claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management</p>
+<h3>Q: Do these skills work with any LLM provider?</h3>
+<p>Yes. OpenClaw supports multiple LLM providers including OpenAI, Anthropic Claude, and others. The skills work regardless of which LLM you configure as the backend.</p>
 
-<p>These 6 skills form a robust foundation for anyone using OpenClaw, whether you’re running an overseas e-commerce business, managing international content, or handling global customer support. By leveraging these skills, you can automate tasks, access accurate information, ensure security, and boost overall productivity in your AI-driven workflows.</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>Q: What is OpenClaw and why should I use it?</h3>
-<p>OpenClaw is an open-source AI agent framework that combines LLMs with command execution loops to turn natural language into automated workflows. Read our article <a href="/article/openclaw-demystified-20-lines">Unveiling OpenClaw: Demystify the AI Tool in 20 Lines of Code</a>.</p>
-
-<h3>Q: Are these 6 skills enough for daily work?</h3>
-<p>These 6 skills form a robust foundation for most AI-driven workflows. Browser automation, web search, self-improvement, skill discovery, security auditing, and email management cover the majority of daily tasks for overseas business operations.</p>
-
-<h3>Q: How does OpenClaw compare to other AI tools?</h3>
-<p>OpenClaw's strength lies in its skill ecosystem and flexibility. For a broader comparison of AI development tools, see <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI's Strategic Counterattack: OpenClaw Integration and Codex Innovations</a>.</p>
 <div class="next-step">
-<p><strong>Next Step:</strong> Learn more about <a href="/article/openclaw-demystified-20-lines">how OpenClaw works under the hood</a> or explore <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI's strategic moves</a>.</p>
+<p><strong>Next:</strong> <a href="/article/openclaw-demystified-20-lines">Unveiling OpenClaw: Demystify the AI Tool in 20 Lines →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI 教程 &middot; <strong>难度：</strong> 中级</p>
-<p><strong>前置要求：</strong> 熟悉 OpenClaw 命令行基本操作</p>
+<p><strong>Category:</strong> OpenClaw Skills · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> 6 base skills for OpenClaw covering browser automation, web search, self-improvement, skill discovery, security auditing, and email management.</p>
 </div>
 
-<p>OpenClaw 是一个强大的 AI 工具生态系统，其技能商店提供数千种技能，但有 6 个基础技能因其极高的安装率和实用性而脱颖而出。这些技能涵盖浏览器自动化、网络搜索、自我改进、技能发现、安全审计和邮件管理，为你的 AI 工作流奠定了坚实的基础。让我们深入了解每一个技能，并提供实用见解和使用指南。</p>
-
-<h2>1. Agent-Browser：让 AI 控制浏览器</h2>
-
-<p><strong>功能</strong>：该技能使 AI 能够自动化浏览器操作。它可以点击按钮、填写表单、截取全页截图和批量下载文件。即使是动态渲染的页面也不在话下，感觉就像给 AI 装上了一双手来与网页交互。</p>
-
-<p><strong>实际使用场景</strong>：</p>
-
+<p>OpenClaw, a powerful AI tool ecosystem, offers thousands of skills in its store, but there are 6 base skills that stand out for their high installation rates and practicality\\. These skills cover browser automation, web search, self\\-improvement, skill discovery, security auditing, and email management, forming a solid foundation for your AI workflow\\. Let’s dive into each one with practical insights and usage guides\\.</p>
+<h2>1\\. Agent\\-Browser: Let AI Take Control of Browsers</h2>
+<p><strong>Functionality</strong>: This skill enables AI to automate browser operations\\. It can click buttons, fill out forms, take full\\-page screenshots, and download files in batches\\. Even dynamically rendered pages are no problem, making it feel like giving AI a pair of hands to interact with the web\\.</p>
+<p><strong>Practical Use Cases</strong>:</p>
 <ul>
-<li>自动化基于网页的任务，如填写企业平台上的每日报告。</li>
-<li>从电商网站批量下载产品图片或数据表。</li>
-<li>截取竞争对手网页的全页截图用于分析。</li>
+<li>Automate web\\-based tasks like filling out daily reports on enterprise platforms\\.</li>
 </ul>
-
-<p><strong>安装命令示例</strong>：</p>
-
-<pre><code class="language-bash">claw install agent-browser</code></pre>
-
-<h2>2. Tavily-Search：AI 专用的无广告网络搜索</h2>
-
-<p><strong>功能</strong>：它提供无广告的实时网络搜索结果。输出是结构化的，便于 AI 消费，并自动从网页中提取关键信息。这确保你的 AI 始终使用最新、最准确的信息工作。</p>
-
-<p><strong>实际使用场景</strong>：</p>
-
 <ul>
-<li>研究海外地区的最新市场趋势，为你的电商业务提供支持。</li>
-<li>获取最新的新闻和数据，为面向国际受众的内容创作提供素材。</li>
-<li>从全球论坛收集产品反馈和评论。</li>
+<li>Batch download product images or data sheets from e\\-commerce websites\\.</li>
 </ul>
-
-<p><strong>安装命令示例</strong>：</p>
-
-<pre><code class="language-bash">claw install tavily-search</code></pre>
-
-<h2>3. Self-Improving Agent：会学习进化的 AI</h2>
-
-<p><strong>功能</strong>：该技能让 AI 记住你的编码风格、习惯和偏好。它从错误中学习以自动修复问题，并在不同会话之间保持记忆，使用越多越智能高效。</p>
-
-<p><strong>实际使用场景</strong>：</p>
-
 <ul>
-<li>让它学习你独特的写作风格，用于创建一致的营销文案。</li>
-<li>让它记住你的代码规范以协助开发任务。</li>
-<li>通过从过去的错误中学习，提高处理重复性任务的准确性。</li>
+<li>Capture full\\-page screenshots of competitor web pages for analysis\\.</li>
 </ul>
-
-<p><strong>安装命令示例</strong>：</p>
-
-<pre><code class="language-bash">claw install self-improving-agent</code></pre>
-
-<h2>4. Find-Skills：无缝发现和管理技能</h2>
-
-<p><strong>功能</strong>：它就像一个 OpenClaw 技能的应用商店。你可以使用自然语言搜索技能，根据排行榜获取推荐，并在一个地方管理安装、升级和回滚。</p>
-
-<p><strong>实际使用场景</strong>：</p>
-
+<p><strong>Command Example for Installation</strong>:</p>
+<pre><code class="language-bash">
+claw install agent-browser
+</code></pre>
+<h2>2\\. Tavily\\-Search: Ad\\-Free AI\\-Exclusive Web Search</h2>
+<p><strong>Functionality</strong>: It provides real\\-time web search results without ads\\. The output is structured, making it easy for AI to consume, and it automatically extracts key information from web pages\\. This ensures your AI is always working with the latest and most accurate information\\.</p>
+<p><strong>Practical Use Cases</strong>:</p>
 <ul>
-<li>搜索自动化海外账户社交媒体发布的技能。</li>
-<li>寻找针对特定语言（如西班牙语或德语）优化的翻译技能。</li>
-<li>批量更新所有已安装技能到最新版本。</li>
+<li>Research the latest market trends in overseas regions for your e\\-commerce business\\.</li>
 </ul>
-
-<p><strong>安装命令示例</strong>：</p>
-
-<pre><code class="language-bash">claw install find-skills</code></pre>
-
-<h2>5. Skill-Vetter：保护你的 AI 工具链安全</h2>
-
-<p><strong>功能</strong>：在安装任何技能之前，此工具会扫描恶意代码、检查未授权的权限请求并防止隐私泄露。它还提供安全评分报告，充当 AI 工具的门卫。</p>
-
-<p><strong>实际使用场景</strong>：</p>
-
 <ul>
-<li>在安装新技能之前进行扫描，确保它们不会访问敏感业务数据。</li>
-<li>使用它审计现有技能是否存在潜在安全风险。</li>
-<li>通过防止未经授权的数据访问，遵守欧盟等地区的数据隐私法规。</li>
+<li>Fetch up\\-to\\-date news and data for content creation targeting international audiences\\.</li>
 </ul>
-
-<p><strong>安装命令示例</strong>：</p>
-
-<pre><code class="language-bash">claw install skill-vetter</code></pre>
-
-<h2>6. Email Management：AI 驱动的邮件处理</h2>
-
-<p><strong>功能</strong>：该技能让 AI 读取、编写、分类和管理你的电子邮件。它可以起草常见邮件的回复，并支持 Gmail、Outlook、163 和 QQ 等主流邮件平台。</p>
-
-<p><strong>实际使用场景</strong>：</p>
-
 <ul>
-<li>自动将来自不同地区的客户咨询分类到不同文件夹。</li>
-<li>让 AI 起草多语言的常规商务邮件回复。</li>
-<li>优先标记重要邮件以便立即处理。</li>
+<li>Gather product feedback and reviews from global forums\\.</li>
 </ul>
-
-<p><strong>安装命令示例</strong>：</p>
-
-<pre><code class="language-bash">claw install email-management</code></pre>
-
-<h2>一键安装所有 6 个技能</h2>
-
-<p>对于想要快速入门的用户，可以使用一条命令安装所有这些基础技能：</p>
-
-<pre><code class="language-bash">claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management</code></pre>
-
-<p>这 6 个技能为任何使用 OpenClaw 的人奠定了坚实的基础，无论你是在运营海外电商业务、管理国际内容还是处理全球客户支持。通过利用这些技能，你可以自动化任务、获取准确信息、确保安全，并在 AI 驱动的工作流中全面提升生产力。</p>
+<p><strong>Command Example for Installation</strong>:</p>
+<pre><code class="language-bash">
+claw install tavily-search
+</code></pre>
+<h2>3\\. Self\\-Improving Agent: AI That Learns and Evolves</h2>
+<p><strong>Functionality</strong>: This skill allows AI to remember your coding style, habits, and preferences\\. It learns from mistakes to automatically fix issues and retains memory across conversations, getting smarter and more efficient the more you use it\\.</p>
+<p><strong>Practical Use Cases</strong>:</p>
+<ul>
+<li>Let it learn your unique writing style for creating consistent marketing copy\\.</li>
+</ul>
+<ul>
+<li>Have it remember your code conventions to assist in development tasks\\.</li>
+</ul>
+<ul>
+<li>Improve its accuracy in handling repeated tasks by learning from past errors\\.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+<pre><code class="language-bash">
+claw install self-improving-agent
+</code></pre>
+<h2>4\\. Find\\-Skills: Discover and Manage Skills Seamlessly</h2>
+<p><strong>Functionality</strong>: It works like an app store for OpenClaw skills\\. You can search for skills using natural language, get recommendations based on leaderboards, and manage installations, upgrades, and rollbacks all in one place\\.</p>
+<p><strong>Practical Use Cases</strong>:</p>
+<ul>
+<li>Search for skills to automate social media posting for your overseas accounts\\.</li>
+</ul>
+<ul>
+<li>Find translation skills optimized for specific languages like Spanish or German\\.</li>
+</ul>
+<ul>
+<li>Batch update all installed skills to their latest versions\\.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+<pre><code class="language-bash">
+claw install find-skills
+</code></pre>
+<h2>5\\. Skill\\-Vetter: Secure Your AI Toolchain</h2>
+<p><strong>Functionality</strong>: Before installing any skill, this tool scans it for malicious code, checks for unauthorized permission requests, and prevents privacy leaks\\. It also provides a security score report, acting as a gatekeeper for your AI tools\\.</p>
+<p><strong>Practical Use Cases</strong>:</p>
+<ul>
+<li>Scan new skills before installing to ensure they don’t access sensitive business data\\.</li>
+</ul>
+<ul>
+<li>Use it to audit existing skills for potential security risks\\.</li>
+</ul>
+<ul>
+<li>Comply with data privacy regulations in regions like the EU by preventing unauthorized data access\\.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+<pre><code class="language-bash">
+claw install skill-vetter
+</code></pre>
+<h2>6\\. Email Management: AI\\-Powered Email Handler</h2>
+<p><strong>Functionality</strong>: This skill lets AI read, write, classify, and manage your emails\\. It can draft responses to common emails and supports major email platforms like Gmail, Outlook, 163, and QQ\\.</p>
+<p><strong>Practical Use Cases</strong>:</p>
+<ul>
+<li>Automatically classify customer inquiries from different regions into separate folders\\.</li>
+</ul>
+<ul>
+<li>Let AI draft responses to routine business emails in multiple languages\\.</li>
+</ul>
+<ul>
+<li>Prioritize and flag important emails for immediate attention\\.</li>
+</ul>
+<p><strong>Command Example for Installation</strong>:</p>
+<pre><code class="language-bash">
+claw install email-management
+</code></pre>
+<h2>One Command to Install All 6 Skills</h2>
+<p>For those who want to get started quickly, you can install all these base skills with a single command:</p>
+<pre><code class="language-bash">
+claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management
+</code></pre>
+<p>These 6 skills form a robust foundation for anyone using OpenClaw, whether you’re running an overseas e\\-commerce business, managing international content, or handling global customer support\\. By leveraging these skills, you can automate tasks, access accurate information, ensure security, and boost overall productivity in your AI\\-driven workflows\\.</p>
 
 <h2>常见问题</h2>
-
-<h3>问：什么是 OpenClaw？我为什么需要使用它？</h3>
-<p>OpenClaw 是一个开源的 AI 代理框架，它将大语言模型与命令执行循环相结合，将自然语言指令转化为自动化工作流程。要了解核心原理，推荐阅读 <a href="/article/openclaw-demystified-20-lines">揭开 OpenClaw 面纱：20 行代码讲透这个 AI 工具</a>。</p>
-
-<h3>问：这 6 个技能真的能覆盖日常工作的主要需求吗？</h3>
-<p>是的，这 6 个技能为大多数 AI 驱动的工作流程提供了坚实基础。浏览器自动化、网络搜索、自我进化、技能发现、安全审计和邮件管理覆盖了海外业务运营中大部分日常任务。</p>
-
-<h3>问：OpenClaw 与其他 AI 开发工具相比有什么优势？</h3>
-<p>OpenClaw 最大的优势在于其灵活的技能生态系统。与功能固定的单一 AI 工具不同，OpenClaw 允许通过安装不同技能来组合能力。全面对比分析请参考 <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI 的战略反击：OpenClaw 集成与 Codex 创新</a>。</p>
+<h3>问：这些OpenClaw技能安装免费吗？</h3>
+<p>是的，这六个基础技能都可以从OpenClaw技能市场免费安装。你只需要为技能执行任务时的底层LLM API使用量付费。</p>
+<h3>问：我可以一次性安装所有六个技能吗？</h3>
+<p>是的。你可以用一条命令安装所有六个基础技能：claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management</p>
+<h3>问：这些技能适用于任何LLM提供商吗？</h3>
+<p>是的。OpenClaw支持多个LLM提供商，包括OpenAI、Anthropic Claude等。无论你将哪个LLM配置为后端，这些技能都可以工作。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 深入了解 <a href="/article/openclaw-demystified-20-lines">OpenClaw 的核心工作原理</a>，或探索 <a href="/article/openai-strategic-counterattack-openclaw-codex">OpenAI 在 AI 工具市场的最新战略动作</a>。</p>
+<p><strong>下一篇：</strong> <a href="/article/openclaw-demystified-20-lines">揭开OpenClaw面纱：20行代码讲透这个AI工具 →</a></p>
 </div>`,
 	},
 
 	// ====== top-10-claude-code-commands ======
 	"top-10-claude-code-commands": {
 		content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tutorials &middot; <strong>Difficulty:</strong> Beginner</p>
-<p><strong>Prerequisites:</strong> Claude Code installed (see <a href="/article/claude-code-install-setup">installation guide</a>)</p>
+<p><strong>Category:</strong> Claude Code Guide · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> The 10 most practical and frequently used Claude Code commands with real-world applications and code examples.</p>
 </div>
 
-<p>After trying tools like OpenClaw and Hermes Agent, many users find that <strong>Claude Code</strong> stands out as a powerful AI agent, especially with its versatile command set. Below, we break down the 10 most practical and frequently used commands, complete with real-world applications and code examples, to help you maximize your workflow efficiency.</p>
-
-<h2>1. Fully Automated Mode Activation</h2>
-
-<p>When working with Claude Code, permission requests for risky operations (like deleting files or running scripts) can interrupt tasks. Use this command to grant full permissions:</p>
-
-<pre><code class="language-bash">claude --dangerously-skip-permissions</code></pre>
-
-<p><strong>Use Case</strong>: Ideal when you fully trust Claude’s execution capabilities and want to avoid frequent interruptions, such as when automating batch file processing or running complex scripts.</p>
-
-<h2>2. Project Initialization</h2>
-
-<p>For new projects, this command scans your codebase and generates a <code>CLAUDE.md</code> file, which documents core commands, architectural standards, and workflow guidelines.</p>
-
-<pre><code class="language-bash">/init</code></pre>
-
-<p><strong>Use Case</strong>: When onboarding an existing project, run this command to quickly understand the project’s structure and constraints. Claude will reference <code>CLAUDE.md</code> in every conversation, ensuring consistency.</p>
-
-<h2>3. @ Symbol for Context Injection</h2>
-
+<p>After trying tools like OpenClaw and Hermes Agent, many users find that <strong>Claude Code</strong> stands out as a powerful AI agent, especially with its versatile command set\\. Below, we break down the 10 most practical and frequently used commands, complete with real\\-world applications and code examples, to help you maximize your workflow efficiency\\.</p>
+<h2>1\\. Fully Automated Mode Activation</h2>
+<p>When working with Claude Code, permission requests for risky operations \\(like deleting files or running scripts\\) can interrupt tasks\\. Use this command to grant full permissions:</p>
+<pre><code class="language-bash">
+claude --dangerously-skip-permissions
+</code></pre>
+<p><strong>Use Case</strong>: Ideal when you fully trust Claude’s execution capabilities and want to avoid frequent interruptions, such as when automating batch file processing or running complex scripts\\.</p>
+<h2>2\\. Project Initialization</h2>
+<p>For new projects, this command scans your codebase and generates a <code>CLAUDE\\.md</code> file, which documents core commands, architectural standards, and workflow guidelines\\.</p>
+<pre><code class="language-bash">
+/init
+</code></pre>
+<p><strong>Use Case</strong>: When onboarding an existing project, run this command to quickly understand the project’s structure and constraints\\. Claude will reference <code>CLAUDE\\.md</code> in every conversation, ensuring consistency\\.</p>
+<h2>3\\. @ Symbol for Context Injection</h2>
 <p>Easily add files or directories to the conversation context:</p>
-
-<pre><code class="language-Plain Text">@file/path
-@directory/path</code></pre>
-
-<p><strong>Use Case</strong>: When debugging code, reference a specific script with <code>@scripts/debug.py</code> to let Claude analyze it. For a full module, use <code>@modules/auth</code> to include all related files.</p>
-
-<h2>4. Restore Historical Sessions</h2>
-
+<pre><code class="language-Plain Text">
+@file/path
+@directory/path
+</code></pre>
+<p><strong>Use Case</strong>: When debugging code, reference a specific script with <code>@scripts/debug\\.py</code> to let Claude analyze it\\. For a full module, use <code>@modules/auth</code> to include all related files\\.</p>
+<h2>4\\. Restore Historical Sessions</h2>
 <p>Never lose progress with these commands to resume conversations:</p>
-
-<pre><code class="language-bash">claude --continue  # Resume the last session
+<pre><code class="language-bash">
+claude --continue  # Resume the last session
 claude --resume    # Select from a list of sessions
-/resume            # Switch sessions in an active chat</code></pre>
-
-<p><strong>Use Case</strong>: If you pause a task midway, use <code>claude --continue</code> to pick up right where you left off, whether it’s coding, data analysis, or content creation.</p>
-
-<h2>5. Context Management</h2>
-
+/resume            # Switch sessions in an active chat
+</code></pre>
+<p><strong>Use Case</strong>: If you pause a task midway, use <code>claude \\-\\-continue</code> to pick up right where you left off, whether it’s coding, data analysis, or content creation\\.</p>
+<h2>5\\. Context Management</h2>
 <p>Keep your conversation context organized with these commands:</p>
-
-<pre><code class="language-bash">/clear    # Reset context
+<pre><code class="language-bash">
+/clear    # Reset context
 /compact  # Compress long conversations
-/context  # Check current context usage</code></pre>
-
-<p><strong>Best Practice</strong>: Maintain context at around 50% capacity for optimal performance, especially during lengthy coding or research sessions.</p>
-
-<h2>6. Self-Insight Report</h2>
-
+/context  # Check current context usage
+</code></pre>
+<p><strong>Best Practice</strong>: Maintain context at around 50% capacity for optimal performance, especially during lengthy coding or research sessions\\.</p>
+<h2>6\\. Self\\-Insight Report</h2>
 <p>Generate a detailed HTML report analyzing your usage over the past month:</p>
-
-<pre><code class="language-bash">/insights</code></pre>
-
+<pre><code class="language-bash">
+/insights
+</code></pre>
 <p><strong>What You Get</strong>:</p>
-
 <ul>
-<li><strong>Data Dashboard</strong>: Session count, token usage, and Git commit stats.</li>
-<li><strong>Friction Analysis</strong>: Identifies time-wasting patterns (e.g., repeated prompts).</li>
-<li><strong>Actionable Tips</strong>: Code snippets to optimize your workflow.</li>
+<li><strong>Data Dashboard</strong>: Session count, token usage, and Git commit stats\\.</li>
 </ul>
-<h2>7. Update to the Latest Version</h2>
-
+<ul>
+<li><strong>Friction Analysis</strong>: Identifies time\\-wasting patterns \\(e\\.g\\., repeated prompts\\)\\.</li>
+</ul>
+<ul>
+<li><strong>Actionable Tips</strong>: Code snippets to optimize your workflow\\.</li>
+</ul>
+<h2>7\\. Update to the Latest Version</h2>
 <p>Regularly update to access new features and bug fixes:</p>
-
-<pre><code class="language-bash">claude --update</code></pre>
-
-<p><strong>Use Case</strong>: Run this weekly to ensure you’re using the most stable and feature-rich version.</p>
-
-<h2>8. Auto-Permission Mode</h2>
-
+<pre><code class="language-bash">
+claude --update
+</code></pre>
+<p><strong>Use Case</strong>: Run this weekly to ensure you’re using the most stable and feature\\-rich version\\.</p>
+<h2>8\\. Auto\\-Permission Mode</h2>
 <p>A safer alternative to full automation, this mode uses an AI model to assess operation safety:</p>
-
-<pre><code class="language-bash">claude --permission-mode auto</code></pre>
-
-<p><strong>Difference from Command 1</strong>: While <code>--dangerously-skip-permissions</code> skips all checks, this mode adds a safety layer, making it ideal for less trusted workflows.</p>
-
-<h2>9. Advanced Built-in Skills</h2>
-
+<pre><code class="language-bash">
+claude --permission-mode auto
+</code></pre>
+<p><strong>Difference from Command 1</strong>: While <code>\\-\\-dangerously\\-skip\\-permissions</code> skips all checks, this mode adds a safety layer, making it ideal for less trusted workflows\\.</p>
+<h2>9\\. Advanced Built\\-in Skills</h2>
 <p>Tackle complex tasks with these specialized commands:</p>
-
 <ul>
 <li><strong>Code Optimization</strong>:</li>
 </ul>
-<pre><code class="language-bash">    /simplify</code></pre>
-
-<p>    Automatically identifies reusable or redundant code sections and fixes them.</p>
-
+<p>\`\`\`bash</p>
+<p>/simplify</p>
+<p>\`\`\`</p>
+<p>Automatically identifies reusable or redundant code sections and fixes them\\.</p>
 <ul>
 <li><strong>Batch Processing</strong>:</li>
 </ul>
-<pre><code class="language-bash">    /batch</code></pre>
-
-<p>    Splits tasks into parallel units, each isolated with Git worktrees.</p>
-
+<p>\`\`\`bash</p>
+<p>/batch</p>
+<p>\`\`\`</p>
+<p>Splits tasks into parallel units, each isolated with Git worktrees\\.</p>
 <ul>
 <li><strong>Debugging Claude</strong>:</li>
 </ul>
-<pre><code class="language-bash">    /debug</code></pre>
-
-<p>    Analyzes session logs to diagnose unexpected behavior.</p>
-
-<h2>10. Skill Plugin Installation</h2>
-
+<p>\`\`\`bash</p>
+<p>/debug</p>
+<p>\`\`\`</p>
+<p>Analyzes session logs to diagnose unexpected behavior\\.</p>
+<h2>10\\. Skill Plugin Installation</h2>
 <p>Extend Claude’s capabilities with plugins, categorized by scope:</p>
-
 <ul>
-<li><strong>Project-Level</strong>: Only active in the current project.</li>
-<li><strong>Global-Level</strong>: Active across all projects on your machine.</li>
+<li><strong>Project\\-Level</strong>: Only active in the current project\\.</li>
 </ul>
-<pre><code class="language-bash"># Install a project-level skill
+<ul>
+<li><strong>Global\\-Level</strong>: Active across all projects on your machine\\.</li>
+</ul>
+<pre><code class="language-bash">
+# Install a project-level skill
 claude skill install &lt;skill-name&gt; --project
 # Install a global-level skill
-claude skill install &lt;skill-name&gt; --global</code></pre>
-
-<p><strong>Best Practice</strong>: Limit project-level skills to 20 per project to avoid performance issues.</p>
-
+claude skill install &lt;skill-name&gt; --global
+</code></pre>
+<p><strong>Best Practice</strong>: Limit project\\-level skills to 20 per project to avoid performance issues\\.</p>
 <h2>Conclusion</h2>
+<p>Mastering these commands will transform how you use Claude Code, making tasks like coding, debugging, and project management faster and more efficient\\. Whether you’re automating workflows, analyzing data, or optimizing code, these tools empower you to work smarter, not harder\\. Keep this guide handy as a quick reference, and experiment with each command to find what works best for your unique needs\\.</p>
 
-<p>Mastering these commands will transform how you use Claude Code, making tasks like coding, debugging, and project management faster and more efficient. Whether you’re automating workflows, analyzing data, or optimizing code, these tools empower you to work smarter, not harder. Keep this guide handy as a quick reference, and experiment with each command to find what works best for your unique needs.</p>
+<h2>FAQ</h2>
+<h3>Q: Is it safe to use --dangerously-skip-permissions?</h3>
+<p>Only use this when you fully trust Claude's execution capabilities. For most workflows, the safer option is --permission-mode auto, which uses an AI model to assess operation safety.</p>
+<h3>Q: How often should I update Claude Code?</h3>
+<p>Run claude --update weekly to ensure you are using the most stable and feature-rich version. Updates often include bug fixes, new features, and performance improvements.</p>
+<h3>Q: Can I use Claude Code commands in any project?</h3>
+<p>Yes. Claude Code commands work in any directory. For project-specific configuration, use /init to generate a CLAUDE.md file that documents project-specific commands and standards.</p>
 
-<h2>Frequently Asked Questions</h2>
-
-<h3>Q: Is Claude Code free to use?</h3>
-<p>Claude Code is included with a Claude Pro subscription ($20/month). You also need an Anthropic API Key for usage. For detailed setup, check out <a href="/article/claude-code-install-setup">Claude Code Installation and Setup</a>.</p>
-
-<h3>Q: How is Claude Code different from GitHub Copilot or Cursor?</h3>
-<p>Claude Code is a CLI tool for autonomous task execution. Copilot is an IDE plugin for autocomplete. Cursor is an AI-native IDE. See our <a href="/article/claude-code-top-7-skills">Claude Code Top 7 Skills guide</a> for a detailed comparison.</p>
-
-<h3>Q: How do I minimize token consumption when using Claude Code?</h3>
-<p>Use <code>/compact</code> to compress long conversations, use <code>@</code> references to include only relevant files, and consider <code>--dangerously-skip-permissions</code> for trusted automated workflows.</p>
 <div class="next-step">
-<p><strong>Next Step:</strong> Deepen your Claude Code knowledge with <a href="/article/claude-code-top-7-skills">Top 7 Skills Guide</a>.</p>
+<p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Top 7 Skills Guide →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI 教程 &middot; <strong>难度：</strong> 初级</p>
-<p><strong>前置要求：</strong> 已安装 Claude Code（参见 <a href="/article/claude-code-install-setup">安装指南</a>）</p>
+<p><strong>Category:</strong> Claude Code Guide · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> The 10 most practical and frequently used Claude Code commands with real-world applications and code examples.</p>
 </div>
 
-<p>在尝试了 OpenClaw 和 Hermes Agent 等工具之后，许多用户发现 <strong>Claude Code</strong> 是一个强大的 AI 智能体，尤其是其多样化的命令集。下面，我们逐一介绍 10 个最实用和最常用的命令，配有真实应用场景和代码示例，帮助你最大限度地提高工作流效率。</p>
-
-<h2>1. 完全自动化模式激活</h2>
-
-<p>在使用 Claude Code 时，对危险操作（如删除文件或运行脚本）的权限请求可能会中断任务。使用此命令授予完全权限：</p>
-
-<pre><code class="language-bash">claude --dangerously-skip-permissions</code></pre>
-
-<p><strong>使用场景</strong>：当你完全信任 Claude 的执行能力并希望避免频繁中断时，例如在自动化批量文件处理或运行复杂脚本时，这是理想选择。</p>
-
-<h2>2. 项目初始化</h2>
-
-<p>对于新项目，此命令会扫描你的代码库并生成一个 <code>CLAUDE.md</code> 文件，记录核心命令、架构标准和工作流指南。</p>
-
-<pre><code class="language-bash">/init</code></pre>
-
-<p><strong>使用场景</strong>：在接手现有项目时，运行此命令可快速了解项目的结构和约束条件。Claude 会在每次对话中引用 <code>CLAUDE.md</code>，确保一致性。</p>
-
-<h2>3. @符号注入上下文</h2>
-
-<p>轻松将文件或目录添加到对话上下文中：</p>
-
-<pre><code class="language-plaintext">@file/path
-@directory/path</code></pre>
-
-<p><strong>使用场景</strong>：调试代码时，使用 <code>@scripts/debug.py</code> 引用特定脚本让 Claude 分析。对于完整模块，使用 <code>@modules/auth</code> 包含所有相关文件。</p>
-
-<h2>4. 恢复历史会话</h2>
-
-<p>使用以下命令恢复对话，永不丢失进度：</p>
-
-<pre><code class="language-bash">claude --continue  # 恢复上一次会话
-claude --resume    # 从会话列表中选择
-/resume            # 在活跃对话中切换会话</code></pre>
-
-<p><strong>使用场景</strong>：如果你中途暂停了任务，使用 <code>claude --continue</code> 直接从中断处继续，无论是编程、数据分析还是内容创作。</p>
-
-<h2>5. 上下文管理</h2>
-
-<p>使用以下命令保持对话上下文有序：</p>
-
-<pre><code class="language-bash">/clear    # 重置上下文
-/compact  # 压缩长对话
-/context  # 检查当前上下文使用情况</code></pre>
-
-<p><strong>最佳实践</strong>：将上下文保持在约 50% 容量以获得最佳性能，特别是在长时间的编码或研究会话中。</p>
-
-<h2>6. 自我洞察报告</h2>
-
-<p>生成一份详细的 HTML 报告，分析过去一个月的使用情况：</p>
-
-<pre><code class="language-bash">/insights</code></pre>
-
-<p><strong>你获得的内容</strong>：</p>
-
+<p>After trying tools like OpenClaw and Hermes Agent, many users find that <strong>Claude Code</strong> stands out as a powerful AI agent, especially with its versatile command set\\. Below, we break down the 10 most practical and frequently used commands, complete with real\\-world applications and code examples, to help you maximize your workflow efficiency\\.</p>
+<h2>1\\. Fully Automated Mode Activation</h2>
+<p>When working with Claude Code, permission requests for risky operations \\(like deleting files or running scripts\\) can interrupt tasks\\. Use this command to grant full permissions:</p>
+<pre><code class="language-bash">
+claude --dangerously-skip-permissions
+</code></pre>
+<p><strong>Use Case</strong>: Ideal when you fully trust Claude’s execution capabilities and want to avoid frequent interruptions, such as when automating batch file processing or running complex scripts\\.</p>
+<h2>2\\. Project Initialization</h2>
+<p>For new projects, this command scans your codebase and generates a <code>CLAUDE\\.md</code> file, which documents core commands, architectural standards, and workflow guidelines\\.</p>
+<pre><code class="language-bash">
+/init
+</code></pre>
+<p><strong>Use Case</strong>: When onboarding an existing project, run this command to quickly understand the project’s structure and constraints\\. Claude will reference <code>CLAUDE\\.md</code> in every conversation, ensuring consistency\\.</p>
+<h2>3\\. @ Symbol for Context Injection</h2>
+<p>Easily add files or directories to the conversation context:</p>
+<pre><code class="language-Plain Text">
+@file/path
+@directory/path
+</code></pre>
+<p><strong>Use Case</strong>: When debugging code, reference a specific script with <code>@scripts/debug\\.py</code> to let Claude analyze it\\. For a full module, use <code>@modules/auth</code> to include all related files\\.</p>
+<h2>4\\. Restore Historical Sessions</h2>
+<p>Never lose progress with these commands to resume conversations:</p>
+<pre><code class="language-bash">
+claude --continue  # Resume the last session
+claude --resume    # Select from a list of sessions
+/resume            # Switch sessions in an active chat
+</code></pre>
+<p><strong>Use Case</strong>: If you pause a task midway, use <code>claude \\-\\-continue</code> to pick up right where you left off, whether it’s coding, data analysis, or content creation\\.</p>
+<h2>5\\. Context Management</h2>
+<p>Keep your conversation context organized with these commands:</p>
+<pre><code class="language-bash">
+/clear    # Reset context
+/compact  # Compress long conversations
+/context  # Check current context usage
+</code></pre>
+<p><strong>Best Practice</strong>: Maintain context at around 50% capacity for optimal performance, especially during lengthy coding or research sessions\\.</p>
+<h2>6\\. Self\\-Insight Report</h2>
+<p>Generate a detailed HTML report analyzing your usage over the past month:</p>
+<pre><code class="language-bash">
+/insights
+</code></pre>
+<p><strong>What You Get</strong>:</p>
 <ul>
-<li><strong>数据仪表板</strong>：会话次数、Token 使用量和 Git 提交统计。</li>
-<li><strong>瓶颈分析</strong>：识别浪费时间的行为模式（例如重复提示）。</li>
-<li><strong>可操作建议</strong>：优化工作流的代码片段。</li>
+<li><strong>Data Dashboard</strong>: Session count, token usage, and Git commit stats\\.</li>
 </ul>
-
-<h2>7. 更新到最新版本</h2>
-
-<p>定期更新以获取新功能和错误修复：</p>
-
-<pre><code class="language-bash">claude --update</code></pre>
-
-<p><strong>使用场景</strong>：每周运行一次，确保你使用的是最稳定、功能最丰富的版本。</p>
-
-<h2>8. 自动权限模式</h2>
-
-<p>作为完全自动化的更安全替代方案，此模式使用 AI 模型评估操作安全性：</p>
-
-<pre><code class="language-bash">claude --permission-mode auto</code></pre>
-
-<p><strong>与命令 1 的区别</strong>：<code>--dangerously-skip-permissions</code> 跳过所有检查，而此模式增加了一层安全保障，非常适合信任度较低的工作流。</p>
-
-<h2>9. 高级内置技能</h2>
-
-<p>使用以下专用命令处理复杂任务：</p>
-
 <ul>
-<li><strong>代码优化</strong>：<code>/simplify</code> - 自动识别可复用或冗余的代码部分并修复。</li>
-<li><strong>批量处理</strong>：<code>/batch</code> - 将任务拆分为并行单元，每个单元使用 Git 工作树隔离。</li>
-<li><strong>调试 Claude</strong>：<code>/debug</code> - 分析会话日志以诊断意外行为。</li>
+<li><strong>Friction Analysis</strong>: Identifies time\\-wasting patterns \\(e\\.g\\., repeated prompts\\)\\.</li>
 </ul>
-
-<h2>10. 技能插件安装</h2>
-
-<p>通过插件扩展 Claude 的能力，按作用域分类：</p>
-
 <ul>
-<li><strong>项目级</strong>：仅在当前项目中生效。</li>
-<li><strong>全局级</strong>：在机器上的所有项目中生效。</li>
+<li><strong>Actionable Tips</strong>: Code snippets to optimize your workflow\\.</li>
 </ul>
-
-<pre><code class="language-bash"># 安装项目级技能
+<h2>7\\. Update to the Latest Version</h2>
+<p>Regularly update to access new features and bug fixes:</p>
+<pre><code class="language-bash">
+claude --update
+</code></pre>
+<p><strong>Use Case</strong>: Run this weekly to ensure you’re using the most stable and feature\\-rich version\\.</p>
+<h2>8\\. Auto\\-Permission Mode</h2>
+<p>A safer alternative to full automation, this mode uses an AI model to assess operation safety:</p>
+<pre><code class="language-bash">
+claude --permission-mode auto
+</code></pre>
+<p><strong>Difference from Command 1</strong>: While <code>\\-\\-dangerously\\-skip\\-permissions</code> skips all checks, this mode adds a safety layer, making it ideal for less trusted workflows\\.</p>
+<h2>9\\. Advanced Built\\-in Skills</h2>
+<p>Tackle complex tasks with these specialized commands:</p>
+<ul>
+<li><strong>Code Optimization</strong>:</li>
+</ul>
+<p>\`\`\`bash</p>
+<p>/simplify</p>
+<p>\`\`\`</p>
+<p>Automatically identifies reusable or redundant code sections and fixes them\\.</p>
+<ul>
+<li><strong>Batch Processing</strong>:</li>
+</ul>
+<p>\`\`\`bash</p>
+<p>/batch</p>
+<p>\`\`\`</p>
+<p>Splits tasks into parallel units, each isolated with Git worktrees\\.</p>
+<ul>
+<li><strong>Debugging Claude</strong>:</li>
+</ul>
+<p>\`\`\`bash</p>
+<p>/debug</p>
+<p>\`\`\`</p>
+<p>Analyzes session logs to diagnose unexpected behavior\\.</p>
+<h2>10\\. Skill Plugin Installation</h2>
+<p>Extend Claude’s capabilities with plugins, categorized by scope:</p>
+<ul>
+<li><strong>Project\\-Level</strong>: Only active in the current project\\.</li>
+</ul>
+<ul>
+<li><strong>Global\\-Level</strong>: Active across all projects on your machine\\.</li>
+</ul>
+<pre><code class="language-bash">
+# Install a project-level skill
 claude skill install &lt;skill-name&gt; --project
-# 安装全局级技能
-claude skill install &lt;skill-name&gt; --global</code></pre>
-
-<p><strong>最佳实践</strong>：每个项目的技能数量限制在 20 个以内，以避免性能问题。</p>
-
-<h2>结论</h2>
-
-<p>掌握这些命令将彻底改变你使用 Claude Code 的方式，使编码、调试和项目管理等任务变得更加快速高效。无论你是自动化工作流、分析数据还是优化代码，这些工具都能让你更聪明地工作，而不是更辛苦。将本指南作为快速参考，尝试每个命令，找到最适合你独特需求的方法。</p>
+# Install a global-level skill
+claude skill install &lt;skill-name&gt; --global
+</code></pre>
+<p><strong>Best Practice</strong>: Limit project\\-level skills to 20 per project to avoid performance issues\\.</p>
+<h2>Conclusion</h2>
+<p>Mastering these commands will transform how you use Claude Code, making tasks like coding, debugging, and project management faster and more efficient\\. Whether you’re automating workflows, analyzing data, or optimizing code, these tools empower you to work smarter, not harder\\. Keep this guide handy as a quick reference, and experiment with each command to find what works best for your unique needs\\.</p>
 
 <h2>常见问题</h2>
-
-<h3>问：Claude Code 是免费的吗？</h3>
-<p>Claude Code 包含在 Claude Pro 订阅中（每月 $20）。你还需要申请 Anthropic API Key 才能使用 API 模式。详细安装和配置请参考 <a href="/article/claude-code-install-setup">Claude Code 安装与配置</a>。</p>
-
-<h3>问：Claude Code 与 GitHub Copilot 或 Cursor 有什么区别？</h3>
-<p>Claude Code 是命令行工具，专注于自主执行复杂任务；Copilot 是 IDE 插件，擅长代码补全；Cursor 是 AI 原生 IDE。详细对比请参考 <a href="/article/claude-code-top-7-skills">Claude Code 七大技能指南</a>。</p>
-
-<h3>问：如何减少 Claude Code 的 Token 消耗？</h3>
-<p>使用 <code>/compact</code> 压缩长对话，使用 <code>@</code> 引用只包含相关文件，对于可信的自动化工作流可考虑 <code>--dangerously-skip-permissions</code>。</p>
+<h3>问：使用--dangerously-skip-permissions安全吗？</h3>
+<p>只有在你完全信任Claude的执行能力时才使用此选项。对于大多数工作流，更安全的选项是--permission-mode auto，它使用AI模型来评估操作安全性。</p>
+<h3>问：我应该多久更新一次Claude Code？</h3>
+<p>每周运行claude --update以确保你使用的是最稳定、功能最丰富的版本。更新通常包括错误修复、新功能和性能改进。</p>
+<h3>问：Claude Code命令可以在任何项目中使用吗？</h3>
+<p>是的。Claude Code命令在任何目录中都可以工作。对于项目特定的配置，使用/init生成CLAUDE.md文件来记录项目特定的命令和标准。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 深入学习 Claude Code 的高级用法：<a href="/article/claude-code-top-7-skills">七大技能指南</a>。</p>
+<p><strong>下一篇：</strong> <a href="/article/claude-code-top-7-skills">七大技能指南 →</a></p>
 </div>`,
 	},
 
 	// ====== deerflow-multi-agent-tool ======
 	"deerflow-multi-agent-tool": {
 		content: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tools &middot; <strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Prerequisites:</strong> Basic knowledge of Python and Docker</p>
+<p><strong>Category:</strong> AI Tools · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> DeerFlow's parallel multi-agent architecture, Docker sandbox execution, model compatibility, and practical applications for global business.</p>
 </div>
 
-<p>In the realm of AI tools, efficiency and scalability are paramount, especially for those aiming to leverage AI for business growth in global markets. Enter <strong>DeerFlow</strong>, an open-source project that’s revolutionizing how we handle tasks with its parallel multi-agent architecture. Let’s dive into how this tool can be a game-changer for your workflow, complete with practical steps and code snippets.</p>
-
+<p>In the realm of AI tools, efficiency and scalability are paramount, especially for those aiming to leverage AI for business growth in global markets\\. Enter <strong>DeerFlow</strong>, an open\\-source project that’s revolutionizing how we handle tasks with its parallel multi\\-agent architecture\\. Let’s dive into how this tool can be a game\\-changer for your workflow, complete with practical steps and code snippets\\.</p>
 <h2>What is DeerFlow?</h2>
-
-<p>DeerFlow is an open-source intelligent agent framework developed by a team of engineers in China. It stands out with its <strong>parallel multi-agent architecture</strong>—when you assign a task, it automatically splits it into sub-tasks and dispatches multiple AIs to work on them simultaneously, then aggregates the results back to you. This is a stark contrast to traditional AI tools that process tasks serially (one after another), leading to significant time savings.</p>
-
-<p>Within just ten days of its release, DeerFlow topped GitHub’s trending list and has garnered over <strong>47,000 stars</strong>, a testament to its popularity and utility.</p>
-
+<p>DeerFlow is an open\\-source intelligent agent framework developed by a team of engineers in China\\. It stands out with its <strong>parallel multi\\-agent architecture</strong>—when you assign a task, it automatically splits it into sub\\-tasks and dispatches multiple AIs to work on them simultaneously, then aggregates the results back to you\\. This is a stark contrast to traditional AI tools that process tasks serially \\(one after another\\), leading to significant time savings\\.</p>
+<p>Within just ten days of its release, DeerFlow topped GitHub’s trending list and has garnered over <strong>47,000 stars</strong>, a testament to its popularity and utility\\.</p>
 <h2>Core Features and Practical Benefits</h2>
-
-<h3>1. Parallel Task Execution for Unmatched Speed</h3>
-
-<p>Traditional AI tools suffer from a major flaw: the more tasks you have, the slower they get, as they process tasks one by one. DeerFlow smashes this norm. Whether you run 1 task or 100 tasks, the time taken is nearly the same. For example, a single task might take 10 seconds, and 100 tasks also take around 10 seconds—because it doesn’t queue tasks.</p>
-
-<p>This is ideal for time-sensitive projects, such as generating multiple reports or processing bulk data for your overseas clients.</p>
-
-<h3>2. Sandboxed Execution with Zero Contamination</h3>
-
-<p>DeerFlow runs all operations, including code execution, file writing, and bash command execution, within Docker containers. This means:</p>
-
+<h3>1\\. Parallel Task Execution for Unmatched Speed</h3>
+<p>Traditional AI tools suffer from a major flaw: the more tasks you have, the slower they get, as they process tasks one by one\\. DeerFlow smashes this norm\\. Whether you run 1 task or 100 tasks, the time taken is nearly the same\\. For example, a single task might take 10 seconds, and 100 tasks also take around 10 seconds—because it doesn’t queue tasks\\.</p>
+<p>This is ideal for time\\-sensitive projects, such as generating multiple reports or processing bulk data for your overseas clients\\.</p>
+<h3>2\\. Sandboxed Execution with Zero Contamination</h3>
+<p>DeerFlow runs all operations, including code execution, file writing, and bash command execution, within Docker containers\\. This means:</p>
 <ul>
-<li><strong>Zero contamination</strong>: Any changes or operations stay within the container. Deleting the container leaves no traces.</li>
-<li><strong>Full auditability</strong>: Every action is trackable, which is crucial for compliance and debugging.</li>
+<li><strong>Zero contamination</strong>: Any changes or operations stay within the container\\. Deleting the container leaves no traces\\.</li>
+</ul>
+<ul>
+<li><strong>Full auditability</strong>: Every action is trackable, which is crucial for compliance and debugging\\.</li>
 </ul>
 <p>To initialize DeerFlow and run a task in a sandbox, use this Python snippet:</p>
-
-<pre><code class="language-python">from deerflow.client import DeerFlowClient
-client = DeerFlowClient()
-
-# Execute a research task and stream the result
-for event in client.stream(
-    &quot;Research the 2025 AI Agent framework comparison and generate a report&quot;,
-    thread_id=&quot;research-001&quot;
-):
-    if event.type == &quot;message-tuple&quot;:
-        content = event.data.get(&quot;content&quot;, &quot;&quot;)
-        print(content, end=&quot;&quot;, flush=True)</code></pre>
-
-<h3>3. Seamless Model Compatibility</h3>
-
-<p>Switching AI models is a breeze with DeerFlow. You only need to modify one line of configuration, no code changes required. This is perfect if you want to test different models for your overseas audience, such as switching between models optimized for English vs. other languages.</p>
-
-<p>Here’s how you change the model in the configuration file:</p>
-
-<pre><code class="language-yaml"># Before
-model: &quot;model-a-latest&quot;
-base_url: &quot;https://api.model-a.com/v1&quot;
-
-# After switching to another model
-model: &quot;model-b-pro&quot;
-base_url: &quot;https://api.model-b.com/v1&quot;</code></pre>
-
-<h3>4. Personalized and Persistent Memory (Local-First)</h3>
-
-<p>DeerFlow remembers your preferences, tech stack, and style. This “memory” is stored locally, so you can delete it anytime for privacy. For instance, if you’re building a website for a European market, it will remember your design preferences and tech stack (like Python, LangGraph, Docker) across sessions.</p>
-
-<h3>5. Nested AI Collaboration (Easter Egg)</h3>
-
-<p>You can even use DeerFlow directly in programming assistants like Claude Code. This lets you delegate tasks from one AI to DeerFlow’s agents, creating a “nested AI” workflow. Install the integration with this command:</p>
-
-<pre><code class="language-bash">npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code></pre>
-
-<p>Then, in Claude Code, use the <code>/claude-to-deerflow</code> command to assign tasks without leaving the terminal.</p>
-
-<h2>How to Leverage DeerFlow for Your Overseas Business</h2>
-
-<ol>
-<li><strong>Task Decomposition</strong>: The biggest hurdle for many is breaking down complex tasks. DeerFlow excels here—just input your high-level request (e.g., “Create a market analysis report for our new product in the US”), and it will split it into sub-tasks like research, data analysis, and report writing.</li>
-<li><strong>Bulk Content Generation</strong>: For e-commerce or content marketing, use DeerFlow to generate multiple product descriptions, blog posts, or social media captions in parallel.</li>
-<li><strong>Automated Testing and Deployment</strong>: Run automated tests or deployments for your overseas websites/apps in parallel, reducing release cycles.</li>
-</ol>
-<h2>Conclusion</h2>
-
-<p>DeerFlow is more than just an AI tool—it’s a productivity powerhouse for anyone looking to scale their operations globally. Its parallel architecture, sandboxed execution, and model flexibility make it a must-have in your tech stack. Head to its <a href="https://github.com/bytedance/deer-flow">GitHub repository</a> to get started and watch your workflow efficiency soar.</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>Q: What makes DeerFlow different from other multi-agent frameworks?</h3>
-<p>Its parallel execution architecture. Most AI tools process tasks sequentially, but DeerFlow dispatches multiple agents simultaneously. This means the more tasks you have, the greater the time savings compared to traditional serial processing.</p>
-
-<h3>Q: Do I need Docker to use DeerFlow?</h3>
-<p>Yes, DeerFlow uses Docker containers for sandboxed execution. This ensures zero contamination and full auditability. All operations including code execution, file writing, and bash commands run inside containers.</p>
-
-<h3>Q: How does DeerFlow integrate with Claude Code?</h3>
-<p>DeerFlow offers a Claude Code integration via the <code>/claude-to-deerflow</code> command. You can install it using: <code>npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code>. See <a href="/article/top-10-claude-code-commands">Top 10 Claude Code Commands</a> for more Claude Code tips.</p>
-<div class="next-step">
-<p><strong>Next Step:</strong> Explore <a href="/tools/deer-flow">Deer-Flow tool page</a> or read <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business</a>.</p>
-</div>`,
-		contentZh: `<div class="article-meta-banner">
-<p><strong>分类：</strong> AI 工具 &middot; <strong>难度：</strong> 中级</p>
-<p><strong>前置要求：</strong> 基本的 Python 和 Docker 知识</p>
-</div>
-
-<p>在 AI 工具领域，效率和可扩展性至关重要，特别是对于那些希望通过 AI 在全球市场实现业务增长的人来说。隆重介绍 <strong>DeerFlow</strong>，一个开源项目，它通过并行多智能体架构彻底改变了我们处理任务的方式。让我们一起深入了解这个工具如何成为你工作流程的颠覆者，包含实际步骤和代码片段。</p>
-
-<h2>什么是 DeerFlow？</h2>
-
-<p>DeerFlow 是一个由中国工程师团队开发的开源智能体框架。它的突出特点在于<strong>并行多智能体架构</strong>——当你分配一个任务时，它会自动将其拆分为子任务，并同时派遣多个 AI 并行工作，然后将结果汇总返回给你。这与传统 AI 工具串行（一个接一个）处理任务的方式形成鲜明对比，从而大幅节省时间。</p>
-
-<p>发布仅十天内，DeerFlow 就登顶了 GitHub 趋势榜，收获了超过 <strong>47,000 个星标</strong>，证明了其受欢迎程度和实用性。</p>
-
-<h2>核心功能与实际优势</h2>
-
-<h3>1. 并行任务执行带来无与伦比的速度</h3>
-
-<p>传统 AI 工具有一个重大缺陷：任务越多，速度越慢，因为它们逐个处理任务。DeerFlow 打破了这一常规。无论你运行 1 个任务还是 100 个任务，所需时间几乎相同。例如，单个任务可能需要 10 秒，100 个任务也只需要大约 10 秒——因为它不会对任务进行排队。</p>
-
-<p>这对于时间敏感型项目非常理想，例如生成多份报告或为你的海外客户处理批量数据。</p>
-
-<h3>2. 沙箱执行，零污染</h3>
-
-<p>DeerFlow 在 Docker 容器内运行所有操作，包括代码执行、文件写入和 bash 命令执行。这意味着：</p>
-
-<ul>
-<li><strong>零污染</strong>：任何更改或操作都保留在容器内。删除容器后不会留下任何痕迹。</li>
-<li><strong>完全可审计</strong>：每个操作都是可追踪的，这对合规性和调试至关重要。</li>
-</ul>
-
-<p>要初始化 DeerFlow 并在沙箱中运行任务，请使用以下 Python 代码片段：</p>
-
-<pre><code class="language-python">from deerflow.client import DeerFlowClient
+<pre><code class="language-python">
+from deerflow.client import DeerFlowClient
 client = DeerFlowClient()
 
 # Execute a research task and stream the result
@@ -9476,59 +8873,130 @@ for event in client.stream(
 ):
     if event.type == "message-tuple":
         content = event.data.get("content", "")
-        print(content, end="", flush=True)</code></pre>
-
-<h3>3. 无缝模型兼容性</h3>
-
-<p>使用 DeerFlow 切换 AI 模型非常简单。你只需修改一行配置，无需更改任何代码。如果你希望为不同的海外受众测试不同的模型（例如在针对英语的模型和其他语言的模型之间切换），这非常完美。</p>
-
-<p>以下是在配置文件中更改模型的方法：</p>
-
-<pre><code class="language-yaml"># 之前
+        print(content, end="", flush=True)
+</code></pre>
+<h3>3\\. Seamless Model Compatibility</h3>
+<p>Switching AI models is a breeze with DeerFlow\\. You only need to modify one line of configuration, no code changes required\\. This is perfect if you want to test different models for your overseas audience, such as switching between models optimized for English vs\\. other languages\\.</p>
+<p>Here’s how you change the model in the configuration file:</p>
+<pre><code class="language-yaml">
+# Before
 model: "model-a-latest"
 base_url: "https://api.model-a.com/v1"
 
-# 切换到另一个模型后
+# After switching to another model
 model: "model-b-pro"
-base_url: "https://api.model-b.com/v1"</code></pre>
-
-<h3>4. 个性化持久记忆（本地优先）</h3>
-
-<p>DeerFlow 会记住你的偏好、技术栈和风格。这个"记忆"存储在本地，因此你可以随时删除它以保护隐私。例如，如果你正在为欧洲市场构建网站，它会跨会话记住你的设计偏好和技术栈（如 Python、LangGraph、Docker）。</p>
-
-<h3>5. 嵌套 AI 协作（彩蛋）</h3>
-
-<p>你甚至可以直接在 Claude Code 等编程助手中使用 DeerFlow。这让你可以将任务从一个 AI 委托给 DeerFlow 的智能体，创建"嵌套 AI"工作流。使用以下命令安装集成：</p>
-
-<pre><code class="language-bash">npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code></pre>
-
-<p>然后，在 Claude Code 中使用 <code>/claude-to-deerflow</code> 命令来分配任务，无需离开终端。</p>
-
-<h2>如何利用 DeerFlow 拓展海外业务</h2>
-
+base_url: "https://api.model-b.com/v1"
+</code></pre>
+<h3>4\\. Personalized and Persistent Memory \\(Local\\-First\\)</h3>
+<p>DeerFlow remembers your preferences, tech stack, and style\\. This “memory” is stored locally, so you can delete it anytime for privacy\\. For instance, if you’re building a website for a European market, it will remember your design preferences and tech stack \\(like Python, LangGraph, Docker\\) across sessions\\.</p>
+<h3>5\\. Nested AI Collaboration \\(Easter Egg\\)</h3>
+<p>You can even use DeerFlow directly in programming assistants like Claude Code\\. This lets you delegate tasks from one AI to DeerFlow’s agents, creating a “nested AI” workflow\\. Install the integration with this command:</p>
+<pre><code class="language-bash">
+npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
+</code></pre>
+<p>Then, in Claude Code, use the <code>/claude\\-to\\-deerflow</code> command to assign tasks without leaving the terminal\\.</p>
+<h2>How to Leverage DeerFlow for Your Overseas Business</h2>
 <ol>
-<li><strong>任务分解</strong>：对许多人来说，最大的障碍是分解复杂任务。DeerFlow 在这方面表现出色——只需输入你的高层次需求（例如"为我们在美国的新产品创建一份市场分析报告"），它会将其拆分为市场调研、数据分析和报告撰写等子任务。</li>
-<li><strong>批量内容生成</strong>：对于电子商务或内容营销，使用 DeerFlow 并行生成多个产品描述、博客文章或社交媒体标题。</li>
-<li><strong>自动化测试和部署</strong>：并行运行海外网站或应用的自动化测试或部署，缩短发布周期。</li>
+<li><strong>Task Decomposition</strong>: The biggest hurdle for many is breaking down complex tasks\\. DeerFlow excels here—just input your high\\-level request \\(e\\.g\\., “Create a market analysis report for our new product in the US”\\), and it will split it into sub\\-tasks like research, data analysis, and report writing\\.</li>
 </ol>
+<ol>
+<li><strong>Bulk Content Generation</strong>: For e\\-commerce or content marketing, use DeerFlow to generate multiple product descriptions, blog posts, or social media captions in parallel\\.</li>
+</ol>
+<ol>
+<li><strong>Automated Testing and Deployment</strong>: Run automated tests or deployments for your overseas websites/apps in parallel, reducing release cycles\\.</li>
+</ol>
+<h2>Conclusion</h2>
+<p>DeerFlow is more than just an AI tool—it’s a productivity powerhouse for anyone looking to scale their operations globally\\. Its parallel architecture, sandboxed execution, and model flexibility make it a must\\-have in your tech stack\\. Head to its <a href="https://github.com/bytedance/deer-flow">GitHub repository</a> to get started and watch your workflow efficiency soar\\.</p>
 
-<h2>结论</h2>
-
-<p>DeerFlow 不仅仅是一个 AI 工具——对于任何希望在全球范围内扩展业务的人来说，它是一个生产力巨兽。其并行架构、沙箱执行和模型灵活性使其成为你技术栈中的必备品。前往其 <a href="https://github.com/bytedance/deer-flow">GitHub 仓库</a> 开始使用，见证你的工作流效率飙升。</p>
-
-<h2>常见问题</h2>
-
-<h3>问：DeerFlow 与其他多智能体框架的核心区别是什么？</h3>
-<p>其核心区别在于并行执行架构。大多数 AI 工具按顺序逐个处理任务，而 DeerFlow 能同时派发多个智能体并行工作。这意味着任务越多，DeerFlow 相比于传统串行处理的时间节省就越明显。</p>
-
-<h3>问：使用 DeerFlow 必须安装 Docker 吗？</h3>
-<p>是的，DeerFlow 依赖 Docker 容器实现沙箱隔离执行，保证了操作的零污染和完全可审计性。所有操作（包括代码执行、文件写入和 bash 命令）都在容器内运行。</p>
-
-<h3>问：DeerFlow 如何与 Claude Code 集成？</h3>
-<p>DeerFlow 通过 <code>/claude-to-deerflow</code> 命令提供 Claude Code 集成。安装命令：<code>npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</code>。更多 Claude Code 技巧请参考 <a href="/article/top-10-claude-code-commands">Top 10 Claude Code 命令</a>。</p>
+<h2>FAQ</h2>
+<h3>Q: Does DeerFlow require Docker?</h3>
+<p>Yes, DeerFlow uses Docker containers for sandboxed execution. This ensures zero contamination and full auditability of all operations including code execution, file writing, and bash commands.</p>
+<h3>Q: How does parallel execution actually save time?</h3>
+<p>Traditional AI tools process tasks serially (one after another). DeerFlow splits tasks into sub-tasks and dispatches multiple AI agents simultaneously. Whether you run 1 task or 100 tasks, the time taken is nearly the same.</p>
+<h3>Q: Can I use DeerFlow with Claude Code?</h3>
+<p>Yes. DeerFlow offers a Claude Code integration via the /claude-to-deerflow command. Install it using: npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> 查看 <a href="/tools/deer-flow">Deer-Flow 工具详情页</a> 或阅读 <a href="/article/5-ai-tools-one-person-overseas-business">5 款 AI 工具打造你的单人海外业务</a>。</p>
+<p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
+</div>`,
+		contentZh: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> DeerFlow's parallel multi-agent architecture, Docker sandbox execution, model compatibility, and practical applications for global business.</p>
+</div>
+
+<p>In the realm of AI tools, efficiency and scalability are paramount, especially for those aiming to leverage AI for business growth in global markets\\. Enter <strong>DeerFlow</strong>, an open\\-source project that’s revolutionizing how we handle tasks with its parallel multi\\-agent architecture\\. Let’s dive into how this tool can be a game\\-changer for your workflow, complete with practical steps and code snippets\\.</p>
+<h2>What is DeerFlow?</h2>
+<p>DeerFlow is an open\\-source intelligent agent framework developed by a team of engineers in China\\. It stands out with its <strong>parallel multi\\-agent architecture</strong>—when you assign a task, it automatically splits it into sub\\-tasks and dispatches multiple AIs to work on them simultaneously, then aggregates the results back to you\\. This is a stark contrast to traditional AI tools that process tasks serially \\(one after another\\), leading to significant time savings\\.</p>
+<p>Within just ten days of its release, DeerFlow topped GitHub’s trending list and has garnered over <strong>47,000 stars</strong>, a testament to its popularity and utility\\.</p>
+<h2>Core Features and Practical Benefits</h2>
+<h3>1\\. Parallel Task Execution for Unmatched Speed</h3>
+<p>Traditional AI tools suffer from a major flaw: the more tasks you have, the slower they get, as they process tasks one by one\\. DeerFlow smashes this norm\\. Whether you run 1 task or 100 tasks, the time taken is nearly the same\\. For example, a single task might take 10 seconds, and 100 tasks also take around 10 seconds—because it doesn’t queue tasks\\.</p>
+<p>This is ideal for time\\-sensitive projects, such as generating multiple reports or processing bulk data for your overseas clients\\.</p>
+<h3>2\\. Sandboxed Execution with Zero Contamination</h3>
+<p>DeerFlow runs all operations, including code execution, file writing, and bash command execution, within Docker containers\\. This means:</p>
+<ul>
+<li><strong>Zero contamination</strong>: Any changes or operations stay within the container\\. Deleting the container leaves no traces\\.</li>
+</ul>
+<ul>
+<li><strong>Full auditability</strong>: Every action is trackable, which is crucial for compliance and debugging\\.</li>
+</ul>
+<p>To initialize DeerFlow and run a task in a sandbox, use this Python snippet:</p>
+<pre><code class="language-python">
+from deerflow.client import DeerFlowClient
+client = DeerFlowClient()
+
+# Execute a research task and stream the result
+for event in client.stream(
+    "Research the 2025 AI Agent framework comparison and generate a report",
+    thread_id="research-001"
+):
+    if event.type == "message-tuple":
+        content = event.data.get("content", "")
+        print(content, end="", flush=True)
+</code></pre>
+<h3>3\\. Seamless Model Compatibility</h3>
+<p>Switching AI models is a breeze with DeerFlow\\. You only need to modify one line of configuration, no code changes required\\. This is perfect if you want to test different models for your overseas audience, such as switching between models optimized for English vs\\. other languages\\.</p>
+<p>Here’s how you change the model in the configuration file:</p>
+<pre><code class="language-yaml">
+# Before
+model: "model-a-latest"
+base_url: "https://api.model-a.com/v1"
+
+# After switching to another model
+model: "model-b-pro"
+base_url: "https://api.model-b.com/v1"
+</code></pre>
+<h3>4\\. Personalized and Persistent Memory \\(Local\\-First\\)</h3>
+<p>DeerFlow remembers your preferences, tech stack, and style\\. This “memory” is stored locally, so you can delete it anytime for privacy\\. For instance, if you’re building a website for a European market, it will remember your design preferences and tech stack \\(like Python, LangGraph, Docker\\) across sessions\\.</p>
+<h3>5\\. Nested AI Collaboration \\(Easter Egg\\)</h3>
+<p>You can even use DeerFlow directly in programming assistants like Claude Code\\. This lets you delegate tasks from one AI to DeerFlow’s agents, creating a “nested AI” workflow\\. Install the integration with this command:</p>
+<pre><code class="language-bash">
+npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
+</code></pre>
+<p>Then, in Claude Code, use the <code>/claude\\-to\\-deerflow</code> command to assign tasks without leaving the terminal\\.</p>
+<h2>How to Leverage DeerFlow for Your Overseas Business</h2>
+<ol>
+<li><strong>Task Decomposition</strong>: The biggest hurdle for many is breaking down complex tasks\\. DeerFlow excels here—just input your high\\-level request \\(e\\.g\\., “Create a market analysis report for our new product in the US”\\), and it will split it into sub\\-tasks like research, data analysis, and report writing\\.</li>
+</ol>
+<ol>
+<li><strong>Bulk Content Generation</strong>: For e\\-commerce or content marketing, use DeerFlow to generate multiple product descriptions, blog posts, or social media captions in parallel\\.</li>
+</ol>
+<ol>
+<li><strong>Automated Testing and Deployment</strong>: Run automated tests or deployments for your overseas websites/apps in parallel, reducing release cycles\\.</li>
+</ol>
+<h2>Conclusion</h2>
+<p>DeerFlow is more than just an AI tool—it’s a productivity powerhouse for anyone looking to scale their operations globally\\. Its parallel architecture, sandboxed execution, and model flexibility make it a must\\-have in your tech stack\\. Head to its <a href="https://github.com/bytedance/deer-flow">GitHub repository</a> to get started and watch your workflow efficiency soar\\.</p>
+
+<h2>常见问题</h2>
+<h3>问：使用DeerFlow必须安装Docker吗？</h3>
+<p>是的，DeerFlow依赖Docker容器实现沙箱隔离执行，保证了操作的零污染和完全可审计性。所有操作（包括代码执行、文件写入和bash命令）都在容器内运行。</p>
+<h3>问：并行执行是如何节省时间的？</h3>
+<p>传统AI工具按顺序逐个处理任务。DeerFlow将任务拆分为子任务并同时派发多个AI代理。无论运行1个任务还是100个任务，所需时间几乎相同。</p>
+<h3>问：DeerFlow如何与Claude Code集成？</h3>
+<p>DeerFlow通过/claude-to-deerflow命令提供Claude Code集成。安装命令：npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 →</a></p>
 </div>`,
 	},
 
