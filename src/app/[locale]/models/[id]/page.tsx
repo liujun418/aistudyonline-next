@@ -29,16 +29,16 @@ export async function generateMetadata({
   if (!model) return {};
 
   const dict = await getDictionary(locale as Locale);
-  const modelDetail = (dict as any)?.modelDetail || {};
   const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
 
   const name = locale === "zh" ? model.nameZh : model.name;
   const description = locale === "zh" ? model.descriptionZh : model.description;
-  const title = `${name} — ${modelDetail.models || "AI Models"} — ${SITE_NAME}`;
+  const title = `${name} — AI Model Review & Comparison — ${SITE_NAME}`;
 
   return {
     title,
     description,
+    keywords: [model.category, ...(model.bestFor || [])].join(", "),
     openGraph: {
       type: "website",
       locale: localeMap[locale] || "en_US",

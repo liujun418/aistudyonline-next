@@ -73,6 +73,7 @@ export async function generateMetadata({
   return {
     title: `${title} — ${SITE_NAME}`,
     description,
+    keywords: article.tags?.join(", "),
     openGraph: {
       type: "article",
       locale: localeMap[locale] || "en_US",

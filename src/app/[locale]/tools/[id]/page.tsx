@@ -29,19 +29,22 @@ export async function generateMetadata({
   if (!tool) return {};
 
   const dict = await getDictionary(locale as Locale);
-  const toolDetail = (dict as any)?.toolDetail || {};
   const localeMap: Record<string, string> = { en: "en_US", zh: "zh_CN" };
 
   const name = tool.name;
-  const description =
+  let description =
     locale === "zh"
       ? tool.descriptionZh
       : tool.description;
-  const title = `${name} — ${toolDetail.aiTools || "AI Tools"} — ${SITE_NAME}`;
+  if (tool.pricing) {
+    description += ` | Pricing: ${tool.pricing}`;
+  }
+  const title = `${name} — AI Tool Review & Guide — ${SITE_NAME}`;
 
   return {
     title,
     description,
+    keywords: [...tool.tags, tool.category].join(", "),
     openGraph: {
       type: "website",
       locale: localeMap[locale] || "en_US",
