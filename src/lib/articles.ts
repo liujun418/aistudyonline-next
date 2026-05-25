@@ -834,4 +834,70 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
+
+		// ====== Article: AI Era Dawns ======
+		{
+			slug: "claude-code-self-coding-revolution",
+			title: "AI Era Dawns: Claude Code's Self-Coding Revolution and Practical Guide to Leveraging Actionable AI Agents",
+			titleZh: "AI时代来临：Claude Code的自我编程革命与AI Agent实战指南",
+			description:
+				"Claude Code now writes 100% of its own code. Learn how to leverage actionable AI agents for task automation, travel planning, and business workflow optimization.",
+			descriptionZh:
+				"Claude Code现在能100%自主编写代码。了解如何利用可操作的AI代理进行任务自动化、旅行规划和业务流程优化。",
+			category: "ai-tutorials",
+			tags: ["claude-code", "ai-agents", "automation", "prompt-engineering", "productivity"],
+			difficulty: "intermediate",
+			toolsMentioned: ["claude"],
+			date: "2026-05-25",
+		},
+
+		// ====== Article: Choosing the Right AI Giant ======
+		{
+			slug: "gpt-claude-grok-gemini-comparison",
+			title: "Choosing the Right AI Giant: GPT, Claude, Grok, or Gemini for Your Needs",
+			titleZh: "选择合适的AI巨头：GPT、Claude、Grok还是Gemini？",
+			description:
+				"A practical comparison of GPT, Claude, Grok, and Gemini — strengths, weaknesses, and who should use each. Make an informed decision for academic research, coding, or content creation.",
+			descriptionZh:
+				"GPT、Claude、Grok和Gemini的实用对比——优势、劣势和各自适合人群。为学术研究、编程或内容创作做出明智选择。",
+			category: "ai-comparisons",
+			tags: ["gpt", "claude", "grok", "gemini", "comparison", "ai-models"],
+			difficulty: "beginner",
+			toolsMentioned: ["chatgpt", "claude", "gemini"],
+			date: "2026-05-25",
+		},
+
+		// ====== Article: Codex Agent ======
+		{
+			slug: "codex-agent-desktop-jarvis",
+			title: "Codex Agent: Your Desktop Jarvis for Effortless Task Automation",
+			titleZh: "Codex Agent：你的桌面贾维斯，轻松实现任务自动化",
+			description:
+				"OpenAI Codex's new agent update turns your desktop into a Jarvis-like assistant. Learn to command apps with natural language, automate workflows, and boost overseas business productivity.",
+			descriptionZh:
+				"OpenAI Codex的新代理更新将你的桌面变成贾维斯式助手。学习用自然语言命令应用、自动化工作流，提升海外业务生产力。",
+			category: "ai-tools",
+			tags: ["codex", "openai", "automation", "desktop", "ai-agent", "productivity"],
+			difficulty: "beginner",
+			toolsMentioned: ["chatgpt", "claude"],
+			date: "2026-05-25",
+		},
+
+		// ====== Article: Google 5 Skill Design Patterns ======
+		{
+			slug: "google-5-skill-design-patterns",
+			title: "Google's 5 Skill Design Patterns for Stable Agent Output: A Practical Guide for Overseas Web Development",
+			titleZh: "Google的5个技能设计模式：稳定AI Agent输出的实用指南",
+			description:
+				"Learn Google's five Skill design patterns — Tool Wrapper, Generator, Reviewer, Inversion, and Pipeline — for stable, high-quality AI agent output in overseas web development.",
+			descriptionZh:
+				"学习Google的五个技能设计模式——Tool Wrapper、Generator、Reviewer、Inversion和Pipeline——在海外Web开发中实现稳定高质量的AI Agent输出。",
+			category: "ai-tutorials",
+			tags: ["google", "skill-patterns", "ai-agents", "overseas-web", "tutorial", "design-patterns"],
+			difficulty: "intermediate",
+			toolsMentioned: ["gemini"],
+			date: "2026-05-25",
+		},
+
+
 ];

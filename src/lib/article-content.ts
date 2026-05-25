@@ -10122,4 +10122,819 @@ mmx tts --text "Your script text here" --output "audio.mp3"</code></pre>
 	</div>`,
 		},
 
+	// ====== Article: claude-code-self-coding-revolution ======
+	"claude-code-self-coding-revolution": {
+		content: `
+<p>The AI landscape has witnessed a seismic shift with Anthropic's Claude Code leading the charge. This isn't just another AI tool; it's a paradigm breaker, evolving from a mere predictive assistant to an <strong>actionable agent</strong> that's redefining productivity and industry norms. Let's dive into how you can harness this revolution, complete with practical steps and code examples.</p>
+
+<h2>Claude Code: The Self-Evolving Coder</h2>
+
+<p>Claude Code has achieved a remarkable milestone—it now writes 100% of its own code. This self-sufficiency isn't just a tech novelty; it's a productivity game-changer. For developers and businesses, this means:</p>
+
+<ul>
+<li><strong>250% surge in code output</strong> while maintaining quality.</li>
+<li>A shift from manual coding to overseeing AI-driven development pipelines.</li>
+</ul>
+
+<p>To leverage this, start by integrating Claude Code into your workflow. Here's a basic command structure to kickstart auto-code generation (replace <code>[YOUR_TASK]</code> with your coding goal):</p>
+
+<pre><code class="language-bash">claude code generate --task "[YOUR_TASK]" --language python --output ./auto_generated_script.py</code></pre>
+
+<p>For example, if you need a script to parse CSV data and generate insights, use:</p>
+
+<pre><code class="language-bash">claude code generate --task "Parse a CSV file, calculate average values for each column, and output a summary report" --language python --output ./csv_analyzer.py</code></pre>
+
+<h2>Actionable AI Agents: Beyond Chatbots</h2>
+
+<p>The era of passive chatbots is over. Modern AI agents like Claude can <strong>interact with the real world</strong>—they can manipulate browsers, files, cloud platforms, and even your email/calendar. Here's how to put them to work:</p>
+
+<h3>Automate Travel Planning</h3>
+
+<p>Imagine planning a multi-city trip across London and Tokyo with 5 layovers. Instead of manual booking, delegate to Claude Code. Use a prompt like:</p>
+
+<pre><code class="language-text">"Plan a trip from London to Tokyo with 5 layovers. Find the best flights and hotels, ensuring layover times are at least 2 hours. Prioritize budget-friendly options and include a summary of each stop."</code></pre>
+
+<p>In just an hour, Claude will return a detailed itinerary—no manual searching required.</p>
+
+<h3>Revolutionize Business Workflows</h3>
+
+<p>For businesses, AI agents can overhaul operations. Let's take a finance team example: an accountant with no coding background can use Claude to automate expense reporting. Use this prompt structure:</p>
+
+<pre><code class="language-text">"Create a Python script that extracts data from expense receipts (via OCR), categorizes expenses, and generates a monthly report in CSV and PDF formats. Integrate with Google Sheets to update a company expense dashboard."</code></pre>
+
+<p>Claude will generate the script, and you can deploy it with:</p>
+
+<pre><code class="language-bash">python expense_automator.py --folder ./receipts_folder</code></pre>
+
+<h2>Navigating Growth and Skepticism</h2>
+
+<p>Anthropic's revenue has skyrocketed 10x in a year, a testament to AI's demand. But with growth comes skepticism—some companies inflate AI usage metrics (like "token spamming"). To avoid this, focus on <strong>practical utility</strong>:</p>
+
+<ul>
+<li>Test AI on high-impact tasks first (e.g., customer support automation, data analysis).</li>
+<li>Use Anthropic's rate limits wisely. For power users, explore their Colossus compute clusters for scaled operations.</li>
+</ul>
+
+<h2>Future-Proof Your Role in the AI Era</h2>
+
+<p>As AI takes over execution, human value shifts to <strong>strategic questioning and decision-making</strong>. Here's how to adapt:</p>
+
+<ol>
+<li><strong>Master Prompt Engineering</strong>: Craft precise prompts to direct AI agents. For example, instead of "Improve this website," use:</li>
+</ol>
+
+<pre><code class="language-text">"Redesign the homepage of [YOUR_WEBSITE] to boost conversion rates by 20%. Focus on mobile responsiveness, simplify the navigation menu, and add a clear CTA above the fold. Provide HTML/CSS code snippets for implementation."</code></pre>
+
+<ol start="2">
+<li><strong>Build AI Workflows</strong>: Create chains of AI tasks. For a marketing campaign:</li>
+</ol>
+
+<pre><code class="language-text">"First, generate 5 blog topic ideas for 'sustainable fashion'. Then, write a 1,500-word article for the top topic. Next, create social media captions for Twitter, Instagram, and LinkedIn. Finally, draft an email newsletter to promote the article."</code></pre>
+
+<h2>Conclusion</h2>
+
+<p>The AI revolution isn't a threat—it's a tool to amplify your potential. Whether you're a developer, business owner, or creative, Claude Code and actionable AI agents offer unprecedented efficiency. Start small with targeted tasks, master prompt engineering, and watch as AI transforms your productivity from incremental to exponential.</p>
+
+<p>Embrace the shift, and let AI handle the "how" while you focus on the "what" and "why." The future belongs to those who leverage AI as a collaborative force, not a replacement.</p>
+		`,
+		contentZh: `
+<h2>AI时代来临：Claude Code的自我编程革命</h2>
+
+<p>AI领域正经历着由Anthropic的Claude Code引领的巨大变革。这不仅仅是又一个AI工具，而是一个范式突破者——从单纯的预测助手进化为<strong>可操作的智能代理</strong>，正在重新定义生产力和行业规范。本文将带你了解如何利用这一革命，包含实用步骤和代码示例。</p>
+
+<h2>Claude Code：自我进化的编程者</h2>
+
+<p>Claude Code实现了一个引人注目的里程碑——它现在能100%自主编写自己的代码。这种自给自足不仅仅是技术上的新鲜事，更是生产力的游戏规则改变者。对开发者和企业而言，这意味着：</p>
+
+<ul>
+<li><strong>代码产出激增250%</strong>，同时保持质量。</li>
+<li>从手动编码转向监督AI驱动的开发流程。</li>
+</ul>
+
+<p>要利用这一点，首先将Claude Code集成到你的工作流程中。以下是一个启动自动代码生成的基本命令结构（将<code>[YOUR_TASK]</code>替换为你的编码目标）：</p>
+
+<pre><code class="language-bash">claude code generate --task "[YOUR_TASK]" --language python --output ./auto_generated_script.py</code></pre>
+
+<p>例如，如果你需要一个脚本来解析CSV数据并生成洞察报告，可以使用：</p>
+
+<pre><code class="language-bash">claude code generate --task "Parse a CSV file, calculate average values for each column, and output a summary report" --language python --output ./csv_analyzer.py</code></pre>
+
+<h2>可操作的AI代理：超越聊天机器人</h2>
+
+<p>被动聊天机器人的时代已经结束。像Claude这样的现代AI代理可以与<strong>真实世界交互</strong>——它们可以操控浏览器、文件、云平台，甚至你的邮件和日历。以下是如何让它们为你工作：</p>
+
+<h3>自动化旅行规划</h3>
+
+<p>想象一下规划一次跨越伦敦和东京的多城市之旅，中途有5个经停站。与其手动预订，不如交给Claude Code。使用如下提示词：</p>
+
+<pre><code class="language-text">"Plan a trip from London to Tokyo with 5 layovers. Find the best flights and hotels, ensuring layover times are at least 2 hours. Prioritize budget-friendly options and include a summary of each stop."</code></pre>
+
+<p>只需一小时，Claude就会返回一份详细的行程单——无需手动搜索。</p>
+
+<h3>革新业务流程</h3>
+
+<p>对企业而言，AI代理可以彻底改革运营。以一个财务团队为例：没有编程背景的会计可以使用Claude来自动化费用报告。使用以下提示词结构：</p>
+
+<pre><code class="language-text">"Create a Python script that extracts data from expense receipts (via OCR), categorizes expenses, and generates a monthly report in CSV and PDF formats. Integrate with Google Sheets to update a company expense dashboard."</code></pre>
+
+<p>Claude会生成脚本，你可以通过以下命令部署：</p>
+
+<pre><code class="language-bash">python expense_automator.py --folder ./receipts_folder</code></pre>
+
+<h2>应对增长与质疑</h2>
+
+<p>Anthropic的收入在一年内暴涨10倍，这证明了AI的需求旺盛。但伴随增长而来的是质疑——有些公司夸大AI使用指标（例如"token刷量"）。要避免这一点，专注于<strong>实际效用</strong>：</p>
+
+<ul>
+<li>首先在高影响任务上测试AI（例如客户支持自动化、数据分析）。</li>
+<li>明智使用Anthropic的速率限制。对于高级用户，可以探索他们的Colossus计算集群进行规模化操作。</li>
+</ul>
+
+<h2>在AI时代让你的角色面向未来</h2>
+
+<p>随着AI接管执行层面，人类的价值转向<strong>战略性提问和决策</strong>。以下是如何适应：</p>
+
+<ol>
+<li><strong>掌握提示工程</strong>：编写精确的提示词来指导AI代理。例如，不要使用"改进这个网站"，而是使用：</li>
+</ol>
+
+<pre><code class="language-text">"Redesign the homepage of [YOUR_WEBSITE] to boost conversion rates by 20%. Focus on mobile responsiveness, simplify the navigation menu, and add a clear CTA above the fold. Provide HTML/CSS code snippets for implementation."</code></pre>
+
+<ol start="2">
+<li><strong>构建AI工作流</strong>：创建AI任务链。对于一个营销活动：</li>
+</ol>
+
+<pre><code class="language-text">"First, generate 5 blog topic ideas for 'sustainable fashion'. Then, write a 1,500-word article for the top topic. Next, create social media captions for Twitter, Instagram, and LinkedIn. Finally, draft an email newsletter to promote the article."</code></pre>
+
+<h2>结论</h2>
+
+<p>AI革命不是威胁——它是放大你潜力的工具。无论你是开发者、企业主还是创意工作者，Claude Code和可操作的AI代理都提供了前所未有的效率。从有针对性的小任务开始，掌握提示工程，然后看着AI将你的生产力从渐进式提升变为指数级增长。</p>
+
+<p>拥抱这一转变，让AI处理"怎么做"，而你专注于"做什么"和"为什么"。未来属于那些将AI视为协作力量而非替代品的人。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：Claude Code的自我编码能力对普通开发者意味着什么？</h3>
+<p>意味着开发者可以从重复性的编码工作中解放出来，转向更高层次的架构设计和问题定义。Claude Code处理代码实现，你专注于业务逻辑和系统设计，整体效率可提升2-3倍。</p>
+
+<h3>问：使用AI代理进行旅行规划是否可靠？</h3>
+<p>相当可靠。Claude等AI代理可以同时查询多个航班和酒店数据库，在考虑预算、时间和偏好的基础上生成优化方案。不过建议将AI生成的行程作为起点，在预订前人工确认关键信息。</p>
+
+<h3>问：如何避免AI代理生成不准确的结果？</h3>
+<p>关键在于提示词的质量。提供明确的目标、约束条件和输出格式。同时建议对AI输出进行人工审核，建立"AI生成+人工验证"的工作流，确保结果的准确性。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-install-setup">Claude Code安装与配置指南 →</a></p>
+</div>
+		`,
+	},
+
+	// ====== Article: gpt-claude-grok-gemini-comparison ======
+	"gpt-claude-grok-gemini-comparison": {
+		content: `
+<p>In the rapidly evolving landscape of AI large models, choosing the right tool can significantly impact your productivity and outcomes. Whether you're into academic research, coding, content creation, or data analysis, there's an AI giant tailored for you. Let's dive into a practical comparison of GPT, Claude, Grok, and Gemini to help you make an informed decision.</p>
+
+<h2>GPT: The All-Round Powerhouse</h2>
+
+<p>GPT, developed by OpenAI, stands as a mature, all-purpose AI tool with a massive user base.</p>
+
+<ul>
+<li><strong>Strengths</strong>:
+<ul>
+<li>It excels in versatility, making it suitable for academic research, e-commerce image generation, and data analysis. With the latest GPT-5.5 update, its Codex capability has nearly matched Claude's coding prowess. For researchers, it provides access to real academic literature (available with a paid subscription). Its data analysis features are robust, and the newly released GPT Image Two offers industry-leading image generation capabilities.</li>
+<li>Example prompt for data analysis:</li>
+</ul>
+</li>
+</ul>
+
+<pre><code class="language-python"># Ask GPT to analyze sales data
+prompt = "Analyze the provided sales dataset, identify trends, and generate a summary with visual insights."</code></pre>
+
+<ul>
+<li><strong>Weaknesses</strong>:
+<ul>
+<li>It has strict content filters, avoiding sensitive topics. Purchasing subscriptions in some regions like China can be complicated, and there have been issues with account bans and subscription drops recently.</li>
+</ul>
+</li>
+<li><strong>Who Should Use It</strong>: Academics, e-commerce professionals, and data analysts looking for a well-rounded tool.</li>
+</ul>
+
+<h2>Claude: The Coder's Best Friend</h2>
+
+<p>Claude, from Anthropic, is a top choice for programming and logical reasoning.</p>
+
+<ul>
+<li><strong>Strengths</strong>:
+<ul>
+<li>Its Claude code feature is unmatched, making it a must-have for programmers. Even non-technical product managers use it for tasks like building web pages or apps. It also boasts strong logical reasoning abilities.</li>
+<li>Example prompt for coding:</li>
+</ul>
+</li>
+</ul>
+
+<pre><code class="language-python"># Ask Claude to generate a web scraper
+prompt = "Write a Python script to scrape data from [website URL], extract product names and prices, and save to a CSV file."</code></pre>
+
+<ul>
+<li><strong>Weaknesses</strong>:
+<ul>
+<li>It has strict IP purity requirements, leading to frequent account bans if using a subpar IP. Registering requires an overseas phone number, and its token costs are relatively high.</li>
+</ul>
+</li>
+<li><strong>Who Should Use It</strong>: Programmers and developers with professional coding needs, who are prepared for potential account issues.</li>
+</ul>
+
+<h2>Grok: The Free-Speech Content Creator</h2>
+
+<p>Grok, from Elon Musk's xAI, is ideal for those needing real-time info and content freedom.</p>
+
+<ul>
+<li><strong>Strengths</strong>:
+<ul>
+<li>It provides real literature and has the strongest real-time internet access (leveraging Twitter). It has minimal content restrictions, making it great for academic research and short video creation. It generates short videos efficiently and affordably (a 30-second video costs just a few cents), and can even integrate human faces into videos.</li>
+<li>Example prompt for short video creation:</li>
+</ul>
+</li>
+</ul>
+
+<pre><code class="language-plain-text">Prompt: "Create a 30-second video ad for a new fitness app, include a smiling coach's face, highlight features like workout tracking and community support."</code></pre>
+
+<ul>
+<li><strong>Weaknesses</strong>:
+<ul>
+<li>It's relatively less known in some regions, and its content boundaries can be too loose at times.</li>
+</ul>
+</li>
+<li><strong>Who Should Use It</strong>: Short video creators and academics who value content freedom.</li>
+</ul>
+
+<h2>Gemini: The Creative Multimodal Tool</h2>
+
+<p>Gemini, by Google, shines in creative image generation and document analysis.</p>
+
+<ul>
+<li><strong>Strengths</strong>:
+<ul>
+<li>Its image generation ability is on par with GPT Image Two. It excels at analyzing large documents, and its Notebook LM feature is a powerful tool for document processing and analysis.</li>
+<li>Example prompt for document analysis:</li>
+</ul>
+</li>
+</ul>
+
+<pre><code class="language-plain-text">Prompt: "Analyze this 50-page market research report, extract key findings, trends, and recommendations, and summarize in a concise presentation."</code></pre>
+
+<ul>
+<li><strong>Weaknesses</strong>:
+<ul>
+<li>It's plagued by "羊毛党" (people exploiting free benefits), leading to occasional usability issues even for paid users. Accessing it through unofficial channels carries risks.</li>
+</ul>
+</li>
+<li><strong>Who Should Use It</strong>: Creatives and content writers needing top-notch image generation and document analysis.</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<ul>
+<li><strong>Choose GPT</strong> for all-round tasks like academic research, e-commerce imaging, and data analysis.</li>
+<li><strong>Choose Claude</strong> if you're a coder or need professional development tools (be ready for potential account bans).</li>
+<li><strong>Choose Grok</strong> for short video creation and content with minimal restrictions.</li>
+<li><strong>Choose Gemini</strong> for creative imaging and in-depth document analysis.</li>
+</ul>
+
+<p>By aligning your specific needs with the strengths of each AI model, you'll be able to maximize your efficiency and achieve better results in your work.</p>
+		`,
+		contentZh: `
+<h2>选择合适的AI巨头：GPT、Claude、Grok还是Gemini？</h2>
+
+<p>在AI大模型快速发展的格局中，选择合适的工具可以显著影响你的生产力和成果。无论你从事学术研究、编程、内容创作还是数据分析，总有一个AI巨头适合你。让我们深入比较GPT、Claude、Grok和Gemini，帮助你做出明智的决策。</p>
+
+<h2>GPT：全能型强者</h2>
+
+<p>OpenAI开发的GPT是一个成熟的通用AI工具，拥有庞大的用户基础。</p>
+
+<ul>
+<li><strong>优势</strong>：它在多功能性方面表现出色，适用于学术研究、电商图像生成和数据分析。随着最新的GPT-5.5更新，其Codex能力已经接近Claude的编程水平。对研究人员而言，它提供真实学术文献访问（需付费订阅）。其数据分析功能强大，新发布的GPT Image Two提供行业领先的图像生成能力。</li>
+<li><strong>劣势</strong>：它有严格的内容过滤器，回避敏感话题。在中国等地区购买订阅可能比较复杂，最近还存在账户被封和订阅掉线等问题。</li>
+<li><strong>适合人群</strong>：寻找全能工具的学者、电商专业人士和数据分析师。</li>
+</ul>
+
+<h2>Claude：程序员的最佳伙伴</h2>
+
+<p>来自Anthropic的Claude是编程和逻辑推理的首选。</p>
+
+<ul>
+<li><strong>优势</strong>：其Claude Code功能无与伦比，是程序员的必备工具。即使是非技术背景的产品经理也用其构建网页或应用。它还拥有强大的逻辑推理能力。</li>
+<li><strong>劣势</strong>：对IP纯净度要求严格，使用低质量IP时容易导致账号被封。注册需要海外手机号，且Token成本相对较高。</li>
+<li><strong>适合人群</strong>：有专业编码需求的程序员和开发者。</li>
+</ul>
+
+<h2>Grok：自由言论的内容创作者</h2>
+
+<p>来自Elon Musk的xAI的Grok，适合需要实时信息和内容创作自由度的人。</p>
+
+<ul>
+<li><strong>优势</strong>：提供真实文献资料，拥有最强的实时互联网访问能力（借助Twitter）。内容限制极少，非常适合学术研究和短视频创作。它能高效且廉价地生成短视频，甚至可以将人脸融入视频中。</li>
+<li><strong>劣势</strong>：在某些地区知名度较低，有时内容边界过于宽松。</li>
+<li><strong>适合人群</strong>：重视内容自由的短视频创作者和学者。</li>
+</ul>
+
+<h2>Gemini：创意多模态工具</h2>
+
+<p>Google的Gemini在创意图像生成和文档分析方面表现出色。</p>
+
+<ul>
+<li><strong>优势</strong>：其图像生成能力与GPT Image Two相当。擅长分析大型文档，其Notebook LM功能是文档处理和分析的强大工具。</li>
+<li><strong>劣势</strong>：受到"羊毛党"的困扰，即使付费用户也偶尔遇到可用性问题。</li>
+<li><strong>适合人群</strong>：需要顶级图像生成和文档分析的创意工作者和内容作者。</li>
+</ul>
+
+<h2>结论</h2>
+
+<ul>
+<li><strong>选择GPT</strong>：如果你需要全能型工具，如学术研究、电商图像和数据分析。</li>
+<li><strong>选择Claude</strong>：如果你是程序员或需要专业开发工具。</li>
+<li><strong>选择Grok</strong>：用于短视频创作和内容限制较少的场景。</li>
+<li><strong>选择Gemini</strong>：用于创意图像和深度文档分析。</li>
+</ul>
+
+<p>通过以上对比可以看出，每个AI模型都有其独特的定位和优势。GPT以其全能性和庞大的生态系统适合广泛的日常任务；Claude在编程和逻辑推理上无可匹敌；Grok凭借实时信息和内容自由度成为创作者的利器；而Gemini在创意图像和文档分析方面独树一帜。根据你的具体工作场景选择最合适的工具，才能最大程度发挥AI的潜力。</p>
+
+<p>建议用户根据自身需求进行尝试。例如，如果你主要从事编程工作，可以优先考虑Claude；如果你是内容创作者，Grok的实时信息获取能力可能更适合你；如果需要处理大量文档和创意工作，Gemini会是好选择。没有绝对的"最佳"模型，只有最适合你需求的工具。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：GPT和Claude在编程方面哪个更好？</h3>
+<p>Claude在代码生成和逻辑推理方面目前略胜一筹，但GPT-5.5更新后差距已经缩小。如果你主要做Python脚本编写或复杂算法，Claude是强项；如果你需要综合性工作（编程+数据分析+图像生成），GPT的全能性更具优势。</p>
+
+<h3>问：Grok的实时互联网访问能力与其他工具有何不同？</h3>
+<p>Grok借助X（Twitter）平台实现了最强的实时信息获取能力。与GPT和Claude需要手动开启网络搜索不同，Grok默认就能获取最新事件和趋势信息，这对需要实时数据的内容创作者来说是个巨大优势。</p>
+
+<h3>问：Gemini的文档分析能力与Notebook LM如何配合使用？</h3>
+<p>Gemini本身具备强大的文档理解能力，而Notebook LM是Google推出的专属文档分析工具。你可以先用Gemini进行初步文档分析，再使用Notebook LM进行深度处理和知识组织。这种组合特别适合需要处理大量研究材料的学生和研究人员。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-vs-chatgpt-writing-blind-test">Claude vs ChatGPT写作风格对比 →</a></p>
+</div>
+		`,
+	},
+
+	// ====== Article: codex-agent-desktop-jarvis ======
+	"codex-agent-desktop-jarvis": {
+		content: `
+<p>In the ever-evolving landscape of AI tools, OpenAI's Codex has dropped a game-changing update that's turning heads in the tech community. This isn't just a minor tweak; it's a leap toward creating a desktop Jarvis-like assistant, ready to liberate your productivity by taking control of your computer applications. Let's dive into how you can leverage this powerful tool for practical, hands-on tasks, especially if you're running an overseas-focused website.</p>
+
+<h2>1. Getting Started: Activate Codex's Desktop Control</h2>
+
+<p>First, you need to unlock Codex's ability to interact with your desktop apps. Here's how:</p>
+
+<ul>
+<li><strong>Access the Sidebar &amp; Settings</strong>: Navigate to the sidebar in your Codex interface, click on "Settings", and find the "Computer Use" section.</li>
+<li><strong>Install the Plugin</strong>: Locate the dedicated plugin for desktop integration and install it. This plugin is the bridge that lets Codex "see" and control your apps.</li>
+</ul>
+
+<h2>2. Command Codex with Natural Language (and @Mentions)</h2>
+
+<p>The beauty of Codex's new agent lies in its simplicity. You don't need to be a coding wizard—just use natural language, and tag apps with <code>@</code>.</p>
+
+<h3>Example 1: Build a Personal Website with Claude</h3>
+
+<p>Want a personal homepage? Tell Codex:</p>
+
+<pre><code class="language-plain-text">@Claude 帮我创建一个个人主页，要求设计现代简约，包含作品集和联系表单。</code></pre>
+
+<p>Hit enter, and Codex will open Claude, generate the website code, and even launch it in your browser. The result? A polished, professional page that's ready to impress—no web development skills required.</p>
+
+<h3>Example 2: Generate Visuals with ChatGPT</h3>
+
+<p>Need custom graphics for your overseas site? Command Codex like this:</p>
+
+<pre><code class="language-plain-text">@ChatGPT 生成一组关于"跨境电商趋势"的漫画风格图片，要求色彩鲜明，风格统一。</code></pre>
+
+<p>Codex will trigger ChatGPT's image-generation capabilities (powered by Image 1.5, since 2.0 is still in beta) and deliver visuals you can use for blogs, social media, or product pages.</p>
+
+<h2>3. Automate Complex Workflows Across Apps</h2>
+
+<p>The real magic happens when you chain tasks across multiple applications. Let's walk through a practical workflow for an overseas e-commerce site owner:</p>
+
+<h3>Step 1: Design Inspiration &amp; Replication</h3>
+
+<p>Find a design you love for your site:</p>
+
+<pre><code class="language-plain-text">@Chrome 在Dribbble上找一个高端电商网站的设计风格，然后让@Claude 复刻这个风格到我的 landing page。</code></pre>
+
+<p>Codex will open Chrome, search Dribbble, pick a design, and instruct Claude to replicate it—automatically opening the preview in your browser.</p>
+
+<h3>Step 2: Set the Mood with Music</h3>
+
+<p>Keep your creative flow going while working on your site:</p>
+
+<pre><code class="language-plain-text">@网易云音乐 播放《New Boy》，然后记录我完成这一步的心情和难度，用内置图像生成功能做两张图，保存到本地。</code></pre>
+
+<p>Codex will launch NetEase Cloud Music, play the song, and then use its image-generation tool to create visuals that capture your workflow's "vibe"—perfect for sharing behind-the-scenes content on your site's blog or socials.</p>
+
+<h3>Step 3: Organize and Access Files</h3>
+
+<p>Finally, manage the assets Codex creates:</p>
+
+<pre><code class="language-plain-text">@访达 定位到刚才生成的图片文件，给@Claude 完全访问权限，以便后续编辑。</code></pre>
+
+<p>Codex will open Finder (or your OS's file manager), locate the files, and set permissions—all without you lifting a finger.</p>
+
+<h2>4. Efficiency &amp; Cost: Work Smart, Not Hard</h2>
+
+<ul>
+<li><strong>Speed vs. Cost</strong>: Codex offers a "Fast Mode" that doubles token usage but speeds up tasks. For the workflow above, it used 34% of a typical token quota. If you opt for standard mode, you'd cut that to ~17%, with tokens refreshing every 5 hours.</li>
+<li><strong>Silent Automation</strong>: Let Codex run in the background. It can handle tasks like generating reports, updating spreadsheets, or even creating PPTs/Word docs while you focus on high-level strategy for your overseas site.</li>
+</ul>
+
+<h2>5. Why This Matters for Overseas Websites</h2>
+
+<p>If you're running a site targeting international audiences, Codex's agent is a secret weapon:</p>
+
+<ul>
+<li><strong>Content Creation</strong>: Rapidly generate blog posts, product descriptions, and social media content in multiple languages.</li>
+<li><strong>Design &amp; Branding</strong>: Create consistent visuals and web elements without relying on freelance designers.</li>
+<li><strong>Workflow Automation</strong>: Streamline tasks like competitor research, market trend analysis, and customer feedback collection.</li>
+</ul>
+
+<p>In short, Codex's new agent isn't just a tool—it's a productivity partner. Whether you're building an e-commerce empire, a content platform, or a SaaS product for global users, it's time to let AI take the wheel. Try it out, experiment with commands, and watch your overseas business operations become smoother than ever.</p>
+		`,
+		contentZh: `
+<h2>Codex Agent：你的桌面贾维斯，轻松实现任务自动化</h2>
+
+<p>在AI工具不断演进的格局中，OpenAI的Codex发布了一项改变游戏规则的更新，正在科技社区引起轰动。这不是一个小修小补，而是向着创建桌面级贾维斯式助手的一次飞跃，通过控制你的电脑应用来解放生产力。本文将深入探讨如何利用这个强大的工具完成实际任务，特别是如果你正在运营面向海外的网站。</p>
+
+<h2>1. 入门：激活Codex的桌面控制</h2>
+
+<p>首先，你需要解锁Codex与桌面应用交互的能力。方法如下：</p>
+
+<ul>
+<li><strong>访问侧边栏和设置</strong>：进入Codex界面的侧边栏，点击"设置"，找到"Computer Use"部分。</li>
+<li><strong>安装插件</strong>：找到桌面集成的专用插件并进行安装。这个插件是让Codex"看到"并控制你的应用的桥梁。</li>
+</ul>
+
+<h2>2. 用自然语言（和@提及）命令Codex</h2>
+
+<p>Codex新代理的美妙之处在于其简单性。你不需要成为编程高手——只需使用自然语言，并用<code>@</code>标记应用。</p>
+
+<h3>示例1：用Claude构建个人网站</h3>
+
+<p>想要一个个人主页？告诉Codex：</p>
+
+<pre><code class="language-plain-text">@Claude 帮我创建一个个人主页，要求设计现代简约，包含作品集和联系表单。</code></pre>
+
+<p>按下回车，Codex将打开Claude，生成网站代码，甚至在浏览器中启动它。结果是一个精致、专业的页面——无需网页开发技能。</p>
+
+<h3>示例2：用ChatGPT生成视觉内容</h3>
+
+<p>需要为你的海外网站定制图形？像这样命令Codex：</p>
+
+<pre><code class="language-plain-text">@ChatGPT 生成一组关于"跨境电商趋势"的漫画风格图片，要求色彩鲜明，风格统一。</code></pre>
+
+<p>Codex将触发ChatGPT的图像生成能力，并提供可用于博客、社交媒体或产品页面的视觉内容。</p>
+
+<h2>3. 跨应用自动化复杂工作流</h2>
+
+<p>真正的魔力在于跨多个应用串联任务。让我们来看一个面向海外电商网站拥有者的实际工作流：</p>
+
+<h3>步骤1：设计灵感与复制</h3>
+
+<p>为你的网站找一个你喜欢的设计：</p>
+
+<pre><code class="language-plain-text">@Chrome 在Dribbble上找一个高端电商网站的设计风格，然后让@Claude 复刻这个风格到我的 landing page。</code></pre>
+
+<p>Codex将打开Chrome，搜索Dribbble，挑选一个设计，并指示Claude复制它。</p>
+
+<h3>步骤2：用音乐营造氛围</h3>
+
+<p>在网站工作时保持创意流动：</p>
+
+<pre><code class="language-plain-text">@网易云音乐 播放《New Boy》，然后记录我完成这一步的心情和难度，用内置图像生成功能做两张图，保存到本地。</code></pre>
+
+<h3>步骤3：组织和访问文件</h3>
+
+<p>最后，管理Codex创建的资产：</p>
+
+<pre><code class="language-plain-text">@访达 定位到刚才生成的图片文件，给@Claude 完全访问权限，以便后续编辑。</code></pre>
+
+<h2>4. 效率与成本：聪明工作，而非苦干</h2>
+
+<ul>
+<li><strong>速度与成本</strong>：Codex提供"快速模式"，将Token用量翻倍但加速任务。对于上述工作流，它消耗了典型Token配额的34%。如果选择标准模式，可降至约17%，Token每5小时刷新。</li>
+<li><strong>静默自动化</strong>：让Codex在后台运行。它可以处理生成报告、更新电子表格、甚至创建PPT/Word文档等任务。</li>
+</ul>
+
+<h2>5. 这对海外网站意味着什么</h2>
+
+<p>如果你正在运营面向国际受众的网站，Codex的代理是一个秘密武器：</p>
+
+<ul>
+<li><strong>内容创作</strong>：快速生成多语言的博客文章、产品描述和社交媒体内容。</li>
+<li><strong>设计与品牌</strong>：无需依赖自由设计师即可创建一致的视觉和网页元素。</li>
+<li><strong>工作流自动化</strong>：简化竞争对手研究、市场趋势分析和客户反馈收集等任务。</li>
+</ul>
+
+<h2>常见问题</h2>
+
+<h3>问：Codex Agent和Claude Code有什么区别？</h3>
+<p>Codex Agent专注于桌面应用控制，可以操控浏览器、音乐播放器、文件管理器等多个应用，适合跨应用自动化工作流。而Claude Code主要聚焦于终端内的编程任务，擅长代码生成、调试和项目管理。两者可以互补使用。</p>
+
+<h3>问：Codex Agent的"快速模式"是否值得开启？</h3>
+<p>取决于任务紧急程度。如果任务需要快速完成且Token预算充足，快速模式可以将处理时间缩短近一半。但对于批量处理或非紧急任务，标准模式更经济实惠，Token消耗减少约50%。</p>
+
+<h3>问：Codex Agent支持哪些桌面应用？</h3>
+<p>Codex Agent支持大多数主流桌面应用，包括浏览器（Chrome、Safari）、聊天工具、办公软件、开发工具等。通过专用的集成插件，可以扩展支持更多应用。具体支持列表会随着更新不断增加。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-install-setup">Claude Code安装与配置指南 →</a></p>
+</div>
+		`,
+	},
+
+	// ====== Article: google-5-skill-design-patterns ======
+	"google-5-skill-design-patterns": {
+		content: `
+<p>In the realm of AI agent development, especially for overseas web projects, ensuring stable and high-quality output from agents is crucial. Google has summarized five Skill design patterns that address common 失控 (loss of control) scenarios and provide practical solutions. Let's dive into these patterns with a focus on their applicability for overseas website teams.</p>
+
+<h2>1. Tool Wrapper: On-Demand Knowledge Injection</h2>
+
+<p>One common pitfall is overloading agents with irrelevant knowledge, leading to confusion and inefficiency. The <strong>Tool Wrapper</strong> pattern solves this by injecting knowledge only when needed.</p>
+
+<h3>How It Works</h3>
+
+<ul>
+<li>Define trigger conditions in <code>SKILL.md</code> to identify when specific domain knowledge is required.</li>
+<li>Store domain-specific knowledge (e.g., React style guides, SQL best practices) in a <code>references/</code> directory.</li>
+<li>The agent loads and applies this knowledge only when the task matches the trigger conditions.</li>
+</ul>
+
+<h3>Practical Example for Overseas Web Teams</h3>
+
+<p>Suppose you're building a multilingual e-commerce site with React. Instead of embedding all React documentation into the agent's system prompt, use Tool Wrapper:</p>
+
+<pre><code class="language-markdown"># SKILL.md (Trigger Logic)
+When the task involves modifying React components, load references/react-i18n-style-guide.md.
+
+# references/react-i18n-style-guide.md
+- Use react-intl for localization.
+- Follow ISO 639-1 language codes (e.g., "en-US", "es-ES").
+- Wrap all static text in &lt;FormattedMessage&gt; components.</code></pre>
+
+<p>This way, the agent only accesses localization-specific React knowledge when working on UI components, keeping context lean and relevant.</p>
+
+<h2>2. Generator: Standardize Output Structure</h2>
+
+<p>Inconsistent output formats (e.g., varying API documentation styles or report structures) are a headache for overseas teams. The <strong>Generator</strong> pattern enforces consistent output using templates and style guides.</p>
+
+<h3>How It Works</h3>
+
+<ul>
+<li><code>SKILL.md</code> defines what content to generate (e.g., an API document).</li>
+<li><code>references/</code> contains style guides (e.g., tone, formatting rules).</li>
+<li><code>assets/</code> holds templates (e.g., API doc templates).</li>
+<li>The agent fills variables in templates and applies style rules for uniform output.</li>
+</ul>
+
+<h3>Practical Example: API Documentation for Global APIs</h3>
+
+<p>For an overseas payment gateway's API docs, use Generator to ensure consistency:</p>
+
+<pre><code class="language-markdown"># SKILL.md
+Generate API documentation with sections: Endpoint, Parameters, Response, Error Codes. Use the tone from references/api-style-guide.md.
+
+# references/api-style-guide.md
+- Use formal, concise language suitable for developers worldwide.
+- List parameters with data types and required/optional status.
+- Explain errors with HTTP status codes and user-friendly messages.
+
+# assets/api-template.md
+## {Endpoint Name}
+- Method: {HTTP Method}
+- URL: {Base URL}{Path}
+- Parameters:
+  {Parameter List}
+- Response:
+  {Response Schema}
+- Error Codes:
+  {Error Code List}</code></pre>
+
+<p>This ensures every API document follows the same structure, making it easy for developers across regions to understand.</p>
+
+<h2>3. Reviewer: Separate Review Standards and Process</h2>
+
+<p>Overseas teams often need to adapt to different compliance standards (e.g., GDPR for Europe, CCPA for California). The <strong>Reviewer</strong> pattern separates <em>what to check</em> (standards) from <em>how to check</em> (process).</p>
+
+<h3>How It Works</h3>
+
+<ul>
+<li><code>SKILL.md</code> defines the review process (e.g., steps to audit code).</li>
+<li><code>review-checklist.md</code> in <code>references/</code> lists specific standards (e.g., GDPR compliance checks).</li>
+<li>The agent applies the process to different checklists, ensuring flexibility.</li>
+</ul>
+
+<h3>Practical Example: Multi-Region Compliance Audits</h3>
+
+<p>For a web app serving EU and US users, create a reusable review process:</p>
+
+<pre><code class="language-markdown"># SKILL.md (Review Process)
+1. Load the relevant checklist from references/.
+2. Audit the code against each checklist item.
+3. Generate a report with error, warning, and info levels.
+
+# references/gdpr-checklist.md
+- [ ] All user data is encrypted in transit and at rest.
+- [ ] Privacy policy links are present on all data-collecting pages.
+- [ ] Users can request data deletion via a dedicated endpoint.
+
+# references/ccpa-checklist.md
+- [ ] "Do Not Sell My Personal Information" option is visible on the homepage.
+- [ ] Users are notified of data collection at the point of collection.</code></pre>
+
+<p>This way, the same review process can adapt to GDPR, CCPA, or other regional standards by swapping out checklists.</p>
+
+<h2>4. Inversion: Gather Information Before Acting</h2>
+
+<p>Overseas projects often involve unclear requirements (e.g., a client's vague request for a "multilingual blog"). The <strong>Inversion</strong> pattern flips the script: the agent asks questions to clarify requirements before generating output.</p>
+
+<h3>How It Works</h3>
+
+<ul>
+<li><strong>Phase 1: Discovery</strong> – Ask what problem needs solving (e.g., "Who is the target audience for the blog?").</li>
+<li><strong>Phase 2: Constraints</strong> – Clarify boundaries (e.g., "Which languages are required? What's the budget for translation?").</li>
+<li><strong>Phase 3: Synthesis</strong> – Generate output only after all information is gathered.</li>
+</ul>
+
+<h3>Practical Example: Building a Global Marketing Landing Page</h3>
+
+<p>If a client requests a "high-converting landing page for our new product," the agent uses Inversion:</p>
+
+<pre><code class="language-text">// Phase 1: Discovery
+- Who is the target audience? (e.g., European SMEs, US startups)
+- What's the primary call-to-action? (e.g., sign up for a demo, make a purchase)
+
+// Phase 2: Constraints
+- Which languages are needed? (e.g., English, German, French)
+- Are there any brand guidelines (colors, fonts) to follow?
+- What's the deadline for launch?
+
+// Phase 3: Synthesis
+Only after receiving answers to these questions does the agent generate the landing page code, copy, and design.</code></pre>
+
+<h2>5. Pipeline: Enforce Step-by-Step Execution</h2>
+
+<p>Complex tasks (e.g., launching a multiregional web app) require strict step-by-step execution. The <strong>Pipeline</strong> pattern defines a sequential workflow with gatekeepers to prevent skipping steps.</p>
+
+<h3>How It Works</h3>
+
+<ul>
+<li>Break the task into stages (e.g., Parse → Generate → Assemble → Verify).</li>
+<li>Each stage has a "gate" that must be passed before moving to the next.</li>
+<li><code>SKILL.md</code> defines the workflow and gate conditions.</li>
+</ul>
+
+<h3>Practical Example: Automated API Documentation for Overseas Developers</h3>
+
+<p>For a process that generates API docs for a global audience, use Pipeline:</p>
+
+<pre><code class="language-markdown"># SKILL.md (Pipeline Definition)
+Step 1: Parse API code to extract endpoints and parameters. (Gate: All endpoints are identified.)
+Step 2: Generate docstrings for each endpoint. (Gate: Docstrings follow references/api-style-guide.md.)
+Step 3: Assemble docstrings into a single document. (Gate: All endpoints are included.)
+Step 4: Verify documentation for accuracy and completeness. (Gate: No errors found in review.)</code></pre>
+
+<p>This ensures no step (like skipping verification) is missed, critical for maintaining quality in overseas projects.</p>
+
+<h2>Choosing the Right Pattern for Your Overseas Project</h2>
+
+<p>Use this decision flow to pick the right pattern:</p>
+
+<ol>
+<li><strong>Does the task require template-based output?</strong> → Use <strong>Generator</strong>.</li>
+<li><strong>Is the goal to load knowledge on demand?</strong> → Use <strong>Tool Wrapper</strong>.</li>
+<li><strong>Is the task a review/audit with changing standards?</strong> → Use <strong>Reviewer</strong>.</li>
+<li><strong>Do you need to clarify requirements before acting?</strong> → Use <strong>Inversion</strong>.</li>
+<li><strong>Does the task have strict, sequential steps?</strong> → Use <strong>Pipeline</strong>.</li>
+</ol>
+
+<p>These patterns can also be combined. For example, a Generator can be paired with Inversion to gather requirements before filling a template, or a Pipeline can use Tool Wrapper to load region-specific knowledge at each step.</p>
+
+<p>By implementing these patterns, overseas web teams can ensure their AI agents deliver consistent, high-quality output—whether they're building multilingual UIs, complying with global regulations, or launching complex web applications. Start by identifying your team's most common pain points (e.g., inconsistent docs, unclear requirements) and apply the corresponding pattern to see immediate improvements.</p>
+		`,
+		contentZh: `
+<h2>Google的5个技能设计模式：稳定AI Agent输出的实用指南</h2>
+
+<p>在AI代理开发领域，特别是面向海外的Web项目，确保代理输出稳定且高质量至关重要。Google总结了五种技能设计模式，用于应对常见的失控场景并提供实用解决方案。本文将重点介绍这些模式对海外网站团队的适用性。</p>
+
+<h2>1. Tool Wrapper（工具包装器）：按需知识注入</h2>
+
+<p>一个常见陷阱是给代理加载过多无关知识，导致混淆和效率低下。<strong>Tool Wrapper</strong>模式通过在需要时才注入知识来解决这个问题。</p>
+
+<h3>工作原理</h3>
+
+<ul>
+<li>在<code>SKILL.md</code>中定义触发条件，识别何时需要特定领域知识。</li>
+<li>将领域特定知识（如React风格指南、SQL最佳实践）存储在<code>references/</code>目录中。</li>
+<li>代理仅在任务匹配触发条件时加载并应用这些知识。</li>
+</ul>
+
+<h3>海外网站团队的实际案例</h3>
+
+<p>假设你在使用React构建一个多语言电商网站。不需要将全部React文档嵌入到代理的系统提示中，使用Tool Wrapper：</p>
+
+<pre><code class="language-markdown"># SKILL.md (Trigger Logic)
+When the task involves modifying React components, load references/react-i18n-style-guide.md.
+
+# references/react-i18n-style-guide.md
+- Use react-intl for localization.
+- Follow ISO 639-1 language codes (e.g., "en-US", "es-ES").
+- Wrap all static text in &lt;FormattedMessage&gt; components.</code></pre>
+
+<p>这样，代理只在处理UI组件时访问本地化相关的React知识，保持上下文精练且相关。</p>
+
+<h2>2. Generator（生成器）：标准化输出结构</h2>
+
+<p>输出格式不一致（例如不同的API文档风格或报告结构）是海外团队的痛点。<strong>Generator</strong>模式通过使用模板和风格指南来强制执行一致的输出。</p>
+
+<h3>工作原理</h3>
+
+<ul>
+<li><code>SKILL.md</code>定义要生成的内容（如API文档）。</li>
+<li><code>references/</code>包含风格指南（如语气、格式规则）。</li>
+<li><code>assets/</code>保存模板（如API文档模板）。</li>
+<li>代理填充模板中的变量并应用风格规则。</li>
+</ul>
+
+<h2>3. Reviewer（审查者）：分离审查标准与流程</h2>
+
+<p>海外团队通常需要适应不同的合规标准（如欧盟的GDPR、加州的CCPA）。<strong>Reviewer</strong>模式将<em>检查什么</em>（标准）与<em>如何检查</em>（流程）分离。</p>
+
+<h3>工作原理</h3>
+
+<ul>
+<li><code>SKILL.md</code>定义审查流程（如审计代码的步骤）。</li>
+<li><code>references/</code>中的<code>review-checklist.md</code>列出具体标准。</li>
+<li>代理将流程应用于不同的检查清单，确保灵活性。</li>
+</ul>
+
+<h2>4. Inversion（反转）：行动前收集信息</h2>
+
+<p>海外项目通常涉及不明确的需求。<strong>Inversion</strong>模式反转了流程：代理在生成输出前通过提问来澄清需求。</p>
+
+<h3>工作原理</h3>
+
+<ul>
+<li><strong>阶段1：发现</strong>——询问需要解决的问题是什么。</li>
+<li><strong>阶段2：约束</strong>——明确边界（如需要哪些语言？翻译预算有多少？）。</li>
+<li><strong>阶段3：综合</strong>——只有在所有信息收集完毕后，才生成输出。</li>
+</ul>
+
+<h2>5. Pipeline（流水线）：强制执行逐步执行</h2>
+
+<p>复杂任务（如启动多区域Web应用）需要严格的逐步执行。<strong>Pipeline</strong>模式定义了一个带有门控机制的顺序工作流。</p>
+
+<h3>工作原理</h3>
+
+<ul>
+<li>将任务分解为多个阶段（如解析→生成→组装→验证）。</li>
+<li>每个阶段都有一个"门"，必须通过才能进入下一阶段。</li>
+<li><code>SKILL.md</code>定义工作流和门控条件。</li>
+</ul>
+
+<h2>为你的海外项目选择正确的模式</h2>
+
+<p>使用以下决策流程来选择正确的模式：</p>
+
+<ol>
+<li><strong>任务是否需要基于模板的输出？</strong>→ 使用<strong>Generator</strong>。</li>
+<li><strong>目标是否是按需加载知识？</strong>→ 使用<strong>Tool Wrapper</strong>。</li>
+<li><strong>任务是审查/审计且标准经常变化？</strong>→ 使用<strong>Reviewer</strong>。</li>
+<li><strong>是否需要在行动前澄清需求？</strong>→ 使用<strong>Inversion</strong>。</li>
+<li><strong>任务是否有严格的顺序步骤？</strong>→ 使用<strong>Pipeline</strong>。</li>
+</ol>
+
+<p>这五种模式并非孤立存在，而是可以灵活组合使用。一个复杂的海外Web项目往往需要同时运用多种模式来确保AI Agent的稳定输出。例如，在构建多语言电商平台的过程中，你可以使用Pipeline来规划整体开发流程，在每一步中使用Tool Wrapper加载相关的React本地化知识，使用Generator确保每个API文档和页面模板的输出一致性，最后用Reviewer进行多区域合规审计。</p>
+
+<p>在实际应用中，建议团队根据项目复杂度逐步引入这些模式。简单项目只需使用Generator确保输出格式即可；随着项目规模扩大，逐步加入Tool Wrapper优化知识管理、Reviewer加强质量控制；对于大型跨国项目，Pipeline和Inversion则成为不可或缺的流程保障工具。</p>
+
+<p>对于面向海外市场的开发者而言，这些模式的另一大优势是标准化团队协作。不同地区的开发者遵循相同的Agent设计模式，可以显著降低沟通成本和代码维护难度。无论是美国团队的React组件开发，还是欧洲团队的GDPR合规检查，统一的模式框架让全球协作更加高效。</p>
+
+<p>长期来看，建立完善的Agent技能设计模式体系可以为企业带来持续的效率提升。当团队积累了足够多的SKILL.md模板、checklist和风格指南后，新项目的启动速度将大大加快。AI Agent不再是需要反复调试的实验性工具，而是成为成熟、可靠、可预测的团队成员。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：这五种技能设计模式是否只适用于Google的AI工具？</h3>
+<p>不，这些模式是通用的AI Agent设计方法论，适用于任何AI代理框架，包括Claude Code、OpenClaw和其他平台。Google总结的这些模式基于行业最佳实践，可以被任何团队的AI开发工作流采纳。</p>
+
+<h3>问：Tool Wrapper和Pipeline模式可以同时使用吗？</h3>
+<p>完全可以。实际上，这些模式被设计为可以组合使用。例如，你可以在Pipeline的每个步骤中使用Tool Wrapper来按需加载特定阶段的领域知识，这样既保证了流程的完整性，又保持了上下文的精炼。</p>
+
+<h3>问：对于小型海外网站团队，应该优先实施哪个模式？</h3>
+<p>建议从Generator和Reviewer开始。Generator可以立即解决文档和输出不一致的问题，而Reviewer帮助建立质量检查流程。这两个模式实施门槛低、见效快。随着团队成熟，再逐步引入Tool Wrapper、Inversion和Pipeline。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">Agent、Skill和Harness的实用解释 →</a></p>
+</div>
+		`,
+	},
+
 };
