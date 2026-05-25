@@ -5618,26 +5618,26 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <p><strong>Next:</strong> <a href="/article/claude-code-in-action">Claude Code in Action: Build a Real Project from Scratch →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> Claude Code Skills Guide</p>
-<p><strong>What you'll learn:</strong> The 7 must-install skills for Claude Code, from official Anthropic offerings to community-driven power tools.</p>
+<p><strong>分类：</strong> Claude Code技能指南</p>
+<p><strong>你将学到：</strong> Claude Code必须安装的7大核心技能，从Anthropic官方工具到社区驱动的强大插件。</p>
 </div>
 
-<p>To prove the correctness of the information about the top 7 must\\-install skills for Claude Code, here's a detailed breakdown:</p>
-<h3>1\\. Document\\-skills</h3>
-<p>Developed by Anthropic, this skill is a powerhouse for document processing\\. It seamlessly handles <strong>Word, Excel, PowerPoint, and PDF</strong> files, enabling functionalities like text extraction, table parsing, OCR recognition, and document encryption\\. Being a production\\-grade tool within Anthropic, it’s indispensable for users dealing with extensive document workflows\\.</p>
-<h3>2\\. Frontend Design</h3>
-<p>Also an official Anthropic offering, it’s one of the most popular skills with over 110,000 weekly installations\\. It addresses the issue of generic AI\\-generated interfaces by forcing Claude to define a specific visual direction \\(e\\.g\\., Brutalism, Maximalism, Retro\\-futurism\\) and avoid overused fonts, resulting in more distinctive, production\\-ready UIs\\.</p>
-<h3>3\\. UI\\-UX\\-Pro\\-Max</h3>
-<p>This skill provides a research\\-backed design knowledge base\\. It covers color schemes, font pairings, chart types, and UX guidelines\\. Notably, it’s cross\\-platform compatible, supporting major frameworks like React, Vue, Next\\.js, Flutter, and SwiftUI\\. For example, when tasked with creating a tech\\-inspired dashboard, it suggests well\\-documented design combinations rather than arbitrary ones\\.</p>
-<h3>4\\. Find\\-skills</h3>
-<p>As an internal search engine for the skill ecosystem, it solves the dilemma of choosing from over 2,400 available skills\\. By semantically scanning installed skills based on user\\-described needs, it recommends the most suitable options and explains how to invoke them, eliminating skill selection friction\\.</p>
-<h3>5\\. Skill\\-Creator</h3>
-<p>Anthropic’s official “meta\\-skill” for building other skills, it guides users through a structured process—from requirement gathering and documentation to testing and optimization\\. It includes tools to refine trigger descriptions, ensuring Claude can properly invoke the created skills, making it ideal for institutionalizing unique team workflows\\.</p>
-<h3>6\\. Superpowers</h3>
-<p>The most popular community\\-driven project in the Claude Code ecosystem, it has amassed over 120,000 GitHub stars\\. It enforces a five\\-stage software development lifecycle \\(brainstorming, design, planning, coding, validation\\) and test\\-driven development, reducing rework and boosting coding efficiency by preventing Claude from rushing into code writing\\.</p>
-<h3>7\\. PUA</h3>
-<p>Inspired by corporate workplace culture, this skill implements a 4\\-level pressure system to push Claude to explore more solutions\\. For instance, after two failures, it switches problem\\-solving approaches; after three, it enforces a 7\\-point checklist\\. Leveraging methodologies from top tech companies \\(e\\.g\\., Huawei’s root cause analysis, Amazon’s Working Backwards\\), it helps Claude break through bottlenecks, with tests showing a 3–4x increase in solution exploration\\.</p>
-<p>These seven skills comprehensively address pain points in document handling, design, workflow management, and debugging, transforming Claude Code into a truly proficient AI teammate\\.</p>
+<p>在Claude Code的技能生态系统中，有超过2400种可用技能，但其中7个核心技能因其高安装率和实用价值而格外突出。下面逐一详解每个技能的功能、适用场景和安装方式。</p>
+<h3>1\. Document\-skills</h3>
+<p>由Anthropic官方开发的文档处理利器，可无缝处理<strong>Word、Excel、PowerPoint和PDF</strong>文件，支持文本提取、表格解析、OCR识别和文档加密等功能。作为Anthropic内部的生产级工具，对于需要频繁处理大量文档的用户来说不可或缺。</p>
+<h3>2\. Frontend Design</h3>
+<p>同样是Anthropic官方出品的最受欢迎技能之一，每周安装量超过11万。它解决了AI生成界面千篇一律的问题，通过让Claude定义具体的视觉方向（如粗野主义、极繁主义、复古未来主义），避免使用滥大街的字体，生成更具特色、可直接投入生产的用户界面。</p>
+<h3>3\. UI\-UX\-Pro\-Max</h3>
+<p>该技能提供基于用户研究的设计知识库，涵盖配色方案、字体搭配、图表类型和UX设计规范。它跨平台兼容，支持React、Vue、Next.js、Flutter和SwiftUI等主流框架。例如，当需要创建科技感仪表盘时，它会基于设计原则推荐合理的组合方案，而非随意发挥。</p>
+<h3>4\. Find\-skills</h3>
+<p>作为技能生态系统的内部搜索引擎，它解决了从2400多种技能中挑选的难题。根据用户描述的需求，它能语义扫描已安装的技能，推荐最合适的选项并说明调用方式，彻底消除技能选择障碍。</p>
+<h3>5\. Skill\-Creator</h3>
+<p>Anthropic官方的"元技能"——用于构建其他技能。它引导用户完成从需求收集、文档编写到测试优化的结构化流程，并包含优化触发描述的工具，确保Claude能正确调用创建的技能。非常适合将团队独特工作流进行制度化沉淀。</p>
+<h3>6\. Superpowers</h3>
+<p>Claude Code生态中最受欢迎的社区驱动项目，已获得超过12万GitHub星标。它强制执行五阶段软件开发周期（头脑风暴、设计、规划、编码、验证）和测试驱动开发，防止Claude急于编写代码，从而减少返工、大幅提升编码效率。</p>
+<h3>7\. PUA</h3>
+<p>受企业职场文化启发，该技能实现了4级压力系统来推动Claude探索更多解决方案。两次失败后切换问题解决思路，三次失败后强制执行7点检查清单。借鉴华为根因分析、亚马逊Working Backwards等顶级科技公司方法论，帮助Claude突破瓶颈。测试显示解决方案探索量增加3-4倍。</p>
+<p>这七个技能全面覆盖了文档处理、设计、工作流管理和调试中的核心痛点，将Claude Code打造成真正高效的AI队友。</p>
 
 <h2>常见问题</h2>
 <h3>问：这些技能安装是免费的吗？</h3>
@@ -6585,37 +6585,37 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills Guide →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tutorials · Difficulty: Intermediate</p>
-<p><strong>What you'll learn:</strong> How OpenClaw (Lobster) actually works — an agent loop + LLM + prompts — in 20 lines of core logic.</p>
+<p><strong>分类：</strong> AI教程 · 难度：中级</p>
+<p><strong>你将学到：</strong> OpenClaw（龙虾）的实际工作原理——用20行核心代码理解Agent循环+LLM+提示词。</p>
 </div>
 
-<p>In the realm of AI tools, “Lobster” \\(OpenClaw\\) has been making waves recently, sparking polarized and even contradictory discussions online\\. Some hail it as an all \\- powerful tool of the future, while others dismiss it as useless or even a scam\\. Prices for related services vary too, from $70 for installation to $40 for uninstallation\\. But what’s the real story behind OpenClaw? Let’s break it down from the ground up\\.</p>
-<h2>Start with Large Language Models \\(LLMs\\)</h2>
-<p>LLMs like ChatGPT are essentially question \\- and \\- answer systems\\. To interact with them programmatically, we use <strong>API interfaces</strong>\\. Major LLM providers such as OpenAI and Anthropic Claude offer HTTP \\- based APIs, and intermediaries like OpenRouter even provide SDKs for easier integration, say, with Python\\.</p>
-<p>Here’s a simple example\\. Take a piece of official sample code, modify the LLM model \\(e\\.g\\., switch to Claude’s Opus 4\\.6\\) and the input question \\(e\\.g\\., “Hello” in Chinese\\), then run it via the command line\\. You’ll get a response from the LLM, proving you can interact with LLMs programmatically\\.</p>
-<h2>Fix the “Memory” Issue of LLMs</h2>
-<p>LLMs don’t have built \\- in memory\\. To enable continuous conversation, we need to pass the <strong>conversation history</strong> every time\\. Maintain a <code>messages</code> list, append user questions and LLM responses to it, and the LLM will “remember” the context\\.</p>
-<p>Run the improved code, ask “Hello”, then “1 \\+ 1 = ?”, and then “add 1 more”, the LLM will correctly answer “3” because it has the full conversation history\\.</p>
-<h2>Build an Agent</h2>
-<p>An <strong>Agent</strong> is the core of OpenClaw\\. It works by having the LLM generate executable commands, which the program then runs automatically\\.</p>
+<p>在AI工具领域，"龙虾"（OpenClaw）最近引发了广泛关注，网络上出现了两极分化的讨论。有人称它是未来的万能工具，有人则认为它毫无用处甚至是个骗局。相关服务的价格也五花八门，从70美元的安装费到40美元的卸载费都有。那么OpenClaw的真相到底是什么？让我们从头拆解。</p>
+<h2>从大语言模型（LLM）开始</h2>
+<p>像ChatGPT这样的LLM本质上是问答系统。要与它们进行程序化交互，我们使用<strong>API接口</strong>。OpenAI和Anthropic Claude等主要LLM提供商提供基于HTTP的API，而OpenRouter等中间商甚至提供SDK以便于集成（比如用Python）。</p>
+<p>来看一个简单例子。取一段官方示例代码，修改LLM模型（例如切换为Claude的Opus 4.6）和输入问题（如用中文问"你好"），然后通过命令行运行。你将收到LLM的回复，证明你可以通过编程方式与LLM交互。</p>
+<h2>解决LLM的"记忆"问题</h2>
+<p>LLM没有内置记忆功能。要实现连续对话，每次都需要传入<strong>对话历史</strong>。维护一个<code>messages</code>列表，将用户问题和LLM回复追加到其中，LLM就会"记住"上下文。</p>
+<p>运行改进后的代码，依次询问"你好"、"1+1=?"和"再加1"，LLM会正确回答"3"，因为它拥有完整的对话历史。</p>
+<h2>构建Agent</h2>
+<p><strong>Agent</strong>是OpenClaw的核心。它的工作原理是让LLM生成可执行的命令，然后程序自动运行这些命令。</p>
 <ul>
-<li><strong>Set Response Rules</strong>: Instruct the LLM to reply with either “Command: XXX” or “Done: XXX”\\.</li>
+<li><strong>设置响应规则</strong>：指示LLM用"Command: XXX"或"Done: XXX"格式回复。</li>
 </ul>
 <ul>
-<li><strong>Loop Execution</strong>: The program loops, executing commands if the LLM outputs “Command: XXX” and ending the loop when it outputs “Done: XXX”\\.</li>
+<li><strong>循环执行</strong>：程序循环运行，当LLM输出"Command: XXX"时执行命令，输出"Done: XXX"时结束循环。</li>
 </ul>
-<p>For example, to create a <code>hello\\.txt</code> file with “hello world”, the LLM will generate <code>echo "hello world" \\&gt; hello\\.txt</code>, and the program will execute it, creating the file locally\\. Another example: to download and zip videos, the Agent will use <code>yt \\- dlp</code> to download and <code>zip</code> to compress, all automatically\\.</p>
-<h2>The Essence of OpenClaw</h2>
-<p>OpenClaw is essentially a combination of <strong>Agent loop \\+ LLM \\+ Prompt Instructions</strong>\\. The Agent doesn’t understand the commands; it just executes them blindly\\. The “intelligence” comes from the LLM’s ability to generate commands and the pre \\- defined “instruction manual” \\(prompts\\)\\.</p>
+<p>例如，要创建包含"hello world"的<code>hello.txt</code>文件，LLM会生成<code>echo "hello world" &gt; hello.txt</code>，程序执行后在本地创建文件。再比如下载并压缩视频，Agent会自动使用<code>yt-dlp</code>下载，再用<code>zip</code>压缩。</p>
+<h2>OpenClaw的本质</h2>
+<p>OpenClaw本质上就是<strong>Agent循环 + LLM + 提示指令</strong>的组合。Agent并不理解命令本身，只是盲目执行。"智能"来自LLM生成命令的能力和预定义的"使用手册"（提示词）。</p>
 <ul>
-<li><strong>Extend Capabilities</strong>: Add “skill documents” \\(like <code>skill\\.md</code>\\) to teach the Agent new commands, e\\.g\\., how to search for news\\.</li>
+<li><strong>扩展能力</strong>：添加"技能文档"（如<code>skill.md</code>）来教会Agent新命令，例如如何搜索新闻。</li>
 </ul>
 <ul>
-<li><strong>Interface Customization</strong>: Transform the command \\- line interface into an HTTP service with a web UI, or integrate with social platforms like Feishu/QQ for remote control—this is what most people recognize as “Lobster”\\.</li>
+<li><strong>界面定制</strong>：将命令行界面改造为带Web UI的HTTP服务，或集成到飞书/QQ等社交平台进行远程控制——这就是大多数人认识的"龙虾"。</li>
 </ul>
-<h2>A Balanced View</h2>
-<p>OpenClaw is neither all \\- powerful nor useless\\. Its effectiveness depends on whether operations in the world are <strong>command \\- based or API \\- based</strong> and whether the LLM knows those commands\\. It pushes the trend of making operations more command \\- and API \\- centric, but this also brings risks \\(e\\.g\\., executing malicious commands\\), echoing ethical debates in movies like <em>I, Robot</em>\\.</p>
-<p>In short, OpenClaw is a powerful paradigm, but its true potential lies in how command \\- and API \\- driven our world becomes\\.</p>
+<h2>理性看待</h2>
+<p>OpenClaw既不是万能也不是无用。它的效果取决于世界上的操作是否<strong>基于命令或API</strong>，以及LLM是否知道这些命令。它推动了操作向命令化和API化发展的趋势，但同时也带来了风险（如执行恶意命令），这呼应了《我，机器人》等电影中的伦理讨论。</p>
+<p>简而言之，OpenClaw是一个强大的范式，但其真正的潜力取决于我们的世界能在多大程度上实现命令化和API化。</p>
 
 <h2>常见问题</h2>
 <h3>问：使用OpenClaw需要会编程吗？</h3>
@@ -6798,42 +6798,42 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> Claude Code Browser Control Guide</p>
-<p><strong>What you'll learn:</strong> How to control web browsers through Claude Code for page navigation, data capture, screenshots, and cross-page workflows — with key strategies to minimize token consumption.</p>
+<p><strong>分类：</strong> Claude Code浏览器控制指南</p>
+<p><strong>你将学到：</strong> 如何通过Claude Code控制Web浏览器进行页面导航、数据抓取、截图和跨页面工作流——以及降低Token消耗的关键策略。</p>
 </div>
 
-<p>Browser automation stands as one of the most practical application scenarios for AI coding assistants\\. This guide focuses on how to operate web browsers smoothly via Claude Code, alongside core strategies to cut down token usage and boost execution efficiency\\.</p>
-<h2>Core Advantages of Claude Code Browser Operation</h2>
-<p>Traditional automated scripts often come with lengthy code and heavy resource occupation\\. In contrast, Claude Code can directly send instructions to control mainstream browsers\\. It simulates real human browsing behaviors such as page jumping, element clicking, content input, information extraction and screenshot capturing\\. The whole process avoids redundant code writing, which greatly lowers the technical threshold for web automation\\.</p>
-<p>More importantly, proper configuration enables remarkable token saving effects\\. Less token consumption means lower operating costs, faster response speed, and longer continuous task running duration, perfectly fitting batch web processing, data collection and online operation demands\\.</p>
-<h2>Practical Browser Control Functional Scenarios</h2>
+<p>浏览器自动化是AI编程助手最实用的应用场景之一。本文重点介绍如何通过Claude Code顺畅操作Web浏览器，以及降低Token用量、提升执行效率的核心策略。</p>
+<h2>Claude Code浏览器操作的核心优势</h2>
+<p>传统的自动化脚本通常代码冗长、资源占用大。相比之下，Claude Code可以直接通过指令控制主流浏览器。它模拟真实的人机浏览行为，如页面跳转、元素点击、内容输入、信息提取和截图抓取。整个过程无需编写冗余代码，大幅降低了Web自动化的技术门槛。</p>
+<p>更重要的是，合理配置可以实现显著的Token节省效果。更少的Token消耗意味着更低的运营成本、更快的响应速度和更长的连续任务运行时间，非常适合批量网页处理、数据采集和在线运维需求。</p>
+<h2>实用的浏览器控制功能场景</h2>
 <ol>
-<li><strong>Page Navigation \\&amp; Element Interaction</strong></li>
+<li><strong>页面导航与元素交互</strong></li>
 </ol>
-<p>Claude Code can access designated website links, locate buttons, input boxes and text areas on pages, and finish clicking, typing, selecting and switching tabs automatically\\. It handles daily routine web operations without manual supervision\\.</p>
+<p>Claude Code可以访问指定网站链接，定位页面上的按钮、输入框和文本区域，自动完成点击、输入、选择和切换标签页等操作。日常的网页操作无需人工监督即可完成。</p>
 <ol>
-<li><strong>Online Data Capture \\&amp; Sorting</strong></li>
+<li><strong>在线数据抓取与整理</strong></li>
 </ol>
-<p>The AI assistant extracts target text, pictures, form data and list information from loaded web pages\\. It sorts and organizes collected content instantly, realizing automatic information gathering from news portals, industry platforms and resource websites\\.</p>
+<p>AI助手从加载的网页中提取目标文本、图片、表单数据和列表信息，并即时整理收集到的内容，实现从新闻门户、行业平台和资源网站的自动信息采集。</p>
 <ol>
-<li><strong>Screenshot \\&amp; Page Status Detection</strong></li>
+<li><strong>截图与页面状态检测</strong></li>
 </ol>
-<p>It supports full\\-page or regional screenshot recording, and judges page loading status, pop\\-up windows and verification prompts\\. It can respond to abnormal page conditions timely to guarantee stable running of automated tasks\\.</p>
+<p>支持全屏或区域截图记录，判断页面加载状态、弹窗和验证提示，及时发现异常页面状态，保证自动化任务的稳定运行。</p>
 <ol>
-<li><strong>Cross\\-page Continuous Workflow</strong></li>
+<li><strong>跨页面连续工作流</strong></li>
 </ol>
-<p>Complete chained operations including form submission, multi\\-page information query and file downloading\\. It executes business processes end to end inside browsers steadily\\.</p>
-<h2>Key Tips to Reduce Token Usage</h2>
-<h3>Simplify Command Description</h3>
-<p>Avoid overly wordy and repetitive descriptive sentences when delivering orders\\. Use concise, definite task demands\\. Clear and brief instructions help Claude Code understand intentions quickly, reducing invalid token consumption brought by redundant text parsing\\.</p>
-<h3>Define Exact Operation Scope</h3>
-<p>Specify target pages, element positions and task boundaries clearly\\. Narrow down the execution range and prevent the AI from scanning irrelevant page content or conducting unnecessary trial operations, effectively cutting extra token loss\\.</p>
-<h3>Reuse Stable Basic Logic</h3>
-<p>Summarize common browser operation rules and fixed templates\\. Call existing mature logic repeatedly for similar tasks, instead of rewriting complete instructions every time\\. Reusable command frameworks drastically compress average token cost of single operation\\.</p>
-<h3>Disable Unnecessary Auxiliary Analysis</h3>
-<p>Turn off redundant explanation, detailed principle deduction and excessive result feedback when pursuing efficient execution\\. Only retain core operation logs and final results, saving tokens occupied by text output\\.</p>
-<h2>Application Value \\&amp; Usage Suggestion</h2>
-<p>Browser control powered by Claude Code balances easy operation and low cost\\. It is suitable for developers, content creators and industry practitioners to streamline repetitive web work\\. By mastering token\\-saving control methods, users can maximize task volume under limited token quota, improve daily work automation level, and create more practical productivity tools based on browser operation functions\\.</p>
+<p>完成表单提交、多页面信息查询和文件下载等链式操作，在浏览器内稳定执行业务流程的端到端处理。</p>
+<h2>降低Token用量的关键技巧</h2>
+<h3>简化指令描述</h3>
+<p>下达指令时避免过于啰嗦和重复的描述语句，使用简洁、明确的任务要求。清晰简短的指令有助于Claude Code快速理解意图，减少冗余文本解析带来的无效Token消耗。</p>
+<h3>明确操作范围</h3>
+<p>清晰指定目标页面、元素位置和任务边界，缩小执行范围，防止AI扫描无关页面内容或进行不必要的试探性操作，有效减少额外Token损耗。</p>
+<h3>复用稳定的基础逻辑</h3>
+<p>总结通用浏览器操作规则和固定模板，对相似任务重复调用已有的成熟逻辑，而不是每次都重写完整指令。可复用的命令框架能大幅压缩单次操作的平均Token成本。</p>
+<h3>关闭不必要的辅助分析</h3>
+<p>在追求高效执行时，关闭多余的说明、详细原理推导和过度的结果反馈，只保留核心操作日志和最终结果，节省文本输出占用的Token。</p>
+<h2>应用价值与使用建议</h2>
+<p>Claude Code驱动的浏览器控制兼顾了操作简便和低成本，适合开发者、内容创作者和行业从业者简化重复性网页工作。通过掌握Token节约的控制方法，用户可以在有限Token配额下最大化任务量，提升日常工作的自动化水平，并基于浏览器操作功能打造更多实用的生产力工具。</p>
 
 <h2>常见问题</h2>
 <h3>问：使用Claude Code进行浏览器控制需要编程经验吗？</h3>
@@ -7149,141 +7149,141 @@ git reset --hard HEAD
 <p><strong>Next:</strong> <a href="/article/claude-code-install-setup">Claude Code Install & Setup →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> Developer Tools · Difficulty: Beginner</p>
-<p><strong>What you'll learn:</strong> Fundamental concepts, workflow logic and commonly used operational commands of Git and GitHub.</p>
+<p><strong>分类：</strong> 开发者工具 · 难度：初级</p>
+<p><strong>你将学到：</strong> Git和GitHub的基础概念、工作流程逻辑以及常用操作命令。</p>
 </div>
 
-<p>Git and GitHub have become indispensable tools for modern developers, widely used in code version control, team collaboration and remote project management\\. This article systematically sorts out fundamental concepts, workflow logic and commonly used operational commands, helping learners build a complete knowledge system from scratch and apply these tools efficiently in daily development and AI project deployment\\.</p>
-<h2>Fundamental Core Definitions</h2>
+<p>Git和GitHub已成为现代开发者不可或缺的工具，广泛应用于代码版本控制、团队协作和远程项目管理。本文系统梳理基础概念、工作流程逻辑和常用操作命令，帮助学习者从零搭建完整的知识体系，在日常开发和AI项目部署中高效运用这些工具。</p>
+<h2>核心基础定义</h2>
 <h3>Git</h3>
-<p>Git is a distributed version control system running locally on your computer\\. It records every modification of code files, supports rollback of historical versions, creation of independent development branches and local offline editing\\. It tracks file changes without relying on network connection, and keeps complete modification logs for all project contents\\.</p>
+<p>Git是一个运行在本地计算机上的分布式版本控制系统。它记录代码文件的每一次修改，支持历史版本回滚、独立开发分支创建和本地离线编辑。它无需依赖网络即可跟踪文件变更，并保留所有项目内容的完整修改日志。</p>
 <h3>GitHub</h3>
-<p>GitHub is a cloud\\-based hosting platform built upon Git technology\\. It stores local Git repositories remotely, enables multi\\-person team code collaboration, public project sharing, code review and remote file synchronization\\. Developers can upload local projects, download open\\-source resources and manage team projects uniformly on this platform\\.</p>
-<h3>Key Differentiation</h3>
-<p>Git focuses on local file version tracking and modification management, while GitHub serves as remote storage and collaborative service carrier\\. All local operations depend on Git commands, and cross\\-device sharing and teamwork rely on GitHub remote warehouse\\.</p>
-<h2>Basic Workflow Framework</h2>
-<p>The standard operating flow covers local file editing, local version submission, remote warehouse synchronization and version iteration\\. The whole process follows this logical chain:</p>
+<p>GitHub是一个基于Git技术的云端托管平台。它将本地Git仓库存储到远程服务器，实现多人团队代码协作、公开项目共享、代码审查和远程文件同步。开发者可以在此平台上上传本地项目、下载开源资源、统一管理团队项目。</p>
+<h3>关键区别</h3>
+<p>Git专注于本地文件版本跟踪和修改管理，而GitHub是远程存储和协作服务的载体。所有本地操作依赖Git命令，跨设备共享和团队协作则依赖GitHub远程仓库。</p>
+<h2>基本工作流程框架</h2>
+<p>标准操作流程涵盖本地文件编辑、本地版本提交、远程仓库同步和版本迭代。整个过程遵循以下逻辑链：</p>
 <ol>
-<li>Initialize local Git repository</li>
+<li>初始化本地Git仓库</li>
 </ol>
 <ol>
-<li>Add modified files to temporary storage area</li>
+<li>将修改后的文件添加到暂存区</li>
 </ol>
 <ol>
-<li>Submit files to local version library and leave notes</li>
+<li>将文件提交到本地版本库并添加注释</li>
 </ol>
 <ol>
-<li>Bind local project with remote GitHub repository</li>
+<li>将本地项目与远程GitHub仓库绑定</li>
 </ol>
 <ol>
-<li>Push local code to remote cloud warehouse</li>
+<li>将本地代码推送到远程云端仓库</li>
 </ol>
 <ol>
-<li>Pull remote updated content back to local device</li>
+<li>将远程更新内容拉取回本地设备</li>
 </ol>
-<h2>Practical Command Operation Tutorial</h2>
-<p>All frequently used executable commands are listed below with standard code block format, directly applicable to terminal execution\\.</p>
-<h3>1\\. Local Environment Initialization</h3>
-<p>Create and activate local Git management space</p>
+<h2>实用命令操作教程</h2>
+<p>以下列出所有常用可执行命令，采用标准代码块格式，可直接在终端中执行。</p>
+<h3>1. 本地环境初始化</h3>
+<p>创建并激活本地Git管理空间</p>
 <pre><code class="language-bash">
-# Enter target project folder
+# 进入目标项目文件夹
 cd your-project-folder
 
-# Initialize local Git repository
+# 初始化本地Git仓库
 git init
 </code></pre>
-<h3>2\\. File Staging \\&amp; Local Commit</h3>
-<p>Record changes and generate formal local version records</p>
+<h3>2. 文件暂存与本地提交</h3>
+<p>记录变更并生成正式的本地版本记录</p>
 <pre><code class="language-bash">
-# Add single file to staging area
+# 添加单个文件到暂存区
 git add index.js
 
-# Add all modified files in the folder
+# 添加文件夹中所有修改的文件
 git add .
 
-# Submit version with descriptive comment
+# 提交版本并添加描述性注释
 git commit -m "Complete basic page layout function"
 </code></pre>
-<h3>3\\. Remote Warehouse Connection</h3>
-<p>Bind local project to newly created GitHub remote repository</p>
+<h3>3. 远程仓库连接</h3>
+<p>将本地项目与新创建的GitHub远程仓库绑定</p>
 <pre><code class="language-bash">
-# Link local folder with remote GitHub repository address
+# 将本地文件夹链接到远程GitHub仓库地址
 git remote add origin https://github.com/username/repository-name.git
 
-# Check current bound remote warehouse information
+# 查看当前绑定的远程仓库信息
 git remote -v
 </code></pre>
-<h3>4\\. Code Push to Remote Server</h3>
-<p>Upload local finished version to GitHub cloud storage</p>
+<h3>4. 代码推送到远程服务器</h3>
+<p>将本地完成的版本上传到GitHub云端存储</p>
 <pre><code class="language-bash">
-# Push local main branch code to remote repository
+# 将本地主分支代码推送到远程仓库
 git push origin main
 </code></pre>
-<h3>5\\. Pull Remote Updated Code</h3>
-<p>Synchronize latest remote modification content to local workspace</p>
+<h3>5. 拉取远程更新代码</h3>
+<p>将远程最新的修改内容同步到本地工作区</p>
 <pre><code class="language-bash">
 git pull origin main
 </code></pre>
-<h3>6\\. Basic Version Check Commands</h3>
-<p>View modification status and historical submission records</p>
+<h3>6. 基本版本查看命令</h3>
+<p>查看文件修改状态和历史提交记录</p>
 <pre><code class="language-bash">
-# Check current file modification status
+# 查看当前文件修改状态
 git status
 
-# Browse all historical version commit logs
+# 浏览所有历史版本提交日志
 git log
 </code></pre>
-<h2>Branch Management Practical Usage</h2>
-<p>Branch function is the core of parallel development, avoiding direct interference between formal project and new feature development\\. Independent branches can be created to develop new functions, debug defects, and merge stable contents back to main branch after completion\\.</p>
+<h2>分支管理实用技巧</h2>
+<p>分支功能是并行开发的核心，避免正式项目与新功能开发之间的直接干扰。可以创建独立分支来开发新功能、调试缺陷，完成后将稳定内容合并回主分支。</p>
 <pre><code class="language-bash">
-# Create new development branch
-git dev new-feature
+# 创建新的开发分支
+git branch new-feature
 
-# Switch to specified branch
+# 切换到指定分支
 git checkout new-feature
 
-# Merge developed branch into main branch
+# 将开发完成的分支合并到主分支
 git checkout main
 git merge new-feature
 </code></pre>
-<h2>Common Daily Application Scenarios</h2>
+<h2>常见日常应用场景</h2>
 <ol>
-<li><strong>Personal Project Version Backup</strong></li>
+<li><strong>个人项目版本备份</strong></li>
 </ol>
-<p>Regularly submit and push local code to GitHub, prevent file loss caused by device failure, and roll back to any historical stable version when code errors appear\\.</p>
+<p>定期提交并推送本地代码到GitHub，防止设备故障导致文件丢失，代码出错时可回滚到任意历史稳定版本。</p>
 <ol>
-<li><strong>Open Source Resource Download \\&amp; Learning</strong></li>
+<li><strong>开源资源下载与学习</strong></li>
 </ol>
-<p>Use clone command to download excellent public AI projects and development cases from GitHub, learn framework structure and functional logic locally\\.</p>
+<p>使用clone命令从GitHub下载优秀的公开AI项目和开发案例，在本地学习框架结构和功能逻辑。</p>
 <pre><code class="language-bash">
 git clone https://github.com/example/openai-demo.git
 </code></pre>
 <ol>
-<li><strong>Team Collaborative Development</strong></li>
+<li><strong>团队协作开发</strong></li>
 </ol>
-<p>Multiple developers create independent branches to develop respective modules, submit code separately, conduct online code review on GitHub, and merge all contents into official project uniformly\\.</p>
+<p>多名开发者创建独立分支分别开发各自模块，分别提交代码，在GitHub上进行在线代码审查，最后将所有内容统一合并到正式项目。</p>
 <ol>
-<li><strong>AI Project Deployment Management</strong></li>
+<li><strong>AI项目部署管理</strong></li>
 </ol>
-<p>Manage model files, configuration documents and service code via Git version control, synchronize iterative optimized AI program to remote warehouse, facilitating cross\\-device deployment and project maintenance\\.</p>
-<h2>Common Troubleshooting Tips</h2>
+<p>通过Git版本控制管理模型文件、配置文档和服务代码，将迭代优化后的AI程序同步到远程仓库，便于跨设备部署和项目维护。</p>
+<h2>常见问题排查技巧</h2>
 <ul>
-<li>When remote binding address error occurs, reset remote warehouse link</li>
+<li>远程绑定地址错误时，重置远程仓库链接</li>
 </ul>
 <pre><code class="language-bash">
 git remote set-url origin new-repository-url
 </code></pre>
 <ul>
-<li>Abandon uncommitted local modifications and restore files to latest submitted version</li>
+<li>放弃未提交的本地修改，将文件恢复到最新提交版本</li>
 </ul>
 <pre><code class="language-bash">
 git reset --hard HEAD
 </code></pre>
 <ul>
-<li>Solve code conflict: Compare conflicting content manually, retain valid code, then resubmit and push versions\\.</li>
+<li>解决代码冲突：手动对比冲突内容，保留有效代码，然后重新提交并推送版本。</li>
 </ul>
-<h2>Final Summary</h2>
-<p>Git undertakes local version recording and file management, while GitHub realizes remote storage and multi\\-party collaboration\\. Mastering basic initialization, submission, push, pull and branch control commands can meet most personal development and team cooperation demands\\. Standard version control habits can effectively reduce code loss risk, improve development efficiency, and build standardized management mode suitable for AI projects, web development and other technical creation work\\.</p>
+<h2>总结</h2>
+<p>Git承担本地版本记录和文件管理，GitHub实现远程存储和多端协作。掌握基础初始化、提交、推送、拉取和分支控制命令，可以满足大多数个人开发和团队协作需求。规范的版本控制习惯能有效降低代码丢失风险，提高开发效率，为AI项目、Web开发等技术创作工作建立标准化的管理方式。</p>
 
 <h2>常见问题</h2>
 <h3>问：Git只适用于程序员吗？</h3>
@@ -7291,7 +7291,7 @@ git reset --hard HEAD
 <h3>问：Git和GitHub有什么区别？</h3>
 <p>Git是在本地计算机上运行的版本控制系统。GitHub是托管Git仓库的云平台。你可以在没有GitHub的情况下使用Git，但GitHub需要Git。</p>
 <h3>问：使用Git必须用命令行吗？</h3>
-<p>有像GitHub Desktop、Sourcetree和VS Code内置Git支持等GUI工具。但学习基本的命令行命令能给你更多控制，并且在服务器环境中是必需的。</p>
+<p>有像GitHub Desktop、Sourcetree和VS Code内置Git支持等GUI工具。但学习基本的命令行命令能给你更多控制权，并且在服务器环境中是必需的。</p>
 
 <div class="next-step">
 <p><strong>下一篇：</strong> <a href="/article/claude-code-install-setup">Claude Code安装与配置 →</a></p>
@@ -7388,34 +7388,34 @@ git commit -m '{"openclaw": "metadata"}'
 <p><strong>Next:</strong> <a href="/article/openclaw-demystified-20-lines">OpenClaw Demystified in 20 Lines →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Industry Analysis · Difficulty: Intermediate</p>
-<p><strong>What you'll learn:</strong> OpenAI's strategic moves integrating OpenClaw, Codex innovations, and what they mean for global developers.</p>
+<p><strong>分类：</strong> AI行业分析 · 难度：中级</p>
+<p><strong>你将学到：</strong> OpenAI整合OpenClaw的战略举措、Codex创新功能以及对全球开发者的实际影响。</p>
 </div>
 
-<p>In the fiercely competitive AI developer tools market, OpenAI has launched a series of impactful updates, completely reshaping the rules of the game\\. This article will dissect OpenAI’s strategic moves, focusing on the integration of OpenClaw, the innovative features of Codex, and the practical implications for developers aiming to go global\\.</p>
-<h2>OpenClaw Integration: Breaking Down Barriers for Global Developers</h2>
-<p>One of the most groundbreaking moves is the seamless integration of OpenClaw with ChatGPT\\. Developers can now log in to OpenClaw using their existing ChatGPT accounts, eliminating the need for separate registrations or payments\\. This is a game\\-changer for overseas developers, as it allows them to leverage OpenClaw’s capabilities without navigating new account systems or additional costs\\.</p>
+<p>在竞争激烈的AI开发者工具市场中，OpenAI推出了一系列重磅更新，彻底改变了游戏规则。本文将深入剖析OpenAI的战略布局，重点分析OpenClaw的整合、Codex的创新功能，以及对出海开发者的实际意义。</p>
+<h2>OpenClaw整合：打破全球开发者的壁垒</h2>
+<p>最具突破性的举措之一是将OpenClaw与ChatGPT无缝集成。开发者现在可以使用现有的ChatGPT账号登录OpenClaw，无需单独注册或付费。这对出海开发者来说是一个重大利好，因为他们无需面对新账号系统或额外成本即可使用OpenClaw的功能。</p>
 <pre><code class="language-plaintext">
 # How to Use OpenClaw with Your ChatGPT Account
 1. Ensure you have a ChatGPT Plus subscription.
 2. Visit the OpenClaw platform and select "Login with ChatGPT".
 3. Authorize the connection – all your usage quotas are deducted from your ChatGPT subscription.
 </code></pre>
-<p>This integration not only reduces friction but also ensures that developers can access OpenClaw’s features as part of their existing workflow, making it easier to adopt for teams spread across different regions\\.</p>
-<h2>Codex's Pixel Pet: A Practical Tool for Developer Engagement</h2>
-<p>Codex’s new pixel pet feature is more than just a gimmick – it’s a practical tool that enhances developer productivity\\. By typing the command <code>/pet</code> in the Codex interface, developers can summon a pixel\\-style pet that acts as a visual status indicator\\.</p>
+<p>这种集成不仅降低了使用门槛，还确保开发者可以在现有工作流中直接使用OpenClaw的功能，使跨区域团队更容易采纳。</p>
+<h2>Codex的像素宠物：提升开发者参与度的实用工具</h2>
+<p>Codex的像素宠物功能不仅仅是噱头——它是一个实用的生产力工具。在Codex界面中输入<code>/pet</code>命令，开发者可以召唤一个像素风格的宠物作为可视化状态指示器。</p>
 <pre><code class="language-plaintext">
 # Summon and Use Your Codex Pet
 1. In the Codex command bar, type \`/pet\` and press enter.
 2. Choose from 8 preset pets or use the \`hatch-pet\` skill to create a custom one:
 </code></pre>
-<p>skill\\-installer hatch\\-pet</p>
+<p>skill\-installer hatch\-pet</p>
 <pre><code class="language-plaintext">
-3. The pet’s animations will reflect Codex’s status – busy when processing, idle when waiting for input.
+3. The pet's animations will reflect Codex's status – busy when processing, idle when waiting for input.
 </code></pre>
-<p>For overseas developers working across time zones, this feature provides a quick visual cue about Codex’s activity, reducing the need to constantly switch windows to check progress\\. It also adds a touch of personalization, making the development environment more engaging\\.</p>
-<h2>Autonomous Iteration: Redefining Developer Workflows</h2>
-<p>Codex’s new <code>/goal</code> command introduces autonomous iteration, a feature that transforms how developers approach coding tasks\\. Instead of issuing step\\-by\\-step instructions, developers can set a high\\-level goal, and Codex will break it down into tasks, write code, and debug autonomously\\.</p>
+<p>对于跨时区工作的出海开发者，这个功能提供了Codex活动状态的快速视觉提示，减少了不断切换窗口检查进度的需要。它还增添了个性化色彩，使开发环境更有趣。</p>
+<h2>自主迭代：重新定义开发者工作流</h2>
+<p>Codex的新<code>/goal</code>命令引入了自主迭代功能，彻底改变了开发者处理编码任务的方式。开发者无需逐条发出指令，只需设定一个高层目标，Codex就会自动分解任务、编写代码并自主调试。</p>
 <pre><code class="language-plaintext">
 # Using the /goal Command for Autonomous Development
 1. In Codex, enter:
@@ -7428,28 +7428,28 @@ git commit -m '{"openclaw": "metadata"}'
 - Debug issues and iterate automatically.
 3. Monitor progress via your Codex pet or progress notifications.
 </code></pre>
-<p>This is particularly valuable for overseas teams collaborating on complex projects\\. It allows developers to focus on high\\-level strategy while Codex handles the implementation details, speeding up development cycles and reducing errors\\.</p>
-<h2>One\\-Click Migration: Lowering the Barrier to Entry</h2>
-<p>OpenAI has also introduced a one\\-click migration feature in Codex, allowing developers to import their workflows, plugins, and project configurations from other AI code tools\\.</p>
+<p>这对协作复杂项目的出海团队尤其有价值。开发者可以专注于高层策略，而Codex负责实现细节，加快开发周期并减少错误。</p>
+<h2>一键迁移：降低入门门槛</h2>
+<p>OpenAI还在Codex中引入了一键迁移功能，允许开发者从其他AI代码工具导入工作流、插件和项目配置。</p>
 <pre><code class="language-plaintext">
 # Migrate to Codex in Three Steps
 1. Go to Codex settings &gt; General &gt; Import Agent Config.
 2. Select the source tool and authorize the import.
 3. Wait for the migration to complete – all your plugins, agents, and project settings will be available in Codex.
 </code></pre>
-<p>This feature is a direct response to Anthropic’s earlier attempts to poach users with similar migration tools\\. For developers looking to switch to Codex from other platforms, this significantly reduces the switching cost, making it easier to adopt OpenAI’s ecosystem\\.</p>
-<h2>The Competitive Landscape: Open vs\\. Closed Ecosystems</h2>
-<p>Anthropic’s aggressive attempts to block OpenClaw, including code\\-level bans and account restrictions, have backfired\\. In contrast, OpenAI’s open approach has won favor with developers\\. For example, a developer who merely mentioned "OpenClaw" in a Git commit was banned by Claude Code, highlighting Anthropic’s heavy\\-handed tactics\\.</p>
+<p>这个功能是对Anthropic早期用类似迁移工具挖墙脚的直接回应。对于想从其他平台切换到Codex的开发者来说，这大幅降低了切换成本，使其更容易接受OpenAI的生态系统。</p>
+<h2>竞争格局：开放与封闭生态系统</h2>
+<p>Anthropic试图封杀OpenClaw的激进手段，包括代码级封禁和账号限制，反而适得其反。相比之下，OpenAI的开放姿态赢得了开发者的青睐。例如，有位开发者仅仅因为在Git提交中提到了"OpenClaw"就被Claude Code封号，凸显了Anthropic的强硬手段。</p>
 <pre><code class="language-plaintext">
 # Example of Anthropic's Overly Strict Ban
 // A developer's empty repository with a Git commit message containing "OpenClaw"
 git commit -m '{"openclaw": "metadata"}'
 // Result: Claude Code banned the account and zeroed out usage credits.
 </code></pre>
-<p>This heavy\\-handed approach has driven developers toward OpenAI’s more open ecosystem, where innovation and collaboration are encouraged rather than restricted\\.</p>
-<h2>Conclusion: Embracing the OpenAI Ecosystem for Global Success</h2>
-<p>OpenAI’s recent updates – integrating OpenClaw, introducing Codex’s pet and autonomous iteration, and enabling one\\-click migration – demonstrate a clear strategy to dominate the AI developer tools market\\. For overseas developers, these features offer practical benefits: reduced friction, enhanced productivity, and a more engaging development experience\\.</p>
-<p>As the AI industry shifts from pure model competition to ecosystem and workflow battles, OpenAI’s focus on building a comprehensive, user\\-friendly ecosystem positions it well to lead\\. Developers looking to go global should consider leveraging these tools to streamline their workflows, collaborate more effectively, and stay ahead in the rapidly evolving AI landscape\\.</p>
+<p>这种强硬手段促使开发者转向OpenAI更加开放的生态系统，在那里创新和协作受到鼓励而非限制。</p>
+<h2>结论：拥抱OpenAI生态系统实现全球成功</h2>
+<p>OpenAI最近的更新——整合OpenClaw、引入Codex宠物和自主迭代、实现一键迁移——展示了其主导AI开发者工具市场的清晰战略。对出海开发者而言，这些功能提供了实实在在的好处：更低的使用门槛、更高的生产力和更愉快的开发体验。</p>
+<p>随着AI行业从单纯的模型竞争转向生态系统和工作流之争，OpenAI专注于构建全面、用户友好的生态系统，使其占据了有利位置。有志于全球化的开发者应考虑利用这些工具来简化工作流、更有效地协作，并在快速演变的AI领域保持领先。</p>
 
 <h2>常见问题</h2>
 <h3>问：使用OpenClaw集成需要ChatGPT Plus订阅吗？</h3>
@@ -7579,24 +7579,24 @@ if __name__ == "__main__":
 <p><strong>Next:</strong> <a href="/article/12-core-ai-concepts-guide">12 Core AI Concepts Guide →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Development · Difficulty: Intermediate</p>
-<p><strong>What you'll learn:</strong> The definitions, functional differences and practical application logic of Agent, Skill and Harness in modern AI development.</p>
+<p><strong>分类：</strong> AI开发 · 难度：中级</p>
+<p><strong>你将学到：</strong> 现代AI开发中Agent、Skill和Harness的定义、功能区别和实际应用逻辑。</p>
 </div>
 
-<p>As AI intelligent automation keeps evolving, three core terms Agent, Skill and Harness have become fundamental concepts for building automated task systems\\. This article elaborates their definitions, functional differences and practical application logic, combined with usable operation logic and sample code, helping developers quickly master these modules and apply them to daily AI programming and workflow deployment\\.</p>
-<h2>Basic Definition of Three Core Modules</h2>
+<p>随着AI智能自动化的不断发展，三个核心术语——Agent、Skill和Harness——已成为构建自动化任务系统的基础概念。本文详细阐述它们的定义、功能区别和实际应用逻辑，结合可用的操作逻辑和示例代码，帮助开发者快速掌握这些模块并应用于日常AI编程和工作流部署。</p>
+<h2>三个核心模块的基本定义</h2>
 <h3>AI Agent</h3>
-<p>An Agent is an autonomous intelligent execution subject\\. It can independently perceive task demands, analyze objectives, make decision judgments and complete a full set of work without continuous human command intervention\\. It acts as the core brain of the entire intelligent system, responsible for overall task scheduling, progress control and result feedback\\.</p>
+<p>Agent是自主智能执行主体。它能独立感知任务需求、分析目标、做出决策判断并在无需持续人工指令干预的情况下完成整套工作。它是整个智能系统的核心大脑，负责全局任务调度、进度控制和结果反馈。</p>
 <h3>AI Skill</h3>
-<p>Skill refers to independent functional capability units\\. Each skill corresponds to a single professional function, such as file reading, web crawling, data calculation, image parsing and code compilation\\. Skills are reusable functional components that can be freely called and combined by agents to realize diversified complex demands\\.</p>
+<p>Skill是独立的功能能力单元。每个技能对应一个单一的专业功能，如文件读取、网页爬取、数据计算、图像解析和代码编译。Skill是可复用的功能组件，可以被Agent自由调用和组合，实现多样化的复杂需求。</p>
 <h3>Harness</h3>
-<p>Harness serves as the unified running carrier and operation framework\\. It undertakes the connection, scheduling and environment management between agents and skills\\. It standardizes calling rules, resource allocation, log recording and exception handling, ensuring all modules run stably and interact orderly inside the system\\.</p>
-<h2>Operational Relationship Between Modules</h2>
-<p>The operating logic follows a clear closed loop\\. Users submit general tasks to Harness framework first\\. Harness distributes the demands to the built\\-in AI Agent\\. The agent splits complex tasks into multiple independent subtasks, matches corresponding Skill functions according to subtask attributes, and sends calling instructions\\. After the skill finishes executing specific operations, it returns data results to the agent\\. Finally, the agent summarizes all information and feeds the final output back to users via Harness\\.</p>
-<p>This layered design realizes separation of duties\\. The agent focuses on decision making, skills focus on specific execution, and harness guarantees stable operation, greatly improving system scalability and maintenance efficiency\\.</p>
-<h2>Practical Usage \\&amp; Sample Implementation</h2>
-<h3>1\\. Simple Skill Definition Code Block</h3>
-<p>Define a basic file query skill that can be invoked by the agent to obtain local document information</p>
+<p>Harness是统一的运行载体和操作框架。它承担Agent和Skill之间的连接、调度和环境管理，标准化调用规则、资源分配、日志记录和异常处理，确保所有模块在系统内部稳定运行和有序交互。</p>
+<h2>模块间的运行关系</h2>
+<p>运行逻辑遵循一个清晰的闭环。用户首先向Harness框架提交总体任务。Harness将需求分发给内置的AI Agent。Agent将复杂任务拆分为多个独立的子任务，根据子任务属性匹配合适的Skill功能并发送调用指令。Skill执行完具体操作后，将数据结果返回给Agent。最后，Agent汇总所有信息并通过Harness将最终输出反馈给用户。</p>
+<p>这种分层设计实现了职责分离。Agent专注于决策，Skill专注于具体执行，Harness保障稳定运行，大大提高了系统的可扩展性和维护效率。</p>
+<h2>实际使用与示例实现</h2>
+<h3>1. 简单的Skill定义代码块</h3>
+<p>定义一个基础的文件查询技能，可被Agent调用来获取本地文档信息</p>
 <pre><code class="language-python">
 class FileQuerySkill:
     def execute(self, file_path: str) -&gt; str:
@@ -7607,8 +7607,8 @@ class FileQuerySkill:
         except Exception as e:
             return f"File access failed: {str(e)}"
 </code></pre>
-<h3>2\\. Agent Task Scheduling Logic</h3>
-<p>The intelligent agent analyzes requirements and automatically calls matching skills to complete combined tasks</p>
+<h3>2. Agent任务调度逻辑</h3>
+<p>智能Agent分析需求并自动调用匹配的技能来完成组合任务</p>
 <pre><code class="language-python">
 class TaskAgent:
     def __init__(self):
@@ -7619,8 +7619,8 @@ class TaskAgent:
             return self.skills["file_query"].execute("demo.txt")
         return "Unsupported task type"
 </code></pre>
-<h3>3\\. Harness Runtime Management Module</h3>
-<p>Unified framework to load agents, manage resources and process task access requests</p>
+<h3>3. Harness运行时管理模块</h3>
+<p>统一框架加载Agent、管理资源和处理任务访问请求</p>
 <pre><code class="language-python">
 class SystemHarness:
     def __init__(self):
@@ -7638,34 +7638,34 @@ if __name__ == "__main__":
     final_output = ai_system.run_task("read file")
     print(final_output)
 </code></pre>
-<h2>Practical Application Scenarios</h2>
+<h2>实际应用场景</h2>
 <ol>
-<li><strong>Automated Code Development</strong></li>
+<li><strong>自动化代码开发</strong></li>
 </ol>
-<p>Agents disassemble programming demands, call coding, debugging and testing skills separately, and harness manages operating environment and version records to realize automatic project writing\\.</p>
+<p>Agent拆解编程需求，分别调用编码、调试和测试技能，Harness管理运行环境和版本记录，实现自动化项目编写。</p>
 <ol>
-<li><strong>Batch Data Processing</strong></li>
+<li><strong>批量数据处理</strong></li>
 </ol>
-<p>The main agent sorts data classification tasks, invokes parsing, calculation and storage skills in batches, and the framework uniformly monitors running status to avoid task collapse\\.</p>
+<p>主Agent整理数据分类任务，批量调用解析、计算和存储技能，框架统一监控运行状态，避免任务崩溃。</p>
 <ol>
-<li><strong>Browser \\&amp; Local Tool Control</strong></li>
+<li><strong>浏览器与本地工具控制</strong></li>
 </ol>
-<p>Match page clicking, content extraction and form submission skills\\. The agent judges operation steps, and harness maintains session connection to complete unattended web automation work\\.</p>
-<h2>Core Usage Tips</h2>
+<p>匹配页面点击、内容提取和表单提交技能。Agent判断操作步骤，Harness维护会话连接，完成无人值守的Web自动化工作。</p>
+<h2>核心使用技巧</h2>
 <ol>
-<li>Split independent functions into separate skills, which is convenient for later function update and repeated invocation\\.</li>
-</ol>
-<ol>
-<li>Set clear task judgment rules inside the agent to reduce invalid matching and improve response speed\\.</li>
+<li>将独立功能拆分为单独技能，便于后期功能更新和重复调用。</li>
 </ol>
 <ol>
-<li>Add exception capture and log records in the harness framework to quickly locate faults when modules interact abnormally\\.</li>
+<li>在Agent内部设置清晰的任务判断规则，减少无效匹配，提高响应速度。</li>
 </ol>
 <ol>
-<li>Expand new skills according to business demands, and the agent can automatically adapt and combine functions without rewriting overall logic\\.</li>
+<li>在Harness框架中添加异常捕获和日志记录，模块交互异常时快速定位故障。</li>
 </ol>
-<h2>Summary</h2>
-<p>Agent, Skill and Harness form the standard architecture of current AI automation systems\\. The agent dominates overall decision\\-making, skills bear specific execution capabilities, and harness maintains stable system operation\\. Mastering their matching relation and writing simple calling code can help users quickly build lightweight intelligent task systems, and the modular structure also supports continuous function expansion for complex commercial AI projects\\.</p>
+<ol>
+<li>根据业务需求扩展新技能，Agent可以自动适配和组合功能，无需重写整体逻辑。</li>
+</ol>
+<h2>总结</h2>
+<p>Agent、Skill和Harness构成了当前AI自动化系统的标准架构。Agent主导整体决策，Skill承载具体执行能力，Harness维护系统稳定运行。掌握它们的配合关系并编写简单的调用代码，可以帮助用户快速构建轻量级智能任务系统，模块化结构也为复杂的商业AI项目提供了持续功能扩展支持。</p>
 
 <h2>常见问题</h2>
 <h3>问：使用Agent、Skill和Harness需要是Python开发者吗？</h3>
@@ -8345,25 +8345,25 @@ print(compare_token_efficiency("data analysis", MuseSpark(), CompetitorModel()))
 <p><strong>Next:</strong> <a href="/article/ai-workforce-virtual-employees">AI Workforce: Virtual AI Employees →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Industry News · Difficulty: Beginner</p>
-<p><strong>What you'll learn:</strong> Alexander Wang's return leading Meta's AI division, Muse Spark, MSL, and what it means for overseas businesses.</p>
+<p><strong>分类：</strong> AI行业新闻 · 难度：初级</p>
+<p><strong>你将学到：</strong> Alexander Wang回归领导Meta AI部门、Muse Spark、MSL以及对出海业务的影响。</p>
 </div>
 
-<p>After vanishing from the public eye for 10 months, Alexander Wang, the youngest self\\-made billionaire in Silicon Valley, has made a stunning comeback\\. Lured by Mark Zuckerberg with a $14 billion deal, he’s now at the helm of Meta’s AI division, and his recent revelations about the future of artificial intelligence are sending shockwaves through the industry\\.</p>
-<h2>The Man Behind the Mystery</h2>
-<p>Alexander Wang co\\-founded Scale AI and quickly became a tech sensation\\. But in a bold move, Meta acquired his expertise for a staggering $14 billion, and he went radio silent—until now\\. During a recent interview, he lifted the veil on Meta’s ambitious AI strategy, revealing a roadmap that could outpace even OpenAI\\.</p>
-<h2>Meta’s AI Masterplan: MSL and Muse Spark</h2>
-<p>At the core of Meta’s AI push is the <strong>Meta Superintelligence Labs \\(MSL\\)</strong>, a newly formed division Wang built from the ground up\\. This lab operates under three strict principles:</p>
+<p>在公众视野中消失10个月后，硅谷最年轻的白手起家亿万富翁Alexander Wang震撼回归。在马克·扎克伯格以140亿美元邀约的吸引下，他现在执掌Meta的AI部门，最近关于人工智能未来的爆料正在业界引起巨大震动。</p>
+<h2>神秘人物</h2>
+<p>Alexander Wang联合创立了Scale AI并迅速成为科技界的风云人物。但Meta以惊人的140亿美元收购了他的专业知识后，他一度销声匿迹——直到现在。在最近的一次采访中，他揭开了Meta雄心勃勃的AI战略面纱，展示了一条甚至可能超越OpenAI的路线图。</p>
+<h2>Meta的AI总体规划：MSL和Muse Spark</h2>
+<p>Meta AI战略的核心是<strong>Meta超级智能实验室（MSL）</strong>，这是Wang从零开始组建的新部门。该实验室遵循三项严格原则：</p>
 <ul>
-<li>Technical excellence takes precedence\\.</li>
+<li>技术卓越优先。</li>
 </ul>
 <ul>
-<li>Scientific rigor and focus on foundational research\\.</li>
+<li>科学严谨性，专注于基础研究。</li>
 </ul>
 <ul>
-<li>Bold, high\\-stakes investments in transformative technologies\\.</li>
+<li>对变革性技术进行大胆的高风险投资。</li>
 </ul>
-<p>One of MSL’s flagship projects is <strong>Muse Spark</strong>, an AI model that’s already showing promise\\. Unlike many existing models, Muse Spark boasts exceptional token efficiency\\. In tests, it delivers results on par with top\\-tier labs while using far fewer tokens, a testament to its optimized architecture\\.</p>
+<p>MSL的旗舰项目之一是<strong>Muse Spark</strong>，一个已经展现出潜力的AI模型。与许多现有模型不同，Muse Spark拥有卓越的Token效率。在测试中，它使用远少于其他模型的Token就能达到与顶级实验室相当的结果，这证明了其优化的架构。</p>
 <pre><code class="language-python">
 # Example: Token Efficiency Comparison
 def compare_token_efficiency(task, muse_spark, competitor):
@@ -8374,24 +8374,24 @@ def compare_token_efficiency(task, muse_spark, competitor):
 
 print(compare_token_efficiency("data analysis", MuseSpark(), CompetitorModel()))
 </code></pre>
-<h2>Why Meta Abandoned Open Sourcing \\(For Now\\)</h2>
-<p>Muse Spark is currently closed\\-source, a departure from Meta’s previous open\\-source stance with models like Llama\\. Wang explains this is due to the model’s advanced capabilities, which trigger new safety protocols\\. However, he assures that Meta is developing an open\\-source variant and remains committed to sharing AI advancements responsibly\\.</p>
-<h2>Building a Superintelligent Future</h2>
-<p>Wang’s vision extends beyond just software\\. He emphasizes the importance of <strong>physical superintelligence</strong>—AI\\-powered robots and brain\\-computer interfaces\\. Meta’s recent acquisition of a robotics AI startup signals its intent to merge digital and physical AI, a move Wang believes is crucial for achieving true superintelligence\\.</p>
-<h2>Practical Implications for Overseas Businesses</h2>
-<p>For businesses targeting global markets, Muse Spark and Meta’s AI ecosystem offer tangible opportunities:</p>
+<h2>Meta为何（暂时）放弃开源</h2>
+<p>Muse Spark目前是闭源的，这与Meta之前对Llama等模型的开源立场不同。Wang解释说这是由于该模型的高级能力触发了新的安全协议。但他保证Meta正在开发开源变体，并将继续负责任地分享AI进步。</p>
+<h2>构建超级智能的未来</h2>
+<p>Wang的愿景不仅限于软件。他强调<strong>物理超级智能</strong>的重要性——AI驱动的机器人和脑机接口。Meta最近收购一家机器人AI初创公司，表明其意图融合数字和物理AI，Wang认为这是实现真正超级智能的关键一步。</p>
+<h2>对出海业务的实际意义</h2>
+<p>对于面向全球市场的企业，Muse Spark和Meta的AI生态系统提供了切实的机遇：</p>
 <ol>
-<li><strong>Content Localization</strong>: Use Muse Spark to automate multilingual content creation for platforms like Facebook, Instagram, and WhatsApp\\.</li>
+<li><strong>内容本地化</strong>：使用Muse Spark自动为Facebook、Instagram和WhatsApp等平台创建多语言内容。</li>
 </ol>
 <ol>
-<li><strong>Customer Service</strong>: Deploy AI agents powered by Meta’s tech to handle customer inquiries across regions, 24/7\\.</li>
+<li><strong>客户服务</strong>：部署基于Meta技术的AI代理，全天候处理不同地区的客户咨询。</li>
 </ol>
 <ol>
-<li><strong>Ad Optimization</strong>: Leverage AI\\-driven insights to refine ad campaigns for different cultural and linguistic audiences\\.</li>
+<li><strong>广告优化</strong>：利用AI驱动的洞察力，优化针对不同文化和语言受众的广告活动。</li>
 </ol>
-<h2>The AI Arms Race: What’s Next?</h2>
-<p>Wang predicts that the AI landscape will see even more upheaval\\. He argues that the current leaders like OpenAI and Claude are just the beginning, and new breakthroughs will continuously reshape the market\\. For businesses, this means staying agile and ready to adopt new AI tools as they emerge\\.</p>
-<p>In conclusion, Alexander Wang’s return and Meta’s aggressive AI strategy mark a new chapter in the race for superintelligence\\. For overseas businesses, aligning with these advancements could be the key to unlocking unprecedented growth and global reach\\. As Wang puts it, “We’re not just building AI—we’re building the tools to create a new era of human prosperity\\.”</p>
+<h2>AI军备竞赛：接下来会怎样？</h2>
+<p>Wang预测AI格局将出现更多剧变。他认为像OpenAI和Claude这样的当前领导者只是开始，新的突破将持续重塑市场。对企业而言，这意味着要保持敏捷，随时准备采用新出现的AI工具。</p>
+<p>总之，Alexander Wang的回归和Meta激进的AI战略标志着超级智能竞赛的新篇章。对于出海企业而言，紧跟这些技术进步可能是释放前所未有的增长和全球影响力的关键。正如Wang所说："我们不仅在构建AI——我们正在构建创造人类繁荣新时代的工具。"</p>
 
 <h2>常见问题</h2>
 <h3>问：Muse Spark是什么？与其他AI模型有什么不同？</h3>
@@ -8537,24 +8537,24 @@ python ai_staff_run.py stop
 <p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools for One-Person Overseas Business →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Development · Difficulty: Intermediate</p>
-<p><strong>What you'll learn:</strong> Why programmers are building virtual AI employees and how to build and deploy your own AI workforce.</p>
+<p><strong>分类：</strong> AI开发 · 难度：中级</p>
+<p><strong>你将学到：</strong> 为什么程序员正在构建虚拟AI员工，以及如何构建和部署你自己的AI劳动力。</p>
 </div>
 
-<p>The tech industry is undergoing a remarkable shift\\. A growing number of programmers are stepping away from developing ordinary utility software\\. Instead, they dedicate their energy to creating intelligent AI employees that can independently handle daily business tasks, code development, content creation and data processing\\. This emerging trend brings brand\\-new working modes and cost\\-saving solutions for overseas website operation, cross\\-border business and remote team management\\.</p>
-<h2>Core Difference: Traditional Tools VS AI Employee</h2>
-<p>Conventional development tools only passively execute fixed commands given by users\\. They cannot think independently or adjust schemes when facing unexpected problems\\.</p>
-<p>In comparison, AI employees possess autonomous judgment, task splitting and continuous execution capabilities\\. Equipped with memory modules and skill libraries, they can finish a whole set of work from receiving demands, analyzing objectives, distributing subtasks to delivering final results without frequent human supervision\\. This working mode perfectly fits long\\-cycle projects of overseas websites and repetitive batch work\\.</p>
-<h2>Core Functional Modules of a Practical AI Employee</h2>
-<p>A qualified AI employee is assembled with three indispensable core parts, which can be built and deployed by common development frameworks\\.</p>
-<h3>1\\. Task Brain Core</h3>
-<p>Responsible for understanding natural language demands, disassembling complex projects and sorting execution priority\\. It acts as the decision center of the virtual staff\\.</p>
-<h3>2\\. Reusable Skill Library</h3>
-<p>Store packaged functional abilities including code writing, webpage modification, article translation, data statistics and file sorting\\. The brain can call corresponding skills flexibly according to task types\\.</p>
-<h3>3\\. Running Supervision Module</h3>
-<p>Record operation logs, capture running errors, resume interrupted tasks and feed back progress status in real time, ensuring stable long\\-time work of AI employees\\.</p>
-<h2>Practical Build \\&amp; Deployment Demo</h2>
-<p>Below displays simplified executable construction code, helping you quickly build a basic AI employee that handles website daily maintenance work\\.</p>
+<p>科技行业正在经历一场显著的变革。越来越多的程序员不再开发普通的工具软件，而是将精力投入到创建智能AI员工上——这些AI员工能独立处理日常业务任务、代码开发、内容创建和数据处理。这一新兴趋势为出海网站运营、跨境电商和远程团队管理带来了全新的工作模式和成本节约方案。</p>
+<h2>核心区别：传统工具 vs AI员工</h2>
+<p>传统开发工具只能被动执行用户给出的固定指令，面对意外问题时无法独立思考或调整方案。</p>
+<p>相比之下，AI员工具备自主判断、任务拆分和连续执行能力。配备记忆模块和技能库，它们能在无需频繁人工监督的情况下完成从接收需求、分析目标、分配子任务到交付最终结果的整套工作。这种工作模式完美契合出海网站的长周期项目和重复性批量工作。</p>
+<h2>实用AI员工的核心功能模块</h2>
+<p>一个合格的AI员工由三个不可或缺的核心部分组成，可以通过常见开发框架构建和部署。</p>
+<h3>1. 任务大脑核心</h3>
+<p>负责理解自然语言需求、拆解复杂项目并排序执行优先级。它是虚拟员工的决策中心。</p>
+<h3>2. 可复用技能库</h3>
+<p>存储封装好的功能能力，包括代码编写、网页修改、文章翻译、数据统计和文件整理。大脑可以根据任务类型灵活调用相应技能。</p>
+<h3>3. 运行监督模块</h3>
+<p>记录操作日志、捕获运行错误、恢复中断任务并实时反馈进度状态，确保AI员工长时间稳定工作。</p>
+<h2>实际构建与部署演示</h2>
+<p>下面展示简化的可执行构建代码，帮助你快速构建一个能处理网站日常维护工作的基础AI员工。</p>
 <pre><code class="language-python">
 # Basic framework of lightweight AI employee
 class AIVirtualStaff:
@@ -8600,17 +8600,17 @@ if __name__ == "__main__":
     feedback = ai_worker.receive_task("error_check", "https://your-global-site.com")
     print(feedback)
 </code></pre>
-<h2>Daily Application Scenarios for Overseas Business</h2>
-<h3>1\\. Automated Website Operation</h3>
-<p>Arrange AI employees to regularly update blog articles, replace promotional banners, detect dead links and optimize page layout\\. It maintains normal site operation around the clock and cuts manual maintenance time greatly\\.</p>
-<h3>2\\. Cross\\-lingual Content Batch Processing</h3>
-<p>Hand over multilingual translation, overseas social media copy writing and product introduction revision to AI staff\\. It keeps unified language style and adapts content habits of different regional users\\.</p>
-<h3>3\\. Code Iteration \\&amp; Bug Automatic Fix</h3>
-<p>For small\\-scale function upgrades and routine fault troubleshooting of websites, AI employees can complete simple coding modification and self\\-testing, lowering the technical threshold of overseas project iteration\\.</p>
-<h3>4\\. Market Data Collection \\&amp; Sorting</h3>
-<p>Automatically crawl public industry information, competitor dynamic data and user preference feedback, organize readable analysis reports and provide reference basis for business adjustment\\.</p>
-<h2>Simple Command Management Mode</h2>
-<p>Users can control AI employees to switch working states through concise terminal commands\\.</p>
+<h2>出海业务日常应用场景</h2>
+<h3>1. 自动化网站运营</h3>
+<p>安排AI员工定期更新博客文章、替换促销横幅、检测死链和优化页面布局。全天候维护网站正常运行，大幅减少人工维护时间。</p>
+<h3>2. 跨语言内容批量处理</h3>
+<p>将多语言翻译、海外社交媒体文案撰写和产品介绍修订交给AI员工。保持统一语言风格，适配不同地区用户的内容习惯。</p>
+<h3>3. 代码迭代与Bug自动修复</h3>
+<p>对于网站的小规模功能升级和日常故障排查，AI员工可以完成简单的编码修改和自测，降低海外项目迭代的技术门槛。</p>
+<h3>4. 市场数据采集与整理</h3>
+<p>自动抓取公开行业信息、竞争对手动态数据和用户偏好反馈，整理为可读的分析报告，为业务调整提供参考依据。</p>
+<h2>简单的命令管理模式</h2>
+<p>用户可以通过简洁的终端命令控制AI员工切换工作状态。</p>
 <pre><code class="language-bash">
 # Start automatic daily task cycle
 python ai_staff_run.py start
@@ -8624,22 +8624,22 @@ python ai_staff_run.py log
 # Terminate all running tasks
 python ai_staff_run.py stop
 </code></pre>
-<h2>Advantages of Adopting AI Employees</h2>
+<h2>采用AI员工的优势</h2>
 <ol>
-<li><strong>Cost Control</strong>: Replace repeated manual labor, reduce long\\-term recruitment and payroll expenditure of remote teams\\.</li>
+<li><strong>成本控制</strong>：替代重复性人工劳动，降低远程团队的长期招聘和薪资支出。</li>
 </ol>
 <ol>
-<li><strong>24\\-hour Service</strong>: Break time zone limits, keep continuous service and progress advancement for global users\\.</li>
+<li><strong>24小时服务</strong>：打破时区限制，为全球用户保持持续服务和进度推进。</li>
 </ol>
 <ol>
-<li><strong>Stable Output</strong>: Avoid human emotion and fatigue influence, maintain consistent work quality\\.</li>
+<li><strong>稳定输出</strong>：避免人为情绪和疲劳影响，保持一致的工作质量。</li>
 </ol>
 <ol>
-<li><strong>Flexible Expansion</strong>: Add new functional skills anytime according to business growth demands\\.</li>
+<li><strong>灵活扩展</strong>：根据业务增长需求随时添加新的功能技能。</li>
 </ol>
-<h2>Industry Trend Summary</h2>
-<p>The transformation from developing tools to creating AI employees marks a new stage of artificial intelligence application\\. Instead of letting people adapt to rigid tools, programmers create intelligent virtual workers that actively take charge of jobs\\.</p>
-<p>For overseas website operators and cross\\-border entrepreneurs, building exclusive AI employees is an efficient way to improve competitiveness\\. With simple framework deployment and skill expansion, you can own a tireless work team to support long\\-term steady development of global online business\\.</p>
+<h2>行业趋势总结</h2>
+<p>从开发工具到创造AI员工的转变，标志着人工智能应用的新阶段。程序员不再让人去适应僵化的工具，而是创造主动承担工作的智能虚拟员工。</p>
+<p>对于出海网站运营者和跨境创业者来说，构建专属AI员工是提升竞争力的高效途径。通过简单的框架部署和技能扩展，你就能拥有一个不知疲倦的工作团队，支持全球在线业务的长期稳定发展。</p>
 
 <h2>常见问题</h2>
 <h3>问：构建AI员工需要会编程吗？</h3>
@@ -9037,113 +9037,113 @@ claw install agent-browser tavily-search self-improving-agent find-skills skill-
 <p><strong>Next:</strong> <a href="/article/openclaw-demystified-20-lines">Unveiling OpenClaw: Demystify the AI Tool in 20 Lines →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> OpenClaw Skills · Difficulty: Beginner</p>
-<p><strong>What you'll learn:</strong> 6 base skills for OpenClaw covering browser automation, web search, self-improvement, skill discovery, security auditing, and email management.</p>
+<p><strong>分类：</strong> OpenClaw技能 · 难度：初级</p>
+<p><strong>你将学到：</strong> OpenClaw的6个基础技能，涵盖浏览器自动化、网页搜索、自我进化、技能发现、安全审计和邮件管理。</p>
 </div>
 
-<p>OpenClaw, a powerful AI tool ecosystem, offers thousands of skills in its store, but there are 6 base skills that stand out for their high installation rates and practicality\\. These skills cover browser automation, web search, self\\-improvement, skill discovery, security auditing, and email management, forming a solid foundation for your AI workflow\\. Let’s dive into each one with practical insights and usage guides\\.</p>
-<h2>1\\. Agent\\-Browser: Let AI Take Control of Browsers</h2>
-<p><strong>Functionality</strong>: This skill enables AI to automate browser operations\\. It can click buttons, fill out forms, take full\\-page screenshots, and download files in batches\\. Even dynamically rendered pages are no problem, making it feel like giving AI a pair of hands to interact with the web\\.</p>
-<p><strong>Practical Use Cases</strong>:</p>
+<p>OpenClaw是一个强大的AI工具生态系统，其技能商店提供了数千种技能，但有6个基础技能因其高安装率和实用性而格外突出。这些技能涵盖浏览器自动化、网页搜索、自我进化、技能发现、安全审计和邮件管理，为你的AI工作流奠定了坚实基础。让我们逐一深入了解每个技能的实际用法和操作指南。</p>
+<h2>1. Agent-Browser：让AI接管浏览器</h2>
+<p><strong>功能</strong>：该技能使AI能够自动化浏览器操作。它可以点击按钮、填写表单、截取全屏截图以及批量下载文件。即使是动态渲染的页面也不在话下，就像给AI装上了一双手来与网页交互。</p>
+<p><strong>实际用例</strong>：</p>
 <ul>
-<li>Automate web\\-based tasks like filling out daily reports on enterprise platforms\\.</li>
+<li>自动化基于网页的任务，如在企业平台上填写日报。</li>
 </ul>
 <ul>
-<li>Batch download product images or data sheets from e\\-commerce websites\\.</li>
+<li>从电商网站批量下载产品图片或数据表。</li>
 </ul>
 <ul>
-<li>Capture full\\-page screenshots of competitor web pages for analysis\\.</li>
+<li>截取竞品网页的全屏截图用于分析。</li>
 </ul>
-<p><strong>Command Example for Installation</strong>:</p>
+<p><strong>安装命令示例</strong>：</p>
 <pre><code class="language-bash">
 claw install agent-browser
 </code></pre>
-<h2>2\\. Tavily\\-Search: Ad\\-Free AI\\-Exclusive Web Search</h2>
-<p><strong>Functionality</strong>: It provides real\\-time web search results without ads\\. The output is structured, making it easy for AI to consume, and it automatically extracts key information from web pages\\. This ensures your AI is always working with the latest and most accurate information\\.</p>
-<p><strong>Practical Use Cases</strong>:</p>
+<h2>2. Tavily-Search：无广告的AI专属网页搜索</h2>
+<p><strong>功能</strong>：提供实时的网页搜索结果，不含广告。输出结果结构化，便于AI消化，并自动提取网页中的关键信息。确保你的AI始终使用最新、最准确的信息。</p>
+<p><strong>实际用例</strong>：</p>
 <ul>
-<li>Research the latest market trends in overseas regions for your e\\-commerce business\\.</li>
+<li>研究海外地区的最新市场趋势，用于电商业务。</li>
 </ul>
 <ul>
-<li>Fetch up\\-to\\-date news and data for content creation targeting international audiences\\.</li>
+<li>获取最新新闻和数据，用于面向国际受众的内容创作。</li>
 </ul>
 <ul>
-<li>Gather product feedback and reviews from global forums\\.</li>
+<li>收集全球论坛上的产品反馈和评价。</li>
 </ul>
-<p><strong>Command Example for Installation</strong>:</p>
+<p><strong>安装命令示例</strong>：</p>
 <pre><code class="language-bash">
 claw install tavily-search
 </code></pre>
-<h2>3\\. Self\\-Improving Agent: AI That Learns and Evolves</h2>
-<p><strong>Functionality</strong>: This skill allows AI to remember your coding style, habits, and preferences\\. It learns from mistakes to automatically fix issues and retains memory across conversations, getting smarter and more efficient the more you use it\\.</p>
-<p><strong>Practical Use Cases</strong>:</p>
+<h2>3. Self-Improving Agent：会学习进化的AI</h2>
+<p><strong>功能</strong>：该技能让AI记住你的编码风格、习惯和偏好。它从错误中学习以自动修复问题，并在对话间保留记忆，用得越多就越智能、越高效。</p>
+<p><strong>实际用例</strong>：</p>
 <ul>
-<li>Let it learn your unique writing style for creating consistent marketing copy\\.</li>
+<li>让它学习你独特的写作风格，创建一致的营销文案。</li>
 </ul>
 <ul>
-<li>Have it remember your code conventions to assist in development tasks\\.</li>
+<li>让它记住你的代码规范，协助开发任务。</li>
 </ul>
 <ul>
-<li>Improve its accuracy in handling repeated tasks by learning from past errors\\.</li>
+<li>通过从过往错误中学习，提高处理重复任务的准确性。</li>
 </ul>
-<p><strong>Command Example for Installation</strong>:</p>
+<p><strong>安装命令示例</strong>：</p>
 <pre><code class="language-bash">
 claw install self-improving-agent
 </code></pre>
-<h2>4\\. Find\\-Skills: Discover and Manage Skills Seamlessly</h2>
-<p><strong>Functionality</strong>: It works like an app store for OpenClaw skills\\. You can search for skills using natural language, get recommendations based on leaderboards, and manage installations, upgrades, and rollbacks all in one place\\.</p>
-<p><strong>Practical Use Cases</strong>:</p>
+<h2>4. Find-Skills：无缝发现和管理技能</h2>
+<p><strong>功能</strong>：它就像OpenClaw技能的应用商店。你可以用自然语言搜索技能，根据排行榜获取推荐，并在一个地方管理安装、升级和回滚。</p>
+<p><strong>实际用例</strong>：</p>
 <ul>
-<li>Search for skills to automate social media posting for your overseas accounts\\.</li>
+<li>搜索用于自动化海外账号社交媒体发布的技能。</li>
 </ul>
 <ul>
-<li>Find translation skills optimized for specific languages like Spanish or German\\.</li>
+<li>寻找针对特定语言（如西班牙语或德语）优化的翻译技能。</li>
 </ul>
 <ul>
-<li>Batch update all installed skills to their latest versions\\.</li>
+<li>批量更新所有已安装技能到最新版本。</li>
 </ul>
-<p><strong>Command Example for Installation</strong>:</p>
+<p><strong>安装命令示例</strong>：</p>
 <pre><code class="language-bash">
 claw install find-skills
 </code></pre>
-<h2>5\\. Skill\\-Vetter: Secure Your AI Toolchain</h2>
-<p><strong>Functionality</strong>: Before installing any skill, this tool scans it for malicious code, checks for unauthorized permission requests, and prevents privacy leaks\\. It also provides a security score report, acting as a gatekeeper for your AI tools\\.</p>
-<p><strong>Practical Use Cases</strong>:</p>
+<h2>5. Skill-Vetter：保护你的AI工具链安全</h2>
+<p><strong>功能</strong>：在安装任何技能之前，它会扫描恶意代码、检查未经授权的权限请求并防止隐私泄露。它还提供安全评分报告，充当AI工具的守门人。</p>
+<p><strong>实际用例</strong>：</p>
 <ul>
-<li>Scan new skills before installing to ensure they don’t access sensitive business data\\.</li>
+<li>在安装前扫描新技能，确保它们不会访问敏感业务数据。</li>
 </ul>
 <ul>
-<li>Use it to audit existing skills for potential security risks\\.</li>
+<li>用于审计现有技能的潜在安全风险。</li>
 </ul>
 <ul>
-<li>Comply with data privacy regulations in regions like the EU by preventing unauthorized data access\\.</li>
+<li>遵守欧盟等地区的数据隐私法规，防止未经授权的数据访问。</li>
 </ul>
-<p><strong>Command Example for Installation</strong>:</p>
+<p><strong>安装命令示例</strong>：</p>
 <pre><code class="language-bash">
 claw install skill-vetter
 </code></pre>
-<h2>6\\. Email Management: AI\\-Powered Email Handler</h2>
-<p><strong>Functionality</strong>: This skill lets AI read, write, classify, and manage your emails\\. It can draft responses to common emails and supports major email platforms like Gmail, Outlook, 163, and QQ\\.</p>
-<p><strong>Practical Use Cases</strong>:</p>
+<h2>6. Email Management：AI驱动的邮件处理</h2>
+<p><strong>功能</strong>：该技能让AI读取、编写、分类和管理你的电子邮件。它可以起草常见邮件的回复，并支持Gmail、Outlook、163和QQ等主流邮件平台。</p>
+<p><strong>实际用例</strong>：</p>
 <ul>
-<li>Automatically classify customer inquiries from different regions into separate folders\\.</li>
+<li>自动将来自不同地区的客户咨询分类到不同的文件夹。</li>
 </ul>
 <ul>
-<li>Let AI draft responses to routine business emails in multiple languages\\.</li>
+<li>让AI用多种语言起草日常商务邮件的回复。</li>
 </ul>
 <ul>
-<li>Prioritize and flag important emails for immediate attention\\.</li>
+<li>优先处理重要邮件并标记为需要立即关注。</li>
 </ul>
-<p><strong>Command Example for Installation</strong>:</p>
+<p><strong>安装命令示例</strong>：</p>
 <pre><code class="language-bash">
 claw install email-management
 </code></pre>
-<h2>One Command to Install All 6 Skills</h2>
-<p>For those who want to get started quickly, you can install all these base skills with a single command:</p>
+<h2>一条命令安装所有6个技能</h2>
+<p>对于想要快速上手的人，可以用一条命令安装所有这些基础技能：</p>
 <pre><code class="language-bash">
 claw install agent-browser tavily-search self-improving-agent find-skills skill-vetter email-management
 </code></pre>
-<p>These 6 skills form a robust foundation for anyone using OpenClaw, whether you’re running an overseas e\\-commerce business, managing international content, or handling global customer support\\. By leveraging these skills, you can automate tasks, access accurate information, ensure security, and boost overall productivity in your AI\\-driven workflows\\.</p>
+<p>这6个技能为任何使用OpenClaw的人提供了坚实的基础，无论你是在运营海外电商、管理国际内容还是处理全球客户支持。通过利用这些技能，你可以自动化任务、获取准确信息、确保安全，并在AI驱动的工作流中全面提升生产力。</p>
 
 <h2>常见问题</h2>
 <h3>问：这些OpenClaw技能安装免费吗？</h3>
@@ -9293,103 +9293,103 @@ claude skill install &lt;skill-name&gt; --global
 <p><strong>Next:</strong> <a href="/article/claude-code-top-7-skills">Top 7 Skills Guide →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> Claude Code Guide · Difficulty: Beginner</p>
-<p><strong>What you'll learn:</strong> The 10 most practical and frequently used Claude Code commands with real-world applications and code examples.</p>
+<p><strong>分类：</strong> Claude Code指南 · 难度：初级</p>
+<p><strong>你将学到：</strong> 10个最实用、最常用的Claude Code命令，附带真实应用场景和代码示例。</p>
 </div>
 
-<p>After trying tools like OpenClaw and Hermes Agent, many users find that <strong>Claude Code</strong> stands out as a powerful AI agent, especially with its versatile command set\\. Below, we break down the 10 most practical and frequently used commands, complete with real\\-world applications and code examples, to help you maximize your workflow efficiency\\.</p>
-<h2>1\\. Fully Automated Mode Activation</h2>
-<p>When working with Claude Code, permission requests for risky operations \\(like deleting files or running scripts\\) can interrupt tasks\\. Use this command to grant full permissions:</p>
+<p>在尝试了OpenClaw和Hermes Agent等工具后，许多用户发现<strong>Claude Code</strong>作为一个强大的AI代理格外突出，尤其是其多功能的命令集。下面我们详解10个最实用、最常用的命令，附带真实应用场景和代码示例，助你最大化工作流效率。</p>
+<h2>1. 全自动模式激活</h2>
+<p>使用Claude Code时，高风险操作（如删除文件或运行脚本）的权限请求可能会中断任务。使用此命令授予完全权限：</p>
 <pre><code class="language-bash">
 claude --dangerously-skip-permissions
 </code></pre>
-<p><strong>Use Case</strong>: Ideal when you fully trust Claude’s execution capabilities and want to avoid frequent interruptions, such as when automating batch file processing or running complex scripts\\.</p>
-<h2>2\\. Project Initialization</h2>
-<p>For new projects, this command scans your codebase and generates a <code>CLAUDE\\.md</code> file, which documents core commands, architectural standards, and workflow guidelines\\.</p>
+<p><strong>使用场景</strong>：当你完全信任Claude的执行能力并希望避免频繁中断时，如自动化批量文件处理或运行复杂脚本。</p>
+<h2>2. 项目初始化</h2>
+<p>对于新项目，此命令会扫描你的代码库并生成<code>CLAUDE.md</code>文件，记录核心命令、架构标准和工作流指南。</p>
 <pre><code class="language-bash">
 /init
 </code></pre>
-<p><strong>Use Case</strong>: When onboarding an existing project, run this command to quickly understand the project’s structure and constraints\\. Claude will reference <code>CLAUDE\\.md</code> in every conversation, ensuring consistency\\.</p>
-<h2>3\\. @ Symbol for Context Injection</h2>
-<p>Easily add files or directories to the conversation context:</p>
+<p><strong>使用场景</strong>：接手现有项目时，运行此命令快速了解项目结构和约束。Claude会在每次对话中引用<code>CLAUDE.md</code>，确保一致性。</p>
+<h2>3. @符号注入上下文</h2>
+<p>轻松将文件或目录添加到对话上下文中：</p>
 <pre><code class="language-Plain Text">
 @file/path
 @directory/path
 </code></pre>
-<p><strong>Use Case</strong>: When debugging code, reference a specific script with <code>@scripts/debug\\.py</code> to let Claude analyze it\\. For a full module, use <code>@modules/auth</code> to include all related files\\.</p>
-<h2>4\\. Restore Historical Sessions</h2>
-<p>Never lose progress with these commands to resume conversations:</p>
+<p><strong>使用场景</strong>：调试代码时，用<code>@scripts/debug.py</code>引用特定脚本让Claude分析。对于完整模块，用<code>@modules/auth</code>包含所有相关文件。</p>
+<h2>4. 恢复历史会话</h2>
+<p>用这些命令恢复对话，永不丢失进度：</p>
 <pre><code class="language-bash">
 claude --continue  # Resume the last session
 claude --resume    # Select from a list of sessions
 /resume            # Switch sessions in an active chat
 </code></pre>
-<p><strong>Use Case</strong>: If you pause a task midway, use <code>claude \\-\\-continue</code> to pick up right where you left off, whether it’s coding, data analysis, or content creation\\.</p>
-<h2>5\\. Context Management</h2>
-<p>Keep your conversation context organized with these commands:</p>
+<p><strong>使用场景</strong>：如果中途暂停任务，用<code>claude --continue</code>从断点处继续，无论是编码、数据分析还是内容创作。</p>
+<h2>5. 上下文管理</h2>
+<p>用以下命令保持对话上下文有序：</p>
 <pre><code class="language-bash">
 /clear    # Reset context
 /compact  # Compress long conversations
 /context  # Check current context usage
 </code></pre>
-<p><strong>Best Practice</strong>: Maintain context at around 50% capacity for optimal performance, especially during lengthy coding or research sessions\\.</p>
-<h2>6\\. Self\\-Insight Report</h2>
-<p>Generate a detailed HTML report analyzing your usage over the past month:</p>
+<p><strong>最佳实践</strong>：保持上下文在50%容量左右以获得最佳性能，尤其是在长时间编码或研究会话期间。</p>
+<h2>6. 自我洞察报告</h2>
+<p>生成详细HTML报告，分析过去一个月的使用情况：</p>
 <pre><code class="language-bash">
 /insights
 </code></pre>
-<p><strong>What You Get</strong>:</p>
+<p><strong>你将获得</strong>：</p>
 <ul>
-<li><strong>Data Dashboard</strong>: Session count, token usage, and Git commit stats\\.</li>
+<li><strong>数据仪表盘</strong>：会话数、Token使用量和Git提交统计。</li>
 </ul>
 <ul>
-<li><strong>Friction Analysis</strong>: Identifies time\\-wasting patterns \\(e\\.g\\., repeated prompts\\)\\.</li>
+<li><strong>摩擦分析</strong>：识别浪费时间的行为模式（如重复提示）。</li>
 </ul>
 <ul>
-<li><strong>Actionable Tips</strong>: Code snippets to optimize your workflow\\.</li>
+<li><strong>可行建议</strong>：优化工作流的代码片段。</li>
 </ul>
-<h2>7\\. Update to the Latest Version</h2>
-<p>Regularly update to access new features and bug fixes:</p>
+<h2>7. 更新到最新版本</h2>
+<p>定期更新以获取新功能和错误修复：</p>
 <pre><code class="language-bash">
 claude --update
 </code></pre>
-<p><strong>Use Case</strong>: Run this weekly to ensure you’re using the most stable and feature\\-rich version\\.</p>
-<h2>8\\. Auto\\-Permission Mode</h2>
-<p>A safer alternative to full automation, this mode uses an AI model to assess operation safety:</p>
+<p><strong>使用场景</strong>：每周运行以确保使用最稳定、功能最丰富的版本。</p>
+<h2>8. 自动权限模式</h2>
+<p>比全自动模式更安全的替代方案，使用AI模型评估操作安全性：</p>
 <pre><code class="language-bash">
 claude --permission-mode auto
 </code></pre>
-<p><strong>Difference from Command 1</strong>: While <code>\\-\\-dangerously\\-skip\\-permissions</code> skips all checks, this mode adds a safety layer, making it ideal for less trusted workflows\\.</p>
-<h2>9\\. Advanced Built\\-in Skills</h2>
-<p>Tackle complex tasks with these specialized commands:</p>
+<p><strong>与命令1的区别</strong>：<code>--dangerously-skip-permissions</code>跳过所有检查，而此模式增加了安全层，适用于不太值得信任的工作流。</p>
+<h2>9. 高级内置技能</h2>
+<p>用这些专用命令处理复杂任务：</p>
 <ul>
-<li><strong>Code Optimization</strong>:</li>
+<li><strong>代码优化</strong>：</li>
 </ul>
 <p>\`\`\`bash</p>
 <p>/simplify</p>
 <p>\`\`\`</p>
-<p>Automatically identifies reusable or redundant code sections and fixes them\\.</p>
+<p>自动识别可复用或冗余的代码段并修复。</p>
 <ul>
-<li><strong>Batch Processing</strong>:</li>
+<li><strong>批处理</strong>：</li>
 </ul>
 <p>\`\`\`bash</p>
 <p>/batch</p>
 <p>\`\`\`</p>
-<p>Splits tasks into parallel units, each isolated with Git worktrees\\.</p>
+<p>将任务拆分为并行单元，每个单元用Git工作树隔离。</p>
 <ul>
-<li><strong>Debugging Claude</strong>:</li>
+<li><strong>调试Claude</strong>：</li>
 </ul>
 <p>\`\`\`bash</p>
 <p>/debug</p>
 <p>\`\`\`</p>
-<p>Analyzes session logs to diagnose unexpected behavior\\.</p>
-<h2>10\\. Skill Plugin Installation</h2>
-<p>Extend Claude’s capabilities with plugins, categorized by scope:</p>
+<p>分析会话日志以诊断意外行为。</p>
+<h2>10. 技能插件安装</h2>
+<p>用插件扩展Claude的功能，按作用域分类：</p>
 <ul>
-<li><strong>Project\\-Level</strong>: Only active in the current project\\.</li>
+<li><strong>项目级</strong>：仅在当前项目激活。</li>
 </ul>
 <ul>
-<li><strong>Global\\-Level</strong>: Active across all projects on your machine\\.</li>
+<li><strong>全局级</strong>：在机器上所有项目激活。</li>
 </ul>
 <pre><code class="language-bash">
 # Install a project-level skill
@@ -9397,9 +9397,9 @@ claude skill install &lt;skill-name&gt; --project
 # Install a global-level skill
 claude skill install &lt;skill-name&gt; --global
 </code></pre>
-<p><strong>Best Practice</strong>: Limit project\\-level skills to 20 per project to avoid performance issues\\.</p>
-<h2>Conclusion</h2>
-<p>Mastering these commands will transform how you use Claude Code, making tasks like coding, debugging, and project management faster and more efficient\\. Whether you’re automating workflows, analyzing data, or optimizing code, these tools empower you to work smarter, not harder\\. Keep this guide handy as a quick reference, and experiment with each command to find what works best for your unique needs\\.</p>
+<p><strong>最佳实践</strong>：每个项目限制在20个项目级技能以内，避免性能问题。</p>
+<h2>结论</h2>
+<p>掌握这些命令将彻底改变你使用Claude Code的方式，使编码、调试和项目管理等任务更快速、更高效。无论你是自动化工作流、分析数据还是优化代码，这些工具都能让你更聪明地工作，而不是更辛苦。将本指南作为快速参考，尝试每个命令，找到最适合你独特需求的用法。</p>
 
 <h2>常见问题</h2>
 <h3>问：使用--dangerously-skip-permissions安全吗？</h3>
@@ -9508,27 +9508,27 @@ npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
 <p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tools · Difficulty: Intermediate</p>
-<p><strong>What you'll learn:</strong> DeerFlow's parallel multi-agent architecture, Docker sandbox execution, model compatibility, and practical applications for global business.</p>
+<p><strong>分类：</strong> AI工具 · 难度：中级</p>
+<p><strong>你将学到：</strong> DeerFlow的并行多Agent架构、Docker沙箱执行、模型兼容性以及全球业务的实际应用。</p>
 </div>
 
-<p>In the realm of AI tools, efficiency and scalability are paramount, especially for those aiming to leverage AI for business growth in global markets\\. Enter <strong>DeerFlow</strong>, an open\\-source project that’s revolutionizing how we handle tasks with its parallel multi\\-agent architecture\\. Let’s dive into how this tool can be a game\\-changer for your workflow, complete with practical steps and code snippets\\.</p>
-<h2>What is DeerFlow?</h2>
-<p>DeerFlow is an open\\-source intelligent agent framework developed by a team of engineers in China\\. It stands out with its <strong>parallel multi\\-agent architecture</strong>—when you assign a task, it automatically splits it into sub\\-tasks and dispatches multiple AIs to work on them simultaneously, then aggregates the results back to you\\. This is a stark contrast to traditional AI tools that process tasks serially \\(one after another\\), leading to significant time savings\\.</p>
-<p>Within just ten days of its release, DeerFlow topped GitHub’s trending list and has garnered over <strong>47,000 stars</strong>, a testament to its popularity and utility\\.</p>
-<h2>Core Features and Practical Benefits</h2>
-<h3>1\\. Parallel Task Execution for Unmatched Speed</h3>
-<p>Traditional AI tools suffer from a major flaw: the more tasks you have, the slower they get, as they process tasks one by one\\. DeerFlow smashes this norm\\. Whether you run 1 task or 100 tasks, the time taken is nearly the same\\. For example, a single task might take 10 seconds, and 100 tasks also take around 10 seconds—because it doesn’t queue tasks\\.</p>
-<p>This is ideal for time\\-sensitive projects, such as generating multiple reports or processing bulk data for your overseas clients\\.</p>
-<h3>2\\. Sandboxed Execution with Zero Contamination</h3>
-<p>DeerFlow runs all operations, including code execution, file writing, and bash command execution, within Docker containers\\. This means:</p>
+<p>在AI工具领域，效率和可扩展性至关重要，特别是对于那些希望通过AI实现全球业务增长的人来说。<strong>DeerFlow</strong>是一个开源项目，以其并行多Agent架构彻底改变了我们处理任务的方式。让我们深入了解这个工具如何成为你工作流的游戏规则改变者，附有实际步骤和代码示例。</p>
+<h2>什么是DeerFlow？</h2>
+<p>DeerFlow是一个由国内工程师团队开发的开源智能Agent框架。它的突出特点是<strong>并行多Agent架构</strong>——当你分配一个任务时，它会自动拆分为子任务并派发多个AI同时处理，然后将结果汇总返回给你。这与传统AI工具串行处理任务的模式形成鲜明对比，能显著节省时间。</p>
+<p>发布仅十天内，DeerFlow就登顶GitHub趋势榜，已获得超过<strong>47,000个星标</strong>，证明了其受欢迎程度和实用性。</p>
+<h2>核心功能与实际优势</h2>
+<h3>1. 并行任务执行带来无与伦比的速度</h3>
+<p>传统AI工具有一个重大缺陷：任务越多，处理越慢，因为它们逐个处理任务。DeerFlow打破了这一常规。无论运行1个任务还是100个任务，所需时间几乎相同。例如，单个任务可能需要10秒，100个任务也只需约10秒——因为它不会排队等待。</p>
+<p>这对于时间敏感的项目非常理想，比如为海外客户生成多份报告或处理批量数据。</p>
+<h3>2. 沙箱执行，零污染</h3>
+<p>DeerFlow在Docker容器中运行所有操作，包括代码执行、文件写入和bash命令执行。这意味着：</p>
 <ul>
-<li><strong>Zero contamination</strong>: Any changes or operations stay within the container\\. Deleting the container leaves no traces\\.</li>
+<li><strong>零污染</strong>：任何更改或操作都停留在容器内，删除容器不留痕迹。</li>
 </ul>
 <ul>
-<li><strong>Full auditability</strong>: Every action is trackable, which is crucial for compliance and debugging\\.</li>
+<li><strong>完全可审计</strong>：每个操作都可追踪，对合规和调试至关重要。</li>
 </ul>
-<p>To initialize DeerFlow and run a task in a sandbox, use this Python snippet:</p>
+<p>要初始化DeerFlow并在沙箱中运行任务，使用以下Python代码：</p>
 <pre><code class="language-python">
 from deerflow.client import DeerFlowClient
 client = DeerFlowClient()
@@ -9542,9 +9542,9 @@ for event in client.stream(
         content = event.data.get("content", "")
         print(content, end="", flush=True)
 </code></pre>
-<h3>3\\. Seamless Model Compatibility</h3>
-<p>Switching AI models is a breeze with DeerFlow\\. You only need to modify one line of configuration, no code changes required\\. This is perfect if you want to test different models for your overseas audience, such as switching between models optimized for English vs\\. other languages\\.</p>
-<p>Here’s how you change the model in the configuration file:</p>
+<h3>3. 无缝模型兼容性</h3>
+<p>使用DeerFlow切换AI模型非常简便，只需修改一行配置，无需更改代码。如果你想为海外受众测试不同模型，例如在针对英语和其他语言优化的模型之间切换，这非常理想。</p>
+<p>以下是在配置文件中更改模型的方法：</p>
 <pre><code class="language-yaml">
 # Before
 model: "model-a-latest"
@@ -9554,26 +9554,26 @@ base_url: "https://api.model-a.com/v1"
 model: "model-b-pro"
 base_url: "https://api.model-b.com/v1"
 </code></pre>
-<h3>4\\. Personalized and Persistent Memory \\(Local\\-First\\)</h3>
-<p>DeerFlow remembers your preferences, tech stack, and style\\. This “memory” is stored locally, so you can delete it anytime for privacy\\. For instance, if you’re building a website for a European market, it will remember your design preferences and tech stack \\(like Python, LangGraph, Docker\\) across sessions\\.</p>
-<h3>5\\. Nested AI Collaboration \\(Easter Egg\\)</h3>
-<p>You can even use DeerFlow directly in programming assistants like Claude Code\\. This lets you delegate tasks from one AI to DeerFlow’s agents, creating a “nested AI” workflow\\. Install the integration with this command:</p>
+<h3>4. 个性化持久记忆（本地优先）</h3>
+<p>DeerFlow会记住你的偏好、技术栈和风格。这种"记忆"存储在本地，你可以随时删除以保护隐私。例如，如果你在搭建面向欧洲市场的网站，它会记住你在不同会话中的设计偏好和技术栈（如Python、LangGraph、Docker）。</p>
+<h3>5. 嵌套AI协作（彩蛋）</h3>
+<p>你甚至可以在Claude Code等编程助手中直接使用DeerFlow。这让你可以将任务从一个AI委托给DeerFlow的Agent，创建"嵌套AI"工作流。用以下命令安装集成：</p>
 <pre><code class="language-bash">
 npx skills add https://github.com/bytedance/deer-flow --skill claude-to-deerflow
 </code></pre>
-<p>Then, in Claude Code, use the <code>/claude\\-to\\-deerflow</code> command to assign tasks without leaving the terminal\\.</p>
-<h2>How to Leverage DeerFlow for Your Overseas Business</h2>
+<p>然后，在Claude Code中使用<code>/claude-to-deerflow</code>命令分配任务，无需离开终端。</p>
+<h2>如何利用DeerFlow助力出海业务</h2>
 <ol>
-<li><strong>Task Decomposition</strong>: The biggest hurdle for many is breaking down complex tasks\\. DeerFlow excels here—just input your high\\-level request \\(e\\.g\\., “Create a market analysis report for our new product in the US”\\), and it will split it into sub\\-tasks like research, data analysis, and report writing\\.</li>
+<li><strong>任务分解</strong>：对许多人来说，最大的障碍是分解复杂任务。DeerFlow在这方面表现出色——只需输入你的高层请求（如"为我们在美国的新产品创建一份市场分析报告"），它就会拆分为研究、数据分析和报告撰写等子任务。</li>
 </ol>
 <ol>
-<li><strong>Bulk Content Generation</strong>: For e\\-commerce or content marketing, use DeerFlow to generate multiple product descriptions, blog posts, or social media captions in parallel\\.</li>
+<li><strong>批量内容生成</strong>：对于电商或内容营销，使用DeerFlow并行生成多个产品描述、博客文章或社交媒体标题。</li>
 </ol>
 <ol>
-<li><strong>Automated Testing and Deployment</strong>: Run automated tests or deployments for your overseas websites/apps in parallel, reducing release cycles\\.</li>
+<li><strong>自动化测试和部署</strong>：并行运行出海网站/应用的自动化测试或部署，缩短发布周期。</li>
 </ol>
-<h2>Conclusion</h2>
-<p>DeerFlow is more than just an AI tool—it’s a productivity powerhouse for anyone looking to scale their operations globally\\. Its parallel architecture, sandboxed execution, and model flexibility make it a must\\-have in your tech stack\\. Head to its <a href="https://github.com/bytedance/deer-flow">GitHub repository</a> to get started and watch your workflow efficiency soar\\.</p>
+<h2>结论</h2>
+<p>DeerFlow不仅仅是一个AI工具——对于任何希望规模化运营全球业务的人来说，它是一个生产力引擎。其并行架构、沙箱执行和模型灵活性使其成为技术栈中的必备工具。访问其<a href="https://github.com/bytedance/deer-flow">GitHub仓库</a>开始使用，让你的工作流效率飙升。</p>
 
 <h2>常见问题</h2>
 <h3>问：使用DeerFlow必须安装Docker吗？</h3>
