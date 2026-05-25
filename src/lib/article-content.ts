@@ -30,7 +30,7 @@ export const articleContents: Record<string, { content: string; contentZh: strin
 
 <p>Once installed, open <strong>PowerShell</strong> (press the Win key, type "PowerShell", press Enter) and verify the installation:</p>
 
-<pre><code>node --version
+<pre><code class="language-bash">node --version
 # Should output: v20.x.x or v22.x.x
 
 npm --version
@@ -42,15 +42,15 @@ npm --version
 <h3>Mac</h3>
 <p>Homebrew is the recommended approach. If you do not have Homebrew yet, open <strong>Terminal</strong> and run:</p>
 
-<pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+<pre><code class="language-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
 
 <p>Then install Node.js:</p>
 
-<pre><code>brew install node@22</code></pre>
+<pre><code class="language-bash">brew install node@22</code></pre>
 
 <p>Verify the installation:</p>
 
-<pre><code>node --version
+<pre><code class="language-bash">node --version
 npm --version</code></pre>
 </div>
 
@@ -58,12 +58,12 @@ npm --version</code></pre>
 
 <h3>Linux (Ubuntu/Debian)</h3>
 
-<pre><code>curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+<pre><code class="language-bash">curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt-get install -y nodejs</code></pre>
 
 <p>Verify:</p>
 
-<pre><code>node --version
+<pre><code class="language-bash">node --version
 npm --version</code></pre>
 </div>
 
@@ -87,7 +87,7 @@ npm --version</code></pre>
 
 <p>Open your terminal (Windows: PowerShell, Mac: Terminal, Linux: Terminal) and run:</p>
 
-<pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+<pre><code class="language-bash">npm install -g @anthropic-ai/claude-code</code></pre>
 
 <p>What this command does: <code>npm install -g</code> installs the package globally so you can use the <code>claude</code> command from any directory. <code>@anthropic-ai/claude-code</code> is the official package name for Claude Code.</p>
 
@@ -95,7 +95,7 @@ npm --version</code></pre>
 
 <p>Verify the installation:</p>
 
-<pre><code>claude --version
+<pre><code class="language-bash">claude --version
 # Should output something like: v1.x.x</code></pre>
 
 <h2>Step 4: Configure Your API Key</h2>
@@ -107,13 +107,13 @@ npm --version</code></pre>
 
 <h3>Windows (PowerShell, Administrator mode)</h3>
 
-<pre><code>[Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-ant-api03-your-key-here', 'User')</code></pre>
+<pre><code class="language-text">[Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-ant-api03-your-key-here', 'User')</code></pre>
 
 <p>Replace <code>sk-ant-api03-your-key-here</code> with your actual key. Close and reopen PowerShell for the change to take effect.</p>
 
 <h3>Mac / Linux (Terminal)</h3>
 
-<pre><code># Add to your shell config file (use .zshrc for zsh, .bashrc for bash)
+<pre><code class="language-bash"># Add to your shell config file (use .zshrc for zsh, .bashrc for bash)
 echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' &gt;&gt; ~/.zshrc
 
 # Apply immediately
@@ -123,7 +123,7 @@ source ~/.zshrc</code></pre>
 <div class="step-card">
 <p><strong>Method 2: Project-level config</strong> — only applies to the current project, useful when you use different keys for different projects:</p>
 
-<pre><code># Create a .env file in your project root
+<pre><code class="language-bash"># Create a .env file in your project root
 echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' &gt; .env</code></pre>
 
 <p>Claude Code automatically reads the <code>.env</code> file when it starts.</p>
@@ -133,7 +133,7 @@ echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' &gt; .env</code></pre>
 
 <p>Create a test project directory and launch Claude Code:</p>
 
-<pre><code># Create a test directory
+<pre><code class="language-bash"># Create a test directory
 mkdir claude-test && cd claude-test
 
 # Initialize git (Claude Code needs git to track code changes)
@@ -146,7 +146,7 @@ claude</code></pre>
 
 <p>Once the interactive interface appears, enter your first command:</p>
 
-<pre><code>Create a simple HTML file called index.html with a modern "Hello World" page that has centered text and a nice background color.</code></pre>
+<pre><code class="language-text">Create a simple HTML file called index.html with a modern "Hello World" page that has centered text and a nice background color.</code></pre>
 
 <p>Claude will:</p>
 
@@ -170,7 +170,7 @@ claude</code></pre>
 <h3>Q: The installation is very slow or fails</h3>
 <p>This is usually an npm network issue. Try using a mirror registry:</p>
 
-<pre><code>npm config set registry https://registry.npmmirror.com
+<pre><code class="language-bash">npm config set registry https://registry.npmmirror.com
 npm install -g @anthropic-ai/claude-code
 # Restore the default after install
 npm config set registry https://registry.npmjs.org</code></pre>
@@ -210,7 +210,7 @@ npm config set registry https://registry.npmjs.org</code></pre>
 
 <p>安装完成后，打开 <strong>PowerShell</strong>（按 Win 键，输入 PowerShell，回车），验证安装：</p>
 
-<pre><code>node --version
+<pre><code class="language-bash">node --version
 # 应该输出: v20.x.x 或 v22.x.x
 
 npm --version
@@ -222,15 +222,15 @@ npm --version
 <h3>Mac</h3>
 <p>推荐用 Homebrew。如果你没装过 Homebrew，先打开 <strong>终端（Terminal）</strong> 运行：</p>
 
-<pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+<pre><code class="language-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
 
 <p>然后安装 Node.js：</p>
 
-<pre><code>brew install node@22</code></pre>
+<pre><code class="language-bash">brew install node@22</code></pre>
 
 <p>验证安装：</p>
 
-<pre><code>node --version
+<pre><code class="language-bash">node --version
 npm --version</code></pre>
 </div>
 
@@ -238,12 +238,12 @@ npm --version</code></pre>
 
 <h3>Linux (Ubuntu/Debian)</h3>
 
-<pre><code>curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+<pre><code class="language-bash">curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt-get install -y nodejs</code></pre>
 
 <p>验证：</p>
 
-<pre><code>node --version
+<pre><code class="language-bash">node --version
 npm --version</code></pre>
 </div>
 
@@ -267,7 +267,7 @@ npm --version</code></pre>
 
 <p>打开终端（Windows: PowerShell。Mac: Terminal。Linux: Terminal），运行：</p>
 
-<pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+<pre><code class="language-bash">npm install -g @anthropic-ai/claude-code</code></pre>
 
 <p>这条命令做了什么：<code>npm install -g</code> 是"全局安装"，安装后你可以在任何目录里使用 <code>claude</code> 命令。<code>@anthropic-ai/claude-code</code> 是 Claude Code 的包名。</p>
 
@@ -275,7 +275,7 @@ npm --version</code></pre>
 
 <p>验证安装成功：</p>
 
-<pre><code>claude --version
+<pre><code class="language-bash">claude --version
 # 应该输出类似: v1.x.x</code></pre>
 
 <h2>Step 4: 配置 API Key</h2>
@@ -287,13 +287,13 @@ npm --version</code></pre>
 
 <h3>Windows (PowerShell, 管理员模式)</h3>
 
-<pre><code>[Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-ant-api03-your-key-here', 'User')</code></pre>
+<pre><code class="language-text">[Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-ant-api03-your-key-here', 'User')</code></pre>
 
 <p>把 <code>sk-ant-api03-your-key-here</code> 替换成你的真实 key。关闭并重新打开 PowerShell 使其生效。</p>
 
 <h3>Mac / Linux (Terminal)</h3>
 
-<pre><code># 添加到 shell 配置文件中（zsh 用户用 .zshrc，bash 用户用 .bashrc）
+<pre><code class="language-bash"># 添加到 shell 配置文件中（zsh 用户用 .zshrc，bash 用户用 .bashrc）
 echo 'export ANTHROPIC_API_KEY="sk-ant-api03-your-key-here"' &gt;&gt; ~/.zshrc
 
 # 立即生效
@@ -303,7 +303,7 @@ source ~/.zshrc</code></pre>
 <div class="step-card">
 <p><strong>方式二：项目级配置</strong>——只在当前项目中生效，适用于多个项目用不同 key 的情况：</p>
 
-<pre><code># 在项目根目录创建 .env 文件
+<pre><code class="language-bash"># 在项目根目录创建 .env 文件
 echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' &gt; .env</code></pre>
 
 <p>Claude Code 启动时会自动读取 <code>.env</code> 文件。</p>
@@ -313,7 +313,7 @@ echo 'ANTHROPIC_API_KEY=sk-ant-api03-your-key-here' &gt; .env</code></pre>
 
 <p>创建一个测试项目目录，然后启动 Claude Code：</p>
 
-<pre><code># 创建测试目录
+<pre><code class="language-bash"># 创建测试目录
 mkdir claude-test && cd claude-test
 
 # 初始化 git（Claude Code 需要 git 来跟踪代码变更）
@@ -326,7 +326,7 @@ claude</code></pre>
 
 <p>看到交互式界面后，输入你的第一个指令：</p>
 
-<pre><code>创建一个简单的 HTML 文件 index.html，内容是一个现代化的"Hello World"页面，有居中的文字和好看的背景色。</code></pre>
+<pre><code class="language-text">创建一个简单的 HTML 文件 index.html，内容是一个现代化的"Hello World"页面，有居中的文字和好看的背景色。</code></pre>
 
 <p>Claude 会：</p>
 
@@ -350,7 +350,7 @@ claude</code></pre>
 <h3>Q: 安装很慢或失败</h3>
 <p>这是 npm 网络问题。尝试使用国内镜像：</p>
 
-<pre><code>npm config set registry https://registry.npmmirror.com
+<pre><code class="language-bash">npm config set registry https://registry.npmmirror.com
 npm install -g @anthropic-ai/claude-code
 # 安装完成后恢复默认
 npm config set registry https://registry.npmjs.org</code></pre>
@@ -434,7 +434,7 @@ npm config set registry https://registry.npmjs.org</code></pre>
 
 <p>Here is approximately what happens under the hood:</p>
 
-<pre><code>Input tokens: ["What", " is", " the", " capital", " of", " Japan", "?"]
+<pre><code class="language-text">Input tokens: ["What", " is", " the", " capital", " of", " Japan", "?"]
 Processing starts:
   Step 1: Model predicts next token &rarr; "The" (probability: 0.85)
   Step 2: &rarr; "capital" (probability: 0.78)
@@ -553,7 +553,7 @@ Processing starts:
 
 <p>在底层大致发生的过程如下：</p>
 
-<pre><code>输入 tokens: ["日本", "的", "首都", "是", "什么"]
+<pre><code class="language-text">输入 tokens: ["日本", "的", "首都", "是", "什么"]
 处理开始：
   第1步：模型预测下一个token → "东京" (概率: 0.85)
   第2步：→ "。" (概率: 0.78)
@@ -1548,7 +1548,7 @@ Processing starts:
 
 <p>Neural networks are layers of mathematical operations, mostly matrix multiplications. A matrix is a grid of numbers, and multiplying two large matrices involves the same simple calculation millions of times. GPUs handle this in parallel; CPUs would take forever.</p>
 
-<pre><code>CPU: Calculate 1+2, then 3+4, then 5+6... (sequential)
+<pre><code class="language-text">CPU: Calculate 1+2, then 3+4, then 5+6... (sequential)
 GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 
 <p>Training GPT-4 required approximately 25,000 NVIDIA A100 GPUs running for 90-120 days. At roughly $10,000 per GPU, that is $250 million in hardware alone before electricity and labor. This is why only major companies train frontier models.</p>
@@ -1621,7 +1621,7 @@ GPU: Calculate 1+2, 3+4, 5+6... all at the same time (parallel)</code></pre>
 
 <p>神经网络是数学运算的层次结构，大部分是矩阵乘法。矩阵是一个数字网格，两个大矩阵相乘涉及数百万次相同的简单计算。GPU并行处理这些；CPU需要花很长时间。</p>
 
-<pre><code>CPU: 计算 1+2, 然后 3+4, 然后 5+6...（串行）
+<pre><code class="language-text">CPU: 计算 1+2, 然后 3+4, 然后 5+6...（串行）
 GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <p>训练GPT-4需要大约25,000个NVIDIA A100 GPU运行90-120天。按每个GPU约10,000美元计算，仅硬件就需2.5亿美元，还不包括电力和人力。这就是为什么只有大公司才训练前沿模型。</p>
@@ -2089,7 +2089,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <h2>The Minimal Framework: When You Are in a Hurry</h2>
 <p>If you only have 10 seconds, use the "RCT" shortcut: <strong>Role + Context + Task</strong>. These three alone eliminate 80% of bad outputs.</p>
 
-<pre><code>"You are a [role]. Here is the situation: [context]. Do this: [task]."</code></pre>
+<pre><code class="language-text">"You are a [role]. Here is the situation: [context]. Do this: [task]."</code></pre>
 
 <h2>FAQ</h2>
 
@@ -2173,7 +2173,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 <h2>最小框架：时间紧迫时</h2>
 <p>如果你只有10秒钟，使用"RCT"快捷方式：<strong>角色 + 上下文 + 任务</strong>。这三个就能消除80%的不良输出。</p>
 
-<pre><code>"你是一名[角色]。情况是这样的：[上下文]。请做这件事：[任务]。"</code></pre>
+<pre><code class="language-text">"你是一名[角色]。情况是这样的：[上下文]。请做这件事：[任务]。"</code></pre>
 
 <h2>常见问题</h2>
 
@@ -2206,12 +2206,12 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <div class="step-card">
 <p><strong>Formal tone prompt:</strong></p>
-<pre><code>Write an email to a client about a pricing update. Our monthly fee is increasing from $49 to $59 starting next quarter. Tone should be professional, transparent, and appreciative of their business. Include a 30-day grace period. Subject line included.</code></pre>
+<pre><code class="language-text">Write an email to a client about a pricing update. Our monthly fee is increasing from $49 to $59 starting next quarter. Tone should be professional, transparent, and appreciative of their business. Include a 30-day grace period. Subject line included.</code></pre>
 </div>
 
 <div class="step-card">
 <p><strong>Casual tone prompt:</strong></p>
-<pre><code>Write a Slack message to my team about the same pricing update. We are a startup of 5 people. Tone: casual, direct, no corporate language. Mention that we tried to avoid the increase but hosting costs went up.</code></pre>
+<pre><code class="language-text">Write a Slack message to my team about the same pricing update. We are a startup of 5 people. Tone: casual, direct, no corporate language. Mention that we tried to avoid the increase but hosting costs went up.</code></pre>
 </div>
 
 <h2>Report and Document Writing</h2>
@@ -2242,7 +2242,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <p>ChatGPT is excellent at improving text you already wrote:</p>
 
-<pre><code>Please edit this paragraph. I want it to be:
+<pre><code class="language-text">Please edit this paragraph. I want it to be:
 1. More concise (reduce word count by 30%)
 2. More professional in tone
 3. Correct any grammar errors
@@ -2256,7 +2256,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <p>ChatGPT has recognizable patterns. Either tell it to avoid them or add specific style instructions:</p>
 
-<pre><code>Write this without using:
+<pre><code class="language-text">Write this without using:
 - The phrase "in today's digital landscape" or any similar cliches
 - Generic adjectives like "revolutionary" or "game-changing"
 - Opening sentences that restate the question
@@ -2304,12 +2304,12 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <div class="step-card">
 <p><strong>正式语气提示词：</strong></p>
-<pre><code>给客户写一封关于价格调整的邮件。我们的月费将从49美元涨到59美元，从下个季度开始。语气应该专业、透明、感谢他们的业务。包含30天的宽限期。包含邮件主题。</code></pre>
+<pre><code class="language-text">给客户写一封关于价格调整的邮件。我们的月费将从49美元涨到59美元，从下个季度开始。语气应该专业、透明、感谢他们的业务。包含30天的宽限期。包含邮件主题。</code></pre>
 </div>
 
 <div class="step-card">
 <p><strong>随意语气提示词：</strong></p>
-<pre><code>就同一价格调整给团队写一条Slack消息。我们是一个5人的创业公司。语气：随意、直接，不用公司语言。提到我们试图避免涨价但托管成本上升了。</code></pre>
+<pre><code class="language-text">就同一价格调整给团队写一条Slack消息。我们是一个5人的创业公司。语气：随意、直接，不用公司语言。提到我们试图避免涨价但托管成本上升了。</code></pre>
 </div>
 
 <h2>报告和文档写作</h2>
@@ -2340,7 +2340,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <p>ChatGPT在改进你已写好的文本方面表现出色：</p>
 
-<pre><code>请编辑这段文字。我希望它：
+<pre><code class="language-text">请编辑这段文字。我希望它：
 1. 更简洁（减少30%字数）
 2. 语气更专业
 3. 修正所有语法错误
@@ -2354,7 +2354,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <p>ChatGPT有一些可识别的模式。要么告诉它避免这些模式，要么添加具体的风格指令：</p>
 
-<pre><code>写这段文字时不要使用：
+<pre><code class="language-text">写这段文字时不要使用：
 - "在当今的数字环境中"或任何类似的陈词滥调
 - "革命性"或"改变游戏规则"等通用形容词
 - 重述问题的开头句
@@ -2390,7 +2390,7 @@ GPU: 计算 1+2, 3+4, 5+6... 同时进行（并行）</code></pre>
 
 <p>ChatGPT's training data has a cutoff date. For current information, you must enable web search. On ChatGPT Plus, web search runs automatically for relevant queries. On the free tier, it activates for select questions.</p>
 
-<pre><code>What are the latest inflation numbers for 2026?
+<pre><code class="language-text">What are the latest inflation numbers for 2026?
 Compare current mortgage rates across US banks.
 What new movies were released this week?
 Latest developments in the EU AI Act enforcement.</code></pre>
@@ -2409,7 +2409,7 @@ Latest developments in the EU AI Act enforcement.</code></pre>
 </ul>
 
 <p>Example file analysis prompts:</p>
-<pre><code>I uploaded a 40-page PDF of a research paper. Summarize the methodology
+<pre><code class="language-text">I uploaded a 40-page PDF of a research paper. Summarize the methodology
 and key findings in 5 bullet points. Then list all data sources cited.
 
 I uploaded a screenshot of a dashboard error. What does this error mean
@@ -2419,7 +2419,7 @@ and how do I fix it?</code></pre>
 
 <p>ChatGPT Plus subscribers get a Python code execution environment. Upload a CSV and ask for analysis:</p>
 
-<pre><code>I uploaded a CSV of my company's monthly sales for 2025.
+<pre><code class="language-text">I uploaded a CSV of my company's monthly sales for 2025.
 1. Clean the data (check for missing values and outliers)
 2. Calculate month-over-month growth rates
 3. Identify the top 3 best-selling months
@@ -2433,7 +2433,7 @@ and how do I fix it?</code></pre>
 
 <p>ChatGPT GPT-5 can process approximately 128K tokens (roughly 400 pages of text). This enables full-document analysis:</p>
 
-<pre><code>I uploaded a 50-page contract. Find:
+<pre><code class="language-text">I uploaded a 50-page contract. Find:
 1. All termination clauses
 2. Payment terms and penalties
 3. Liability limitations
@@ -2493,7 +2493,7 @@ and how do I fix it?</code></pre>
 
 <p>ChatGPT的训练数据有截止日期。要获取最新信息，你必须启用网络搜索。在ChatGPT Plus上，网络搜索会自动为相关查询运行。在免费版上，它只对部分问题激活。</p>
 
-<pre><code>2026年最新的通胀数据是多少？
+<pre><code class="language-text">2026年最新的通胀数据是多少？
 比较美国各银行的当前按揭利率。
 这周有哪些新电影上映？
 欧盟AI法案执行的最新进展。</code></pre>
@@ -2512,7 +2512,7 @@ and how do I fix it?</code></pre>
 </ul>
 
 <p>文件分析提示词示例：</p>
-<pre><code>我上传了一篇40页的研究论文PDF。用5个要点总结其方法论和关键发现。
+<pre><code class="language-text">我上传了一篇40页的研究论文PDF。用5个要点总结其方法论和关键发现。
 然后列出所有引用的数据来源。
 
 我上传了一个仪表盘错误的截图。这个错误是什么意思？我怎么修复？</code></pre>
@@ -2521,7 +2521,7 @@ and how do I fix it?</code></pre>
 
 <p>ChatGPT Plus订阅者获得Python代码执行环境。上传CSV并要求分析：</p>
 
-<pre><code>我上传了我公司2025年月度销售数据的CSV文件。
+<pre><code class="language-text">我上传了我公司2025年月度销售数据的CSV文件。
 1. 清洗数据（检查缺失值和异常值）
 2. 计算月度环比增长率
 3. 找出销量最高的前3个月
@@ -2535,7 +2535,7 @@ and how do I fix it?</code></pre>
 
 <p>ChatGPT GPT-5可以处理约128K token（大约400页文本）。这使得全文分析成为可能：</p>
 
-<pre><code>我上传了一份50页的合同。找出：
+<pre><code class="language-text">我上传了一份50页的合同。找出：
 1. 所有终止条款
 2. 付款条款和违约金
 3. 责任限制
@@ -2604,7 +2604,7 @@ and how do I fix it?</code></pre>
 
 <h2>Adding Knowledge Files</h2>
 <p>Upload documents your GPT will reference automatically. This is the most powerful feature for practical use:</p>
-<pre><code>Upload your product catalog, pricing sheet, and FAQ for a
+<pre><code class="language-text">Upload your product catalog, pricing sheet, and FAQ for a
 customer support GPT that answers accurately without hallucinating.</code></pre>
 
 <p>Knowledge files ground your GPT in specific information, dramatically reducing hallucination compared to asking ChatGPT the same questions without context.</p>
@@ -2681,7 +2681,7 @@ customer support GPT that answers accurately without hallucinating.</code></pre>
 
 <h2>添加知识文件</h2>
 <p>上传你的GPT会自动引用的文档。这是实用用途中最强大的功能：</p>
-<pre><code>为客服GPT上传你的产品目录、价目表和FAQ，使其能准确回答而不产生幻觉。</code></pre>
+<pre><code class="language-text">为客服GPT上传你的产品目录、价目表和FAQ，使其能准确回答而不产生幻觉。</code></pre>
 
 <p>知识文件将你的GPT锚定在特定信息上，与在没有上下文的情况下问ChatGPT同样的问题相比，大大减少了幻觉。</p>
 
@@ -2727,7 +2727,7 @@ customer support GPT that answers accurately without hallucinating.</code></pre>
 <h2>Writing Professional Emails</h2>
 <p>The same email content needs different tone for different recipients. Use ChatGPT to adjust tone without rewriting from scratch:</p>
 
-<pre><code>Draft an email to a client informing them about a price increase
+<pre><code class="language-text">Draft an email to a client informing them about a price increase
 from $500 to $550 per month starting next quarter. Use these
 details: 90-day notice, grandfather existing contract terms,
 offer a loyalty discount for annual commitments.
@@ -2738,7 +2738,7 @@ one for a dissatisfied client (apologetic, value-focused).</code></pre>
 <h2>Proposals and Pitches</h2>
 <p>AI accelerates proposal writing when you provide structured input:</p>
 
-<pre><code>Write a one-page project proposal for a small business client who
+<pre><code class="language-text">Write a one-page project proposal for a small business client who
 wants to upgrade their website. Structure:
 1. Problem statement (what we observed)
 2. Proposed solution (specific deliverables)
@@ -2750,7 +2750,7 @@ Tone: confident but not pushy. Avoid technical jargon.</code></pre>
 <h2>Client Communication Templates</h2>
 <p>Build a library of reusable templates for common situations:</p>
 
-<pre><code>Create templates for these common client situations:
+<pre><code class="language-text">Create templates for these common client situations:
 1. Project kickoff meeting agenda
 2. Weekly status update email
 3. Scope change request acknowledgment
@@ -2760,7 +2760,7 @@ Each template should have placeholder fields in [brackets].</code></pre>
 
 <h2>Product and Service Descriptions</h2>
 <p>For e-commerce, service pages, or marketing materials:</p>
-<pre><code>Write a product description for [product]. Features: [list].
+<pre><code class="language-text">Write a product description for [product]. Features: [list].
 Target audience: [describe]. Tone: benefit-focused, conversational.
 Include: headline (max 10 words), 3 key benefits with bullet points,
 technical specs section, call-to-action line.
@@ -2768,7 +2768,7 @@ Avoid superlatives like "best" or "amazing" unless verifiable.</code></pre>
 
 <h2>Tone Calibration Technique</h2>
 <p>Master one technique: generating the same message in different tones and choosing.</p>
-<pre><code>Write this message in 4 tones and I'll choose:
+<pre><code class="language-text">Write this message in 4 tones and I'll choose:
 "Unfortunately we need to postpone the launch by 2 weeks
 due to QA delays."
 1. Professional and transparent
@@ -2814,7 +2814,7 @@ due to QA delays."
 <h2>撰写专业邮件</h2>
 <p>同样的邮件内容需要为不同的收件人使用不同的语气。使用ChatGPT调整语气，无需从头重写：</p>
 
-<pre><code>起草一封通知客户价格上调的邮件，从每月500美元涨到550美元，从下季度开始。
+<pre><code class="language-text">起草一封通知客户价格上调的邮件，从每月500美元涨到550美元，从下季度开始。
 使用以下细节：90天通知期、沿用现有合同条款、为年付客户提供忠诚折扣。
 写三个版本：一个给长期合作伙伴（温暖语气）、一个给交易型客户（专业语气）、
 一个给不满意的客户（道歉语气，强调价值）。</code></pre>
@@ -2822,7 +2822,7 @@ due to QA delays."
 <h2>方案和推销词</h2>
 <p>AI在你提供结构化输入时能加速方案写作：</p>
 
-<pre><code>为一个小企业客户写一页的项目方案，他们想升级网站。结构：
+<pre><code class="language-text">为一个小企业客户写一页的项目方案，他们想升级网站。结构：
 1. 问题陈述（我们观察到的问题）
 2. 解决方案建议（具体交付物）
 3. 时间线（3周）
@@ -2833,7 +2833,7 @@ due to QA delays."
 <h2>客户沟通模板</h2>
 <p>为常见情况建立一个可复用的模板库：</p>
 
-<pre><code>为以下常见客户情况创建模板：
+<pre><code class="language-text">为以下常见客户情况创建模板：
 1. 项目启动会议议程
 2. 每周状态更新邮件
 3. 范围变更请求确认
@@ -2843,7 +2843,7 @@ due to QA delays."
 
 <h2>产品和服务描述</h2>
 <p>适用于电商、服务页面或营销材料：</p>
-<pre><code>为[产品]写一个产品描述。功能：[列表]。
+<pre><code class="language-text">为[产品]写一个产品描述。功能：[列表]。
 目标受众：[描述]。语气：以收益为导向、对话式。
 包括：标题（最多10个字）、3个关键收益（要点形式）、
 技术规格部分、行动号召语句。
@@ -2851,7 +2851,7 @@ due to QA delays."
 
 <h2>语气校准技巧</h2>
 <p>掌握一个技巧：以不同语气生成同一消息，然后选择。</p>
-<pre><code>用4种语气写这段消息，我来选择：
+<pre><code class="language-text">用4种语气写这段消息，我来选择：
 "不幸的是，由于QA测试延迟，我们需要将发布推迟2周。"
 1. 专业且透明
 2. 自信且以解决方案为导向
@@ -2884,7 +2884,7 @@ due to QA delays."
 <p>Project planning involves timelines, budgets, task breakdowns, and resource allocation &mdash; all areas where AI excels at structured output. Whether you are planning a work project or a personal event, the same prompting techniques apply.</p>
 
 <h2>Creating Project Timelines</h2>
-<pre><code>Create a 3-month project timeline for launching a new mobile app
+<pre><code class="language-text">Create a 3-month project timeline for launching a new mobile app
 feature. Current state: development complete. Remaining work:
 QA testing (2 weeks), beta testing with 50 users (3 weeks),
 bug fixes (1 week), app store submission (1 week),
@@ -2893,7 +2893,7 @@ Output as a Gantt chart using text characters. Show
 dependencies between tasks.</code></pre>
 
 <h2>Budget Planning and Tracking</h2>
-<pre><code>I need to plan a department offsite for 15 people. Budget: $8,000.
+<pre><code class="language-text">I need to plan a department offsite for 15 people. Budget: $8,000.
 Location: within 2 hours of office. Duration: 2 days.
 Create a budget breakdown covering: venue, meals, activities,
 accommodation, transportation, contingency (10%).
@@ -2901,7 +2901,7 @@ Then suggest 3 specific venue options at different price points.</code></pre>
 
 <h2>Task Breakdown and Assignment</h2>
 <p>AI handles the "everything that needs to happen" exercise that usually lives in someone's head:</p>
-<pre><code>Break down "organize a company hackathon" into individual tasks.
+<pre><code class="language-text">Break down "organize a company hackathon" into individual tasks.
 Group by phase (pre-event, event day, post-event). For each task,
 estimate hours needed and suggest who should own it
 (organizer, tech team, marketing, HR). Flag any tasks that
@@ -2909,21 +2909,21 @@ need to start more than 2 weeks before the event.</code></pre>
 
 <h2>Decision Matrices</h2>
 <p>When choosing between options, AI structures the comparison:</p>
-<pre><code>We are choosing between 3 project management tools: Asana, Linear,
+<pre><code class="language-text">We are choosing between 3 project management tools: Asana, Linear,
 and Notion. Compare them across: price per user, learning curve,
 reporting capabilities, integration with Slack and GitHub,
 mobile app quality. We are a team of 8 developers and 2
 project managers. Recommend the best option with reasoning.</code></pre>
 
 <h2>Meeting Agendas and Facilitation</h2>
-<pre><code>Create a 60-minute project kickoff meeting agenda for a website
+<pre><code class="language-text">Create a 60-minute project kickoff meeting agenda for a website
 redesign project. Attendees: project manager, 2 designers,
 3 developers, client stakeholders. Include time allocations,
 discussion prompts for each section, and desired outcomes.
 Add notes on what prep materials should be sent beforehand.</code></pre>
 
 <h2>Weekly Status Reports</h2>
-<pre><code>Generate a weekly status report template for a software project.
+<pre><code class="language-text">Generate a weekly status report template for a software project.
 Sections: accomplishments this week, planned for next week,
 blockers (categorized by severity), metrics (burndown chart data,
 sprint velocity), decisions needed. Use a dashboard-style format
@@ -2965,14 +2965,14 @@ with emoji indicators for status.</code></pre>
 <p>项目规划涉及时间线、预算、任务分解和资源分配——所有这些领域AI都擅长产生结构化输出。无论你是在规划工作项目还是个人活动，同样的提示词技巧都适用。</p>
 
 <h2>创建项目时间线</h2>
-<pre><code>为发布一个新移动应用功能创建3个月的项目时间线。当前状态：开发完成。剩余工作：
+<pre><code class="language-text">为发布一个新移动应用功能创建3个月的项目时间线。当前状态：开发完成。剩余工作：
 QA测试（2周）、50名用户的Beta测试（3周）、
 bug修复（1周）、应用商店提交（1周）、
 营销准备（并行进行）。
 使用文本字符输出甘特图。显示任务之间的依赖关系。</code></pre>
 
 <h2>预算规划与跟踪</h2>
-<pre><code>我需要为15人规划一个部门外出活动。预算：8,000美元。
+<pre><code class="language-text">我需要为15人规划一个部门外出活动。预算：8,000美元。
 地点：距离办公室2小时以内。时长：2天。
 创建预算明细，涵盖：场地、餐饮、活动、
 住宿、交通、应急资金（10%）。
@@ -2980,7 +2980,7 @@ bug修复（1周）、应用商店提交（1周）、
 
 <h2>任务分解与分配</h2>
 <p>AI能处理"所有需要做的事"这个通常存在于某人头脑中的练习：</p>
-<pre><code>将"组织公司黑客松"分解为具体任务。
+<pre><code class="language-text">将"组织公司黑客松"分解为具体任务。
 按阶段分组（活动前、活动当天、活动后）。对每个任务，
 估算所需小时数并建议负责人
 （组织者、技术团队、营销、HR）。标记任何需要
@@ -2988,20 +2988,20 @@ bug修复（1周）、应用商店提交（1周）、
 
 <h2>决策矩阵</h2>
 <p>在多个选项中选择时，AI帮你结构化比较：</p>
-<pre><code>我们要在3个项目工具中选择：Asana、Linear和Notion。
+<pre><code class="language-text">我们要在3个项目工具中选择：Asana、Linear和Notion。
 从以下维度比较：每用户价格、学习曲线、
 报告功能、与Slack和GitHub的集成、
 移动应用质量。我们是一个8名开发者和2名
 项目经理的团队。推荐最佳选项并给出理由。</code></pre>
 
 <h2>会议议程与引导</h2>
-<pre><code>为网站改版项目创建一个60分钟的项目启动会议议程。
+<pre><code class="language-text">为网站改版项目创建一个60分钟的项目启动会议议程。
 参会者：项目经理、2名设计师、3名开发者、客户方相关人员。
 包括时间分配、每个环节的讨论引导问题和期望成果。
 添加关于应提前发送的准备材料的说明。</code></pre>
 
 <h2>每周状态报告</h2>
-<pre><code>生成一个软件项目的每周状态报告模板。
+<pre><code class="language-text">生成一个软件项目的每周状态报告模板。
 部分：本周成果、下周计划、
 阻碍事项（按严重程度分类）、指标（燃尽图数据、
 Sprint速度）、需要做出的决策。使用仪表盘风格格式，
@@ -3034,7 +3034,7 @@ Sprint速度）、需要做出的决策。使用仪表盘风格格式，
 
 <h2>Stage 1: Research Planning</h2>
 <p>Before diving in, use AI to structure your research approach:</p>
-<pre><code>I need to research "impact of remote work on employee productivity"
+<pre><code class="language-text">I need to research "impact of remote work on employee productivity"
 for a quarterly business review. Create a research plan:
 1. Key questions to answer (5-7 questions)
 2. Types of data I need (quantitative, qualitative, case studies)
@@ -3044,7 +3044,7 @@ for a quarterly business review. Create a research plan:
 
 <h2>Stage 2: Source Analysis</h2>
 <p>Upload documents or paste web content for AI analysis:</p>
-<pre><code>I uploaded 5 articles on remote work productivity.
+<pre><code class="language-text">I uploaded 5 articles on remote work productivity.
 Synthesize them:
 1. What are the main findings across all sources?
 2. Where do sources disagree?
@@ -3057,7 +3057,7 @@ with 200+ employees?
 
 <h2>Stage 3: Data Interpretation</h2>
 <p>If you have numerical data, let AI help interpret it:</p>
-<pre><code>Here is our employee survey data for Q1-Q4 2025. Columns:
+<pre><code class="language-text">Here is our employee survey data for Q1-Q4 2025. Columns:
 quarter, department, satisfaction_score, turnover_rate,
 remote_days_per_week. Analyze:
 1. Correlation between remote days and satisfaction
@@ -3068,7 +3068,7 @@ remote_days_per_week. Analyze:
 
 <h2>Stage 4: Report Writing</h2>
 <p>Use the outline-first technique from Part 3 of ChatGPT Mastery:</p>
-<pre><code>Based on the research above, write an executive summary for
+<pre><code class="language-text">Based on the research above, write an executive summary for
 a quarterly business review. Audience: C-suite executives.
 Maximum 500 words. Structure: key finding (1 paragraph),
 supporting data (2-3 paragraphs), recommendations (1 paragraph),
@@ -3076,7 +3076,7 @@ risks to consider (1 paragraph). Use plain language, no jargon.</code></pre>
 
 <h2>Stage 5: Source Verification</h2>
 
-<pre><code>For every statistic or study you cited in the report above,
+<pre><code class="language-text">For every statistic or study you cited in the report above,
 provide the exact source: author, publication, year, URL if
 available. Mark any sources you are uncertain about as
 "[requires verification]".</code></pre>
@@ -3128,7 +3128,7 @@ available. Mark any sources you are uncertain about as
 
 <h2>阶段1：研究规划</h2>
 <p>在深入之前，使用AI构建你的研究方法：</p>
-<pre><code>我需要研究"远程工作对员工生产力的影响"
+<pre><code class="language-text">我需要研究"远程工作对员工生产力的影响"
 用于季度业务评审。创建研究计划：
 1. 需要回答的关键问题（5-7个问题）
 2. 我需要的数据类型（定量、定性、案例研究）
@@ -3138,7 +3138,7 @@ available. Mark any sources you are uncertain about as
 
 <h2>阶段2：来源分析</h2>
 <p>上传文档或粘贴网页内容供AI分析：</p>
-<pre><code>我上传了5篇关于远程工作生产力的文章。
+<pre><code class="language-text">我上传了5篇关于远程工作生产力的文章。
 综合它们：
 1. 所有来源的主要发现是什么？
 2. 来源之间在哪里存在分歧？
@@ -3150,7 +3150,7 @@ available. Mark any sources you are uncertain about as
 
 <h2>阶段3：数据解读</h2>
 <p>如果你有数值数据，让AI帮你解读：</p>
-<pre><code>这是我们2025年Q1-Q4的员工调查数据。列：
+<pre><code class="language-text">这是我们2025年Q1-Q4的员工调查数据。列：
 季度、部门、满意度评分、离职率、
 每周远程天数。分析：
 1. 远程天数与满意度之间的相关性
@@ -3161,7 +3161,7 @@ available. Mark any sources you are uncertain about as
 
 <h2>阶段4：报告写作</h2>
 <p>使用ChatGPT精通第3部分中的先列大纲技巧：</p>
-<pre><code>基于上述研究，为季度业务评审写一份执行摘要。
+<pre><code class="language-text">基于上述研究，为季度业务评审写一份执行摘要。
 受众：C级高管。最多500字。
 结构：关键发现（1段）、支持数据（2-3段）、
 建议（1段）、需要考虑的风险（1段）。
@@ -3169,7 +3169,7 @@ available. Mark any sources you are uncertain about as
 
 <h2>阶段5：来源验证</h2>
 
-<pre><code>对于你在上述报告中引用的每个统计数据或研究，
+<pre><code class="language-text">对于你在上述报告中引用的每个统计数据或研究，
 提供确切来源：作者、出版物、年份、URL（如有）。
 将你不确定的任何来源标记为"[需要验证]".</code></pre>
 
@@ -3212,7 +3212,7 @@ available. Mark any sources you are uncertain about as
 
 <p>ChatGPT's voice mode (available on mobile) lets you practice speaking without a human partner. Set up a structured practice session:</p>
 
-<pre><code>You are an English conversation tutor. My level is intermediate.
+<pre><code class="language-text">You are an English conversation tutor. My level is intermediate.
 We will have a 10-minute conversation about [topic].
 Rules:
 1. Speak at a natural pace but use simple vocabulary
@@ -3226,7 +3226,7 @@ Topic: Describe a recent trip or place you visited.</code></pre>
 <p>For ChatGPT Plus users, Advanced Voice Mode adds tone detection, interrupt capability, and more natural conversation flow. Free users have basic voice mode which works for structured practice.</p>
 
 <h2>Skills Practice: Interview Prep</h2>
-<pre><code>Conduct a mock technical interview for a junior frontend developer
+<pre><code class="language-text">Conduct a mock technical interview for a junior frontend developer
 position. Ask me 5 questions covering: HTML semantics, CSS
 flexbox, JavaScript closures, React hooks, and responsive design.
 After each answer:
@@ -3237,7 +3237,7 @@ After each answer:
 
 <h2>Concept Learning with Adaptive Teaching</h2>
 <p>AI adapts to your current knowledge level:</p>
-<pre><code>Teach me about machine learning. I have no technical background.
+<pre><code class="language-text">Teach me about machine learning. I have no technical background.
 Start with the absolute basics. Use analogies for every concept.
 After each section, ask me a question to check understanding.
 If I get it wrong, explain again with a different analogy.
@@ -3245,14 +3245,14 @@ Advance to the next topic only when I demonstrate understanding.
 Do not use any math or code.</code></pre>
 
 <h2>Test and Certification Prep</h2>
-<pre><code>I am studying for the AWS Cloud Practitioner exam. Generate
+<pre><code class="language-text">I am studying for the AWS Cloud Practitioner exam. Generate
 practice questions covering: IAM, S3, EC2, Lambda, pricing models.
 Format: multiple choice with 4 options each. After I answer,
 explain why each option is correct or incorrect. Track my
 accuracy across sessions and highlight weak areas.</code></pre>
 
 <h2>Reading Comprehension and Analysis</h2>
-<pre><code>I uploaded a chapter from a business textbook. Help me learn it:
+<pre><code class="language-text">I uploaded a chapter from a business textbook. Help me learn it:
 1. Summarize the chapter in 3 sentences
 2. Create 5 study questions covering key concepts
 3. Explain the 2 most difficult concepts using simple analogies
@@ -3261,7 +3261,7 @@ accuracy across sessions and highlight weak areas.</code></pre>
 
 <h2>Pronunciation and Accent Practice</h2>
 <p>For language learners, practice specific sounds:</p>
-<pre><code>I struggle with the "th" sound in English. Give me:
+<pre><code class="language-text">I struggle with the "th" sound in English. Give me:
 1. A description of tongue placement for voiced and unvoiced "th"
 2. 10 minimal pairs comparing "th" with "d" and "f" sounds
 3. 5 sentences that practice "th" in different positions
@@ -3307,7 +3307,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 
 <p>ChatGPT的语音模式（移动端可用）让你无需真人伙伴即可练习口语。设置一个结构化的练习会话：</p>
 
-<pre><code>你是一名英语会话导师。我的水平是中级。
+<pre><code class="language-text">你是一名英语会话导师。我的水平是中级。
 我们将进行10分钟关于[话题]的对话。
 规则：
 1. 以自然语速说话，但使用简单词汇
@@ -3321,7 +3321,7 @@ Let me practice and you correct my pronunciation.</code></pre>
 <p>对于ChatGPT Plus用户，高级语音模式增加了语气检测、打断功能和更自然的对话流。免费用户有基本的语音模式，适合结构化练习。</p>
 
 <h2>技能练习：面试准备</h2>
-<pre><code>模拟一次初级前端开发人员职位的技术面试。
+<pre><code class="language-text">模拟一次初级前端开发人员职位的技术面试。
 问我5个问题，涵盖：HTML语义化、CSS
 flexbox、JavaScript闭包、React hooks和响应式设计。
 每次回答后：
@@ -3332,7 +3332,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <h2>自适应教学的概念学习</h2>
 <p>AI能适应你当前的知识水平：</p>
-<pre><code>教我机器学习。我没有技术背景。
+<pre><code class="language-text">教我机器学习。我没有技术背景。
 从最基础开始。每个概念都使用类比。
 每个部分结束后，问我一个问题检查理解情况。
 如果我答错了，用不同的类比再解释一遍。
@@ -3340,14 +3340,14 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 不要使用任何数学或代码。</code></pre>
 
 <h2>测试和认证准备</h2>
-<pre><code>我正在准备AWS Cloud Practitioner考试。生成
+<pre><code class="language-text">我正在准备AWS Cloud Practitioner考试。生成
 练习题，涵盖：IAM、S3、EC2、Lambda、定价模型。
 格式：每个题4个选项的多选题。我回答后，
 解释每个选项为什么正确或错误。跨会话跟踪我的
 正确率并突出薄弱环节。</code></pre>
 
 <h2>阅读理解与分析</h2>
-<pre><code>我上传了一本商业教科书的章节。帮我学习它：
+<pre><code class="language-text">我上传了一本商业教科书的章节。帮我学习它：
 1. 用3句话总结该章节
 2. 创建5个涵盖关键概念的学习问题
 3. 用简单的类比解释2个最难的概念
@@ -3356,7 +3356,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <h2>发音和口音练习</h2>
 <p>对于语言学习者，练习特定发音：</p>
-<pre><code>我在英语"th"发音上有困难。给我：
+<pre><code class="language-text">我在英语"th"发音上有困难。给我：
 1. 清音和浊音"th"的舌头位置描述
 2. 10组最小对比对，比较"th"与"d"和"f"音
 3. 5个在不同位置练习"th"的句子
@@ -3390,31 +3390,31 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <h2>1. Meal Plan the Week in 2 Minutes</h2>
 
-<pre><code>Create a 5-day dinner plan for a family of 4. Constraints: no dairy, max 30 minutes prep per meal, use seasonal spring vegetables, include one kid-friendly "fun" meal like taco night. Output as a table with day, meal, ingredients, and prep time.</code></pre>
+<pre><code class="language-text">Create a 5-day dinner plan for a family of 4. Constraints: no dairy, max 30 minutes prep per meal, use seasonal spring vegetables, include one kid-friendly "fun" meal like taco night. Output as a table with day, meal, ingredients, and prep time.</code></pre>
 
 <h2>2. Draft Permission Slips and School Notes</h2>
 
-<pre><code>Write a permission slip for my child to attend a field trip to the science museum on [date]. The bus leaves at 8:30 AM and returns by 3:00 PM. Include sections for emergency contact, medical conditions, and lunch preference. Warm but brief tone.</code></pre>
+<pre><code class="language-text">Write a permission slip for my child to attend a field trip to the science museum on [date]. The bus leaves at 8:30 AM and returns by 3:00 PM. Include sections for emergency contact, medical conditions, and lunch preference. Warm but brief tone.</code></pre>
 
 <h2>3. Plan a Birthday Party from Scratch</h2>
 
-<pre><code>Plan a birthday party for a 6-year-old with 10 guests. Budget: $150. Location: apartment living room. Theme: dinosaurs. Include: schedule of activities, supplies list with quantities, nut-free food ideas, 3-day prep timeline.</code></pre>
+<pre><code class="language-text">Plan a birthday party for a 6-year-old with 10 guests. Budget: $150. Location: apartment living room. Theme: dinosaurs. Include: schedule of activities, supplies list with quantities, nut-free food ideas, 3-day prep timeline.</code></pre>
 
 <h2>4. Explain Homework Topics</h2>
 
-<pre><code>Explain how photosynthesis works to an 8-year-old. Use an analogy involving cooking. Keep it under 3 paragraphs. Then give me a 1-sentence version a 6-year-old could understand.</code></pre>
+<pre><code class="language-text">Explain how photosynthesis works to an 8-year-old. Use an analogy involving cooking. Keep it under 3 paragraphs. Then give me a 1-sentence version a 6-year-old could understand.</code></pre>
 
 <h2>5. Write Back to Teachers and Coaches</h2>
 
-<pre><code>I need to email my child's soccer coach about missing practice next Tuesday due to a dentist appointment. The coach is a volunteer. Keep the tone appreciative and brief.</code></pre>
+<pre><code class="language-text">I need to email my child's soccer coach about missing practice next Tuesday due to a dentist appointment. The coach is a volunteer. Keep the tone appreciative and brief.</code></pre>
 
 <h2>6. Generate Boredom Buster Activities</h2>
 
-<pre><code>Give me 5 no-screen activities for a 4-year-old and a 7-year-old to do together. Materials must be things already at home. Each activity should take 15-20 minutes. Rank by mess level.</code></pre>
+<pre><code class="language-text">Give me 5 no-screen activities for a 4-year-old and a 7-year-old to do together. Materials must be things already at home. Each activity should take 15-20 minutes. Rank by mess level.</code></pre>
 
 <h2>7. Prepare for Parent-Teacher Conferences</h2>
 
-<pre><code>I have a 15-minute parent-teacher conference for my 3rd grader. Generate 5 good questions organized by: academic progress, social development, and areas for improvement. Avoid generic questions.</code></pre>
+<pre><code class="language-text">I have a 15-minute parent-teacher conference for my 3rd grader. Generate 5 good questions organized by: academic progress, social development, and areas for improvement. Avoid generic questions.</code></pre>
 
 <h2>FAQ</h2>
 
@@ -3453,31 +3453,31 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <h2>1. 2分钟规划一周食谱</h2>
 
-<pre><code>为4口之家创建5天晚餐计划。限制条件：无乳制品、每餐最多30分钟准备、使用当季春季蔬菜、包括一个孩子喜欢的"趣味"餐如塔可之夜。输出为表格，包含日期、餐点、食材和准备时间。</code></pre>
+<pre><code class="language-text">为4口之家创建5天晚餐计划。限制条件：无乳制品、每餐最多30分钟准备、使用当季春季蔬菜、包括一个孩子喜欢的"趣味"餐如塔可之夜。输出为表格，包含日期、餐点、食材和准备时间。</code></pre>
 
 <h2>2. 起草许可单和学校通知</h2>
 
-<pre><code>为我的孩子写一份参加[日期]科技馆实地考察的许可单。大巴早上8:30出发，下午3:00返回。包含紧急联系人、医疗状况和午餐偏好的部分。语气温暖但简洁。</code></pre>
+<pre><code class="language-text">为我的孩子写一份参加[日期]科技馆实地考察的许可单。大巴早上8:30出发，下午3:00返回。包含紧急联系人、医疗状况和午餐偏好的部分。语气温暖但简洁。</code></pre>
 
 <h2>3. 从头规划生日派对</h2>
 
-<pre><code>为一个6岁孩子规划10位客人的生日派对。预算：150美元。地点：公寓客厅。主题：恐龙。包括：活动时间表、物资清单（带数量）、无坚果食物创意、3天准备时间线。</code></pre>
+<pre><code class="language-text">为一个6岁孩子规划10位客人的生日派对。预算：150美元。地点：公寓客厅。主题：恐龙。包括：活动时间表、物资清单（带数量）、无坚果食物创意、3天准备时间线。</code></pre>
 
 <h2>4. 解释家庭作业话题</h2>
 
-<pre><code>向一个8岁的孩子解释光合作用是如何工作的。使用涉及烹饪的类比。保持在3段以内。然后给我一个6岁孩子能理解的一句话版本。</code></pre>
+<pre><code class="language-text">向一个8岁的孩子解释光合作用是如何工作的。使用涉及烹饪的类比。保持在3段以内。然后给我一个6岁孩子能理解的一句话版本。</code></pre>
 
 <h2>5. 回复老师和教练</h2>
 
-<pre><code>我需要给孩子的足球教练发邮件，说明下周二因牙医预约不能参加训练。教练是志愿者。保持语气感激且简洁。</code></pre>
+<pre><code class="language-text">我需要给孩子的足球教练发邮件，说明下周二因牙医预约不能参加训练。教练是志愿者。保持语气感激且简洁。</code></pre>
 
 <h2>6. 生成无聊破解活动</h2>
 
-<pre><code>给我5个4岁和7岁孩子可以一起做的无屏幕活动。材料必须是家里已有的东西。每个活动应花费15-20分钟。按混乱程度排序。</code></pre>
+<pre><code class="language-text">给我5个4岁和7岁孩子可以一起做的无屏幕活动。材料必须是家里已有的东西。每个活动应花费15-20分钟。按混乱程度排序。</code></pre>
 
 <h2>7. 准备家长会</h2>
 
-<pre><code>我为我三年级的孩子准备了一个15分钟的家长会。生成5个好问题，按以下分类：学业进展、社交发展和需要改进的领域。避免通用问题。</code></pre>
+<pre><code class="language-text">我为我三年级的孩子准备了一个15分钟的家长会。生成5个好问题，按以下分类：学业进展、社交发展和需要改进的领域。避免通用问题。</code></pre>
 
 <h2>常见问题</h2>
 
@@ -3524,7 +3524,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <p>In any <code>#newbies</code> channel, type:</p>
 
-<pre><code>/imagine prompt: a serene mountain lake at sunrise, mist rising from the water, pine trees framing the shot, cinematic lighting, 8k --ar 16:9 --v 6</code></pre>
+<pre><code class="language-text">/imagine prompt: a serene mountain lake at sunrise, mist rising from the water, pine trees framing the shot, cinematic lighting, 8k --ar 16:9 --v 6</code></pre>
 
 <p>Midjourney returns 4 image options within about 60 seconds. Below the grid you see buttons:</p>
 <ul>
@@ -3602,7 +3602,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 
 <p>在任何 <code>#newbies</code> 频道中，输入：</p>
 
-<pre><code>/imagine prompt: a serene mountain lake at sunrise, mist rising from the water, pine trees framing the shot, cinematic lighting, 8k --ar 16:9 --v 6</code></pre>
+<pre><code class="language-text">/imagine prompt: a serene mountain lake at sunrise, mist rising from the water, pine trees framing the shot, cinematic lighting, 8k --ar 16:9 --v 6</code></pre>
 
 <p>Midjourney大约在60秒内返回4个图像选项。在网格下方你会看到按钮：</p>
 <ul>
@@ -4229,7 +4229,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h2>3. Deep Research Mode</h2>
 <p>This is the feature you will actually use daily. When enabled, GPT-5 spends 5-10 minutes researching your question, reading multiple sources, and producing a comprehensive report with citations.</p>
 
-<pre><code>I need a new laptop for photo editing. Budget $1500-2000. Compare top 3 options in 2026 for screen accuracy, processing speed, and build quality.</code></pre>
+<pre><code class="language-text">I need a new laptop for photo editing. Budget $1500-2000. Compare top 3 options in 2026 for screen accuracy, processing speed, and build quality.</code></pre>
 
 <p>GPT-5 in Deep Research mode returns a 2000-word analysis with specific model comparisons and current prices. This genuinely replaces hours of manual research.</p>
 
@@ -4291,7 +4291,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h2>3. 深度研究模式</h2>
 <p>这是你每天都会使用的功能。启用后，GPT-5会花5-10分钟研究你的问题，阅读多个来源，并生成带引用的综合报告。</p>
 
-<pre><code>我需要一台用于照片编辑的新笔记本电脑。预算1500-2000美元。比较2026年屏幕精度、处理速度和构建质量的前3个选项。</code></pre>
+<pre><code class="language-text">我需要一台用于照片编辑的新笔记本电脑。预算1500-2000美元。比较2026年屏幕精度、处理速度和构建质量的前3个选项。</code></pre>
 
 <p>GPT-5在深度研究模式下返回一份2000字的分析，包含具体型号比较和当前价格。这真正取代了数小时的手动研究。</p>
 
@@ -4337,7 +4337,7 @@ flexbox、JavaScript闭包、React hooks和响应式设计。
 <h2>Before You Start: Install Ollama</h2>
 <p>Ollama is the easiest way to run local models. It handles downloading, model management, and provides a simple CLI.</p>
 
-<pre><code># Install Ollama (Mac/Linux)
+<pre><code class="language-bash"># Install Ollama (Mac/Linux)
 curl -fsSL https://ollama.com/install.sh | sh
 
 # Windows: download from https://ollama.com/download/windows
@@ -4348,22 +4348,22 @@ ollama --version</code></pre>
 <h2>Model 1: Llama 3.2 3B (Best for Most Laptops)</h2>
 <p><strong>3B params | 4 GB RAM | Fast on CPU</strong></p>
 <p>Meta's Llama 3.2 3B handles Q&A, summarization, brainstorming, and basic writing. Not as capable as GPT-4 but performs surprisingly well for everyday tasks.</p>
-<pre><code>ollama run llama3.2:3b</code></pre>
+<pre><code class="language-bash">ollama run llama3.2:3b</code></pre>
 
 <h2>Model 2: Llama 3.1 8B (More Capable)</h2>
 <p><strong>8B params | 8 GB RAM | Good on CPU, fast with GPU</strong></p>
 <p>Matches or exceeds GPT-3.5 on many benchmarks. Handles complex reasoning, coding, and writing. On a 16GB laptop without GPU, expect 5-10 tokens/second.</p>
-<pre><code>ollama run llama3.1:8b</code></pre>
+<pre><code class="language-bash">ollama run llama3.1:8b</code></pre>
 
 <h2>Model 3: Qwen2.5 7B (Best for Coding)</h2>
 <p><strong>7B params | 6 GB RAM</strong></p>
 <p>Alibaba's Qwen2.5 slightly outperforms Llama on programming and math. Also supports multilingual tasks well.</p>
-<pre><code>ollama run qwen2.5:7b</code></pre>
+<pre><code class="language-bash">ollama run qwen2.5:7b</code></pre>
 
 <h2>Model 4: Phi-3.5 3.8B (Most Efficient)</h2>
 <p><strong>3.8B params | 3 GB RAM | Very fast even on old laptops</strong></p>
 <p>Microsoft's Phi-3.5 uses high-quality curated training data. Despite being small, it competes with models twice its size on reasoning. Ideal for 8GB laptops.</p>
-<pre><code>ollama run phi3.5:3.8b</code></pre>
+<pre><code class="language-bash">ollama run phi3.5:3.8b</code></pre>
 
 <h2>Performance Summary</h2>
 <table>
@@ -4416,7 +4416,7 @@ ollama --version</code></pre>
 <h2>开始之前：安装Ollama</h2>
 <p>Ollama是运行本地模型最简单的方式。它处理下载、模型管理，并提供简单的CLI。</p>
 
-<pre><code># 安装Ollama（Mac/Linux）
+<pre><code class="language-bash"># 安装Ollama（Mac/Linux）
 curl -fsSL https://ollama.com/install.sh | sh
 
 # Windows：从 https://ollama.com/download/windows 下载
@@ -4427,22 +4427,22 @@ ollama --version</code></pre>
 <h2>模型1：Llama 3.2 3B（最适合大多数笔记本电脑）</h2>
 <p><strong>3B参数 | 4 GB内存 | CPU上快速运行</strong></p>
 <p>Meta的Llama 3.2 3B处理问答、摘要、头脑风暴和基本写作。不如GPT-4强大，但在日常任务中表现出乎意料地好。</p>
-<pre><code>ollama run llama3.2:3b</code></pre>
+<pre><code class="language-bash">ollama run llama3.2:3b</code></pre>
 
 <h2>模型2：Llama 3.1 8B（能力更强）</h2>
 <p><strong>8B参数 | 8 GB内存 | CPU上运行良好，GPU上快速</strong></p>
 <p>在许多基准测试中达到或超过GPT-3.5。处理复杂推理、编程和写作。在16GB的无GPU笔记本电脑上，预计速度为5-10 token/秒。</p>
-<pre><code>ollama run llama3.1:8b</code></pre>
+<pre><code class="language-bash">ollama run llama3.1:8b</code></pre>
 
 <h2>模型3：Qwen2.5 7B（最适合编程）</h2>
 <p><strong>7B参数 | 6 GB内存</strong></p>
 <p>阿里的Qwen2.5在编程和数学方面略优于Llama。同时也很好地支持多语言任务。</p>
-<pre><code>ollama run qwen2.5:7b</code></pre>
+<pre><code class="language-bash">ollama run qwen2.5:7b</code></pre>
 
 <h2>模型4：Phi-3.5 3.8B（最高效）</h2>
 <p><strong>3.8B参数 | 3 GB内存 | 即使在旧笔记本电脑上也非常快</strong></p>
 <p>Microsoft的Phi-3.5使用高质量的精选训练数据。尽管体积小，但在推理方面可以与体积大两倍的模型竞争。适合8GB内存的笔记本电脑。</p>
-<pre><code>ollama run phi3.5:3.8b</code></pre>
+<pre><code class="language-bash">ollama run phi3.5:3.8b</code></pre>
 
 <h2>性能总结</h2>
 <table>
@@ -4844,7 +4844,7 @@ ollama --version</code></pre>
 
 <p>Create a project-level settings file to control Claude Code's behavior for your specific project:</p>
 
-<pre><code># Create the .claude directory in your project root
+<pre><code class="language-bash"># Create the .claude directory in your project root
 mkdir -p .claude
 
 # Create the settings file
@@ -4868,7 +4868,7 @@ EOF</code></pre>
 
 <p>To add MCP tools, edit your project's <code>.claude/settings.json</code> and add an <code>mcpServers</code> section:</p>
 
-<pre><code>{
+<pre><code class="language-json">{
   "mcpServers": {
     "filesystem": {
       "command": "npx",
@@ -4899,14 +4899,14 @@ EOF</code></pre>
 
 <div class="step-card">
 <h3>Option 1: .env file (simplest for single projects)</h3>
-<pre><code>echo 'ANTHROPIC_API_KEY=sk-ant-***' &gt; .env
+<pre><code class="language-bash">echo 'ANTHROPIC_API_KEY=sk-ant-***' &gt; .env
 echo '.env' &gt;&gt; .gitignore   # prevent committing secrets</code></pre>
 <p>Claude Code reads <code>.env</code> automatically if present.</p>
 </div>
 
 <div class="step-card">
 <h3>Option 2: System environment variable (for global use)</h3>
-<pre><code># Add to ~/.zshrc or ~/.bashrc
+<pre><code class="language-bash"># Add to ~/.zshrc or ~/.bashrc
 export ANTHROPIC_API_KEY="sk-ant-***"
 export ANTHROPIC_BASE_URL="https://api.anthropic.com/v1"</code></pre>
 </div>
@@ -4915,7 +4915,7 @@ export ANTHROPIC_BASE_URL="https://api.anthropic.com/v1"</code></pre>
 
 <p>Similar to <code>.gitignore</code>, a <code>.claudeignore</code> file tells Claude Code which files to skip when reading your project:</p>
 
-<pre><code># .claudeignore
+<pre><code class="language-bash"># .claudeignore
 node_modules/
 dist/
 build/
@@ -4931,7 +4931,7 @@ package-lock.json
 
 <p>Try these commands to verify your configuration:</p>
 
-<pre><code># Show current configuration
+<pre><code class="language-bash"># Show current configuration
 claude config list
 
 # Test MCP server connection
@@ -4989,7 +4989,7 @@ claude --verbose</code></pre>
 
 <p>创建一个项目级设置文件来控制Claude Code在你特定项目中的行为：</p>
 
-<pre><code># 在项目根目录创建.claude目录
+<pre><code class="language-bash"># 在项目根目录创建.claude目录
 mkdir -p .claude
 
 # 创建设置文件
@@ -5013,7 +5013,7 @@ EOF</code></pre>
 
 <p>要添加MCP工具，编辑项目中的<code>.claude/settings.json</code>并添加<code>mcpServers</code>部分：</p>
 
-<pre><code>{
+<pre><code class="language-json">{
   "mcpServers": {
     "filesystem": {
       "command": "npx",
@@ -5044,14 +5044,14 @@ EOF</code></pre>
 
 <div class="step-card">
 <h3>选项1：.env文件（最简单，适用于单个项目）</h3>
-<pre><code>echo 'ANTHROPIC_API_KEY=sk-ant-***' &gt; .env
+<pre><code class="language-bash">echo 'ANTHROPIC_API_KEY=sk-ant-***' &gt; .env
 echo '.env' &gt;&gt; .gitignore   # 防止提交密钥</code></pre>
 <p>Claude Code自动读取<code>.env</code>文件（如果存在）。</p>
 </div>
 
 <div class="step-card">
 <h3>选项2：系统环境变量（适用于全局使用）</h3>
-<pre><code># 添加到 ~/.zshrc 或 ~/.bashrc
+<pre><code class="language-bash"># 添加到 ~/.zshrc 或 ~/.bashrc
 export ANTHROPIC_API_KEY="sk-ant-***"
 export ANTHROPIC_BASE_URL="https://api.anthropic.com/v1"</code></pre>
 </div>
@@ -5060,7 +5060,7 @@ export ANTHROPIC_BASE_URL="https://api.anthropic.com/v1"</code></pre>
 
 <p>类似于<code>.gitignore</code>，<code>.claudeignore</code>文件告诉Claude Code在读取项目时跳过哪些文件：</p>
 
-<pre><code># .claudeignore
+<pre><code class="language-bash"># .claudeignore
 node_modules/
 dist/
 build/
@@ -5076,7 +5076,7 @@ package-lock.json
 
 <p>尝试这些命令来验证你的配置：</p>
 
-<pre><code># 显示当前配置
+<pre><code class="language-bash"># 显示当前配置
 claude config list
 
 # 测试MCP服务器连接
@@ -5118,13 +5118,13 @@ claude --verbose</code></pre>
 <h2>Step 1: Scaffold the Project</h2>
 <p>Create a new directory and start Claude Code:</p>
 
-<pre><code>mkdir link-vault && cd link-vault
+<pre><code class="language-bash">mkdir link-vault && cd link-vault
 git init
 claude</code></pre>
 
 <p>Once Claude Code starts, give it the first prompt:</p>
 
-<pre><code>Set up a new web project with: index.html, style.css, and app.js.
+<pre><code class="language-text">Set up a new web project with: index.html, style.css, and app.js.
 Create index.html with a basic HTML5 structure linking both files.
 Create style.css with a modern dark theme and a card-based layout.
 Create app.js with a console.log("Link Vault loaded") placeholder.
@@ -5135,7 +5135,7 @@ Initialize npm with package.json.</code></pre>
 <h2>Step 2: Build the Bookmark Form</h2>
 <p>Prompt Claude Code inside the same session:</p>
 
-<pre><code>In app.js, implement:
+<pre><code class="language-text">In app.js, implement:
 1. A function addBookmark(url, title, tags) that saves to localStorage
 2. A function getBookmarks() that returns all saved bookmarks
 3. A function renderBookmarks() that displays bookmarks as cards
@@ -5147,7 +5147,7 @@ Make it look good with the existing dark theme. Tags should be displayed as colo
 <h2>Step 3: Add Search and Filter</h2>
 <p>Now add the search functionality:</p>
 
-<pre><code>Add to app.js:
+<pre><code class="language-text">Add to app.js:
 1. A search input in index.html above the bookmark grid
 2. A filterBookmarks(query) function that matches against title, URL, and tags
 3. Real-time filtering as the user types (use input event)
@@ -5159,7 +5159,7 @@ Confirm before deleting.</code></pre>
 <h2>Step 4: Import and Export</h2>
 <p>Add data portability:</p>
 
-<pre><code>Add to app.js:
+<pre><code class="language-text">Add to app.js:
 1. An "Export" button that downloads bookmarks as a JSON file
 2. An "Import" button that lets the user upload a JSON file
 3. Validate the imported data (must have url, title fields)
@@ -5178,7 +5178,7 @@ Add these buttons in a toolbar section above the bookmark grid.</code></pre>
 </ul>
 
 <h2>Test Your App</h2>
-<pre><code># Open in browser
+<pre><code class="language-bash"># Open in browser
 open index.html  # Mac
 # or
 start index.html  # Windows
@@ -5228,13 +5228,13 @@ xdg-open index.html  # Linux</code></pre>
 <h2>第1步：搭建项目框架</h2>
 <p>创建新目录并启动Claude Code：</p>
 
-<pre><code>mkdir link-vault && cd link-vault
+<pre><code class="language-bash">mkdir link-vault && cd link-vault
 git init
 claude</code></pre>
 
 <p>Claude Code启动后，给出第一个提示词：</p>
 
-<pre><code>设置一个新的Web项目，包含：index.html、style.css和app.js。
+<pre><code class="language-text">设置一个新的Web项目，包含：index.html、style.css和app.js。
 创建index.html，使用基本的HTML5结构，链接两个文件。
 创建style.css，使用现代深色主题和卡片式布局。
 创建app.js，包含console.log("Link Vault loaded")占位符。
@@ -5245,7 +5245,7 @@ claude</code></pre>
 <h2>第2步：构建书签表单</h2>
 <p>在同一会话中提示Claude Code：</p>
 
-<pre><code>在app.js中实现：
+<pre><code class="language-text">在app.js中实现：
 1. 一个函数 addBookmark(url, title, tags)，保存到localStorage
 2. 一个函数 getBookmarks()，返回所有已保存的书签
 3. 一个函数 renderBookmarks()，将书签显示为卡片
@@ -5257,7 +5257,7 @@ claude</code></pre>
 <h2>第3步：添加搜索和筛选</h2>
 <p>现在添加搜索功能：</p>
 
-<pre><code>在app.js中添加：
+<pre><code class="language-text">在app.js中添加：
 1. 在index.html中添加书签网格上方的搜索输入框
 2. 一个 filterBookmarks(query) 函数，匹配标题、URL和标签
 3. 用户输入时实时筛选（使用input事件）
@@ -5269,7 +5269,7 @@ claude</code></pre>
 <h2>第4步：导入和导出</h2>
 <p>添加数据可移植性：</p>
 
-<pre><code>在app.js中添加：
+<pre><code class="language-text">在app.js中添加：
 1. 一个"导出"按钮，将书签下载为JSON文件
 2. 一个"导入"按钮，让用户上传JSON文件
 3. 验证导入的数据（必须有url、title字段）
@@ -5288,7 +5288,7 @@ claude</code></pre>
 </ul>
 
 <h2>测试你的应用</h2>
-<pre><code># 在浏览器中打开
+<pre><code class="language-text"># 在浏览器中打开
 open index.html  # Mac
 # 或
 start index.html  # Windows
@@ -5328,7 +5328,7 @@ xdg-open index.html  # Linux</code></pre>
 
 <p>When your code has a bug, describe the symptoms and let Claude Code investigate:</p>
 
-<pre><code>I'm getting "Uncaught TypeError: Cannot read properties of null" when I
+<pre><code class="language-text">I'm getting "Uncaught TypeError: Cannot read properties of null" when I
 click the export button in link-vault. Look at app.js and find what's
 null. Fix it and explain what caused the bug.</code></pre>
 
@@ -5342,7 +5342,7 @@ null. Fix it and explain what caused the bug.</code></pre>
 
 <p>For harder bugs, ask Claude Code to add logging:</p>
 
-<pre><code>The search filter isn't working correctly. Add console.log statements
+<pre><code class="language-text">The search filter isn't working correctly. Add console.log statements
 at each step of filterBookmarks() so we can trace the issue. Don't change
 the logic yet, just add logging.</code></pre>
 
@@ -5352,7 +5352,7 @@ the logic yet, just add logging.</code></pre>
 
 <p>This is where Claude Code excels over single-file AI tools. A refactoring prompt might look like:</p>
 
-<pre><code>Refactor link-vault to use a proper MVC pattern:
+<pre><code class="language-text">Refactor link-vault to use a proper MVC pattern:
 1. Create a BookmarkModel class in model.js (handles localStorage operations)
 2. Create a BookmarkView class in view.js (handles DOM rendering)
 3. Create a BookmarkController class in controller.js (handles events)
@@ -5365,7 +5365,7 @@ the logic yet, just add logging.</code></pre>
 
 <p>Claude Code can run shell commands directly. This is useful for setup, testing, and deployment tasks:</p>
 
-<pre><code># Run tests
+<pre><code class="language-text"># Run tests
 Run npm test and fix any failures
 
 # Check for common issues
@@ -5381,7 +5381,7 @@ using pngquant without losing quality</code></pre>
 
 <p>Ask Claude Code to review your entire project:</p>
 
-<pre><code>Review all files in the src/ directory for:
+<pre><code class="language-text">Review all files in the src/ directory for:
 1. Potential bugs (null references, undefined variables, race conditions)
 2. Security issues (XSS, SQL injection, exposed secrets)
 3. Performance problems (unnecessary re-renders, memory leaks)
@@ -5396,7 +5396,7 @@ Provide a prioritized list of issues to fix.</code></pre>
 
 <p>Claude Code can analyze and work with your git history:</p>
 
-<pre><code># Review recent changes
+<pre><code class="language-text"># Review recent changes
 Show me a summary of all commits in the last week grouped by file
 
 # Find when a bug was introduced
@@ -5412,7 +5412,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>For ongoing projects, create project-level instructions in <code>.claude/instructions.md</code>:</p>
 
-<pre><code># Link Vault Project Rules
+<pre><code class="language-text"># Link Vault Project Rules
 
 - Use vanilla JavaScript (no frameworks)
 - Follow the existing MVC pattern
@@ -5462,7 +5462,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>当你的代码有bug时，描述症状并让Claude Code调查：</p>
 
-<pre><code>我在link-vault中点击导出按钮时遇到了"Uncaught TypeError: Cannot read properties of null"。
+<pre><code class="language-text">我在link-vault中点击导出按钮时遇到了"Uncaught TypeError: Cannot read properties of null"。
 查看app.js并找出什么为null。修复它并解释导致bug的原因。</code></pre>
 
 <p>Claude Code会：</p>
@@ -5475,7 +5475,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>对于更难的bug，让Claude Code添加日志：</p>
 
-<pre><code>搜索筛选器工作不正常。在filterBookmarks()的每一步添加console.log语句，
+<pre><code class="language-text">搜索筛选器工作不正常。在filterBookmarks()的每一步添加console.log语句，
 以便我们追踪问题。先不要改变逻辑，只添加日志。</code></pre>
 
 <p>在浏览器控制台中查看日志，然后根据证据要求修复。</p>
@@ -5484,7 +5484,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>这是Claude Code优于单文件AI工具的地方。一个重构提示词可能看起来像：</p>
 
-<pre><code>将link-vault重构为使用适当的MVC模式：
+<pre><code class="language-text">将link-vault重构为使用适当的MVC模式：
 1. 在model.js中创建BookmarkModel类（处理localStorage操作）
 2. 在view.js中创建BookmarkView类（处理DOM渲染）
 3. 在controller.js中创建BookmarkController类（处理事件）
@@ -5497,7 +5497,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>Claude Code可以直接运行shell命令。这对于设置、测试和部署任务很有用：</p>
 
-<pre><code># 运行测试
+<pre><code class="language-text"># 运行测试
 运行npm test并修复所有失败
 
 # 检查常见问题
@@ -5512,7 +5512,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>让Claude Code审查整个项目：</p>
 
-<pre><code>审查src/目录中的所有文件，检查：
+<pre><code class="language-text">审查src/目录中的所有文件，检查：
 1. 潜在bug（空引用、未定义变量、竞态条件）
 2. 安全问题（XSS、SQL注入、泄露的秘密）
 3. 性能问题（不必要的重渲染、内存泄漏）
@@ -5527,7 +5527,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>Claude Code可以分析并使用你的git历史：</p>
 
-<pre><code># 审查最近的更改
+<pre><code class="language-text"># 审查最近的更改
 按文件分组显示过去一周所有提交的摘要
 
 # 查找bug何时被引入
@@ -5543,7 +5543,7 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>对于持续进行的项目，在<code>.claude/instructions.md</code>中创建项目级指令：</p>
 
-<pre><code># Link Vault项目规则
+<pre><code class="language-text"># Link Vault项目规则
 
 - 使用原生JavaScript（无框架）
 - 遵循现有的MVC模式
@@ -5869,10 +5869,10 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 
 <p>Every good AI image prompt follows this structure, regardless of the tool:</p>
 
-<pre><code>[Subject] + [Action/Setting] + [Environment] + [Lighting] + [Style] + [Composition] + [Technical specs]</code></pre>
+<pre><code class="language-text">[Subject] + [Action/Setting] + [Environment] + [Lighting] + [Style] + [Composition] + [Technical specs]</code></pre>
 
 <p>Example applied to Midjourney:</p>
-<pre><code>/imagine prompt:
+<pre><code class="language-text">/imagine prompt:
 A lone wolf standing on a rocky outcrop at twilight
 misty pine forest in the background
 dramatic side-lighting casting long shadows
@@ -5948,7 +5948,7 @@ low angle shot, rule of thirds
 </div>
 
 <p>Example with advanced parameters:</p>
-<pre><code>/imagine prompt: futuristic cyberpunk city street at night, neon reflections
+<pre><code class="language-text">/imagine prompt: futuristic cyberpunk city street at night, neon reflections
 in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 --stylize 600 --no people, garbage, graffiti --v 6</code></pre>
 
@@ -5991,10 +5991,10 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 
 <p>每个好的AI图像提示词都遵循这个结构，无论使用什么工具：</p>
 
-<pre><code>[主体] + [动作/场景] + [环境] + [光线] + [风格] + [构图] + [技术规格]</code></pre>
+<pre><code class="language-text">[主体] + [动作/场景] + [环境] + [光线] + [风格] + [构图] + [技术规格]</code></pre>
 
 <p>应用于Midjourney的示例：</p>
-<pre><code>/imagine prompt:
+<pre><code class="language-text">/imagine prompt:
 黄昏时分站在岩石露头上的孤狼
 背景是雾蒙蒙的松树林
 戏剧性的侧光投下长长的阴影
@@ -6070,7 +6070,7 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 </div>
 
 <p>高级参数示例：</p>
-<pre><code>/imagine prompt: futuristic cyberpunk city street at night, neon reflections
+<pre><code class="language-text">/imagine prompt: futuristic cyberpunk city street at night, neon reflections
 in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 --stylize 600 --no people, garbage, graffiti --v 6</code></pre>
 
@@ -10414,6 +10414,13 @@ prompt = "Write a Python script to scrape data from [website URL], extract produ
 
 <ul>
 <li><strong>优势</strong>：它在多功能性方面表现出色，适用于学术研究、电商图像生成和数据分析。随着最新的GPT-5.5更新，其Codex能力已经接近Claude的编程水平。对研究人员而言，它提供真实学术文献访问（需付费订阅）。其数据分析功能强大，新发布的GPT Image Two提供行业领先的图像生成能力。</li>
+<li><strong>数据分析示例</strong>：</li>
+</ul>
+
+<pre><code class="language-python"># Ask GPT to analyze sales data
+prompt = "Analyze the provided sales dataset, identify trends, and generate a summary with visual insights."</code></pre>
+
+<ul>
 <li><strong>劣势</strong>：它有严格的内容过滤器，回避敏感话题。在中国等地区购买订阅可能比较复杂，最近还存在账户被封和订阅掉线等问题。</li>
 <li><strong>适合人群</strong>：寻找全能工具的学者、电商专业人士和数据分析师。</li>
 </ul>
@@ -10424,6 +10431,13 @@ prompt = "Write a Python script to scrape data from [website URL], extract produ
 
 <ul>
 <li><strong>优势</strong>：其Claude Code功能无与伦比，是程序员的必备工具。即使是非技术背景的产品经理也用其构建网页或应用。它还拥有强大的逻辑推理能力。</li>
+<li><strong>代码编写示例</strong>：</li>
+</ul>
+
+<pre><code class="language-python"># Ask Claude to generate a web scraper
+prompt = "Write a Python script to scrape data from [website URL], extract product names and prices, and save to a CSV file."</code></pre>
+
+<ul>
 <li><strong>劣势</strong>：对IP纯净度要求严格，使用低质量IP时容易导致账号被封。注册需要海外手机号，且Token成本相对较高。</li>
 <li><strong>适合人群</strong>：有专业编码需求的程序员和开发者。</li>
 </ul>
@@ -10434,6 +10448,12 @@ prompt = "Write a Python script to scrape data from [website URL], extract produ
 
 <ul>
 <li><strong>优势</strong>：提供真实文献资料，拥有最强的实时互联网访问能力（借助Twitter）。内容限制极少，非常适合学术研究和短视频创作。它能高效且廉价地生成短视频，甚至可以将人脸融入视频中。</li>
+<li><strong>短视频创作示例</strong>：</li>
+</ul>
+
+<pre><code class="language-plain-text">Prompt: "Create a 30-second video ad for a new fitness app, include a smiling coach's face, highlight features like workout tracking and community support."</code></pre>
+
+<ul>
 <li><strong>劣势</strong>：在某些地区知名度较低，有时内容边界过于宽松。</li>
 <li><strong>适合人群</strong>：重视内容自由的短视频创作者和学者。</li>
 </ul>
@@ -10444,6 +10464,12 @@ prompt = "Write a Python script to scrape data from [website URL], extract produ
 
 <ul>
 <li><strong>优势</strong>：其图像生成能力与GPT Image Two相当。擅长分析大型文档，其Notebook LM功能是文档处理和分析的强大工具。</li>
+<li><strong>文档分析示例</strong>：</li>
+</ul>
+
+<pre><code class="language-plain-text">Prompt: "Analyze this 50-page market research report, extract key findings, trends, and recommendations, and summarize in a concise presentation."</code></pre>
+
+<ul>
 <li><strong>劣势</strong>：受到"羊毛党"的困扰，即使付费用户也偶尔遇到可用性问题。</li>
 <li><strong>适合人群</strong>：需要顶级图像生成和文档分析的创意工作者和内容作者。</li>
 </ul>
@@ -10864,6 +10890,31 @@ When the task involves modifying React components, load references/react-i18n-st
 <li>代理填充模板中的变量并应用风格规则。</li>
 </ul>
 
+<h3>实际案例：面向全球API的文档标准化</h3>
+
+<p>假设你正在为海外支付网关编写API文档，使用Generator确保一致性：</p>
+
+<pre><code class="language-markdown"># SKILL.md
+Generate API documentation with sections: Endpoint, Parameters, Response, Error Codes. Use the tone from references/api-style-guide.md.
+
+# references/api-style-guide.md
+- Use formal, concise language suitable for developers worldwide.
+- List parameters with data types and required/optional status.
+- Explain errors with HTTP status codes and user-friendly messages.
+
+# assets/api-template.md
+## {Endpoint Name}
+- Method: {HTTP Method}
+- URL: {Base URL}{Path}
+- Parameters:
+  {Parameter List}
+- Response:
+  {Response Schema}
+- Error Codes:
+  {Error Code List}</code></pre>
+
+<p>这样，每份API文档都遵循相同的结构，方便全球开发者理解。</p>
+
 <h2>3. Reviewer（审查者）：分离审查标准与流程</h2>
 
 <p>海外团队通常需要适应不同的合规标准（如欧盟的GDPR、加州的CCPA）。<strong>Reviewer</strong>模式将<em>检查什么</em>（标准）与<em>如何检查</em>（流程）分离。</p>
@@ -10875,6 +10926,26 @@ When the task involves modifying React components, load references/react-i18n-st
 <li><code>references/</code>中的<code>review-checklist.md</code>列出具体标准。</li>
 <li>代理将流程应用于不同的检查清单，确保灵活性。</li>
 </ul>
+
+<h3>实际案例：多区域合规审计</h3>
+
+<p>对于一个服务欧盟和美国用户的Web应用，创建可复用的审查流程：</p>
+
+<pre><code class="language-markdown"># SKILL.md (Review Process)
+1. Load the relevant checklist from references/.
+2. Audit the code against each checklist item.
+3. Generate a report with error, warning, and info levels.
+
+# references/gdpr-checklist.md
+- [ ] All user data is encrypted in transit and at rest.
+- [ ] Privacy policy links are present on all data-collecting pages.
+- [ ] Users can request data deletion via a dedicated endpoint.
+
+# references/ccpa-checklist.md
+- [ ] "Do Not Sell My Personal Information" option is visible on the homepage.
+- [ ] Users are notified of data collection at the point of collection.</code></pre>
+
+<p>这样，通过更换检查清单，同一审查流程可以适应GDPR、CCPA或其他地区的标准。</p>
 
 <h2>4. Inversion（反转）：行动前收集信息</h2>
 
@@ -10888,6 +10959,22 @@ When the task involves modifying React components, load references/react-i18n-st
 <li><strong>阶段3：综合</strong>——只有在所有信息收集完毕后，才生成输出。</li>
 </ul>
 
+<h3>实际案例：构建全球营销落地页</h3>
+
+<p>如果客户要求"一个高转化率的新产品落地页"，代理使用Inversion模式：</p>
+
+<pre><code class="language-text">// Phase 1: Discovery
+- Who is the target audience? (e.g., European SMEs, US startups)
+- What's the primary call-to-action? (e.g., sign up for a demo, make a purchase)
+
+// Phase 2: Constraints
+- Which languages are needed? (e.g., English, German, French)
+- Are there any brand guidelines (colors, fonts) to follow?
+- What's the deadline for launch?
+
+// Phase 3: Synthesis
+Only after receiving answers to these questions does the agent generate the landing page code, copy, and design.</code></pre>
+
 <h2>5. Pipeline（流水线）：强制执行逐步执行</h2>
 
 <p>复杂任务（如启动多区域Web应用）需要严格的逐步执行。<strong>Pipeline</strong>模式定义了一个带有门控机制的顺序工作流。</p>
@@ -10899,6 +10986,18 @@ When the task involves modifying React components, load references/react-i18n-st
 <li>每个阶段都有一个"门"，必须通过才能进入下一阶段。</li>
 <li><code>SKILL.md</code>定义工作流和门控条件。</li>
 </ul>
+
+<h3>实际案例：面向海外开发者的自动API文档</h3>
+
+<p>对于生成全球受众API文档的流程，使用Pipeline：</p>
+
+<pre><code class="language-markdown"># SKILL.md (Pipeline Definition)
+Step 1: Parse API code to extract endpoints and parameters. (Gate: All endpoints are identified.)
+Step 2: Generate docstrings for each endpoint. (Gate: Docstrings follow references/api-style-guide.md.)
+Step 3: Assemble docstrings into a single document. (Gate: All endpoints are included.)
+Step 4: Verify documentation for accuracy and completeness. (Gate: No errors found in review.)</code></pre>
+
+<p>这样确保没有步骤（如跳过验证）被遗漏，对维护海外项目质量至关重要。</p>
 
 <h2>为你的海外项目选择正确的模式</h2>
 

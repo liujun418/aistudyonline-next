@@ -69,6 +69,11 @@ export default function CodeBlocks() {
       };
       wrapper.appendChild(btn);
 
+      // Explicitly set language class to prevent highlight.js auto-detection
+      if (code) {
+        code.className = `language-${lang}`;
+      }
+
       // Apply syntax highlighting
       try {
         hljs.highlightElement(code as HTMLElement);
