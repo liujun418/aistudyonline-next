@@ -13006,6 +13006,1127 @@ export const _tools2 = [
       },
     ],
   },
+  // ========================================
+  // New Tools Added 2026-05-26
+  // ========================================
+  {
+    id: "bolt-new",
+    name: "Bolt.new",
+    description: "AI full-stack app builder that turns prompts into deployed applications instantly.",
+    descriptionZh: "AI 全栈应用构建器，将提示词即时转化为已部署的应用。",
+    category: "coding",
+    tags: ["full-stack", "app-builder", "deployment", "web-development"],
+    difficulty: "beginner",
+    url: "https://bolt.new",
+    rating: r(4.5),
+    pricing: "Free / $10/mo Starter",
+    useCase: "Bolt.new is an AI-powered full-stack web app builder. Describe your app in natural language and get a fully functional, deployed application in minutes.",
+    icon: "\u{26A1}",
+    company: "StackBlitz",
+    companyZh: "StackBlitz",
+    founded: "2023",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "Bolt.new is StackBlitz's AI-powered full-stack app builder that revolutionizes web development. Users describe their app idea in natural language, and Bolt.new generates, builds, and deploys a complete application. It handles the entire development lifecycle from project scaffolding to production deployment. Built on WebContainers technology, it runs Node.js in the browser for instant execution. Supports React, Vue, Svelte, Next.js, and more frameworks.",
+    descriptionLongZh: "Bolt.new 是 StackBlitz 推出的 AI 全栈应用构建器。用户用自然语言描述应用想法，Bolt.new 即可生成、构建并部署完整应用。基于 WebContainers 技术，在浏览器中运行 Node.js。",
+    advantages: [
+      "From prompt to deployed app in minutes",
+      "Supports major frameworks (React, Vue, Svelte, Next.js)",
+      "No local setup or environment configuration needed",
+      "Built-in hosting and deployment"
+    ],
+    advantagesZh: [
+      "从提示到部署只需几分钟",
+      "支持主流框架（React、Vue、Svelte、Next.js）",
+      "无需本地安装和环境配置",
+      "内置托管和部署"
+    ],
+    useCases: [
+      "Building full-stack web applications from scratch",
+      "Rapid prototyping and MVP development",
+      "Creating SaaS applications without manual setup",
+      "Learning web development through AI assistance"
+    ],
+    useCasesZh: [
+      "从零构建全栈 Web 应用",
+      "快速原型和 MVP 开发",
+      "无需手动设置即可创建 SaaS 应用",
+      "通过 AI 辅助学习 Web 开发"
+    ],
+    targetAudience: "Developers, founders, and makers who want to build and ship apps faster.",
+    targetAudienceZh: "希望更快构建和发布应用的开发者、创始人和创作者。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["Limited prompts", "Public projects", "Basic features"],
+        featuresZh: ["有限提示", "公开项目", "基础功能"],
+      },
+      {
+        tier: "Starter",
+        tierZh: "入门版",
+        price: "$10/mo",
+        features: ["More prompts", "Private projects", "Priority queue"],
+        featuresZh: ["更多提示", "私有项目", "优先队列"],
+      },
+      {
+        tier: "Pro",
+        tierZh: "专业版",
+        price: "$20/mo",
+        features: ["Unlimited prompts", "Team features", "Custom domains"],
+        featuresZh: ["无限提示", "团队功能", "自定义域名"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Bolt.new Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://bolt.new",
+      }
+    ],
+    skills: ["full-stack development", "rapid prototyping", "AI app builder", "deployment automation"],
+    pros: ["Instant deployment", "No local setup needed", "Multi-framework support", "Great for MVPs"],
+    prosZh: ["即时部署", "无需本地安装", "多框架支持", "非常适合 MVP"],
+    cons: ["Limited free tier", "Generated code needs review", "Less control than manual development"],
+    consZh: ["免费版功能有限", "生成代码需要审查", "控制力不如手动开发"],
+    scene: "development",
+  },
+  {
+    id: "lovable",
+    name: "Lovable",
+    description: "AI app builder that creates full-stack web applications from natural language descriptions.",
+    descriptionZh: "AI 应用构建器，通过自然语言描述创建全栈 Web 应用。",
+    category: "coding",
+    tags: ["app-builder", "full-stack", "web-development", "no-code"],
+    difficulty: "beginner",
+    url: "https://lovable.dev",
+    rating: r(4.4),
+    pricing: "Free / $20/mo Starter",
+    useCase: "Lovable is an AI app builder that transforms natural language descriptions into full-stack web applications with beautiful UIs and production-ready code.",
+    icon: "\u{2764}\u{FE0F}",
+    company: "Lovable AI",
+    companyZh: "Lovable AI",
+    founded: "2023",
+    headquarters: "Stockholm, Sweden",
+    descriptionLong: "Lovable is an AI-powered app builder that turns natural language descriptions into full-stack web applications. It generates complete frontend and backend code with modern frameworks, beautiful UI components, and database integration. Lovable specialises in creating production-ready applications with authentication, data storage, and responsive design out of the box. Users can iterate on their app through conversation, making real-time changes without writing code.",
+    descriptionLongZh: "Lovable 是一款 AI 应用构建器，将自然语言描述转化为全栈 Web 应用。生成包含现代框架、漂亮 UI 组件和数据库集成的完整前后端代码。内置认证、数据存储和响应式设计。",
+    advantages: [
+      "Beautiful UI generation out of the box",
+      "Full-stack with database and auth included",
+      "Iterate through natural conversation",
+      "Production-ready code output"
+    ],
+    advantagesZh: [
+      "开箱即用的漂亮 UI 生成",
+      "包含数据库和认证的全栈方案",
+      "通过自然对话迭代",
+      "生产就绪的代码输出"
+    ],
+    useCases: [
+      "Building SaaS applications quickly",
+      "Creating internal tools and dashboards",
+      "Prototyping startup ideas without a technical team",
+      "Building customer-facing web applications"
+    ],
+    useCasesZh: [
+      "快速构建 SaaS 应用",
+      "创建内部工具和仪表盘",
+      "无需技术团队即可原型创业想法",
+      "构建面向客户的 Web 应用"
+    ],
+    targetAudience: "Founders, product managers, and developers looking to build apps faster.",
+    targetAudienceZh: "希望更快构建应用的创始人、产品经理和开发者。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["Limited projects", "Community support", "Basic features"],
+        featuresZh: ["有限项目", "社区支持", "基础功能"],
+      },
+      {
+        tier: "Starter",
+        tierZh: "入门版",
+        price: "$20/mo",
+        features: ["Unlimited projects", "Custom domain", "Priority support"],
+        featuresZh: ["无限项目", "自定义域名", "优先支持"],
+      },
+      {
+        tier: "Pro",
+        tierZh: "专业版",
+        price: "$50/mo",
+        features: ["Team collaboration", "API access", "Advanced features"],
+        featuresZh: ["团队协作", "API 访问", "高级功能"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Lovable Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://lovable.dev",
+      }
+    ],
+    skills: ["full-stack development", "no-code app building", "rapid prototyping", "UI generation"],
+    pros: ["Beautiful UI by default", "Full-stack with auth", "Natural language iteration", "Fast prototyping"],
+    prosZh: ["默认漂亮的 UI", "包含认证的全栈", "自然语言迭代", "快速原型"],
+    cons: ["Can be expensive for Pro", "Generated code may not fit complex requirements", "Limited customization for advanced use cases"],
+    consZh: ["Pro 版可能较贵", "生成代码可能不满足复杂需求", "高级用例定制有限"],
+    scene: "development",
+  },
+  {
+    id: "v0-vercel",
+    name: "v0 by Vercel",
+    description: "Vercel's AI UI generator that creates React components from text prompts and images.",
+    descriptionZh: "Vercel 的 AI UI 生成器，通过文本提示和图像创建 React 组件。",
+    category: "coding",
+    tags: ["ui-generation", "react", "vercel", "frontend", "shadcn-ui"],
+    difficulty: "intermediate",
+    url: "https://v0.dev",
+    rating: r(4.6),
+    pricing: "Free / $20/mo Pro",
+    useCase: "v0 is Vercel's AI tool for generating React components and pages from text prompts. It produces production-ready UI with Tailwind CSS and shadcn/ui.",
+    icon: "\u{270F}\u{FE0F}",
+    company: "Vercel",
+    companyZh: "Vercel",
+    founded: "2021",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "v0 is Vercel's generative UI tool that creates React components from text descriptions, images, and even screenshots. It generates production-ready code using React, Tailwind CSS, shadcn/ui components, and TypeScript. v0 understands design patterns and best practices, producing responsive, accessible, and visually polished interfaces. Deeply integrated with the Vercel ecosystem, it enables one-click deployment and seamless workflow integration for frontend developers.",
+    descriptionLongZh: "v0 是 Vercel 的生成式 UI 工具，通过文字描述、图像甚至截图创建 React 组件。使用 React、Tailwind CSS、shadcn/ui 和 TypeScript 生成生产就绪的代码。深度集成 Vercel 生态系统。",
+    advantages: [
+      "Production-ready React components with TypeScript",
+      "Beautiful shadcn/ui based design system",
+      "Supports image and screenshot to code",
+      "One-click deploy to Vercel"
+    ],
+    advantagesZh: [
+      "生产就绪的 TypeScript React 组件",
+      "基于 shadcn/ui 的漂亮设计系统",
+      "支持图像和截图转代码",
+      "一键部署到 Vercel"
+    ],
+    useCases: [
+      "Generating UI components from design mockups",
+      "Rapidly prototyping landing pages and dashboards",
+      "Converting screenshots into editable React code",
+      "Building consistent design systems"
+    ],
+    useCasesZh: [
+      "从设计稿生成 UI 组件",
+      "快速原型着陆页和仪表盘",
+      "将截图转换为可编辑的 React 代码",
+      "构建一致的设计系统"
+    ],
+    targetAudience: "Frontend developers and designers using React who want to accelerate UI development.",
+    targetAudienceZh: "使用 React 并希望加速 UI 开发的前端开发者和设计师。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["Limited generations", "Public components", "Basic features"],
+        featuresZh: ["有限生成", "公开组件", "基础功能"],
+      },
+      {
+        tier: "Pro",
+        tierZh: "专业版",
+        price: "$20/mo",
+        features: ["More generations", "Private components", "Team features"],
+        featuresZh: ["更多生成", "私有组件", "团队功能"],
+      }
+    ],
+    extensions: [
+      {
+        name: "v0 Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://v0.dev",
+      },
+      {
+        name: "Vercel Dashboard",
+        description: "Deployment and management",
+        descriptionZh: "部署和管理",
+        url: "https://vercel.com",
+      }
+    ],
+    skills: ["UI generation", "React development", "frontend prototyping", "design-to-code"],
+    pros: ["Production-ready output", "Beautiful default styling", "Image-to-code support", "Vercel integration"],
+    prosZh: ["生产就绪的输出", "默认漂亮样式", "图像转代码", "Vercel 集成"],
+    cons: ["Limited free tier", "Vendor lock-in with Vercel", "Less useful outside React ecosystem"],
+    consZh: ["免费版有限", "绑定 Vercel", "React 生态外用处有限"],
+    scene: "development",
+  },
+  {
+    id: "windsurf",
+    name: "Windsurf",
+    description: "AI-powered IDE by Codeium with agentic and flow-based coding for faster development.",
+    descriptionZh: "Codeium 推出的 AI 驱动 IDE，支持代理式和流式编程，开发更快。",
+    category: "coding",
+    tags: ["ide", "code-generation", "ai-agent", "flow-mode"],
+    difficulty: "intermediate",
+    url: "https://codeium.com/windsurf",
+    rating: r(4.5),
+    pricing: "Free / $15/mo Pro",
+    useCase: "Windsurf is an AI-native IDE that combines editor and AI agent capabilities. It features Flow mode for natural AI collaboration and agentic autonomous coding.",
+    icon: "\u{1F4A8}",
+    company: "Codeium",
+    companyZh: "Codeium",
+    founded: "2022",
+    headquarters: "Mountain View, CA",
+    descriptionLong: "Windsurf is Codeium's AI-native IDE built on VS Code that introduces a revolutionary approach to AI-assisted coding. It features two complementary modes: Flow mode for natural, collaborative AI interaction within the editor, and Agent mode for autonomous task execution. Windsurf understands your entire codebase, providing context-aware suggestions, multi-file editing, and intelligent refactoring. Its agentic capabilities can independently plan and execute complex development tasks while keeping you in control.",
+    descriptionLongZh: "Windsurf 是 Codeium 基于 VS Code 构建的 AI 原生 IDE，引入了革命性的 AI 辅助编程方式。具有两种互补模式：Flow 模式用于编辑器内的自然协作，Agent 模式用于自主任务执行。可理解整个代码库。",
+    advantages: [
+      "Dual Flow/Agent modes for different workflows",
+      "Deep codebase understanding and context awareness",
+      "Built on VS Code with full extension compatibility",
+      "Free tier with generous limits"
+    ],
+    advantagesZh: [
+      "双模式 Flow/Agent 适应不同工作流",
+      "深度代码库理解和上下文感知",
+      "基于 VS Code，完全兼容扩展",
+      "免费版额度慷慨"
+    ],
+    useCases: [
+      "Everyday coding with AI pair programming",
+      "Autonomous bug fixing and refactoring",
+      "Exploring and understanding unfamiliar codebases",
+      "Multi-file feature implementation"
+    ],
+    useCasesZh: [
+      "日常 AI 结对编程",
+      "自主 Bug 修复和重构",
+      "探索和理解陌生代码库",
+      "多文件功能实现"
+    ],
+    targetAudience: "Developers who want an AI-native IDE experience beyond simple autocomplete.",
+    targetAudienceZh: "希望获得超越简单自动补全的 AI 原生 IDE 体验的开发者。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["Limited AI suggestions", "Flow mode", "Basic features"],
+        featuresZh: ["有限 AI 建议", "Flow 模式", "基础功能"],
+      },
+      {
+        tier: "Pro",
+        tierZh: "专业版",
+        price: "$15/mo",
+        features: ["Unlimited AI", "Agent mode", "Multi-file editing", "Priority support"],
+        featuresZh: ["无限 AI 使用", "Agent 模式", "多文件编辑", "优先支持"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Windsurf Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://codeium.com/windsurf",
+      }
+    ],
+    skills: ["AI-assisted development", "code generation", "IDE proficiency", "multi-file refactoring"],
+    pros: ["Free tier with generous limits", "Innovative Flow/Agent modes", "VS Code compatible", "Good codebase awareness"],
+    prosZh: ["免费版慷慨", "创新的 Flow/Agent 模式", "兼容 VS Code", "良好的代码库感知"],
+    cons: ["Relatively new with smaller community", "Agent mode still maturing", "Requires internet connection"],
+    consZh: ["相对较新，社区较小", "Agent 模式仍在完善", "需要网络连接"],
+    scene: "development",
+  },
+  {
+    id: "cline",
+    name: "Cline",
+    description: "Free open-source VS Code AI agent that autonomously creates and edits code in your editor.",
+    descriptionZh: "免费开源的 VS Code AI 代理，在你的编辑器中自主创建和编辑代码。",
+    category: "coding",
+    tags: ["vs-code", "open-source", "ai-agent", "autonomous-coding"],
+    difficulty: "intermediate",
+    url: "https://github.com/cline/cline",
+    rating: r(4.6),
+    pricing: "Free (open-source)",
+    useCase: "Cline is an open-source VS Code extension that acts as an autonomous AI coding agent. It can create, edit, and manage files, execute terminal commands, and handle multi-step development tasks.",
+    icon: "\u{1F916}",
+    company: "Cline",
+    companyZh: "Cline",
+    founded: "2024",
+    headquarters: "Open Source",
+    descriptionLong: "Cline is a free, open-source VS Code extension that brings autonomous AI agent capabilities directly into your editor. Unlike simple autocomplete tools, Cline can independently plan and execute complex development tasks, create and modify files, run terminal commands, use the browser, and interact with your entire development environment. It supports multiple AI providers including Claude, GPT-4, and open-source models. With terminal integration, file system access, and browser automation, Cline is one of the most capable open-source coding agents available.",
+    descriptionLongZh: "Cline 是一款免费开源的 VS Code 扩展，将自主 AI 代理能力直接带入编辑器。它可以独立规划和执行复杂开发任务、创建和修改文件、运行终端命令、使用浏览器等。支持多种 AI 提供商。",
+    advantages: [
+      "Completely free and open-source",
+      "Autonomous multi-step task execution",
+      "Terminal and file system access",
+      "Multi-provider support (Claude, GPT, open-source)"
+    ],
+    advantagesZh: [
+      "完全免费开源",
+      "自主多步骤任务执行",
+      "终端和文件系统访问",
+      "多提供商支持（Claude、GPT、开源模型）"
+    ],
+    useCases: [
+      "Autonomous feature development and implementation",
+      "Bug fixing through self-directed investigation",
+      "Codebase refactoring and migration",
+      "Learning new technologies through pair programming"
+    ],
+    useCasesZh: [
+      "自主功能开发和实现",
+      "通过自主调查修复 Bug",
+      "代码库重构和迁移",
+      "通过结对编程学习新技术"
+    ],
+    targetAudience: "Developers who want a free, open-source AI coding agent with full autonomy.",
+    targetAudienceZh: "希望获得免费开源、完全自主的 AI 编码代理的开发者。",
+    pricingTiers: [
+      {
+        tier: "Open Source",
+        tierZh: "开源免费",
+        price: "$0",
+        features: ["Full feature set", "Multi-provider", "Terminal access", "Browser automation"],
+        featuresZh: ["全部功能", "多提供商支持", "终端访问", "浏览器自动化"],
+      }
+    ],
+    extensions: [
+      {
+        name: "VS Code Marketplace",
+        description: "Install from VS Code",
+        descriptionZh: "从 VS Code 安装",
+        url: "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev",
+      }
+    ],
+    skills: ["autonomous coding", "AI agent", "open-source development", "task automation"],
+    pros: ["Completely free", "Very capable agent", "Multi-model support", "Active open-source community"],
+    prosZh: ["完全免费", "能力强大的代理", "多模型支持", "活跃的开源社区"],
+    cons: ["Requires API keys for cloud models", "Can make mistakes on complex tasks", "Setup requires some technical knowledge"],
+    consZh: ["需要云模型 API 密钥", "复杂任务可能出错", "需要一定技术知识来设置"],
+    scene: "development",
+  },
+  {
+    id: "aider",
+    name: "Aider",
+    description: "AI pair programming in the terminal with git-aware code generation and refactoring.",
+    descriptionZh: "终端中的 AI 结对编程工具，支持 Git 感知的代码生成和重构。",
+    category: "coding",
+    tags: ["pair-programming", "terminal", "open-source", "git", "cli"],
+    difficulty: "advanced",
+    url: "https://aider.chat",
+    rating: r(4.5),
+    pricing: "Free (open-source)",
+    useCase: "Aider is an AI pair programming tool that operates in the terminal. It is git-aware, supports multi-file editing, and works with multiple LLM providers.",
+    icon: "\u{1F4BB}",
+    company: "Aider AI",
+    companyZh: "Aider AI",
+    founded: "2023",
+    headquarters: "Open Source",
+    descriptionLong: "Aider is an open-source AI pair programming tool that operates directly in your terminal. Its key differentiator is deep git integration — Aider automatically commits changes, creates sensible commit messages, and helps you navigate your git history. It supports multi-file editing, code refactoring across the entire codebase, and integration with multiple LLM providers including Claude, GPT-4, and local models. Aider is particularly popular among developers who prefer terminal-based workflows and want fine-grained control over AI-generated code changes.",
+    descriptionLongZh: "Aider 是一款开源 AI 结对编程工具，直接在终端中运行。其关键差异化在于深度 Git 集成——自动提交更改、创建合理的提交消息。支持多文件编辑、跨代码库重构，以及多种 LLM 提供商。",
+    advantages: [
+      "Deep git integration with automatic commits",
+      "Multi-file editing and refactoring",
+      "Multiple LLM provider support",
+      "Terminal-native experience for CLI lovers"
+    ],
+    advantagesZh: [
+      "深度 Git 集成，自动提交",
+      "多文件编辑和重构",
+      "多 LLM 提供商支持",
+      "面向 CLI 爱好者的终端原生体验"
+    ],
+    useCases: [
+      "AI pair programming in terminal environment",
+      "Automated code review and refactoring",
+      "Generating well-structured commits",
+      "Learning new codebases through AI guidance"
+    ],
+    useCasesZh: [
+      "终端环境中的 AI 结对编程",
+      "自动代码审查和重构",
+      "生成结构良好的提交",
+      "通过 AI 指导学习新代码库"
+    ],
+    targetAudience: "Terminal-loving developers who want git-aware AI pair programming.",
+    targetAudienceZh: "喜欢终端并希望获得 Git 感知的 AI 结对编程的开发者。",
+    pricingTiers: [
+      {
+        tier: "Open Source",
+        tierZh: "开源免费",
+        price: "$0",
+        features: ["Full feature set", "Multi-LLM support", "Git integration", "Multi-file editing"],
+        featuresZh: ["全部功能", "多 LLM 支持", "Git 集成", "多文件编辑"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Aider Website",
+        description: "Documentation and guides",
+        descriptionZh: "文档和指南",
+        url: "https://aider.chat",
+      }
+    ],
+    skills: ["pair programming", "git workflows", "code refactoring", "terminal productivity"],
+    pros: ["Free and open-source", "Excellent git integration", "Multi-LLM support", "Terminal native"],
+    prosZh: ["免费开源", "优秀的 Git 集成", "多 LLM 支持", "终端原生"],
+    cons: ["Terminal-only, no GUI", "Requires comfort with CLI", "API keys needed for cloud LLMs"],
+    consZh: ["仅终端，无图形界面", "需要熟悉命令行", "云 LLM 需要 API 密钥"],
+    scene: "development",
+  },
+  {
+    id: "devin",
+    name: "Devin",
+    description: "Autonomous AI software engineer by Cognition that plans, codes, and creates PRs independently.",
+    descriptionZh: "Cognition 的自主 AI 软件工程师，独立规划、编码和创建 PR。",
+    category: "coding",
+    tags: ["ai-engineer", "autonomous", "pr-creation", "full-stack"],
+    difficulty: "intermediate",
+    url: "https://devin.ai",
+    rating: r(4.4),
+    pricing: "From $500/mo Team",
+    useCase: "Devin is an autonomous AI software engineer that can plan, code, test, deploy, and create pull requests independently from a single instruction.",
+    icon: "\u{1F4E6}",
+    company: "Cognition AI",
+    companyZh: "Cognition AI",
+    founded: "2023",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "Devin by Cognition Labs is marketed as the world's first autonomous AI software engineer. It can independently plan complex development tasks, write code, run tests, debug issues, deploy applications, and create pull requests. Devin has its own integrated development environment including a code editor, shell, and browser. It can be assigned real engineering tickets and work through them autonomously, reporting progress and seeking clarification when needed. Primarily targeting enterprise teams needing to scale engineering productivity.",
+    descriptionLongZh: "Devin 被宣传为世界上第一个自主 AI 软件工程师。它可以独立规划复杂开发任务、编写代码、运行测试、调试问题、部署应用和创建 PR。拥有自己的 IDE，包括代码编辑器、shell 和浏览器。",
+    advantages: [
+      "Fully autonomous software engineering capability",
+      "End-to-end task execution from planning to PR",
+      "Own IDE with editor, shell, and browser",
+      "Can be assigned real engineering tickets"
+    ],
+    advantagesZh: [
+      "完全自主的软件工程能力",
+      "从规划到 PR 的端到端任务执行",
+      "自带 IDE，含编辑器、shell 和浏览器",
+      "可分配真实的工程任务"
+    ],
+    useCases: [
+      "Autonomous feature development and bug fixing",
+      "Handling routine maintenance and upgrades",
+      "Technical debt reduction and refactoring",
+      "Scaling engineering team productivity"
+    ],
+    useCasesZh: [
+      "自主功能开发和 Bug 修复",
+      "处理日常维护和升级",
+      "技术债务减少和重构",
+      "扩展工程团队生产力"
+    ],
+    targetAudience: "Engineering teams wanting to scale productivity with autonomous AI engineers.",
+    targetAudienceZh: "希望通过自主 AI 工程师扩展生产力的工程团队。",
+    pricingTiers: [
+      {
+        tier: "Team",
+        tierZh: "团队版",
+        price: "From $500/mo",
+        features: ["Dedicated Devin instances", "Slack integration", "PR review", "Analytics"],
+        featuresZh: ["专用 Devin 实例", "Slack 集成", "PR 审查", "分析面板"],
+      },
+      {
+        tier: "Enterprise",
+        tierZh: "企业版",
+        price: "Custom",
+        features: ["Custom deployment", "SSO", "Advanced security", "Dedicated support"],
+        featuresZh: ["自定义部署", "SSO", "高级安全", "专属支持"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Devin Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://devin.ai",
+      }
+    ],
+    skills: ["autonomous engineering", "full-stack development", "PR management", "task automation"],
+    pros: ["True autonomous engineering", "End-to-end capability", "Enterprise focused", "Good for routine tasks"],
+    prosZh: ["真正的自主工程", "端到端能力", "面向企业", "适合日常任务"],
+    cons: ["Very expensive starting at $500/mo", "Still makes mistakes on complex tasks", "Requires oversight for critical work"],
+    consZh: ["价格高昂，从 $500/月起", "复杂任务仍会出错", "关键工作需要监督"],
+    scene: "development",
+  },
+  {
+    id: "pinecone",
+    name: "Pinecone",
+    description: "Managed vector database for AI applications, enabling fast and scalable similarity search.",
+    descriptionZh: "AI 应用托管向量数据库，实现快速可扩展的相似性搜索。",
+    category: "coding",
+    tags: ["vector-database", "rag", "embeddings", "infrastructure"],
+    difficulty: "advanced",
+    url: "https://www.pinecone.io",
+    rating: r(4.5),
+    pricing: "Free tier / from $70/mo Standard",
+    useCase: "Pinecone is a managed vector database for AI applications. It stores and queries high-dimensional vectors for semantic search, RAG, and recommendation systems.",
+    icon: "\u{1F9F0}",
+    company: "Pinecone Systems",
+    companyZh: "Pinecone Systems",
+    founded: "2021",
+    headquarters: "New York, NY",
+    descriptionLong: "Pinecone is a fully managed vector database built specifically for AI applications. It enables developers to store and query high-dimensional vector embeddings with millisecond latency at billion-scale. Pinecone handles the complex infrastructure required for vector similarity search, including indexing, sharding, replication, and scaling. It is a core component in RAG (Retrieval-Augmented Generation) architectures, semantic search systems, and recommendation engines. Pinecone supports hybrid search combining vector and metadata filtering for more precise results.",
+    descriptionLongZh: "Pinecone 是专为 AI 应用构建的完全托管向量数据库。开发人员可以存储和查询高维向量嵌入，毫秒级延迟，可扩展至十亿级。是 RAG 架构、语义搜索系统和推荐引擎的核心组件。",
+    advantages: [
+      "Fully managed with zero infrastructure overhead",
+      "Millisecond latency at billion-scale vectors",
+      "Hybrid search with metadata filtering",
+      "Enterprise-grade security and compliance"
+    ],
+    advantagesZh: [
+      "完全托管，零基础设施管理",
+      "十亿级向量的毫秒级延迟",
+      "支持元数据过滤的混合搜索",
+      "企业级安全性和合规性"
+    ],
+    useCases: [
+      "RAG infrastructure for LLM applications",
+      "Semantic search across large document collections",
+      "Real-time recommendation and personalization",
+      "Anomaly detection and pattern matching"
+    ],
+    useCasesZh: [
+      "LLM 应用的 RAG 基础设施",
+      "大规模文档集合的语义搜索",
+      "实时推荐和个性化",
+      "异常检测和模式匹配"
+    ],
+    targetAudience: "AI developers and ML engineers building vector search or RAG applications.",
+    targetAudienceZh: "构建向量搜索或 RAG 应用的 AI 开发者和 ML 工程师。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["1 index", "100K vectors", "Basic features"],
+        featuresZh: ["1 个索引", "10 万向量", "基础功能"],
+      },
+      {
+        tier: "Standard",
+        tierZh: "标准版",
+        price: "From $70/mo",
+        features: ["5 indexes", "1M vectors", "High availability", "Support"],
+        featuresZh: ["5 个索引", "100 万向量", "高可用", "支持"],
+      },
+      {
+        tier: "Enterprise",
+        tierZh: "企业版",
+        price: "Custom",
+        features: ["Unlimited", "Custom SLAs", "Dedicated infrastructure", "Advanced security"],
+        featuresZh: ["无限制", "自定义 SLA", "专用基础设施", "高级安全"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Pinecone Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://www.pinecone.io",
+      },
+      {
+        name: "Pinecone Docs",
+        description: "Documentation and guides",
+        descriptionZh: "文档和指南",
+        url: "https://docs.pinecone.io",
+      }
+    ],
+    skills: ["vector databases", "RAG infrastructure", "semantic search", "AI infrastructure"],
+    pros: ["Fully managed service", "Fast and scalable", "Great for RAG", "Good documentation"],
+    prosZh: ["完全托管服务", "快速可扩展", "非常适合 RAG", "文档完善"],
+    cons: ["Can be expensive at scale", "Vendor lock-in concerns", "Not a general-purpose database"],
+    consZh: ["大规模时成本较高", "供应商锁定风险", "非通用数据库"],
+    scene: "development",
+  },
+  {
+    id: "chroma",
+    name: "Chroma",
+    description: "Open-source vector database for AI-native applications with embedding storage and retrieval.",
+    descriptionZh: "AI 原生应用的开源向量数据库，用于嵌入存储和检索。",
+    category: "coding",
+    tags: ["vector-database", "open-source", "embeddings", "rag", "local"],
+    difficulty: "intermediate",
+    url: "https://www.trychroma.com",
+    rating: r(4.4),
+    pricing: "Free (open-source)",
+    useCase: "Chroma is an open-source vector database designed for AI applications. It stores embeddings and metadata for semantic search, RAG, and AI memory.",
+    icon: "\u{1F7E6}",
+    company: "Chroma",
+    companyZh: "Chroma",
+    founded: "2022",
+    headquarters: "Open Source",
+    descriptionLong: "Chroma is an open-source, AI-native vector database that makes it easy to store, manage, and query embeddings and their associated metadata. Designed with simplicity in mind, it features a developer-friendly API that works seamlessly with popular embedding models and LLM frameworks. Chroma runs locally with zero dependencies, supports in-memory and persistent storage, and can scale to production deployments. It is the most popular open-source vector database for prototyping and production RAG applications, AI memory systems, and semantic search.",
+    descriptionLongZh: "Chroma 是一款开源、AI 原生的向量数据库，易于存储、管理和查询嵌入向量及其元数据。API 对开发者友好，与主流嵌入模型和 LLM 框架无缝协作。本地运行零依赖，支持内存和持久化存储。",
+    advantages: [
+      "Open-source with zero dependencies",
+      "Developer-friendly Python API",
+      "In-memory and persistent storage options",
+      "Seamless integration with LangChain and LlamaIndex"
+    ],
+    advantagesZh: [
+      "开源，零依赖",
+      "开发者友好的 Python API",
+      "内存和持久化存储选项",
+      "与 LangChain 和 LlamaIndex 无缝集成"
+    ],
+    useCases: [
+      "Local RAG applications with private data",
+      "AI memory and conversation history storage",
+      "Semantic search for small to medium datasets",
+      "Prototyping vector search before production deployment"
+    ],
+    useCasesZh: [
+      "基于私有数据的本地 RAG 应用",
+      "AI 记忆和对话历史存储",
+      "中小型数据集的语义搜索",
+      "生产部署前的向量搜索原型"
+    ],
+    targetAudience: "AI developers wanting a simple, open-source vector database for local and production use.",
+    targetAudienceZh: "希望获得简单开源向量数据库用于本地和生产环境的 AI 开发者。",
+    pricingTiers: [
+      {
+        tier: "Open Source",
+        tierZh: "开源免费",
+        price: "$0",
+        features: ["Full feature set", "Local execution", "In-memory storage", "Persistent storage"],
+        featuresZh: ["全部功能", "本地运行", "内存存储", "持久化存储"],
+      },
+      {
+        tier: "Cloud",
+        tierZh: "云服务",
+        price: "Pay-as-you-go",
+        features: ["Managed hosting", "Scaling", "High availability"],
+        featuresZh: ["托管服务", "可扩展", "高可用"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Chroma Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://www.trychroma.com",
+      }
+    ],
+    skills: ["vector databases", "RAG", "AI memory", "semantic search", "embeddings"],
+    pros: ["Free and open-source", "Simple API", "Zero dependencies", "Great for prototyping"],
+    prosZh: ["免费开源", "API 简洁", "零依赖", "非常适合原型"],
+    cons: ["Not designed for billion-scale vectors", "Smaller community than Pinecone", "Cloud offering still maturing"],
+    consZh: ["不适用于十亿级向量", "社区比 Pinecone 小", "云服务仍在完善"],
+    scene: "development",
+  },
+  {
+    id: "replit-agent",
+    name: "Replit Agent",
+    description: "AI-powered development environment that builds and deploys full apps from natural language.",
+    descriptionZh: "AI 驱动的开发环境，通过自然语言构建和部署完整应用。",
+    category: "coding",
+    tags: ["ide", "deployment", "full-stack", "in-browser", "hosting"],
+    difficulty: "beginner",
+    url: "https://replit.com",
+    rating: r(4.5),
+    pricing: "Free / $25/mo Core",
+    useCase: "Replit Agent is an AI coding agent integrated into the Replit platform. Describe your app idea and it builds, hosts, and deploys it without leaving the browser.",
+    icon: "\u{1F504}",
+    company: "Replit",
+    companyZh: "Replit",
+    founded: "2016",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "Replit Agent is an AI-powered development agent integrated into the Replit online IDE platform. Users describe their application idea in natural language, and the agent autonomously plans, codes, tests, and deploys the application entirely within the browser. It supports multiple programming languages and frameworks, provides built-in hosting, and includes collaborative features for team development. Replit Agent makes software development accessible to beginners while accelerating experienced developers' workflows.",
+    descriptionLongZh: "Replit Agent 是集成在 Replit 在线 IDE 平台中的 AI 开发代理。用户用自然语言描述应用想法，代理自主规划、编码、测试和部署。完全在浏览器中运行，支持多种编程语言和框架。",
+    advantages: [
+      "Complete browser-based development and deployment",
+      "From idea to live app in minutes",
+      "No local setup or environment management",
+      "Built-in hosting with custom domains"
+    ],
+    advantagesZh: [
+      "完全的浏览器端开发和部署",
+      "从想法到上线只需几分钟",
+      "无需本地安装和环境管理",
+      "内置托管和自定义域名"
+    ],
+    useCases: [
+      "Building and deploying full-stack apps in browser",
+      "Learning programming with AI guidance",
+      "Rapid prototyping for hackathons and MVPs",
+      "Collaborative development with team features"
+    ],
+    useCasesZh: [
+      "在浏览器中构建和部署全栈应用",
+      "在 AI 指导下学习编程",
+      "黑客马拉松和 MVP 的快速原型",
+      "团队协作开发"
+    ],
+    targetAudience: "Anyone from beginners to experienced devs wanting browser-based AI app development.",
+    targetAudienceZh: "从初学者到经验丰富的开发者，任何想要基于浏览器的 AI 应用开发的人。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["Limited compute", "Public repls", "Basic AI agent"],
+        featuresZh: ["有限计算资源", "公开项目", "基础 AI 代理"],
+      },
+      {
+        tier: "Core",
+        tierZh: "核心版",
+        price: "$25/mo",
+        features: ["More compute", "Private repls", "Unlimited AI agent", "Custom domains"],
+        featuresZh: ["更多计算资源", "私有项目", "无限 AI 代理", "自定义域名"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Replit Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://replit.com",
+      }
+    ],
+    skills: ["browser-based development", "full-stack deployment", "rapid prototyping", "AI-assisted coding"],
+    pros: ["Browser-based, no setup", "Fast deployment", "Beginner friendly", "Built-in hosting"],
+    prosZh: ["基于浏览器，无需安装", "快速部署", "适合初学者", "内置托管"],
+    cons: ["Free tier is limited", "Vendor lock-in", "Less powerful than local IDEs for complex work"],
+    consZh: ["免费版受限", "供应商锁定", "复杂工作不如本地 IDE 强大"],
+    scene: "development",
+  },
+  {
+    id: "cloudflare-ai",
+    name: "Cloudflare Workers AI",
+    description: "Serverless GPU-powered AI inference at the edge via Cloudflare's global network.",
+    descriptionZh: "通过 Cloudflare 全球网络提供无服务器 GPU AI 推理。",
+    category: "coding",
+    tags: ["serverless", "edge-computing", "gpu", "inference", "cloudflare"],
+    difficulty: "advanced",
+    url: "https://ai.cloudflare.com",
+    rating: r(4.3),
+    pricing: "Pay-as-you-go / from $0.001/call",
+    useCase: "Cloudflare Workers AI provides serverless GPU-powered inference for popular AI models directly on Cloudflare's global edge network.",
+    icon: "\u{2601}\u{FE0F}",
+    company: "Cloudflare",
+    companyZh: "Cloudflare",
+    founded: "2009",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "Cloudflare Workers AI is a serverless AI inference platform that runs on Cloudflare's global network of GPU-equipped edge nodes. It provides access to popular open-source models including Llama, Mistral, Stable Diffusion, and Whisper for text generation, image generation, speech recognition, and more. With pay-as-you-go pricing and no cold starts, developers can integrate AI capabilities into their applications with minimal latency. Deeply integrated with Cloudflare Workers, it enables building full AI-powered applications at the edge.",
+    descriptionLongZh: "Cloudflare Workers AI 是在 Cloudflare 全球 GPU 边缘节点上运行的无服务器 AI 推理平台。提供对 Llama、Mistral、Stable Diffusion 等流行开源模型的访问。与 Cloudflare Workers 深度集成。",
+    advantages: [
+      "Serverless with no cold starts at the edge",
+      "Global network for low-latency inference",
+      "Pay-as-you-go with free daily usage tier",
+      "Deep integration with Cloudflare ecosystem"
+    ],
+    advantagesZh: [
+      "无服务器，边缘零冷启动",
+      "全球网络低延迟推理",
+      "按量计费，含免费每日用量",
+      "与 Cloudflare 生态深度集成"
+    ],
+    useCases: [
+      "Edge-based AI inference for web applications",
+      "Content generation at global scale with low latency",
+      "AI-powered APIs without infrastructure management",
+      "Image moderation and processing at the edge"
+    ],
+    useCasesZh: [
+      "Web 应用的边缘 AI 推理",
+      "全球规模的低延迟内容生成",
+      "无需基础设施管理的 AI API",
+      "边缘端的图像审核和处理"
+    ],
+    targetAudience: "Developers building AI applications who want serverless edge inference.",
+    targetAudienceZh: "构建 AI 应用并希望无服务器边缘推理的开发者。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "10K calls/day",
+        features: ["Limited models", "Standard queue", "Basic rate limits"],
+        featuresZh: ["有限模型", "标准队列", "基础速率限制"],
+      },
+      {
+        tier: "Paid",
+        tierZh: "付费版",
+        price: "From $0.001/call",
+        features: ["All models", "Priority queue", "Higher limits", "Workers integration"],
+        featuresZh: ["所有模型", "优先队列", "更高速率", "Workers 集成"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Cloudflare AI Docs",
+        description: "Documentation",
+        descriptionZh: "文档",
+        url: "https://developers.cloudflare.com/ai",
+      },
+      {
+        name: "Cloudflare Dashboard",
+        description: "Management dashboard",
+        descriptionZh: "管理面板",
+        url: "https://dash.cloudflare.com",
+      }
+    ],
+    skills: ["edge computing", "serverless AI", "inference deployment", "Cloudflare Workers"],
+    pros: ["Serverless and edge-native", "Free tier available", "Easy Workers integration", "Global low latency"],
+    prosZh: ["无服务器边缘原生", "有免费版", "Workers 集成简单", "全球低延迟"],
+    cons: ["Limited model selection", "No fine-tuning support", "Vendor lock-in with Cloudflare"],
+    consZh: ["模型选择有限", "不支持微调", "绑定 Cloudflare"],
+    scene: "development",
+  },
+  {
+    id: "make-com",
+    name: "Make (Integromat)",
+    description: "No-code AI workflow automation platform for connecting apps and automating processes visually.",
+    descriptionZh: "无代码 AI 工作流自动化平台，可视化连接应用和自动化流程。",
+    category: "productivity",
+    tags: ["automation", "no-code", "workflow", "integration", "scraping"],
+    difficulty: "intermediate",
+    url: "https://www.make.com",
+    rating: r(4.5),
+    pricing: "Free / $9/mo Pro",
+    useCase: "Make is a no-code automation platform that lets you visually create workflows connecting apps, data, and AI services without programming.",
+    icon: "\u{1F527}",
+    company: "Make",
+    companyZh: "Make",
+    founded: "2015",
+    headquarters: "Prague, Czech Republic",
+    descriptionLong: "Make (formerly Integromat) is a powerful no-code automation platform that enables users to visually create complex workflows connecting hundreds of apps and services. Its scenario builder uses a visual editor where you design automation sequences by connecting modules. Make supports AI integrations, data transformation, conditional logic, and error handling. It offers more flexibility and visual clarity than competitors for complex multi-step workflows. Businesses use Make for data synchronization, content publishing, lead management, and countless other automation scenarios.",
+    descriptionLongZh: "Make（原 Integromat）是一个强大的无代码自动化平台，用户可以通过可视化编辑器创建连接数百个应用和服务的复杂工作流。其场景构建器支持 AI 集成、数据转换、条件逻辑和错误处理。",
+    advantages: [
+      "Visual workflow builder with rich module ecosystem",
+      "More flexible than competitors for complex workflows",
+      "Built-in data transformation and routing",
+      "Supports AI model integration in workflows"
+    ],
+    advantagesZh: [
+      "可视化工作流构建器，模块生态丰富",
+      "复杂工作流比竞品更灵活",
+      "内置数据转换和路由",
+      "工作流中支持 AI 模型集成"
+    ],
+    useCases: [
+      "Automating business processes across multiple tools",
+      "Data synchronization between CRM, email, and databases",
+      "Content publishing across platforms",
+      "Lead generation and enrichment automation"
+    ],
+    useCasesZh: [
+      "跨多工具的业务流程自动化",
+      "CRM、邮件和数据库之间的数据同步",
+      "跨平台内容发布",
+      "潜在客户生成和丰富自动化"
+    ],
+    targetAudience: "Business users and marketers wanting to automate workflows without coding.",
+    targetAudienceZh: "希望无需编码即可自动化工作流的业务用户和营销人员。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["1K operations/mo", "Active scenarios", "Basic templates"],
+        featuresZh: ["1000 次操作/月", "活跃场景", "基础模板"],
+      },
+      {
+        tier: "Pro",
+        tierZh: "专业版",
+        price: "$9/mo",
+        features: ["10K operations/mo", "Unlimited scenarios", "Data store", "Scheduling"],
+        featuresZh: ["1 万次操作/月", "无限场景", "数据存储", "定时调度"],
+      },
+      {
+        tier: "Teams",
+        tierZh: "团队版",
+        price: "$29/mo",
+        features: ["100K operations/mo", "Team collaboration", "Version history", "Priority support"],
+        featuresZh: ["10 万次操作/月", "团队协作", "版本历史", "优先支持"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Make Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://www.make.com",
+      }
+    ],
+    skills: ["workflow automation", "no-code", "integration", "business process automation"],
+    pros: ["Flexible visual builder", "Generous free tier", "Rich integrations", "Complex workflow support"],
+    prosZh: ["灵活的可视化构建器", "免费版慷慨", "丰富集成", "支持复杂工作流"],
+    cons: ["Learning curve for complex scenarios", "Operations limits on lower tiers", "Can get expensive at scale"],
+    consZh: ["复杂场景有学习曲线", "低版本有操作次数限制", "大规模时成本可能上升"],
+    scene: "business",
+  },
+  {
+    id: "zapier-ai",
+    name: "Zapier AI",
+    description: "AI-powered automation connecting 6000+ apps for intelligent workflow automation.",
+    descriptionZh: "AI 驱动的自动化平台，连接 6000+ 应用，实现智能工作流自动化。",
+    category: "productivity",
+    tags: ["automation", "integration", "no-code", "workflow", "ai-automation"],
+    difficulty: "beginner",
+    url: "https://zapier.com",
+    rating: r(4.6),
+    pricing: "Free / $19.99/mo Starter",
+    useCase: "Zapier AI connects 6000+ apps to automate workflows. Use AI-powered features like ChatGPT integration, formatting, and intelligent routing.",
+    icon: "\u{26A1}",
+    company: "Zapier",
+    companyZh: "Zapier",
+    founded: "2011",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "Zapier is the leading no-code automation platform connecting over 6,000 apps to automate workflows without any coding. Its AI features include native ChatGPT integration, AI-powered data formatting and transformation, intelligent routing, and natural language workflow creation. Zapier's massive app ecosystem covers virtually every major SaaS product. With its intuitive trigger-action model, users can create multi-step Zaps that handle complex business processes. Zapier AI represents the next evolution, adding natural language understanding to simplify workflow creation.",
+    descriptionLongZh: "Zapier 是领先的无代码自动化平台，连接超过 6000 个应用。AI 功能包括原生 ChatGPT 集成、AI 驱动的数据格式化和转换、智能路由和自然语言工作流创建。覆盖几乎所有主流 SaaS 产品。",
+    advantages: [
+      "Largest app ecosystem with 6000+ integrations",
+      "AI-powered natural language workflow creation",
+      "Intuitive trigger-action model for beginners",
+      "Enterprise-grade reliability and security"
+    ],
+    advantagesZh: [
+      "最大的应用生态系统，6000+ 集成",
+      "AI 驱动的自然语言工作流创建",
+      "直观的触发-动作模型，适合初学者",
+      "企业级可靠性和安全性"
+    ],
+    useCases: [
+      "Marketing automation across email, social, and CRM",
+      "Sales lead capture and follow-up automation",
+      "Customer support ticket routing and responses",
+      "Data synchronization between business tools"
+    ],
+    useCasesZh: [
+      "跨邮件、社交媒体和 CRM 的营销自动化",
+      "销售线索捕获和跟进自动化",
+      "客户支持工单路由和回复",
+      "业务工具之间的数据同步"
+    ],
+    targetAudience: "Anyone wanting to automate workflows across apps without coding skills.",
+    targetAudienceZh: "任何希望跨应用自动化工作流但不需要编码技能的人。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["100 tasks/mo", "5 Zaps", "Single-step Zaps"],
+        featuresZh: ["100 次任务/月", "5 个 Zap", "单步 Zap"],
+      },
+      {
+        tier: "Starter",
+        tierZh: "入门版",
+        price: "$19.99/mo",
+        features: ["750 tasks/mo", "20 Zaps", "Multi-step Zaps", "AI features"],
+        featuresZh: ["750 次任务/月", "20 个 Zap", "多步 Zap", "AI 功能"],
+      },
+      {
+        tier: "Professional",
+        tierZh: "专业版",
+        price: "$49/mo",
+        features: ["2000 tasks/mo", "Unlimited Zaps", "Filters", "Priority support"],
+        featuresZh: ["2000 次任务/月", "无限 Zap", "筛选器", "优先支持"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Zapier Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://zapier.com",
+      },
+      {
+        name: "Zapier Chrome Extension",
+        description: "Browser extension for quick access",
+        descriptionZh: "浏览器扩展，快速访问",
+        url: "https://chrome.google.com/webstore",
+      }
+    ],
+    skills: ["workflow automation", "app integration", "no-code", "business process"],
+    pros: ["Largest app ecosystem (6000+)", "Beginner friendly", "Reliable", "Great AI features"],
+    prosZh: ["最大的应用生态（6000+）", "适合初学者", "可靠", "优秀的 AI 功能"],
+    cons: ["Free tier very limited", "Costly at high volume", "Complex workflows can get expensive"],
+    consZh: ["免费版非常有限", "高用量成本较高", "复杂工作流可能较贵"],
+    scene: "business",
+  },
+  {
+    id: "figma-ai",
+    name: "Figma AI",
+    description: "AI-powered design features integrated into Figma for automated UI/UX generation and editing.",
+    descriptionZh: "集成在 Figma 中的 AI 驱动设计功能，自动化 UI/UX 生成和编辑。",
+    category: "design",
+    tags: ["ui-design", "ux-design", "prototyping", "design-tool", "auto-layout"],
+    difficulty: "intermediate",
+    url: "https://www.figma.com/ai",
+    rating: r(4.5),
+    pricing: "Free tier / $12/mo Professional",
+    useCase: "Figma AI brings generative AI capabilities directly into Figma for automated design generation, asset creation, and intelligent editing.",
+    icon: "\u{1F3A8}",
+    company: "Figma Inc.",
+    companyZh: "Figma Inc.",
+    founded: "2012",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "Figma AI is a suite of AI-powered design features integrated directly into the Figma design platform. It includes capabilities for generating UI designs from text prompts, automatically creating design variants, generating realistic content placeholders, intelligent layer renaming, and AI-assisted asset search. Figma AI helps designers accelerate their workflow by automating repetitive tasks and providing creative inspiration. Deeply integrated into the collaborative design environment, it enhances rather than replaces the designer's creative process.",
+    descriptionLongZh: "Figma AI 是直接集成在 Figma 设计平台中的 AI 驱动功能套件。包括从文本提示生成 UI 设计、自动创建设计变体、生成真实内容占位符、智能图层重命名和 AI 辅助素材搜索。",
+    advantages: [
+      "AI generation directly inside Figma editor",
+      "Automates repetitive design tasks",
+      "Generates realistic content and icons",
+      "Enhances existing Figma workflows seamlessly"
+    ],
+    advantagesZh: [
+      "AI 生成直接在 Figma 编辑器中",
+      "自动化重复性设计任务",
+      "生成真实内容和图标",
+      "无缝增强现有 Figma 工作流"
+    ],
+    useCases: [
+      "Rapid UI prototyping from text descriptions",
+      "Auto-generating design variants and iterations",
+      "Replacing lorem ipsum with realistic content",
+      "Intelligent asset and component search"
+    ],
+    useCasesZh: [
+      "从文字描述快速原型 UI",
+      "自动生成设计变体和迭代",
+      "用真实内容替换占位文字",
+      "智能素材和组件搜索"
+    ],
+    targetAudience: "UI/UX designers using Figma who want to accelerate their workflow with AI.",
+    targetAudienceZh: "使用 Figma 并希望用 AI 加速工作流的 UI/UX 设计师。",
+    pricingTiers: [
+      {
+        tier: "Free (Figma)",
+        tierZh: "免费（Figma）",
+        price: "$0",
+        features: ["Limited AI generations", "Basic features", "Community access"],
+        featuresZh: ["有限 AI 生成", "基础功能", "社区访问"],
+      },
+      {
+        tier: "Professional",
+        tierZh: "专业版",
+        price: "$12/mo",
+        features: ["More AI generations", "Full features", "Unlimited projects"],
+        featuresZh: ["更多 AI 生成", "全部功能", "无限项目"],
+      },
+      {
+        tier: "Organization",
+        tierZh: "组织版",
+        price: "$45/mo",
+        features: ["Unlimited AI", "Team libraries", "Design systems", "Analytics"],
+        featuresZh: ["无限 AI 生成", "团队库", "设计系统", "分析"],
+      }
+    ],
+    extensions: [
+      {
+        name: "Figma Website",
+        description: "Official website",
+        descriptionZh: "官方网站",
+        url: "https://www.figma.com",
+      }
+    ],
+    skills: ["UI/UX design", "prototyping", "design automation", "AI-assisted design"],
+    pros: ["Integrated into Figma natively", "Saves time on repetitive tasks", "Generates realistic content", "Easy to use"],
+    prosZh: ["原生集成在 Figma 中", "节省重复性任务时间", "生成真实内容", "易于使用"],
+    cons: ["Limited free AI generations", "Figma subscription required", "AI results need human refinement"],
+    consZh: ["免费 AI 生成有限", "需要 Figma 订阅", "AI 结果需要人工优化"],
+    scene: "creative",
+  },
+
+
 ] as Tool[];
 
 export const tools: Tool[] = [..._tools1, ..._tools2];
