@@ -979,4 +979,34 @@ export const articles: Article[] = [
 	},
 
 
+
+		{
+			slug: "google-gemini-3-5-leak",
+			title: "Google Gemini 3.5 Leak: A Game-Changer for Overseas AI Strategies with Practical Insights",
+			titleZh: "Google Gemini 3.5泄露：海外AI战略的游戏规则改变者与实用洞察",
+			description:
+				"A massive leak reveals Google's Gemini 3.5 family with multimodal Pro, cost-efficient Flash, and 24/7 Spark agent with practical strategies for overseas businesses and developers.",
+			descriptionZh:
+				"大规模泄露揭示Google Gemini 3.5系列：多模态Pro、高性价比Flash和全天候Spark Agent——附带面向海外企业和开发者的实用策略。",
+			category: "ai-news",
+			tags: ["gemini", "google", "ai-news", "multimodal", "overseas-business"],
+			difficulty: "beginner",
+			toolsMentioned: ["gemini"],
+			date: "2026-05-26",
+		},
+
+		{
+			slug: "openai-codex-openclaw-revolution",
+			title: "OpenAI's Codex and OpenClaw: Revolutionizing AI Development",
+			titleZh: "OpenAI的Codex与OpenClaw：革命性的AI开发工具",
+			description:
+				"OpenAI integrates OpenClaw with ChatGPT Plus and upgrades Codex with pixel-art pets, autonomous iteration, and one-click migration reshaping the AI developer experience.",
+			descriptionZh:
+				"OpenAI将OpenClaw与ChatGPT Plus深度整合，并升级Codex：像素宠物、自主迭代和一键迁移——重塑AI开发者体验。",
+			category: "ai-news",
+			tags: ["openai", "codex", "openclaw", "ai-development", "automation"],
+			difficulty: "intermediate",
+			toolsMentioned: ["chatgpt", "openclaw", "codex-agent"],
+			date: "2026-05-26",
+		},
 ];
