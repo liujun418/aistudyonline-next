@@ -900,4 +900,83 @@ export const articles: Article[] = [
 		},
 
 
+	{
+		slug: "beyond-llms-ai-fundamentals",
+		title: "Beyond Large Language Models: Mastering AI Fundamental Knowledge for Overseas Developers",
+		titleZh: "超越大语言模型：海外开发者必须掌握的AI基础知识",
+		description: "Most developers equate AI with LLMs, leading to wasted tokens and high costs. This guide breaks down AI core concepts, token calculation, and practical optimization strategies.",
+		descriptionZh: "大多数开发者将AI等同于大语言模型，导致token浪费和高成本。本文详解AI核心概念、token计算和实用优化策略。",
+		category: "ai-basics",
+		tags: ["llm", "token", "ai-fundamentals", "embedding", "multimodal", "agent", "optimization"],
+		difficulty: "beginner",
+		toolsMentioned: ["chatgpt", "claude", "gemini"],
+		date: "2026-05-26",
+	},
+
+	{
+		slug: "choosing-right-ai-tool-comparison",
+		title: "Choosing the Right AI Tool: GPT, Claude, Grok, and Gemini for Your Needs",
+		titleZh: "选择合适的AI工具：GPT、Claude、Grok和Gemini对比",
+		description: "GPT, Claude, Grok, and Gemini each excel in different areas. This head-to-head comparison breaks down strengths, weaknesses, and ideal use cases for each.",
+		descriptionZh: "GPT、Claude、Grok和Gemini各有所长。这篇正面比较分析每个模型的优势、劣势和最佳使用场景。",
+		category: "ai-comparisons",
+		tags: ["gpt", "claude", "grok", "gemini", "comparison", "ai-models"],
+		difficulty: "beginner",
+		toolsMentioned: ["chatgpt", "claude", "gemini", "grok"],
+		date: "2026-05-26",
+	},
+
+	{
+		slug: "claude-code-final-config-guide",
+		title: "Claude Code: Final Configuration Guide for Overseas Users (Beginner-Friendly)",
+		titleZh: "Claude Code：海外用户最终配置指南（新手友好）",
+		description: "Step-by-step guide to configuring API proxies for Claude Code using CC Switch — including Yunwu, ClaudeCN, and Silicone Flow setup.",
+		descriptionZh: "使用CC Switch为Claude Code配置API代理的分步指南——包括云坞、ClaudeCN和Silicone Flow的设置方法。",
+		category: "ai-tutorials",
+		tags: ["claude-code", "configuration", "api-proxy", "cc-switch", "overseas"],
+		difficulty: "beginner",
+		toolsMentioned: ["claude"],
+		date: "2026-05-26",
+	},
+
+	{
+		slug: "cut-openclaw-costs-10x",
+		title: "Cut OpenClaw Operating Costs by 10 Times: 4 Practical Strategies",
+		titleZh: "将OpenClaw运营成本降低10倍：4个实用策略",
+		description: "4 actionable strategies to slash OpenClaw running costs — local model switching, task concurrency limits, cache reuse, and off-peak scheduling with executable commands.",
+		descriptionZh: "4个切实可行的策略将OpenClaw运行成本降低10倍——本地模型切换、任务并发限制、缓存复用和闲时调度，含可执行命令。",
+		category: "ai-tutorials",
+		tags: ["openclaw", "cost-optimization", "local-model", "cache", "concurrency"],
+		difficulty: "intermediate",
+		toolsMentioned: ["openclaw"],
+		date: "2026-05-26",
+	},
+
+	{
+		slug: "ecc-claude-code-setup-guide",
+		title: "Stop Misconfiguring Claude Code: ECC's Zero-Pitfall Setup Guide for Overseas Projects",
+		titleZh: "别再错误配置Claude Code：ECC零陷阱设置指南",
+		description: "ECC's latest update eliminates common Claude Code configuration pitfalls. Learn zero-pitfall deployment with encrypted key storage, region-optimized endpoints, and sandbox execution.",
+		descriptionZh: "ECC最新更新消除了常见的Claude Code配置陷阱。学习加密密钥存储、区域优化端点和沙箱执行的零陷阱部署。",
+		category: "ai-tutorials",
+		tags: ["claude-code", "ecc", "configuration", "overseas", "sandbox", "security"],
+		difficulty: "beginner",
+		toolsMentioned: ["claude"],
+		date: "2026-05-26",
+	},
+
+	{
+		slug: "ditching-mcp-for-cli",
+		title: "Why More Developers Are Ditching MCP for CLI in AI Agent Development",
+		titleZh: "为什么越来越多开发者在AI Agent开发中用CLI取代MCP",
+		description: "MCP was hailed as the universal agent interface, but developers are increasingly turning to CLI for token efficiency and execution speed. Industry leaders like Perplexity and Y Combinator have embraced CLI tools.",
+		descriptionZh: "MCP曾被誉为人机交互的通用接口，但越来越多的开发者转向CLI以提高token效率和执行速度。Perplexity和Y Combinator等行业领导者已拥抱CLI工具。",
+		category: "ai-news",
+		tags: ["mcp", "cli", "agent", "token-efficiency", "tool-comparison"],
+		difficulty: "intermediate",
+		toolsMentioned: ["claude", "chatgpt"],
+		date: "2026-05-26",
+	},
+
+
 ];
