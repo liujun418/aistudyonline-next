@@ -13,15 +13,36 @@ import { categories } from "@/lib/categories";
 import { topTools } from "@/lib/rankings";
 import type { Locale } from "@/lib/i18n";
 
-// Hardcoded featured tool IDs for the homepage
-const FEATURED_TOOL_IDS = ["chatgpt", "midjourney", "cursor", "elevenlabs"];
+// Daily rotation helpers — deterministically shuffle using date as seed
+function dailySeed() {
+  const d = new Date();
+  return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+}
 
-// Hardcoded featured model IDs for the homepage
-const FEATURED_MODEL_IDS = ["gpt-4o", "claude-4-opus", "gemini-2-5-pro", "deepseek-r1"];
+function dailyShuffle<T>(arr: T[]): T[] {
+  const seed = dailySeed();
+  const shuffled = [...arr];
+  // Simple deterministic shuffle based on date
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = (seed * (i + 1) * 7) % (i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
-// Editor's Picks — auto-selected: 4 newest articles across different categories, updated daily
-function getEditorsPicks() {
-  // Sort by date desc, then pick up to 4 with unique categories for variety
+// Featured tools: daily rotation, pick 4 top-rated tools shuffled by date
+function getFeaturedToolIds(): string[] {
+  const topRated = [...tools].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  return dailyShuffle(topRated).slice(0, 4).map((t) => t.id);
+}
+
+// Featured models: daily rotation, pick 4 shuffled by date
+function getFeaturedModelIds(): string[] {
+  return dailyShuffle([...models]).slice(0, 4).map((m) => m.id);
+}
+
+// Editor's Picks: 4 newest articles across different categories
+function getEditorsPicks(): string[] {
   const byDate = [...articles].sort((a, b) => b.date.localeCompare(a.date));
   const seen = new Set<string>();
   const picks: typeof articles = [];
@@ -31,26 +52,20 @@ function getEditorsPicks() {
       picks.push(a);
     }
   }
-  // If we didn't get 4 unique categories, fill from remaining newest
   if (picks.length < 4) {
     for (const a of byDate) {
-      if (!picks.includes(a)) {
-        picks.push(a);
-        if (picks.length >= 4) break;
-      }
+      if (!picks.includes(a)) { picks.push(a); if (picks.length >= 4) break; }
     }
   }
   return picks.map((a) => a.slug);
 }
 
-const FEATURED_ARTICLE_SLUGS = [
-  "what-is-chatgpt-beginners-guide",
-  "chatgpt-vs-claude-comparison",
-  "best-ai-tools-for-content-creation",
-  "how-to-write-better-prompts",
-  "midjourney-vs-dalle-3-vs-stable-diffusion",
-  "ai-tools-for-students",
-];
+// Top Picks: 6 most recent articles, daily rotation within recent ones
+function getFeaturedArticleSlugs(): string[] {
+  const byDate = [...articles].sort((a, b) => b.date.localeCompare(a.date));
+  // Take latest 12, shuffle by date, pick 6
+  return dailyShuffle(byDate.slice(0, 12)).slice(0, 6).map((a) => a.slug);
+}
 
 function getHome(dict: Record<string, unknown> | undefined) {
   const h = (dict as any)?.home || {};
@@ -101,12 +116,15 @@ export default function HomeClient({
   const [heroSearch, setHeroSearch] = useState("");
 
   const home = getHome(dict);
-  const featuredTools = tools.filter((t) => FEATURED_TOOL_IDS.includes(t.id));
-  const featuredModels = models.filter((m) => FEATURED_MODEL_IDS.includes(m.id));
+  const featuredToolIds = getFeaturedToolIds();
+  const featuredTools = tools.filter((t) => featuredToolIds.includes(t.id));
+  const featuredModelIds = getFeaturedModelIds();
+  const featuredModels = models.filter((m) => featuredModelIds.includes(m.id));
   const editorsPicks = getEditorsPicks()
     .map((slug) => articles.find((a) => a.slug === slug))
     .filter(Boolean) as typeof articles;
-  const featuredArticles = articles.filter((a) => FEATURED_ARTICLE_SLUGS.includes(a.slug));
+  const featuredArticleSlugs = getFeaturedArticleSlugs();
+  const featuredArticles = articles.filter((a) => featuredArticleSlugs.includes(a.slug));
   const latestArticles = articles
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 6);
