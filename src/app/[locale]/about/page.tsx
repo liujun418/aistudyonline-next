@@ -126,7 +126,7 @@ const enContent = {
     items: [
       {
         label: "AI Tools Directory",
-        desc: "100+ AI tools organized by category, with honest ratings and pricing.",
+        desc: "AI tools organized by category, with honest ratings and pricing.",
       },
       {
         label: "Step-by-Step Tutorials",
@@ -168,7 +168,7 @@ const zhContent = {
     items: [
       {
         label: "AI工具目录",
-        desc: "100+款AI工具按类别整理，配有真实的评分和价格信息。",
+        desc: "AI工具按类别整理，配有真实的评分和价格信息。",
       },
       {
         label: "分步教程",

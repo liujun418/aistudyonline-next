@@ -25,16 +25,16 @@
     "exploreTools": "探索工具",
     "startLearning": "开始学习",
     "featuredTools": "精选AI工具",
-    "viewAllTools": "查看所有100+工具 →",
+    "viewAllTools": "查看所有工具 →",
     "featuredModels": "精选AI大模型",
-    "viewAllModels": "查看全部25+模型 →",
+    "viewAllModels": "查看全部模型 →",
     "latestArticles": "最新文章",
     "viewAllArticles": "查看所有文章 →",
     "browseByCategory": "按分类浏览",
     "features": {
       "curated": {
         "title": "精选工具",
-        "desc": "100+款AI工具精心挑选，按你的使用场景分类，而非技术类别。"
+        "desc": "AI工具精心挑选，按你的使用场景分类，而非技术类别。"
       },
       "beginner": {
         "title": "新手友好",
@@ -53,7 +53,7 @@
   },
   "models": {
     "title": "AI大模型库",
-    "description": "探索25+款来自全球顶级开发者的前沿AI大模型。比较参数、价格和性能表现。",
+    "description": "探索来自全球顶级开发者的前沿AI大模型。比较参数、价格和性能表现。",
     "searchPlaceholder": "搜索模型...",
     "allModels": "全部",
     "noResults": "未找到匹配的模型。请尝试不同的搜索条件或筛选。",
@@ -90,7 +90,7 @@
   },
   "tools": {
     "title": "AI工具目录",
-    "description": "浏览100+款AI工具，按分类组织。找到适合你的任务的最佳工具。",
+    "description": "浏览AI工具，按分类组织。找到适合你的任务的最佳工具。",
     "searchPlaceholder": "搜索工具...",
     "allTools": "全部",
     "difficulty": {

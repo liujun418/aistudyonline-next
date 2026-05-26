@@ -11,7 +11,7 @@ function getModelsDict(dict: Record<string, unknown> | undefined) {
   const m = (dict as any)?.models || {};
   return {
     title: (m.title as string) || "AI Models Directory",
-    description: (m.description as string) || "Explore 25 cutting-edge AI models from top developers worldwide.",
+    description: (m.description as string) || "Explore cutting-edge AI models from top developers worldwide.",
     searchPlaceholder: (m.searchPlaceholder as string) || "Search models...",
     allModels: (m.allModels as string) || "All",
     noResults: (m.noResults as string) || "No models found. Try a different search or filter.",

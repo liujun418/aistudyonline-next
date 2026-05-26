@@ -25,16 +25,16 @@
     "exploreTools": "Explore Tools",
     "startLearning": "Start Learning",
     "featuredTools": "Featured AI Tools",
-    "viewAllTools": "View All 100+ Tools →",
+    "viewAllTools": "View All Tools →",
     "featuredModels": "Featured AI Models",
-    "viewAllModels": "View All 25+ Models →",
+    "viewAllModels": "View All Models →",
     "latestArticles": "Latest Articles",
     "viewAllArticles": "View All Articles →",
     "browseByCategory": "Browse by Category",
     "features": {
       "curated": {
         "title": "Curated Tools",
-        "desc": "100+ AI tools hand-picked and organized by what you want to do, not by technical category."
+        "desc": "AI tools hand-picked and organized by what you want to do, not by technical category."
       },
       "beginner": {
         "title": "Beginner Friendly",
@@ -53,7 +53,7 @@
   },
   "models": {
     "title": "AI Models Directory",
-    "description": "Explore 25 cutting-edge AI models from top developers worldwide. Compare parameters, pricing, and performance.",
+    "description": "Explore cutting-edge AI models from top developers worldwide. Compare parameters, pricing, and performance.",
     "searchPlaceholder": "Search models...",
     "allModels": "All",
     "noResults": "No models found. Try a different search or filter.",
@@ -90,7 +90,7 @@
   },
   "tools": {
     "title": "AI Tools Directory",
-    "description": "Browse 100+ AI tools organized by category. Find the right tool for your task.",
+    "description": "Browse AI tools organized by category. Find the right tool for your task.",
     "searchPlaceholder": "Search tools...",
     "allTools": "All",
     "difficulty": {

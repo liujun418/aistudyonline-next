@@ -20,20 +20,20 @@ export async function generateMetadata({
 
   return {
     title: `${tools.title || "AI Tools Directory"} — ${SITE_NAME}`,
-    description: tools.description || "Browse 100+ AI tools organized by category.",
+    description: tools.description || "Browse AI tools organized by category.",
     openGraph: {
       type: "website",
       locale: localeMap[locale] || "en_US",
       url: `${SITE_URL}/${locale}/tools`,
       siteName: SITE_NAME,
       title: `${tools.title || "AI Tools Directory"} — ${SITE_NAME}`,
-      description: tools.description || "Browse 100+ AI tools organized by category.",
+      description: tools.description || "Browse AI tools organized by category.",
       images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630, alt: SITE_NAME }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${tools.title || "AI Tools Directory"} — ${SITE_NAME}`,
-      description: tools.description || "Browse 100+ AI tools organized by category.",
+      description: tools.description || "Browse AI tools organized by category.",
     },
     alternates: {
       languages: {

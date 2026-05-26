@@ -20,20 +20,20 @@ export async function generateMetadata({
 
   return {
     title: `${models.title || "AI Models Directory"} — ${SITE_NAME}`,
-    description: models.description || "Explore 25 cutting-edge AI models from top developers worldwide.",
+    description: models.description || "Explore cutting-edge AI models from top developers worldwide.",
     openGraph: {
       type: "website",
       locale: localeMap[locale] || "en_US",
       url: `${SITE_URL}/${locale}/models`,
       siteName: SITE_NAME,
       title: `${models.title || "AI Models Directory"} — ${SITE_NAME}`,
-      description: models.description || "Explore 25 cutting-edge AI models from top developers worldwide.",
+      description: models.description || "Explore cutting-edge AI models from top developers worldwide.",
       images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630, alt: SITE_NAME }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${models.title || "AI Models Directory"} — ${SITE_NAME}`,
-      description: models.description || "Explore 25 cutting-edge AI models from top developers worldwide.",
+      description: models.description || "Explore cutting-edge AI models from top developers worldwide.",
     },
     alternates: {
       languages: {

@@ -77,9 +77,9 @@ function getHome(dict: Record<string, unknown> | undefined) {
     exploreTools: (h.exploreTools as string) || "Explore Tools",
     startLearning: (h.startLearning as string) || "Start Learning",
     featuredTools: (h.featuredTools as string) || "Featured AI Tools",
-    viewAllTools: (h.viewAllTools as string) || "View All 100+ Tools →",
+    viewAllTools: (h.viewAllTools as string) || "View All Tools →",
     featuredModels: (h.featuredModels as string) || "Featured AI Models",
-    viewAllModels: (h.viewAllModels as string) || "View All 25+ Models →",
+    viewAllModels: (h.viewAllModels as string) || "View All Models →",
     editorPicks: (h.editorPicks as string) || "Editor's Picks",
     latestArticles: (h.latestArticles as string) || "Latest Articles",
     viewAllArticles: (h.viewAllArticles as string) || "View All Articles →",
@@ -87,7 +87,7 @@ function getHome(dict: Record<string, unknown> | undefined) {
     features: {
       curated: {
         title: (h.features?.curated?.title as string) || "Curated Tools",
-        desc: (h.features?.curated?.desc as string) || "100+ AI tools hand-picked and organized by what you want to do.",
+        desc: (h.features?.curated?.desc as string) || "AI tools hand-picked and organized by what you want to do.",
       },
       beginner: {
         title: (h.features?.beginner?.title as string) || "Beginner Friendly",

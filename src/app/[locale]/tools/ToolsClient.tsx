@@ -11,7 +11,7 @@ function getToolsDict(dict: Record<string, unknown> | undefined) {
   const t = (dict as any)?.tools || {};
   return {
     title: (t.title as string) || "AI Tools Directory",
-    description: (t.description as string) || "Browse 100+ AI tools organized by category.",
+    description: (t.description as string) || "Browse AI tools organized by category.",
     searchPlaceholder: (t.searchPlaceholder as string) || "Search tools...",
     allTools: (t.allTools as string) || "All",
     noResults: (t.noResults as string) || "No tools found. Try a different search or filter.",
