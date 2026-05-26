@@ -19,14 +19,29 @@ const FEATURED_TOOL_IDS = ["chatgpt", "midjourney", "cursor", "elevenlabs"];
 // Hardcoded featured model IDs for the homepage
 const FEATURED_MODEL_IDS = ["gpt-4o", "claude-4-opus", "gemini-2-5-pro", "deepseek-r1"];
 
-// Hardcoded featured article slugs for the homepage
-// Editor's Picks — hand-curated quality articles
-const EDITORS_PICK_SLUGS = [
-  "llms-in-plain-english",
-  "chatgpt-free-vs-plus-2026-what-you-get",
-  "free-ai-image-generators-same-prompt-test",
-  "claude-vs-chatgpt-writing-blind-test",
-];
+// Editor's Picks — auto-selected: 4 newest articles across different categories, updated daily
+function getEditorsPicks() {
+  // Sort by date desc, then pick up to 4 with unique categories for variety
+  const byDate = [...articles].sort((a, b) => b.date.localeCompare(a.date));
+  const seen = new Set<string>();
+  const picks: typeof articles = [];
+  for (const a of byDate) {
+    if (!seen.has(a.category) && picks.length < 4) {
+      seen.add(a.category);
+      picks.push(a);
+    }
+  }
+  // If we didn't get 4 unique categories, fill from remaining newest
+  if (picks.length < 4) {
+    for (const a of byDate) {
+      if (!picks.includes(a)) {
+        picks.push(a);
+        if (picks.length >= 4) break;
+      }
+    }
+  }
+  return picks.map((a) => a.slug);
+}
 
 const FEATURED_ARTICLE_SLUGS = [
   "what-is-chatgpt-beginners-guide",
@@ -88,7 +103,9 @@ export default function HomeClient({
   const home = getHome(dict);
   const featuredTools = tools.filter((t) => FEATURED_TOOL_IDS.includes(t.id));
   const featuredModels = models.filter((m) => FEATURED_MODEL_IDS.includes(m.id));
-  const editorsPicks = articles.filter((a) => EDITORS_PICK_SLUGS.includes(a.slug));
+  const editorsPicks = getEditorsPicks()
+    .map((slug) => articles.find((a) => a.slug === slug))
+    .filter(Boolean) as typeof articles;
   const featuredArticles = articles.filter((a) => FEATURED_ARTICLE_SLUGS.includes(a.slug));
   const latestArticles = articles
     .sort((a, b) => b.date.localeCompare(a.date))
