@@ -14537,5 +14537,293 @@ async def analyze_sentiment(review_text: str):
 <div class="next-step">
 <p><strong>下一篇：</strong> <a href="/article/12-core-ai-concepts-guide">一篇文章掌握AI大模型12个核心概念 &#8594;</a></p>
 </div>`,
+
+// ====== Article: karpathy-ai-training-scale-method ======
+},
+
+// ====== Article: google-gemini-3-5-upgrade-guide ======
+"google-gemini-3-5-upgrade-guide": {
+content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI News &middot; Standalone Article</p>
+<p><strong>What you&#39;ll learn:</strong> Google&#39;s Gemini 3.5 upgrade details, new features, API deployment guide, and practical strategies for overseas businesses.</p>
+</div>
+
+<p>Just before Google I/O 2026, Google accelerated the release of <a href="/tools/gemini">Gemini 3.5</a>, skipping multiple intermediate versions to deliver a comprehensive leap in performance and functionality. For overseas developers, cross-border content operators, and AI tool builders, this new-generation multimodal model brings lower costs, stronger reasoning, and richer ecosystem access. This article covers all core updates, actual API access methods, and commercial application scenarios.</p>
+
+<h2>Core Iteration Highlights</h2>
+
+<h3>1. Dual Version Layout for Different Scenarios</h3>
+
+<p>Google divides Gemini 3.5 into two mainstream versions to cover everything from lightweight daily work to high-end complex development.</p>
+
+<ul>
+<li><strong>Gemini 3.5 Ultra</strong>: Flagship high-performance version, leading in logical reasoning, long-text processing, complex code development, and multimodal deep analysis. Suitable for enterprise-level business, large project development, and professional data analysis.</li>
+<li><strong>Gemini 3.5 Flash</strong>: High-speed cost-effective version, retaining over 90% of daily practical capabilities with significantly reduced API costs. Ideal for batch content generation, multilingual translation, customer service automation, and lightweight agent tasks.</li>
+</ul>
+
+<h3>2. Enhanced Long-Context Processing</h3>
+
+<p>Gemini 3.5 expands maximum context length substantially, supporting ultra-long document analysis, full project code reading, and whole-site content batch processing. It can parse complete e-commerce operation documents, project source code, and multi-chapter articles directly without manual segmentation.</p>
+
+<h3>3. Full-Scene Multimodal Upgrade</h3>
+
+<p>Seamless fusion of text, images, short videos, audio, and designs. Generate optimized marketing images from product briefs, auto-match multilingual subtitle scripts for videos, and modify UI designs with one click. Ideal for cross-border social media and foreign trade promotion.</p>
+
+<h3>4. Built-in AI Task Agent Module</h3>
+
+<p>Gemini 3.5 comes with an autonomous scheduling agent by default. It splits complex goals, executes step-by-step tasks, and self-corrects errors. Users only need to provide core requirements, and the model handles the entire workflow without repeated manual intervention. Learn more about <a href="/article/google-io-2026-93-ai-agents">AI agents at Google I/O 2026</a>.</p>
+
+<h2>Practical API Access Tutorial</h2>
+
+<h3>1. Install the Official SDK</h3>
+
+<p>Quickly set up the Gemini environment on local devices or cloud servers:</p>
+
+<pre><code class="language-bash">pip install google-generativeai --upgrade</code></pre>
+
+<h3>2. Basic Text Generation</h3>
+
+<p>Suitable for daily copywriting, market analysis, and multilingual content creation:</p>
+
+<pre><code class="language-python">import google.generativeai as genai
+
+# Configure your API key
+genai.configure(api_key="YOUR_GEMINI_3.5_API_KEY")
+
+# Select model version
+model = genai.GenerativeModel("gemini-3.5-flash")
+
+# Input your prompt
+user_prompt = "Write a complete English product promotion copy for European and American social media"
+
+# Generate content
+response = model.generate_content(user_prompt)
+print(response.text)</code></pre>
+
+<h3>3. Long Document Batch Analysis</h3>
+
+<p>Process cross-border industry reports and market data documents in one go:</p>
+
+<pre><code class="language-python">import google.generativeai as genai
+
+genai.configure(api_key="YOUR_GEMINI_3.5_API_KEY")
+model = genai.GenerativeModel("gemini-3.5-ultra")
+
+# Read local document
+with open("overseas_market_report.txt", "r", encoding="utf-8") as f:
+    file_content = f.read()
+
+# Analyze long content
+analysis_prompt = "Extract core market data, consumer trends, and competitor advantages: " + file_content
+result = model.generate_content(analysis_prompt)
+print(result.text)</code></pre>
+
+<h3>4. Multimodal Image Recognition</h3>
+
+<p>Analyze product images and generate matching sales copy:</p>
+
+<pre><code class="language-python">from PIL import Image
+import google.generativeai as genai
+
+genai.configure(api_key="YOUR_GEMINI_3.5_API_KEY")
+model = genai.GenerativeModel("gemini-3.5-ultra")
+
+# Load product image
+img = Image.open("product.jpg")
+prompt = "Analyze the product and write Amazon-standard selling points"
+
+response = model.generate_content([prompt, img])
+print(response.text)</code></pre>
+
+<h2>Command Line Quick Call</h2>
+
+<p>For server-side automated scripts and batch tasks:</p>
+
+<pre><code class="language-bash">python -c "
+import google.generativeai as genai
+genai.configure(api_key='YOUR_API_KEY')
+model = genai.GenerativeModel('gemini-3.5-flash')
+print(model.generate_content('Generate 5 high-traffic long-tail keywords for outdoor supplies').text)
+"</code></pre>
+
+<h2>Core Advantages for Overseas Operators</h2>
+
+<ol>
+<li><strong>Low-Cost Mass Production</strong>: Gemini 3.5 Flash drastically reduces API costs for batch generation of articles, social posts, and product copy.</li>
+<li><strong>Native Multilingual Support</strong>: Built-in optimization for English, Spanish, French, and other languages — content reads naturally without machine translation artifacts.</li>
+<li><strong>Google Ecosystem Integration</strong>: Connect with Google Search Console, ad tools, and site builders for end-to-end workflow from content creation to traffic. For a full model comparison, see <a href="/article/gpt-claude-grok-gemini-comparison">GPT vs Claude vs Grok vs Gemini</a>.</li>
+<li><strong>Global Node Stability</strong>: Optimized overseas node response speeds solve the latency issues of older models.</li>
+</ol>
+
+<h2>Practical Deployment Suggestions</h2>
+
+<ul>
+<li>Daily large-scale content, auto-replies, and keyword layout: use <strong>Gemini 3.5 Flash</strong> to save costs.</li>
+<li>Complex business logic, full project code, professional research: use <strong>Gemini 3.5 Ultra</strong> for quality.</li>
+<li>When using long-context features, trim redundant content to save tokens and improve speed.</li>
+<li>Embed Gemini 3.5 API into overseas websites and automation scripts for fully unmanned content updates and data processing.</li>
+</ul>
+
+<p>For more on Google&#39;s AI ecosystem, check <a href="/article/google-5-skill-design-patterns">Google&#39;s 5 Skill Design Patterns</a> and our <a href="/article/free-vs-paid-ai-tools-worth-it">free vs paid AI tools guide</a> to make informed decisions for your overseas projects.</p>
+
+<h2>Final Summary</h2>
+
+<p>Google&#39;s accelerated Gemini 3.5 upgrade marks a milestone where multimodal AI enters a more practical and affordable stage. For anyone in overseas websites, cross-border e-commerce, and AI services, mastering its access methods and application scenarios early will give you a first-mover advantage. Visit the <a href="/tools/gemini">Gemini tool page</a> for more details on pricing and features.</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: What is the difference between Gemini 3.5 Ultra and Gemini 3.5 Flash?</h3>
+<p>Gemini 3.5 Ultra is the flagship version optimized for complex reasoning, long-context analysis, and high-quality code generation. Gemini 3.5 Flash is a lightweight cost-effective variant that retains over 90% of daily-use capabilities at a fraction of the cost, ideal for high-volume tasks like batch content generation and multilingual translation for overseas businesses.</p>
+
+<h3>Q: How do I get started with the Gemini 3.5 API?</h3>
+<p>Install the Google Generative AI package with <code>pip install google-generativeai</code>, obtain an API key from the Google AI Studio, and use the model name &quot;gemini-3.5-flash&quot; or &quot;gemini-3.5-ultra&quot;. The SDK supports text, image, audio, and video inputs — making it versatile for various overseas deployment scenarios.</p>
+
+<h3>Q: What are the best use cases for Gemini 3.5 in overseas business?</h3>
+<p>Gemini 3.5 excels at multilingual content creation, cross-border e-commerce product descriptions, automated customer service, long-document market analysis, and SEO content generation at scale. The Flash variant makes these affordable for startups and small overseas teams, while Ultra handles complex coding and analysis tasks.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/google-io-2026-93-ai-agents">93 AIs Collaborated to Build an OS: Google I/O 2026 Highlights &#8594;</a></p>
+</div>`,
+contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 &middot; 独立文章</p>
+<p><strong>你将学到：</strong> Google Gemini 3.5的升级详情、新功能、API部署指南及面向海外业务的实用策略。</p>
+</div>
+
+<p>就在Google I/O 2026前夕，Google加速发布了<a href="/tools/gemini">Gemini 3.5</a>，跳过了多个中间版本，实现了性能和功能的全面跨越。对于海外开发者、跨境内容运营者和AI工具构建者来说，这款新一代多模态模型带来了更低成本、更强推理能力和更丰富的生态接入能力。本文梳理了所有核心更新、实际API接入方法和商业应用场景。</p>
+
+<h2>Core Iteration Highlights核心迭代亮点</h2>
+
+<h3>1. Dual Version Layout双版本布局，覆盖不同场景</h3>
+
+<p>Google将Gemini 3.5分为两个主流版本(versions)，覆盖从lightweight日常任务到high-end复杂开发的所有需求。</p>
+
+<ul>
+<li><strong>Gemini 3.5 Ultra</strong>：旗舰高性能版本，在逻辑推理、长文本处理、复杂代码开发和多模态深度分析方面领先。适用于企业级业务、大型项目开发和专业数据分析。</li>
+<li><strong>Gemini 3.5 Flash</strong>：高速高性价比版本，保留了超过90%的日常实用能力，API调用成本大幅降低。适用于批量内容生成、多语言翻译、客服自动化和轻量级Agent任务执行。</li>
+</ul>
+
+<h3>2. Enhanced Long-Context增强的长上下文处理能力</h3>
+
+<p>Gemini 3.5大幅扩展了maximum context length，稳定支持超长文档分析、full project code阅读和全站内容批量处理。可直接解析完整的e-commerce运营文档、project源代码和多章节长篇文章，无需manual segmentation。</p>
+
+<h3>3. Full-Scene Multimodal全场景多模态升级</h3>
+
+<p>实现text, image, short video, audio和design的无缝融合处理。可根据product copy快速生成优化后的marketing图片，自动为短视频匹配multilingual subtitle脚本，一键修改和迭代UI design。非常适合cross-border social media运营和外贸产品推广工作。</p>
+
+<h3>4. Built-in AI Task Agent内置独立任务Agent模块</h3>
+
+<p>Gemini 3.5默认自带autonomous scheduling Agent，可自动拆分complex goals、分步执行tasks并self-correct错误。用户只需提出core requirements，模型即可全程自主编排，无需repeated manual intervention。了解更多关于<a href="/article/google-io-2026-93-ai-agents">Google I/O 2026的AI Agent</a>。</p>
+
+<h2>API接入实战教程</h2>
+
+<h3>1. 安装官方SDK</h3>
+
+<p>在本地设备或海外云服务器上快速部署最新Gemini调用环境：</p>
+
+<pre><code class="language-bash">pip install google-generativeai --upgrade</code></pre>
+
+<h3>2. 基础文本调用</h3>
+
+<p>适用于日常文案撰写、市场分析和多语言内容创作：</p>
+
+<pre><code class="language-python">import google.generativeai as genai
+
+# 配置你的API Key
+genai.configure(api_key="YOUR_GEMINI_3.5_API_KEY")
+
+# 选择模型版本
+model = genai.GenerativeModel("gemini-3.5-flash")
+
+# 输入业务需求
+user_prompt = "Write a complete English product promotion copy for European and American social media"
+
+# 调用模型生成内容
+response = model.generate_content(user_prompt)
+print(response.text)</code></pre>
+
+<h3>3. 长文档批量分析</h3>
+
+<p>一键处理跨境行业报告和市场数据文档：</p>
+
+<pre><code class="language-python">import google.generativeai as genai
+
+genai.configure(api_key="YOUR_GEMINI_3.5_API_KEY")
+model = genai.GenerativeModel("gemini-3.5-ultra")
+
+# 读取本地文档
+with open("overseas_market_report.txt", "r", encoding="utf-8") as f:
+    file_content = f.read()
+
+# 长内容分析
+analysis_prompt = "Extract core market data, consumer trends, and competitor advantages: " + file_content
+result = model.generate_content(analysis_prompt)
+print(result.text)</code></pre>
+
+<h3>4. 多模态图片识别与内容生成</h3>
+
+<p>快速分析海外产品图片并生成匹配的卖点文案：</p>
+
+<pre><code class="language-python">from PIL import Image
+import google.generativeai as genai
+
+genai.configure(api_key="YOUR_GEMINI_3.5_API_KEY")
+model = genai.GenerativeModel("gemini-3.5-ultra")
+
+# 加载产品图片
+img = Image.open("product.jpg")
+prompt = "Analyze the product and write Amazon-standard selling points"
+
+response = model.generate_content([prompt, img])
+print(response.text)</code></pre>
+
+<h2>命令行快速调用</h2>
+
+<p>方便服务器后台自动脚本部署和定时批量任务执行：</p>
+
+<pre><code class="language-bash">python -c "
+import google.generativeai as genai
+genai.configure(api_key='YOUR_API_KEY')
+model = genai.GenerativeModel('gemini-3.5-flash')
+print(model.generate_content('Generate 5 high-traffic long-tail keywords for outdoor supplies').text)
+"</code></pre>
+
+<h2>海外运营者的核心优势</h2>
+
+<ol>
+<li><strong>低成本批量生产</strong>：Gemini 3.5 Flash大幅降低API调用成本，可低成本批量生成独立站文章、社交媒体帖子和产品文案。</li>
+<li><strong>原生多语言适配</strong>：内置针对英语、西班牙语、法语等主流海外语言的优化逻辑，生成内容更符合当地用户阅读习惯。</li>
+<li><strong>Google生态无缝衔接</strong>：可与Google Search Console、广告投放工具和建站工具联动，实现从内容创作到流量引入的一站式闭环运营。如需模型对比，请参考<a href="/article/gpt-claude-grok-gemini-comparison">GPT、Claude、Grok与Gemini对比</a>。</li>
+<li><strong>全球节点稳定接入</strong>：优化了海外节点响应速度，解决了旧模型延迟高和连接不稳定的问题。</li>
+</ol>
+
+<h2>实战部署建议</h2>
+
+<ul>
+<li>日常大规模内容创作、自动回复和关键词布局优先使用<strong>Gemini 3.5 Flash</strong>以节省成本。</li>
+<li>复杂业务逻辑梳理、全项目代码开发、专业市场调研选择<strong>Gemini 3.5 Ultra</strong>以确保输出质量。</li>
+<li>使用长上下文功能时，合理拆分无效冗余内容以进一步节省Token消耗并提高响应速度。</li>
+<li>海外网站和自动化运营脚本可嵌入Gemini 3.5 API，实现全无人值守的内容更新和数据整理。</li>
+</ul>
+
+<p>了解更多Google AI生态系统，请查看<a href="/article/google-5-skill-design-patterns">Google的5个技能设计模式</a>和我们的<a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具指南</a>，为你的海外项目做出明智决策。</p>
+
+<h2>总结</h2>
+
+<p>Google的Gemini 3.5加速升级标志着多模态AI进入更实用、更低成本的阶段。对于所有从事海外网站、跨境电商和AI服务行业的人士，提前掌握其接入方法和应用场景将获得先发优势，大幅提升日常工作效率并降低长期AI工具使用成本。访问<a href="/tools/gemini">Gemini工具页面</a>了解更多定价和功能详情。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: What is the difference between Gemini 3.5 Ultra and Gemini 3.5 Flash?</h3>
+<p>Gemini 3.5 Ultra是旗舰版本，针对复杂推理、长上下文分析和高品质代码生成进行了优化。Gemini 3.5 Flash是轻量级高性价比变体，以极低的成本保留了超过90%的日常使用能力，非常适合批量内容生成和多语言翻译等海外业务的高容量任务。</p>
+
+<h3>Q: How do I get started with the Gemini 3.5 API?</h3>
+<p>使用<code>pip install google-generativeai</code>安装Google Generative AI包，从Google AI Studio获取API密钥，然后根据需求使用&quot;gemini-3.5-flash&quot;或&quot;gemini-3.5-ultra&quot;模型名称。SDK支持文本、图片、音频和视频输入，适用于多种海外部署场景。</p>
+
+<h3>Q: What are the best use cases for Gemini 3.5 in overseas business?</h3>
+<p>Gemini 3.5在多语言内容创作、跨境电商产品描述、自动客服、长文档市场分析和规模化SEO内容生成方面表现出色。Flash变体使初创公司和小型海外团队也能负担这些功能，而Ultra则处理复杂的编码和分析任务。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/google-io-2026-93-ai-agents">93个AI协作构建操作系统：Google I/O 2026亮点 &#8594;</a></p>
+</div>`,
 },
 };

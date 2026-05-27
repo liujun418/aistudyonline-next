@@ -1062,4 +1062,17 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude"],
     date: "2026-05-27",
   },
+
+  {
+    slug: "google-gemini-3-5-upgrade-guide",
+    title: "Google Accelerates Upgrade to Gemini 3.5: Full New Features & Practical Deployment Guide",
+    titleZh: "Google加速升级Gemini 3.5：全新功能与实战部署指南",
+    description: "Google's Gemini 3.5 brings Ultra and Flash variants, enhanced multimodal capabilities, and lower API costs. Complete deployment guide with code examples for overseas businesses.",
+    descriptionZh: "Google Gemini 3.5带来Ultra和Flash双版本、增强的多模态能力与更低API成本。包含代码示例的完整部署指南，面向海外业务。",
+    category: "ai-news",
+    tags: ["gemini", "google", "multimodal", "api", "deployment", "overseas"],
+    difficulty: "beginner",
+    toolsMentioned: ["gemini"],
+    date: "2026-05-27",
+  },
 ];
