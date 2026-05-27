@@ -13367,4 +13367,1175 @@ gcloud ai models update gemini-3.5-mcp --region=us-central1 --enable-mcp=true</c
 </div>`,
 		},
 
+
+
+"claude-code-vs-codex-automation": {
+  content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Comparisons &middot; <strong>Standalone Guide</strong></p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+</div>
+
+<p>In the realm of AI-driven computer automation, two prominent solutions have emerged recently: <strong>Claude Code</strong> and <strong>Codex</strong>. Both enable AI to take control of your computer, but they follow entirely different technical approaches. This article will break down their differences in terms of functionality, technical principles, and practical applications, and even show you how to use them together for maximum efficiency.</p>
+<h2>1. Hands-On Demonstration: How They Work in Action</h2>
+<p>Let’s start with a practical demo to see how each tool operates. Both Claude Code and Codex offer a feature called <em>Computer Use</em>, which can be accessed via terminal commands or desktop clients. Here’s a side-by-side test:</p>
+<h3>• Using Claude Code to Create a Calendar Event</h3>
+<ol>
+<li><p>Open your terminal and launch Claude Code.</p>
+</li>
+<li><p>Issue the command:</p>
+<pre><code class="language-text">用 computer use 打开 macOS 日历，在周六创建一个全天事件，标题为“周六出去玩”
+</code></pre>
+</li>
+<li><p>Observe: Claude Code will take over your <strong>physical mouse</strong>, automatically open the Calendar app, navigate to Saturday, and create the event. You’ll see your mouse moving on its own—this is because Claude Code interacts with the screen visually, just like a human user.</p>
+</li>
+</ol>
+<h3>• Using Codex to Create a Calendar Event</h3>
+<ol>
+<li><p>Open your terminal and launch Codex.</p>
+</li>
+<li><p>Issue the command:</p>
+<pre><code class="language-text">用 Computer Use 打开 macOS 日历，在周日创建一个全天事件，标题为“周日出去玩”
+</code></pre>
+</li>
+<li><p>Observe: Codex uses a <strong>virtual cursor</strong> that works in the background. Your physical mouse remains under your control, and Codex silently completes the task in parallel.</p>
+</li>
+</ol>
+<h2>2. Technical Principles: Vision vs. Structured Data</h2>
+<p>To understand their differences, let’s dive into how they “see” and interact with your computer.</p>
+<h3>• Claude Code: The “Visual Learner”</h3>
+<p>Claude Code operates like a human user who can only see the screen (not the underlying code). Its workflow is:</p>
+<ol>
+<li><p><strong>Screenshot</strong>: Capture the current screen.</p>
+</li>
+<li><p><strong>Analyze</strong>: Send the screenshot to the AI model to identify UI elements (buttons, text fields, etc.).</p>
+</li>
+<li><p><strong>Act</strong>: Move the physical mouse to click, type, or navigate.</p>
+</li>
+<li><p><strong>Repeat</strong>: Cycle through screenshot → analyze → act for each step.</p>
+</li>
+</ol>
+<p>This approach is similar to <strong>Tesla’s full-self-driving (pure vision)</strong>, where AI relies solely on camera inputs to make decisions.</p>
+<h3>• Codex: The “Data Parser”</h3>
+<p>Codex leverages macOS’s built-in <strong>Accessibility Tree (AX Tree)</strong>, a system designed for visually impaired users to describe UI elements (buttons, menus, etc.) in structured data. Its workflow is:</p>
+<ol>
+<li><p><strong>Fetch Data</strong>: Retrieve structured information about the app’s UI (element names, positions, states).</p>
+</li>
+<li><p><strong>Act</strong>: Send direct commands to the system to click or interact with elements, without needing to move a physical mouse.</p>
+</li>
+<li><p><strong>Fallback</strong>: If AX Tree data is unavailable, it falls back to screenshot-based interaction (but this is rare).</p>
+</li>
+</ol>
+<p>This is analogous to <strong>LiDAR-based self-driving</strong>, where AI uses precise structural data to navigate.</p>
+<h2>3. Practical Comparison: Speed, Cost, Accuracy, and More</h2>
+<p>Let’s compare them across key metrics:</p>
+<table>
+<thead>
+<tr>
+  <th><strong>Metric</strong></th>
+  <th><strong>Claude Code</strong></th>
+  <th><strong>Codex</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Speed</strong></td>
+  <td>Slower (due to screenshot analysis cycles)</td>
+  <td>Faster (direct structured data access)</td>
+</tr>
+<tr>
+  <td><strong>Cost</strong></td>
+  <td>More expensive (high token usage for screenshots)</td>
+  <td>Cheaper (≈1/4 token usage of Claude Code)</td>
+</tr>
+<tr>
+  <td><strong>Accuracy</strong></td>
+  <td>Prone to errors on high-resolution screens (pixel-level clicks)</td>
+  <td>Highly accurate (targets elements directly)</td>
+</tr>
+<tr>
+  <td><strong>Multi-Tasking</strong></td>
+  <td>Cannot multitask (shares one physical mouse)</td>
+  <td>Can multitask (multiple virtual cursors)</td>
+</tr>
+<tr>
+  <td><strong>System Support</strong></td>
+  <td>Cross-platform (Mac, Windows, remote desktops)</td>
+  <td>Only macOS (and restricted in some regions like Europe due to privacy laws)</td>
+</tr>
+<tr>
+  <td><strong>App Compatibility</strong></td>
+  <td>Works with any app (even non-standard UIs like games or Figma)</td>
+  <td>Relies on AX Tree (fails with apps lacking accessibility data)</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Practical Tips: When to Use Which Tool</h2>
+<ul>
+<li><p><strong>Choose Codex</strong> if you:</p>
+<ul>
+<li><p>Use macOS and need fast, accurate, and non-intrusive automation.</p>
+</li>
+<li><p>Want to run multiple tasks in the background while using your computer normally.</p>
+</li>
+<li><p>Prioritize cost-effectiveness for standard macOS apps.</p>
+</li>
+</ul>
+<p><em>Example Command for Codex (non-interactive mode):</em></p>
+<pre><code class="language-bash">codex exec --full-auto --ephemeral --skip-git-repo-check -o result.txt &quot;使用 Computer Use 打开 macOS 计算器应用，输入 1+1，然后告诉我计算结果&quot;
+</code></pre>
+</li>
+<li><p><strong>Choose Claude Code</strong> if you:</p>
+<ul>
+<li><p>Need to automate non-standard apps (e.g., games, custom tools) or work across multiple operating systems.</p>
+</li>
+<li><p>Prefer a more “human-like” interaction model and don’t mind sharing your mouse.</p>
+</li>
+<li><p>Want long-term scalability (its visual approach is more adaptable to future UI changes).</p>
+</li>
+</ul>
+<p><em>Example Command for Claude Code (terminal interaction):</em></p>
+<pre><code class="language-text">用 computer use 打开 Windows 画图工具，绘制一个红色圆形
+</code></pre>
+</li>
+</ul>
+<h2>5. Pro Tip: Use Them Together</h2>
+<p>For the best of both worlds, have <strong>Claude Code act as the “commander”</strong> to invoke Codex’s capabilities. Here’s how:</p>
+<ol>
+<li><p>Use Claude Code’s terminal to send commands to Codex’s non-interactive mode.</p>
+</li>
+<li><p>Example workflow: Ask Claude Code to run a Codex command to automate a macOS task, then have Claude Code process the result.</p>
+</li>
+</ol>
+<p><em>Example Command to Link Them:</em>
+In Claude Code’s terminal, input:</p>
+<pre><code class="language-text">运行 codex exec --full-auto --ephemeral --skip-git-repo-check -o result.txt &quot;使用 Computer Use 打开 macOS 备忘录，创建一条内容为‘AI 自动化测试’的笔记&quot;
+</code></pre>
+<h2>Conclusion</h2>
+<p>Codex excels at fast, accurate, and silent automation on macOS, while Claude Code offers unmatched versatility and long-term potential. For most macOS users, Codex is the practical choice today, but Claude Code is worth watching for its cross-platform and adaptive capabilities. Experiment with both, and don’t forget you can combine them for even more powerful workflows!</p>
+
+<p><strong>Related reading:</strong> <a href="/article/codex-agent-desktop-jarvis">Codex Agent</a> &middot; <a href="/article/openai-codex-openclaw-revolution">OpenAI Codex and OpenClaw</a> &middot; <a href="/article/claude-code-install-setup">Claude Code Installation</a> &middot; <a href="/article/claude-code-overseas-business-guide">Claude Code Overseas Guide</a> &middot; <a href="/article/claude-code-top-7-skills">Claude Code Top 7 Skills</a></p>
+
+<h2>常见问题</h2>
+<h3>Q: Can I use Claude Code and Codex at the same time?</h3>
+<p>Yes, and it is actually a powerful combination. You can use Claude Code as the "commander" to invoke Codex's non-interactive mode for macOS-specific tasks. For example, Claude Code can send a command to Codex to create a calendar event, then process the result. This lets you leverage Claude Code's cross-platform versatility alongside Codex's fast, accurate macOS automation.</p>
+<h3>Q: Which tool is better for Windows users?</h3>
+<p>Claude Code is the better choice for Windows users because Codex relies on macOS's Accessibility Tree (AX Tree), which is only available on macOS. Claude Code's vision-based approach works on Windows, Mac, and even remote desktops, making it the only option for non-macOS platforms.</p>
+<h3>Q: Does Codex's virtual cursor really let me multitask?</h3>
+<p>Yes. Codex uses a virtual cursor that operates in the background, so your physical mouse remains under your control while Codex completes tasks in parallel. Claude Code, by contrast, takes over your physical mouse, preventing you from using your computer during automation tasks.</p>
+
+<div class="next-step">
+<p><strong>Next in this path:</strong> <a href="/article/codex-agent-desktop-jarvis">Codex Agent: Your Desktop Jarvis for Effortless Task Automation &#8594;</a></p>
+</div>`,
+  contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI对比评测 &middot; <strong>独立指南</strong></p>
+<p><strong>难度：</strong> 中级</p>
+</div>
+
+<p>在AI驱动的电脑自动化领域，最近出现了两个备受关注的解决方案：<strong>Claude Code</strong> 和 <strong>Codex</strong>。两者都能让AI控制你的电脑，但它们遵循完全不同的技术路径。本文将深入解析它们在功能、技术原理和实际应用上的差异，甚至教你如何将它们结合使用以实现最大效率。</p>
+
+<h2>1. 动手演示：它们实际如何工作</h2>
+
+<p>让我们从一个实际演示开始，看看每个工具的操作方式。Claude Code和Codex都提供了一项名为<em>Computer Use</em>的功能，可以通过终端命令或桌面客户端访问。以下是并排测试：</p>
+
+<h3>使用Claude Code创建日历事件</h3>
+
+<ol>
+<li>打开终端并启动Claude Code。</li>
+<li>输入命令：</li>
+</ol>
+
+<pre><code class="language-text">用 computer use 打开 macOS 日历，在周六创建一个全天事件，标题为"周六出去玩"</code></pre>
+
+<ol>
+<li>观察：Claude Code会接管你的<strong>物理鼠标</strong>，自动打开日历应用，导航到周六并创建事件。你会看到鼠标自己移动——这是因为Claude Code像人类用户一样通过视觉与屏幕交互。</li>
+</ol>
+
+<h3>使用Codex创建日历事件</h3>
+
+<ol>
+<li>打开终端并启动Codex。</li>
+<li>输入命令：</li>
+</ol>
+
+<pre><code class="language-text">用 Computer Use 打开 macOS 日历，在周日创建一个全天事件，标题为"周日出去玩"</code></pre>
+
+<ol>
+<li>观察：Codex使用一个<strong>虚拟光标</strong>在后台工作。你的物理鼠标仍然由你控制，Codex在并行静默完成任务。</li>
+</ol>
+
+<h2>2. 技术原理：视觉 vs 结构化数据</h2>
+
+<p>要理解它们的区别，让我们深入了解它们如何"看到"并与你的电脑交互。</p>
+
+<h3>Claude Code：视觉学习者</h3>
+
+<p>Claude Code像一个只能看到屏幕（看不到底层代码）的人类用户。它的工作流程是：</p>
+
+<ol>
+<li><strong>截图</strong>：捕获当前屏幕。</li>
+<li><strong>分析</strong>：将截图发送给AI模型识别UI元素（按钮、文本字段等）。</li>
+<li><strong>操作</strong>：移动物理鼠标点击、输入或导航。</li>
+<li><strong>重复</strong>：每个步骤都循环截图→分析→操作。</li>
+</ol>
+
+<p>这种方法类似于<strong>Tesla的全自动驾驶（纯视觉方案）</strong>，AI仅依靠摄像头输入做出决策。</p>
+
+<h3>Codex：数据解析器</h3>
+
+<p>Codex利用macOS内置的<strong>Accessibility Tree（AX Tree）</strong>——一个为视障用户设计的系统，用结构化数据描述UI元素（按钮、菜单等）。它的工作流程是：</p>
+
+<ol>
+<li><strong>获取数据</strong>：检索应用的UI结构化信息（元素名称、位置、状态）。</li>
+<li><strong>操作</strong>：直接向系统发送命令点击或与元素交互，无需移动物理鼠标。</li>
+<li><strong>后备方案</strong>：如果AX Tree数据不可用，它会回退到基于截图的交互（但这很少见）。</li>
+</ol>
+
+<p>这类似于<strong>基于LiDAR的自动驾驶</strong>，AI利用精确的结构化数据进行导航。</p>
+
+<h2>3. 实际对比：速度、成本、准确性等</h2>
+
+<p>让我们通过关键指标对比它们：</p>
+
+<table>
+<thead>
+<tr>
+  <th><strong>指标</strong></th>
+  <th><strong>Claude Code</strong></th>
+  <th><strong>Codex</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>速度</strong></td>
+  <td>较慢（截图分析循环）</td>
+  <td>更快（直接结构化数据访问）</td>
+</tr>
+<tr>
+  <td><strong>成本</strong></td>
+  <td>更高（截图占用大量Token）</td>
+  <td>更低（约Claude Code的1/4 Token消耗）</td>
+</tr>
+<tr>
+  <td><strong>准确性</strong></td>
+  <td>高分辨率屏幕上容易出错（像素级点击）</td>
+  <td>高精度（直接定位元素）</td>
+</tr>
+<tr>
+  <td><strong>多任务</strong></td>
+  <td>不能多任务（共用物理鼠标）</td>
+  <td>可以多任务（多个虚拟光标）</td>
+</tr>
+<tr>
+  <td><strong>系统支持</strong></td>
+  <td>跨平台（Mac、Windows、远程桌面）</td>
+  <td>仅macOS（部分地区因隐私法律受限，如欧洲）</td>
+</tr>
+<tr>
+  <td><strong>应用兼容性</strong></td>
+  <td>适用于任何应用（包括游戏或Figma等非标准UI）</td>
+  <td>依赖AX Tree（缺乏无障碍数据的应用会失败）</td>
+</tr>
+</tbody>
+</table>
+
+<h2>4. 实用技巧：何时使用哪个工具</h2>
+
+<p>选择Codex如果你：</p>
+
+<ul>
+<li>使用macOS，需要快速、准确且无干扰的自动化。</li>
+<li>想在使用电脑正常工作的同时在后台运行多个任务。</li>
+<li>优先考虑标准macOS应用的成本效益。</li>
+</ul>
+
+<p><em>Codex（非交互模式）示例命令：</em></p>
+
+<pre><code class="language-bash">codex exec --full-auto --ephemeral --skip-git-repo-check -o result.txt "使用 Computer Use 打开 macOS 计算器应用，输入 1+1，然后告诉我计算结果"</code></pre>
+
+<p>选择Claude Code如果你：</p>
+
+<ul>
+<li>需要自动化非标准应用（如游戏、自定义工具）或在多个操作系统上工作。</li>
+<li>更喜欢更"类人"的交互模式，不介意分享鼠标。</li>
+<li>想要长期可扩展性（它的视觉方法更能适应未来的UI变化）。</li>
+</ul>
+
+<p><em>Claude Code示例命令（终端交互）：</em></p>
+
+<pre><code class="language-text">用 computer use 打开 Windows 画图工具，绘制一个红色圆形</code></pre>
+
+<h2>5. 专业技巧：将它们结合使用</h2>
+
+<p>为了获得两全其美的效果，让<strong>Claude Code充当"指挥官"</strong>来调用Codex的能力。方法如下：</p>
+
+<ol>
+<li>使用Claude Code的终端向Codex的非交互模式发送命令。</li>
+<li>示例工作流：让Claude Code运行一个Codex命令来自动化macOS任务，然后让Claude Code处理结果。</li>
+</ol>
+
+<p><em>链接它们的示例命令：</em>
+在Claude Code的终端中输入：</p>
+
+<pre><code class="language-text">运行 codex exec --full-auto --ephemeral --skip-git-repo-check -o result.txt "使用 Computer Use 打开 macOS 备忘录，创建一条内容为'AI 自动化测试'的笔记"</code></pre>
+
+<h2>结论</h2>
+
+<p>Codex在macOS上擅长快速、准确、静默的自动化，而Claude Code提供了无与伦比的通用性和长期潜力。对于大多数macOS用户来说，Codex是当下的实用选择，但Claude Code因其跨平台和自适应能力值得关注。尝试两者，别忘了你可以将它们结合使用以获得更强大的工作流！</p>
+
+<h2>常见问题</h2>
+
+<h3>问：我可以同时使用Claude Code和Codex吗？</h3>
+<p>是的，这实际上是一个强大的组合。你可以使用Claude Code作为"指挥官"来调用Codex的非交互模式执行macOS特定任务。例如，Claude Code可以发送命令给Codex创建日历事件，然后处理结果。这让你能够兼得Claude Code的跨平台通用性和Codex快速准确的macOS自动化能力。</p>
+
+<h3>问：对于Windows用户，哪个工具更好？</h3>
+<p>Claude Code是Windows用户的更好选择，因为Codex依赖macOS的Accessibility Tree（AX Tree），这仅在macOS上可用。Claude Code基于视觉的方法适用于Windows、Mac甚至远程桌面，是非macOS平台的唯一选择。</p>
+
+<h3>问：Codex的虚拟光标真的让我可以多任务吗？</h3>
+<p>是的。Codex使用在后台操作的虚拟光标，你的物理鼠标仍受你控制，Codex并行完成任务。相比之下，Claude Code会接管你的物理鼠标，在自动化任务期间你无法使用电脑。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/codex-agent-desktop-jarvis">Codex Agent：你的桌面贾维斯，轻松实现任务自动化 &#8594;</a></p>
+</div>`,
+},
+
+"ai-money-making-system-one-day": {
+  content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Comparisons &middot; <strong>Standalone Guide</strong></p>
+<p><strong>Difficulty:</strong> Beginner</p>
+</div>
+
+<p>In the realm of wealth creation, there are two distinct paths: trading time for money and building a system that generates recurring income. Most people are stuck in the former, where income stops when work stops. But it&#39;s time to shift to the latter—creating a system with AI that works for you, even while you sleep. Here&#39;s a practical guide to building your own money-making system in just one day.</p>
+<h2>Step 1: Identify a Paid Need</h2>
+<p>Before creating any product, you must find a genuine demand. Many fail by creating products nobody wants. To avoid this:</p>
+<ul>
+<li><p><strong>Research What’s Already Selling</strong>: Look at platforms like Douyin, Xiaohongshu, or any niche marketplaces. Search for keywords like &#34;templates,&#34; &#34;tutorials,&#34; &#34;guides,&#34; &#34;pitfall avoidance checklists.&#34; Pay attention to comments like &#34;How to buy?&#34; and products with existing orders.</p>
+</li>
+<li><p><strong>Focus on Small Accounts</strong>: Don’t just look at big influencers. Small accounts with a few thousand followers that are making sales or offering paid content are goldmines. They indicate real, low-barrier demands. For example, a small account selling a &#34;30-point rental inspection checklist&#34; for $1.5 can make consistent sales.</p>
+</li>
+<li><p><strong>Validate Demand</strong>: Ensure there’s a group of people actively struggling with a problem and willing to pay to solve it. A great example is a rental checklist—renters need it, and they’ll pay a small fee for it.</p>
+</li>
+</ul>
+<h2>Step 2: Mine Your Experience for Products</h2>
+<p>Your expertise, no matter how trivial it seems, is valuable to others. Here’s how to turn it into a product:</p>
+<ul>
+<li><p><strong>Reflect on Your Strengths</strong>: Ask yourself:</p>
+<ul>
+<li><p>Have others asked for your advice?</p>
+</li>
+<li><p>What problems have you solved that others can’t?</p>
+</li>
+<li><p>What topics have you researched extensively out of interest?</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Turn Experience into a Shortcut</strong>: Skills like video editing, software usage, copywriting, or PPT creation might feel ordinary to you, but they’re valuable to beginners. Your experience is their shortcut to success.</p>
+</li>
+<li><p><strong>Document Your Process</strong>: Take an hour to write down your knowledge. This could be on paper or using a tool. Writing clarifies your thoughts and turns vague experience into a clear methodology.</p>
+</li>
+<li><p><strong>Find Overlaps</strong>: Match your documented experience with the market demand you identified. For instance, if you’re skilled in photography and there’s a market for mobile photography tutorials, that’s your niche.</p>
+</li>
+</ul>
+<h2>Step 3: Use AI to Build the Product Quickly</h2>
+<p>AI is a game-changer for speeding up product development. Here’s how to use it:</p>
+<ul>
+<li><p><strong>Let AI Create a Framework</strong>: Define your target audience, the problem you’re solving, and ask AI to generate an outline. For example, if your product is about portrait photography, prompt AI: <em>&#34;Create a table of contents for a guide on how to take portraits, including composition choices and camera settings for different scenarios.&#34;</em> AI can generate this in seconds.</p>
+</li>
+<li><p><strong>Expand Sections with Your Input</strong>: Use AI to expand each section but add your unique insights. Include your personal mistakes, tested methods, and real data. This differentiates your product. For example, when expanding on &#34;portrait composition,&#34; add a mistake you made early on and how you overcame it.</p>
+</li>
+<li><p><strong>Format for Delivery</strong>: Turn the content into a deliverable format—PDF, Feishu document, or Notion page. Don’t obsess over perfection. A rough product that solves a problem is better than a perfect one that never launches.</p>
+</li>
+</ul>
+<h2>Step 4: Launch and Acquire Customers</h2>
+<p>Getting your product in front of people is crucial. You don’t need a huge audience to start:</p>
+<ul>
+<li><p><strong>List Your Product</strong>: Use platforms you’re familiar with—Douyin, Xiaohongshu, or even your social media. Write a simple description: what problem it solves, who it’s for, and a test price (e.g., $1.5 for a test version).</p>
+</li>
+<li><p><strong>Leverage Search-Oriented Content</strong>: Create content that answers questions people are already searching for. For example, if you sell a resume template for people with no internship experience, write an article titled <em>&#34;How to Write a Resume with No Internship Experience: 5 Tips&#34;</em> and link to your template. This content might not go viral, but it will consistently attract interested users.</p>
+</li>
+<li><p><strong>Embrace Iteration</strong>: Launch a rough version and gather feedback. Use this feedback to improve your product. This cycle of launch → feedback → adjust → relaunch is how you refine your system. A test version priced at $1.5 can sell dozens of copies and build a community of early users.</p>
+</li>
+</ul>
+<h2>Why Start Today?</h2>
+<p>A system built today has compound value. What you build now can be improved over time. A small version built in a day can be refined in months or years, growing in value. Unlike one-time projects, a system keeps working and evolving.</p>
+<h2>Actionable Steps for Today</h2>
+<ol>
+<li><p><strong>Find a Paid Need</strong>: Identify a problem people will pay to solve.</p>
+</li>
+<li><p><strong>Mine Your Experience</strong>: Extract your unique knowledge related to that need.</p>
+</li>
+<li><p><strong>Use AI for Delivery</strong>: Build a basic product with AI in a few hours.</p>
+</li>
+<li><p><strong>List on a Public Platform</strong>: Make your product available where your audience can find it.</p>
+</li>
+</ol>
+<p>Stop overthinking and start doing. By taking these steps, you’ll be ahead of most people who only plan and never act. Start today, and you’ll gain clarity and momentum as you go.</p>
+
+<p><strong>Related reading:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools for One-Person Overseas Business</a> &middot; <a href="/article/ai-workforce-virtual-employees">AI Workforce Virtual Employees</a> &middot; <a href="/article/etsy-seller-ai-product-descriptions">AI for Business Communication</a> &middot; <a href="/article/free-ai-knowledge-base-tool-tutorial">Free AI Knowledge Base Tool</a> &middot; <a href="/article/12-core-ai-concepts-guide">12 Core AI Concepts</a></p>
+
+<h2>常见问题</h2>
+<h3>Q: Do I need technical skills to build a money-making system with AI?</h3>
+<p>No. The approach described in this guide requires zero coding skills. AI tools like ChatGPT and Claude can help you create products, write descriptions, and format deliverables. You just need to identify a problem people will pay to solve and document your knowledge — AI handles the rest.</p>
+<h3>Q: How long does it really take to see results?</h3>
+<p>Many people see their first sale within days of launching. The key is to start with a rough but functional version at a test price (e.g., $1.5), gather feedback, and iterate. A system built today has compound value — what you refine over months or years keeps growing in value.</p>
+<h3>Q: What kind of products work best for this approach?</h3>
+<p>Digital information products work best — templates, checklists, guides, tutorials, and toolkits. Examples include a rental inspection checklist, a resume template for people with no internship experience, or a portrait photography guide. The common thread is that they solve a specific problem for a specific audience.</p>
+
+<div class="next-step">
+<p><strong>Next in this path:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business &#8594;</a></p>
+</div>`,
+  contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI应用场景 &middot; <strong>独立指南</strong></p>
+<p><strong>难度：</strong> 初级</p>
+</div>
+
+<p>在财富创造领域，有两条截然不同的路径：用时间换钱和建立一个能产生持续收入的系统。大多数人陷入了前者的困境——工作停止收入就停止。但现在是时候转向后者——用AI创建一个为你工作的系统，即使你在睡觉时也能运转。以下是一天内搭建你自己的赚钱系统的实用指南。</p>
+
+<h2>第一步：识别付费需求</h2>
+
+<p>在创建任何产品之前，你必须找到真正的需求。很多人因为创造了没人想要的产品而失败。为避免这种情况：</p>
+
+<ul>
+<li><strong>研究已经在卖什么</strong>：查看抖音、小红书或任何细分市场平台。搜索关键词如"模板"、"教程"、"指南"、"避坑清单"。注意像"怎么买？"这样的评论和有订单的产品。</li>
+<li><strong>关注小账户</strong>：不要只看大V。有几万粉丝但正在销售或提供付费内容的小账户是金矿。它们代表了真实、低门槛的需求。例如，一个小账户以1.5美元销售"30项租房检查清单"可以持续产生销售。</li>
+<li><strong>验证需求</strong>：确保有一群人正为一个问题挣扎并愿意付费解决。租房检查清单就是一个很好的例子——租客需要它，他们愿意付一小笔费用。</li>
+</ul>
+
+<h2>第二步：挖掘你的经验做产品</h2>
+
+<p>你的专业知识，无论看起来多么微不足道，对他人来说都是有价值的。以下是如何将其转化为产品：</p>
+
+<ul>
+<li><strong>反思你的优势</strong>：问问自己：别人向你请教过建议吗？你解决过哪些别人解决不了的问题？你出于兴趣深入研究过哪些话题？</li>
+<li><strong>将经验转化为捷径</strong>：视频编辑、软件使用、文案写作或PPT制作等技能对你来说可能很普通，但对初学者来说很有价值。你的经验是他们的成功捷径。</li>
+<li><strong>记录你的过程</strong>：花一个小时写下你的知识。可以在纸上或用工具写。写作能理清你的思路，把模糊的经验变成清晰的方法论。</li>
+<li><strong>找到重叠点</strong>：将你记录的经验与之前确定的市场需求匹配。例如，如果你擅长摄影，而市场上对手机摄影教程有需求，那就是你的利基。</li>
+</ul>
+
+<h2>第三步：用AI快速构建产品</h2>
+
+<p>AI是加速产品开发的游戏规则改变者。以下是如何使用它：</p>
+
+<ul>
+<li><strong>让AI创建框架</strong>：定义你的目标受众、要解决的问题，让AI生成大纲。例如，如果你的产品是关于人像摄影的，给AI提示：<em>"创建一个人像摄影指南的目录，包括不同场景的构图选择和相机设置。"</em> AI可以在几秒钟内生成。</li>
+<li><strong>用你的输入扩展章节</strong>：用AI扩展每个部分，但添加你的独特见解。包括你个人的错误、经过测试的方法和真实数据。这能让你的产品与众不同。例如，扩展"人像构图"时，添加你早期犯的一个错误以及你是如何克服的。</li>
+<li><strong>格式化交付</strong>：将内容转化为可交付的格式——PDF、飞书文档或Notion页面。不要追求完美。一个解决问题的粗糙产品比一个永远不发布的完美产品要好。</li>
+</ul>
+
+<h2>第四步：发布并获取客户</h2>
+
+<p>让你的产品出现在人们面前至关重要。你不需要大量受众就能开始：</p>
+
+<ul>
+<li><strong>列出你的产品</strong>：使用你熟悉的平台——抖音、小红书，甚至你的社交媒体。写一个简单的描述：解决什么问题、适合谁、测试价格（如测试版1.5美元）。</li>
+<li><strong>利用搜索导向的内容</strong>：创建回答人们正在搜索的问题的内容。例如，如果你销售一份针对无实习经验人群的简历模板，写一篇题为<em>"如何在没有实习经验的情况下写简历：5个技巧"</em>的文章并链接到你的模板。这种内容可能不会病毒式传播，但它会持续吸引感兴趣的用户。</li>
+<li><strong>拥抱迭代</strong>：发布粗糙版本并收集反馈。用反馈改进产品。这种发布→反馈→调整→重新发布的循环是你优化系统的方式。定价1.5美元的测试版可以卖出几十份并建立一个早期用户社区。</li>
+</ul>
+
+<h2>为什么今天就开始？</h2>
+
+<p>今天搭建的系统具有复利价值。你现在构建的东西可以随着时间的推移不断改进。一天搭建的小版本可以在几个月或几年内不断完善，价值不断增长。与一次性项目不同，系统会持续工作和进化。</p>
+
+<h2>今天的可执行步骤</h2>
+
+<ol>
+<li><strong>找到付费需求</strong>：识别一个人们愿意付费解决问题。</li>
+<li><strong>挖掘你的经验</strong>：提取你与该需求相关的独特知识。</li>
+<li><strong>用AI交付</strong>：在几小时内用AI构建一个基础产品。</li>
+<li><strong>在公开平台发布</strong>：让你的产品在受众能找到的地方可用。</li>
+</ol>
+
+<p>停止过度思考，开始行动。通过采取这些步骤，你将领先于大多数只计划不行动的人。今天就开始，你将在过程中获得清晰度和动力。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：我需要技术技能才能用AI搭建赚钱系统吗？</h3>
+<p>不需要。本指南中描述的方法不需要任何编程技能。ChatGPT和Claude等AI工具可以帮助你创建产品、编写描述和格式化交付物。你只需要识别一个人们愿意付费解决的问题并记录你的知识——AI处理其余部分。</p>
+
+<h3>问：真正看到结果需要多长时间？</h3>
+<p>很多人在发布后几天内就看到了第一笔销售。关键在于从测试价格（如1.5美元）的粗糙但可用版本开始，收集反馈并迭代。今天搭建的系统具有复利价值——你花几个月或几年优化的东西价值会不断增长。</p>
+
+<h3>问：什么样的产品最适合这种方法？</h3>
+<p>数字信息产品效果最好——模板、清单、指南、教程和工具包。例如租房检查清单、针对无实习经验人群的简历模板或人像摄影指南。它们的共同点是解决特定受众的特定问题。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 &#8594;</a></p>
+</div>`,
+},
+
+"claude-code-6-hidden-powers": {
+  content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Comparisons &middot; <strong>Standalone Guide</strong></p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+</div>
+
+<p>If you’re only using Claude Code to write code line by line, you’re missing out on its full potential. This AI tool is more than a temporary coding assistant—it can be a long-term development partner, and the key lies in unlocking six hidden capabilities. Let’s dive into how to leverage these features to build a stable, efficient workflow for your overseas development projects.</p>
+<h2>1. Project Memory with /init: Let Claude Code Learn Your Project First</h2>
+<p>Stop repeating project details in every new session. The <code>/init</code> command lets Claude Code generate a <code>CLAUDE\\.md</code> file to document your project’s tech stack, directory structure, and coding style.</p>
+<h3>How to Use /init</h3>
+<pre><code class="language-bash"># Initiate project memory
+/init &quot;Build a multilingual e-commerce API with Node.js, Express, and MongoDB. Follow RESTful principles, use TypeScript, and include Swagger documentation.&quot;
+</code></pre>
+<p>After running this command, Claude Code will create a <code>CLAUDE\\.md</code> that outlines:</p>
+<ul>
+<li><p>Technical stack (Node.js, Express, MongoDB, TypeScript)</p>
+</li>
+<li><p>Project structure (routes, controllers, models, middleware)</p>
+</li>
+<li><p>Coding conventions (naming styles, error handling, documentation standards)</p>
+</li>
+</ul>
+<p>For overseas projects, this is crucial. For example, if you’re building a payment gateway for European markets, <code>/init</code> ensures Claude Code remembers compliance requirements like PSD2 from the start.</p>
+<h2>2. Plan Mode: Plan First, Code Later</h2>
+<p>New users often make the mistake of asking Claude Code to write code without a clear plan. Plan Mode fixes this by guiding the AI to analyze the project, break down tasks, and assess risks before writing any code.</p>
+<h3>Implement Plan Mode</h3>
+<pre><code class="language-bash"># Activate Plan Mode for a new feature
+/plan &quot;Add a VAT calculation module to the e-commerce API for EU countries.&quot;
+</code></pre>
+<p>Claude Code will then:</p>
+<ol>
+<li><p>Review the existing <code>CLAUDE\\.md</code> to understand the project context.</p>
+</li>
+<li><p>Break the task into steps: research EU VAT rates, create a calculation utility, integrate with product checkout, and add unit tests.</p>
+</li>
+<li><p>Identify risks, such as fluctuating VAT rates and cross-border compliance issues.</p>
+</li>
+</ol>
+<p>This structured approach ensures your overseas features (like regional tax calculations) are built correctly the first time.</p>
+<h2>3. /compact: Keep Long Conversations on Track</h2>
+<p>In long coding sessions, Claude Code can lose focus as context piles up. The <code>/compact</code> command trims unnecessary details while preserving key plans, interfaces, and pending tasks.</p>
+<h3>Use /compact in Action</h3>
+<pre><code class="language-bash"># Compress a lengthy conversation about a new checkout flow
+/compact &quot;Retain only the latest payment method integration plan and the pending Stripe API tests.&quot;
+</code></pre>
+<p>This command will:</p>
+<ul>
+<li><p>Summarize the conversation into a concise summary.</p>
+</li>
+<li><p>Highlight the next steps: implement Stripe’s EU payment methods and run integration tests.</p>
+</li>
+<li><p>Remove outdated ideas or resolved issues.</p>
+</li>
+</ul>
+<p>For global teams, this keeps everyone aligned, even when collaborating across time zones.</p>
+<h2>4. Custom Slash Commands: Automate Repetitive Tasks</h2>
+<p>If you find yourself typing the same prompts (like code reviews or commit summaries) repeatedly, Custom Slash Commands let you turn them into reusable shortcuts.</p>
+<h3>Create a Custom Command for Code Review</h3>
+<pre><code class="language-bash"># Define a custom command for EU compliance code review
+/custom-slash &quot;eu-compliance-review&quot; &quot;Review the provided code for GDPR and PSD2 compliance. Check for data encryption, user consent mechanisms, and payment security.&quot;
+</code></pre>
+<p>Now, instead of typing that long prompt, you can simply run:</p>
+<pre><code class="language-bash">/eu-compliance-review &quot;path/to/your/code/file.ts&quot;
+</code></pre>
+<p>This saves time and ensures consistency—critical when maintaining compliance across multiple overseas markets.</p>
+<h2>5. Subagents: Divide and Conquer Complex Projects</h2>
+<p>For large, international projects, a single AI session can’t handle everything. Subagents let you split tasks: a main session oversees the project, while subagents focus on specific areas like testing, debugging, or documentation.</p>
+<h3>Set Up Subagents for a Multilingual App</h3>
+<pre><code class="language-bash"># Create a subagent for Spanish localization
+/subagent &quot;spanish-localization&quot; &quot;Specialize in translating UI strings, validating regional slang, and ensuring cultural appropriateness for Spanish-speaking markets.&quot;
+
+# Create a subagent for security auditing
+/subagent &quot;eu-security-audit&quot; &quot;Focus on GDPR compliance, data protection, and secure authentication methods for EU users.&quot;
+</code></pre>
+<p>The main session coordinates these subagents, ensuring each aspect of your overseas project gets the specialized attention it needs.</p>
+<h2>6. Hooks: Ensure Quality and Compliance</h2>
+<p>Hooks act as automated quality inspectors, reminding Claude Code (and you) to check for issues like bugs, compliance, or incomplete tasks before finalizing work.</p>
+<h3>Add a Hook for EU Payment Compliance</h3>
+<pre><code class="language-bash"># Create a hook for payment method validation
+/hook &quot;payment-compliance-check&quot; &quot;Before finalizing any payment-related code, verify it meets PSD2 requirements: strong customer authentication, transaction logging, and data encryption.&quot;
+</code></pre>
+<p>When working on payment features, this hook will prompt Claude Code to self-audit, reducing the risk of non-compliance fines in European markets.</p>
+<h2>Why These Features Matter for Overseas Projects</h2>
+<ul>
+<li><p><strong>Efficiency</strong>: Cut down on repetitive explanations and tasks, even when working across time zones.</p>
+</li>
+<li><p><strong>Consistency</strong>: Ensure your code and processes meet regional standards (like GDPR in Europe or PIPL in China).</p>
+</li>
+<li><p><strong>Scalability</strong>: Manage complex, multiregional projects by dividing work among subagents.</p>
+</li>
+<li><p><strong>Quality</strong>: Use hooks to catch issues early, saving time and resources on fixes later.</p>
+</li>
+</ul>
+<p>By mastering these six hidden powers, you’ll transform Claude Code from a simple coding chatbot into a robust AI partner that can support your global development efforts. Start implementing these features today, and watch your overseas projects become more efficient, compliant, and successful.</p>
+
+<p><strong>Related reading:</strong> <a href="/article/claude-code-top-7-skills">Claude Code Top 7 Skills</a> &middot; <a href="/article/claude-code-install-setup">Claude Code Installation</a> &middot; <a href="/article/claude-code-mcp-configuration">Claude Code MCP Configuration</a> &middot; <a href="/article/claude-code-in-action">Claude Code in Action</a> &middot; <a href="/article/claude-code-advanced">Advanced Claude Code</a> &middot; <a href="/article/claude-code-overseas-business-guide">Claude Code Overseas Guide</a></p>
+
+<h2>常见问题</h2>
+<h3>Q: Do I need to pay for Claude Code to use these features?</h3>
+<p>Yes, Claude Code requires an Anthropic API Key which is a paid service. However, features like /init, /compact, and custom slash commands help you save tokens by reducing redundant context, making your paid usage more efficient in the long run.</p>
+<h3>Q: Can I use subagents with any Claude Code subscription?</h3>
+<p>Subagents are available within Claude Code's standard functionality. They allow you to split complex, international projects into specialized tasks — for example, one subagent for Spanish localization and another for EU security auditing. The main session coordinates them all.</p>
+<h3>Q: What are hooks and how do they ensure code quality?</h3>
+<p>Hooks act as automated quality inspectors. You define conditions like "before finalizing payment code, verify PSD2 compliance" and Claude Code will self-audit against those rules before completing work. This is particularly valuable for overseas projects that must meet regional compliance standards like GDPR or PSD2.</p>
+
+<div class="next-step">
+<p><strong>Next in this path:</strong> <a href="/article/claude-code-top-7-skills">Claude Code's Top 7 Skills: A Complete Guide to the Most Powerful Extensions &#8594;</a></p>
+</div>`,
+  contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI教程 &middot; <strong>独立指南</strong></p>
+<p><strong>难度：</strong> 中级</p>
+</div>
+
+<p>如果你只用Claude Code逐行写代码，那你还没有发挥它的全部潜力。这个AI工具不仅仅是一个临时编码助手——它可以成为一个长期的开发伙伴，关键在于解锁六个隐藏能力。让我们深入了解如何利用这些功能为你的海外开发项目建立一个稳定高效的工作流。</p>
+
+<h2>1. 用/init建立项目记忆：让Claude Code先了解你的项目</h2>
+
+<p>别再在每个新会话中重复项目细节了。<code>/init</code>命令让Claude Code生成一个<code>CLAUDE.md</code>文件来记录项目的技术栈、目录结构和编码风格。</p>
+
+<h3>如何使用/init</h3>
+
+<pre><code class="language-bash"># 初始化项目记忆
+/init "Build a multilingual e-commerce API with Node.js, Express, and MongoDB. Follow RESTful principles, use TypeScript, and include Swagger documentation."</code></pre>
+
+<p>运行此命令后，Claude Code会创建一个<code>CLAUDE.md</code>，其中包含：</p>
+
+<ul>
+<li>技术栈（Node.js、Express、MongoDB、TypeScript）</li>
+<li>项目结构（路由、控制器、模型、中间件）</li>
+<li>编码约定（命名风格、错误处理、文档标准）</li>
+</ul>
+
+<p>对于海外项目，这一点至关重要。例如，如果你正在为欧洲市场构建支付网关，<code>/init</code>确保Claude Code从一开始就记住PSD2等合规要求。</p>
+
+<h2>2. Plan Mode：先计划，后编码</h2>
+
+<p>新手经常犯的错误是在没有明确计划的情况下让Claude Code写代码。Plan Mode通过引导AI在写代码之前分析项目、分解任务和评估风险来解决这个问题。</p>
+
+<h3>实施Plan Mode</h3>
+
+<pre><code class="language-bash"># 为新功能激活Plan Mode
+/plan "Add a VAT calculation module to the e-commerce API for EU countries."</code></pre>
+
+<p>Claude Code随后会：</p>
+
+<ol>
+<li>审查现有的<code>CLAUDE.md</code>以了解项目上下文。</li>
+<li>将任务分解为步骤：研究欧盟VAT税率、创建计算工具、与产品结账集成、添加单元测试。</li>
+<li>识别风险，如VAT税率波动和跨境合规问题。</li>
+</ol>
+
+<p>这种结构化方法确保你的海外功能（如区域税率计算）第一次就能正确构建。</p>
+
+<h2>3. /compact：保持长会话不偏离轨道</h2>
+
+<p>在长时间编码会话中，随着上下文堆积，Claude Code可能会失去焦点。<code>/compact</code>命令在保留关键计划、接口和待办任务的同时，修剪不必要的细节。</p>
+
+<h3>在行动中使用/compact</h3>
+
+<pre><code class="language-bash"># 压缩关于新结账流程的冗长对话
+/compact "Retain only the latest payment method integration plan and the pending Stripe API tests."</code></pre>
+
+<p>此命令会：</p>
+
+<ul>
+<li>将对话总结为简洁摘要。</li>
+<li>突出下一步：实施Stripe的欧盟支付方式并运行集成测试。</li>
+<li>移除过时的想法或已解决的问题。</li>
+</ul>
+
+<p>对于全球团队，即使跨时区协作，这也能让所有人保持同步。</p>
+
+<h2>4. 自定义Slash命令：自动化重复任务</h2>
+
+<p>如果你发现自己反复输入相同的提示（如代码审查或提交摘要），自定义Slash命令让你将它们变成可复用的快捷方式。</p>
+
+<h3>创建代码审查的自定义命令</h3>
+
+<pre><code class="language-bash"># 为欧盟合规代码审查定义自定义命令
+/custom-slash "eu-compliance-review" "Review the provided code for GDPR and PSD2 compliance. Check for data encryption, user consent mechanisms, and payment security."</code></pre>
+
+<p>现在，你只需运行：</p>
+
+<pre><code class="language-bash">/eu-compliance-review "path/to/your/code/file.ts"</code></pre>
+
+<p>这节省时间并确保一致性——在维护多个海外市场的合规性时至关重要。</p>
+
+<h2>5. 子代理：分而治之复杂项目</h2>
+
+<p>对于大型国际项目，单个AI会话无法处理所有事情。子代理让你拆分任务：主会话监督项目，子代理专注于特定领域如测试、调试或文档。</p>
+
+<h3>为多语言应用设置子代理</h3>
+
+<pre><code class="language-bash"># 为西班牙语本地化创建子代理
+/subagent "spanish-localization" "Specialize in translating UI strings, validating regional slang, and ensuring cultural appropriateness for Spanish-speaking markets."
+
+# 为安全审计创建子代理
+/subagent "eu-security-audit" "Focus on GDPR compliance, data protection, and secure authentication methods for EU users."</code></pre>
+
+<p>主会话协调这些子代理，确保你海外项目的每个方面都得到所需的专业关注。</p>
+
+<h2>6. 钩子：确保质量和合规</h2>
+
+<p>钩子作为自动化质量检查员，在最终确定工作之前提醒Claude Code和你要检查bug、合规性或未完成任务等问题。</p>
+
+<h3>添加欧盟支付合规钩子</h3>
+
+<pre><code class="language-bash"># 创建支付方法验证钩子
+/hook "payment-compliance-check" "Before finalizing any payment-related code, verify it meets PSD2 requirements: strong customer authentication, transaction logging, and data encryption."</code></pre>
+
+<p>在处理支付功能时，此钩子会提示Claude Code自我审计，降低在欧洲市场被罚款的风险。</p>
+
+<h2>为什么这些功能对海外项目重要</h2>
+
+<ul>
+<li><strong>效率</strong>：减少重复解释和任务，即使在跨时区工作时也是如此。</li>
+<li><strong>一致性</strong>：确保你的代码和流程符合区域标准（如欧洲的GDPR或中国的PIPL）。</li>
+<li><strong>可扩展性</strong>：通过在子代理之间分工来管理复杂的多区域项目。</li>
+<li><strong>质量</strong>：使用钩子及早发现问题，节省后续修复的时间和资源。</li>
+</ul>
+
+<p>通过掌握这六个隐藏能力，你将把Claude Code从一个简单的编码聊天机器人转变为能够支持你全球开发努力的强大AI伙伴。今天就开始实施这些功能，让你的海外项目变得更加高效、合规和成功。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：我需要为Claude Code付费才能使用这些功能吗？</h3>
+<p>是的，Claude Code需要付费的Anthropic API Key。但/init、/compact和自定义Slash命令等功能通过减少冗余上下文帮你节省Token，长期来看让你的付费使用更高效。</p>
+
+<h3>问：我可以用任何Claude Code订阅使用子代理吗？</h3>
+<p>子代理是Claude Code标准功能的一部分。它们允许你将复杂的国际项目拆分为专门的任务——例如，一个子代理负责西班牙语本地化，另一个负责欧盟安全审计。主会话协调所有子代理。</p>
+
+<h3>问：什么是钩子，它们如何确保代码质量？</h3>
+<p>钩子作为自动化质量检查员。你定义条件如"在最终确定支付代码之前，验证PSD2合规性"，Claude Code会在完成工作前根据这些规则自我审计。这对于必须满足GDPR或PSD2等区域合规标准的海外项目特别有价值。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-top-7-skills">Claude Code 七大技能：最强扩展完整指南 &#8594;</a></p>
+</div>`,
+},
+
+"karpathy-ai-training-scale-method": {
+  content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Comparisons &middot; <strong>Standalone Guide</strong></p>
+<p><strong>Difficulty:</strong> Intermediate</p>
+</div>
+
+<p>Andrej Karpathy, a leading figure in AI, dropped a game-changing method on Twitter last month that’s revolutionizing how developers approach small-scale AI training. Instead of relying on massive datasets (which are costly and hard to source for overseas niches), his technique delivers high-performance models using just 1,600 curated samples. This guide breaks down the method’s core logic, step-by-step implementation, and practical applications for global use cases like multilingual content creation, regionalized product recommendations, and cross-border user behavior analysis.</p>
+<h2>Core Insight: Quality Over Quantity in Training Data</h2>
+<p>Karpathy’s breakthrough hinges on <strong>dataset curation</strong>, not volume. Most developers waste resources on generic, low-quality datasets—his method proves that 1,600 <em>highly relevant, error-free samples</em> outperform 100k random data points. For overseas projects, this is a game-changer: niche regional data (e.g., Southeast Asian e-commerce reviews, European compliance documents) is often scarce, making small-scale training the only feasible option.</p>
+<p>Key principles for curation:</p>
+<ul>
+<li><p><strong>Target Regional Relevance</strong>: For a Spanish-language customer support model, use only reviews from Latin American users (avoid generic Spanish data).</p>
+</li>
+<li><p><strong>Eliminate Noise</strong>: Remove duplicates, nonsensical text, and samples that don’t align with your task (e.g., exclude product questions if training a refund-request classifier).</p>
+</li>
+<li><p><strong>Balance Diversity</strong>: Ensure samples cover all edge cases (e.g., different accents, regional slang, legal compliance scenarios).</p>
+</li>
+</ul>
+<h2>Step 1: Build Your 1.6K Curated Dataset</h2>
+<h3>1.1 Source Niche Data for Overseas Use Cases</h3>
+<p>Use these tools to collect region-specific data without scraping (avoid legal risks):</p>
+<pre><code class="language-bash"># Install data collection toolkit (ethical, API-driven)
+pip install scrapy requests pandas --upgrade
+
+# Example: Fetch English reviews from UK e-commerce sites (via public APIs)
+python -c &quot;
+import requests
+import pandas as pd
+
+api_key = 'YOUR_API_KEY'  # Get from e-commerce API providers like RapidAPI
+url = 'https://uk-ecommerce-reviews.p.rapidapi.com/reviews'
+headers = {'X-RapidAPI-Key': api_key, 'X-RapidAPI-Host': 'uk-ecommerce-reviews.p.rapidapi.com'}
+params = {'category': 'electronics', 'limit': 2000}  # Overfetch to curate
+
+response = requests.get(url, headers=headers, params=params)
+data = response.json()
+df = pd.DataFrame(data['reviews'])
+df.to_csv('uk_electronics_reviews_raw.csv', index=False)
+print('Raw data saved: 2000 samples')
+&quot;
+</code></pre>
+<h3>1.2 Curate to 1.6K High-Quality Samples</h3>
+<p>Use Karpathy’s recommended filtering workflow to trim the dataset:</p>
+<pre><code class="language-python">import pandas as pd
+import re
+
+# Load raw data
+df = pd.read_csv('uk_electronics_reviews_raw.csv')
+
+# Step 1: Remove duplicates and empty entries
+df = df.drop_duplicates(subset=['review_text']).dropna(subset=['review_text'])
+
+# Step 2: Filter for length (10-500 characters, avoid too short/long)
+df = df[df['review_text'].str.len().between(10, 500)]
+
+# Step 3: Remove irrelevant content (e.g., non-English, spam)
+df = df[df['review_text'].apply(lambda x: bool(re.match(r'^[A-Za-z0-9\\s.,!?\\'-]+$', x)))]
+
+# Step 4: Trim to exactly 1600 samples (randomize to maintain diversity)
+curated_df = df.sample(n=1600, random_state=42)
+
+# Save curated dataset
+curated_df.to_csv('curated_1600_reviews.csv', index=False)
+print(f&quot;Curated dataset saved: {len(curated_df)} samples&quot;)
+</code></pre>
+<h2>Step 2: Train a Custom Model with Karpathy’s Minimalist Pipeline</h2>
+<p>Karpathy’s method uses a lightweight training stack that avoids overengineering. We’ll use <code>transformers</code> and <code>torch</code> for compatibility with global cloud servers (AWS, GCP, AliCloud).</p>
+<h3>2.1 Set Up the Training Environment</h3>
+<pre><code class="language-bash"># Create a virtual environment (avoid dependency conflicts)
+python -m venv karpathy-ai &amp;&amp; source karpathy-ai/bin/activate  # Linux/macOS
+# karpathy-ai\\Scripts\\activate  # Windows
+
+# Install core dependencies
+pip install torch transformers datasets scikit-learn --upgrade
+</code></pre>
+<h3>2.2 Training Script (Optimized for 1.6K Samples)</h3>
+<p>This script trains a sentiment analysis model for UK e-commerce reviews—adaptable to other tasks (translation, classification, summarization) by changing the <code>task</code> parameter.</p>
+<pre><code class="language-python">import torch
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, Trainer, TrainingArguments
+from datasets import Dataset
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+# Load curated dataset
+df = pd.read_csv('curated_1600_reviews.csv')
+# Assume dataset has 'review_text' (input) and 'sentiment' (label: 0=negative, 1=positive)
+
+# Split into train/val (80/20 split for small data)
+train_df, val_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# Convert to Hugging Face Dataset format
+train_dataset = Dataset.from_pandas(train_df)
+val_dataset = Dataset.from_pandas(val_df)
+
+# Load base model (small, fast, and cost-effective for overseas deployment)
+model_name = &quot;distilbert-base-uncased&quot;  # 40% smaller than BERT, 97% performance
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+
+# Tokenize function
+def tokenize_function(examples):
+    return tokenizer(examples['review_text'], padding='max_length', truncation=True, max_length=128)
+
+# Apply tokenization
+tokenized_train = train_dataset.map(tokenize_function, batched=True)
+tokenized_val = val_dataset.map(tokenize_function, batched=True)
+
+# Training arguments (Karpathy’s optimized settings)
+training_args = TrainingArguments(
+    output_dir=&quot;./karpathy-ai-model&quot;,
+    learning_rate=2e-5,  # Lower LR for small data to avoid overfitting
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=16,
+    num_train_epochs=5,  # More epochs for small data (no overfitting with curation)
+    weight_decay=0.01,
+    evaluation_strategy=&quot;epoch&quot;,
+    save_strategy=&quot;epoch&quot;,
+    load_best_model_at_end=True,
+    fp16=torch.cuda.is_available(),  # Speed up training on GPU (common in cloud servers)
+)
+
+# Train the model
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_train,
+    eval_dataset=tokenized_val,
+)
+
+trainer.train()
+
+# Save model for overseas deployment
+model.save_pretrained(&quot;./uk-sentiment-model&quot;)
+tokenizer.save_pretrained(&quot;./uk-sentiment-model&quot;)
+print(&quot;Model trained and saved successfully!&quot;)
+</code></pre>
+<h2>Step 3: Deploy for Overseas Use Cases</h2>
+<h3>3.1 Test the Model with Regional Data</h3>
+<pre><code class="language-python">from transformers import pipeline
+
+# Load trained model
+classifier = pipeline(&quot;sentiment-analysis&quot;, model=&quot;./uk-sentiment-model&quot;, tokenizer=&quot;./uk-sentiment-model&quot;)
+
+# Test with UK-specific review (includes regional slang)
+test_review = &quot;Brilliant bit of kit—works a treat with me Brexit-era gadgets, no faff at all!&quot;
+result = classifier(test_review)
+print(f&quot;Review: {test_review}&quot;)
+print(f&quot;Sentiment: {result[0]['label']}, Score: {result[0]['score']:.4f}&quot;)
+# Output: Sentiment: POSITIVE, Score: 0.9987 (high accuracy for regional content)
+</code></pre>
+<h3>3.2 Deploy to a Global API (for Cross-Border Teams)</h3>
+<p>Use <code>FastAPI</code> to create a lightweight API accessible from anywhere:</p>
+<pre><code class="language-bash">pip install fastapi uvicorn
+</code></pre>
+<pre><code class="language-python"># api.py
+from fastapi import FastAPI
+from transformers import pipeline
+
+app = FastAPI(title=&quot;UK E-Commerce Sentiment API&quot;)
+classifier = pipeline(&quot;sentiment-analysis&quot;, model=&quot;./uk-sentiment-model&quot;, tokenizer=&quot;./uk-sentiment-model&quot;)
+
+@app.post(&quot;/analyze-sentiment&quot;)
+async def analyze_sentiment(review_text: str):
+    result = classifier(review_text)[0]
+    return {
+        &quot;review&quot;: review_text,
+        &quot;sentiment&quot;: result[&quot;label&quot;],
+        &quot;confidence&quot;: round(result[&quot;score&quot;], 4)
+    }
+
+# Run API (accessible on cloud servers with public IP)
+# uvicorn api:app --host 0.0.0.0 --port 8000
+</code></pre>
+<p>Run the API and test it globally via curl:</p>
+<pre><code class="language-bash">curl -X POST &quot;http://YOUR_CLOUD_SERVER_IP:8000/analyze-sentiment&quot; -H &quot;Content-Type: application/json&quot; -d '{&quot;review_text&quot;: &quot;Absolute shambles—stopped working after 2 days, won’t recommend to me mates!&quot;}'
+</code></pre>
+<h2>Why This Works for Overseas Projects</h2>
+<ul>
+<li><p><strong>Cost Efficiency</strong>: No need to pay for large global datasets (which often include irrelevant regional data).</p>
+</li>
+<li><p><strong>Speed</strong>: Training takes &lt;1 hour on a basic GPU (ideal for startups with limited cloud budgets).</p>
+</li>
+<li><p><strong>Accuracy</strong>: Curated regional data ensures the model performs well for target markets (e.g., UK vs. US English, Spanish vs. Portuguese).</p>
+</li>
+<li><p><strong>Flexibility</strong>: Adapt the pipeline to any task—multilingual translation, regional compliance checks, or localized product descriptions.</p>
+</li>
+</ul>
+<h2>Final Tips from Karpathy</h2>
+<ol>
+<li><p><strong>Iterate on Curation</strong>: If the model underperforms, replace 20% of samples with edge cases (e.g., mixed-language reviews, sarcasm).</p>
+</li>
+<li><p><strong>Use Small Base Models</strong>: DistilBERT, TinyBERT, or MobileBERT are faster to deploy and cheaper to run on global edge servers.</p>
+</li>
+<li><p><strong>Leverage Public Regional Data</strong>: Governments, universities, and platforms like Kaggle offer free niche datasets (e.g., EU GDPR documents, Southeast Asian social media posts).</p>
+</li>
+</ol>
+<p>By following Karpathy’s method, you can build custom AI models tailored to your overseas markets without breaking the bank—all with just 1,600 high-quality samples. Whether you’re optimizing customer support, analyzing regional trends, or creating localized content, this approach delivers results that scale globally.</p>
+
+<p><strong>Related reading:</strong> <a href="/article/12-core-ai-concepts-guide">12 Core AI Concepts</a> &middot; <a href="/article/beyond-llms-ai-fundamentals">AI Fundamentals</a> &middot; <a href="/article/open-source-ai-models-run-on-laptop">Open Source AI Models</a> &middot; <a href="/article/llm-service-packages-review-2026">LLM Service Packages Review</a> &middot; <a href="/article/agent-skill-harness-explained">Agent, Skill and Harness</a></p>
+
+<h2>常见问题</h2>
+<h3>Q: Can I use this method for non-English languages?</h3>
+<p>Yes, absolutely. Karpathy's method is language-agnostic. For overseas projects, you can curate 1,600 samples in any language — Spanish, Portuguese, Chinese, or mixed-language datasets. The key is ensuring regional relevance (e.g., Latin American Spanish vs European Spanish) and eliminating noise specific to your target language.</p>
+<h3>Q: What base model should I use for cost-effective deployment?</h3>
+<p>Karpathy recommends small base models like DistilBERT, TinyBERT, or MobileBERT. DistilBERT, for example, is 40% smaller than BERT while maintaining 97% of its performance. These models are faster to deploy, cheaper to run on global edge servers, and perfectly adequate for niche overseas tasks with 1,600 curated samples.</p>
+<h3>Q: How do I handle edge cases with only 1,600 samples?</h3>
+<p>The key is iterative curation. If the model underperforms on specific cases, replace 20% of your samples with those edge cases — mixed-language reviews, sarcasm, regional slang, etc. The small dataset size actually makes this iteration fast and inexpensive, letting you refine the model for your specific overseas market with minimal cost.</p>
+
+<div class="next-step">
+<p><strong>Next in this path:</strong> <a href="/article/12-core-ai-concepts-guide">Master 12 Core Concepts of AI Large Models in One Guide &#8594;</a></p>
+</div>`,
+  contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 &middot; <strong>独立指南</strong></p>
+<p><strong>难度：</strong> 中级</p>
+</div>
+
+<p>AI领域的重要人物Andrej Karpathy上个月在Twitter上发布了一个改变游戏规则的方法，正在彻底改变开发者处理小规模AI训练的方式。不同于依赖大规模数据集（对于海外细分市场来说既昂贵又难以获取），他的技术仅用1600个精心挑选的样本就能交付高性能模型。本指南将解析该方法的核心逻辑、逐步实现以及在全球用例中的实际应用，如多语言内容创建、区域化产品推荐和跨境用户行为分析。</p>
+
+<h2>核心洞察：训练数据质量重于数量</h2>
+
+<p>Karpathy的突破核心在于<strong>数据集筛选</strong>，而非数据量。大多数开发者在通用、低质量的数据集上浪费资源——他的方法证明1600个<em>高度相关、无错误的样本</em>胜过10万个随机数据点。对于海外项目，这是一个游戏规则改变者：细分的区域性数据（如东南亚电商评论、欧洲合规文档）通常稀缺，使得小规模训练成为唯一可行选择。</p>
+
+<p>筛选的关键原则：</p>
+
+<ul>
+<li><strong>针对区域相关性</strong>：对于西班牙语客服模型，只使用来自拉丁美洲用户的评论（避免通用西班牙语数据）。</li>
+<li><strong>消除噪音</strong>：移除重复数据、无意义文本以及与任务不匹配的样本（如训练退款请求分类器时排除产品问题）。</li>
+<li><strong>平衡多样性</strong>：确保样本覆盖所有边缘情况（如不同口音、区域俚语、法律合规场景）。</li>
+</ul>
+
+<h2>第一步：构建你的1600个精选数据集</h2>
+
+<h3>1.1 为海外用例获取细分数据</h3>
+
+<p>使用这些工具收集特定区域的数据，无需爬取（避免法律风险）：</p>
+
+<pre><code class="language-bash"># 安装数据收集工具包（基于API，合法合规）
+pip install scrapy requests pandas --upgrade
+
+# 示例：从英国电商网站获取英文评论（通过公开API）
+python -c "
+import requests
+import pandas as pd
+
+api_key = 'YOUR_API_KEY'  # 从RapidAPI等电商API提供商获取
+url = 'https://uk-ecommerce-reviews.p.rapidapi.com/reviews'
+headers = {'X-RapidAPI-Key': api_key, 'X-RapidAPI-Host': 'uk-ecommerce-reviews.p.rapidapi.com'}
+params = {'category': 'electronics', 'limit': 2000}  # 多获取以筛选
+
+response = requests.get(url, headers=headers, params=params)
+data = response.json()
+df = pd.DataFrame(data['reviews'])
+df.to_csv('uk_electronics_reviews_raw.csv', index=False)
+print('Raw data saved: 2000 samples')
+"</code></pre>
+
+<h3>1.2 筛选至1600个高质量样本</h3>
+
+<p>使用Karpathy推荐的过滤工作流来缩小数据集：</p>
+
+<pre><code class="language-python">import pandas as pd
+import re
+
+# 加载原始数据
+df = pd.read_csv('uk_electronics_reviews_raw.csv')
+
+# 第一步：删除重复和空条目
+df = df.drop_duplicates(subset=['review_text']).dropna(subset=['review_text'])
+
+# 第二步：按长度过滤（10-500字符，避免太短/太长）
+df = df[df['review_text'].str.len().between(10, 500)]
+
+# 第三步：移除无关内容（如非英文、垃圾信息）
+df = df[df['review_text'].apply(lambda x: bool(re.match(r'^[A-Za-z0-9\\s.,!?\\'-]+$', x)))]
+
+# 第四步：精确裁剪到1600个样本（随机打乱以保持多样性）
+curated_df = df.sample(n=1600, random_state=42)
+
+# 保存筛选后的数据集
+curated_df.to_csv('curated_1600_reviews.csv', index=False)
+print(f"筛选后的数据集已保存: {len(curated_df)} 个样本")</code></pre>
+
+<h2>第二步：用Karpathy的极简管道训练自定义模型</h2>
+
+<p>Karpathy的方法使用轻量级训练栈，避免过度工程化。我们将使用<code>transformers</code>和<code>torch</code>以兼容全球云服务器（AWS、GCP、阿里云）。</p>
+
+<h3>2.1 设置训练环境</h3>
+
+<pre><code class="language-bash"># 创建虚拟环境（避免依赖冲突）
+python -m venv karpathy-ai && source karpathy-ai/bin/activate  # Linux/macOS
+# karpathy-ai\\Scripts\\activate  # Windows
+
+# 安装核心依赖
+pip install torch transformers datasets scikit-learn --upgrade</code></pre>
+
+<h3>2.2 训练脚本（针对1600个样本优化）</h3>
+
+<p>该脚本训练一个面向英国电商评论的情感分析模型——通过更改<code>task</code>参数可适应其他任务（翻译、分类、摘要）。</p>
+
+<pre><code class="language-python">import torch
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, Trainer, TrainingArguments
+from datasets import Dataset
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+# 加载筛选后的数据集
+df = pd.read_csv('curated_1600_reviews.csv')
+# 假设数据集有'review_text'（输入）和'sentiment'（标签：0=负面，1=正面）
+
+# 分割训练/验证（小数据用80/20分割）
+train_df, val_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# 转换为Hugging Face Dataset格式
+train_dataset = Dataset.from_pandas(train_df)
+val_dataset = Dataset.from_pandas(val_df)
+
+# 加载基础模型（小型、快速、适合海外部署）
+model_name = "distilbert-base-uncased"  # 比BERT小40%，保持97%性能
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+
+# Token化函数
+def tokenize_function(examples):
+    return tokenizer(examples['review_text'], padding='max_length', truncation=True, max_length=128)
+
+# 应用Token化
+tokenized_train = train_dataset.map(tokenize_function, batched=True)
+tokenized_val = val_dataset.map(tokenize_function, batched=True)
+
+# 训练参数（Karpathy的优化设置）
+training_args = TrainingArguments(
+    output_dir="./karpathy-ai-model",
+    learning_rate=2e-5,  # 小数据用低学习率避免过拟合
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=16,
+    num_train_epochs=5,  # 小数据更多轮次（筛选后不会过拟合）
+    weight_decay=0.01,
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
+    load_best_model_at_end=True,
+    fp16=torch.cuda.is_available(),  # GPU加速训练（云服务器常见）
+)
+
+# 训练模型
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_train,
+    eval_dataset=tokenized_val,
+)
+
+trainer.train()
+
+# 保存模型供海外部署
+model.save_pretrained("./uk-sentiment-model")
+tokenizer.save_pretrained("./uk-sentiment-model")
+print("模型训练并保存成功！")</code></pre>
+
+<h2>第三步：为海外用例部署</h2>
+
+<h3>3.1 用区域性数据测试模型</h3>
+
+<pre><code class="language-python">from transformers import pipeline
+
+# 加载训练后的模型
+classifier = pipeline("sentiment-analysis", model="./uk-sentiment-model", tokenizer="./uk-sentiment-model")
+
+# 用英国特有的评论测试（包含区域俚语）
+test_review = "Brilliant bit of kit—works a treat with me Brexit-era gadgets, no faff at all!"
+result = classifier(test_review)
+print(f"评论: {test_review}")
+print(f"情感: {result[0]['label']}, 置信度: {result[0]['score']:.4f}")
+# 输出: Sentiment: POSITIVE, Score: 0.9987（对区域内容高准确度）</code></pre>
+
+<h3>3.2 部署到全球API（面向跨境团队）</h3>
+
+<p>使用<code>FastAPI</code>创建一个可从任何地方访问的轻量级API：</p>
+
+<pre><code class="language-bash">pip install fastapi uvicorn</code></pre>
+
+<pre><code class="language-python"># api.py
+from fastapi import FastAPI
+from transformers import pipeline
+
+app = FastAPI(title="UK E-Commerce Sentiment API")
+classifier = pipeline("sentiment-analysis", model="./uk-sentiment-model", tokenizer="./uk-sentiment-model")
+
+@app.post("/analyze-sentiment")
+async def analyze_sentiment(review_text: str):
+    result = classifier(review_text)[0]
+    return {
+        "review": review_text,
+        "sentiment": result["label"],
+        "confidence": round(result["score"], 4)
+    }
+
+# 运行API（可在带公网IP的云服务器上访问）
+# uvicorn api:app --host 0.0.0.0 --port 8000</code></pre>
+
+<p>运行API并通过curl全局测试：</p>
+
+<pre><code class="language-bash">curl -X POST "http://YOUR_CLOUD_SERVER_IP:8000/analyze-sentiment" -H "Content-Type: application/json" -d '{"review_text": "Absolute shambles—stopped working after 2 days, won\\'t recommend to me mates!"}'</code></pre>
+
+<h2>为什么这对海外项目有效</h2>
+
+<ul>
+<li><strong>成本效率</strong>：无需为大型全球数据集付费（它们通常包含不相关的区域数据）。</li>
+<li><strong>速度</strong>：在基础GPU上训练不到1小时（适合云预算有限的初创公司）。</li>
+<li><strong>准确性</strong>：筛选后的区域数据确保模型对目标市场表现良好（如英国vs美国英语、西班牙语vs葡萄牙语）。</li>
+<li><strong>灵活性</strong>：将管道适配到任何任务——多语言翻译、区域合规检查或本地化产品描述。</li>
+</ul>
+
+<h2>Karpathy的最终建议</h2>
+
+<ol>
+<li><strong>迭代筛选</strong>：如果模型表现不佳，用边缘情况替换20%的样本（如混合语言评论、讽刺内容）。</li>
+<li><strong>使用小型基础模型</strong>：DistilBERT、TinyBERT或MobileBERT部署更快，在全球边缘服务器上运行更便宜。</li>
+<li><strong>利用公开的区域数据</strong>：政府、大学和Kaggle等平台提供免费的细分数据集（如欧盟GDPR文档、东南亚社交媒体帖子）。</li>
+</ol>
+
+<p>通过遵循Karpathy的方法，你可以构建针对海外市场量身定制的自定义AI模型，且无需花费太多——全部仅需1600个高质量样本。无论你是在优化客户支持、分析区域性趋势还是创建本地化内容，这种方法都能产生全球可扩展的结果。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：这个方法可以用于非英语语言吗？</h3>
+<p>完全可以。Karpathy的方法与语言无关。对于海外项目，你可以用任何语言筛选1600个样本——西班牙语、葡萄牙语、中文或混合语言数据集。关键是确保区域相关性（如拉丁美洲西班牙语vs欧洲西班牙语）并消除目标语言的特定噪音。</p>
+
+<h3>问：对于成本效益高的部署，应该使用什么基础模型？</h3>
+<p>Karpathy推荐小型基础模型如DistilBERT、TinyBERT或MobileBERT。例如，DistilBERT比BERT小40%，同时保持97%的性能。这些模型部署更快，在全球边缘服务器上运行更便宜，对于有1600个精选样本的细分海外任务来说完全足够。</p>
+
+<h3>问：只有1600个样本如何处理边缘情况？</h3>
+<p>关键是迭代筛选。如果模型在特定情况下表现不佳，用这些边缘情况替换20%的样本——混合语言评论、讽刺内容、区域俚语等。小数据集规模反而使这种迭代快速且低成本，让你以最少的成本为特定海外市场优化模型。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/12-core-ai-concepts-guide">一篇文章掌握AI大模型12个核心概念 &#8594;</a></p>
+</div>`,
+},
 };

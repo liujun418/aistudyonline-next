@@ -1009,4 +1009,57 @@ export const articles: Article[] = [
 			toolsMentioned: ["chatgpt", "openclaw", "codex-agent"],
 			date: "2026-05-26",
 		},
+
+
+{
+    slug: "claude-code-vs-codex-automation",
+    title: "AI-Powered Computer Automation: Claude Code vs. Codex - Which Path to Choose for Practical Use?",
+    titleZh: "AI驱动电脑自动化：Claude Code vs Codex - 实际使用该选哪个？",
+    description: "Compare Claude Code and Codex head-to-head — their vision-based vs structured-data approaches, speed, cost, accuracy, and when to use each for AI computer automation.",
+    descriptionZh: "正面比较Claude Code和Codex——基于视觉 vs 基于结构化数据的技术路径、速度、成本、准确性，以及AI电脑自动化场景下的选择策略。",
+    category: "ai-comparisons",
+    tags: ["claude-code", "codex", "computer-use", "automation", "comparison"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "codex-agent"],
+    date: "2026-05-27",
+  },
+
+{
+    slug: "ai-money-making-system-one-day",
+    title: "Build Your Money-Making System in One Day: Stop Trading Time for Money Alone",
+    titleZh: "一天搭建你的赚钱系统：别再单独用时间换钱",
+    description: "A practical step-by-step guide to building an AI-powered money-making system in just one day — from identifying paid needs to launching your first product.",
+    descriptionZh: "一个实用的分步指南，教你一天内搭建AI驱动的赚钱系统——从识别付费需求到发布你的第一个产品。",
+    category: "ai-use-cases",
+    tags: ["money-making", "ai-business", "passive-income", "product-creation", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "chatgpt"],
+    date: "2026-05-27",
+  },
+
+{
+    slug: "claude-code-6-hidden-powers",
+    title: "Claude Code: 6 Hidden Powers to Transform It From Chatbot to Your AI Development Partner",
+    titleZh: "Claude Code：6个隐藏力量，将其从聊天机器人转变为你的AI开发伙伴",
+    description: "Discover 6 hidden features of Claude Code — /init, Plan Mode, /compact, custom slash commands, subagents, and hooks — that turn it into a long-term AI development partner for overseas projects.",
+    descriptionZh: "发现Claude Code的6个隐藏功能——/init、Plan Mode、/compact、自定义Slash命令、子代理和钩子——将其转变为海外项目的长期AI开发伙伴。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "hidden-powers", "init", "plan-mode", "hooks", "overseas"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-05-27",
+  },
+
+{
+    slug: "karpathy-ai-training-scale-method",
+    title: "Karpathy's Viral Twitter Method: Scale AI Training with 1.6K Samples for Overseas Projects",
+    titleZh: "Karpathy的病毒式Twitter方法：用1600个样本实现海外项目AI训练规模化",
+    description: "Andrej Karpathy's cost-efficient AI training method uses just 1,600 curated samples. Learn step-by-step implementation, from dataset curation to model deployment for overseas projects.",
+    descriptionZh: "Andrej Karpathy的高性价比AI训练方法仅需1600个精心挑选的样本。学习从数据集筛选到模型部署的分步实现，适用于海外项目。",
+    category: "ai-news",
+    tags: ["karpathy", "ai-training", "small-data", "fine-tuning", "overseas"],
+    difficulty: "intermediate",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-27",
+  },
 ];
