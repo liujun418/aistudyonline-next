@@ -1075,4 +1075,69 @@ export const articles: Article[] = [
     toolsMentioned: ["gemini"],
     date: "2026-05-27",
   },
+
+  // ====== Article: 6 AI Tools Dominating GitHub ======
+  {
+    slug: "6-ai-tools-dominating-github",
+    title: "6 AI Tools Dominating GitHub to Take Over Your Workflow",
+    titleZh: "统治GitHub的6大AI工具：接管你的工作流",
+    description:
+      "Six groundbreaking AI tools are dominating GitHub — Karpathy Skills, CodeGraph, Understand Anything, Presenton, NVIDIA LongLive, and Claude Plugins. Learn how to leverage them for overseas development projects.",
+    descriptionZh:
+      "六个开创性的AI工具正在GitHub上主导趋势——Karpathy Skills、CodeGraph、Understand Anything、Presenton、NVIDIA LongLive和Claude Plugins。了解如何将它们用于海外开发项目。",
+    category: "ai-tools",
+    tags: ["ai-tools", "github", "workflow-automation", "karpathy", "codegraph", "overseas-development"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "karpathy-skills", "codegraph", "presenton", "nvidia-longlive"],
+    date: "2026-05-28",
+  },
+
+  // ====== Article: AI-Powered Document Replication ======
+  {
+    slug: "ai-document-replication-one-click",
+    title: "AI-Powered Document Replication: One-Click Duplicate Any File for Overseas Use Cases",
+    titleZh: "AI文档复制：一键复制任何文件用于海外业务场景",
+    description:
+      "Replicate professional documents — contracts, marketing brochures, or industry reports — for overseas markets using AI. A step-by-step guide with Python code for structure parsing and style emulation.",
+    descriptionZh:
+      "使用AI为海外市场复制专业文档——合同、营销手册或行业报告。包含使用Python进行结构解析和风格模拟的分步指南。",
+    category: "ai-use-cases",
+    tags: ["document-replication", "document-automation", "overseas-business", "ai-tutorial", "content-creation"],
+    difficulty: "beginner",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-28",
+  },
+
+  // ====== Article: Mastering Hermes Agent ======
+  {
+    slug: "mastering-hermes-agent-7-levels",
+    title: "Mastering Hermes Agent: A Practical Guide to 7 Levels of Configuration for Powerful AI Automation",
+    titleZh: "掌握Hermes Agent：7级配置实现强大AI自动化的实用指南",
+    description:
+      "Transform Hermes Agent from a basic chatbot into a robust backend system. A practical guide covering 7 configuration levels — VPS deployment, Discord, Kanban, holographic memory, and MCP server.",
+    descriptionZh:
+      "将Hermes Agent从基本聊天机器人转变为强大的后端系统。涵盖7级配置的实用指南——VPS部署、Discord、看板、全息记忆和MCP服务器。",
+    category: "ai-tutorials",
+    tags: ["hermes-agent", "ai-agent", "automation", "vps", "discord", "mcp", "ai-tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: ["hermes-agent", "openrouter"],
+    date: "2026-05-28",
+  },
+
+  // ====== Article: Vibe-Trading HKU Financial Agent ======
+  {
+    slug: "vibe-trading-hku-financial-agent",
+    title: "Vibe-Trading: A Deep Dive into HKU's Open-Source Financial Agent OS",
+    titleZh: "Vibe-Trading深度解析：港大开源金融代理操作系统",
+    description:
+      "HKU's Vibe-Trading is a financial Agent OS with 30+ tools, 72 skills, 452 alpha factors, and a 33-agent team. Deep dive into its architecture, Think-Act-Observe loop, and practical applications.",
+    descriptionZh:
+      "港大的Vibe-Trading是一个拥有30+工具、72项技能、452个Alpha因子和33代理团队的金融代理操作系统。深入解析其架构、Think-Act-Observe循环和实际应用。",
+    category: "ai-news",
+    tags: ["vibe-trading", "hku", "financial-agent", "open-source", "trading", "ai-agent"],
+    difficulty: "intermediate",
+    toolsMentioned: ["vibe-trading"],
+    date: "2026-05-28",
+  },
+
 ];

@@ -14125,7 +14125,433 @@ export const _tools2 = [
     consZh: ["免费 AI 生成有限", "需要 Figma 订阅", "AI 结果需要人工优化"],
     scene: "creative",
   },
-
+  {
+    id: "karpathy-skills",
+    name: "Karpathy Skills",
+    description: "Define AI coding rules with a single CLAUDE.md file for consistent project-wide behavior.",
+    descriptionZh: "用单个CLAUDE.md文件定义AI编码规则，实现项目级一致行为。",
+    category: "coding",
+    tags: ["ai-coding", "rules", "configuration", "claude", "project-setup"],
+    difficulty: "beginner",
+    url: "https://github.com/karpathy",
+    rating: r(4.7),
+    pricing: "Free (Open Source)",
+    useCase: "Define project rules, tech stack, and coding style for AI assistants using a single CLAUDE.md file.",
+    icon: "\u{1F4CB}",
+    company: "Andrej Karpathy",
+    companyZh: "Andrej Karpathy",
+    founded: "2025",
+    headquarters: "Open Source",
+    descriptionLong: "Karpathy Skills is a methodology popularized by Andrej Karpathy that uses a single CLAUDE.md file to define project rules, tech stack preferences, and coding style for AI coding assistants. Instead of complex plugin configurations, developers simply document their project's conventions in a markdown file that the AI reads before generating code. This approach has gained massive traction, earning over 3,300 GitHub stars in a single day.",
+    descriptionLongZh: "Karpathy Skills是由Andrej Karpathy推广的一种方法，使用单个CLAUDE.md文件为AI编码助手定义项目规则、技术栈偏好和编码风格。",
+    advantages: [
+      "Zero-config setup with a single file",
+      "Eliminates complex plugin configurations",
+      "Ensures consistent AI output across the team",
+      "Works with any AI coding assistant"
+    ],
+    advantagesZh: [
+      "单一文件的零配置设置",
+      "消除复杂的插件配置",
+      "确保团队间一致的AI输出",
+      "适用于任何AI编码助手"
+    ],
+    useCases: [
+      "Define coding standards for global development teams",
+      "Enforce regional compliance rules in AI-generated code",
+      "Standardize tech stack preferences across projects",
+      "Onboard new team members with consistent AI behavior"
+    ],
+    useCasesZh: [
+      "为全球开发团队定义编码标准",
+      "在AI生成代码中执行区域合规规则",
+      "跨项目标准化技术栈偏好",
+      "以一致的AI行为 onboarding 新团队成员"
+    ],
+    targetAudience: "Developers using AI coding assistants who want consistent, project-aware code generation.",
+    targetAudienceZh: "使用AI编码助手并希望获得一致、项目感知代码生成的开发者。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["Single CLAUDE.md file", "Community examples", "GitHub templates"],
+        featuresZh: ["单个CLAUDE.md文件", "社区示例", "GitHub模板"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Official GitHub resources",
+        descriptionZh: "官方GitHub资源",
+        url: "https://github.com/karpathy"
+      }
+    ],
+    skills: ["AI coding", "project configuration", "code standards", "workflow automation"],
+    pros: ["Extremely simple setup", "Works with any AI tool", "Team-wide consistency", "Version controllable"],
+    prosZh: ["极其简单的设置", "适用于任何AI工具", "全团队一致性", "可版本控制"],
+    cons: ["Limited to text-based rules", "No GUI for configuration", "Requires manual documentation"],
+    consZh: ["仅限于文本规则", "无图形配置界面", "需要手动文档维护"],
+    scene: "development",
+  },
+  {
+    id: "codegraph",
+    name: "CodeGraph",
+    description: "Transform any codebase into a navigable knowledge graph for faster project understanding.",
+    descriptionZh: "将任何代码库转换为可导航的知识图谱，加速项目理解。",
+    category: "coding",
+    tags: ["code-analysis", "knowledge-graph", "visualization", "project-mapping", "productivity"],
+    difficulty: "intermediate",
+    url: "https://github.com/your-org/codegraph",
+    rating: r(4.5),
+    pricing: "Free (Open Source)",
+    useCase: "Generate knowledge graphs from codebases to visualize module dependencies and regional compliance checkpoints.",
+    icon: "\u{1F9EE}",
+    company: "Community Project",
+    companyZh: "社区项目",
+    founded: "2025",
+    headquarters: "Open Source",
+    descriptionLong: "CodeGraph transforms any codebase into a navigable knowledge graph, acting as a project map for AI tools and developers. Instead of reading every line of code, teams can understand module dependencies, regional compliance checkpoints, and performance bottlenecks in multilingual environments at a glance. With 2,400 GitHub stars, it is proving its value for distributed teams working across regions.",
+    descriptionLongZh: "CodeGraph将任何代码库转换为可导航的知识图谱，作为AI工具和开发者的项目地图。可快速了解模块依赖、区域合规检查点和多语言环境中的性能瓶颈。",
+    advantages: [
+      "Instant project-wide understanding without reading all code",
+      "Visualizes cross-regional compliance checkpoints",
+      "Identifies performance bottlenecks in multilingual setups",
+      "Saves developer onboarding time significantly"
+    ],
+    advantagesZh: [
+      "无需阅读所有代码即可即时理解整个项目",
+      "可视化跨区域合规检查点",
+      "识别多语言环境中的性能瓶颈",
+      "显著节省开发者上手时间"
+    ],
+    useCases: [
+      "Onboard new developers onto large codebases",
+      "Audit cross-regional compliance in payment flows",
+      "Identify performance bottlenecks in multilingual apps",
+      "Map module dependencies for refactoring planning"
+    ],
+    useCasesZh: [
+      "让新开发者快速上手大型代码库",
+      "审计支付流程中的跨区域合规性",
+      "识别多语言应用的性能瓶颈",
+      "为重构规划绘制模块依赖关系"
+    ],
+    targetAudience: "Development teams working on large, multi-regional codebases who need faster project understanding.",
+    targetAudienceZh: "需要更快理解大型多区域代码库的开发团队。",
+    pricingTiers: [
+      {
+        tier: "Free (Community)",
+        tierZh: "免费版（社区）",
+        price: "$0",
+        features: ["Knowledge graph generation", "CLI tools", "Basic visualization"],
+        featuresZh: ["知识图谱生成", "CLI工具", "基础可视化"]
+      },
+      {
+        tier: "Enterprise",
+        tierZh: "企业版",
+        price: "Contact us",
+        features: ["Advanced analytics", "Team collaboration", "API access", "Priority support"],
+        featuresZh: ["高级分析", "团队协作", "API访问", "优先支持"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Source code and documentation",
+        descriptionZh: "源代码和文档",
+        url: "https://github.com/your-org/codegraph"
+      }
+    ],
+    skills: ["code analysis", "knowledge graph", "visualization", "project architecture"],
+    pros: ["Fast project understanding", "Visual dependency mapping", "Cross-region compliance view", "Free and open source"],
+    prosZh: ["快速项目理解", "可视化依赖映射", "跨区域合规视图", "免费开源"],
+    cons: ["Limited to code-level analysis", "Requires CLI usage", "Large repos may take time to process"],
+    consZh: ["仅限于代码级分析", "需要CLI操作", "大型仓库可能需要时间处理"],
+    scene: "development",
+  },
+  {
+    id: "presenton",
+    name: "Presenton",
+    description: "AI-powered open-source presentation generator from a single prompt with API support.",
+    descriptionZh: "AI驱动的开源演示文稿生成器，支持单提示生成和API集成。",
+    category: "productivity",
+    tags: ["presentation", "ppt", "open-source", "automation", "api"],
+    difficulty: "beginner",
+    url: "https://github.com/presenton",
+    rating: r(4.4),
+    pricing: "Free (Open Source)",
+    useCase: "Generate professional presentations from a single prompt for project updates with overseas stakeholders.",
+    icon: "\u{1F4CA}",
+    company: "Community Project",
+    companyZh: "社区项目",
+    founded: "2025",
+    headquarters: "Open Source",
+    descriptionLong: "Presenton is an open-source alternative to Gamma that generates professional presentations from a single prompt. It offers both a CLI and an API, allowing you to integrate presentation generation into automated workflows. It is perfect for sharing project updates with overseas stakeholders, creating regional compliance reports, and automating recurring business presentations.",
+    descriptionLongZh: "Presenton是Gamma的开源替代品，从单个提示生成专业演示文稿。提供CLI和API，可将演示文稿生成集成到自动化工作流中。",
+    advantages: [
+      "Free and open-source alternative to paid presentation tools",
+      "API support for workflow automation",
+      "Single-prompt generation saves hours of manual work",
+      "Customizable templates for regional branding"
+    ],
+    advantagesZh: [
+      "付费演示工具的开源替代品",
+      "API支持工作流自动化",
+      "单提示生成节省数小时手动工作",
+      "可自定义模板适配区域品牌"
+    ],
+    useCases: [
+      "Auto-generate weekly project updates for global teams",
+      "Create regional compliance comparison presentations",
+      "Generate multilingual training materials",
+      "Automate recurring business review decks"
+    ],
+    useCasesZh: [
+      "为全球团队自动生成每周项目更新",
+      "创建区域合规对比演示文稿",
+      "生成多语言培训材料",
+      "自动化周期性业务评审演示"
+    ],
+    targetAudience: "Professionals who need to create presentations regularly for global audiences and want to automate the process.",
+    targetAudienceZh: "需要定期为全球受众创建演示文稿并希望自动化此过程的专业人士。",
+    pricingTiers: [
+      {
+        tier: "Free (Self-hosted)",
+        tierZh: "免费版（自托管）",
+        price: "$0",
+        features: ["Full features", "API access", "Unlimited presentations", "CLI tools"],
+        featuresZh: ["全部功能", "API访问", "无限演示文稿", "CLI工具"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Source code and API docs",
+        descriptionZh: "源代码和API文档",
+        url: "https://github.com/presenton"
+      }
+    ],
+    skills: ["presentation design", "automation", "API integration", "business communication"],
+    pros: ["Free and open source", "API for automation", "Single-prompt generation", "Professional output quality"],
+    prosZh: ["免费开源", "API支持自动化", "单提示生成", "专业输出质量"],
+    cons: ["Requires self-hosting or CLI", "Limited template library", "No real-time collaboration"],
+    consZh: ["需要自托管或CLI", "模板库有限", "无实时协作功能"],
+    scene: "office-productivity",
+  },
+  {
+    id: "nvidia-longlive",
+    name: "NVIDIA LongLive",
+    description: "Real-time long video generation using NVFP4 quantization and parallel inference by NVIDIA.",
+    descriptionZh: "NVIDIA开发的实时长视频生成工具，使用NVFP4量化和并行推理技术。",
+    category: "video-generation",
+    tags: ["nvidia", "video-generation", "real-time", "long-video", "quantization"],
+    difficulty: "intermediate",
+    url: "https://research.nvidia.com/labs",
+    rating: r(4.6),
+    pricing: "Research (Free)",
+    useCase: "Generate long-form training videos and multilingual demos for overseas markets with optimized compression.",
+    icon: "\u{1F3AC}",
+    company: "NVIDIA",
+    companyZh: "英伟达",
+    founded: "1993",
+    headquarters: "Santa Clara, CA",
+    descriptionLong: "NVIDIA LongLive uses NVFP4 quantization and parallel inference to generate long videos in real time. Its focus on compression and quality balance makes it valuable for creating training materials or demos for overseas markets. The tool optimizes video size for slow overseas networks while maintaining clarity.",
+    descriptionLongZh: "NVIDIA LongLive使用NVFP4量化和并行推理技术实时生成长视频。其压缩与质量平衡策略使其非常适合为海外市场创建培训材料或演示。",
+    advantages: [
+      "Real-time long video generation",
+      "Optimized compression for bandwidth-constrained regions",
+      "Multilingual support with subtitle generation",
+      "Quality-preserving compression technology"
+    ],
+    advantagesZh: [
+      "实时长视频生成",
+      "为带宽受限区域优化压缩",
+      "多语言支持与字幕生成",
+      "保持质量的压缩技术"
+    ],
+    useCases: [
+      "Create multilingual product tutorials for global markets",
+      "Generate training materials for overseas teams",
+      "Produce marketing videos with regional adaptations",
+      "Build video content for bandwidth-constrained regions"
+    ],
+    useCasesZh: [
+      "为全球市场创建多语言产品教程",
+      "为海外团队生成培训材料",
+      "制作带区域适配的营销视频",
+      "为带宽受限地区构建视频内容"
+    ],
+    targetAudience: "Content creators and educators who need to produce long-form video content for global audiences.",
+    targetAudienceZh: "需要为全球受众制作长视频内容的内容创作者和教育工作者。",
+    pricingTiers: [
+      {
+        tier: "Research Preview",
+        tierZh: "研究预览版",
+        price: "$0",
+        features: ["Real-time generation", "720p output", "Multilingual support"],
+        featuresZh: ["实时生成", "720p输出", "多语言支持"]
+      }
+    ],
+    extensions: [
+      {
+        name: "NVIDIA Research",
+        description: "Official research page",
+        descriptionZh: "官方研究页面",
+        url: "https://research.nvidia.com/labs"
+      }
+    ],
+    skills: ["video generation", "AI compression", "multilingual content", "real-time processing"],
+    pros: ["Real-time generation", "Optimized for slow networks", "Research-backed technology", "Free during preview"],
+    prosZh: ["实时生成", "针对慢网络优化", "研究支持的技术", "预览版免费"],
+    cons: ["Research preview - limited availability", "Requires NVIDIA hardware", "Output resolution capped at 720p"],
+    consZh: ["研究预览版 - 可用性有限", "需要NVIDIA硬件", "输出分辨率限制在720p"],
+    scene: "content-creation",
+  },
+  {
+    id: "hermes-agent",
+    name: "Hermes Agent",
+    description: "Open-source AI agent framework for building powerful automated workflows with 7 levels of configuration.",
+    descriptionZh: "开源AI代理框架，通过7级配置构建强大的自动化工作流。",
+    category: "coding",
+    tags: ["ai-agent", "automation", "open-source", "vps", "discord", "mcp"],
+    difficulty: "intermediate",
+    url: "https://github.com/NousResearch/hermes-agent",
+    rating: r(4.5),
+    pricing: "Free (Open Source)",
+    useCase: "Build and deploy AI agents for task automation, Discord integration, cron jobs, and MCP server capabilities.",
+    icon: "\u{1F916}",
+    company: "Nous Research",
+    companyZh: "Nous Research",
+    founded: "2024",
+    headquarters: "Open Source",
+    descriptionLong: "Hermes Agent is an open-source AI agent framework that transforms from a basic chatbot into a robust backend system. It offers 7 levels of configuration: VPS deployment, Discord integration, Curator optimization, cron job automation, Kanban task management, holographic long-term memory, and MCP server transformation. Ideal for overseas projects requiring scalable AI automation.",
+    descriptionLongZh: "Hermes Agent是一个开源AI代理框架，可从基本聊天机器人转变为强大的后端系统。提供7级配置：VPS部署、Discord集成、Curator优化、定时任务自动化、看板任务管理、全息长期记忆和MCP服务器转换。",
+    advantages: [
+      "Seven levels of progressive configuration",
+      "Discord and MCP integration out of the box",
+      "Built-in Kanban for multi-agent workflow management",
+      "Holographic memory for near-infinite context retention"
+    ],
+    advantagesZh: [
+      "七级渐进式配置",
+      "开箱即用的Discord和MCP集成",
+      "内置看板支持多代理工作流管理",
+      "全息记忆实现近乎无限的上下文保留"
+    ],
+    useCases: [
+      "Deploy AI agents on VPS for global team Discord servers",
+      "Automate backups and cron jobs for overseas infrastructure",
+      "Build multi-agent content creation pipelines",
+      "Expose AI tools as MCP servers for Claude Code integration"
+    ],
+    useCasesZh: [
+      "在VPS上部署AI代理用于全球团队的Discord服务器",
+      "自动化海外基础设施的备份和定时任务",
+      "构建多代理内容创建流水线",
+      "将AI工具暴露为MCP服务器供Claude Code集成"
+    ],
+    targetAudience: "Developers and teams who want to deploy and manage AI agents for automated task execution in overseas projects.",
+    targetAudienceZh: "希望在海外项目中部署和管理AI代理以自动执行任务的开发者和团队。",
+    pricingTiers: [
+      {
+        tier: "Free (Self-hosted)",
+        tierZh: "免费版（自托管）",
+        price: "$0",
+        features: ["Full features", "CLI tools", "Discord gateway", "MCP server", "Kanban board"],
+        featuresZh: ["全部功能", "CLI工具", "Discord网关", "MCP服务器", "看板"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Source code and documentation",
+        descriptionZh: "源代码和文档",
+        url: "https://github.com/NousResearch/hermes-agent"
+      },
+      {
+        name: "OpenRouter",
+        description: "Recommended inference provider",
+        descriptionZh: "推荐的推理提供商",
+        url: "https://openrouter.ai"
+      }
+    ],
+    skills: ["AI agent", "automation", "Discord bot", "VPS deployment", "MCP"],
+    pros: ["Fully open source", "Progressive complexity", "Discord integration", "MCP server support"],
+    prosZh: ["完全开源", "渐进式复杂度", "Discord集成", "MCP服务器支持"],
+    cons: ["Requires VPS for full features", "Steep learning curve at higher levels", "CLI-only interface"],
+    consZh: ["完整功能需要VPS", "高级别学习曲线陡峭", "仅CLI界面"],
+    scene: "development",
+  },
+  {
+    id: "vibe-trading",
+    name: "Vibe-Trading",
+    description: "HKU's open-source financial Agent OS with 30+ tools, 72 skills, and 452 alpha factors for cross-market analysis.",
+    descriptionZh: "港大开源金融代理操作系统，拥有30+工具、72项技能和452个Alpha因子，支持跨市场分析。",
+    category: "industry",
+    tags: ["finance", "trading", "agent-os", "open-source", "hku", "quantitative", "backtesting"],
+    difficulty: "intermediate",
+    url: "https://github.com/HKUDS/Vibe-Trading",
+    rating: r(4.6),
+    pricing: "Free (Open Source)",
+    useCase: "Perform cross-market financial analysis, backtesting, and multi-agent investment research with a single prompt.",
+    icon: "\u{1F4B9}",
+    company: "HKU Data Science Lab",
+    companyZh: "香港大学数据科学实验室",
+    founded: "2025",
+    headquarters: "Hong Kong",
+    descriptionLong: "Vibe-Trading is a financial Agent OS developed by Hong Kong University that has garnered over 7,000 GitHub stars within a month. It features 30+ tools for backtesting and data analysis, 72 specialized skills in a professional knowledge base, 452 alpha factors across four academic systems, and a 33-agent team collaboration framework mimicking a real investment research department. Its Think-Act-Observe loop autonomously handles everything from strategy development to cross-market research.",
+    descriptionLongZh: "Vibe-Trading是香港大学开发的金融代理操作系统，在一个月内获得超过7,000个GitHub星标。拥有30+工具、72项专业技能、452个Alpha因子和33代理协作框架，模拟真实投资研究部门。",
+    advantages: [
+      "Comprehensive 30+ tool ecosystem for financial analysis",
+      "452 alpha factors spanning multiple academic systems",
+      "33-agent collaborative research team architecture",
+      "Autonomous Think-Act-Observe loop for quality outputs"
+    ],
+    advantagesZh: [
+      "30+工具的全面金融分析生态系统",
+      "覆盖多学术体系的452个Alpha因子",
+      "33代理协作研究团队架构",
+      "Think-Act-Observe自主循环确保输出质量"
+    ],
+    useCases: [
+      "Develop and backtest trading strategies with code sandboxes",
+      "Analyze shadow account trade records for profit/loss patterns",
+      "Cross-market research across A-shares, US stocks, and HK stocks",
+      "Collaborative multi-agent investment research and reporting"
+    ],
+    useCasesZh: [
+      "使用代码沙箱开发和回测交易策略",
+      "分析影子账户交易记录的盈亏模式",
+      "跨A股、美股和港股的跨市场研究",
+      "协作式多代理投资研究和报告"
+    ],
+    targetAudience: "Financial professionals, quantitative analysts, and traders who need AI-powered cross-market analysis tools.",
+    targetAudienceZh: "需要AI驱动的跨市场分析工具的金融专业人士、量化分析师和交易员。",
+    pricingTiers: [
+      {
+        tier: "Free (Open Source)",
+        tierZh: "免费版（开源）",
+        price: "$0",
+        features: ["All 30+ tools", "72 skills", "452 alpha factors", "33-agent team", "Code sandbox"],
+        featuresZh: ["全部30+工具", "72项技能", "452个Alpha因子", "33代理团队", "代码沙箱"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Source code and documentation",
+        descriptionZh: "源代码和文档",
+        url: "https://github.com/HKUDS/Vibe-Trading"
+      }
+    ],
+    skills: ["financial analysis", "quantitative trading", "backtesting", "multi-agent systems", "cross-market research"],
+    pros: ["Comprehensive all-in-one platform", "Open source and free", "Academic research-backed", "Multi-agent collaboration"],
+    prosZh: ["全面的一体化平台", "开源免费", "学术研究支持", "多代理协作"],
+    cons: ["Finance-specific - limited use outside trading", "Requires financial knowledge", "Python environment needed"],
+    consZh: ["金融专用 - 交易外用途有限", "需要金融知识", "需要Python环境"],
+    scene: "development",
+  },
 
 ] as Tool[];
 

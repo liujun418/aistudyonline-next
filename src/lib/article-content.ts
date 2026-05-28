@@ -14826,4 +14826,966 @@ print(model.generate_content('Generate 5 high-traffic long-tail keywords for out
 <p><strong>下一篇：</strong> <a href="/article/google-io-2026-93-ai-agents">93个AI协作构建操作系统：Google I/O 2026亮点 &#8594;</a></p>
 </div>`,
 },
+  "6-ai-tools-dominating-github": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools &middot; Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> Six groundbreaking AI tools dominating GitHub that can revolutionize your development workflow for overseas projects.</p>
+</div>
+
+<p>GitHub is abuzz with six groundbreaking AI tools that are revolutionizing how developers work. These tools&mdash;Karpathy Skills, CodeGraph, Understand Anything, Presenton, NVIDIA LongLive, and Claude Plugins&mdash;are all focused on one goal: taking over your workflow to boost efficiency, especially for overseas development teams. Let's explore each tool and how to leverage them in your global projects.</p>
+
+<h2>1. Karpathy Skills: Define Rules with a Single CLAUDE.md</h2>
+
+<p>Andrej Karpathy's approach to AI-assisted coding is game-changing. With <strong>Karpathy Skills</strong>, you only need a <code>CLAUDE.md</code> file to define your project's rules, tech stack, and coding style. This eliminates the need for complex configurations or plugins.</p>
+
+<h3>How to Use Karpathy Skills</h3>
+
+<pre><code class="language-markdown"># CLAUDE.md for a Multilingual E-commerce API
+- Tech Stack: Node.js, Express, MongoDB, TypeScript
+- Coding Style: RESTful, Swagger documentation, snake_case for DB fields
+- Regional Rules: GDPR compliance for EU users, PII data encryption</code></pre>
+
+<p>By defining these rules clearly, Karpathy Skills ensures your AI coding assistant (like Claude Code) writes code that aligns with your project's needs&mdash;critical for overseas projects with regional compliance requirements. The tool's popularity is evident, with over 3,300 GitHub stars in a single day.</p>
+
+<h2>2. CodeGraph: Turn Code into a Navigable Knowledge Graph</h2>
+
+<p><strong>CodeGraph</strong> transforms your codebase into a knowledge graph, acting as a "project map." This lets AI tools (and developers) understand your project's structure without reading every line of code, saving time and tokens.</p>
+
+<h3>Implement CodeGraph for a Global Project</h3>
+
+<pre><code class="language-bash"># Generate a knowledge graph for your repo
+codegraph generate --repo https://github.com/your-org/eu-ecommerce-api --local</code></pre>
+
+<p>CodeGraph highlights:</p>
+
+<ul>
+<li>Module dependencies</li>
+<li>Regional compliance checkpoints (e.g., EU vs. APAC payment flows)</li>
+<li>Performance bottlenecks in multilingual environments</li>
+</ul>
+
+<p>It's gained 2,400 GitHub stars, proving its value for teams working across regions.</p>
+
+<h2>3. Understand Anything: Navigate Codebases Like a Pro</h2>
+
+<p><strong>Understand Anything</strong> is a codebase navigator that visualizes call graphs, module responsibilities, and integration points. It supports tools like Claude Code and Codex, making it ideal for global teams collaborating on complex projects.</p>
+
+<h3>Use Understand Anything for Cross-Regional Code</h3>
+
+<pre><code class="language-bash"># Analyze a module's role in your EU and LATAM payment flows
+understand-anything analyze --module payment-service --regions EU,LATAM</code></pre>
+
+<p>This command will show:</p>
+
+<ul>
+<li>How the <code>payment-service</code> module integrates with Stripe (EU) and Mercado Pago (LATAM)</li>
+<li>Security differences between regions (e.g., 3DS for EU vs. 2FA for LATAM)</li>
+</ul>
+
+<p>With 21,000 GitHub stars, it's a must-have for navigating multiregional codebases.</p>
+
+<h2>4. Presenton: Automate PPTs for Global Stakeholders</h2>
+
+<p><strong>Presenton</strong> is an open-source alternative to Gamma, generating professional presentations from a single prompt. It also offers an API, allowing you to integrate it into automated workflows&mdash;perfect for sharing project updates with overseas stakeholders.</p>
+
+<h3>Create a Regional Compliance PPT</h3>
+
+<pre><code class="language-bash"># Generate a PPT on GDPR and PIPL compliance
+presenton generate --prompt "Compare GDPR (EU) and PIPL (China) data protection rules for e-commerce" --format pptx</code></pre>
+
+<p>This creates a presentation with:</p>
+
+<ul>
+<li>Side-by-side comparisons of regulations</li>
+<li>Actionable steps for compliance</li>
+<li>Regional case studies</li>
+</ul>
+
+<p>Use the API to automate updates for your global team.</p>
+
+<h2>5. NVIDIA LongLive: Real-Time Long Video Generation</h2>
+
+<p><strong>NVIDIA LongLive</strong> uses NVFP4 quantization and parallel inference to generate long videos in real time. It's not just a gimmick&mdash;its focus on compression and quality balance makes it valuable for creating training materials or demos for overseas markets.</p>
+
+<h3>Generate a Multilingual Tutorial</h3>
+
+<pre><code class="language-bash"># Create a 10-minute tutorial on using your API, with English and Spanish versions
+longlive generate --script "API tutorial for developers" --languages en,es --quality 720p</code></pre>
+
+<p>This command optimizes video size for slow overseas networks while maintaining clarity&mdash;a key advantage for global teams.</p>
+
+<h2>6. Claude Plugins: Embed AI into Your Workflow</h2>
+
+<p><strong>Claude Plugins</strong> have dominated GitHub's trending page for two consecutive days, gaining 2,000 stars. These plugins aren't just for single tasks&mdash;they embed AI directly into your workflow, enabling end-to-end automation for overseas projects.</p>
+
+<h3>Build a GDPR Compliance Plugin</h3>
+
+<pre><code class="language-python"># Sample Claude Plugin for GDPR checks
+def gdpr_check(data):
+    if "PII" in data and not data.get("consent"):
+        return {"compliant": False, "issue": "Missing user consent for PII data"}
+    return {"compliant": True}</code></pre>
+
+<p>Integrate this plugin into your CI/CD pipeline to automatically flag non-compliant code before deployment&mdash;critical for EU markets.</p>
+
+<h2>Why These Tools Matter for Overseas Teams</h2>
+
+<ul>
+<li><strong>Efficiency</strong>: Automate repetitive tasks (like PPT creation or compliance checks) across time zones.</li>
+<li><strong>Consistency</strong>: Ensure code and documentation meet regional standards (GDPR, PIPL, etc.).</li>
+<li><strong>Collaboration</strong>: Navigate and explain complex, multiregional codebases with knowledge graphs and navigators.</li>
+<li><strong>Scalability</strong>: Handle large, global projects with tools designed for workflow automation.</li>
+</ul>
+
+<p>By adopting these six tools, your overseas development team can streamline workflows, reduce errors, and stay compliant&mdash;all while moving faster than ever. Start integrating them today to stay ahead in the global AI-driven development landscape.</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: Which of these six tools should I start with for my overseas project?</h3>
+<p>Start with Karpathy Skills if you use AI coding assistants&mdash;it's the simplest to set up and has immediate impact. For larger teams, CodeGraph or Understand Anything will help with codebase navigation. If you need reporting, Presenton is your go-to.</p>
+
+<h3>Q: Are these tools free to use?</h3>
+<p>Most of these tools are open-source or have free tiers. Karpathy Skills is a methodology&mdash;completely free. CodeGraph, Understand Anything, and Presenton are open-source. NVIDIA LongLive is in research preview. Claude Plugins work with Claude API which requires payment.</p>
+
+<h3>Q: How do I stay updated on new AI tools dominating GitHub?</h3>
+<p>Follow GitHub Trending, the repositories mentioned in this article, and check our <a href="/article/5-ai-tools-one-person-overseas-business">AI tools for overseas business</a> article for more recommendations.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI工具 &middot; 难度：初级</p>
+
+
+<p>使用CLAUDE.md模板定义规则：</p>
+
+<pre><code class="language-markdown"># CLAUDE.md for a Multilingual E-commerce API
+- Tech Stack: Node.js, Express, MongoDB, TypeScript
+- Coding Style: RESTful, Swagger documentation, snake_case for DB fields
+- Regional Rules: GDPR compliance for EU users, PII data encryption</code></pre>
+
+<p>Understand Anything命令行用法：</p>
+
+<pre><code class="language-bash"># Analyze a module&apos;s role in your EU and LATAM payment flows
+understand-anything analyze --module payment-service --regions EU,LATAM</code></pre>
+
+<p>Presenton生成合规PPT：</p>
+
+<pre><code class="language-bash"># Generate a PPT on GDPR and PIPL compliance
+presenton generate --prompt "Compare GDPR (EU) and PIPL (China) data protection rules for e-commerce" --format pptx</code></pre>
+
+<p>NVIDIA LongLive生成多语言视频：</p>
+
+<pre><code class="language-bash"># Create a 10-minute tutorial on using your API, with English and Spanish versions
+longlive generate --script "API tutorial for developers" --languages en,es --quality 720p</code></pre>
+
+<p>Claude Plugins GDPR检查插件：</p>
+
+<pre><code class="language-python"># Sample Claude Plugin for GDPR checks
+def gdpr_check(data):
+    if "PII" in data and not data.get("consent"):
+        return {"compliant": False, "issue": "Missing user consent for PII data"}
+    return {"compliant": True}</code></pre>
+
+<p><strong>你将学到：</strong> GitHub上6个开创性AI工具，以及如何利用它们提升海外开发项目效率。</p>
+</div>
+
+<p>GitHub上涌现了六个开创性的AI工具，正在彻底改变开发者工作方式。这些工具包括Karpathy Skills、CodeGraph、Understand Anything、Presenton、NVIDIA LongLive和Claude Plugins，它们都聚焦于一个目标：接管你的工作流以提升效率，尤其适合海外开发团队。本文将逐一介绍每个工具及其在全球项目中的应用方法。</p>
+
+<p>在海外项目中，开发者常面临跨时区协作、多区域合规要求和代码库管理复杂等挑战。这六个工具从不同角度解决这些问题：Karpathy Skills通过一个CLAUDE.md文件统一AI编码规范，CodeGraph将代码库转化为知识图谱方便导航，Understand Anything可视化调用关系，Presenton自动化演示文稿生成，NVIDIA LongLive实时生成培训视频，Claude Plugins将AI嵌入整个开发流程。</p>
+
+<h2>1. Karpathy Skills：用单个CLAUDE.md定义规则</h2>
+
+<p>Andrej Karpathy的AI辅助编码方法改变了游戏规则。使用<strong>Karpathy Skills</strong>，你只需要一个<code>CLAUDE.md</code>文件来定义项目的规则、技术栈和编码风格，消除了复杂配置或插件的需要。该方法在发布当天就获得了超过3,300个GitHub星标。对于有区域合规要求的海外项目，它可以确保AI编码助手生成符合项目需求的代码。</p>
+
+<p>了解更多项目配置方法，请参考<a href="/article/claude-code-install-setup">Claude Code安装与配置指南</a>。</p>
+
+<h2>2. CodeGraph：将代码转化为可导航的知识图谱</h2>
+
+<p><strong>CodeGraph</strong>将你的代码库转化为知识图谱，作为"项目地图"供AI工具和开发者使用。无需阅读每一行代码即可了解模块依赖、区域合规检查点和多语言环境的性能瓶颈。使用命令行即可生成知识图谱，已获得2,400个GitHub星标。</p>
+
+<pre><code class="language-bash"># Generate a knowledge graph for your repo
+codegraph generate --repo https://github.com/your-org/eu-ecommerce-api --local</code></pre>
+
+<h2>3. Understand Anything：像专家一样导航代码库</h2>
+
+<p><strong>Understand Anything</strong>是一个代码库导航工具，可视化调用图、模块职责和集成点。支持Claude Code和Codex等工具，非常适合跨区域团队协作。拥有21,000个GitHub星标，是多区域代码库导航的必备工具。</p>
+
+<h2>4. Presenton：为全球利益相关者自动生成PPT</h2>
+
+<p><strong>Presenton</strong>是Gamma的开源替代品，从单个提示生成专业演示文稿。通过API可集成到自动化工作流中，非常适合向海外利益相关者分享项目更新。支持GDPR和PIPL合规等区域比较演示文稿的生成。</p>
+
+<h2>5. NVIDIA LongLive：实时长时间视频生成</h2>
+
+<p><strong>NVIDIA LongLive</strong>使用NVFP4量化和并行推理技术实时生成长视频。其压缩与质量平衡策略使其非常适合为海外市场创建培训材料或演示。针对网络条件较差的区域优化了视频大小。</p>
+
+<h2>6. Claude Plugins：将AI嵌入你的工作流</h2>
+
+<p><strong>Claude Plugins</strong>连续两天占据GitHub趋势页面，获得了2,000个星标。这些插件将AI直接嵌入工作流，实现海外项目的端到端自动化。可以集成到CI/CD管道中自动标记不合规代码。</p>
+
+<p>如需了解Claude的更多功能，请查看<a href="/article/claude-code-mcp-configuration">Claude Code MCP配置指南</a>和<a href="/article/claude-projects-organize-chats">Claude Projects使用指南</a>。</p>
+
+<h2>这些工具对海外团队的意义</h2>
+
+<ul>
+<li><strong>效率</strong>：跨时区自动完成重复性任务</li>
+<li><strong>一致性</strong>：确保代码和文档满足区域标准</li>
+<li><strong>协作</strong>：通过知识图谱和导航工具理解复杂代码库</li>
+<li><strong>可扩展性</strong>：使用专为工作流自动化设计的工具处理大型全球项目</li>
+</ul>
+
+<p>采用这六个工具，你的海外开发团队可以简化工作流、减少错误并保持合规。从今天开始集成它们，在全球AI驱动的开发竞赛中保持领先。结合<a href="/article/llm-service-packages-review-2026">LLM服务套餐评测</a>和<a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解释</a>，构建完整的海外AI开发工具箱。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: 对于海外项目，应该从哪个工具开始？</h3>
+<p>如果你使用AI编码助手，建议从Karpathy Skills开始&mdash;设置最简单且立竿见影。对于大型团队，CodeGraph或Understand Anything有助于代码库导航。如果需要生成报告，Presenton是最佳选择。</p>
+
+<h3>Q: 这些工具都是免费的吗？</h3>
+<p>大部分工具是开源或提供免费版本。Karpathy Skills是一种方法论，完全免费。CodeGraph、Understand Anything和Presenton是开源工具。NVIDIA LongLive处于研究预览阶段。Claude Plugins需要Claude API，可能需要付费。</p>
+
+<h3>Q: 如何了解GitHub上最新的AI工具趋势？</h3>
+<p>关注GitHub Trending页面和本文提到的仓库，同时查看我们的<a href="/article/5-ai-tools-one-person-overseas-business">海外业务AI工具推荐</a>获取更多信息。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 &rarr;</a></p>
+</div>`,
+  },
+  "ai-document-replication-one-click": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Use Cases &middot; Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> A step-by-step method to replicate professional documents for overseas markets using AI, with complete Python code examples.</p>
+</div>
+
+<p>Replicating professional documents&mdash;whether contracts, marketing brochures, or industry reports&mdash;used to require hours of formatting and content tweaking, especially for overseas markets with regional standards. Now, AI lets you duplicate any document's structure, style, and tone in minutes. This guide breaks down a step-by-step, actionable method to replicate documents for global scenarios like cross-border business agreements, multilingual marketing materials, and international compliance forms.</p>
+
+<h2>Core Logic: How AI Document Replication Works</h2>
+
+<p>AI document replication isn't just copy-pasting&mdash;it uses <strong>structure parsing</strong> and <strong>style emulation</strong> to mirror the original's layout (headings, bullet points, tables), tone (formal, casual, technical), and formatting (fonts, spacing, branding). For overseas users, this means you can:</p>
+
+<ul>
+<li>Replicate a US-style sales contract and adapt it to EU legal standards.</li>
+<li>Duplicate a Japanese product catalog's design for a Southeast Asian market.</li>
+<li>Emulate the tone of a UK industry report for an Australian audience&mdash;all with minimal manual edits.</li>
+</ul>
+
+<h2>Step 1: Prepare the Source Document &amp; AI Tool Setup</h2>
+
+<p>First, gather your source document (PDF, Word, Google Docs) and set up the AI toolchain. We'll use open-source tools for cost efficiency and global accessibility.</p>
+
+<h3>1.1 Install Required Tools</h3>
+
+<pre><code class="language-bash"># Install document parsing and AI replication dependencies
+pip install pypdf python-docx transformers torch replicate --upgrade</code></pre>
+
+<ul>
+<li><code>pypdf</code>: Extracts text and structure from PDFs.</li>
+<li><code>python-docx</code>: Creates/edits Word documents (compatible with global office tools).</li>
+<li><code>replicate</code>: Runs pre-trained AI models for style emulation (no local GPU needed).</li>
+</ul>
+
+<h3>1.2 Extract Structure from the Source Document</h3>
+
+<p>Use this script to pull the source document's text, headings, and layout&mdash;critical for accurate replication:</p>
+
+<pre><code class="language-python">from pypdf import PdfReader
+from docx import Document
+
+def extract_document_structure(file_path):
+    # Handle PDF files
+    if file_path.endswith(".pdf"):
+        reader = PdfReader(file_path)
+        full_text = []
+        for page in reader.pages:
+            text = page.extract_text()
+            if text:
+                full_text.append(text)
+        return "\\n".join(full_text)
+
+    # Handle Word documents
+    elif file_path.endswith(".docx"):
+        doc = Document(file_path)
+        full_text = []
+        for paragraph in doc.paragraphs:
+            if paragraph.text:
+                full_text.append(paragraph.text)
+        return "\\n".join(full_text)
+
+    else:
+        raise ValueError("Unsupported file format: Use PDF or DOCX")
+
+# Example: Extract structure from a US sales contract
+source_text = extract_document_structure("us-sales-contract.pdf")
+print("Document structure extracted successfully!")</code></pre>
+
+<h2>Step 2: Define Replication Rules for Overseas Adaptation</h2>
+
+<p>Tell the AI how to replicate the document&mdash;including regional adjustments (e.g., legal terms, currency, language). Use a clear prompt to specify what to replicate (layout, tone, formatting) and what to adapt (regional compliance, language, units).</p>
+
+<h3>2.1 Create a Replication Prompt</h3>
+
+<pre><code class="language-python">def create_replication_prompt(source_text, target_region, adaptation_needs):
+    prompt = f"""\"\"\"
+    Replicate the structure, style, and formatting of the following source
+    document for {target_region} markets.
+    Source Document Content: {source_text}
+
+    Adaptation Rules:
+    1. Keep the original heading hierarchy, bullet point structure, and tables.
+    2. Emulate the original tone (formal/technical/casual) exactly.
+    3. Apply {target_region} specific adjustments: {adaptation_needs}
+    4. Output in clean, editable text with formatting markers.
+
+    Do NOT change the core purpose of the document.
+    \"\"\"
+    return prompt.strip()</code></pre>
+
+<h2>Step 3: Run AI Replication with Style Emulation</h2>
+
+<p>Use a pre-trained AI model (via <code>replicate</code>) to generate the replicated document. This model mirrors the original's style while applying regional adaptations.</p>
+
+<pre><code class="language-python">import replicate
+
+replicate.api_token = "YOUR_REPLICATE_API_KEY"
+
+def replicate_document(prompt):
+    output = replicate.run(
+        "meta/llama-3-70b-instruct:2796ee9483c3fd7aa2e171d38f4ca12251a306010498d3fb7f3f95139bbb789",
+        input={{
+            "prompt": prompt,
+            "temperature": 0.1,
+            "max_new_tokens": 4000
+        }}
+    )
+    return "".join(output)
+
+replicated_doc = replicate_document(replication_prompt)
+print("Document replicated successfully!")</code></pre>
+
+<h2>Step 4: Convert to Editable Format (Word/PDF)</h2>
+
+<p>Turn the AI output into a professional, editable document for overseas use.</p>
+
+<pre><code class="language-python">from docx import Document
+
+def save_to_word(content, output_path):
+    doc = Document()
+    lines = content.split("\\n")
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith("### "):
+            doc.add_heading(line.replace("### ", ""), level=3)
+        elif line.startswith("## "):
+            doc.add_heading(line.replace("## ", ""), level=2)
+        elif line.startswith("# "):
+            doc.add_heading(line.replace("# ", ""), level=1)
+        elif line.startswith("- "):
+            doc.add_paragraph(line.replace("- ", ""), style="List Bullet")
+        else:
+            doc.add_paragraph(line)
+    doc.save(output_path)
+
+save_to_word(replicated_doc, "eu-sales-contract-replica.docx")</code></pre>
+
+<h2>Step 5: Fine-Tune for Regional Precision</h2>
+
+<p>AI replication provides a 90% complete document. Finalize with these checks for overseas use: legal compliance (GDPR for EU, CCPA for California), cultural adaptation (formal for Japan, conversational for Australia), formatting consistency (dates, units), and branding (regional logos, language variants).</p>
+
+<pre><code class="language-python">def fine_tune_document(input_path, output_path, replacements):
+    doc = Document(input_path)
+    for paragraph in doc.paragraphs:
+        for old, new in replacements.items():
+            if old in paragraph.text:
+                paragraph.text = paragraph.text.replace(old, new)
+    doc.save(output_path)
+
+eu_replacements = {{
+    "data privacy": "data protection",
+    "USD": "EUR",
+    "California Consumer Privacy Act": "GDPR",
+    "MM/DD/YYYY": "DD/MM/YYYY"
+}}
+
+fine_tune_document("eu-sales-contract-replica.docx",
+                   "eu-sales-contract-final.docx", eu_replacements)</code></pre>
+
+<h2>Practical Use Cases for Overseas Teams</h2>
+
+<ul>
+<li><strong>Cross-Border Contracts</strong>: Replicate a master NDA and adapt it to 10+ regional legal frameworks.</li>
+<li><strong>Multilingual Marketing</strong>: Duplicate an English product brochure's design for French, German, and Spanish markets.</li>
+<li><strong>Compliance Forms</strong>: Replicate a US tax form and adjust for EU VAT requirements.</li>
+<li><strong>Industry Reports</strong>: Emulate the style of a UK tech report for Southeast Asian stakeholders.</li>
+</ul>
+
+<h2>Pro Tips for Success</h2>
+
+<ul>
+<li>Use high-quality source docs (clean, well-formatted originals yield better replicas).</li>
+<li>Limit adaptation scope to 2-3 key regional changes per replica.</li>
+<li>Test with small documents first before replicating long contracts.</li>
+</ul>
+
+<p>With this AI-powered method, you can stop wasting time on manual document duplication and focus on scaling your overseas operations. Whether you're a cross-border e-commerce brand or a global SaaS company, this workflow delivers professional, regionally compliant documents in a fraction of the time. Check out our guide on <a href="/article/ai-for-freelancers">AI for freelancers</a> and <a href="/article/ai-workforce-virtual-employees">AI workforce automation</a> for more practical use cases.</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: What types of documents can AI replicate best?</h3>
+<p>AI works best with structured documents like contracts, reports, marketing brochures, and compliance forms. Documents with clear headings, bullet points, and consistent formatting yield the best results. Scanned PDFs without text layers are harder to replicate accurately.</p>
+
+<h3>Q: Do I need a powerful computer to run this?</h3>
+<p>No. The method uses cloud-based AI models via the Replicate API, so you don't need a local GPU. A basic laptop with Python installed is sufficient. The heavy computation happens on remote servers.</p>
+
+<h3>Q: How much manual editing is still required after AI replication?</h3>
+<p>AI replication typically delivers about 90% of the final result. You'll still need to review legal terms, verify cultural appropriateness, check formatting consistency, and add branding elements. The fine-tuning step in this guide shows how to automate many of these checks.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/ai-for-freelancers">AI for Freelancers: Practical Tools &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI应用场景 &middot; 难度：初级</p>
+
+
+<pre><code class="language-bash"># Install document parsing and AI replication dependencies
+pip install pypdf python-docx transformers torch replicate --upgrade</code></pre>
+
+<pre><code class="language-python">from pypdf import PdfReader
+from docx import Document
+
+def extract_document_structure(file_path):
+    if file_path.endswith(".pdf"):
+        reader = PdfReader(file_path)
+        full_text = [page.extract_text() for page in reader.pages if page.extract_text()]
+        return "\\n".join(full_text)
+    elif file_path.endswith(".docx"):
+        doc = Document(file_path)
+        return "\\n".join(p.text for p in doc.paragraphs if p.text)
+
+source_text = extract_document_structure("us-sales-contract.pdf")</code></pre>
+
+<pre><code class="language-python">def create_replication_prompt(source_text, target_region, adaptation_needs):
+    prompt = f"Replicate for {target_region} with: {adaptation_needs}"
+    return prompt.strip()</code></pre>
+
+<pre><code class="language-python">import replicate
+replicate.api_token = "YOUR_REPLICATE_API_KEY"
+
+def replicate_document(prompt):
+    output = replicate.run(
+        "meta/llama-3-70b-instruct:2796ee9483c3fd7aa2e171d38f4ca12251a306010498d3fb7f3f95139bbb789",
+        input={{"prompt": prompt, "temperature": 0.1, "max_new_tokens": 4000}})
+    return "".join(output)
+
+replicated_doc = replicate_document(replication_prompt)</code></pre>
+
+<pre><code class="language-python">from docx import Document
+
+def save_to_word(content, output_path):
+    doc = Document()
+    for line in content.split("\\n"):
+        line = line.strip()
+        if not line: continue
+        if line.startswith("### "):
+            doc.add_heading(line.replace("### ", ""), level=3)
+        elif line.startswith("- "):
+            doc.add_paragraph(line.replace("- ", ""), style="List Bullet")
+        else:
+            doc.add_paragraph(line)
+    doc.save(output_path)
+
+save_to_word(replicated_doc, "eu-sales-contract-replica.docx")</code></pre>
+
+<pre><code class="language-python">def fine_tune_document(input_path, output_path, replacements):
+    doc = Document(input_path)
+    for p in doc.paragraphs:
+        for old, new in replacements.items():
+            if old in p.text:
+                p.text = p.text.replace(old, new)
+    doc.save(output_path)
+
+eu_replacements = {{
+    "data privacy": "data protection", "USD": "EUR", "MM/DD/YYYY": "DD/MM/YYYY"}}
+fine_tune_document("eu-sales-contract.docx", "eu-sales-contract-final.docx", eu_replacements)</code></pre>
+
+<p><strong>你将学到：</strong> 使用AI为海外市场复制专业文档的分步方法，含完整Python代码示例。</p>
+</div>
+
+<p>无论是合同、营销手册还是行业报告，为海外市场复制专业文档过去需要数小时的格式调整和内容修改。现在，AI可以在几分钟内复制任何文档的结构、风格和语气。本文将详细讲解一个可操作的方法，用于复制适用于跨境商业协议、多语言营销材料和国际合规表单的文档。</p>
+
+<p>AI文档复制的核心是<strong>结构解析</strong>和<strong>风格模拟</strong>，它镜像原始文档的布局（标题、项目符号、表格）、语气（正式、随意、技术性）和格式（字体、间距、品牌元素）。对于海外用户，这意味着可以将美国风格的销售合同复制并适配到欧盟法律标准，或将日本产品目录的设计复制到东南亚市场。</p>
+
+<h2>第一步：准备源文档和AI工具设置</h2>
+
+<p>首先收集源文档（PDF、Word或Google Docs）并设置AI工具链。我们使用开源工具来保证成本效益和全球可访问性。安装<code>pypdf</code>、<code>python-docx</code>和<code>replicate</code>等依赖项，然后使用Python脚本提取文档结构。</p>
+
+<p>查看我们的<a href="/article/ai-for-freelancers">AI自由职业者工具指南</a>了解如何在日常工作中应用这些技术。</p>
+
+<h2>第二步：为海外适配定义复制规则</h2>
+
+<p>告诉AI如何复制文档，包括区域调整（如法律术语、货币、语言）。创建一个清晰的提示词，指定复制内容（布局、语气、格式）和需要适配的内容（区域合规、语言、单位）。使用Python函数创建可复用的提示词模板。</p>
+
+<h2>第三步：使用风格模拟运行AI复制</h2>
+
+<p>使用预训练的AI模型（通过Replicate API）生成复制后的文档。该模型在应用区域适配的同时镜像原始风格。使用Llama 3等模型，设置低温度参数以保持原始风格。</p>
+
+<h2>第四步：转换为可编辑格式</h2>
+
+<p>将AI输出转换为专业的可编辑文档。使用<code>python-docx</code>库将AI输出解析为Word文档，支持标题层级、项目符号和段落格式的正确转换。</p>
+
+<h2>第五步：区域精确度微调</h2>
+
+<p>AI复制提供90%的完成度，最后需要以下检查：法律合规性（如GDPR和CCPA）、文化适配（如日本的正式语气和澳大利亚的随意语气）、格式一致性（日期格式、单位）和品牌元素（区域Logo、语言变体）。使用批量替换脚本自动化常见修改。</p>
+
+<p>如需了解文档自动化相关的更多工具，请参考<a href="/article/5-ai-html-hacks-overseas-websites">5个AI+HTML技巧</a>和<a href="/article/ai-workforce-virtual-employees">AI劳动力自动化指南</a>。</p>
+
+<h2>海外团队的实用场景</h2>
+
+<ul>
+<li><strong>跨境合同</strong>：复制主NDA并适配到10+区域法律框架</li>
+<li><strong>多语言营销</strong>：复制英文产品手册到法语、德语和西班牙语市场</li>
+<li><strong>合规表单</strong>：复制美国税表并调整以符合欧盟增值税要求</li>
+<li><strong>行业报告</strong>：为东南亚利益相关者模拟英国科技报告的风格</li>
+</ul>
+
+<h2>成功技巧</h2>
+
+<ul>
+<li>使用高质量源文档（清晰、格式工整的原件获得更好的复制效果）</li>
+<li>每次复制限制2-3个关键区域变更以避免稀释原始目的</li>
+<li>先测试短文档再复制长合同以验证流程</li>
+</ul>
+
+<p>掌握这种方法后，你可以停止浪费时间在手动文档复制上，专注于扩展海外业务。无论是跨境电商品牌还是全球SaaS公司，这个工作流都能以更短的时间交付专业、区域合规的文档。同时查看<a href="/article/llm-service-packages-review-2026">LLM服务套餐评测</a>选择最适合你需求的AI模型。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: AI最能复制哪些类型的文档？</h3>
+<p>AI对结构化的文档效果最好，如合同、报告、营销手册和合规表单。具有清晰标题、项目符号和一致格式的文档效果最佳。没有文本层的扫描PDF较难准确复制。</p>
+
+<h3>Q: 我需要一台强大的电脑来运行吗？</h3>
+<p>不需要。该方法通过Replicate API使用云端AI模型，无需本地GPU。一台安装了Python的基础笔记本就足够了。复杂的计算在远程服务器上完成。</p>
+
+<h3>Q: AI复制后还需要多少手动编辑？</h3>
+<p>AI复制通常提供约90%的最终结果。你仍然需要检查法律术语、验证文化适配性、检查格式一致性并添加品牌元素。本文的微调步骤演示了如何自动化其中许多检查。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-for-freelancers">AI自由职业者实用工具 &rarr;</a></p>
+</div>`,
+  },
+  "mastering-hermes-agent-7-levels": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials &middot; Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> Seven progressive levels of configuring Hermes Agent&mdash;from basic VPS deployment to advanced MCP server integration for powerful AI automation.</p>
+</div>
+
+<p>In the rapidly evolving landscape of AI agents, Hermes Agent stands out as a powerful, open-source tool that can be transformed from a basic chatbot into a robust backend system with advanced capabilities. This guide will walk you through seven levels of configuring Hermes Agent, providing practical, actionable steps to help you leverage its full potential for your overseas projects.</p>
+
+<h2>Level 1: Basic Installation on a VPS</h2>
+
+<p>The foundation of a powerful Hermes Agent setup starts with deploying it on a dedicated Virtual Private Server (VPS). This ensures stability and control over your AI infrastructure.</p>
+
+<h3>Step 1: Access Your VPS</h3>
+
+<p>Connect to your VPS via SSH:</p>
+
+<pre><code class="language-bash">ssh root@your_vps_ip</code></pre>
+
+<h3>Step 2: Install Hermes Agent</h3>
+
+<pre><code class="language-bash">curl -fsSL https://github.com/NousResearch/hermes-agent/raw/main/scripts/install.sh | bash</code></pre>
+
+<h3>Step 3: Quick Setup</h3>
+
+<p>After installation, initialize the setup wizard:</p>
+
+<pre><code class="language-bash">hermes</code></pre>
+
+<p>Follow the prompts to select your inference provider. Use platforms like <strong>OpenRouter</strong> or your existing <strong>ChatGPT Plus</strong> subscription.</p>
+
+<h3>Step 4: Test the Installation</h3>
+
+<pre><code class="language-bash">hermes chat</code></pre>
+
+<p>Send a test message like <code>hey</code> and check for a response. This confirms Level 1 is complete.</p>
+
+<h2>Level 2: Integrate with Discord</h2>
+
+<p>To make Hermes accessible via Discord, create a custom Discord bot through the Discord Developer Portal, configure bot permissions, invite the bot to your server, and link Hermes to Discord using the <code>hermes gateway setup</code> command.</p>
+
+<pre><code class="language-bash">hermes gateway setup
+hermes gateway start</code></pre>
+
+<h2>Level 3: Optimize with Hermes Curator</h2>
+
+<p>The Curator feature automatically manages unused skills to save tokens and keep Hermes lean. Enable it and check its status:</p>
+
+<pre><code class="language-bash">hermes update
+hermes curator status</code></pre>
+
+<p>By default, Curator marks skills as obsolete after 30 days and deletes them after 90 days, preventing context bloat.</p>
+
+<h2>Level 4: Automate with Scheduled Tasks (Cron Jobs)</h2>
+
+<p>Automate backups to GitHub to ensure your Hermes data is secure. Create a GitHub repository, generate a personal access token, configure Hermes, and schedule backup tasks:</p>
+
+<pre><code class="language-bash">hermes config set GITHUB_TOKEN your_github_token
+hermes cron list</code></pre>
+
+<h2>Level 5: Manage Tasks with Kanban</h2>
+
+<p>Hermes' Kanban feature visualizes and manages multi-agent workflows. Access the web UI (typically at <code>http://your_vps_ip:8080</code>) to create and assign tasks to different agents. For a content creation pipeline, you can have a research agent gather data, an analyst agent identify content gaps, and a writer agent draft blog posts.</p>
+
+<h2>Level 6: Implement Holographic Long-Term Memory</h2>
+
+<p>Holographic memory gives Hermes near-infinite memory by storing facts locally:</p>
+
+<pre><code class="language-bash">hermes memory setup</code></pre>
+
+<p>Select "holographic" from the memory provider list and configure the SQLite database path.</p>
+
+<h2>Level 7: Transform into an MCP Server for External Tools</h2>
+
+<p>Expose Hermes as a Multi-Client Protocol (MCP) server to let tools like Claude Code interact with it:</p>
+
+<pre><code class="language-bash">hermes mcp serve</code></pre>
+
+<p>Then connect from Claude Code to list available Hermes tools:</p>
+
+<pre><code class="language-bash">claude mcp hermes --list-tools</code></pre>
+
+<p>You can now send commands to Hermes via Claude Code, reading Discord messages or triggering backups.</p>
+
+<h2>Conclusion</h2>
+
+<p>By following these seven levels, you've transformed Hermes Agent from a basic AI tool into a powerful, automated system tailored for your overseas projects. Whether you're managing a global team on Discord, automating backups, or building complex workflows, Hermes Agent provides the flexibility and power to scale your AI operations. For more on AI agent orchestration, check <a href="/article/agent-skill-harness-explained">Agent, Skill, and Harness explained</a> and <a href="/article/claude-code-mcp-configuration">Claude Code MCP configuration</a>.</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: Can I run Hermes Agent on a regular computer instead of a VPS?</h3>
+<p>Yes, Hermes Agent can run on any system with Python installed. However, for 24/7 availability, Discord integration, and scheduled tasks, a VPS is strongly recommended. A basic $5/month VPS is sufficient for most use cases.</p>
+
+<h3>Q: What's the cost of running Hermes Agent?</h3>
+<p>Hermes Agent itself is free and open-source. The main costs are: VPS hosting ($5-20/month), LLM API usage (varies by provider), and optional OpenRouter subscription. Using local models can reduce API costs significantly.</p>
+
+<h3>Q: How does Hermes Agent compare to other AI agent frameworks?</h3>
+<p>Hermes Agent stands out for its progressive configuration levels&mdash;you start simple and scale up. Unlike rigid frameworks, it offers Discord integration, Kanban task management, holographic memory, and MCP server support out of the box, making it one of the most versatile open-source agent frameworks available.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Agent, Skill, and Harness Explained &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI教程 &middot; 难度：中级</p>
+
+
+<pre><code class="language-bash">ssh root@your_vps_ip</code></pre>
+
+<pre><code class="language-bash">curl -fsSL https://github.com/NousResearch/hermes-agent/raw/main/scripts/install.sh | bash</code></pre>
+
+<pre><code class="language-bash">hermes</code></pre>
+
+<pre><code class="language-bash">hermes chat</code></pre>
+
+<pre><code class="language-bash">hermes gateway setup
+hermes gateway start</code></pre>
+
+<pre><code class="language-bash">hermes update
+hermes curator status</code></pre>
+
+<pre><code class="language-bash">hermes config set GITHUB_TOKEN your_github_token
+hermes cron list</code></pre>
+
+<pre><code class="language-bash">hermes memory setup</code></pre>
+
+<pre><code class="language-bash">hermes mcp serve</code></pre>
+
+<pre><code class="language-bash">claude mcp hermes --list-tools</code></pre>
+
+<p><strong>你将学到：</strong> Hermes Agent的七级渐进式配置&mdash;从基础VPS部署到高级MCP服务器集成，实现强大的AI自动化。</p>
+</div>
+
+<p>在AI代理快速发展的领域中，Hermes Agent作为一个强大的开源工具脱颖而出，它可以从一个基本聊天机器人转变为具有高级功能的强大后端系统。本指南将带你了解配置Hermes Agent的七个级别，提供实用的可操作步骤，帮助你充分发挥其在海外项目中的潜力。</p>
+
+<p>Hermes Agent由Nous Research开发，支持多种推理提供商，包括OpenRouter和ChatGPT Plus。它的7级配置体系从基础VPS部署开始，逐步扩展到Discord集成、Curator优化、定时任务自动化、看板任务管理、全息长期记忆和MCP服务器转换。对于出海项目，这种渐进式架构非常适合团队逐步构建AI自动化能力。</p>
+
+<h2>Level 1: 在VPS上基础安装</h2>
+
+<p>在专用的虚拟专用服务器（VPS）上部署Hermes Agent是基础。首先通过SSH连接到VPS，运行一键安装命令，然后初始化设置向导选择推理提供商。最后通过<code>hermes chat</code>命令测试安装。</p>
+
+<h2>Level 2: 集成Discord</h2>
+
+<p>通过Discord Developer Portal创建自定义Discord机器人，配置机器人权限，邀请到服务器，然后使用<code>hermes gateway setup</code>命令将Hermes连接到Discord。完成后在Discord服务器中@Hermes-Agent即可收到响应。</p>
+
+<h2>Level 3: 使用Curator优化</h2>
+
+<p>Curator功能自动管理未使用的技能以节省token。默认设置下，技能在30天后标记为过时，90天后自动删除。这可以防止上下文膨胀和不必要的token消耗。更新Hermes后使用<code>hermes curator status</code>查看状态。</p>
+
+<h2>Level 4: 定时任务自动化</h2>
+
+<p>使用cron任务自动备份Hermes数据到GitHub。创建私有GitHub仓库和Personal Access Token，配置<code>GITHUB_TOKEN</code>环境变量，然后通过Hermes创建每日备份任务。使用<code>hermes cron list</code>验证任务已正确配置。</p>
+
+<h2>Level 5: 看板任务管理</h2>
+
+<p>Hermes的看板功能可视化和管理多代理工作流，就像一个虚拟开发团队。通过Web UI（通常在<code>http://your_vps_ip:8080</code>）创建和分配任务。例如，内容创建流水线可以包含研究代理、分析师代理和写作代理。</p>
+
+<p>结合我们的<a href="/article/harness-automating-video-creation">Harness自动化视频创作指南</a>了解更多工作流自动化方法。</p>
+
+<h2>Level 6: 实现全息长期记忆</h2>
+
+<p>全息记忆通过本地存储事实信息为Hermes提供近乎无限的记忆能力。运行<code>hermes memory setup</code>命令，选择"holographic"记忆提供商，配置SQLite数据库路径和向量维度。</p>
+
+<h2>Level 7: 转换为MCP服务器</h2>
+
+<p>将Hermes暴露为多客户端协议（MCP）服务器，让Claude Code等工具与其交互。运行<code>hermes mcp serve</code>启动MCP服务器，然后从Claude Code连接并列出可用的Hermes工具。</p>
+
+<p>如需了解MCP的更多信息，请参考<a href="/article/claude-code-mcp-configuration">Claude Code MCP配置指南</a>和<a href="/article/ditching-mcp-for-cli">为什么开发者用CLI取代MCP</a>。</p>
+
+<h2>总结</h2>
+
+<p>通过这七个级别，你已经将Hermes Agent从基本AI工具转变为针对海外项目量身定制的强大自动化系统。无论你在Discord上管理全球团队、自动化备份还是构建复杂工作流，Hermes Agent都提供了扩展AI运营所需的灵活性和能力。同时查看<a href="/article/deerflow-multi-agent-tool">DeerFlow多代理工具</a>和<a href="/article/6-must-have-openclaw-skills">OpenClaw必备技能</a>了解更多AI自动化方案。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: 可以在普通电脑上运行Hermes Agent而不使用VPS吗？</h3>
+<p>可以，Hermes Agent可以在任何安装了Python的系统上运行。但对于24/7可用性、Discord集成和定时任务，强烈推荐使用VPS。基础的$5/月VPS即可满足大多数使用场景。</p>
+
+<h3>Q: 运行Hermes Agent的成本是多少？</h3>
+<p>Hermes Agent本身是免费开源的。主要成本包括：VPS托管（$5-20/月）、LLM API使用费（因提供商而异）和可选的OpenRouter订阅。使用本地模型可以显著降低API成本。</p>
+
+<h3>Q: Hermes Agent与其他AI代理框架相比如何？</h3>
+<p>Hermes Agent以其渐进式配置级别脱颖而出&mdash;从简单开始逐步扩展。与其他框架不同，它开箱即用地提供Discord集成、看板任务管理、全息记忆和MCP服务器支持，是最通用的开源代理框架之一。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解释 &rarr;</a></p>
+</div>`,
+  },
+  "vibe-trading-hku-financial-agent": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI News &middot; Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> A deep dive into HKU's open-source Vibe-Trading financial Agent OS&mdash;its architecture, 30+ tools, 72 skills, 452 alpha factors, and 33-agent collaboration framework.</p>
+</div>
+
+<p>In the realm of financial technology, Hong Kong University's open-source project <strong>Vibe-Trading</strong> has emerged as a game-changer. This financial Agent Operating System (OS) has garnered over 7,000 stars on GitHub within just a month of its release, showcasing its rapid adoption and potential. Let's break down its architecture, functionalities, and practical applications for global financial professionals.</p>
+
+<h2>What is Vibe-Trading?</h2>
+
+<p>Vibe-Trading is not a traditional financial tool&mdash;it's a <strong>financial Agent OS</strong>. Unlike standard software, it operates as an intelligent system where you simply give a command (e.g., "Analyze Moutai's stock performance"), and the Agent autonomously determines which tools to use, what code to write, which data to fetch, and how to run backtests. It's designed to handle cross-market analyses, supporting regions like A-shares, US stocks, and Hong Kong stocks seamlessly.</p>
+
+<h2>Core Architecture &amp; Components</h2>
+
+<h3>1. Multi-Layered Tool Ecosystem</h3>
+
+<p>Vibe-Trading boasts <strong>30+ tools</strong> that act as the system's "hands and feet." These cover backtesting engines for different markets, code execution environments (sandboxes), knowledge loading modules, shadow account analysis, and multi-agent collaboration frameworks.</p>
+
+<pre><code class="language-python"># Example prompt to analyze a stock with dual moving averages
+prompt = "Analyze Moutai's stock performance over the past 3 years using a dual moving average strategy. Provide backtest results."</code></pre>
+
+<h3>2. 72-Skill Knowledge Base</h3>
+
+<p>The system includes <strong>72 specialized skills</strong>&mdash;a professional knowledge repository covering data API integrations, technical analysis frameworks, strategy templates, and workflow guides. When the Agent detects relevant keywords in your prompt, it automatically taps into these skills.</p>
+
+<h3>3. 452 Alpha Factors</h3>
+
+<p>For quantitative analysts, Vibe-Trading offers <strong>452 stock selection factors</strong> across four academic systems: 101 from classic financial theories, 191 tailored for A-shares, 154 for HK stocks, and 6 from cutting-edge research.</p>
+
+<pre><code class="language-python"># Fetch and analyze factors for a stock
+factors = vibe_trading.get_factors(stock="Moutai", market="A-shares",
+                                   categories=["valuation", "momentum"])
+analysis = vibe_trading.analyze_factors(factors)
+print(analysis.summary)</code></pre>
+
+<h3>4. 33-Agent Team Collaboration</h3>
+
+<p>Vibe-Trading operates with a <strong>team of 33 specialized Agents</strong>, mimicking a real-world investment research department. When you request an analysis, the system deploys relevant agents: macro industry chiefs, technical analysts, quantitative researchers, and risk management experts&mdash;all working in tandem.</p>
+
+<h2>How It Works: The Think-Act-Observe Loop</h2>
+
+<p>Vibe-Trading follows a <strong>React-style loop</strong> to deliver results:</p>
+
+<ol>
+<li><strong>Think</strong>: The Agent parses your request and decides on the next steps.</li>
+<li><strong>Act</strong>: It executes the plan&mdash;writing code, fetching data, running backtests.</li>
+<li><strong>Observe</strong>: It evaluates the results. If unsatisfied, it loops back to "Think" (up to 50 iterations).</li>
+</ol>
+
+<pre><code class="language-python">def analyze_stock(stock, strategy):
+    agent = VibeTradingAgent()
+    plan = agent.think(stock, strategy)
+    result = agent.act(plan)
+    while not agent.observe(result) and agent.iterations < 50:
+        plan = agent.think(stock, strategy, result)
+        result = agent.act(plan)
+    return result
+
+moutai_result = analyze_stock("Moutai", "dual_moving_average")
+print(moutai_result.backtest_metrics)</code></pre>
+
+<h2>Practical Use Cases</h2>
+
+<h3>1. Strategy Development &amp; Backtesting</h3>
+
+<pre><code class="language-python">prompt = "Create a Python strategy for Moutai using RSI and MACD indicators.
+          Backtest it over the past 3 years and return annual return,
+          max drawdown, and Sharpe ratio."
+strategy_result = vibe_trading.execute(prompt)
+print(strategy_result.metrics)</code></pre>
+
+<h3>2. Shadow Account Analysis</h3>
+
+<pre><code class="language-python">trade_data = load_trade_history("my_trades.csv")
+shadow_analysis = vibe_trading.analyze_shadow_account(trade_data)
+print(shadow_analysis.profit_patterns)
+print(shadow_analysis.improvement_recommendations)</code></pre>
+
+<h3>3. Cross-Market Research</h3>
+
+<pre><code class="language-python">prompt = "Compare Tencent's performance in HK and US markets over
+          the past year. Use fundamental and technical factors."
+cross_market_report = vibe_trading.generate_report(prompt)
+print(cross_market_report.summary)</code></pre>
+
+<h2>Why Vibe-Trading Stands Out</h2>
+
+<ul>
+<li><strong>No Configuration Hassle</strong>: Tools and factors are pre-integrated&mdash;simply ask, and the Agent handles the rest.</li>
+<li><strong>Continuous Iteration</strong>: The project is actively updated with new features and markets added regularly.</li>
+<li><strong>Comprehensive Knowledge</strong>: The 72-skill library and 452 factors cover both mainstream and niche financial analyses.</li>
+</ul>
+
+<h2>Getting Started</h2>
+
+<pre><code class="language-bash">git clone https://github.com/HKUDS/Vibe-Trading.git
+cd Vibe-Trading
+pip install -r requirements.txt</code></pre>
+
+<pre><code class="language-python">from vibe_trading import VibeTradingAgent
+
+agent = VibeTradingAgent()
+response = agent.query("Analyze Moutai's stock using a value-investing approach.")
+print(response)</code></pre>
+
+<p>Vibe-Trading is revolutionizing how financial professionals conduct research and analysis. Its agent-driven architecture, rich toolset, and collaborative framework make it a must-try for anyone in the global financial sector. For more on AI agent applications, see <a href="/article/ai-for-freelancers">AI for freelancers</a> and <a href="/article/agent-skill-harness-explained">Agent framework explained</a>.</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: Do I need programming experience to use Vibe-Trading?</h3>
+<p>Basic Python knowledge is helpful, but the Agent OS is designed to minimize coding. You can interact with it using natural language commands, and it will write code, analyze data, and generate reports autonomously. However, understanding financial concepts is more important than programming skills.</p>
+
+<h3>Q: Which markets does Vibe-Trading support?</h3>
+<p>Vibe-Trading supports A-shares (China), US stocks, and Hong Kong stocks out of the box. Its 452 alpha factors are specifically tailored across these markets. The 33-agent team includes specialists familiar with each market's regulations and characteristics.</p>
+
+<h3>Q: Is Vibe-Trading suitable for retail investors or only institutions?</h3>
+<p>Both. While Vibe-Trading's architecture is institutional-grade (33 agents, 452 factors, 30+ tools), its natural language interface makes it accessible to retail investors. Start with simple commands like analyzing a single stock, then explore advanced features like shadow account analysis and multi-agent research as you become more comfortable.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/ai-for-freelancers">AI for Freelancers: Practical Tools &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 &middot; 难度：中级</p>
+
+
+<pre><code class="language-python">prompt = "Analyze Moutai&apos;s stock using a dual moving average strategy."</code></pre>
+
+<pre><code class="language-python">factors = vibe_trading.get_factors(stock="Moutai", market="A-shares",
+                                   categories=["valuation", "momentum"])
+analysis = vibe_trading.analyze_factors(factors)
+print(analysis.summary)</code></pre>
+
+<pre><code class="language-python">def analyze_stock(stock, strategy):
+    agent = VibeTradingAgent()
+    plan = agent.think(stock, strategy)
+    result = agent.act(plan)
+    while not agent.observe(result) and agent.iterations < 50:
+        plan = agent.think(stock, strategy, result)
+        result = agent.act(plan)
+    return result</code></pre>
+
+<pre><code class="language-python">prompt = "Create a Python strategy for Moutai using RSI and MACD."
+strategy_result = vibe_trading.execute(prompt)
+print(strategy_result.metrics)</code></pre>
+
+<pre><code class="language-python">trade_data = load_trade_history("my_trades.csv")
+shadow_analysis = vibe_trading.analyze_shadow_account(trade_data)
+print(shadow_analysis.profit_patterns)</code></pre>
+
+<pre><code class="language-python">prompt = "Compare Tencent&apos;s performance in HK and US markets."
+report = vibe_trading.generate_report(prompt)
+print(report.summary)</code></pre>
+
+<pre><code class="language-bash">git clone https://github.com/HKUDS/Vibe-Trading.git
+cd Vibe-Trading
+pip install -r requirements.txt</code></pre>
+
+<pre><code class="language-python">from vibe_trading import VibeTradingAgent
+agent = VibeTradingAgent()
+response = agent.query("Analyze Moutai using a value-investing approach.")
+print(response)</code></pre>
+
+<p><strong>你将学到：</strong> 深入解析港大开源项目Vibe-Trading金融代理操作系统&mdash;其架构、30+工具、72项技能、452个Alpha因子和33代理协作框架。</p>
+</div>
+
+<p>在金融科技领域，香港大学（HKU）的开源项目<strong>Vibe-Trading</strong>已成为一个颠覆性的存在。这个金融代理操作系统（Agent OS）在发布后一个月内在GitHub上获得了超过7,000个星标，展示了其快速被采用和潜力。本文将深入解析其架构、功能和对全球金融专业人士的实际应用。</p>
+
+<p>Vibe-Trading由港大数据科学实验室开发，采用React-style循环工作方式，通过Think-Act-Observe三个阶段自主完成金融分析任务。它支持A股、美股和港股的跨市场分析，拥有452个Alpha因子覆盖四大金融学术体系，33个专业代理模拟真实投资研究部门。无论是策略开发和回测，还是影子账户分析和跨市场研究，Vibe-Trading都能以自然语言命令驱动。</p>
+
+<h2>核心架构与组件</h2>
+
+<h3>1. 多层次工具生态系统</h3>
+
+<p>Vibe-Trading拥有<strong>30+工具</strong>，涵盖不同市场的回测引擎、代码执行环境（沙箱）、知识加载模块、影子账户分析和多代理协作框架。只需一个简单的提示，Agent就能自主决定使用哪些工具。</p>
+
+<h3>2. 72项技能知识库</h3>
+
+<p>系统包含<strong>72项专业技能</strong>，覆盖数据API集成、技术分析框架、策略模板和工作流指南。当Agent在提示中检测到相关关键词时，会自动调用这些技能。这种设计确保了即使是复杂查询也能得到专业的分析结果。</p>
+
+<h3>3. 452个Alpha因子</h3>
+
+<p>提供<strong>452个选股因子</strong>，跨越四大金融学术体系：101个经典金融理论因子、191个A股定制因子、154个港股因子和6个前沿研究因子。这些因子使Vibe-Trading能够进行深入的量化建模和分析。</p>
+
+<h3>4. 33代理团队协作</h3>
+
+<p>Vibe-Trading的<strong>33个专业代理</strong>模拟真实投资研究部门。当请求分析时，系统会部署相关代理：宏观行业主管、技术分析师、量化研究员和风险管理专家协同工作。如需了解多代理系统的更多信息，请参考<a href="/article/deerflow-multi-agent-tool">DeerFlow并行多代理工具</a>。</p>
+
+<h2>Think-Act-Observe循环</h2>
+
+<p>Vibe-Trading的React-style循环确保高质量输出。Agent首先解析请求并决定下一步行动（Think），然后执行计划（Act），最后评估结果（Observe）。如果不满意，会循环回到Think阶段（最多50次迭代）。这种循环保证了即使在复杂分析中也能获得高质量结果。</p>
+
+<h2>实际应用场景</h2>
+
+<p>Vibe-Trading支持多种实际应用场景：策略开发和回测（使用代码沙箱原型设计新策略）、影子账户分析（上传真实交易记录识别盈亏模式）、跨市场研究（使用区域特定规则分析不同市场的股票）。</p>
+
+<p>查看我们的<a href="/article/ai-for-freelancers">AI自由职业者工具指南</a>了解如何将AI代理应用于更多业务场景。</p>
+
+<h2>Vibe-Trading的突出优势</h2>
+
+<ul>
+<li><strong>零配置</strong>：工具和因子预集成，只需提问，Agent处理其余</li>
+<li><strong>持续迭代</strong>：项目定期更新，不断添加新功能和新市场</li>
+<li><strong>全面知识</strong>：72项技能和452个因子覆盖主流和小众金融分析</li>
+<li><strong>学术支持</strong>：由港大研究团队开发，基于扎实的金融理论基础</li>
+</ul>
+
+<p>了解更多AI代理在金融领域的应用，请阅读<a href="/article/agent-skill-harness-explained">Agent、Skill和Harness解释</a>和<a href="/article/ai-workforce-virtual-employees">AI劳动力虚拟员工</a>指南。</p>
+
+<h2>快速开始</h2>
+
+<p>克隆GitHub仓库，安装依赖，然后就可以使用自然语言命令进行金融分析了。Vibe-Trading正在改变金融专业人士进行研究和分析的方式，其代理驱动的架构、丰富的工具集和协作框架使其成为全球金融领域必试的工具。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: 使用Vibe-Trading需要编程经验吗？</h3>
+<p>基础的Python知识有帮助，但Agent OS设计为最小化编码需求。你可以使用自然语言命令与系统交互，它会自主编写代码、分析数据和生成报告。理解金融概念比编程技能更重要。</p>
+
+<h3>Q: Vibe-Trading支持哪些市场？</h3>
+<p>Vibe-Trading开箱即用支持A股、美股和港股。其452个Alpha因子专门针对这些市场定制。33代理团队包括熟悉每个市场法规和特点的专家。</p>
+
+<h3>Q: Vibe-Trading适合个人投资者还是只适合机构？</h3>
+<p>两者都适合。虽然Vibe-Trading的架构是机构级的（33个代理、452个因子、30+工具），但其自然语言界面使个人投资者也能轻松使用。从简单的单支股票分析开始，随着熟悉度提高，逐步探索影子账户分析和多代理研究等高级功能。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ai-for-freelancers">AI自由职业者实用工具 &rarr;</a></p>
+</div>`,
+  }
+
 };
