@@ -15786,6 +15786,1170 @@ print(response)</code></pre>
 <div class="next-step">
 <p><strong>下一篇：</strong> <a href="/article/ai-for-freelancers">AI自由职业者实用工具 &rarr;</a></p>
 </div>`,
-  }
+  },
 
+  "hermes-agent-vs-openclaw-comparison": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Comparisons &middot; Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> An 8-round practical comparison of Hermes Agent vs OpenClaw covering speed, token efficiency, user preference learning, implicit learning, and the background review mechanism that enables self-evolution.</p>
+</div>
+
+<p>In the rapidly evolving landscape of AI agents, two tools have been making waves: Hermes Agent and OpenClaw. Both offer robust capabilities, but how do they stack up in real-world scenarios? Let&rsquo;s dive into an 8-round practical test to find out, focusing on speed, token efficiency, ability to learn user preferences, and self-evolution.</p>
+
+<h2>Experimental Setup: A Level Playing Field</h2>
+
+<p>To ensure fairness, we created brand-new agents for both Hermes Agent and OpenClaw. For OpenClaw, we kept the workspace files default and cleared the <code>source.md</code> file. Similarly, for Hermes Agent, we created a new profile and cleared the corresponding configuration file, leaving other files untouched. Both agents used GPT-5.4 with the same reasoning intensity set to &ldquo;high&rdquo;. The task was to convert video scripts into Mermaid mind maps.</p>
+
+<h2>Round 1: Speed and Token Consumption</h2>
+
+<p>In the first round, we tasked both agents with converting a video script into a mind map. Hermes Agent completed the task <strong>much faster</strong> and consumed only 13K tokens. OpenClaw, on the other hand, took longer and used 24K tokens&mdash;nearly double that of Hermes Agent.</p>
+
+<pre><code class="language-plaintext"># For Hermes Agent
+hermes run "Convert the following video script into a concise Mermaid mind map."
+
+# For OpenClaw
+openclaw task "Transform the video script into a Mermaid mind map."</code></pre>
+
+<h2>Round 2: Following Explicit Instructions</h2>
+
+<p>We then gave an explicit instruction: &ldquo;Future mind maps must be concise, with no more than 3 points per node.&rdquo; Both agents were expected to store this instruction in their memory. In the second round, with a new script, Hermes Agent again delivered the result faster (14.9K tokens) compared to OpenClaw (27K tokens). Both followed the rule, but Hermes Agent&rsquo;s output was noticeably more concise and aligned with the requirement.</p>
+
+<p>When checking their memory storage:</p>
+
+<ul>
+<li>OpenClaw saved the instruction in a daily memory file (<code>20260414.md</code>), treating it as a daily log.</li>
+<li>Hermes Agent stored it in the <code>USER.md</code> file, classifying it as a long-term user preference.</li>
+</ul>
+
+<p>This difference is crucial. Long-term preferences should be in a stable user profile, making Hermes Agent&rsquo;s approach more effective here.</p>
+
+<h2>Rounds 3-8: Implicit Learning and Self-Evolution</h2>
+
+<p>Next, we tested implicit learning&mdash;no explicit &ldquo;remember&rdquo; instructions, just repeated corrections. We wanted the agents to learn that mind map main nodes should be in English and content in Chinese.</p>
+
+<ul>
+<li><strong>Rounds 3-6</strong>: Neither agent fully grasped the preference.</li>
+<li><strong>Round 7-8</strong>: Hermes Agent finally produced mind maps with English main nodes and Chinese content, consistently meeting the requirement. OpenClaw failed to adapt.</li>
+</ul>
+
+<p>To see how Hermes Agent learned this, we checked its memory. In <code>USER.md</code>, we found:</p>
+
+<pre><code class="language-markdown">- For Mermaid mind maps, Ti prefers major/top-level nodes in English and specific content in Chinese.</code></pre>
+
+<p>OpenClaw&rsquo;s memory files showed no such update.</p>
+
+<h2>The Secret Behind Hermes Agent&rsquo;s Learning: Background Review Mechanism</h2>
+
+<p>Hermes Agent has a built-in <strong>background review mechanism</strong>. It counts conversations, and every 10th conversation triggers a review process:</p>
+
+<ol>
+<li>A new AI agent is spawned in the background.</li>
+<li>It reviews the conversation history.</li>
+<li>It uses a specific prompt to identify user preferences or explicit instructions:</li>
+</ol>
+
+<pre><code class="language-plaintext">Review the conversation above and consider saving to memory if appropriate.
+Focus on:
+1. Has the user revealed things about themselves&mdash;their persona, desires, preferences, or personal details worth remembering?
+2. Has the user expressed expectations about how you should behave, their work style, or ways they want you to operate?
+If something stands out, save it using the memory tool.
+If nothing is worth saving, just say "Nothing to save" and stop.</code></pre>
+
+<ol start="4">
+<li>If valuable information is found, it&rsquo;s saved to <code>USER.md</code>, and the user is notified with &ldquo;User profile updated&rdquo;.</li>
+</ol>
+
+<p>In our test, after 10 conversations (across rounds 2-6), Hermes Agent&rsquo;s background review identified the repeated request for English main nodes and saved it as a long-term preference.</p>
+
+<h2>How to Install and Migrate to Hermes Agent</h2>
+
+<h3>Fresh Installation</h3>
+
+<p>To install Hermes Agent from scratch, open your terminal and run:</p>
+
+<pre><code class="language-bash">curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash</code></pre>
+
+<p>Follow the setup wizard:</p>
+
+<ol>
+<li>Choose &ldquo;Quick setup&rdquo; for provider, model, and messaging.</li>
+<li>Select your preferred AI model provider (e.g., OpenAI, Anthropic).</li>
+<li>Configure messaging apps (e.g., Telegram) if needed.</li>
+</ol>
+
+<p>Once installed, start Hermes Agent with:</p>
+
+<pre><code class="language-bash">hermes chat</code></pre>
+
+<h3>Migrating from OpenClaw</h3>
+
+<p>If you&rsquo;re already using OpenClaw, migration is seamless. Run the same installation command:</p>
+
+<pre><code class="language-bash">curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash</code></pre>
+
+<p>During setup, the wizard will detect OpenClaw and ask if you want to import data. Type <code>y</code> to import workspaces, skills, and other configurations.</p>
+
+<h2>Conclusion</h2>
+
+<p>Hermes Agent outperforms OpenClaw in <strong>speed, token efficiency, and implicit learning</strong>. Its background review mechanism allows it to evolve and adapt to user preferences over time. While OpenClaw supports more messaging apps and has a robust multi-agent system, Hermes Agent&rsquo;s self-evolution capabilities make it a strong choice for users seeking a more intuitive and adaptive AI assistant.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can Hermes Agent work offline or does it need constant internet access?</h3>
+<p>Hermes Agent requires an internet connection to communicate with its underlying AI model provider (e.g., OpenAI, Anthropic). However, once a session is established, it can cache certain operations locally. For full offline operation, you would need to configure it with a locally hosted model.</p>
+
+<h3>Q: Is Hermes Agent free to use or does it require a subscription?</h3>
+<p>Hermes Agent itself is open-source and free to install. However, you need to provide your own API keys for the underlying AI models, which may have usage costs. OpenClaw is also open-source with similar cost structures. The main difference is in token efficiency&mdash;Hermes Agent typically uses fewer tokens, which translates to lower operational costs.</p>
+
+<h3>Q: What is the background review mechanism and how often does it trigger?</h3>
+<p>The background review mechanism is a process that spawns a new AI agent every 10 conversations to review chat history for user preferences. If valuable information is found, it is saved to the user profile. This allows Hermes Agent to continuously learn and adapt without explicit instructions, making it more intuitive over time.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/mastering-hermes-agent-7-levels">Mastering Hermes Agent: A Practical Guide to 7 Levels of Configuration &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI对比 &middot; 难度：中级</p>
+<p><strong>你将学到：</strong> 通过8轮实战测试对比Hermes Agent与OpenClaw在速度、Token效率、用户偏好学习、隐式学习和自我进化背景审查机制方面的表现。</p>
+</div>
+
+<p>在AI代理快速发展的领域中，Hermes Agent和OpenClaw这两款工具引起了广泛关注。两者都提供强大的功能，但在实际场景中表现如何？让我们通过8轮实战测试来找出答案，重点关注速度、Token效率、学习用户偏好的能力和自我进化。</p>
+
+<h2>实验设置：公平竞争环境</h2>
+
+<p>为确保公平，我们为Hermes Agent和OpenClaw都创建了全新的代理。对于OpenClaw，我们保持工作区文件默认并清除了<code>source.md</code>文件。同样，对于Hermes Agent，我们创建了新配置文件并清除了对应的配置文件，其他文件保持不变。两个代理都使用GPT-5.4，推理强度设为&ldquo;高&rdquo;。任务是将视频脚本转换为Mermaid思维导图。</p>
+
+<h2>第1轮：速度和Token消耗</h2>
+
+<p>第一轮，我们要求两个代理将视频脚本转换为思维导图。Hermes Agent<strong>更快</strong>地完成了任务，仅消耗13K Token。而OpenClaw耗时更长，使用了24K Token&mdash;几乎是Hermes Agent的两倍。</p>
+
+<pre><code class="language-plaintext"># Hermes Agent命令
+hermes run "将以下视频脚本转换为简洁的Mermaid思维导图。"
+
+# OpenClaw命令
+openclaw task "将视频脚本转换为Mermaid思维导图。"</code></pre>
+
+<h2>第2轮：遵循明确指令</h2>
+
+<p>然后我们给出明确指令：&ldquo;未来的思维导图必须简洁，每个节点不超过3个要点。&rdquo;两个代理都应将此指令存储在记忆中。第二轮使用新脚本，Hermes Agent再次更快地交付结果（14.9K Token），而OpenClaw为27K Token。两者都遵循了规则，但Hermes Agent的输出明显更简洁，更符合要求。</p>
+
+<p>检查它们的记忆存储时发现：</p>
+
+<ul>
+<li>OpenClaw将指令保存在每日记忆文件（<code>20260414.md</code>）中，视为日常日志。</li>
+<li>Hermes Agent将其存储在<code>USER.md</code>文件中，归类为长期用户偏好。</li>
+</ul>
+
+<p>这一差异至关重要。长期偏好应存储在稳定的用户配置文件中，因此Hermes Agent的做法更有效。</p>
+
+<h2>第3-8轮：隐式学习和自我进化</h2>
+
+<p>接下来，我们测试隐式学习&mdash;没有明确的&ldquo;记住&rdquo;指令，只有重复的纠正。我们希望代理学会思维导图的主节点用英文、内容用中文。</p>
+
+<ul>
+<li><strong>第3-6轮</strong>：两个代理都没有完全掌握这一偏好。</li>
+<li><strong>第7-8轮</strong>：Hermes Agent最终生成了英文主节点和中文内容的思维导图，始终满足要求。OpenClaw未能适应。</li>
+</ul>
+
+<p>为了了解Hermes Agent是如何学习的，我们检查了它的记忆。在<code>USER.md</code>中，我们发现：</p>
+
+<pre><code class="language-markdown">- 对于Mermaid思维导图，Ti偏好主要/顶级节点使用英文，具体内容使用中文。</code></pre>
+
+<p>OpenClaw的记忆文件中没有类似更新。</p>
+
+<h2>Hermes Agent学习背后的秘密：背景审查机制</h2>
+
+<p>Hermes Agent内置了<strong>背景审查机制</strong>。它会统计对话次数，每第10次对话触发审查流程：</p>
+
+<ol>
+<li>在后台生成一个新的AI代理。</li>
+<li>它审查对话历史。</li>
+<li>它使用特定提示来识别用户偏好或明确指令。</li>
+<li>如果发现有价值的信息，则保存到<code>USER.md</code>，并通知用户&ldquo;用户资料已更新&rdquo;。</li>
+</ol>
+
+<p>在我们的测试中，经过10次对话（第2-6轮），Hermes Agent的背景审查识别了反复出现的英文主节点要求，并将其保存为长期偏好。</p>
+
+<h2>如何安装和迁移到Hermes Agent</h2>
+
+<h3>全新安装</h3>
+
+<p>在终端中运行安装命令，按照设置向导完成提供者、模型和消息应用的配置。安装完成后，使用<code>hermes chat</code>启动。</p>
+
+<pre><code class="language-bash">curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+hermes chat</code></pre>
+
+<h3>从OpenClaw迁移</h3>
+
+<p>运行相同的安装命令，设置向导会自动检测OpenClaw并询问是否导入数据。输入<code>y</code>即可导入工作区、技能和其他配置。迁移过程无缝且无需手动操作。</p>
+
+<h2>总结</h2>
+
+<p>Hermes Agent在<strong>速度、Token效率和隐式学习</strong>方面优于OpenClaw。其背景审查机制使其能够随时间进化和适应用户偏好。虽然OpenClaw支持更多消息应用并拥有强大的多代理系统，但Hermes Agent的自我进化能力使其成为寻求更直观、自适应的AI助手的用户的理想选择。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: Hermes Agent可以离线工作吗？还是需要持续联网？</h3>
+<p>Hermes Agent需要互联网连接才能与其底层AI模型提供者（如OpenAI、Anthropic）通信。不过，一旦建立会话，它可以在本地缓存某些操作。要实现完全离线操作，需要将其配置为使用本地托管的模型。</p>
+
+<h3>Q: Hermes Agent免费使用还是需要订阅？</h3>
+<p>Hermes Agent本身是开源且免费安装的。但你需要为底层AI模型提供自己的API密钥，这可能会产生使用费用。OpenClaw也是开源的，成本结构类似。主要区别在于Token效率&mdash;Hermes Agent通常使用更少的Token，这意味着更低的运营成本。</p>
+
+<h3>Q: 背景审查机制是什么？多久触发一次？</h3>
+<p>背景审查机制是每10次对话生成一个新AI代理来审查聊天历史的流程，用于发现用户偏好。如果发现有价值的信息，就保存到用户资料中。这使得Hermes Agent无需明确指令就能持续学习和适应，随着时间推移变得更加直观。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/mastering-hermes-agent-7-levels">掌握Hermes Agent：7级配置实用指南 &rarr;</a></p>
+</div>`,
+  },
+
+  "codegraph-local-semantic-code-intelligence": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools &middot; Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> How CodeGraph builds a semantic knowledge graph of your codebase, reduces AI agent tool calls by up to 70%, and integrates with Claude Code, Cursor, and other AI coding assistants.</p>
+</div>
+
+<p>For programmers, the quest for tools that enhance AI coding assistants&rsquo; intelligence is never-ending. Enter <strong>CodeGraph</strong>&mdash;an open-source project that transforms how AI agents understand and interact with codebases. With 17K+ stars on GitHub, it&rsquo;s quickly become a game-changer for developers leveraging AI in their workflow. Here&rsquo;s a deep dive into its capabilities, practical applications, and how to integrate it into your development pipeline.</p>
+
+<h2>What is CodeGraph?</h2>
+
+<p>CodeGraph is a <strong>semantic code knowledge graph tool</strong> built for AI coding agents like Claude Code, Cursor, Codex, OpenCode, and Hermes Agent. It pre-indexes your entire codebase&mdash;including function definitions, variable symbols, call graphs, and dependency chains&mdash;into a structured knowledge graph. This allows AI agents to query the graph directly instead of repeatedly scanning files, drastically reducing tool calls and token usage.</p>
+
+<h2>Why CodeGraph Matters</h2>
+
+<p>When AI coding agents (e.g., Claude Code) analyze a codebase, they traditionally use tools like <code>grep</code>, <code>glob</code>, or <code>Read</code> to scan files&mdash;each tool call consumes tokens and time. CodeGraph eliminates this inefficiency by providing a pre-built knowledge graph. Here&rsquo;s how it improves your workflow:</p>
+
+<ul>
+<li><strong>Fewer Tool Calls</strong>: AI agents query the graph instead of scanning files, reducing tool invocations by up to 70%.</li>
+<li><strong>Lower Costs</strong>: Benchmarks show an average 35% reduction in token usage.</li>
+<li><strong>Faster Responses</strong>: Speed increases by an average of 49%.</li>
+<li><strong>Local Security</strong>: Runs 100% locally, ensuring your code data never leaves your machine.</li>
+</ul>
+
+<h3>Benchmark Results</h3>
+
+<p>CodeGraph has been tested on 7 real-world open-source codebases across 7 programming languages. Here&rsquo;s a snapshot of its performance:</p>
+
+<table>
+<thead>
+<tr><th>Codebase</th><th>Language</th><th>Cost Savings</th><th>Token Reduction</th><th>Speed Improvement</th><th>Tool Call Reduction</th></tr>
+</thead>
+<tbody>
+<tr><td>VS Code</td><td>TypeScript</td><td>35%</td><td>73%</td><td>41%</td><td>72%</td></tr>
+<tr><td>Excalidraw</td><td>TypeScript</td><td>47%</td><td>73%</td><td>60%</td><td>86%</td></tr>
+<tr><td>Django</td><td>Python</td><td>34%</td><td>64%</td><td>59%</td><td>81%</td></tr>
+<tr><td>Tokyo</td><td>Rust</td><td>52%</td><td>81%</td><td>63%</td><td>89%</td></tr>
+</tbody>
+</table>
+
+<p>For example, in a large codebase with 4,000 files, CodeGraph reduces AI tool calls from 52 to just 3&mdash;an efficiency boost of 17x.</p>
+
+<h2>Practical Integration Guide</h2>
+
+<h3>Step 1: Install CodeGraph</h3>
+
+<pre><code class="language-bash">git clone https://github.com/colbymchenry/codegraph.git
+cd codegraph
+pip install -r requirements.txt</code></pre>
+
+<h3>Step 2: Index Your Codebase</h3>
+
+<pre><code class="language-bash">codegraph index /path/to/your/codebase</code></pre>
+
+<p>This command parses your code, extracts semantic information, and stores it in a local graph database.</p>
+
+<h3>Step 3: Connect to Your AI Agent</h3>
+
+<p>CodeGraph integrates seamlessly with popular AI coding agents. For example, to connect with Claude Code, add the following configuration to your agent&rsquo;s setup:</p>
+
+<pre><code class="language-python">from codegraph import CodeGraphClient
+
+client = CodeGraphClient()
+agent = ClaudeCodeAgent(codegraph_client=client)
+
+# Example query
+response = agent.ask("Explain the architecture of the authentication module.")
+print(response)</code></pre>
+
+<h3>Step 4: Verify Local Execution</h3>
+
+<pre><code class="language-bash">codegraph status</code></pre>
+
+<p>You should see a message confirming &ldquo;Local mode enabled&mdash;no external data transfers.&rdquo;</p>
+
+<h2>Supported Agents and Languages</h2>
+
+<p>CodeGraph works out-of-the-box with:</p>
+
+<ul>
+<li><strong>AI Coding Agents</strong>: Claude Code, Cursor, Codex CLI, OpenCode, Hermes Agent</li>
+<li><strong>Programming Languages</strong>: TypeScript, Python, Rust, Java, Go, and more (with expanding support)</li>
+</ul>
+
+<h2>Real-World Use Case: Debugging a Large Codebase</h2>
+
+<p>Imagine you&rsquo;re working on a 4,000-file TypeScript project and need to debug a dependency issue. Without CodeGraph, your AI agent might make 52 tool calls to scan files. With CodeGraph:</p>
+
+<pre><code class="language-python"># Query the knowledge graph for dependency issues
+query = "Find all circular dependencies in the authentication service."
+result = agent.ask(query)
+print(result)</code></pre>
+
+<p>The AI agent queries the pre-built graph and returns results in seconds, with only 3 tool calls.</p>
+
+<h2>Conclusion</h2>
+
+<p>CodeGraph is a must-have for developers looking to maximize the efficiency of AI coding assistants. Its ability to pre-index codebases into a semantic knowledge graph reduces costs, speeds up responses, and enhances security&mdash;all while working seamlessly with popular AI tools. Whether you&rsquo;re debugging, refactoring, or architecting, CodeGraph ensures your AI agent works smarter, not harder.</p>
+
+<p>To get started, visit the <a href="https://github.com/colbymchenry/codegraph" target="_blank" rel="noopener">CodeGraph GitHub repository</a> and integrate it into your development workflow today.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Does CodeGraph work with any programming language?</h3>
+<p>CodeGraph currently supports TypeScript, Python, Rust, Java, and Go with expanding support for more languages. The tool uses language-specific parsers to extract semantic information, so languages with well-defined syntax trees are prioritized. Check the GitHub repository for the latest language support updates.</p>
+
+<h3>Q: How much disk space does CodeGraph&rsquo;s index require?</h3>
+<p>The index size depends on your codebase size. For a typical project with thousands of files, the knowledge graph index takes roughly 5-10% of the original codebase size. For example, a 100MB codebase might produce a 5-10MB index file, making it efficient for both storage and retrieval.</p>
+
+<h3>Q: Can I use CodeGraph without AI coding agents, just for code analysis?</h3>
+<p>Yes. CodeGraph&rsquo;s knowledge graph can be queried directly via its Python API or CLI commands for standalone code analysis tasks like finding circular dependencies, visualizing call graphs, or tracing symbol usage across your project&mdash;even without an AI agent attached.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/6-ai-tools-dominating-github">6 AI Tools Dominating GitHub to Take Over Your Workflow &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI工具 &middot; 难度：中级</p>
+<p><strong>你将学到：</strong> CodeGraph如何构建代码库的语义知识图谱，将AI代理工具调用减少70%，以及与Claude Code、Cursor等AI编程助手的集成方法。</p>
+</div>
+
+<p>对于程序员来说，寻找能增强AI编程助手智能的工具是永无止境的追求。<strong>CodeGraph</strong>&mdash;一个开源项目&mdash;正在彻底改变AI代理理解和交互代码库的方式。它在GitHub上拥有超过17,000颗星标，迅速成为利用AI进行开发的游戏规则改变者。本文将深入探讨其功能、实际应用以及如何将其集成到你的开发流程中。</p>
+
+<h2>什么是CodeGraph？</h2>
+
+<p>CodeGraph是一个<strong>语义代码知识图谱工具</strong>，专为Claude Code、Cursor、Codex、OpenCode和Hermes Agent等AI编程代理构建。它将你的整个代码库（包括函数定义、变量符号、调用图和依赖链）预索引到结构化知识图谱中。这使得AI代理可以直接查询图谱，而不是反复扫描文件，大幅减少工具调用和Token使用。</p>
+
+<h2>为什么CodeGraph重要</h2>
+
+<p>当AI编程代理（如Claude Code）分析代码库时，传统上使用<code>grep</code>、<code>glob</code>或<code>Read</code>等工具扫描文件&mdash;每次工具调用都消耗Token和时间。CodeGraph通过提供预构建的知识图谱消除了这种低效。以下是它如何改善你的工作流程：</p>
+
+<ul>
+<li><strong>更少的工具调用</strong>：AI代理直接查询图谱而不是扫描文件，减少高达70%的工具调用。</li>
+<li><strong>更低的成本</strong>：基准测试显示Token使用量平均减少35%。</li>
+<li><strong>更快的响应</strong>：速度平均提升49%。</li>
+<li><strong>本地安全</strong>：100%本地运行，确保代码数据永不离开你的机器。</li>
+</ul>
+
+<h3>基准测试结果</h3>
+
+<p>CodeGraph已在7种编程语言的7个真实开源代码库上进行了测试。以下是其性能概览：</p>
+
+<table>
+<thead>
+<tr><th>代码库</th><th>语言</th><th>成本节省</th><th>Token减少</th><th>速度提升</th><th>工具调用减少</th></tr>
+</thead>
+<tbody>
+<tr><td>VS Code</td><td>TypeScript</td><td>35%</td><td>73%</td><td>41%</td><td>72%</td></tr>
+<tr><td>Excalidraw</td><td>TypeScript</td><td>47%</td><td>73%</td><td>60%</td><td>86%</td></tr>
+<tr><td>Django</td><td>Python</td><td>34%</td><td>64%</td><td>59%</td><td>81%</td></tr>
+<tr><td>Tokyo</td><td>Rust</td><td>52%</td><td>81%</td><td>63%</td><td>89%</td></tr>
+</tbody>
+</table>
+
+<p>例如，在一个有4,000个文件的大型代码库中，CodeGraph将AI工具调用从52次减少到仅3次&mdash;效率提升17倍。</p>
+
+<h2>实际集成指南</h2>
+
+<h3>第1步：安装CodeGraph</h3>
+
+<pre><code class="language-bash">git clone https://github.com/colbymchenry/codegraph.git
+cd codegraph
+pip install -r requirements.txt</code></pre>
+
+<h3>第2步：索引你的代码库</h3>
+
+<pre><code class="language-bash">codegraph index /path/to/your/codebase</code></pre>
+
+<h3>第3步：连接到你的AI代理</h3>
+
+<p>CodeGraph与流行的AI编程代理无缝集成。例如，要连接到Claude Code，将以下配置添加到你的代理设置中：</p>
+
+<pre><code class="language-python">from codegraph import CodeGraphClient
+
+client = CodeGraphClient()
+agent = ClaudeCodeAgent(codegraph_client=client)
+
+# 示例查询
+response = agent.ask("解释认证模块的架构。")
+print(response)</code></pre>
+
+<h3>第4步：验证本地执行</h3>
+
+<pre><code class="language-bash">codegraph status</code></pre>
+
+<h2>支持的代理和语言</h2>
+
+<p>CodeGraph开箱即用地支持Claude Code、Cursor、Codex CLI、OpenCode、Hermes Agent等AI编程代理，以及TypeScript、Python、Rust、Java、Go等编程语言，且支持范围在持续扩展。</p>
+
+<h2>实际用例：调试大型代码库</h2>
+
+<p>想象你正在一个4,000个文件的TypeScript项目中调试依赖问题。没有CodeGraph，AI代理可能需要52次工具调用来扫描文件。使用CodeGraph后，AI代理查询预构建的图谱，仅需3次工具调用就能在几秒内返回结果。</p>
+
+<pre><code class="language-python"># 查询知识图谱查找依赖问题
+query = "查找认证服务中的所有循环依赖。"
+result = agent.ask(query)
+print(result)</code></pre>
+
+<h2>结论</h2>
+
+<p>CodeGraph是希望最大化AI编程助手效率的开发者的必备工具。它将代码库预索引为语义知识图谱的能力降低了成本、加快了响应速度并增强了安全性&mdash;同时与流行的AI工具无缝协作。无论你是在调试、重构还是架构设计，CodeGraph都能确保你的AI代理更智能地工作，而不是更辛苦。</p>
+
+<p>要开始使用，请访问CodeGraph GitHub仓库并立即集成到你的开发工作流程中。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: CodeGraph支持所有编程语言吗？</h3>
+<p>CodeGraph目前支持TypeScript、Python、Rust、Java和Go，并正在扩展更多语言支持。该工具使用特定语言的解析器提取语义信息，因此具有良好定义语法树的语言会优先得到支持。请查看GitHub仓库获取最新的语言支持更新。</p>
+
+<h3>Q: CodeGraph的索引需要多少磁盘空间？</h3>
+<p>索引大小取决于你的代码库大小。对于一个有数千个文件的典型项目，知识图谱索引大约占原始代码库大小的5-10%。例如，一个100MB的代码库可能产生5-10MB的索引文件，在存储和检索方面都很高效。</p>
+
+<h3>Q: 我可以不使用AI编程代理，仅用于代码分析吗？</h3>
+<p>是的。CodeGraph的知识图谱可以通过其Python API或CLI命令直接查询，用于独立的代码分析任务，如查找循环依赖、可视化调用图或追踪项目中的符号使用情况&mdash;即使没有连接AI代理也能使用。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/6-ai-tools-dominating-github">统治GitHub的6大AI工具：接管你的工作流 &rarr;</a></p>
+</div>`,
+  },
+
+  "ditch-rag-llm-wiki-future": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI News &middot; Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> Why LLM Wiki outperforms traditional RAG for global knowledge management, and a step-by-step guide to building your own LLM Wiki with local semantic indexing, multilingual support, and cross-regional collaboration.</p>
+</div>
+
+<p>For developers and knowledge workers building overseas-facing tools, Retrieval-Augmented Generation (RAG) has long been the go-to for personal knowledge bases. But a game-changing alternative&mdash;<strong>LLM Wiki</strong>&mdash;is redefining the space. Unlike RAG&rsquo;s fragmented retrieval and high token costs, LLM Wiki offers centralized, semantic knowledge management with near-instant access to information. This guide breaks down why LLM Wiki outperforms RAG for global use cases, and how to build your own with practical, actionable steps.</p>
+
+<h2>Why LLM Wiki Beats RAG for Overseas Knowledge Management</h2>
+
+<p>RAG relies on vector databases to retrieve isolated chunks of data, leading to three critical pain points for global users:</p>
+
+<ul>
+<li><strong>High Latency</strong>: Cross-border vector database queries (e.g., from Asia to US servers) cause delays.</li>
+<li><strong>Token Waste</strong>: Repeatedly retrieving and processing chunks burns through tokens, increasing costs for international teams.</li>
+<li><strong>Context Fragmentation</strong>: RAG often fails to connect related information across regions (e.g., EU compliance rules vs. APAC market data).</li>
+</ul>
+
+<p>LLM Wiki solves these by:</p>
+
+<ul>
+<li><strong>Local Semantic Indexing</strong>: Stores knowledge in a graph-based wiki, enabling offline access and zero cross-border latency.</li>
+<li><strong>Contextual Linking</strong>: Automatically connects related data (e.g., a product manual with regional troubleshooting guides).</li>
+<li><strong>Low Token Usage</strong>: Preprocesses knowledge into structured entries, so LLMs only need to query the wiki&rsquo;s index&mdash;not raw data.</li>
+</ul>
+
+<h2>Step 1: Set Up LLM Wiki Environment</h2>
+
+<p>We&rsquo;ll use the open-source <code>llm-wiki</code> framework, optimized for global deployment and multi-language support.</p>
+
+<h3>1.1 Install Core Dependencies</h3>
+
+<pre><code class="language-bash"># Clone the LLM Wiki repository
+git clone https://github.com/llm-wiki/llm-wiki.git
+cd llm-wiki
+
+# Install dependencies (compatible with Linux/macOS/Windows)
+pip install -r requirements.txt
+npm install -g wiki-js  # For frontend management</code></pre>
+
+<h3>1.2 Configure Local/Cloud Deployment</h3>
+
+<pre><code class="language-bash"># Initialize LLM Wiki (local mode)
+llm-wiki init --mode local --data-dir ./wiki-data --language en,es,ja  # Support multi-language for global teams</code></pre>
+
+<h2>Step 2: Build Your Global Knowledge Base</h2>
+
+<h3>2.1 Import Data from Multiple Sources</h3>
+
+<pre><code class="language-python">from llm_wiki import WikiImporter
+
+# Initialize importer
+importer = WikiImporter(wiki_path="./wiki-data")
+
+# Import PDFs (e.g., EU GDPR docs, Japanese product manuals)
+importer.import_pdf(
+    file_path="eu-gdpr-manual.pdf",
+    category="Compliance/EU",
+    language="en"
+)
+importer.import_pdf(
+    file_path="jp-product-guide.pdf",
+    category="Product/Japan",
+    language="ja"
+)
+
+# Import Markdown notes (e.g., US market research)
+importer.import_markdown(
+    file_path="us-market-research.md",
+    category="Market/US",
+    language="en"
+)
+
+print("Data imported successfully!")</code></pre>
+
+<h3>2.2 Define Semantic Relationships</h3>
+
+<pre><code class="language-python">from llm_wiki import WikiGraph
+
+# Initialize knowledge graph
+wiki_graph = WikiGraph(wiki_path="./wiki-data")
+
+# Link EU GDPR to product compliance
+wiki_graph.add_link(
+    source_title="GDPR Data Processing Requirements",
+    target_title="Product X EU Compliance Checklist",
+    relationship="APPLIES_TO"
+)
+
+# Link Japanese product manual to regional troubleshooting
+wiki_graph.add_link(
+    source_title="Product X Japanese User Guide",
+    target_title="Japan Regional Troubleshooting Tips",
+    relationship="SUPPLEMENTS"
+)</code></pre>
+
+<h2>Step 3: Integrate with LLMs for Global Querying</h2>
+
+<h3>3.1 Query the Wiki with LLM Integration</h3>
+
+<pre><code class="language-python">from llm_wiki import LLMWikiClient
+import openai
+
+# Configure OpenAI API (for global access)
+openai.api_key = "YOUR_OPENAI_API_KEY"
+
+# Initialize LLM Wiki client
+client = LLMWikiClient(wiki_path="./wiki-data")
+
+# Example 1: Query EU compliance for Product X
+response = client.query(
+    prompt="What GDPR requirements apply to Product X in the EU?",
+    llm_model="gpt-4-turbo",
+    language="en"
+)
+print("EU Compliance Response:", response)
+
+# Example 2: Query Japanese troubleshooting for Product X
+response = client.query(
+    prompt="Product X No.日本語版でよく発生する問題と解決策は何ですか？",
+    llm_model="gpt-4-turbo",
+    language="ja"
+)
+print("Japanese Troubleshooting Response:", response)</code></pre>
+
+<h3>3.2 Batch Query for Global Teams</h3>
+
+<pre><code class="language-bash"># Run batch queries from a CSV file (multilingual support)
+llm-wiki batch-query --input ./regional-queries.csv --output ./answers.csv --model claude-3-opus</code></pre>
+
+<h2>Step 4: Deploy for Cross-Border Collaboration</h2>
+
+<h3>4.1 Start the Wiki Server</h3>
+
+<pre><code class="language-bash"># Launch web server (supports HTTPS for secure cross-border access)
+llm-wiki server --port 8080 --ssl-cert ./ssl/cert.pem --ssl-key ./ssl/key.pem</code></pre>
+
+<h3>4.2 Set Up Team Permissions</h3>
+
+<pre><code class="language-python">from llm_wiki import WikiAuth
+
+auth = WikiAuth(wiki_path="./wiki-data")
+# Add team member with EU Compliance access
+auth.add_user(
+    email="europe-team@example.com",
+    password="secure-password-123",
+    permissions=["read:Compliance/EU", "edit:Product/EU"]
+)
+# Add team member with Japanese market access
+auth.add_user(
+    email="japan-team@example.com",
+    password="secure-password-456",
+    permissions=["read:Product/Japan", "edit:Market/Japan"]
+)</code></pre>
+
+<h2>Practical Use Cases for Overseas Teams</h2>
+
+<ul>
+<li><strong>Multilingual Customer Support</strong>: Answer queries in 20+ languages using region-specific knowledge (e.g., Spanish for LATAM, Mandarin for China).</li>
+<li><strong>Cross-Border Compliance</strong>: Quickly retrieve GDPR, PIPL, or CCPA rules for regional projects.</li>
+<li><strong>Global Product Management</strong>: Link product docs to regional market needs (e.g., US voltage specs vs. EU standards).</li>
+<li><strong>Remote Team Collaboration</strong>: Share knowledge across time zones with zero latency (local indexing + cloud sync).</li>
+</ul>
+
+<h2>Pro Tips for Global Optimization</h2>
+
+<ul>
+<li><strong>Use Regional Endpoints</strong>: Connect LLMs to regional API endpoints (e.g., OpenAI EU, Anthropic Asia) to reduce latency.</li>
+<li><strong>Cache Common Queries</strong>: Store frequent answers (e.g., &ldquo;What is the warranty period in Japan?&rdquo;) to cut token costs.</li>
+<li><strong>Sync Offline</strong>: Enable offline mode for teams in low-internet regions&mdash;LLM Wiki works without constant connectivity.</li>
+</ul>
+
+<h2>Final Verdict: LLM Wiki &gt; RAG for Global Knowledge Bases</h2>
+
+<p>For overseas users, LLM Wiki eliminates RAG&rsquo;s latency, cost, and fragmentation issues while adding multilingual support and cross-regional collaboration. Whether you&rsquo;re building a personal knowledge base or a team tool for global operations, LLM Wiki delivers faster, cheaper, and more contextual access to information.</p>
+
+<p>Ready to get started? Clone the <a href="https://github.com/llm-wiki/llm-wiki" target="_blank" rel="noopener">LLM Wiki GitHub repo</a> and deploy your first global knowledge base today.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Is LLM Wiki suitable for individual users or only teams?</h3>
+<p>Both. For individual users, LLM Wiki functions as a personal knowledge base that can be deployed locally on a laptop. For teams, it supports multi-user access with role-based permissions and collaborative editing. The same architecture scales from single-user to enterprise use cases.</p>
+
+<h3>Q: Does LLM Wiki require an LLM API key to function?</h3>
+<p>Yes, for the querying and LLM integration features. However, the wiki&rsquo;s indexing, importing, and semantic linking features work without an API key. You can build and maintain your knowledge graph offline, then connect an LLM only when you need natural language querying capabilities.</p>
+
+<h3>Q: How does LLM Wiki handle data privacy for sensitive business documents?</h3>
+<p>LLM Wiki supports fully local deployment, meaning all data stays on your own infrastructure. Documents are indexed and stored locally, and when querying with an LLM, only the relevant indexed entries (not raw documents) are sent to the LLM API. For maximum privacy, you can pair LLM Wiki with a locally hosted open-source model.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/12-core-ai-concepts-guide">Master 12 Core Concepts of AI Large Models in One Guide &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI新闻 &middot; 难度：中级</p>
+<p><strong>你将学到：</strong> 为什么LLM Wiki在延迟更低、Token浪费更少和上下文关联方面优于传统RAG，以及如何使用本地语义索引、多语言支持和跨区域协作构建你自己的LLM Wiki。</p>
+</div>
+
+<p>对于构建面向海外工具的开发者和知识工作者来说，检索增强生成（RAG）长期以来一直是个人知识库的首选方案。但一个改变游戏规则的替代方案&mdash;<strong>LLM Wiki</strong>&mdash;正在重新定义这个领域。与RAG碎片化的检索和高Token成本不同，LLM Wiki提供集中化、语义化的知识管理，几乎可以即时访问信息。本指南将解析为什么LLM Wiki在海外用例中优于RAG，以及如何通过实际、可操作的步骤构建你自己的LLM Wiki。</p>
+
+<h2>为什么LLM Wiki在海外知识管理方面胜过RAG</h2>
+
+<p>RAG依赖向量数据库检索孤立的数据块，给全球用户带来三个关键痛点：</p>
+
+<ul>
+<li><strong>高延迟</strong>：跨境向量数据库查询（如从亚洲到美国服务器）导致延迟。</li>
+<li><strong>Token浪费</strong>：重复检索和处理数据块消耗大量Token，增加国际团队成本。</li>
+<li><strong>上下文碎片化</strong>：RAG经常无法跨区域连接相关信息（如欧盟合规规则与亚太市场数据）。</li>
+</ul>
+
+<p>LLM Wiki通过以下方式解决这些问题：</p>
+
+<ul>
+<li><strong>本地语义索引</strong>：将知识存储在基于图谱的Wiki中，实现离线访问和零跨境延迟。</li>
+<li><strong>上下文链接</strong>：自动连接相关数据（如产品手册与区域故障排除指南）。</li>
+<li><strong>低Token使用</strong>：将知识预处理为结构化条目，LLM只需查询Wiki的索引&mdash;而非原始数据。</li>
+</ul>
+
+<h2>第1步：设置LLM Wiki环境</h2>
+
+<p>我们将使用开源<code>llm-wiki</code>框架，针对全球部署和多语言支持进行了优化。</p>
+
+<pre><code class="language-bash"># 克隆LLM Wiki仓库
+git clone https://github.com/llm-wiki/llm-wiki.git
+cd llm-wiki
+
+# 安装依赖（兼容Linux/macOS/Windows）
+pip install -r requirements.txt
+npm install -g wiki-js  # 用于前端管理
+
+# 初始化LLM Wiki（本地模式）
+llm-wiki init --mode local --data-dir ./wiki-data --language en,es,ja</code></pre>
+
+<h2>第2步：构建你的全球知识库</h2>
+
+<p>支持从PDF、Markdown等多种来源导入数据，并定义语义关系来连接相关条目。</p>
+
+<pre><code class="language-python">from llm_wiki import WikiImporter, WikiGraph
+
+# 导入PDF文档（如欧盟GDPR文件、日本产品手册）
+importer = WikiImporter(wiki_path="./wiki-data")
+importer.import_pdf(file_path="eu-gdpr-manual.pdf", category="Compliance/EU", language="en")
+importer.import_pdf(file_path="jp-product-guide.pdf", category="Product/Japan", language="ja")
+
+# 定义语义关系
+wiki_graph = WikiGraph(wiki_path="./wiki-data")
+wiki_graph.add_link(
+    source_title="GDPR Data Processing Requirements",
+    target_title="Product X EU Compliance Checklist",
+    relationship="APPLIES_TO"
+)</code></pre>
+
+<h2>第3步：集成LLM进行全球查询</h2>
+
+<p>将LLM Wiki连接到GPT-4、Claude 3等模型，无需RAG向量数据库即可回答跨区域查询。</p>
+
+<pre><code class="language-python">from llm_wiki import LLMWikiClient
+import openai
+
+openai.api_key = "YOUR_OPENAI_API_KEY"
+client = LLMWikiClient(wiki_path="./wiki-data")
+
+# 查询欧盟合规要求
+response = client.query(
+    prompt="Product X在欧盟适用哪些GDPR要求？",
+    llm_model="gpt-4-turbo",
+    language="zh"
+)
+print("合规响应：", response)</code></pre>
+
+<h2>第4步：部署跨区域协作</h2>
+
+<p>使用HTTPS安全Web服务器启动LLM Wiki，设置团队权限以控制对区域数据的访问。</p>
+
+<pre><code class="language-bash"># 启动Web服务器
+llm-wiki server --port 8080 --ssl-cert ./ssl/cert.pem --ssl-key ./ssl/key.pem</code></pre>
+
+<pre><code class="language-python">from llm_wiki import WikiAuth
+
+auth = WikiAuth(wiki_path="./wiki-data")
+auth.add_user(
+    email="europe-team@example.com",
+    password="secure-password-123",
+    permissions=["read:Compliance/EU", "edit:Product/EU"]
+)</code></pre>
+
+<h2>海外团队的实用用例</h2>
+
+<ul>
+<li><strong>多语言客户支持</strong>：使用区域特定知识回答20+种语言的查询。</li>
+<li><strong>跨境合规</strong>：快速检索GDPR、PIPL或CCPA规则。</li>
+<li><strong>全球产品管理</strong>：将产品文档链接到区域市场需求。</li>
+<li><strong>远程团队协作</strong>：零延迟跨时区共享知识（本地索引+云同步）。</li>
+</ul>
+
+<h2>全球优化专业提示</h2>
+
+<ul>
+<li><strong>使用区域端点</strong>：连接到区域API端点（如OpenAI EU、Anthropic Asia）以减少延迟。</li>
+<li><strong>缓存常见查询</strong>：存储频繁答案以降低Token成本。</li>
+<li><strong>离线同步</strong>：为低互联网区域团队启用离线模式。</li>
+</ul>
+
+<h2>最终结论：LLM Wiki &gt; RAG</h2>
+
+<p>对于海外用户，LLM Wiki消除了RAG的延迟、成本和碎片化问题，同时增加了多语言支持和跨区域协作。无论是构建个人知识库还是全球运营的团队工具，LLM Wiki都能提供更快、更便宜、更有上下文的访问方式。准备好开始了吗？克隆LLM Wiki GitHub仓库，立即部署你的第一个全球知识库。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: LLM Wiki适合个人用户还是仅限团队使用？</h3>
+<p>两者都适合。对于个人用户，LLM Wiki可以作为部署在笔记本电脑上的个人知识库。对于团队，它支持基于角色的权限管理和协作编辑的多用户访问。相同的架构可以从单用户扩展到企业用例。</p>
+
+<h3>Q: LLM Wiki需要LLM API密钥才能运行吗？</h3>
+<p>查询和LLM集成功能需要API密钥。但Wiki的索引、导入和语义链接功能可以无需API密钥独立运行。你可以离线构建和维护知识图谱，仅在需要自然语言查询能力时才连接LLM。</p>
+
+<h3>Q: LLM Wiki如何处理敏感业务文档的数据隐私？</h3>
+<p>LLM Wiki支持完全本地部署，所有数据保留在你自己的基础设施上。文档在本地索引和存储，查询LLM时仅发送相关的索引条目（而非原始文档）到LLM API。为最大程度保护隐私，可以将LLM Wiki与本地托管的开源模型配对使用。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/12-core-ai-concepts-guide">一篇文章掌握AI大模型12个核心概念 &rarr;</a></p>
+</div>`,
+  },
+
+  "hermes-agent-8-features-smb": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools &middot; Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> The 8 game-changing features in Hermes Agent's latest update&mdash;including Computer Use, background task processing, long-term memory upgrades&mdash;and practical implementation steps for SMBs and solopreneurs.</p>
+</div>
+
+<p>Local AI tools like Hermes Agent are evolving at breakneck speed, and the latest update is a game-changer for small businesses and solo operators. In just one week, Hermes Agent rolled out 8 new features, delivering <strong>10x performance boosts</strong> and capabilities that bridge the gap between local AI and cloud-based giants like GPT-5. Let&rsquo;s break down the most impactful upgrades, practical use cases, and step-by-step implementations.</p>
+
+<h2>3 Must-Know Features for SMBs and Solopreneurs</h2>
+
+<h3>1. Computer Use: Human-Like Software Automation</h3>
+
+<p>Hermes Agent now operates software like a human&mdash;no more expensive system integrations. It can:</p>
+
+<ul>
+<li><strong>Excel Automation</strong>: Open spreadsheets, click cells, and input formulas autonomously.</li>
+<li><strong>ERP/CRM Management</strong>: Extract data from ERP systems and generate reports, or organize customer tags in CRM tools.</li>
+</ul>
+
+<p><em>Practical Example for SMBs</em>:
+Instead of hiring an IT team to build APIs for Excel-ERP integration (a process that could take months), simply instruct Hermes:</p>
+
+<pre><code class="language-plaintext">"Open the monthly sales Excel sheet, extract data from the ERP system, and generate a consolidated report with profit margins."</code></pre>
+
+<p>Hermes learns like a new intern&mdash;observe it once, and it handles the task independently afterward.</p>
+
+<h3>2. Background Task Processing</h3>
+
+<p>Run up to 100 tasks simultaneously in the background:</p>
+
+<ul>
+<li><strong>Use Case for Solopreneurs</strong>: Let Hermes review 100 client contracts overnight. When you wake up, all summaries and insights await you on the Kanban board.</li>
+</ul>
+
+<pre><code class="language-plaintext">"Hermes, process all pending client contracts in the background and update the Kanban board with statuses."</code></pre>
+
+<h3>3. Long-Term Memory Upgrade</h3>
+
+<p>Hermes now remembers <em>why</em> you made requests, not just <em>what</em>:</p>
+
+<ul>
+<li><strong>Example</strong>: If you ask for a &ldquo;polite follow-up email&rdquo; for a client, Hermes recalls the client was previously frustrated and adjusts the tone accordingly&mdash;something even seasoned employees might miss.</li>
+</ul>
+
+<h2>5 Additional Features (Quick Breakdown)</h2>
+
+<ul>
+<li><strong>10x Speed Boost</strong>: Same hardware, 10x faster task execution.</li>
+<li><strong>Grok + Social Media Integration</strong>: Automatically research and post on X (Twitter) via Grok&rsquo;s OAuth.</li>
+<li><strong>Native Coding</strong>: Writes code without relying on external tools&mdash;ideal for indie developers.</li>
+<li><strong>AI Video Generation</strong>: Creates basic videos (best for quick social media clips, not high-fidelity content like Sora 2).</li>
+<li><strong>Auto Kanban Boards</strong>: Manages project workflows visually&mdash;perfect for project managers.</li>
+</ul>
+
+<h2>Step-by-Step Demo: Automated Content Workflow</h2>
+
+<p>Let&rsquo;s walk through a real-world workflow where Hermes automates &ldquo;AI Hotspot Scanning&rdquo; and content topic selection:</p>
+
+<h3>Step 1: Update Hermes to the Latest Version</h3>
+
+<pre><code class="language-bash">hermes update --latest</code></pre>
+
+<p>Hermes handles the update autonomously.</p>
+
+<h3>Step 2: Configure API Integrations (e.g., X/Twitter)</h3>
+
+<ol>
+<li>Get an API key from <a href="https://developer.twitter.com/" target="_blank" rel="noopener">X&rsquo;s Developer Portal</a>.</li>
+<li>Add the key to Hermes&rsquo; config:</li>
+</ol>
+
+<pre><code class="language-plaintext">"Hermes, configure X API with key: YOUR_API_KEY_HERE"</code></pre>
+
+<h3>Step 3: Trigger the Automated Workflow</h3>
+
+<pre><code class="language-plaintext">"Run weekly AI hotspot scan:
+- Scrape official blogs and X threads.
+- Deploy 3 sub-agents to analyze trends.
+- Output 5 content topics to the Kanban board."</code></pre>
+
+<h3>Step 4: Review Results on the Web Kanban</h3>
+
+<p>Hermes generates a Kanban board with topics like:</p>
+
+<ul>
+<li>&ldquo;Top 5 AI Tools for SMBs This Week&rdquo;</li>
+<li>&ldquo;How Local AI Outperforms Cloud Models in Data Security&rdquo;</li>
+</ul>
+
+<h2>Actionable Steps for Two Audiences</h2>
+
+<h3>For SMB Owners</h3>
+
+<ol>
+<li><strong>Pilot Computer Use</strong>: Choose one painful task (e.g., expense report approval or weekly sales summaries). Let Hermes observe for a week, then take over.</li>
+<li><strong>Upgrade Your AI Assessment</strong>: Track performance before and after Hermes&mdash;measure time saved and errors reduced.</li>
+</ol>
+
+<h3>For Solopreneurs</h3>
+
+<ol>
+<li><strong>Automate Repetitive Tasks</strong>: Turn client follow-ups, content research, or email parsing into background tasks.</li>
+</ol>
+
+<pre><code class="language-plaintext">"Hermes, process all new client emails overnight and summarize action items."</code></pre>
+
+<ol start="2">
+<li><strong>Train Long-Term Memory</strong>: After each workflow, ask:</li>
+</ol>
+
+<pre><code class="language-plaintext">"Hermes, what part of this output did you do well? What needs improvement?"</code></pre>
+
+<p>Over time, Hermes becomes a virtual assistant that understands your preferences better than you do.</p>
+
+<h2>Why This Matters for Global Teams</h2>
+
+<p>While Hermes still trails cloud models like GPT-5 in raw power, its strengths&mdash;<strong>local data security, unlimited memory, and free access</strong>&mdash;make it indispensable for global teams. The speed of evolution means local AI is now competitive with cloud solutions in niche workflows, especially for businesses prioritizing data privacy and cost efficiency.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Is Hermes Agent really free to use for small businesses?</h3>
+<p>Yes, Hermes Agent is open-source and free to install and use. You only pay for the underlying AI model API calls if you choose a cloud model. For local models, there are no API costs at all. This makes it especially attractive for SMBs with tight budgets who still want powerful AI automation capabilities.</p>
+
+<h3>Q: Can Hermes Agent replace a full-time employee for task automation?</h3>
+<p>For specific, well-defined tasks, yes. Hermes Agent excels at automating repetitive digital workflows like data entry, report generation, email management, and content research. However, it works best as a force multiplier&mdash;handling the routine work so your human team can focus on strategic decisions, client relationships, and creative problem-solving.</p>
+
+<h3>Q: What hardware do I need to run Hermes Agent with local models?</h3>
+<p>For cloud-based models (GPT, Claude), any modern computer with internet access works. For local models, you&rsquo;ll need a GPU with at least 8GB VRAM for 7B parameter models, or 16GB+ for larger models. Hermes Agent can also run in CPU-only mode with smaller quantized models, though performance will be slower.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/mastering-hermes-agent-7-levels">Mastering Hermes Agent: A Practical Guide to 7 Levels of Configuration &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI工具 &middot; 难度：初级</p>
+<p><strong>你将学到：</strong> Hermes Agent最新更新中的8个革命性功能&mdash;包括电脑使用、后台任务处理、长期记忆升级&mdash;以及面向中小企业和个人创业者的实际实施步骤。</p>
+</div>
+
+<p>像Hermes Agent这样的本地AI工具正在以惊人的速度进化，最新更新对小型企业和个人创业者来说是一个游戏规则改变者。在一周内，Hermes Agent推出了8个新功能，实现了<strong>10倍的性能提升</strong>，弥合了本地AI与GPT-5等云端巨头之间的差距。让我们深入分析最具影响力的升级、实际用例和分步实施方案。</p>
+
+<h2>中小企业和个人创业者必知的3个功能</h2>
+
+<h3>1. 电脑使用：类人软件自动化</h3>
+
+<p>Hermes Agent现在可以像人类一样操作软件&mdash;无需昂贵的系统集成。它可以自主打开电子表格、点击单元格、输入公式，以及从ERP系统提取数据生成报告。对于中小企业来说，无需雇佣IT团队构建API集成，只需用自然语言指令告诉Hermes做什么即可。Hermes像新实习生一样学习&mdash;观察一次后就能独立处理任务。</p>
+
+<pre><code class="language-plaintext">"打开月度销售Excel表，从ERP系统提取数据，生成包含利润率的汇总报告。"</code></pre>
+
+<h3>2. 后台任务处理</h3>
+
+<p>同时在后台运行多达100个任务。个人创业者可以让Hermes在一夜之间审查100份客户合同，醒来时所有摘要和见解都在看板（Kanban）上等待着你。</p>
+
+<pre><code class="language-plaintext">"Hermes，在后台处理所有待处理的客户合同，并用状态更新看板。"</code></pre>
+
+<h3>3. 长期记忆升级</h3>
+
+<p>Hermes现在不仅能记住你要求了<em>什么</em>，还能记住<em>为什么</em>。例如，如果你要求给客户写一封&ldquo;礼貌的跟进邮件&rdquo;，Hermes会记得该客户之前感到不满，并相应调整语气&mdash;这是经验丰富的员工也可能忽略的细节。</p>
+
+<h2>5个额外功能（快速了解）</h2>
+
+<ul>
+<li><strong>10倍速度提升</strong>：相同硬件，任务执行速度快10倍。</li>
+<li><strong>Grok + 社交媒体集成</strong>：通过Grok的OAuth自动研究并在X（Twitter）上发布。</li>
+<li><strong>原生编码</strong>：不依赖外部工具编写代码&mdash;非常适合独立开发者。</li>
+<li><strong>AI视频生成</strong>：创建基本视频（适合快速社交媒体剪辑）。</li>
+<li><strong>自动看板</strong>：可视化管理工作流程&mdash;非常适合项目经理。</li>
+</ul>
+
+<h2>分步演示：自动内容工作流</h2>
+
+<h3>第1步：更新Hermes到最新版本</h3>
+
+<pre><code class="language-bash">hermes update --latest</code></pre>
+
+<h3>第2步：配置API集成（如X/Twitter）</h3>
+
+<pre><code class="language-plaintext">"Hermes，用密钥YOUR_API_KEY_HERE配置X API"</code></pre>
+
+<h3>第3步：触发自动工作流</h3>
+
+<pre><code class="language-plaintext">"运行每周AI热点扫描：
+- 抓取官方博客和X帖子。
+- 部署3个子代理分析趋势。
+- 输出5个内容选题到看板。"</code></pre>
+
+<h3>第4步：在Web看板上查看结果</h3>
+
+<p>Hermes生成包含类似以下选题的看板：&ldquo;本周中小企业Top 5 AI工具&rdquo;、&ldquo;本地AI在数据安全方面如何超越云模型&rdquo;。然后你可以一键将选题发送到内容创作流程。</p>
+
+<h2>两个受众的可操作步骤</h2>
+
+<h3>对于中小企业主</h3>
+<p>选择一个痛苦的任务（如费用报告审批或每周销售汇总），让Hermes观察一周后接管。跟踪Hermes前后的绩效&mdash;衡量节省的时间和减少的错误。</p>
+
+<h3>对于个人创业者</h3>
+<p>将客户跟进、内容研究或邮件解析转化为后台任务。每次工作流后，询问Hermes哪些做得好、哪些需要改进。随着时间的推移，Hermes会变成一个比你自己更了解你偏好的虚拟助手。</p>
+
+<pre><code class="language-plaintext">"Hermes，一夜之间处理所有新客户邮件并汇总行动项。"</code></pre>
+
+<h2>这对全球团队的意义</h2>
+
+<p>虽然Hermes在原始能力上仍落后于GPT-5等云模型，但其优势&mdash;<strong>本地数据安全、无限记忆和免费访问</strong>&mdash;使其对全球团队不可或缺。进化的速度意味着本地AI现在在细分工作流中与云解决方案具有竞争力，特别是对于优先考虑数据隐私和成本效益的企业。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: Hermes Agent对小型企业真的免费吗？</h3>
+<p>是的，Hermes Agent是开源的，免费安装和使用。如果选择云模型，你只需为底层AI模型的API调用付费。如果使用本地模型，则完全没有API成本。这对于预算紧张但仍希望拥有强大AI自动化能力的中小企业尤其有吸引力。</p>
+
+<h3>Q: Hermes Agent能取代全职员工进行任务自动化吗？</h3>
+<p>对于特定、明确定义的任务，是的。Hermes Agent擅长自动化重复的数字工作流，如数据录入、报告生成、邮件管理和内容研究。但它最适合作为生产力倍增器&mdash;处理常规工作，让人类团队专注于战略决策、客户关系和创造性问题解决。</p>
+
+<h3>Q: 运行使用本地模型的Hermes Agent需要什么硬件？</h3>
+<p>对于基于云的模型（GPT、Claude），任何现代计算机加互联网连接都可以。对于本地模型，7B参数模型需要至少8GB VRAM的GPU，更大模型需要16GB+。Hermes Agent也可以在纯CPU模式下运行较小的量化模型，但性能会较慢。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/mastering-hermes-agent-7-levels">掌握Hermes Agent：7级配置实用指南 &rarr;</a></p>
+</div>`,
+  },
+
+  "ultimate-ai-coding-apps-minutes": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials &middot; Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> A complete AI-driven application development workflow&mdash;from project initialization and code generation to debugging and global deployment&mdash;using modern AI tools with zero professional coding experience required.</p>
+</div>
+
+<p>Modern AI development tools have completely lowered the threshold of software creation. Even developers with little coding experience can build stable, deployable overseas applications independently through standardized AI workflows. This comprehensive guide sorts out the full process of AI-driven application development, combined with GitHub mainstream open-source ecology, to help you quickly launch cross-border SaaS, tool websites, and overseas content projects.</p>
+
+<h2>Core Logic of AI Rapid Development</h2>
+
+<p>Traditional development requires learning frameworks, writing a large amount of code, debugging interfaces, and sorting logic repeatedly. AI programming automatically completes architecture design, code writing, bug fixing, and deployment sorting. You only need to clarify product requirements, and the whole development cycle can be shortened from weeks to minutes. It is especially suitable for overseas individual developers, cross-border entrepreneurs, and global website builders pursuing low cost and high efficiency.</p>
+
+<h2>Step 1: Initialize Project Structure with One-Click Command</h2>
+
+<p>Use standardized CLI tools to quickly generate complete project scaffolding, adapting mainstream overseas deployment platforms such as Vercel, Netlify, and Cloudflare.</p>
+
+<pre><code class="language-bash">npm create vite@latest overseas-app -- --template react
+cd overseas-app
+npm install</code></pre>
+
+<p>After initialization, AI will automatically sort out directory specifications, interface specifications, and multi-language adaptation rules, which perfectly matches GDPR and overseas user usage habits.</p>
+
+<h2>Step 2: Describe Requirements to Generate Full-Set Business Code</h2>
+
+<p>You only need to input clear business requirements in natural language, and AI will output complete, runnable front-end and back-end logic. Example requirements for overseas projects:</p>
+
+<blockquote>
+<p>Develop a lightweight AI tool website, support English &amp; Spanish switching, adapt mobile terminal, add ad display modules, and access cross-border payment logic.</p>
+</blockquote>
+
+<p>AI automatically generates modular code:</p>
+
+<pre><code class="language-javascript">// International language switching logic for overseas websites
+const langConfig = {
+  en: require('./lang/en.json'),
+  es: require('./lang/es.json')
+}
+export function changeLang(lang) {
+  return langConfig[lang]
+}</code></pre>
+
+<h2>Step 3: AI Automatic Debugging &amp; Code Optimization</h2>
+
+<p>For abnormal bugs, interface exceptions, and compatibility problems in overseas networks, directly submit problems to AI. It will locate errors, optimize performance, and modify code without manual checking line by line.</p>
+
+<pre><code class="language-bash"># Detect project compatibility problems
+npm run lint</code></pre>
+
+<p>AI analyzes lint reports, repairs abnormal codes, optimizes loading speed of overseas static pages, and reduces access delay across regions.</p>
+
+<h2>Step 4: One-Click Deploy to Global Cloud Platform</h2>
+
+<p>After the code is completed, use Git to synchronize the project to GitHub repository, and seamlessly connect Vercel automatic deployment.</p>
+
+<pre><code class="language-bash">git init
+git add .
+git commit -m "Initial overseas app version"
+git remote add origin https://github.com/yourname/overseas-app.git
+git push -u origin main</code></pre>
+
+<p>After pushing the code, Vercel will automatically build, publish the online domain name, and realize global CDN acceleration, so that users in Europe, America, and Southeast Asia can access smoothly.</p>
+
+<h2>Step 5: Iterate &amp; Update Functions Efficiently</h2>
+
+<p>Modify requirements through natural language at any time, AI iterates functions synchronously: add user login, data statistics, membership system, background management, and other modules. No complicated development process, continuous iteration of overseas products, and quickly adapt to market changes in different regions.</p>
+
+<h2>Practical Overseas Application Scenarios</h2>
+
+<ol>
+<li>Build multilingual AI tool stations to attract global traffic and realize advertising monetization.</li>
+<li>Develop cross-border small SaaS tools to serve European and American individual users.</li>
+<li>Make independent brand official websites, product display pages, and automatic customer service systems.</li>
+<li>Rapidly prototype verified ideas and verify overseas market demand at low cost.</li>
+</ol>
+
+<h2>Advantages of This AI Development System</h2>
+
+<ul>
+<li>Zero threshold for advanced development, no professional foundation required.</li>
+<li>Low token consumption, low overall cost of global project development.</li>
+<li>Standard code specifications, compliant with overseas network security and data regulations.</li>
+<li>Fast online speed, stable global access, convenient subsequent maintenance and iteration.</li>
+</ul>
+
+<p>This AI programming workflow has become the mainstream way for global independent developers to make profits. Rely on GitHub open-source ecology + AI intelligent coding, you can easily complete the whole process from idea to online overseas products.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Can someone with zero coding experience really build a working app?</h3>
+<p>Yes. Modern AI tools like Claude Code, Cursor, and ChatGPT can generate complete, functional code from natural language descriptions. You don&rsquo;t need to know programming syntax&mdash;you just need to clearly describe what you want to build. Start with a simple project like a landing page or a single-function tool, then gradually take on more complex projects as you learn.</p>
+
+<h3>Q: What is the best AI tool for complete beginners to start coding?</h3>
+<p>For absolute beginners, Claude Code and Cursor are the most beginner-friendly. Claude Code works directly from the terminal with natural language commands. Cursor provides a visual editor with AI chat built in. ChatGPT is also excellent for generating code snippets and explaining programming concepts. Start with any of these&mdash;the key is describing what you want clearly.</p>
+
+<h3>Q: Can AI-generated code handle production-level traffic and security?</h3>
+<p>AI-generated code can certainly handle production traffic when built on solid frameworks (React, Next.js, Vite). However, security practices (input validation, authentication, data encryption) still require human oversight. Use AI for rapid development and prototyping, but have security-critical code reviewed by experienced developers or use well-established security libraries and services.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/claude-code-install-setup">Claude Code Installation &amp; Setup: From Zero to Your First AI-Generated Web Page &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI教程 &middot; 难度：初级</p>
+<p><strong>你将学到：</strong> 完整的AI驱动应用开发流程&mdash;从项目初始化、代码生成到调试和全球部署&mdash;使用现代AI工具，无需专业编程经验。</p>
+</div>
+
+<p>现代AI开发工具已经完全降低了软件创造的门槛。即使编程经验不多的开发者，也能通过标准化的AI工作流，独立构建稳定、可部署的海外应用。本综合指南梳理了AI驱动应用开发的完整流程，结合GitHub主流开源生态，帮助你快速启动跨境SaaS、工具网站和海外内容项目。</p>
+
+<h2>AI快速开发的核心逻辑</h2>
+
+<p>传统开发需要学习框架、编写大量代码、反复调试接口和整理逻辑。AI编程自动完成架构设计、代码编写、Bug修复和部署整理。你只需明确产品需求，整个开发周期可以从几周缩短到几分钟。特别适合追求低成本高效率的海外个人开发者、跨境创业者和全球网站建设者。</p>
+
+<h2>第1步：一键命令初始化项目结构</h2>
+
+<p>使用标准化CLI工具快速生成完整的项目脚手架，适配Vercel、Netlify和Cloudflare等主流海外部署平台。</p>
+
+<pre><code class="language-bash">npm create vite@latest overseas-app -- --template react
+cd overseas-app
+npm install</code></pre>
+
+<p>初始化后，AI会自动整理目录规范、接口规范和多语言适配规则，完美匹配GDPR和海外用户使用习惯。</p>
+
+<h2>第2步：描述需求生成全套业务代码</h2>
+
+<p>只需用自然语言输入清晰的业务需求，AI就会输出完整、可运行的前后端逻辑。例如：开发一个轻量级AI工具网站，支持英文和西班牙语切换，适配移动端，添加广告展示模块，接入跨境支付逻辑。AI会自动生成模块化的代码。</p>
+
+<pre><code class="language-javascript">// 海外网站国际化语言切换逻辑
+const langConfig = {
+  en: require('./lang/en.json'),
+  es: require('./lang/es.json')
+}
+export function changeLang(lang) {
+  return langConfig[lang]
+}</code></pre>
+
+<h2>第3步：AI自动调试与代码优化</h2>
+
+<p>对于异常Bug、接口异常和海外网络兼容性问题，直接提交给AI。它会定位错误、优化性能并修改代码，无需逐行手动检查。</p>
+
+<pre><code class="language-bash"># 检测项目兼容性问题
+npm run lint</code></pre>
+
+<p>AI分析lint报告，修复异常代码，优化海外静态页面的加载速度，减少跨区域访问延迟。</p>
+
+<h2>第4步：一键部署到全球云平台</h2>
+
+<p>代码完成后，使用Git将项目同步到GitHub仓库，无缝对接Vercel自动部署。代码推送后，Vercel会自动构建、发布在线域名，实现全球CDN加速，让欧美和东南亚用户都能流畅访问。</p>
+
+<pre><code class="language-bash">git init
+git add .
+git commit -m "Initial overseas app version"
+git remote add origin https://github.com/yourname/overseas-app.git
+git push -u origin main</code></pre>
+
+<h2>第5步：高效迭代和更新功能</h2>
+
+<p>随时通过自然语言修改需求，AI同步迭代功能：添加用户登录、数据统计、会员系统、后台管理等模块。无需复杂的开发流程，持续迭代海外产品，快速适应不同区域的市场变化。</p>
+
+<h2>实用海外应用场景</h2>
+
+<ol>
+<li>构建多语言AI工具站，吸引全球流量并实现广告变现。</li>
+<li>开发跨境小型SaaS工具，服务欧美个人用户。</li>
+<li>制作独立品牌官网、产品展示页面和自动客服系统。</li>
+<li>快速原型验证创意，低成本验证海外市场需求。</li>
+</ol>
+
+<h2>这套AI开发系统的优势</h2>
+
+<ul>
+<li>零门槛进阶开发，无需专业基础。</li>
+<li>低Token消耗，全球项目开发总成本低。</li>
+<li>标准代码规范，符合海外网络安全和数据法规。</li>
+<li>上线速度快，全球访问稳定，后续维护和迭代便捷。</li>
+</ul>
+
+<p>这种AI编程工作流已成为全球独立开发者获利的主流方式。依托GitHub开源生态+AI智能编码，你可以轻松完成从创意到海外产品上线的整个过程。</p>
+
+<h2>常见问题</h2>
+
+<h3>Q: 零编程经验的人真的能构建可用的应用吗？</h3>
+<p>能。Claude Code、Cursor和ChatGPT等现代AI工具可以从自然语言描述生成完整、功能性的代码。你不需要知道编程语法&mdash;你只需要清晰地描述你想要构建什么。从简单的项目如着陆页或单功能工具开始，随着学习逐步承担更复杂的项目。</p>
+
+<h3>Q: 完全初学者开始编程的最佳AI工具是什么？</h3>
+<p>对于绝对初学者，Claude Code和Cursor最友好。Claude Code直接在终端中使用自然语言命令工作。Cursor提供内置AI聊天的可视化编辑器。ChatGPT也非常适合生成代码片段和解释编程概念。选择其中任何一个即可&mdash;关键在于清晰地描述你想要什么。</p>
+
+<h3>Q: AI生成的代码能处理生产级流量和安全性吗？</h3>
+<p>基于可靠的框架（React、Next.js、Vite）构建的AI生成代码当然可以处理生产流量。但安全实践（输入验证、身份验证、数据加密）仍需人工监督。将AI用于快速开发和原型设计，但安全关键代码应由经验丰富的开发人员审查，或使用成熟的安全库和服务。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-install-setup">Claude Code安装与配置：从零开始到你的第一个AI网页 &rarr;</a></p>
+</div>`,
+  },
 };

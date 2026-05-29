@@ -1140,4 +1140,84 @@ export const articles: Article[] = [
     date: "2026-05-28",
   },
 
+  // ====== Article: Hermes Agent vs OpenClaw Comparison ======
+  {
+    slug: "hermes-agent-vs-openclaw-comparison",
+    title: "A Practical Comparison: Hermes Agent vs OpenClaw in AI Task Execution and Self-Evolution",
+    titleZh: "Hermes Agent vs OpenClaw实用对比：AI任务执行与自我进化",
+    description:
+      "An 8-round practical test comparing Hermes Agent and OpenClaw on speed, token efficiency, user preference learning, and self-evolution capabilities. See which AI agent comes out ahead.",
+    descriptionZh:
+      "通过8轮实战测试对比Hermes Agent和OpenClaw在速度、Token效率、用户偏好学习和自我进化方面的表现。看清哪款AI代理更胜一筹。",
+    category: "ai-comparisons",
+    tags: ["hermes-agent", "openclaw", "ai-comparison", "ai-agents", "self-evolution", "task-automation"],
+    difficulty: "intermediate",
+    toolsMentioned: ["hermes-agent", "openclaw"],
+    date: "2026-05-29",
+  },
+
+  // ====== Article: CodeGraph Local Semantic Code Intelligence ======
+  {
+    slug: "codegraph-local-semantic-code-intelligence",
+    title: "CodeGraph: Supercharge AI Coding Agents with Local Semantic Code Intelligence",
+    titleZh: "CodeGraph：用本地语义代码智能为AI编程代理加速",
+    description:
+      "CodeGraph is an open-source semantic code knowledge graph that reduces AI tool calls by up to 70% and token usage by 35%. Learn how to integrate it with Claude Code, Cursor, and more.",
+    descriptionZh:
+      "CodeGraph是一个开源语义代码知识图谱，可将AI工具调用减少70%，Token使用量降低35%。了解如何将其与Claude Code、Cursor等集成。",
+    category: "ai-tools",
+    tags: ["codegraph", "semantic-code", "ai-coding", "claude-code", "cursor", "knowledge-graph"],
+    difficulty: "intermediate",
+    toolsMentioned: ["codegraph", "claude", "cursor"],
+    date: "2026-05-29",
+  },
+
+  // ====== Article: Ditch RAG LLM Wiki ======
+  {
+    slug: "ditch-rag-llm-wiki-future",
+    title: "Ditch RAG: LLM Wiki Is the Future of Personal Knowledge Bases for Global Users",
+    titleZh: "放弃RAG：LLM Wiki是面向全球用户的个人知识库的未来",
+    description:
+      "LLM Wiki outperforms RAG for global knowledge management with lower latency, reduced token waste, and contextual linking. A step-by-step guide to building your own LLM Wiki for overseas use cases.",
+    descriptionZh:
+      "LLM Wiki在延迟更低、Token浪费更少和上下文关联方面优于RAG。面向海外用例的LLM Wiki构建分步指南。",
+    category: "ai-news",
+    tags: ["llm-wiki", "rag", "knowledge-base", "overseas", "semantic-search", "personal-knowledge"],
+    difficulty: "intermediate",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-29",
+  },
+
+  // ====== Article: Hermes Agent 8 Features for SMB ======
+  {
+    slug: "hermes-agent-8-features-smb",
+    title: "Hermes Agent: 8 Game-Changing Features in One Week for SMBs and Solopreneurs",
+    titleZh: "Hermes Agent：一周内为中小企业和个人创业者推出的8个革命性功能",
+    description:
+      "Hermes Agent's latest update brings 8 new features including Computer Use, background task processing, and long-term memory upgrades. Practical guide for SMBs and solopreneurs.",
+    descriptionZh:
+      "Hermes Agent最新更新带来8个新功能，包括电脑使用、后台任务处理和长期记忆升级。面向中小企业和个人创业者的实用指南。",
+    category: "ai-tools",
+    tags: ["hermes-agent", "ai-agent", "smb", "solopreneur", "automation", "computer-use"],
+    difficulty: "beginner",
+    toolsMentioned: ["hermes-agent"],
+    date: "2026-05-29",
+  },
+
+  // ====== Article: Ultimate AI Coding Guide ======
+  {
+    slug: "ultimate-ai-coding-apps-minutes",
+    title: "Ultimate AI Coding Guide: Build Your Own Global Apps Within Minutes",
+    titleZh: "终极AI编码指南：几分钟内构建你的全球应用",
+    description:
+      "A comprehensive guide to AI-driven application development using modern AI tools. Learn to initialize, code, debug, and deploy global apps from scratch with zero professional coding experience.",
+    descriptionZh:
+      "使用现代AI工具进行AI驱动应用开发的全面指南。学习从零初始化、编码、调试和部署全球应用，无需专业编程经验。",
+    category: "ai-tutorials",
+    tags: ["ai-coding", "app-development", "vite", "react", "vercel", "overseas", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "cursor", "chatgpt"],
+    date: "2026-05-29",
+  },
+
 ];
