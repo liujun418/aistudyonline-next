@@ -12,7 +12,7 @@ export interface Article {
 }
 
 export const articles: Article[] = [
-  // ====== Sample: Claude Code (Path: Claude Code 编程入门, Part 1/4) ======
+
   {
     slug: "claude-code-install-setup",
     title: "Claude Code Installation & Setup: From Zero to Your First AI-Generated Web Page",
@@ -28,7 +28,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Basics (5) ======
   {
     slug: "llms-in-plain-english",
     title: "I Keep Hearing About 'LLMs' — What They Actually Are in Plain English",
@@ -43,6 +42,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude"],
     date: "2026-05-22",
   },
+
   {
     slug: "ai-hallucinations-explained-with-examples",
     title: "AI Hallucinations Explained: Why ChatGPT Makes Stuff Up (With Real Examples)",
@@ -57,6 +57,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude", "perplexity"],
     date: "2026-05-20",
   },
+
   {
     slug: "how-to-choose-right-ai-tool",
     title: "Which AI Tool Should You Use? A Decision Framework for Beginners",
@@ -71,6 +72,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude", "gemini", "perplexity", "midjourney"],
     date: "2026-05-22",
   },
+
   {
     slug: "free-vs-paid-ai-tools-worth-it",
     title: "Free vs Paid AI Tools: When It's Actually Worth Paying (and When It's Not)",
@@ -85,6 +87,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude", "midjourney", "gemini", "perplexity"],
     date: "2026-05-18",
   },
+
   {
     slug: "what-is-a-gpu-non-techie",
     title: "What's a GPU and Why Does AI Need It? A Non-Techie Explanation",
@@ -99,6 +102,7 @@ export const articles: Article[] = [
     toolsMentioned: [],
     date: "2026-05-16",
   },
+
   {
     slug: "ai-myths-people-still-believe",
     title: "5 AI Myths Your Non-Techie Friends Still Believe (and What's Actually True)",
@@ -114,7 +118,6 @@ export const articles: Article[] = [
     date: "2026-05-14",
   },
 
-  // ====== AI Tutorials (5) ======
   {
     slug: "chatgpt-voice-mode-job-interview",
     title: "ChatGPT Fundamentals: Interface, Settings, and Your First 10 Prompts",
@@ -129,6 +132,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt"],
     date: "2026-05-22",
   },
+
   {
     slug: "claude-projects-organize-chats",
     title: "How to Write Prompts That Actually Work: The 5-Point Framework",
@@ -143,6 +147,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude"],
     date: "2026-05-22",
   },
+
   {
     slug: "ai-images-that-dont-look-like-ai",
     title: "ChatGPT for Writing: Emails, Reports, and Creative Projects",
@@ -157,6 +162,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt"],
     date: "2026-05-22",
   },
+
   {
     slug: "voice-recording-to-meeting-notes-free",
     title: "ChatGPT for Research and Analysis: Web Search, File Upload, and Data",
@@ -171,6 +177,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt"],
     date: "2026-05-22",
   },
+
   {
     slug: "first-ai-coding-project-no-experience",
     title: "Custom GPTs and Automation: Build Your Own AI Assistant",
@@ -186,7 +193,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Use Cases (5) ======
   {
     slug: "etsy-seller-ai-product-descriptions",
     title: "AI for Business Communication: Emails, Proposals, and Client Outreach",
@@ -201,6 +207,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude"],
     date: "2026-05-22",
   },
+
   {
     slug: "ai-wedding-planning-free-tools",
     title: "AI for Project Planning and Organization: From Timelines to Budgets",
@@ -215,6 +222,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude"],
     date: "2026-05-22",
   },
+
   {
     slug: "ai-travel-itinerary-real-prompts",
     title: "AI for Research and Report Writing: Find, Analyze, and Summarize",
@@ -229,6 +237,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "perplexity"],
     date: "2026-05-22",
   },
+
   {
     slug: "learn-english-with-ai-free-speaking-practice",
     title: "AI for Learning and Skill Development: Language, Tech, and More",
@@ -243,6 +252,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude"],
     date: "2026-05-22",
   },
+
   {
     slug: "ai-for-parents-quiet-moments",
     title: "AI for Parents: 7 Ways to Use ChatGPT When You Have 10 Minutes of Quiet",
@@ -258,7 +268,6 @@ export const articles: Article[] = [
     date: "2026-05-12",
   },
 
-  // ====== AI Comparisons (5) ======
   {
     slug: "free-ai-image-generators-same-prompt-test",
     title: "Midjourney Basics: Getting Started with AI Image Creation",
@@ -273,6 +282,7 @@ export const articles: Article[] = [
     toolsMentioned: ["midjourney"],
     date: "2026-05-22",
   },
+
   {
     slug: "chatgpt-free-vs-plus-2026-what-you-get",
     title: "ChatGPT Free vs Plus in 2026: What You Actually Get Without Paying",
@@ -287,6 +297,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt"],
     date: "2026-05-17",
   },
+
   {
     slug: "notebooklm-vs-perplexity-research",
     title: "NotebookLM vs Perplexity: Which Is Better for Researching a Topic From Scratch?",
@@ -301,6 +312,7 @@ export const articles: Article[] = [
     toolsMentioned: ["perplexity"],
     date: "2026-05-15",
   },
+
   {
     slug: "claude-vs-chatgpt-writing-blind-test",
     title: "Claude's Writing Style vs ChatGPT: We Asked 10 People Which Sounds More Human",
@@ -315,6 +327,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "claude"],
     date: "2026-05-13",
   },
+
   {
     slug: "cursor-vs-copilot-complete-beginner",
     title: "Cursor vs GitHub Copilot for a Complete Beginner: Which One Is Less Confusing?",
@@ -330,7 +343,6 @@ export const articles: Article[] = [
     date: "2026-05-11",
   },
 
-  // ====== AI News (5) ======
   {
     slug: "gpt5-for-regular-users",
     title: "GPT-5: What's Actually New and What It Means for Regular Users (Not Developers)",
@@ -345,6 +357,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt"],
     date: "2026-05-21",
   },
+
   {
     slug: "open-source-ai-models-run-on-laptop",
     title: "Open Source AI Models in 2026: Which Ones You Can Actually Run on Your Laptop",
@@ -359,6 +372,7 @@ export const articles: Article[] = [
     toolsMentioned: ["deepseek"],
     date: "2026-05-19",
   },
+
   {
     slug: "eu-ai-act-plain-english",
     title: "EU AI Act in Plain English: What It Means for the Tools You Use Every Day",
@@ -373,6 +387,7 @@ export const articles: Article[] = [
     toolsMentioned: ["chatgpt", "midjourney", "claude"],
     date: "2026-05-17",
   },
+
   {
     slug: "ai-jobs-that-didnt-exist-3-years-ago",
     title: "AI Jobs That Didn't Exist 3 Years Ago (and How Much They Pay)",
@@ -387,6 +402,7 @@ export const articles: Article[] = [
     toolsMentioned: [],
     date: "2026-05-15",
   },
+
   {
     slug: "apple-intelligence-6-months-later",
     title: "Apple Intelligence 6 Months Later: Which Features Actually Made It to Your iPhone",
@@ -402,7 +418,6 @@ export const articles: Article[] = [
     date: "2026-05-13",
   },
 
-  // ====== AI News (6/6: Google I/O 2026) ======
   {
     slug: "google-io-2026-93-ai-agents",
     title: "Google I/O 2026: 93 AI Agents Built an OS in 12 Hours — Here's What It Means",
@@ -418,7 +433,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== Claude Code Path (Part 2/4) ======
   {
     slug: "claude-code-mcp-configuration",
     title: "Configure MCP Servers in Claude Code: File Access, APIs, and Databases",
@@ -434,7 +448,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== Claude Code Path (Part 3/4) ======
   {
     slug: "claude-code-in-action",
     title: "Claude Code in Action: Build a Real Project from Scratch",
@@ -450,7 +463,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== Claude Code Path (Part 4/4) ======
   {
     slug: "claude-code-advanced",
     title: "Advanced Claude Code: Custom Slash Commands, Hooks, and CI/CD Integration",
@@ -466,7 +478,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== Claude Code Companion: Top 7 Skills Guide ======
   {
     slug: "claude-code-top-7-skills",
     title: "Claude Code's Top 7 Skills: A Complete Guide to the Most Powerful Extensions",
@@ -482,7 +493,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Image Generation Path (Part 2/4) ======
   {
     slug: "ai-image-dalle-firefly",
     title: "DALL-E vs Firefly vs Midjourney: Which AI Image Generator Should You Use?",
@@ -498,7 +508,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Image Generation Path (Part 3/4) ======
   {
     slug: "ai-image-prompt-guide",
     title: "The Ultimate AI Image Prompt Guide: Techniques That Actually Work",
@@ -514,7 +523,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Image Generation Path (Part 4/4) ======
   {
     slug: "ai-image-commercial-licensing",
     title: "AI Image Copyright and Commercial Licensing: What You Can and Can't Sell",
@@ -530,7 +538,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Basics: 12 Core Concepts ======
   {
     slug: "12-core-ai-concepts-guide",
     title: "Master 12 Core Concepts of AI Large Models in One Guide",
@@ -546,7 +553,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Tutorials: OpenClaw Demystified ======
   {
     slug: "openclaw-demystified-20-lines",
     title: "Unveiling OpenClaw: Demystify the AI Tool in 20 Lines of Code",
@@ -562,7 +568,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== AI Comparisons: LLM Service Packages Review ======
   {
     slug: "llm-service-packages-review-2026",
     title: "LLM Service Packages Review: From Premium to Disappointing",
@@ -578,7 +583,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== Claude Code Companion: Browser Control ======
   {
     slug: "claude-code-browser-automation",
     title: "Efficient Browser Control with Claude Code: Minimize Token Consumption",
@@ -594,7 +598,6 @@ export const articles: Article[] = [
     date: "2026-05-22",
   },
 
-  // ====== Article: 5 AI Tools to Build Your One-Person Overseas Business ======
   {
     slug: "5-ai-tools-one-person-overseas-business",
     title: "5 AI Tools to Build Your One-Person Overseas Business: Let Claude Code Work for You While You Sleep",
@@ -610,7 +613,6 @@ export const articles: Article[] = [
     date: "2026-05-23",
   },
 
-  // ====== Article: Git & GitHub Beginner's Guide ======
   {
     slug: "git-github-beginners-guide",
     title: "Git & GitHub Beginner's Guide: Core Concepts & Operation",
@@ -626,7 +628,6 @@ export const articles: Article[] = [
     date: "2026-05-23",
   },
 
-  // ====== Article: OpenAI's Strategic Counterattack ======
   {
     slug: "openai-strategic-counterattack-openclaw-codex",
     title: "OpenAI's Strategic Counterattack: How OpenClaw Integration and Codex Innovations Are Reshaping the AI Developer Landscape",
@@ -642,7 +643,6 @@ export const articles: Article[] = [
     date: "2026-05-23",
   },
 
-  // ====== Article: Practical Explanation of Agent, Skill and Harness ======
   {
     slug: "agent-skill-harness-explained",
     title: "Practical Explanation of Agent, Skill and Harness in Modern AI Development",
@@ -658,7 +658,6 @@ export const articles: Article[] = [
     date: "2026-05-23",
   },
 
-  // ====== Article: Unlock Hidden Potentials: 5 AI+HTML Hacks ======
   {
     slug: "5-ai-html-hacks-overseas-websites",
     title: "Unlock Hidden Potentials: 5 Practical AI+HTML Hacks for Overseas Websites",
@@ -674,8 +673,7 @@ export const articles: Article[] = [
     date: "2026-05-23",
   },
 
-	// ====== Article: Alexander Wang's Meta AI Superintelligence ======
-	{
+  {
 		slug: "alexander-wang-meta-ai-superintelligence",
 		title: "Alexander Wang's Meta AI Superintelligence: A New Era for Overseas Businesses",
 		titleZh: "Alexander Wang的Meta AI超级智能：海外业务的新纪元",
@@ -690,8 +688,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: AI Workforce ======
-	{
+  {
 		slug: "ai-workforce-virtual-employees",
 		title: "From Tool Development to AI Workforce: Why Programmers Are Building Virtual AI Employees",
 		titleZh: "从工具开发到AI劳动力：为什么程序员正在构建虚拟AI员工",
@@ -706,8 +703,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: Free AI Knowledge Base Tool ======
-	{
+  {
 		slug: "free-ai-knowledge-base-tool-tutorial",
 		title: "Practical Tutorial on Powerful Free AI Knowledge Base Tool",
 		titleZh: "强大的免费AI知识库工具实用教程",
@@ -722,8 +718,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: 6 Must-Have OpenClaw Skills ======
-	{
+  {
 		slug: "6-must-have-openclaw-skills",
 		title: "6 Must-Have Base Skills for OpenClaw to Boost Your AI Productivity",
 		titleZh: "OpenClaw必备的6个基础技能，提升你的AI生产力",
@@ -738,8 +733,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: Top 10 Claude Code Commands ======
-	{
+  {
 		slug: "top-10-claude-code-commands",
 		title: "Top 10 Claude Code Commands: Boost Your AI Productivity",
 		titleZh: "Top 10 Claude Code命令：提升你的AI生产力",
@@ -754,8 +748,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: DeerFlow Multi-Agent ======
-	{
+  {
 		slug: "deerflow-multi-agent-tool",
 		title: "DeerFlow: The Open-Source Parallel Multi-Agent Tool for Efficient Task Execution",
 		titleZh: "DeerFlow：高效任务执行的开源并行多智能体工具",
@@ -770,8 +763,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: 12 Essential Claude Code Terminal Commands ======
-	{
+  {
 		slug: "12-claude-code-terminal-commands",
 		title: "12 Essential Claude Code Terminal Commands to Boost Efficiency and Avoid Pitfalls",
 		titleZh: "12个必备Claude Code终端命令：提升效率、避免陷阱",
@@ -786,8 +778,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: Claude Code Overseas Business Guide ======
-	{
+  {
 		slug: "claude-code-overseas-business-guide",
 		title: "Claude Code: A Comprehensive Guide to Boosting Productivity for Overseas Businesses",
 		titleZh: "Claude Code：助力海外业务提升效率的全面指南",
@@ -802,8 +793,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: Harness Automating Video Creation ======
-	{
+  {
 		slug: "harness-automating-video-creation",
 		title: "Harness in Practice: Automating Knowledge Explanation Video Creation",
 		titleZh: "Harness实战：自动化知识讲解视频创作",
@@ -818,8 +808,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-	// ====== Article: Oh-My-ClaudeCode (OMC) Guide ======
-	{
+  {
 		slug: "oh-my-claudecode-omc-guide",
 		title: "Unlock Ultimate AI Coding Efficiency with Oh-My-ClaudeCode (OMC)",
 		titleZh: "用Oh-My-ClaudeCode（OMC）解锁终极AI编码效率",
@@ -834,9 +823,7 @@ export const articles: Article[] = [
 		date: "2026-05-24",
 	},
 
-
-		// ====== Article: AI Era Dawns ======
-		{
+  {
 			slug: "claude-code-self-coding-revolution",
 			title: "AI Era Dawns: Claude Code's Self-Coding Revolution and Practical Guide to Leveraging Actionable AI Agents",
 			titleZh: "AI时代来临：Claude Code的自我编程革命与AI Agent实战指南",
@@ -851,8 +838,7 @@ export const articles: Article[] = [
 			date: "2026-05-25",
 		},
 
-		// ====== Article: Choosing the Right AI Giant ======
-		{
+  {
 			slug: "gpt-claude-grok-gemini-comparison",
 			title: "Choosing the Right AI Giant: GPT, Claude, Grok, or Gemini for Your Needs",
 			titleZh: "选择合适的AI巨头：GPT、Claude、Grok还是Gemini？",
@@ -867,8 +853,7 @@ export const articles: Article[] = [
 			date: "2026-05-25",
 		},
 
-		// ====== Article: Codex Agent ======
-		{
+  {
 			slug: "codex-agent-desktop-jarvis",
 			title: "Codex Agent: Your Desktop Jarvis for Effortless Task Automation",
 			titleZh: "Codex Agent：你的桌面贾维斯，轻松实现任务自动化",
@@ -883,8 +868,7 @@ export const articles: Article[] = [
 			date: "2026-05-25",
 		},
 
-		// ====== Article: Google 5 Skill Design Patterns ======
-		{
+  {
 			slug: "google-5-skill-design-patterns",
 			title: "Google's 5 Skill Design Patterns for Stable Agent Output: A Practical Guide for Overseas Web Development",
 			titleZh: "Google的5个技能设计模式：稳定AI Agent输出的实用指南",
@@ -899,8 +883,7 @@ export const articles: Article[] = [
 			date: "2026-05-25",
 		},
 
-
-	{
+  {
 		slug: "beyond-llms-ai-fundamentals",
 		title: "Beyond Large Language Models: Mastering AI Fundamental Knowledge for Overseas Developers",
 		titleZh: "超越大语言模型：海外开发者必须掌握的AI基础知识",
@@ -913,7 +896,7 @@ export const articles: Article[] = [
 		date: "2026-05-26",
 	},
 
-	{
+  {
 		slug: "choosing-right-ai-tool-comparison",
 		title: "Choosing the Right AI Tool: GPT, Claude, Grok, and Gemini for Your Needs",
 		titleZh: "选择合适的AI工具：GPT、Claude、Grok和Gemini对比",
@@ -926,7 +909,7 @@ export const articles: Article[] = [
 		date: "2026-05-26",
 	},
 
-	{
+  {
 		slug: "claude-code-final-config-guide",
 		title: "Claude Code: Final Configuration Guide for Overseas Users (Beginner-Friendly)",
 		titleZh: "Claude Code：海外用户最终配置指南（新手友好）",
@@ -939,7 +922,7 @@ export const articles: Article[] = [
 		date: "2026-05-26",
 	},
 
-	{
+  {
 		slug: "cut-openclaw-costs-10x",
 		title: "Cut OpenClaw Operating Costs by 10 Times: 4 Practical Strategies",
 		titleZh: "将OpenClaw运营成本降低10倍：4个实用策略",
@@ -952,7 +935,7 @@ export const articles: Article[] = [
 		date: "2026-05-26",
 	},
 
-	{
+  {
 		slug: "ecc-claude-code-setup-guide",
 		title: "Stop Misconfiguring Claude Code: ECC's Zero-Pitfall Setup Guide for Overseas Projects",
 		titleZh: "别再错误配置Claude Code：ECC零陷阱设置指南",
@@ -965,7 +948,7 @@ export const articles: Article[] = [
 		date: "2026-05-26",
 	},
 
-	{
+  {
 		slug: "ditching-mcp-for-cli",
 		title: "Why More Developers Are Ditching MCP for CLI in AI Agent Development",
 		titleZh: "为什么越来越多开发者在AI Agent开发中用CLI取代MCP",
@@ -978,9 +961,7 @@ export const articles: Article[] = [
 		date: "2026-05-26",
 	},
 
-
-
-		{
+  {
 			slug: "google-gemini-3-5-leak",
 			title: "Google Gemini 3.5 Leak: A Game-Changer for Overseas AI Strategies with Practical Insights",
 			titleZh: "Google Gemini 3.5泄露：海外AI战略的游戏规则改变者与实用洞察",
@@ -995,7 +976,7 @@ export const articles: Article[] = [
 			date: "2026-05-26",
 		},
 
-		{
+  {
 			slug: "openai-codex-openclaw-revolution",
 			title: "OpenAI's Codex and OpenClaw: Revolutionizing AI Development",
 			titleZh: "OpenAI的Codex与OpenClaw：革命性的AI开发工具",
@@ -1010,8 +991,7 @@ export const articles: Article[] = [
 			date: "2026-05-26",
 		},
 
-
-{
+  {
     slug: "claude-code-vs-codex-automation",
     title: "AI-Powered Computer Automation: Claude Code vs. Codex - Which Path to Choose for Practical Use?",
     titleZh: "AI驱动电脑自动化：Claude Code vs Codex - 实际使用该选哪个？",
@@ -1024,7 +1004,7 @@ export const articles: Article[] = [
     date: "2026-05-27",
   },
 
-{
+  {
     slug: "ai-money-making-system-one-day",
     title: "Build Your Money-Making System in One Day: Stop Trading Time for Money Alone",
     titleZh: "一天搭建你的赚钱系统：别再单独用时间换钱",
@@ -1037,7 +1017,7 @@ export const articles: Article[] = [
     date: "2026-05-27",
   },
 
-{
+  {
     slug: "claude-code-6-hidden-powers",
     title: "Claude Code: 6 Hidden Powers to Transform It From Chatbot to Your AI Development Partner",
     titleZh: "Claude Code：6个隐藏力量，将其从聊天机器人转变为你的AI开发伙伴",
@@ -1050,7 +1030,7 @@ export const articles: Article[] = [
     date: "2026-05-27",
   },
 
-{
+  {
     slug: "karpathy-ai-training-scale-method",
     title: "Karpathy's Viral Twitter Method: Scale AI Training with 1.6K Samples for Overseas Projects",
     titleZh: "Karpathy的病毒式Twitter方法：用1600个样本实现海外项目AI训练规模化",
@@ -1076,7 +1056,6 @@ export const articles: Article[] = [
     date: "2026-05-27",
   },
 
-  // ====== Article: 6 AI Tools Dominating GitHub ======
   {
     slug: "6-ai-tools-dominating-github",
     title: "6 AI Tools Dominating GitHub to Take Over Your Workflow",
@@ -1092,7 +1071,6 @@ export const articles: Article[] = [
     date: "2026-05-28",
   },
 
-  // ====== Article: AI-Powered Document Replication ======
   {
     slug: "ai-document-replication-one-click",
     title: "AI-Powered Document Replication: One-Click Duplicate Any File for Overseas Use Cases",
@@ -1108,7 +1086,6 @@ export const articles: Article[] = [
     date: "2026-05-28",
   },
 
-  // ====== Article: Mastering Hermes Agent ======
   {
     slug: "mastering-hermes-agent-7-levels",
     title: "Mastering Hermes Agent: A Practical Guide to 7 Levels of Configuration for Powerful AI Automation",
@@ -1124,7 +1101,6 @@ export const articles: Article[] = [
     date: "2026-05-28",
   },
 
-  // ====== Article: Vibe-Trading HKU Financial Agent ======
   {
     slug: "vibe-trading-hku-financial-agent",
     title: "Vibe-Trading: A Deep Dive into HKU's Open-Source Financial Agent OS",
@@ -1140,7 +1116,6 @@ export const articles: Article[] = [
     date: "2026-05-28",
   },
 
-  // ====== Article: Hermes Agent vs OpenClaw Comparison ======
   {
     slug: "hermes-agent-vs-openclaw-comparison",
     title: "A Practical Comparison: Hermes Agent vs OpenClaw in AI Task Execution and Self-Evolution",
@@ -1156,7 +1131,6 @@ export const articles: Article[] = [
     date: "2026-05-29",
   },
 
-  // ====== Article: CodeGraph Local Semantic Code Intelligence ======
   {
     slug: "codegraph-local-semantic-code-intelligence",
     title: "CodeGraph: Supercharge AI Coding Agents with Local Semantic Code Intelligence",
@@ -1172,7 +1146,6 @@ export const articles: Article[] = [
     date: "2026-05-29",
   },
 
-  // ====== Article: Ditch RAG LLM Wiki ======
   {
     slug: "ditch-rag-llm-wiki-future",
     title: "Ditch RAG: LLM Wiki Is the Future of Personal Knowledge Bases for Global Users",
@@ -1188,7 +1161,6 @@ export const articles: Article[] = [
     date: "2026-05-29",
   },
 
-  // ====== Article: Hermes Agent 8 Features for SMB ======
   {
     slug: "hermes-agent-8-features-smb",
     title: "Hermes Agent: 8 Game-Changing Features in One Week for SMBs and Solopreneurs",
@@ -1204,7 +1176,6 @@ export const articles: Article[] = [
     date: "2026-05-29",
   },
 
-  // ====== Article: Ultimate AI Coding Guide ======
   {
     slug: "ultimate-ai-coding-apps-minutes",
     title: "Ultimate AI Coding Guide: Build Your Own Global Apps Within Minutes",
@@ -1218,6 +1189,58 @@ export const articles: Article[] = [
     difficulty: "beginner",
     toolsMentioned: ["claude", "cursor", "chatgpt"],
     date: "2026-05-29",
+  },
+
+  {
+    slug: "codex-obsidian-knowledge-base",
+    title: "Build Super Powerful Personal Knowledge Base: Combine Codex AI with Obsidian Full Practical Guide",
+    titleZh: "构建超强个人知识库：Codex AI与Obsidian完整实战指南",
+    description: "Learn how to combine Codex AI with Obsidian to build a private, offline, high-performance knowledge management system.",
+    descriptionZh: "学习如何将Codex AI与Obsidian结合，构建私有高性能的知识管理系统。",
+    category: "ai-tutorials",
+    tags: ["codex", "obsidian", "knowledge-base", "note-taking", "local-ai", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex-agent", "chatgpt"],
+    date: "2026-05-30",
+  },
+
+  {
+    slug: "claude-code-essential-three-tools",
+    title: "Claude Code Essential Setup: The Must-Have Three Tools for Global Developers (Beginner's Guide)",
+    titleZh: "Claude Code必备设置：全球开发者三大工具（初学者指南）",
+    description: "Before running Claude Code, you need Node.js, Git, and a terminal enhancement tool.",
+    descriptionZh: "在运行Claude Code之前需安装Node.js、Git和终端增强工具。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "nodejs", "git", "setup", "terminal", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-05-30",
+  },
+
+  {
+    slug: "mastering-claude-code-cli",
+    title: "Mastering Claude Code CLI: A Practical Guide for Overseas Developers",
+    titleZh: "掌握Claude Code CLI：海外开发者实用指南",
+    description: "Master Claude Code CLI for overseas development.",
+    descriptionZh: "掌握面向海外开发的Claude Code CLI。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "cli", "terminal", "overseas", "productivity", "intermediate"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-05-30",
+  },
+
+  {
+    slug: "token-business-101-beginners",
+    title: "Token Business 101: How Beginners Start from Zero for Global Markets",
+    titleZh: "Token经济入门：初学者从零进军全球市场",
+    description: "A complete beginner's guide to launching a token business for global markets.",
+    descriptionZh: "面向全球市场启动Token业务的完整初学者指南。",
+    category: "ai-use-cases",
+    tags: ["token", "crypto", "blockchain", "business", "overseas", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["chatgpt", "claude"],
+    date: "2026-05-30",
   },
 
 ];
