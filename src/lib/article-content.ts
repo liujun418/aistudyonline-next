@@ -5647,6 +5647,17 @@ Create a revert commit for the change that modified app.js yesterday</code></pre
 <h3>问：安装太多技能会拖慢Claude Code吗？</h3>
 <p>技能是按需加载的，而非一次性全部加载。安装几十个技能不会明显影响性能。然而，同时激活太多技能有时会导致指令冲突。</p>
 
+<h2>常见问题解答</h2>
+
+<h3>问：Claude Code技能到底是什么，在哪里可以找到？</h3>
+<p>技能是给Claude Code添加特定功能的插件。可以从Anthropic官方技能注册中心和GitHub上的社区仓库获取。通过命令 npx skills add skill-name 安装。</p>
+
+<h3>问：这7个顶级技能适用于所有Claude Code版本吗？</h3>
+<p>这些技能专为最新版本设计，向后兼容v1.x+版本。部分技能可能需要特定模型版本，安装前请查看每个技能的要求说明。</p>
+
+<h3>问：我可以在一个会话中同时使用这7个技能吗？</h3>
+<p>可以。多个技能可以在同一会话中同时激活。Claude Code会根据上下文自动将请求路由到相应的技能，没有实际的数量限制。</p>
+
 <div class="next-step">
 <p><strong>下一篇：</strong> <a href="/article/claude-code-in-action">Claude Code实战：从零构建一个真实项目 →</a></p>
 </div>`,
@@ -6340,64 +6351,76 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p><strong>Next:</strong> <a href="/article/open-source-ai-models-run-on-laptop">Open Source AI Models in 2026: Which Ones You Can Actually Run on Your Laptop →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI News · Standalone Article</p>
-<p><strong>What you'll learn:</strong> What happened at Google I/O 2026, why 93 AI agents building an OS is a big deal, and what it means for regular AI users.</p>
-</div>
+	<p><strong>分类：</strong> AI新闻 · 独立文章</p>
+	<p><strong>你将学到：</strong> Google I/O 2026发生了什么，为什么93个AI代理协作构建操作系统意义重大，以及对普通AI用户意味着什么。</p>
+	</div>
 
-<p>At Google I/O 2026, a groundbreaking demonstration shattered conventional understandings of artificial intelligence\\. In this showcase, 93 AI agents collaborated to build a fully functional operating system from scratch within 12 hours, marking a pivotal moment in the evolution of AI from “advisors” to “executors\\.” Here’s a deep dive into this revolutionary leap and its implications for the global AI landscape\\.</p>
-<h2>1\\. The Demonstration That Shook Silicon Valley</h2>
-<p>In a live presentation, Google’s <em>Anti\\-Gravity Platform</em> deployed 93 specialized AI sub\\-agents, each with distinct roles—some wrote kernel code, others handled real\\-time testing and debugging\\. These agents communicated and coordinated autonomously, making over 15,000 large model requests without any human intervention\\. By the end, a functional core system emerged in the project folder, complete with driver code and debugging capabilities\\.</p>
-<p>This wasn’t just a technical feat; it signaled a paradigm shift\\. Unlike traditional AI tools limited to chat interfaces or simple tasks \\(like writing reports or translating emails\\), these agents operated across software ecosystems, executing complex, cross\\-application workflows\\.</p>
-<h2>2\\. Gemini 3\\.5 Flash: The Engine Powering “Dirty Work”</h2>
-<p>Behind this collaboration was <strong>Gemini 3\\.5 Flash</strong>, a model Google optimized for speed and scalability\\. It processes 1,500 tokens per second—fast enough to ingest and analyze an entire novel’s worth of logic in milliseconds\\. This performance dwarfs competitors like GPT\\-4o and Claude 3 Opus in terms of sheer throughput, making it a workhorse for real\\-world tasks\\.</p>
-<p>Google’s focus on speed and efficiency addresses a long\\-standing AI pain point: as models grow larger, they often become slower and more expensive to run\\. Gemini 3\\.5 Flash breaks this trend, proving that AI can be both powerful and practical for 24/7 “grunt work\\.”</p>
-<h2>3\\. Gemini Spark: Your 24/7 Cloud\\-Based Digital Assistant</h2>
-<p>Google also introduced <strong>Gemini Spark</strong>, a personal AI agent hosted on dedicated Google Cloud virtual machines\\. Unlike typical AI assistants \\(which stop functioning once you close an app\\), Spark runs continuously in the cloud\\. It can:</p>
-<ul>
-<li>Manage complex tasks like coordinating events \\(sending emails, updating spreadsheets, and tracking RSVPs across multiple platforms\\)\\.</li>
-</ul>
-<ul>
-<li>Automate cross\\-software workflows \\(e\\.g\\., scanning emails for data, generating reports in Google Docs, and sending reminders via calendar apps\\)\\.</li>
-</ul>
-<ul>
-<li>Learn user preferences over time, acting as a “digital 分身” that anticipates needs\\.</li>
-</ul>
-<h2>4\\. Redefining AI’s Role in Work and Life</h2>
-<p>This evolution moves AI beyond the chat window\\. Key shifts include:</p>
-<ul>
-<li><strong>From Suggestion to Execution</strong>: AI now acts on tasks, not just advises\\. For example, Gemini Spark can fix missing drivers in an OS build by writing and compiling code autonomously\\.</li>
-</ul>
-<ul>
-<li><strong>Seamless Ecosystem Integration</strong>: Google’s suite \\(Gmail, Docs, Sheets, and Search\\) is woven together by AI, allowing agents to move fluidly between tools\\.</li>
-</ul>
-<ul>
-<li><strong>24/7 Productivity</strong>: With cloud\\-hosted agents, work continues even when users are offline, turning AI into a “productivity engine” rather than a mere tool\\.</li>
-</ul>
-<h2>5\\. The Broader Industry Impact</h2>
-<p>Google’s demo sent shockwaves through the AI sector:</p>
-<ul>
-<li><strong>Competitive Pressure</strong>: Rivals like OpenAI and Anthropic now face pressure to match Google’s infrastructure and ecosystem integration\\.</li>
-</ul>
-<ul>
-<li><strong>New Use Cases</strong>: Fields like software development, project management, and even scientific research \\(via tools like <em>Gemini Science</em>\\) are being transformed\\. For instance, AI agents can now auto\\-analyze academic papers and generate executable code for experiments\\.</li>
-</ul>
-<ul>
-<li><strong>Skill Redefinition</strong>: The workforce will increasingly value “AI orchestration” skills—those who can design and manage teams of AI agents—over repetitive technical tasks\\.</li>
-</ul>
-<h2>Conclusion: The Dawn of the AI Agent Era</h2>
-<p>Google I/O 2026 wasn’t just a product launch—it was a declaration\\. AI is no longer a standalone tool but a network of collaborative agents capable of end\\-to\\-end task execution\\. As these technologies scale, they will redefine productivity, creativity, and what it means to “work” in the digital age\\. For businesses and individuals alike, the question is no longer <em>if</em> to adopt AI agents, but <em>how</em> to leverage them to stay ahead in this new paradigm\\.</p>
+	<p>在Google I/O 2026上，一场突破性的演示颠覆了人们对人工智能的传统认知。在这次展示中，93个AI代理协作在12小时内从零构建了一个功能完整的操作系统，标志着AI从“顾问”向“执行者”演变的关键时刻。本文将深入探讨这一革命性飞跃及其对全球AI格局的影响。</p>
+	<h2>1\. 震撼硅谷的演示</h2>
+	<p>在直播演示中，Google的<em>Anti-Gravity平台</em>部署了93个专门的AI子代理，每个都有独特的角色——有的编写内核代码，有的负责实时测试和调试。这些代理自主通信和协调，在没有人类干预的情况下完成了超过15,000次大模型请求。最终，项目文件夹中出现了一个功能完整的核心系统，包含驱动代码和调试能力。</p>
+	<p>这不仅仅是一项技术壮举，它标志着一个范式转变。不同于局限于聊天界面或简单任务（如撰写报告或翻译邮件）的传统AI工具，这些代理跨软件生态系统运行，执行跨应用的复杂工作流。</p>
+	<h2>2\. Gemini 3.5 Flash：驱动“苦力活”的引擎</h2>
+	<p>这次协作的核心是<strong>Gemini 3.5 Flash</strong>，Google为速度和可扩展性优化的模型。它每秒处理1,500个token——足够在毫秒内摄入和分析整本小说的逻辑量。在吞吐量方面，这一性能远超GPT-4o和Claude 3 Opus等竞品，使其成为处理实际任务的主力模型。</p>
+	<p>Google对速度和效率的关注解决了一个长期存在的AI痛点：随着模型变得更大，运行速度往往更慢、成本更高。Gemini 3.5 Flash打破了这一趋势，证明AI既可以强大又可以实用，适合全天候的“苦力工作”。</p>
+	<h2>3\. Gemini Spark：你的24/7云端数字助理</h2>
+	<p>Google还推出了<strong>Gemini Spark</strong>，一个托管在专用Google Cloud虚拟机上的个人AI代理。与典型AI助手（关闭应用后就停止运行）不同，Spark在云端持续运行。它可以：</p>
+	<ul>
+	<li>管理复杂任务，如协调活动（跨多个平台发送邮件、更新电子表格和跟踪回复）。</li>
+	</ul>
+	<ul>
+	<li>自动化跨软件工作流（例如扫描邮件提取数据、在Google Docs中生成报告、通过日历应用发送提醒）。</li>
+	</ul>
+	<ul>
+	<li>随时间学习用户偏好，充当预测需求的“数字分身”。</li>
+	</ul>
+	<h2>4\. 重新定义AI在工作和生活中的角色</h2>
+	<p>这一演进将AI带出了聊天窗口。关键转变包括：</p>
+	<ul>
+	<li><strong>从建议到执行</strong>：AI现在可以执行任务而不仅仅是提供建议。例如，Gemini Spark可以通过自主编写和编译代码来修复操作系统构建中缺失的驱动程序。</li>
+	</ul>
+	<ul>
+	<li><strong>无缝生态集成</strong>：Google的全家桶（Gmail、Docs、Sheets和Search）通过AI编织在一起，让代理可以在不同工具间自由切换。</li>
+	</ul>
+	<ul>
+	<li><strong>全天候生产力</strong>：凭借云端代理，即便离线也能继续工作，将AI转变为“生产力引擎”而不仅仅是一个工具。</li>
+	</ul>
+	<h2>5\. 更广泛的行业影响</h2>
+	<p>Google的演示在AI行业引起了巨大反响：</p>
+	<ul>
+	<li><strong>竞争压力</strong>：OpenAI和Anthropic等竞争对手现在面临追赶Google基础设施和生态集成的压力。</li>
+	</ul>
+	<ul>
+	<li><strong>新应用场景</strong>：软件开发、项目管理甚至科学研究（通过<em>Gemini Science</em>等工具）等领域正在被变革。例如，AI代理现在可以自动分析学术论文并为实验生成可执行代码。</li>
+	</ul>
+	<ul>
+	<li><strong>技能重新定义</strong>：职场将越来越重视“AI编排”技能——即设计和管理AI代理团队的能力——而非重复性的技术任务。</li>
+	</ul>
+	<h2>结语：AI代理时代的黎明</h2>
+	<p>Google I/O 2026不仅仅是产品发布——它是一份宣言。AI不再是独立工具，而是一个能够端到端执行任务的协作代理网络。随着这些技术的规模化，它们将重新定义生产力、创造力以及在数字时代“工作”的含义。对于企业和个人而言，问题不再是<em>是否</em>采用AI代理，而是<em>如何</em>利用它们在这个新范式中保持领先。</p>
 
-<h2>常见问题</h2>
-<h3>问：使用Gemini Spark这样的AI代理需要技术技能吗？</h3>
-<p>完全不需要。Gemini Spark被设计为面向消费者的产品。你通过自然语言与之交互——无需编码或技术设置。Google负责底层基础设施。</p>
-<h3>问：这和ChatGPT或Claude已有的功能有什么不同？</h3>
-<p>当前的AI助手响应单个提示。Gemini Spark和类似的代理在云端持续运行，自主执行多步骤工作流程，并与其他AI代理协调。想象一下向厨师要食谱和拥有全天候为你烹饪的厨房团队之间的区别。</p>
-<h3>问：AI代理会取代软件开发者吗？</h3>
-<p>不会完全取代。AI代理将自动化大量编码和测试工作，但人工监督对于架构设计、需求分析和战略决策仍然至关重要。开发者的角色将从编写每一行代码转变为编排AI代理。</p>
+	<h2>常见问题</h2>
+	<h3>问：使用Gemini Spark这样的AI代理需要技术技能吗？</h3>
+	<p>完全不需要。Gemini Spark被设计为面向消费者的产品。你通过自然语言与之交互——无需编码或技术设置。Google负责底层基础设施。</p>
+	<h3>问：这和ChatGPT或Claude已有的功能有什么不同？</h3>
+	<p>当前的AI助手响应单个提示。Gemini Spark和类似的代理在云端持续运行，自主执行多步骤工作流程，并与其他AI代理协调。想象一下向厨师要食谱和拥有全天候为你烹饪的厨房团队之间的区别。</p>
+	<h3>问：AI代理会取代软件开发者吗？</h3>
+	<p>不会完全取代。AI代理将自动化大量编码和测试工作，但人工监督对于架构设计、需求分析和战略决策仍然至关重要。开发者的角色将从编写每一行代码转变为编排AI代理。</p>
 
-<div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/open-source-ai-models-run-on-laptop">2026年开源AI模型：哪些可以在你的笔记本上运行 →</a></p>
-</div>`,
+	<h2>常见问题解答</h2>
+
+	<h3>问：Google宣布的93个AI代理到底是什么？</h3>
+	<p>AI代理能够独立执行多步骤任务，而不仅仅是回答问题。例如，它可以研究某个主题、撰写报告、创建演示文稿并发送邮件——每一步都不需要人工干预。</p>
+
+	<h3>问：Google的AI代理什么时候对普通用户开放？</h3>
+	<p>部分功能在Google I/O 2026上已发布，其他功能逐步推出。Workspace代理先面向商业用户开放，消费者代理在几个月内陆续推出。查看Google Workspace博客获取时间表。</p>
+
+	<h3>问：Google的方法与Microsoft的AI Copilot有什么不同？</h3>
+	<p>Google的代理更加自主——它们跨多个应用执行完整工作流。Microsoft的Copilot嵌入在单个Office应用内部。Google的旅行代理可以同时处理Search、Maps、Docs和Calendar。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/open-source-ai-models-run-on-laptop">2026年开源AI模型：哪些可以在你的笔记本上运行 →</a></p>
+	</div>`,
+
   },
   "12-core-ai-concepts-guide": {
     content: `<div class="article-meta-banner">
@@ -6470,62 +6493,74 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p><strong>Next:</strong> <a href="/article/llms-in-plain-english">LLMs in Plain English →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Basics · Difficulty: Beginner</p>
-<p><strong>What you'll learn:</strong> 12 essential concepts that form the foundation of modern AI large models — from parameters and tokens to agents and embodied intelligence.</p>
-</div>
+	<p><strong>分类：</strong> AI基础 · 难度：初级</p>
+	<p><strong>你将学到：</strong> 构成现代AI大模型基础的12个核心概念——从参数和Token到Agent和具身智能。</p>
+	</div>
 
-<p>In the rapidly evolving field of artificial intelligence, grasping the core concepts of large models is crucial for anyone looking to stay ahead\\. This guide breaks down 12 key concepts, providing you with a solid foundation to navigate the world of AI\\.</p>
-<h2>1\\. Model Parameters: The "Brain Capacity" of AI</h2>
-<p>Model parameters determine an AI’s ability to process complex tasks\\. Measured in billions \\(B\\), these parameters act like neurons in a brain\\. For example, DeepSeek\\-R1 has a massive 67B parameters, allowing it to handle intricate problems, from philosophical debates to advanced calculations\\. However, more parameters mean higher hardware requirements—an 8G GPU, for instance, can’t run a 67B model\\. Always check your system’s capabilities before choosing a model\\.</p>
-<h2>2\\. Context Window: AI’s "Memory"</h2>
-<p>The context window defines how much text an AI can process at once, measured in tokens\\. A 128K context window, like that of DeepSeek\\-R1, can handle around 60,000 Chinese characters—equivalent to a novella\\. Without a sufficient context window, AI suffers from "short\\-term memory," forgetting earlier parts of a conversation\\. Models like Claude excel here, making them ideal for tasks like summarizing long PDFs or writing novels\\.</p>
-<h2>3\\. Chain of Thought \\(CoT\\) \\&amp; Max Output Length: AI’s "Reasoning \\&amp; Verbosity"</h2>
-<ul>
-<li><strong>Chain of Thought \\(CoT\\):</strong> Forces AI to explain its reasoning step\\-by\\-step, boosting accuracy\\. For example, DeepSeek\\-R1 uses CoT to solve math problems transparently\\.</li>
-</ul>
-<ul>
-<li><strong>Max Output Length:</strong> Dictates how much text AI can generate at once\\. While an 8K output might seem long, real\\-world use often requires segmenting tasks, like writing a novel chapter by chapter\\.</li>
-</ul>
-<h2>4\\. Quantization: AI’s "Slimming Technique"</h2>
-<p>Quantization reduces a model’s size by compressing its parameters \\(e\\.g\\., from 32\\-bit to 8\\-bit\\)\\. This speeds up load times and lowers hardware needs, making AI runnable on edge devices\\. However, it trades a small amount of accuracy \\(5–15%\\) for performance\\. Choose quantization levels \\(e\\.g\\., FP8, INT4\\) based on your task’s need for speed vs\\. precision\\.</p>
-<h2>5\\. Model Distillation: AI’s "Knowledge Transfer"</h2>
-<p>Model distillation lets a small "student" model learn from a large "teacher" model \\(e\\.g\\., a 7B model learning from DeepSeek\\-R1\\)\\. The student gains skills without copying data, making it smaller, faster, and cheaper to deploy\\. It’s perfect for specific tasks where full model capabilities aren’t needed, like customer service chatbots\\.</p>
-<h2>6\\. Token: AI’s "Language Unit"</h2>
-<p>Tokens are the smallest units of text AI processes \\(words, characters, or punctuation\\)\\. Pricing for AI services is based on tokens\\. Roughly, 1 English character = 0\\.3 tokens, and 1 Chinese character = 0\\.6 tokens \\(varies by model\\)\\. For example, 1,000 Chinese characters ≈ 600 tokens\\. Remember: both input and output tokens are charged\\.</p>
-<h2>7\\. MoE Architecture: AI’s "Expert Team"</h2>
-<p>Mixture of Experts \\(MoE\\) uses multiple "expert" sub\\-models, each specializing in a task\\. A gate network activates only relevant experts, saving compute power\\. Models like DeepSeek\\-V3 use MoE, appearing large but operating efficiently by "calling experts on demand\\."</p>
-<h2>8\\. RAG \\(Retrieval\\-Augmented Generation\\): AI’s "Research Skill"</h2>
-<p>RAG lets AI retrieve external information before generating answers, solving the "knowledge lag" issue\\. For example, when asked about the 2025 Nobel Physics Prize, RAG fetches the latest news instead of relying on outdated training data\\. It’s widely used in enterprise for tasks like smart customer service\\.</p>
-<h2>9\\. Reinforcement Learning: AI’s "Trial\\-and\\-Error Learning"</h2>
-<p>Unlike supervised learning \\(where AI is taught answers\\), reinforcement learning rewards AI for correct actions and penalizes mistakes\\. It’s great for tasks like math reasoning or game strategy, where learning methods \\(not just answers\\) matter\\. Think of it like a child learning to walk—falling teaches them to balance\\.</p>
-<h2>10\\. Agent: AI’s "Doer"</h2>
-<p>Agents are AI entities that <strong>act</strong>—they perceive environments, make decisions, and complete tasks\\. Unlike chatbots \\(which only talk\\), agents can perform actions like booking flights or automating business workflows\\. They represent AI’s shift from "talking" to "doing\\."</p>
-<h2>11\\. AIGC vs\\. AGI vs\\. Agent: AI’s "Roles"</h2>
-<ul>
-<li><strong>AIGC \\(AI\\-Generated Content\\):</strong> Creates text, images, or music \\(e\\.g\\., ChatGPT, MidJourney\\)\\.</li>
-</ul>
-<ul>
-<li><strong>AGI \\(Artificial General Intelligence\\):</strong> Hypothetical AI with human\\-like intelligence \\(still theoretical\\)\\.</li>
-</ul>
-<ul>
-<li><strong>Agent:</strong> Focuses on <strong>execution</strong>—AGI’s "hands and feet\\."</li>
-</ul>
-<p>Analogy: AGI is a restaurant owner, AIGC is the chef, and Agents are the waiters\\.</p>
-<h2>12\\. Embodied Intelligence: AI’s "Physical Interaction"</h2>
-<p>Embodied intelligence gives AI a "body" to interact with the physical world \\(e\\.g\\., robots with cameras and robotic arms\\)\\. It believes intelligence comes from <strong>physical experience</strong>—not just data\\. This is the future of AI, enabling tasks like autonomous driving or robotic assistance\\.</p>
-<p>By mastering these concepts, you’ll understand the "operating system" of modern AI and be ready to leverage its power in your work or projects\\. The AI landscape is shifting from generating content to taking action—don’t get left behind\\!</p>
+	<p>在快速发展的AI领域，掌握大模型的核心概念对于任何想要保持领先的人来说都至关重要。本指南将为你解析12个关键概念，帮助你奠定坚实的基础，从容应对AI世界的变化。</p>
+	<h2>1\. 模型参数：AI的"大脑容量"</h2>
+	<p>模型参数决定了AI处理复杂任务的能力。以十亿（B）为单位计量，这些参数就像大脑中的神经元。例如，DeepSeek-R1拥有庞大的670亿参数，使其能够处理从哲学辩论到高级计算的复杂问题。但参数越多也意味着硬件要求越高——例如8G GPU无法运行670亿参数的模型。在选择模型前一定要检查你的系统能力。</p>
+	<h2>2\. 上下文窗口：AI的"内存"</h2>
+	<p>上下文窗口定义了AI一次能处理多少文本，以Token为单位计量。DeepSeek-R1的128K上下文窗口可以处理约6万个中文字符——相当于一部中篇小说。没有足够的上下文窗口，AI就会出现"短期记忆"问题，忘记对话的前文。Claude等模型在这方面表现出色，非常适合总结长PDF或写小说等任务。</p>
+	<h2>3\. 思维链与最大输出长度：AI的"推理与话痨"</h2>
+	<ul>
+	<li><strong>思维链（CoT）</strong>：强制AI逐步解释其推理过程，提高准确性。例如DeepSeek-R1使用CoT透明地解决数学问题。</li>
+	</ul>
+	<ul>
+	<li><strong>最大输出长度</strong>：控制AI一次能生成的文本量。虽然8K输出看起来很多，但实际使用中通常需要分段完成任务，比如逐章撰写小说。</li>
+	</ul>
+	<h2>4\. 量化：AI的"瘦身技术"</h2>
+	<p>量化通过压缩模型参数（例如从32位压缩到8位）来减小模型体积。这加快了加载速度并降低硬件需求，使AI可以在边缘设备上运行。但代价是牺牲少量精度（5-15%）来换取性能。根据任务对速度与精度的需求选择合适的量化级别（如FP8、INT4）。</p>
+	<h2>5\. 模型蒸馏：AI的"知识迁移"</h2>
+	<p>模型蒸馏让小型"学生"模型向大型"教师"模型学习（例如7B模型向DeepSeek-R1学习）。学生模型获得技能但不复制数据，因此更小、更快、部署成本更低。它非常适合客户服务聊天机器人等不需要完整模型能力的特定任务。</p>
+	<h2>6\. Token：AI的"语言单位"</h2>
+	<p>Token是AI处理的最小文本单位（单词、字符或标点）。AI服务的定价基于Token。大致来说，1个英文字符 ≈ 0.3个Token，1个中文字符 ≈ 0.6个Token（因模型而异）。例如，1,000个中文字符 ≈ 600个Token。注意：输入和输出Token都会计费。</p>
+	<h2>7\. MoE架构：AI的"专家团队"</h2>
+	<p>混合专家模型（MoE）使用多个"专家"子模型，每个专家专精一项任务。门控网络只激活相关专家以节省算力。DeepSeek-V3等模型采用MoE架构，看似庞大但通过"按需调用专家"实现高效运行。</p>
+	<h2>8\. RAG（检索增强生成）：AI的"调研能力"</h2>
+	<p>RAG让AI在生成答案前先检索外部信息，解决"知识滞后"问题。例如询问2025年诺贝尔物理学奖得主时，RAG会获取最新新闻而不是依赖过时的训练数据。它在企业中广泛应用于智能客服等场景。</p>
+	<h2>9\. 强化学习：AI的"试错学习"</h2>
+	<p>与监督学习（直接教AI正确答案）不同，强化学习对AI的正确行为给予奖励、错误行为进行惩罚。它非常适合数学推理或游戏策略等任务，因为这些任务学习方法（而非仅仅是答案）更为重要。就像学走路的孩子——跌倒教会他们如何保持平衡。</p>
+	<h2>10\. Agent：AI的"行动者"</h2>
+	<p>Agent是能够<strong>行动</strong>的AI实体——它们感知环境、做出决策、完成任务。与只能对话的聊天机器人不同，Agent可以执行预订航班或自动化业务工作流等操作。这代表了AI从"说话"到"做事"的转变。</p>
+	<h2>11\. AIGC vs AGI vs Agent：AI的"角色"</h2>
+	<ul>
+	<li><strong>AIGC（AI生成内容）</strong>：创建文本、图像或音乐（如ChatGPT、MidJourney）。</li>
+	</ul>
+	<ul>
+	<li><strong>AGI（通用人工智能）</strong>：具有人类智力水平的假想AI（仍在理论阶段）。</li>
+	</ul>
+	<ul>
+	<li><strong>Agent</strong>：专注于<strong>执行</strong>——AGI的"手脚"。</li>
+	</ul>
+	<p>类比：AGI是餐厅老板，AIGC是厨师，Agent是服务员。</p>
+	<h2>12\. 具身智能：AI的"物理交互"</h2>
+	<p>具身智能赋予AI"身体"以与物理世界交互（例如配备摄像头和机械臂的机器人）。它认为智能来自<strong>物理体验</strong>——而不仅仅是数据。这是AI的未来方向，能够实现自动驾驶或机器人辅助等任务。</p>
+	<p>掌握这些概念后，你就理解了现代AI的"操作系统"，并准备好在自己的工作或项目中利用AI的力量。AI的格局正在从生成内容转向采取行动——不要被落下！</p>
 
-<h2>常见问题</h2>
-<h3>问：日常使用AI需要多少参数？</h3>
-<p>对于写作、头脑风暴和研究等日常使用，7B到70B参数的模型完全足够。大规模模型（100B+）通常用于高级数学、编程或科学研究等专业任务。</p>
-<h3>问：更大的上下文窗口一定意味着更好的AI吗？</h3>
-<p>不一定。更大的上下文窗口有助于分析长文档或维持复杂对话。但它也需要更多计算资源，可能降低响应速度。</p>
-<h3>问：我需要了解所有这些概念才能使用AI工具吗？</h3>
-<p>不需要。你可以直接使用ChatGPT、Claude或DeepSeek等工具而无需了解任何这些概念。然而，理解它们有助于你选择合适的工具、编写更好的提示词，以及在AI表现异常时排查问题。</p>
+	<h2>常见问题</h2>
+	<h3>问：日常使用AI需要多少参数？</h3>
+	<p>对于写作、头脑风暴和研究等日常使用，7B到70B参数的模型完全足够。大规模模型（100B+）通常用于高级数学、编程或科学研究等专业任务。</p>
+	<h3>问：更大的上下文窗口一定意味着更好的AI吗？</h3>
+	<p>不一定。更大的上下文窗口有助于分析长文档或维持复杂对话，但它也需要更多计算资源，可能降低响应速度。</p>
+	<h3>问：我需要了解所有这些概念才能使用AI工具吗？</h3>
+	<p>不需要。你可以直接使用ChatGPT、Claude或DeepSeek等工具而无需了解任何这些概念。然而，理解它们有助于你选择合适的工具、编写更好的提示词，以及在AI表现异常时排查问题。</p>
 
-<div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/llms-in-plain-english">通俗解释LLM →</a></p>
-</div>`,
+	<h2>常见问题解答</h2>
+
+	<h3>问：初学者应该先学习哪个最重要的AI概念？</h3>
+	<p>Token是最重要的概念。它决定了你的计费方式、输入长度限制以及AI处理语言的方式。理解Token有助于你优化提示词、估算成本和选择合适的模型。</p>
+
+	<h3>问：RAG和微调的实际区别是什么？</h3>
+	<p>RAG让AI在回答前实时搜索外部文档。微调则是将模型永久训练在特定数据上。RAG更便宜、更容易更新。微调更适合需要一致行为且无需额外上下文的场景。</p>
+
+	<h3>问：我需要理解全部12个概念才能有效使用AI工具吗？</h3>
+	<p>完全不需要。你可以完全不了解这些概念也能高效使用ChatGPT。但理解Token有助于编写更精准的提示词，理解上下文窗口可以避免长度限制。每个概念都能逐步改进你的使用效果。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/llms-in-plain-english">通俗解释LLM →</a></p>
+	</div>`,
+
   },
   "openclaw-demystified-20-lines": {
     content: `<div class="article-meta-banner">
@@ -6689,49 +6724,61 @@ in wet pavement, flying cars in distance --ar 21:9 --chaos 30
 <p><strong>Next:</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools: When It's Actually Worth Paying →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Comparisons · Difficulty: Intermediate</p>
-<p><strong>What you'll learn:</strong> How to evaluate domestic and international LLM service packages — pricing, features, hidden pitfalls, and which ones actually deliver value.</p>
-</div>
+	<p><strong>分类：</strong> AI对比评测 · 难度：中级</p>
+	<p><strong>你将学到：</strong> 如何评估国内外LLM服务套餐——定价、功能、隐藏陷阱，以及哪些套餐真正物有所值。</p>
+	</div>
 
-<p>The large language model \\(LLM\\) market has exploded with a wide range of service packages, catering to both individual users and enterprises\\. However, a closer look reveals stark differences in quality—some stand out for their robustness and value, while others fall short with underwhelming features and hidden pitfalls\\. This analysis breaks down the strengths and weaknesses of mainstream domestic and international LLM packages, helping you navigate the crowded landscape\\.</p>
-<h2>International LLM Packages: Stability and Functionality as Core Advantages</h2>
-<p>International giants like OpenAI, Anthropic, and Google have set high standards with their LLM service packages, focusing on <strong>reliable performance</strong> and <strong>comprehensive functionality</strong>\\.</p>
-<p>OpenAI’s GPT series packages \\(e\\.g\\., GPT\\-4o, GPT\\-4 Turbo\\) shine with consistent response quality and seamless ecosystem integration\\. The paid tiers offer generous context windows \\(up to 128K tokens\\), fast inference speeds, and access to advanced features like multimodal input \\(text, image, audio\\) and API customization\\. For developers, the well\\-documented SDK and flexible pricing plans \\(pay\\-as\\-you\\-go or volume discounts\\) make it easy to scale projects without unnecessary overhead\\. Even the free tier provides enough functionality for casual users, avoiding the "paywall for basic use" frustration\\.</p>
-<p>Anthropic’s Claude packages prioritize <strong>safety and transparency</strong>, a major draw for enterprises handling sensitive data\\. Claude 3 Opus and Sonnet tiers offer enterprise\\-grade security features \\(end\\-to\\-end encryption, data privacy guarantees\\) alongside powerful reasoning capabilities—ideal for legal document analysis, financial modeling, and complex problem\\-solving\\. The packages also stand out for their user\\-friendly interface and responsive customer support, addressing technical issues quickly to minimize workflow disruptions\\.</p>
-<p>Google’s Gemini packages leverage the tech giant’s cloud infrastructure, delivering <strong>high\\-speed processing</strong> and seamless integration with Google Workspace \\(Docs, Sheets, Gmail\\)\\. The premium tiers support large\\-scale batch processing and custom model fine\\-tuning, making them a top choice for businesses looking to embed AI into daily operations\\. While the free tier has more limitations, it still provides access to core features like natural language generation and basic API calls, serving as a solid entry point for new users\\.</p>
-<h2>Domestic LLM Packages: Potential Undermined by Shortcomings</h2>
-<p>Domestic LLMs \\(e\\.g\\., from Baidu, ByteDance, Alibaba\\) have made strides in localization and language adaptation, but their service packages often suffer from <strong>inconsistent quality</strong> and <strong>uncompetitive terms</strong>\\.</p>
-<p>One common issue is the <strong>unbalanced feature\\-to\\-price ratio</strong>\\. Some domestic packages charge premium prices but fail to deliver comparable functionality—for example, smaller context windows \\(often capped at 32K tokens\\), slower response times, and limited multimodal support\\. Free tiers are frequently restricted to basic text generation, with critical features \\(like API access or long\\-form content creation\\) locked behind expensive subscriptions\\. This creates a barrier for individual developers and small businesses looking to test or adopt AI tools\\.</p>
-<p>Another pain point is <strong>poor developer support and documentation</strong>\\. Unlike international packages with detailed guides, sample code, and active community forums, some domestic offerings provide vague documentation, outdated SDKs, and slow customer service\\. This makes integration into existing workflows frustrating and time\\-consuming, defeating the purpose of using AI to boost efficiency\\.</p>
-<p>Hidden costs and restrictive terms also mar the user experience\\. Some packages advertise low base prices but charge extra for essential add\\-ons \\(e\\.g\\., increased token limits, priority support, or data storage\\)\\. Others impose strict usage restrictions, such as limiting the number of API calls per month or prohibiting commercial use of generated content—limitations that are often buried in fine print\\.</p>
-<h2>Key Takeaways for Choosing an LLM Package</h2>
-<p>When selecting an LLM service package, prioritize these factors to avoid disappointment:</p>
-<ul>
-<li><strong>Functionality alignment</strong>: Ensure the package offers the features you need \\(context window size, multimodal support, API flexibility\\) for your use case\\.</li>
-</ul>
-<ul>
-<li><strong>Price transparency</strong>: Look for clear pricing structures with no hidden fees or unexpected add\\-ons\\.</li>
-</ul>
-<ul>
-<li><strong>Performance reliability</strong>: Check user reviews and benchmarks for response consistency, speed, and downtime records\\.</li>
-</ul>
-<ul>
-<li><strong>Support quality</strong>: Opt for packages with comprehensive documentation, responsive customer service, and active developer communities\\.</li>
-</ul>
-<p>While international LLM packages currently lead in terms of robustness and user experience, domestic offerings show potential—especially for users requiring Mandarin\\-specific optimization or compliance with local data regulations\\. As the market matures, domestic providers need to address pricing fairness, feature completeness, and developer support to compete effectively\\.</p>
-<p>In the end, the best LLM package is one that balances performance, value, and usability\\. By weighing the strengths and weaknesses of domestic and international options, you can find a solution that meets your needs without settling for subpar service\\.</p>
+	<p>大语言模型（LLM）市场已经涌现出大量服务套餐，覆盖个人用户和企业用户的各种需求。然而深入观察后会发现质量差异很大——有些以稳定性和性价比脱颖而出，另一些则因功能平庸和隐藏陷阱而令人失望。本文深入分析国内外主流LLM套餐的优缺点，帮助你在拥挤的市场中做出明智选择。</p>
+	<h2>国际LLM套餐：稳定性和功能为核心优势</h2>
+	<p>OpenAI、Anthropic和Google等国际巨头为LLM服务套餐设定了高标准，专注于<strong>可靠性能</strong>和<strong>全面功能</strong>。</p>
+	<p>OpenAI的GPT系列套餐（如GPT-4o、GPT-4 Turbo）以一致的响应质量和无缝的生态集成著称。付费层级提供慷慨的上下文窗口（最高128K Token）、快速推理速度以及多模态输入（文本、图像、音频）和API定制等高级功能。对开发者而言，文档完善的SDK和灵活的定价方案（按量付费或批量折扣）使他们能够轻松扩展项目。即使免费层级也为普通用户提供了足够的功能。</p>
+	<p>Anthropic的Claude套餐优先考虑<strong>安全性和透明度</strong>，这对处理敏感数据的企业具有强大吸引力。Claude 3 Opus和Sonnet层级提供企业级安全功能（端到端加密、数据隐私保证）以及强大的推理能力——非常适合法律文档分析、金融建模和复杂问题解决。这些套餐还以用户友好的界面和响应迅速的客户支持著称。</p>
+	<p>Google的Gemini套餐利用其云基础设施，提供<strong>高速处理</strong>和与Google Workspace（Docs、Sheets、Gmail）的无缝集成。高级层级支持大规模批处理和自定义模型微调，使其成为希望将AI嵌入日常运营的企业的首选。</p>
+	<h2>国内LLM套餐：潜力受限于短板</h2>
+	<p>国内LLM（如百度、字节跳动、阿里巴巴等）在本土化和语言适应方面取得了进展，但其服务套餐常受困于<strong>质量不稳定</strong>和<strong>条款缺乏竞争力</strong>。</p>
+	<p>一个常见问题是<strong>功能价格比失衡</strong>。一些国内套餐定价不菲却无法提供媲美的功能——例如较小的上下文窗口（通常限制在32K Token）、较慢的响应时间和有限的多模态支持。免费层级通常局限于基本文本生成，关键功能（如API访问或长内容创作）被锁定在昂贵的订阅后面。这给希望试用AI工具的个人开发者和中小企业设置了障碍。</p>
+	<p>另一个痛点是<strong>开发者支持和文档质量差</strong>。与国际套餐提供详细指南、示例代码和活跃社区论坛不同，一些国内产品提供模糊的文档、过时的SDK和缓慢的客服响应。这使得集成到现有工作流变得令人沮丧且耗时。</p>
+	<p>隐藏成本和限制性条款也影响了用户体验。一些套餐宣传低基础价格，但对基本附加功能（如增加Token限制、优先支持或数据存储）额外收费。其他的则施加严格的使用限制，如每月限制API调用次数或禁止生成内容的商业使用——这些限制通常隐藏在细小字体的条款中。</p>
+	<h2>选择LLM套餐的关键要点</h2>
+	<p>选择LLM服务套餐时，优先考虑以下因素以避免踩坑：</p>
+	<ul>
+	<li><strong>功能匹配</strong>：确保套餐提供你需要的功能（上下文窗口大小、多模态支持、API灵活性）。</li>
+	</ul>
+	<ul>
+	<li><strong>价格透明</strong>：寻找定价结构清晰的方案，没有隐藏费用或意外附加费。</li>
+	</ul>
+	<ul>
+	<li><strong>性能可靠</strong>：查看用户评价和基准测试，了解响应一致性、速度和停机记录。</li>
+	</ul>
+	<ul>
+	<li><strong>支持质量</strong>：选择提供全面文档、响应迅速的客服和活跃开发者社区的套餐。</li>
+	</ul>
+	<p>虽然国际LLM套餐目前在稳健性和用户体验方面领先，但国内产品显示出潜力——特别是对于需要中文特定优化或遵守本地数据法规的用户。随着市场成熟，国内供应商需要在定价公平性、功能完整性和开发者支持方面做出改进才能有效竞争。</p>
+	<p>归根结底，最好的LLM套餐是在性能、价值和易用性之间取得平衡的套餐。通过权衡国内外选项的优缺点，你可以找到满足需求的解决方案。</p>
 
-<h2>常见问题</h2>
-<h3>问：对于个人开发者来说，哪个LLM套餐性价比最高？</h3>
-<p>对于个人开发者，ChatGPT Plus（每月20美元）在功能、API访问和生态系统集成方面提供了最佳平衡。如果你优先考虑安全性和推理能力，Claude Pro（每月20美元）是一个强有力的替代选择。</p>
-<h3>问：国内LLM套餐适合英文应用吗？</h3>
-<p>国内LLM针对中文进行了优化，在处理中文内容时表现最佳。对于英文应用，国际套餐通常提供更优越的性能、更大的上下文窗口和更全面的文档。</p>
-<h3>问：选择LLM套餐时需要注意哪些隐藏成本？</h3>
-<p>需要注意：每月重置但超量收费的API调用限制、锁定在高级层级下的上下文窗口升级、多模态功能的额外收费、数据存储费用，以及生成内容商业用途的限制。</p>
+	<h2>常见问题</h2>
+	<h3>问：对于个人开发者来说，哪个LLM套餐性价比最高？</h3>
+	<p>对于个人开发者，ChatGPT Plus（每月20美元）在功能、API访问和生态系统集成方面提供了最佳平衡。如果你优先考虑安全性和推理能力，Claude Pro（每月20美元）是一个强有力的替代选择。</p>
+	<h3>问：国内LLM套餐适合英文应用吗？</h3>
+	<p>国内LLM针对中文进行了优化，在处理中文内容时表现最佳。对于英文应用，国际套餐通常提供更优越的性能、更大的上下文窗口和更全面的文档。</p>
+	<h3>问：选择LLM套餐时需要注意哪些隐藏成本？</h3>
+	<p>需要注意：每月重置但超量收费的API调用限制、锁定在高级层级下的上下文窗口升级、多模态功能的额外收费、数据存储费用，以及生成内容商业用途的限制。</p>
 
-<div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具：何时值得付费 →</a></p>
-</div>`,
+	<h2>常见问题解答</h2>
+
+	<h3>问：预算有限的学生最佳AI订阅选择是什么？</h3>
+	<p>ChatGPT Plus（每月20美元）提供最佳的能力与成本平衡。Claude Pro（每月20美元）提供出色的写作辅助。ChatGPT、Claude和Gemini的免费层级可以零成本覆盖基本需求。</p>
+
+	<h3>问：国内LLM服务与国际产品相比如何？</h3>
+	<p>DeepSeek和Qwen等国内服务在中文本地化任务上以更低价格提供有竞争力的性能。它们有更严格的内容过滤。在中文应用场景中，国内服务通常优于国际模型。</p>
+
+	<h3>问：应该订阅一个AI服务还是使用多个免费层级？</h3>
+	<p>多个免费层级可以零成本获得不同工具的各自优势。对于高强度的专业工作，单个付费订阅更方便。重度用户通常会保留一个付费订阅加上几个免费账户。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/free-vs-paid-ai-tools-worth-it">免费vs付费AI工具：何时值得付费 →</a></p>
+	</div>`,
+
   },
 
   // ====== Claude Code Browser Automation ======
@@ -6924,66 +6971,78 @@ Write a blog post about the benefits of sustainable fashion, using the tone and 
 <p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Agent, Skill, and Harness in AI Development →</a></p>
 </div>`,
     contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tools for Business · Difficulty: Beginner</p>
-<p><strong>What you'll learn:</strong> 5 AI tools that let you establish a one-person AI-powered company for your overseas website business.</p>
-</div>
+	<p><strong>分类：</strong> AI商业工具 · 难度：初级</p>
+	<p><strong>你将学到：</strong> 5款AI工具，让你为海外网站业务建立一个人的AI驱动公司。</p>
+	</div>
 
-<p>In the realm of global entrepreneurship, especially for those building overseas websites, efficiency is the key to success\\. You don't need to toil day and night or manage a large team\\. With these 5 AI tools, you can establish a one\\-person AI\\-powered company, letting artificial intelligence handle the heavy lifting while you focus on strategic decisions\\. Let's dive into how each tool can supercharge your overseas website venture\\.</p>
-<h2>1\\. Deer\\-Flow: Your AI Researcher for Market Insights</h2>
-<p>When launching an overseas website, understanding your target market, competitors, and industry trends is crucial\\. <strong>Deer\\-Flow</strong>, a tool with 65,800 stars, acts as your dedicated AI researcher\\.</p>
-<p>To use it, simply issue a command like:</p>
-<pre><code class="language-plaintext">
-Research the latest e-commerce trends in the European market, compare top 5 competitors’ websites, and generate a 30-page report.
-</code></pre>
-<p>Deer\\-Flow will automatically scour the web, gather relevant articles and data, and compile a comprehensive report\\. This saves you countless hours of manual research, providing you with actionable insights to shape your website's positioning and marketing strategies\\.</p>
-<h2>2\\. Prompt\\-Optimizer: Translate Your Ideas into AI\\-Understandable Commands</h2>
-<p>Not everyone is an AI prompt engineering expert, but <strong>Prompt\\-Optimizer</strong> \\(28,300 stars\\) bridges that gap\\. It translates your plain\\-language requests into professional AI commands\\.</p>
-<p>For example, if you want to create a viral product description for your overseas e\\-commerce website, just say:</p>
-<pre><code class="language-plaintext">
-Write a viral product description for my handmade jewelry collection targeting young women in the US.
-</code></pre>
-<p>Prompt\\-Optimizer will convert this into a detailed AI instruction like:</p>
-<pre><code class="language-plaintext">
-Generate a viral product description for a handmade jewelry collection, optimized for young women in the US market, including 6 relevant hashtags and an engaging hook within the first 8 characters.
-</code></pre>
-<p>This ensures that AI tools like Claude understand your needs precisely, leading to high\\-quality content for your website\\.</p>
-<h2>3\\. Agents: 80\\+ Professional AI Employees at Your Disposal</h2>
-<p>Running an overseas website involves multiple tasks—frontend development, data analysis, SEO, marketing, and more\\. <strong>Agents</strong> \\(34,900 stars\\) provides you with a team of 80\\+ AI employees, each specializing in different fields\\.</p>
-<p>Suppose you need to optimize your website’s SEO\\. You can deploy the SEO expert agent with a command like:</p>
-<pre><code class="language-plaintext">
-Analyze my website [your-website-url] for SEO issues, suggest keyword optimizations, and create a backlink strategy for the fashion niche.
-</code></pre>
-<p>The AI SEO expert will conduct a thorough analysis and present a actionable plan\\. Similarly, you can use frontend engineer agents to fix website bugs, data analyst agents to track user behavior, and marketing expert agents to plan social media campaigns\\.</p>
-<h2>4\\. Claude\\-Flow \\(Now Ruflo\\): Your AI General Manager for Project Management</h2>
-<p>Overseas website projects can be complex, involving multiple stages and tasks\\. <strong>Claude\\-Flow</strong> \\(now Ruflo, 45,720 stars\\) acts as your AI general manager, breaking down projects into manageable tasks and assigning them to the right AI employees\\.</p>
-<p>Let’s say you want to launch a new product line on your website\\. Give Claude\\-Flow this command:</p>
-<pre><code class="language-plaintext">
-Launch a new organic skincare product line targeting eco-conscious consumers in Australia. Break down the project into tasks, assign to relevant AI employees, and ensure automatic验收 (acceptance).
-</code></pre>
-<p>Claude\\-Flow will split the project into steps like market research, product page design, SEO optimization, marketing campaign creation, etc\\., assign each task to the appropriate AI agent \\(from the Agents tool\\), and ensure seamless collaboration and automatic quality checks\\.</p>
-<h2>5\\. Letta: Your Evolving AI Brain That Learns Your Preferences</h2>
-<p>Consistency is key for an overseas website\\. <strong>Letta</strong> \\(22,490 stars\\) is an AI evolving brain that learns your preferences, work style, and habits over time\\.</p>
-<p>For instance, if you prefer a certain tone for your website’s blog posts or have specific requirements for product descriptions, Letta will remember these\\. Even if you switch to a new conversation or task, you don’t have to re\\-explain your preferences\\. Just start with a command like:</p>
-<pre><code class="language-plaintext">
-Write a blog post about the benefits of sustainable fashion, using the tone and structure we’ve used before.
-</code></pre>
-<p>Letta will produce content that aligns perfectly with your established style\\.</p>
-<h2>Assemble Your One\\-Person AI Company for Overseas Success</h2>
-<p>Individually, these tools are powerful, but together, they form a complete AI company\\. Deer\\-Flow handles research, Prompt\\-Optimizer translates your ideas, Agents provide specialized talent, Claude\\-Flow manages projects, and Letta ensures consistency\\.</p>
-<p>Imagine this: you assign a project before going to bed, and when you wake up, it’s fully completed\\. You’re the boss, Claude Code is the CEO, and the 80\\+ AI employees handle the execution\\. Whether you’re running an e\\-commerce site, a content blog, or a SaaS platform targeting overseas users, this AI stack can revolutionize your workflow\\.</p>
-<p>So, stop grinding endlessly or struggling to manage a team\\. Embrace these tools, become the "variable" in your entrepreneurial journey, and let AI do the heavy lifting for your overseas website business\\.</p>
+	<p>在全球创业领域，特别是对于建设海外网站的人来说，效率是成功的关键。你不需要日夜操劳或管理庞大团队。有了这5款AI工具，你可以建立一个人的AI驱动公司，让人工智能处理繁重工作，你专注于战略决策。让我们深入了解每个工具如何助力你的海外网站事业。</p>
+	<h2>1\. Deer-Flow：你的AI市场研究员</h2>
+	<p>在启动海外网站时，了解目标市场、竞争对手和行业趋势至关重要。<strong>Deer-Flow</strong>是一个拥有65,800星标的工具，充当你的专属AI研究员。</p>
+	<p>使用它，只需发出如下指令：</p>
+	<pre><code class="language-plaintext">
+	Research the latest e-commerce trends in the European market, compare top 5 competitors' websites, and generate a 30-page report.
+	</code></pre>
+	<p>Deer-Flow会自动搜索网络，收集相关文章和数据，并生成综合报告。这为你节省了无数手动研究的时间，提供可操作的洞察来塑造网站的定位和营销策略。</p>
+	<h2>2\. Prompt-Optimizer：将你的想法翻译成AI能理解的指令</h2>
+	<p>并非每个人都是AI提示词工程专家，但<strong>Prompt-Optimizer</strong>（28,300星标）弥合了这一差距。它可以将你的日常语言请求转化为专业的AI指令。</p>
+	<p>例如，如果你想为海外电商网站创建病毒式产品描述，只需说：</p>
+	<pre><code class="language-plaintext">
+	Write a viral product description for my handmade jewelry collection targeting young women in the US.
+	</code></pre>
+	<p>Prompt-Optimizer会将其转换为详细的AI指令：</p>
+	<pre><code class="language-plaintext">
+	Generate a viral product description for a handmade jewelry collection, optimized for young women in the US market, including 6 relevant hashtags and an engaging hook within the first 8 characters.
+	</code></pre>
+	<p>这确保Claude等AI工具能精确理解你的需求，为网站生成高质量内容。</p>
+	<h2>3\. Agents：80多个专业AI员工任你调遣</h2>
+	<p>运营海外网站涉及多种任务——前端开发、数据分析、SEO、营销等等。<strong>Agents</strong>（34,900星标）为你提供了一支80多个AI员工的团队，每个员工专攻不同领域。</p>
+	<p>假设你需要优化网站的SEO。你可以用如下指令部署SEO专家：</p>
+	<pre><code class="language-plaintext">
+	Analyze my website [your-website-url] for SEO issues, suggest keyword optimizations, and create a backlink strategy for the fashion niche.
+	</code></pre>
+	<p>AI SEO专家会进行全面分析并提出可执行的方案。同理，你可以使用前端工程代理修复网站Bug、数据分析代理追踪用户行为、营销专家代理策划社交媒体活动。</p>
+	<h2>4\. Claude-Flow（现名Ruflo）：你的AI项目经理</h2>
+	<p>海外网站项目可能很复杂，涉及多个阶段和任务。<strong>Claude-Flow</strong>（现名Ruflo，45,720星标）充当你的AI总经理，将项目分解为可管理的任务并分配给合适的AI员工。</p>
+	<p>假设你想在网站上推出新产品线。给Claude-Flow如下指令：</p>
+	<pre><code class="language-plaintext">
+	Launch a new organic skincare product line targeting eco-conscious consumers in Australia. Break down the project into tasks, assign to relevant AI employees, and ensure automatic acceptance.
+	</code></pre>
+	<p>Claude-Flow会将项目拆分为市场调研、产品页面设计、SEO优化、营销活动创建等步骤，将每个任务分配给合适的AI代理，确保无缝协作和自动质量检查。</p>
+	<h2>5\. Letta：学习你偏好的进化AI大脑</h2>
+	<p>一致性对于海外网站至关重要。<strong>Letta</strong>（22,490星标）是一个不断进化的AI大脑，随时间学习你的偏好、工作风格和习惯。</p>
+	<p>例如，如果你对网站博客文章有特定的语气偏好或对产品描述有特定要求，Letta会记住这些。即使你切换到新的对话或任务，也无需重新解释你的偏好。只需像这样开始：</p>
+	<pre><code class="language-plaintext">
+	Write a blog post about the benefits of sustainable fashion, using the tone and structure we've used before.
+	</code></pre>
+	<p>Letta会生成与你既定风格完全一致的内容。</p>
+	<h2>组装你的单人AI公司，征战海外市场</h2>
+	<p>单独来看，这些工具都很强大，但组合起来，它们形成了一个完整的AI公司。Deer-Flow负责研究，Prompt-Optimizer翻译你的想法，Agents提供专业人才，Claude-Flow管理项目，Letta确保一致性。</p>
+	<p>想象一下：你睡前分配一个项目，醒来时它已经完成了。你是老板，Claude Code是CEO，80多个AI员工负责执行。无论你在运营电商网站、内容博客还是针对海外用户的SaaS平台，这套AI组合都能彻底改变你的工作流程。</p>
+	<p>所以，别再埋头苦干或费力管理团队了。拥抱这些工具，成为你创业旅程中的"变量"，让AI为你的海外网站业务承担繁重工作。</p>
 
-<h2>常见问题</h2>
-<h3>问：使用这些AI工具需要技术技能吗？</h3>
-<p>这些工具大多数面向非技术用户设计。Deer-Flow和Agents拥有用户友好的界面，Claude-Flow（Ruflo）和Letta使用自然语言指令工作。基本的计算机操作能力就足够了。</p>
-<h3>问：这些工具能完全取代开发团队吗？</h3>
-<p>它们可以取代许多日常任务，但不能完全取代。对于复杂项目，架构决策、质量保证和创意方向仍需要人工监督。这些工具擅长自动化重复性工作。</p>
-<h3>问：这些工具的总成本是多少？</h3>
-<p>大多数是开源的或提供免费层级。Deer-Flow、Prompt-Optimizer、Agents和Letta是开源的。Claude-Flow（Ruflo）有免费层级。你主要需要为使用LLM（如Claude或GPT）时的API使用量付费。</p>
+	<h2>常见问题</h2>
+	<h3>问：使用这些AI工具需要技术技能吗？</h3>
+	<p>这些工具大多数面向非技术用户设计。Deer-Flow和Agents拥有用户友好的界面，Claude-Flow（Ruflo）和Letta使用自然语言指令工作。基本的计算机操作能力就足够了。</p>
+	<h3>问：这些工具能完全取代开发团队吗？</h3>
+	<p>它们可以取代许多日常任务，但不能完全取代。对于复杂项目，架构决策、质量保证和创意方向仍需要人工监督。这些工具擅长自动化重复性工作。</p>
+	<h3>问：这些工具的总成本是多少？</h3>
+	<p>大多数是开源的或提供免费层级。Deer-Flow、Prompt-Optimizer、Agents和Letta是开源的。Claude-Flow（Ruflo）有免费层级。你主要需要为使用LLM（如Claude或GPT）时的API使用量付费。</p>
 
-<div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">AI开发中的Agent、Skill和Harness →</a></p>
-</div>`,
+	<h2>常见问题解答</h2>
+
+	<h3>问：用AI工具启动海外业务需要大量预算吗？</h3>
+	<p>不需要。大多数工具提供慷慨的免费层级。组合起来每月总成本不超过50美元就能覆盖业务需求。最大的支出是域名注册和托管，每年不到100美元。</p>
+
+	<h3>问：AI工具真的能取代为海外业务雇佣员工吗？</h3>
+	<p>在前6-12个月，AI工具可以取代内容写作、设计、客户服务和数据分析等角色。但AI无法处理实体任务或复杂的谈判沟通。</p>
+
+	<h3>问：对于在线销售产品的人来说，这5个工具中哪个最重要？</h3>
+	<p>ChatGPT或Claude用于产品描述和客户邮件效果最显著。其次是Canva用于产品图片和社交媒体图片。从这两个开始入手。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">AI开发中的Agent、Skill和Harness →</a></p>
+	</div>`,
+
   },
 
   // ====== git-github-beginners-guide ======
@@ -8785,121 +8844,133 @@ curl -X GET "https://tool-api.example.com/export?spaceId=space_0089&amp;format=z
 <p><strong>Next:</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5 AI Tools to Build Your One-Person Overseas Business →</a></p>
 </div>`,
 		contentZh: `<div class="article-meta-banner">
-<p><strong>Category:</strong> AI Tools Tutorial · Difficulty: Beginner</p>
-<p><strong>What you'll learn:</strong> Complete guide to using the free AI knowledge base tool for document management, intelligent retrieval, and team knowledge accumulation.</p>
-</div>
+	<p><strong>分类：</strong> AI工具教程 · 难度：初级</p>
+	<p><strong>你将学到：</strong> 使用免费AI知识库工具进行文档管理、智能检索和团队知识积累的完整指南。</p>
+	</div>
 
-<p>This free AI knowledge base tool has attracted over 600 thousand views among tech users\\. It enables you to build exclusive private knowledge archives, upload local documents, web resources and industry materials, and achieve intelligent retrieval, content summary and professional Q\\&amp;A\\. It is highly suitable for overseas website operation, technical document management, cross\\-border business data sorting and team knowledge accumulation\\. This guide covers complete usage steps, core functions and practical deployment skills\\.</p>
-<h2>Core Advantages of This Free Knowledge Base Tool</h2>
-<ol>
-<li>Completely free for daily basic use, no hidden charging for common document parsing and inquiry functions</li>
-</ol>
-<ol>
-<li>Supports multiple file formats including PDF, TXT, Markdown, webpage snapshot and local notes</li>
-</ol>
-<ol>
-<li>Intelligent semantic matching, accurately locate target content instead of simple keyword search</li>
-</ol>
-<ol>
-<li>Independent private data storage, effectively protect business and technical confidential information</li>
-</ol>
-<ol>
-<li>Lightweight access mode, available on browser without complicated environment installation</li>
-</ol>
-<h2>Step 1 Quick Entry \\&amp; Initial Space Creation</h2>
-<p>Access the official webpage of the tool via common browsers, register an account with email address\\. After logging in, create an independent knowledge space classified by business attributes\\. You can divide archives into website development, overseas marketing, AI model usage and other categories to manage materials hierarchically\\.</p>
-<h2>Step 2 Batch Import Various Knowledge Materials</h2>
-<p>Users can import single file or batch upload multiple documents, the system automatically completes text extraction and vectorization processing\\.</p>
-<h3>Basic Upload Calling Demo</h3>
-<pre><code class="language-javascript">
-// Front-end upload request sample code
-const uploadKnowledgeFile = async (fileList, spaceId) =&gt; {
-  const formData = new FormData();
-  fileList.forEach(file =&gt; {
-    formData.append("docs", file);
-  });
-  formData.append("spaceId", spaceId);
+	<p>这款免费AI知识库工具在技术用户中已吸引超过60万浏览量。它可以让你建立专属的私有知识档案，上传本地文档、网络资源和行业资料，实现智能检索、内容摘要和专业问答。非常适合海外网站运营、技术文档管理、跨境业务数据整理和团队知识积累。本指南涵盖完整的使用步骤、核心功能和实用部署技巧。</p>
+	<h2>这款免费知识库工具的核心优势</h2>
+	<ol>
+	<li>日常基本使用完全免费，常见文档解析和查询功能无隐藏收费</li>
+	</ol>
+	<ol>
+	<li>支持多种文件格式，包括PDF、TXT、Markdown、网页快照和本地笔记</li>
+	</ol>
+	<ol>
+	<li>智能语义匹配，精确定位目标内容而非简单的关键词搜索</li>
+	</ol>
+	<ol>
+	<li>独立私有数据存储，有效保护业务和技术机密信息</li>
+	</ol>
+	<ol>
+	<li>轻量级访问方式，浏览器即可使用，无需复杂环境安装</li>
+	</ol>
+	<h2>步骤一：快速进入与初始空间创建</h2>
+	<p>通过常用浏览器访问该工具的官方网站，使用邮箱注册账号。登录后，按业务属性创建独立的知识空间。你可以将档案分为网站开发、海外营销、AI模型使用等类别，分层管理资料。</p>
+	<h2>步骤二：批量导入各类知识材料</h2>
+	<p>用户可以导入单个文件或批量上传多个文档，系统自动完成文本提取和向量化处理。</p>
+	<h3>基本上传调用演示</h3>
+	<pre><code class="language-javascript">
+	// 前端上传请求示例代码
+	const uploadKnowledgeFile = async (fileList, spaceId) => {
+	  const formData = new FormData();
+	  fileList.forEach(file => {
+	    formData.append("docs", file);
+	  });
+	  formData.append("spaceId", spaceId);
+	
+	  const response = await fetch("https://tool-api.example.com/upload", {
+	    method: "POST",
+	    body: formData
+	  });
+	  const result = await response.json();
+	  console.log("文件解析状态:", result.msg);
+	  return result;
+	};
+	</code></pre>
+	<p>常见的适用材料：网站运营手册、多语种文案模板、竞品分析文档、技术配置说明和跨境合规条款。</p>
+	<h2>步骤三：核心智能查询与内容挖掘</h2>
+	<p>材料解析完成后，你可以提出自然语言需求，获取提取的信息、内容归纳和详细答案。这突破了手动翻页搜索的限制，极大提高信息获取效率。</p>
+	<h3>实用查询命令示例</h3>
+	<pre><code class="language-plaintext">
+	# 查询1：整理海外网站GDPR合规关键条款
+	# 查询2：总结欧洲市场产品页面的高转化文案逻辑
+	# 查询3：提取HTML跨区域适配的常见Bug解决方案
+	</code></pre>
+	<h3>简单查询调用脚本</h3>
+	<pre><code class="language-python">
+	def knowledge_query(space_id, user_question):
+	    request_body = {
+	        "spaceId": space_id,
+	        "query": user_question,
+	        "returnLimit": 5
+	    }
+	    # 调用智能检索接口
+	    res = requests.post("https://tool-api.example.com/query", json=request_body)
+	    answer = res.json()["data"]["content"]
+	    return answer
+	
+	# 实际使用案例
+	if __name__ == "__main__":
+	    question = "列出内容网站的全网用户留存优化方法"
+	    final_answer = knowledge_query("space_0089", question)
+	    print(final_answer)
+	</code></pre>
+	<h2>步骤四：知识库二次整理与标签管理</h2>
+	<p>为导入的文档添加统一分类标签，如地区标签、业务类型标签和技术领域标签。支持手动补充笔记内容，合并重复资料并删除无效文件，保持知识库整洁易用。</p>
+	<h2>步骤五：海外项目实际应用场景</h2>
+	<h3>1\. 个人技术知识积累</h3>
+	<p>存储AI开发命令、网站部署代码和模型调优经验。遇到重复技术问题时快速调用历史解决方案。</p>
+	<h3>2\. 跨境内容标准管理</h3>
+	<p>统一店铺产品描述、社交媒体帖子和邮件营销草稿，确保面向全球用户的内容风格一致。</p>
+	<h3>3\. 团队共享知识协作</h3>
+	<p>对团队成员开放部分访问权限，实现行业数据、项目进度文档和客服标准回复的同步查看，降低沟通成本。</p>
+	<h3>4\. 快速素材生成辅助</h3>
+	<p>基于存储的知识储备，指令AI生成新文章、优化方案和回复模板，大幅缩短内容创作周期。</p>
+	<h2>步骤六：日常维护与访问优化技巧</h2>
+	<ol>
+	<li>定期清理无用冗余文件，减少检索延迟</li>
+	</ol>
+	<ol>
+	<li>将超大文档拆分为小章节，提高解析精度</li>
+	</ol>
+	<ol>
+	<li>为机密业务知识空间设置专属访问密码</li>
+	</ol>
+	<ol>
+	<li>定期将重要知识内容导出为本地备份文件</li>
+	</ol>
+	<h2>本地备份导出命令</h2>
+	<pre><code class="language-bash">
+	# 一键导出指定知识空间的所有文档
+	curl -X GET "https://tool-api.example.com/export?spaceId=space_0089&amp;format=zip" -o global_site_knowledge.zip
+	</code></pre>
+	<h2>总结</h2>
+	<p>这款免费AI知识库工具集文档存储、智能搜索和内容重组功能于一身，完美匹配海外网站建设者和跨境从业者的日常工作需求。建立专属知识档案可以帮助你沉淀工作经验，快速获取有效信息，在长期全球化业务运营中稳步提升工作效率和项目竞争力。</p>
 
-  const response = await fetch("https://tool-api.example.com/upload", {
-    method: "POST",
-    body: formData
-  });
-  const result = await response.json();
-  console.log("File parsing status:", result.msg);
-  return result;
-};
-</code></pre>
-<p>Common applicable materials: website operation manuals, multilingual copywriting templates, competitor analysis documents, technical configuration notes and cross\\-border compliance clauses\\.</p>
-<h2>Step 3 Core Intelligent Query \\&amp; Content Mining</h2>
-<p>After material parsing finishes, you can put forward natural language demands to obtain extracted information, content induction and detailed answers\\. It breaks the limit of manual page flipping search, greatly improving information acquisition efficiency\\.</p>
-<h3>Practical Query Command Examples</h3>
-<pre><code class="language-plaintext">
-# Query 1: Sort out overseas website GDPR compliance key terms
-# Query 2: Summarize high conversion copywriting logic for European market product pages
-# Query 3: Extract common bug solutions of HTML cross-region adaptation
-</code></pre>
-<h3>Simple Query Invoke Script</h3>
-<pre><code class="language-python">
-def knowledge_query(space_id, user_question):
-    request_body = {
-        "spaceId": space_id,
-        "query": user_question,
-        "returnLimit": 5
-    }
-    # Call intelligent retrieval interface
-    res = requests.post("https://tool-api.example.com/query", json=request_body)
-    answer = res.json()["data"]["content"]
-    return answer
+	<h2>常见问题</h2>
+	<h3>问：这个知识库工具真的免费吗？</h3>
+	<p>是的，该工具提供完全免费的日常基本使用，常见的文档解析和查询功能没有隐藏收费。高级功能如更大的存储空间可能需要付费计划。</p>
+	<h3>问：该工具支持哪些文件格式？</h3>
+	<p>支持多种格式，包括PDF、TXT、Markdown、网页快照和本地笔记。你可以一次性批量导入多个文档。</p>
+	<h3>问：该搜索与普通关键词搜索有什么不同？</h3>
+	<p>该工具使用智能语义匹配，根据含义而不仅仅是关键词来精确定位目标内容。这意味着你可以用自然语言提问并获得相关答案。</p>
 
-# Actual use case
-if __name__ == "__main__":
-    question = "List global user retention optimization methods for content websites"
-    final_answer = knowledge_query("space_0089", question)
-    print(final_answer)
-</code></pre>
-<h2>Step 4 Knowledge Base Secondary Arrangement \\&amp; Tag Management</h2>
-<p>Add unified classification tags to imported documents, such as region label, business type label and technical field label\\. Support manual supplement note content, merge repeated materials and delete invalid files, keep the knowledge base neat and easy to call\\.</p>
-<h2>Step 5 Practical Application Scenarios for Overseas Projects</h2>
-<h3>1\\. Personal Technical Knowledge Accumulation</h3>
-<p>Store AI development commands, website deployment codes and model tuning experience\\. Quickly call historical solutions when encountering repeated technical problems\\.</p>
-<h3>2\\. Cross\\-border Content Standard Management</h3>
-<p>Unify store product descriptions, social media posts and email marketing drafts\\. Guarantee consistent content style facing global users\\.</p>
-<h3>3\\. Team Shared Knowledge Collaboration</h3>
-<p>Open partial access permission to team members\\. Realize synchronous viewing of industry data, project progress documents and customer service standard replies, lowering communication cost\\.</p>
-<h3>4\\. Rapid Material Generation Assistance</h3>
-<p>Based on stored knowledge reserves, command AI to generate new articles, optimization plans and reply templates, greatly shorten content creation cycle\\.</p>
-<h2>Step 6 Daily Maintenance \\&amp; Access Optimization Tips</h2>
-<ol>
-<li>Regularly clean useless redundant files to reduce retrieval delay</li>
-</ol>
-<ol>
-<li>Split oversized documents into small chapters to improve parsing accuracy</li>
-</ol>
-<ol>
-<li>Set exclusive access password for confidential business knowledge space</li>
-</ol>
-<ol>
-<li>Export important knowledge content as local backup files regularly</li>
-</ol>
-<h2>Command for Local Backup Export</h2>
-<pre><code class="language-bash">
-# One-click export all documents in specified knowledge space
-curl -X GET "https://tool-api.example.com/export?spaceId=space_0089&amp;format=zip" -o global_site_knowledge.zip
-</code></pre>
-<h2>Summary</h2>
-<p>This free AI knowledge base tool integrates document storage, intelligent search and content reorganization functions\\. It perfectly matches daily work demands of overseas website builders and cross\\-border practitioners\\. Building exclusive knowledge archives can help you precipitate work experience, quickly acquire effective information, and steadily lift work efficiency and project competitiveness in long\\-term global business operation\\.</p>
+	<h2>常见问题解答</h2>
 
-<h2>常见问题</h2>
-<h3>问：这个知识库工具真的免费吗？</h3>
-<p>是的，该工具提供完全免费的日常基本使用，常见的文档解析和查询功能没有隐藏收费。高级功能如更大的存储空间可能需要付费计划。</p>
-<h3>问：该工具支持哪些文件格式？</h3>
-<p>支持多种格式，包括PDF、TXT、Markdown、网页快照和本地笔记。你可以一次性批量导入多个文档。</p>
-<h3>问：该搜索与普通关键词搜索有什么不同？</h3>
-<p>该工具使用智能语义匹配，根据含义（不仅仅是关键词）精确定位目标内容。这意味着你可以用自然语言提问并获得相关答案。</p>
+	<h3>问：什么是AI知识库，它与普通数据库有什么不同？</h3>
+	<p>AI知识库存储文档供AI模型在回答问题时搜索。与进行精确匹配的数据库不同，AI知识库使用语义搜索，即使措辞不同也能找到相关信息。</p>
 
-<div class="next-step">
-<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 →</a></p>
-</div>`,
+	<h3>问：哪个免费AI知识库工具最适合小企业？</h3>
+	<p>Guru或Document360的免费层级效果不错。对于简单需求，使用ChatGPT的Projects功能并上传文档。如需更多控制，可使用开源的LangChain配合ChromaDB。</p>
+
+	<h3>问：免费AI知识库中可以存储多少文档？</h3>
+	<p>免费层级通常限制为50-200个文档或1-5GB。在自己的硬件上使用开源方案则没有限制。云端免费层级对小企业的核心文档需求来说足够慷慨。</p>
+
+	<div class="next-step">
+	<p><strong>下一篇：</strong> <a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造你的单人海外业务 →</a></p>
+	</div>`,
+
 	},
 
 	// ====== 6-must-have-openclaw-skills ======
@@ -9966,51 +10037,57 @@ mmx tts --text "Your script text here" --output "audio.mp3"</code></pre>
 	<p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Practical Explanation of Agent, Skill and Harness →</a></p>
 	</div>`,
 			contentZh: `<div class="article-meta-banner">
-	<p><strong>分类：</strong> AI应用场景 · 难度：中级</p>
-	<p><strong>你将学到：</strong> 如何利用Harness和代理技术自动化知识讲解视频创作——从脚本编写、视觉设计到音频合成和屏幕录制。</p>
-	</div>
+		<p><strong>分类：</strong> AI应用场景 · 难度：中级</p>
+		<p><strong>你将学到：</strong> 如何利用Harness和代理技术自动化知识讲解视频创作——从脚本编写、视觉设计到音频合成和屏幕录制。</p>
+		</div>
+	
+		<p>在内容创作领域，特别是技术知识讲解视频，在确保质量和一致性的同时实现自动化是一项挑战。传统的视频制作流程需要脚本撰写、视觉设计、动画制作和音频录制等多个环节，每个环节都需要专业人员和大量时间投入。本文将深入探讨如何利用Harness和代理技术，将文章自动转化为精美的知识视频，包含实际步骤和代码示例。</p>
+		<h2>引言：为什么用Harness创建视频？</h2>
+		<p>创建技术知识视频通常涉及繁琐的步骤：脚本编写、视觉设计、动画和音频同步。有了Harness，我们可以编排代理来自动处理这些任务。核心优势在于<strong>可控性</strong>——与AI视频生成模型不同，通过Harness进行基于Web的视频创建可以精确控制字体、颜色、帧时长和动态效果等元素。这种方法比依赖不稳定的视频模型"生成"更稳定、更具成本效益，特别适合需要定期更新内容的教程类视频制作。</p>
+		<h2>工作流程：从文章到视频</h2>
+		<p>整个过程分为四个阶段，每个阶段都有人工检查点以确保质量。</p>
+		<h3>1. 内容编辑：脚本和开发计划</h3>
+		<p>首先，将技术文章转换为<strong>对话式脚本</strong>（适合视频旁白）和<strong>开发计划</strong>（概述视觉步骤和章节）。</p>
+		<p><strong>脚本转换</strong>：将正式的技术散文改写成简短、对话式的第二人称句子。</p>
+		<p><strong>开发计划</strong>：将脚本拆分为视觉步骤和章节。每个段落映射到一个特定屏幕步骤，多个步骤组成一个章节。有关技能和Harness的更多信息，请参阅我们的<a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解析</a>。</p>
+		<h3>2. 人工检查点：验证和调整</h3>
+		<p>生成脚本和开发计划后，代理暂停等待人工审核。你需要确认以下几个关键点：脚本和开发计划是否需要修改、选择使用哪个视觉主题（技能提供多个预设计主题）、以及如何准备素材（如图片和图表）。你还需决定是顺序开发各章节还是并行开发，这对整体进度有重要影响。</p>
+		<h3>3. Web开发和音频合成</h3>
+		<p>确认后，代理为每个章节开发Web页面并处理音频。每个章节在独立文件夹中开发（避免冲突），使用HTML、CSS和JavaScript创建动态视觉页面。开发者可以在样式中自定义字体和配色方案，例如通过CSS变量定义主色调和强调色。音频合成方面，如果启用自动合成，代理会从脚本中提取文本并使用MiniMax CLI进行文字转语音（TTS），生成与视觉内容同步的旁白音频，确保最终视频中的声音和画面完美配合。</p>
+		<pre><code class="language-bash"># 安装MiniMax CLI
+		curl -fsSL https://raw.githubusercontent.com/minimax-ai/cli/main/install.sh | bash
+		# 合成音频
+		mmx tts --text "你的脚本文字" --output "audio.mp3"</code></pre>
+		<h3>4. 屏幕录制：生成最终视频</h3>
+		<p>在浏览器中打开Web页面，播放合成的音频，并录制屏幕。这能确保音频和画面的完美同步。要自动化播放和录制过程，可以使用<code>ffmpeg</code>等工具进行屏幕录制，配合音频输入源，生成最终的MP4视频文件。录制完成后还可以进行简单的剪辑和后期处理，添加片头片尾或字幕。</p>
+		<pre><code class="language-bash">ffmpeg -f avfoundation -i "1:0" -f lavfi -i anullsrc -c:v libx264 -c:a aac -t 60 -y output.mp4</code></pre>
+		<h2>技术实现：Harness组件</h2>
+		<p>用于此工作流的健壮Harness包括六个核心组件：上下文管理、状态和内存、工具系统等。每个组件都有特定的职责，确保视频创作流程的每个环节都有可靠支持。</p>
+		<h3>1. 上下文管理</h3>
+		<p>为防止信息过载，将内容拆分为特定阶段的文档。例如<code>script-style.md</code>（仅在脚本编写时读取）、<code>chapter-guide.md</code>（仅在Web开发时读取）、<code>audio-spec.md</code>（仅在音频合成时读取）。这种方式确保代理始终访问最相关的信息，避免在编写脚本时被Web开发细节干扰。</p>
+		<h3>2. 状态和内存</h3>
+		<p>使用<code>outline.md</code>等文件存储关键决策（如章节结构、节奏和视觉风格）。在开发后续章节时，代理引用此文件以保持一致性。例如outline.md中记录"第一章使用蓝色主题、第二章使用绿色主题"，所有后续章节开发都会自动遵循这一约定，确保整体视觉风格统一。</p>
+		<h3>3. 工具系统</h3>
+		<p>利用基本文件操作（<code>read_file</code>、<code>write_file</code>）和MiniMax CLI等专门工具进行音频合成。为避免多代理并行开发的冲突，每个章节使用独立文件夹和唯一CSS前缀（如<code>chapter-1-container</code>、<code>chapter-2-container</code>），确保样式互不干扰。</p>
+		<h2>实际设置：工具和配置</h2>
+		<p>安装Claude Code并通过<code>cc-switch</code>配置为使用国内模型（如MiniMax），降低API调用成本。关于代理技能和设置，请查看<a href="/article/claude-code-top-7-skills">Claude Code七大技能指南</a>。此外还需要安装MiniMax CLI用于文字转语音，以及从GitHub下载<code>web-video-presentation</code>技能包来增强代理的视频创作能力。有了这些工具，代理就可以自动完成从脚本生成到页面开发的全流程工作。</p>
+		<p>通过利用Harness、代理和Web技术，你可以从文章自动化创建知识讲解视频。这种方法提供了无与伦比的控制性、稳定性和效率——让内容创作者专注于讲故事而非繁琐的制作任务。无论是制作教程视频、产品演示还是技术讲座，这套自动化工作流都能大幅缩短制作周期，同时保持专业水准的输出质量。更多基于代理的自动化，请阅读<a href="/article/openclaw-demystified-20-lines">OpenClaw解析</a>和<a href="/article/claude-code-in-action">Claude Code实战</a>。</p>
+	
+		<h2>常见问题</h2>
+	
+		<h3>问：使用Harness创建视频需要编程经验吗？</h3>
+		<p>熟悉HTML、CSS和命令行工具有帮助但不是必需的。代理会处理大部分技术工作——你主要在检查点审核和批准输出。</p>
+	
+		<h3>问：这个工作流程只能用在Claude Code上，还是可以用其他AI助手？</h3>
+		<p>虽然本指南以Claude Code为主要代理，但Harness方法兼容任何支持技能插件和文件操作的AI编码助手。</p>
+	
+		<h3>问：使用这个自动化Harness工作流创建一个视频需要多长时间？</h3>
+		<p>对于典型的5-10分钟知识视频，自动化过程大约需要1-2小时，而手动需要8-12小时。大部分时间花在人工审核检查点和屏幕录制上。</p>
+	
+		<div class="next-step">
+		<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解析 →</a></p>
+		</div>`,
 
-	<p>在内容创作领域，特别是技术知识讲解视频，在确保质量和一致性的同时实现自动化是一项挑战。传统的视频制作流程需要脚本撰写、视觉设计、动画制作和音频录制等多个环节，每个环节都需要专业人员和大量时间投入。本文将深入探讨如何利用Harness和代理技术，将文章自动转化为精美的知识视频，包含实际步骤和代码示例。</p>
-	<h2>引言：为什么用Harness创建视频？</h2>
-	<p>创建技术知识视频通常涉及繁琐的步骤：脚本编写、视觉设计、动画和音频同步。有了Harness，我们可以编排代理来自动处理这些任务。核心优势在于<strong>可控性</strong>——与AI视频生成模型不同，通过Harness进行基于Web的视频创建可以精确控制字体、颜色、帧时长和动态效果等元素。这种方法比依赖不稳定的视频模型"生成"更稳定、更具成本效益，特别适合需要定期更新内容的教程类视频制作。</p>
-	<h2>工作流程：从文章到视频</h2>
-	<p>整个过程分为四个阶段，每个阶段都有人工检查点以确保质量。</p>
-	<h3>1. 内容编辑：脚本和开发计划</h3>
-	<p>首先，将技术文章转换为<strong>对话式脚本</strong>（适合视频旁白）和<strong>开发计划</strong>（概述视觉步骤和章节）。</p>
-	<p><strong>脚本转换</strong>：将正式的技术散文改写成简短、对话式的第二人称句子。</p>
-	<p><strong>开发计划</strong>：将脚本拆分为视觉步骤和章节。每个段落映射到一个特定屏幕步骤，多个步骤组成一个章节。有关技能和Harness的更多信息，请参阅我们的<a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解析</a>。</p>
-	<h3>2. 人工检查点：验证和调整</h3>
-	<p>生成脚本和开发计划后，代理暂停等待人工审核。你需要确认以下几个关键点：脚本和开发计划是否需要修改、选择使用哪个视觉主题（技能提供多个预设计主题）、以及如何准备素材（如图片和图表）。你还需决定是顺序开发各章节还是并行开发，这对整体进度有重要影响。</p>
-	<h3>3. Web开发和音频合成</h3>
-	<p>确认后，代理为每个章节开发Web页面并处理音频。每个章节在独立文件夹中开发（避免冲突），使用HTML、CSS和JavaScript创建动态视觉页面。开发者可以在样式中自定义字体和配色方案，例如通过CSS变量定义主色调和强调色。音频合成方面，如果启用自动合成，代理会从脚本中提取文本并使用MiniMax CLI进行文字转语音（TTS），生成与视觉内容同步的旁白音频，确保最终视频中的声音和画面完美配合。</p>
-	<h3>4. 屏幕录制：生成最终视频</h3>
-	<p>在浏览器中打开Web页面，播放合成的音频，并录制屏幕。这能确保音频和画面的完美同步。要自动化播放和录制过程，可以使用<code>ffmpeg</code>等工具进行屏幕录制，配合音频输入源，生成最终的MP4视频文件。录制完成后还可以进行简单的剪辑和后期处理，添加片头片尾或字幕。</p>
-	<h2>技术实现：Harness组件</h2>
-	<p>用于此工作流的健壮Harness包括六个核心组件：上下文管理、状态和内存、工具系统等。每个组件都有特定的职责，确保视频创作流程的每个环节都有可靠支持。</p>
-	<h3>1. 上下文管理</h3>
-	<p>为防止信息过载，将内容拆分为特定阶段的文档。例如<code>script-style.md</code>（仅在脚本编写时读取）、<code>chapter-guide.md</code>（仅在Web开发时读取）、<code>audio-spec.md</code>（仅在音频合成时读取）。这种方式确保代理始终访问最相关的信息，避免在编写脚本时被Web开发细节干扰。</p>
-	<h3>2. 状态和内存</h3>
-	<p>使用<code>outline.md</code>等文件存储关键决策（如章节结构、节奏和视觉风格）。在开发后续章节时，代理引用此文件以保持一致性。例如outline.md中记录"第一章使用蓝色主题、第二章使用绿色主题"，所有后续章节开发都会自动遵循这一约定，确保整体视觉风格统一。</p>
-	<h3>3. 工具系统</h3>
-	<p>利用基本文件操作（<code>read_file</code>、<code>write_file</code>）和MiniMax CLI等专门工具进行音频合成。为避免多代理并行开发的冲突，每个章节使用独立文件夹和唯一CSS前缀（如<code>chapter-1-container</code>、<code>chapter-2-container</code>），确保样式互不干扰。</p>
-	<h2>实际设置：工具和配置</h2>
-	<p>安装Claude Code并通过<code>cc-switch</code>配置为使用国内模型（如MiniMax），降低API调用成本。关于代理技能和设置，请查看<a href="/article/claude-code-top-7-skills">Claude Code七大技能指南</a>。此外还需要安装MiniMax CLI用于文字转语音，以及从GitHub下载<code>web-video-presentation</code>技能包来增强代理的视频创作能力。有了这些工具，代理就可以自动完成从脚本生成到页面开发的全流程工作。</p>
-	<p>通过利用Harness、代理和Web技术，你可以从文章自动化创建知识讲解视频。这种方法提供了无与伦比的控制性、稳定性和效率——让内容创作者专注于讲故事而非繁琐的制作任务。无论是制作教程视频、产品演示还是技术讲座，这套自动化工作流都能大幅缩短制作周期，同时保持专业水准的输出质量。更多基于代理的自动化，请阅读<a href="/article/openclaw-demystified-20-lines">OpenClaw解析</a>和<a href="/article/claude-code-in-action">Claude Code实战</a>。</p>
-
-	<h2>常见问题</h2>
-
-	<h3>问：使用Harness创建视频需要编程经验吗？</h3>
-	<p>熟悉HTML、CSS和命令行工具有帮助但不是必需的。代理会处理大部分技术工作——你主要在检查点审核和批准输出。</p>
-
-	<h3>问：这个工作流程只能用在Claude Code上，还是可以用其他AI助手？</h3>
-	<p>虽然本指南以Claude Code为主要代理，但Harness方法兼容任何支持技能插件和文件操作的AI编码助手。</p>
-
-	<h3>问：使用这个自动化Harness工作流创建一个视频需要多长时间？</h3>
-	<p>对于典型的5-10分钟知识视频，自动化过程大约需要1-2小时，而手动需要8-12小时。大部分时间花在人工审核检查点和屏幕录制上。</p>
-
-	<div class="next-step">
-	<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">Agent、Skill和Harness实用解析 →</a></p>
-	</div>`,
 		},
 
 
