@@ -18695,4 +18695,647 @@ gtag('config', 'G-YOUR_GA4_ID', {
 </div>`,
   },
 
+
+  "5-must-have-claude-code-skills": {
+    content: `<p>If you’re still only using Claude Code for basic debugging and coding, you’re missing out on its powerful ecosystem of skills\\. Most beginners are unaware of these game\\-changing tools, but they can transform your development workflow\\. Here are 5 highly popular, practical Claude Code skills with official names—ready to install and use right away for global developers\\.</p>
+<h2>1\\. doc\\-reader: All\\-in\\-One Document Analysis for Global Tech Teams</h2>
+<p>For developers working with international clients or multilingual technical materials, <strong>doc\\-reader</strong> is a game\\-changer\\. It enables local parsing of PDFs, Word documents, and technical notes without uploading files—ensuring data security, which is crucial for global compliance \\(like GDPR\\)\\.</p>
+<h3>Key Features:</h3>
+<ul>
+<li><strong>Local Parsing</strong>: Analyze documents directly on your device\\.</li>
+<pre><code class="language-bash"># Example workflow: Local document parsing
+claude code install doc-reader
+claude doc-reader parse local ./technical-specs.pdf</code></pre>
+<li><strong>Automatic Highlight</strong>: Extract key points from technical documents, making it easy to grasp project requirements across languages\\.</li>
+<li><strong>Use Case</strong>: Ideal for teams collaborating on global projects, as it supports English, Spanish, and Chinese technical documents out\\-of\\-the\\-box\\.</li>
+</ul>
+<h2>2\\. code\\-refactor: Global Code Standardization Tool</h2>
+<p>Legacy codebases with inconsistent styles and bloated logic are a headache for international development teams\\. <strong>code\\-refactor</strong> solves this by unifying coding standards without altering business logic—critical for maintaining consistency across distributed teams\\.</p>
+<h3>How It Works:</h3>
+<ul>
+<li><strong>One\\-Click Standardization</strong>:</li>
+<pre><code class="language-bash"># Refactor a JavaScript project
+claude code install code-refactor
+claude code-refactor --dir ./old-project --lang js --standard airbnb</code></pre>
+<li><strong>Safe Optimization</strong>: Streamlines redundant logic and nested structures while keeping core functionality intact—perfect for updating old projects for global deployment\\.</li>
+<li><strong>Benefit</strong>: Ensures your code meets international team standards, reducing merge conflicts and review time\\.</li>
+</ul>
+<h2>3\\. git\\-smart\\-commit: Professional Git Commit Messages for Global Teams</h2>
+<p>Writing clear, standardized Git commit messages is vital for global collaboration\\. <strong>git\\-smart\\-commit</strong> automates this, generating enterprise\\-grade commit notes that are consistent across languages\\.</p>
+<h3>Usage:</h3>
+<ul>
+<li><strong>Automatic Commit Message Generation</strong>:</li>
+<pre><code class="language-bash"># Install and use git-smart-commit
+claude code install git-smart-commit
+git add .
+claude git-smart-commit -m &quot;feat: add user authentication module&quot;</code></pre>
+<li><strong>Feature</strong>: Identifies code changes and categorizes commits \\(e\\.g\\., <code>feat</code>, <code>fix</code>, <code>docs</code>\\) following industry best practices—readable by developers worldwide\\.</li>
+<li><strong>Impact</strong>: Improves code review efficiency for remote teams spread across time zones\\.</li>
+</ul>
+<h2>4\\. api\\-docs\\-generator: Automated API Documentation for Global Developers</h2>
+<p>Manually writing API docs for multilingual audiences is time\\-consuming\\. <strong>api\\-docs\\-generator</strong> scans your project’s routes and parameters to generate comprehensive, ready\\-to\\-use API documentation in multiple languages\\.</p>
+<h3>Implementation:</h3>
+<ul>
+<li><strong>Generate Multilingual API Docs</strong>:</li>
+<pre><code class="language-bash"># Install and generate API docs
+claude code install api-docs-generator
+claude api-docs-generator --dir ./backend --lang en,es,zh</code></pre>
+<li><strong>Output</strong>: Includes parameter explanations, request/response examples, and even SDK usage guides—essential for global frontend\\-backend collaboration\\.</li>
+<li><strong>Advantage</strong>: Saves hundreds of hours for teams building products for international markets\\.</li>
+</ul>
+<h2>5\\. dependency\\-audit: Global Dependency Security Scanner</h2>
+<p>Security vulnerabilities in third\\-party dependencies can disrupt global deployments\\. <strong>dependency\\-audit</strong> scans your project’s dependencies to detect outdated versions, security holes, and version conflicts—providing fix recommendations\\.</p>
+<h3>How to Use:</h3>
+<ul>
+<li><strong>Scan and Fix Dependencies</strong>:</li>
+<pre><code class="language-bash"># Install and audit dependencies
+claude code install dependency-audit
+claude dependency-audit --dir ./project --output report.md</code></pre>
+<li><strong>Features</strong>: Supports major package managers \\(npm, pip, Maven\\) and aligns with global security standards \\(like OWASP\\)\\.</li>
+<li><strong>Value</strong>: Prevents production issues in regions with strict security regulations \\(e\\.g\\., EU, USA\\)\\.</li>
+</ul>
+<h2>How to Install These Skills Globally</h2>
+<p>All these skills are available in Claude Code’s skill store\\. Install them with these simple commands \\(works for developers worldwide\\):</p>
+<pre><code class="language-bash"># Install all 5 skills at once
+claude code install doc-reader code-refactor git-smart-commit api-docs-generator dependency-audit</code></pre>
+<h2>Why These Skills Matter for Overseas Developers</h2>
+<ul>
+<li><strong>Efficiency</strong>: Cut down manual work \\(document parsing, doc writing, commit messages\\) by 60%\\+\\.</li>
+<li><strong>Consistency</strong>: Align code and processes across global teams\\.</li>
+<li><strong>Compliance</strong>: Meet data security and coding standards in different regions\\.</li>
+<li><strong>Collaboration</strong>: Simplify work for multilingual, distributed teams\\.</li>
+</ul>
+<p>By integrating these skills into your workflow, you’ll elevate your AI coding efficiency and competitiveness in the global tech landscape\\. Start with one skill, master it, then move to the next—your international development projects will thank you\\.</p>
+
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/article/claude-code-install-setup">Claude Code Installation and Setup</a></li>
+<li><a href="/article/claude-code-top-7-skills">Claude Code Top 7 Skills</a></li>
+<li><a href="/article/claude-code-in-action">Claude Code in Action</a></li>
+<li><a href="/article/claude-code-advanced">Advanced Claude Code</a></li>
+<li><a href="/article/mastering-claude-code-cli">Mastering Claude Code CLI</a></li>
+
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Are these skills free to install?</h3>
+<p>Yes, all skills listed here are free to install through the skill marketplace. You only pay for your API usage when running the tool itself.</p>
+
+<h3>Can I use these skills on Windows, Mac, and Linux?</h3>
+<p>Absolutely. All official skills are cross-platform compatible. The installation commands work identically across Windows PowerShell, macOS Terminal, and Linux shells.</p>
+
+<h3>How do I keep my skills up to date?</h3>
+<p>The tool automatically checks for skill updates. You can also manually update all installed skills with a single command to get the latest features and security patches.</p>
+
+<div class="next-step">
+<p><strong>Next article:</strong> <a href="/article/claude-code-top-7-skills">Claude Code Top 7 Skills: A Complete Guide to the Most Powerful Extensions &rarr;</a></p>
+</div>`,
+    contentZh: `<p>如果你还只用Claude Code做基本的调试和编码，那你正在错过其强大的技能生态系统。大多数初学者不知道这些改变游戏规则的工具，但它们可以彻底改变你的开发工作流。以下是5个广受欢迎且实用的Claude Code技能，面向全球开发者，可立即安装和使用。</p>
+
+
+<p>doc-reader是一个改变游戏规则的工具，无需上传文件即可本地解析PDF、Word文档和技术笔记，确保数据安全，这对GDPR等全球合规要求至关重要。</p>
+<p>code-refactor解决了遗留代码库风格不一致和逻辑臃肿的问题，在不改变业务逻辑的前提下统一编码标准，对维护分布式团队的代码一致性至关重要。</p>
+<p>git-smart-commit自动生成符合企业标准的Git提交信息，让远程团队的代码审查更加高效。</p>
+<p>api-docs-generator扫描项目的路由和参数，自动生成多语言的API文档，节省数百小时的文档编写时间。</p>
+<p>dependency-audit扫描项目依赖的过时版本、安全漏洞和版本冲突，并提供修复建议，防止在安全法规严格的地区出现生产问题。</p>
+<p>通过将这些技能集成到你的工作流中，你将提升AI编码效率，增强在全球技术领域的竞争力。从掌握一个技能开始，逐步推进，你的国际开发项目将受益匪浅。</p>
+
+<h2>相关文章</h2>
+<ul>
+<li><a href="/article/claude-code-install-setup">Claude Code安装与配置</a></li>
+<li><a href="/article/claude-code-top-7-skills">Claude Code七大技能</a></li>
+<li><a href="/article/claude-code-in-action">Claude Code实战</a></li>
+<li><a href="/article/claude-code-advanced">高级Claude Code</a></li>
+<li><a href="/article/mastering-claude-code-cli">掌握Claude Code CLI</a></li>
+
+</ul>
+
+<h2>常见问题</h2>
+
+<h3>这些技能是免费安装的吗？</h3>
+<p>是的，所有列出的技能都可以通过技能市场免费安装。你只需要为工具本身的API使用量付费，技能本身不收取额外费用。</p>
+
+<h3>我可以在Windows、Mac和Linux上使用这些技能吗？</h3>
+<p>当然可以。所有官方技能都跨平台兼容。安装命令在Windows PowerShell、macOS Terminal和Linux Shell中的运行方式完全一致。</p>
+
+<h3>如何保持技能更新？</h3>
+<p>工具会自动检查技能更新。你也可以手动运行更新命令来一次性更新所有已安装的技能，确保拥有最新功能和安全补丁。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-top-7-skills">Claude Code七大技能：最强扩展完整指南 &rarr;</a></p>
+</div>`,
+  },
+
+  "claude-opus-4-8-redefining-ai": {
+    content: `<p>The AI landscape has witnessed a seismic shift with the launch of <strong>Claude Opus 4\\.8</strong> by Anthropic\\. This release isn’t just an upgrade; it’s a paradigm shift in how we perceive and utilize AI, especially in software engineering\\. Let’s delve into its groundbreaking features, real\\-world implications, and how it’s reshaping the industry\\.</p>
+<h2>1\\. Unprecedented Reliability: Two “0%” Milestones</h2>
+<p>Anthropic has set new standards for AI trustworthiness with two remarkable “0%” achievements:</p>
+<ul>
+<li><strong>Zero Misreporting Rate</strong>: Opus 4\\.8 is the first AI model to achieve a <strong>0% misreporting rate</strong> in code generation\\. Unlike previous models that might produce flawed code without disclosure, Opus 4\\.8 ensures full transparency\\. For example, when generating a data processing script, it will either deliver perfect code or explicitly flag uncertainties\\.</li>
+<li><strong>Zero Laziness Rate</strong>: In “lazy investigation” tests, where models might skip thorough analysis, Opus 4\\.8 scores <strong>0%</strong>, meaning it never cuts corners\\. In contrast, its predecessor, Opus 4\\.7, had a 25% laziness rate\\.</li>
+</ul>
+<p>These aren’t just metrics—they translate to real\\-world reliability\\. Imagine a developer asking Opus 4\\.8 to write a Python script for ETL \\(Extract, Transform, Load\\) operations:</p>
+<pre><code class="language-python"># Request: Write a Python script to extract data from a CSV, transform it, and load it into a database
+import pandas as pd
+import sqlite3
+
+def etl_pipeline(csv_path, db_path, table_name):
+    # Extract
+    df = pd.read_csv(csv_path)
+    # Transform: Example transformation (cleaning nulls)
+    df = df.dropna()
+    # Load
+    conn = sqlite3.connect(db_path)
+    df.to_sql(table_name, conn, if_exists='replace', index=False)
+    conn.close()
+    return f&quot;ETL completed. Data loaded into {db_path}.{table_name}&quot;
+
+# Execute
+if __name__ == &quot;__main__&quot;:
+    result = etl_pipeline(&quot;sales_data.csv&quot;, &quot;sales_db.db&quot;, &quot;sales_table&quot;)
+    print(result)</code></pre>
+<p>With Opus 4\\.8, you can trust this script to work as intended, with no hidden bugs or shortcuts\\.</p>
+<h2>2\\. Coding Prowess: Crushing Competitors in Benchmarks</h2>
+<p>Opus 4\\.8 dominates coding benchmarks, leaving rivals like GPT\\-5\\.5 far behind:</p>
+<ul>
+<li><strong>SWE Bench Pro</strong>: Scores an impressive <strong>69\\.2%</strong>, a full 10 percentage points ahead of GPT\\-5\\.5\\.</li>
+<li><strong>ProgramBench</strong>: Excels in reverse\\-engineering tasks, where it reconstructs source code from binary files\\. Even with limited resources, it outperforms Opus 4\\.7 by a significant margin\\.</li>
+</ul>
+<p>For developers, this means faster, more accurate code generation\\. Let’s say you need to migrate a Node\\.js application to Rust for better performance\\. Opus 4\\.8 can handle this at scale, as seen in a real\\-world example where it migrated 750,000 lines of code in just 11 days—work that would’ve taken a team a quarter to complete\\.</p>
+<h2>3\\. Dynamic Workflows: AI as a Project Manager</h2>
+<p>The game\\-changer is <strong>Dynamic Workflows</strong>, where Opus 4\\.8 acts as an autonomous project manager:</p>
+<ul>
+<li>It breaks down large tasks into sub\\-tasks\\.</li>
+<li>Deploys hundreds of sub\\-agents to work in parallel\\.</li>
+<li>Conducts reviews and conflict resolution autonomously\\.</li>
+</ul>
+<p>For instance, when migrating a codebase, Opus 4\\.8 might:</p>
+<ol>
+<li>Analyze the existing codebase and create a migration plan\\.</li>
+<pre><code class="language-bash"># Example task breakdown by Opus 4.8
+- Sub-agent 1: Analyze API endpoints
+- Sub-agent 2: Refactor database schemas
+- Sub-agent 3: Update frontend components
+- Sub-agent 4: Run integration tests</code></pre>
+<li>Coordinate these sub\\-agents, resolve conflicts \\(like merging code changes from multiple developers\\), and deliver a polished result—all without human intervention\\.</li>
+</ol>
+<h2>4\\. Practical Impact for Developers and Businesses</h2>
+<h3>For Developers:</h3>
+<ul>
+<li><strong>Shift Up the Value Chain</strong>: Focus on high\\-level design and problem\\-solving, not mundane coding\\. Use Opus 4\\.8 for:</li>
+</ul>
+<p>    - Automating repetitive tasks \\(e\\.g\\., boilerplate code generation\\)\\.</p>
+<p>    - Refactoring legacy codebases\\.</p>
+<p>    - Debugging complex issues\\.</p>
+<ul>
+<li><strong>Command Example</strong>: To generate a REST API in Python with FastAPI, use this prompt:</li>
+<pre><code class="language-Plain Text">Generate a FastAPI application with CRUD operations for a &quot;User&quot; model (fields: id, name, email). Include input validation and Swagger documentation.</code></pre>
+</ul>
+<p>    Opus 4\\.8 will produce production\\-ready code\\.</p>
+<h3>For Businesses:</h3>
+<ul>
+<li><strong>Slash Development Costs</strong>: One developer with Opus 4\\.8 can replace a entire team for routine tasks\\.</li>
+<li><strong>Accelerate Time\\-to\\-Market</strong>: Deploy features faster with AI\\-driven development and testing\\.</li>
+</ul>
+<h2>5\\. The Road Ahead: Claude Mythos and Industry Shifts</h2>
+<p>Opus 4\\.8 is just the start—Anthropic’s upcoming <strong>Claude Mythos</strong> is teased to be even more powerful\\. Additionally, Anthropic’s $965 billion valuation \\(surpassing OpenAI\\) signals a new era in AI competition\\.</p>
+<p>As AI takes on more managerial roles in software development, professionals must:</p>
+<ul>
+<li><strong>Upskill</strong>: Learn to leverage AI tools for design and strategy\\.</li>
+<li><strong>Adapt</strong>: Embrace the shift from coding to overseeing AI\\-driven development\\.</li>
+</ul>
+<p>In conclusion, Claude Opus 4\\.8 isn’t just a tool—it’s a catalyst for transforming how we build software\\. By integrating it into your workflow, you can unlock unprecedented efficiency, reliability, and innovation\\.</p>
+
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/article/google-io-2026-93-ai-agents">Google I/O 2026: 93 AI Agents Built an OS</a></li>
+<li><a href="/article/eu-ai-act-plain-english">EU AI Act in Plain English</a></li>
+<li><a href="/article/gpt5-for-regular-users">GPT-5: What is Actually New</a></li>
+<li><a href="/article/ai-jobs-that-didnt-exist-3-years-ago">AI Jobs That Did Not Exist 3 Years Ago</a></li>
+<li><a href="/article/open-source-ai-models-run-on-laptop">Open Source AI Models for Your Laptop</a></li>
+
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Are these skills free to install?</h3>
+<p>Yes, all skills listed here are free to install through the skill marketplace. You only pay for your API usage when running the tool itself.</p>
+
+<h3>Can I use these skills on Windows, Mac, and Linux?</h3>
+<p>Absolutely. All official skills are cross-platform compatible. The installation commands work identically across Windows PowerShell, macOS Terminal, and Linux shells.</p>
+
+<h3>How do I keep my skills up to date?</h3>
+<p>The tool automatically checks for skill updates. You can also manually update all installed skills with a single command to get the latest features and security patches.</p>
+
+<div class="next-step">
+<p><strong>Next article:</strong> <a href="/article/google-io-2026-93-ai-agents">Google I/O 2026: 93 AI Agents Built an OS in 12 Hours &rarr;</a></p>
+</div>`,
+    contentZh: `<p>Claude Opus 4.8是Anthropic推出的一款革命性AI模型。这次发布不仅仅是升级，更是我们对AI尤其是软件工程领域认知的范式转变。该模型在代码生成中实现了开创性的零误报率和零偷懒率，并在编码基准测试中大幅领先竞争对手。</p>
+
+
+<p>Opus 4.8在SWE Bench Pro上取得了69.2%的成绩，比GPT-5.5高出整整10个百分点。在ProgramBench的反向工程任务中也表现出色。在一个实际案例中，它在11天内迁移了75万行代码，而这项工作通常需要一个团队一个季度才能完成。</p>
+<p>其核心创新是动态工作流功能。Opus 4.8可以自主将大型任务分解为子任务，部署数百个子代理并行工作，并自主进行审查和冲突解决。例如在迁移代码库时，它会分析现有代码制定迁移计划，协调多个子代理，解决冲突，最终交付完善的结果。</p>
+<p>对开发者而言，这意味着可以专注于高层次设计和问题解决。对企业而言，一位使用Opus 4.8的开发者可以替代整个团队的日常编码工作，大幅削减开发成本并加速产品上市时间。随着AI在软件开发生命周期中承担更多管理角色，专业人员必须提升技能学会利用AI进行设计和战略，同时适应从编码到监督AI驱动开发的转变。</p>
+
+<h2>相关文章</h2>
+<ul>
+<li><a href="/article/google-io-2026-93-ai-agents">Google I/O 2026：93个AI代理构建操作系统</a></li>
+<li><a href="/article/eu-ai-act-plain-english">通俗解释欧盟AI法案</a></li>
+<li><a href="/article/gpt5-for-regular-users">GPT-5：真正的新功能</a></li>
+<li><a href="/article/ai-jobs-that-didnt-exist-3-years-ago">3年前不存在的AI工作</a></li>
+<li><a href="/article/open-source-ai-models-run-on-laptop">可在笔记本上运行的开源AI模型</a></li>
+
+</ul>
+
+<h2>常见问题</h2>
+
+<h3>这些技能是免费安装的吗？</h3>
+<p>是的，所有列出的技能都可以通过技能市场免费安装。你只需要为工具本身的API使用量付费，技能本身不收取额外费用。</p>
+
+<h3>我可以在Windows、Mac和Linux上使用这些技能吗？</h3>
+<p>当然可以。所有官方技能都跨平台兼容。安装命令在Windows PowerShell、macOS Terminal和Linux Shell中的运行方式完全一致。</p>
+
+<h3>如何保持技能更新？</h3>
+<p>工具会自动检查技能更新。你也可以手动运行更新命令来一次性更新所有已安装的技能，确保拥有最新功能和安全补丁。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/google-io-2026-93-ai-agents">Google I/O 2026：93个AI代理12小时构建操作系统 &rarr;</a></p>
+</div>`,
+  },
+
+  "hermes-agent-beginner-guide-ep1": {
+    content: `<p>Nowadays most AI agent tutorials are filled with redundant fancy configurations and complicated parameter adjustments, which waste lots of time for overseas individual developers and lightweight users\\. This official oriented practical guide focuses on core usable functions of Hermes Agent, abandons useless complicated tweaks, and teaches you fast deployment, basic startup and daily practical operation in the simplest way\\.</p>
+<h2>Core Core Idea: Prioritize Practical Use Over Fancy Configuration</h2>
+<p>Many users spend plenty of time adjusting various hidden parameters after installing Hermes Agent, but rarely use most functions\\. This tutorial only retains daily high\\-frequency practical capabilities, suitable for personal local development, script automation, content sorting, local file processing and other mainstream overseas usage scenarios, fully adapting to low\\-equipment operation environment\\.</p>
+<h2>Step 1 Quick Official Standard Installation</h2>
+<p>Use official recommended one\\-click installation command, stable connection and no redundant third\\-party dependency bundling\\.</p>
+<pre><code class="language-bash"># Cross-platform universal installation command
+npm install -g hermes-agent-core
+
+# Check whether installation is completed successfully
+hermes --version</code></pre>
+<p>After executing the command, wait for automatic dependency completion\\. Windows, MacOS and mainstream Linux systems are all compatible, no system environment modification is needed additionally\\.</p>
+<h2>Step 2 One\\-Click Startup \\&amp;amp; Basic Environment Initialization</h2>
+<p>Enter any empty working folder that stores your project files, start Hermes Agent lightweight running mode directly, close high\\-consumption background preloading by default\\.</p>
+<pre><code class="language-bash"># Start lightweight practical mode (recommended for daily use)
+hermes start --lite --no-preload</code></pre>
+<p>Parameter explanation:</p>
+<p><code>\\-\\-lite</code>: Reduce memory occupation, run smoothly on ordinary home computers</p>
+<p><code>\\-\\-no\\-preload</code>: Disable unused large model preloading, greatly speed up startup speed</p>
+<p>After successful startup, the default local access address is <code>http://localhost:7860</code>, open it directly through browser to enter operation panel\\.</p>
+<h2>Step 3 Close Useless High\\-Consumption Built\\-in Functions</h2>
+<p>In the initial setting interface, turn off three kinds of functions that are basically unused by ordinary users to save hardware resources and improve response speed:</p>
+<ol>
+<li>Global network real\\-time data crawling module</li>
+<li>Multi\\-agent parallel collaborative computing function</li>
+<li>High\\-precision visual analysis super resolution mode</li>
+</ol>
+<p>After closing, save the configuration file with one line command:</p>
+<pre><code class="language-bash">hermes config save --simple</code></pre>
+<p>This operation can cut down nearly 40% of system resource occupation, and the agent responds more quickly when processing text and code tasks\\.</p>
+<h2>Step 4 Three Most Practical Daily Core Operations</h2>
+<h3>4\\.1 Local Batch File Intelligent Sorting</h3>
+<p>Suitable for overseas content material sorting, technical document classification and project file arrangement, directly input instruction in dialogue box:</p>
+<pre><code class="language-Plain Text">Classify all markdown and txt files in the current folder by business category, rename uniformly and generate index catalog</code></pre>
+<p>One\\-click completion of messy file finishing, no manual sorting needed\\.</p>
+<h3>4\\.2 One\\-Click Code Simplification \\&amp;amp; Compatibility Adaptation</h3>
+<p>Quickly optimize local scripts, adapt overseas mainstream running environment, remove redundant code segments:</p>
+<pre><code class="language-bash"># Call built-in code optimization instruction
+hermes run code-simplify ./main.js --adapt=global</code></pre>
+<p>Automatically modify grammar differences, fix regional environment running errors, fit Vercel, Netlify and other overseas deployment rules\\.</p>
+<h3>4\\.3 Long Text Content Polishing \\&amp;amp; Standard English Rewriting</h3>
+<p>Perfect for overseas blog articles, tutorial content, product copy writing, standardize sentence logic and conform to European and American reading habits:</p>
+<pre><code class="language-Plain Text">Rewrite the full text into formal concise overseas technical article style, keep core information unchanged, correct grammar and optimize paragraph layout</code></pre>
+<h2>Step 5 Daily Running Maintenance \\&amp;amp; Quick Reset Method</h2>
+<h3>Ordinary Cache Cleaning</h3>
+<pre><code class="language-bash">hermes cache clean</code></pre>
+<h3>Configuration Restore Initial Practical Mode</h3>
+<p>When parameter adjustment causes abnormal operation, quickly restore to stable practical state:</p>
+<pre><code class="language-bash">hermes config reset --basic</code></pre>
+<h2>Suitable User Groups \\&amp;amp; Usage Scenarios</h2>
+<ol>
+<li>Overseas independent developers: lightweight code assistance, local project automatic processing</li>
+<li>Cross\\-border content creators: material sorting, English article rewriting and typesetting</li>
+<li>Technical learners: low\\-threshold AI agent practice, no need to study complex underlying logic</li>
+<li>Personal office users: local document batch processing, daily work flow automation</li>
+</ol>
+<h2>Episode Summary</h2>
+<p>The core of using Hermes Agent lies in simplicity and practicability\\. Abandoning complicated useless settings can let this local AI agent exert the maximum efficiency in daily work\\. This set of lightweight deployment and operation methods is more suitable for long\\-term stable use by most overseas users, and can quickly improve work efficiency without occupying too much computer performance\\.</p>
+<p>Follow up subsequent episodes to learn advanced automatic task arrangement, local model docking and overseas network stable access skills\\.</p>
+
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/article/mastering-hermes-agent-7-levels">Mastering Hermes Agent: 7 Levels of Configuration</a></li>
+<li><a href="/article/hermes-agent-8-features-smb">Hermes Agent: 8 Features for SMBs</a></li>
+<li><a href="/article/hermes-agent-vs-openclaw-comparison">Hermes Agent vs OpenClaw Comparison</a></li>
+<li><a href="/article/openclaw-demystified-20-lines">Unveiling OpenClaw in 20 Lines</a></li>
+<li><a href="/article/cut-openclaw-costs-10x">Cut OpenClaw Costs by 10 Times</a></li>
+
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Are these skills free to install?</h3>
+<p>Yes, all skills listed here are free to install through the skill marketplace. You only pay for your API usage when running the tool itself.</p>
+
+<h3>Can I use these skills on Windows, Mac, and Linux?</h3>
+<p>Absolutely. All official skills are cross-platform compatible. The installation commands work identically across Windows PowerShell, macOS Terminal, and Linux shells.</p>
+
+<h3>How do I keep my skills up to date?</h3>
+<p>The tool automatically checks for skill updates. You can also manually update all installed skills with a single command to get the latest features and security patches.</p>
+
+<div class="next-step">
+<p><strong>Next article:</strong> <a href="/article/mastering-hermes-agent-7-levels">Mastering Hermes Agent: A Practical Guide to 7 Levels of Configuration &rarr;</a></p>
+</div>`,
+    contentZh: `<p>如今大多数AI代理教程充斥着冗余的花哨配置和复杂的参数调整，浪费了海外个人开发者和轻量级用户大量时间。这份以实用为导向的官方教程专注于Hermes Agent的核心可用功能，摒弃无用的复杂调整，以最简单的方式教你快速部署、基本启动和日常实用操作。</p>
+
+
+<p>本教程只保留日常高频实用功能，适合个人本地开发、脚本自动化、内容整理、本地文件处理等主流海外使用场景，完全适配低配置运行环境。</p>
+<p>第一步：使用官方推荐的一键安装命令进行跨平台安装，无需额外修改系统环境。Windows、MacOS和主流Linux系统均兼容。</p>
+<p>第二步：进入工作文件夹，使用轻量级模式启动Hermes Agent，关闭高消耗后台预加载。启动后可通过浏览器访问本地操作面板。</p>
+<p>第三步：在初始设置界面关闭全局网络实时数据爬取、多代理并行协同计算和高精度视觉分析超分辨率模式，可节省近40%的系统资源占用，代理在处理文本和代码任务时响应更加迅速。</p>
+<p>第四步：掌握三个最实用的日常操作：本地批量文件智能分类、一键代码简化和兼容适配、长文本内容润色和标准英文改写。</p>
+<p>使用Hermes Agent的核心在于简单实用。摒弃复杂的无用设置，让这个本地AI代理在日常工作中发挥最大效率。这套轻量级部署和操作方法适合大多数海外用户长期稳定使用，在不占用过多计算机性能的情况下快速提升工作效率。</p>
+
+<h2>相关文章</h2>
+<ul>
+<li><a href="/article/mastering-hermes-agent-7-levels">掌握Hermes Agent：7级配置</a></li>
+<li><a href="/article/hermes-agent-8-features-smb">Hermes Agent：中小企业8个功能</a></li>
+<li><a href="/article/hermes-agent-vs-openclaw-comparison">Hermes Agent vs OpenClaw对比</a></li>
+<li><a href="/article/openclaw-demystified-20-lines">20行代码讲透OpenClaw</a></li>
+<li><a href="/article/cut-openclaw-costs-10x">将OpenClaw成本降低10倍</a></li>
+
+</ul>
+
+<h2>常见问题</h2>
+
+<h3>这些技能是免费安装的吗？</h3>
+<p>是的，所有列出的技能都可以通过技能市场免费安装。你只需要为工具本身的API使用量付费，技能本身不收取额外费用。</p>
+
+<h3>我可以在Windows、Mac和Linux上使用这些技能吗？</h3>
+<p>当然可以。所有官方技能都跨平台兼容。安装命令在Windows PowerShell、macOS Terminal和Linux Shell中的运行方式完全一致。</p>
+
+<h3>如何保持技能更新？</h3>
+<p>工具会自动检查技能更新。你也可以手动运行更新命令来一次性更新所有已安装的技能，确保拥有最新功能和安全补丁。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/mastering-hermes-agent-7-levels">掌握Hermes Agent：7级配置实现强大AI自动化 &rarr;</a></p>
+</div>`,
+  },
+
+  "multi-agent-collaboration-architecture": {
+    content: `<p>For global developers, content creators, and cross\\-border teams, traditional Q\\&amp;amp;A tools often struggle with fragmented responses, slow context integration, and limited multi\\-tasking capabilities\\. The multi\\-agent collaboration architecture—dubbed \\&amp;\\#34;stronger than crawfish\\&amp;\\#34; for its robust performance—solves these pain points by leveraging coordinated AI agents to deliver precise, comprehensive, and efficient answers\\. This guide breaks down its core value, practical deployment steps, and real\\-world use cases tailored for overseas users\\.</p>
+<h2>Why Multi\\-Agent Collaboration Outshines Traditional Q\\&amp;amp;A Tools</h2>
+<p>Traditional single\\-agent Q\\&amp;amp;A tools act as \\&amp;\\#34;one\\-person teams,\\&amp;\\#34; leading to bottlenecks in complex tasks\\. Multi\\-agent architecture, by contrast, mimics a professional team with specialized roles, offering unique advantages for global users:</p>
+<ul>
+<li><strong>Parallel Processing</strong>: Multiple agents handle sub\\-tasks simultaneously \\(e\\.g\\., research, analysis, synthesis\\), cutting response time by 60%\\+\\.</li>
+<li><strong>Contextual Depth</strong>: Agents share and build on each other’s work, avoiding fragmented answers—critical for overseas technical documentation or cross\\-border business queries\\.</li>
+<li><strong>Multilingual Adaptability</strong>: Seamlessly switches between English, Spanish, French, and other global languages, with agents specializing in regional linguistic nuances\\.</li>
+<li><strong>Compliance\\-First</strong>: Localized data processing aligns with GDPR \\(EU\\), CCPA \\(US\\), and other regional regulations, ensuring data security for international teams\\.</li>
+</ul>
+<h2>Step 1: Deploy Multi\\-Agent Q\\&amp;amp;A Architecture Locally \\(Cross\\-Platform\\)</h2>
+<p>We’ll use the open\\-source <code>MultiAgentQA</code> framework—lightweight, customizable, and ideal for overseas deployment\\.</p>
+<h3>Prerequisites</h3>
+<ul>
+<li>Python 3\\.10\\+</li>
+<li>Docker \\(for containerized agent management\\)</li>
+<li>Git</li>
+</ul>
+<h3>Installation Commands</h3>
+<pre><code class="language-bash"># Clone the open-source repository
+git clone https://github.com/multi-agent-qa/core.git
+cd core
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start Docker containers for agent coordination (background mode)
+docker-compose up -d</code></pre>
+<h3>Verify Deployment</h3>
+<pre><code class="language-bash"># Check if the core service is running
+curl http://localhost:8000/health
+# Expected output: {&quot;status&quot;: &quot;healthy&quot;, &quot;agents&quot;: 5}</code></pre>
+<h2>Step 2: Configure Agent Roles for Global Q\\&amp;amp;A Scenarios</h2>
+<p>The architecture uses 5 specialized agents by default—customize their roles to fit overseas use cases \\(e\\.g\\., technical support, market research, content creation\\)\\.</p>
+<h3>Edit Configuration File \\(<code>config/agent\\_roles\\.json</code>\\)</h3>
+<pre><code class="language-json">{
+  &quot;agents&quot;: [
+    {
+      &quot;id&quot;: &quot;research_agent&quot;,
+      &quot;role&quot;: &quot;Global Data Researcher&quot;,
+      &quot;skills&quot;: [&quot;multilingual web scraping&quot;, &quot;academic paper retrieval&quot;, &quot;cross-region market data collection&quot;],
+      &quot;languages&quot;: [&quot;en&quot;, &quot;es&quot;, &quot;fr&quot;, &quot;de&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;analysis_agent&quot;,
+      &quot;role&quot;: &quot;Technical &amp; Business Analyst&quot;,
+      &quot;skills&quot;: [&quot;code interpretation&quot;, &quot;market trend analysis&quot;, &quot;compliance risk assessment&quot;],
+      &quot;languages&quot;: [&quot;en&quot;, &quot;es&quot;, &quot;fr&quot;, &quot;de&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;synthesis_agent&quot;,
+      &quot;role&quot;: &quot;Multilingual Content Synthesizer&quot;,
+      &quot;skills&quot;: [&quot;answer structuring&quot;, &quot;formal writing&quot;, &quot;regional language adaptation&quot;],
+      &quot;languages&quot;: [&quot;en&quot;, &quot;es&quot;, &quot;fr&quot;, &quot;de&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;validation_agent&quot;,
+      &quot;role&quot;: &quot;Accuracy Validator&quot;,
+      &quot;skills&quot;: [&quot;fact-checking&quot;, &quot;source verification&quot;, &quot;compliance review&quot;],
+      &quot;languages&quot;: [&quot;en&quot;, &quot;es&quot;, &quot;fr&quot;, &quot;de&quot;]
+    },
+    {
+      &quot;id&quot;: &quot;coordinator_agent&quot;,
+      &quot;role&quot;: &quot;Task Coordinator&quot;,
+      &quot;skills&quot;: [&quot;task distribution&quot;, &quot;agent communication&quot;, &quot;timeout handling&quot;],
+      &quot;languages&quot;: [&quot;en&quot;, &quot;es&quot;, &quot;fr&quot;, &quot;de&quot;]
+    }
+  ]
+}</code></pre>
+<h3>Restart the Service to Apply Changes</h3>
+<pre><code class="language-bash">docker-compose restart</code></pre>
+<h2>Step 3: Practical Usage Workflows \\(Overseas\\-Focused\\)</h2>
+<h3>Workflow 1: Technical Q\\&amp;amp;A for Global Developers</h3>
+<p>Query: \\&amp;\\#34;How to optimize React app performance for users in Southeast Asia \\(low network speed\\)?\\&amp;\\#34;</p>
+<h4>Run the Q\\&amp;amp;A Command</h4>
+<pre><code class="language-bash"># Use the CLI to submit a query
+python cli.py --query &quot;How to optimize React app performance for users in Southeast Asia (low network speed)?&quot; --language en --output ./se_asia_optimization.md</code></pre>
+<h4>What Agents Do in the Background</h4>
+<ol>
+<li><strong>Research Agent</strong>: Scrapes regional performance benchmarks, React optimization guides, and Southeast Asia network conditions\\.</li>
+<li><strong>Analysis Agent</strong>: Identifies key pain points \\(e\\.g\\., large bundle sizes, unoptimized images\\) and prioritizes solutions\\.</li>
+<li><strong>Synthesis Agent</strong>: Writes a structured guide with code snippets, tailored to low\\-network environments\\.</li>
+<li><strong>Validation Agent</strong>: Verifies solutions against React official docs and regional user case studies\\.</li>
+<li><strong>Coordinator Agent</strong>: Merges results into a final markdown file\\.</li>
+</ol>
+<h4>Sample Output Snippet \\(Code Included\\)</h4>
+<pre><code class="language-javascript">// Critical performance optimizations for Southeast Asia users
+import React, { lazy, Suspense } from 'react';
+import { lazyLoadImage } from 'react-lazy-load-image-component';
+
+// 1. Code splitting (reduce initial bundle size)
+const HeavyComponent = lazy(() =&gt; import('./HeavyComponent'));
+
+// 2. Optimize images for low bandwidth
+const OptimizedImage = ({ src }) =&gt; (
+  &lt;lazyLoadImage
+    src={src}
+    effect=&quot;blur&quot;
+    threshold={500}
+    placeholderSrc={src.replace(/\\.(jpg|png)$/, '-thumb.$1')} // Use thumbnails first
+  /&gt;
+);
+
+// 3. Cache API responses (reduce network requests)
+const fetchData = async (url) =&gt; {
+  const cacheKey = \`api_\${url}\`;
+  const cachedData = localStorage.getItem(cacheKey);
+  if (cachedData) return JSON.parse(cachedData);
+  
+  const response = await fetch(url, {
+    cache: 'force-cache', // Leverage browser caching
+    headers: { 'Accept-Encoding': 'gzip' } // Compress responses
+  });
+  const data = await response.json();
+  localStorage.setItem(cacheKey, JSON.stringify(data), { expires: 3600 }); // Cache for 1 hour
+  return data;
+};</code></pre>
+<h3>Workflow 2: Cross\\-Border Business Q\\&amp;amp;A</h3>
+<p>Query: \\&amp;\\#34;What are the key GDPR compliance requirements for a SaaS tool targeting EU users?\\&amp;\\#34;</p>
+<h4>Run the Q\\&amp;amp;A Command</h4>
+<pre><code class="language-bash">python cli.py --query &quot;What are the key GDPR compliance requirements for a SaaS tool targeting EU users?&quot; --language en --output ./gdpr_compliance.md</code></pre>
+<h4>Key Agent Deliverables</h4>
+<ul>
+<li>A checklist of GDPR mandates \\(data minimization, user consent, right to erasure\\)\\.</li>
+<li>Code snippets for implementing consent management:</li>
+<pre><code class="language-python"># Example: GDPR-compliant consent management (Python/Flask)
+from flask import Flask, request, jsonify
+from datetime import datetime
+
+app = Flask(__name__)
+user_consents = {}
+
+@app.post('/api/consent')
+def record_consent():
+  data = request.json
+  # Mandatory fields for GDPR compliance
+  required_fields = ['user_id', 'consent_type', 'timestamp', 'ip_address', 'consent_given']
+  if not all(field in data for field in required_fields):
+    return jsonify({&quot;error&quot;: &quot;Missing mandatory GDPR consent fields&quot;}), 400
+  
+  user_consents[data['user_id']] = {
+    &quot;consent_type&quot;: data['consent_type'],
+    &quot;timestamp&quot;: data['timestamp'],
+    &quot;ip_address&quot;: data['ip_address'],
+    &quot;consent_given&quot;: data['consent_given'],
+    &quot;revocable&quot;: True # GDPR requires consent to be revocable
+  }
+  return jsonify({&quot;status&quot;: &quot;consent recorded&quot;, &quot;gdpr_compliant&quot;: True}), 200
+
+@app.post('/api/consent/revoke')
+def revoke_consent():
+  user_id = request.json.get('user_id')
+  if user_id in user_consents:
+    user_consents[user_id]['consent_given'] = False
+    user_consents[user_id]['revoke_timestamp'] = datetime.utcnow().isoformat()
+    return jsonify({&quot;status&quot;: &quot;consent revoked&quot;, &quot;gdpr_compliant&quot;: True}), 200
+  return jsonify({&quot;error&quot;: &quot;User not found&quot;}), 404</code></pre>
+<li>Links to official EU GDPR resources for further verification\\.</li>
+</ul>
+<h2>Step 4: Advanced Optimization for Overseas Use</h2>
+<h3>1\\. Speed Up Global Responses with CDN Integration</h3>
+<pre><code class="language-bash"># Configure CDN for agent data retrieval (Cloudflare example)
+python cli.py --config config/cdn.json</code></pre>
+<p><code>config/cdn\\.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;cdn_provider&quot;: &quot;cloudflare&quot;,
+  &quot;api_key&quot;: &quot;YOUR_CLOUDFLARE_API_KEY&quot;,
+  &quot;regions&quot;: [&quot;apac&quot;, &quot;emea&quot;, &quot;americas&quot;],
+  &quot;cache_ttl&quot;: 1800
+}</code></pre>
+<h3>2\\. Add Custom Agents for Niche Overseas Scenarios</h3>
+<p>Example: Add a \\&amp;\\#34;Multilingual Translation Agent\\&amp;\\#34; for content localization:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;translation_agent&quot;,
+  &quot;role&quot;: &quot;Professional Translator&quot;,
+  &quot;skills&quot;: [&quot;technical translation&quot;, &quot;cultural adaptation&quot;, &quot;terminology consistency&quot;],
+  &quot;languages&quot;: [&quot;en&quot;, &quot;es&quot;, &quot;fr&quot;, &quot;de&quot;, &quot;ja&quot;, &quot;ko&quot;],
+  &quot;tools&quot;: [&quot;deepl-api&quot;, &quot;google-translate-api&quot;]
+}</code></pre>
+<h3>3\\. Monitor Agent Performance Globally</h3>
+<pre><code class="language-bash"># Check agent response times across regions
+python cli.py --monitor --regions &quot;us,uk,singapore&quot; --output ./performance_report.csv</code></pre>
+<h2>Suitable Overseas Use Cases</h2>
+<ul>
+<li><strong>Global SaaS Support</strong>: Answer technical/compliance questions for users in different regions\\.</li>
+<li><strong>Cross\\-Border Content Creation</strong>: Generate multilingual Q\\&amp;amp;A guides, market reports, or product docs\\.</li>
+<li><strong>International Research Teams</strong>: Collaborate on academic or industry research with unified, accurate answers\\.</li>
+<li><strong>Overseas Startup Founders</strong>: Get fast, compliant advice on legal, technical, or market entry topics\\.</li>
+</ul>
+<h2>Troubleshooting Common Overseas Issues</h2>
+<ul>
+<li><strong>Slow Response in Specific Regions</strong>: Check CDN configuration and add regional agent nodes\\.</li>
+<li><strong>Language Misalignment</strong>: Verify agent language settings in <code>agent\\_roles\\.json</code> and update translation tools\\.</li>
+<li><strong>Compliance Errors</strong>: Ensure the validation agent has access to latest regional regulations \\(run <code>python cli\\.py \\-\\-update\\-compliance\\-db</code>\\)\\.</li>
+</ul>
+<p>This multi\\-agent collaboration architecture redefines Q\\&amp;amp;A efficiency for global users—combining speed, accuracy, and compliance in a single tool\\. Whether you’re a developer optimizing for regional markets or a business navigating cross\\-border regulations, it delivers answers that outperform traditional solutions in both depth and practicality\\.</p>
+
+<h2>Related Articles</h2>
+<ul>
+<li><a href="/article/agent-skill-harness-explained">Agent Skill and Harness Explained</a></li>
+<li><a href="/article/deerflow-multi-agent-tool">DeerFlow: Open-Source Multi-Agent Tool</a></li>
+<li><a href="/article/ai-workforce-virtual-employees">AI Workforce: Virtual Employees</a></li>
+<li><a href="/article/openai-codex-openclaw-revolution">OpenAI Codex and OpenClaw</a></li>
+<li><a href="/article/ditching-mcp-for-cli">Why Ditch MCP for CLI</a></li>
+
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Are these skills free to install?</h3>
+<p>Yes, all skills listed here are free to install through the skill marketplace. You only pay for your API usage when running the tool itself.</p>
+
+<h3>Can I use these skills on Windows, Mac, and Linux?</h3>
+<p>Absolutely. All official skills are cross-platform compatible. The installation commands work identically across Windows PowerShell, macOS Terminal, and Linux shells.</p>
+
+<h3>How do I keep my skills up to date?</h3>
+<p>The tool automatically checks for skill updates. You can also manually update all installed skills with a single command to get the latest features and security patches.</p>
+
+<div class="next-step">
+<p><strong>Next article:</strong> <a href="/article/agent-skill-harness-explained">Practical Explanation of Agent Skill and Harness &rarr;</a></p>
+</div>`,
+    contentZh: `<p>对于全球开发者、内容创作者和跨境团队来说，传统的问答工具常常面临回复碎片化、上下文整合缓慢和多任务处理能力有限等问题。多智能体协作架构通过协调多个AI代理协同工作，提供精确、全面和高效的答案，彻底解决了这些痛点。</p>
+
+
+<p>传统单代理问答工具就像单人团队，在复杂任务中存在瓶颈。多智能体架构则模拟了具有专业角色的团队：研究代理负责全球数据收集，分析代理进行技术和业务分析，合成代理组织多语言内容，验证代理进行事实核对，协调代理负责任务分发。</p>
+<p>本地部署使用开源MultiAgentQA框架，支持Python 3.10以上和Docker容器化代理管理。通过配置代理角色文件可以自定义代理的语言能力和技能集，灵活适应不同场景。配置完成后重启服务即可应用更改。</p>
+<p>实际工作流包括面向全球开发者的技术问答场景和面向跨境业务的合规问答场景。系统还支持CDN集成加速全球响应、添加翻译等自定义代理处理特定场景、以及监控各区域的代理性能。</p>
+<p>无论是为区域市场优化的开发者，还是处理跨境法规的企业家，这套架构都能提供深度和实用性都超越传统方案的答案。多智能体协作架构重新定义了全球用户的问答效率，在单一工具中结合了速度、准确性和合规性。</p>
+
+<h2>相关文章</h2>
+<ul>
+<li><a href="/article/agent-skill-harness-explained">Agent、Skill和Harness解析</a></li>
+<li><a href="/article/deerflow-multi-agent-tool">DeerFlow：开源多智能体工具</a></li>
+<li><a href="/article/ai-workforce-virtual-employees">AI劳动力：虚拟员工</a></li>
+<li><a href="/article/openai-codex-openclaw-revolution">OpenAI的Codex与OpenClaw</a></li>
+<li><a href="/article/ditching-mcp-for-cli">为什么用CLI取代MCP</a></li>
+
+</ul>
+
+<h2>常见问题</h2>
+
+<h3>这些技能是免费安装的吗？</h3>
+<p>是的，所有列出的技能都可以通过技能市场免费安装。你只需要为工具本身的API使用量付费，技能本身不收取额外费用。</p>
+
+<h3>我可以在Windows、Mac和Linux上使用这些技能吗？</h3>
+<p>当然可以。所有官方技能都跨平台兼容。安装命令在Windows PowerShell、macOS Terminal和Linux Shell中的运行方式完全一致。</p>
+
+<h3>如何保持技能更新？</h3>
+<p>工具会自动检查技能更新。你也可以手动运行更新命令来一次性更新所有已安装的技能，确保拥有最新功能和安全补丁。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">现代AI开发中Agent、Skill和Harness的实用解释 &rarr;</a></p>
+</div>`,
+  },
 };
