@@ -1359,4 +1359,57 @@ export const articles: Article[] = [
     date: "2026-06-01",
   },
 
+
+  {
+    slug: "8-game-changing-claude-code-skills",
+    title: "8 Game-Changing Skills of Claude Code to Transform You into an All-Round Creative Team",
+    titleZh: "8个改变游戏规则的Claude Code技能，将你转变为全能创意团队",
+    description: "Discover 8 powerful Claude Code skills — content strategy, frontend design, SVG logo, animation, DOCX, PPTX, XLSX, and PDF — that transform you into an all-round creative team.",
+    descriptionZh: "发现8个强大的Claude Code技能——内容策略、前端设计、SVG标志、动画、DOCX、PPTX、XLSX和PDF——将你转变为全能的创意团队。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "skills", "creative-team", "productivity", "cli"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-02",
+  },
+
+  {
+    slug: "github-repositories-guide-developers",
+    title: "Complete Practical Guide to Using GitHub Repositories for Global Independent Developers",
+    titleZh: "全球独立开发者GitHub仓库完整实战指南",
+    description: "A complete hands-on guide to using GitHub repositories for global independent developers — covering installation, common commands, branch management, remote sync, and practical tips.",
+    descriptionZh: "面向全球独立开发者的GitHub仓库完整实战指南——涵盖安装、常用命令、分支管理、远程同步和实用技巧。",
+    category: "ai-tutorials",
+    tags: ["git", "github", "version-control", "branching", "collaboration", "overseas"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-02",
+  },
+
+  {
+    slug: "hooks-ai-workflow-gatekeeper",
+    title: "Hooks: The Gatekeeper for AI Workflows to Ensure Rule Compliance",
+    titleZh: "Hooks：AI工作流的守门人，确保规则执行",
+    description: "Learn how Hooks act as enforceable checkpoints in AI workflows to ensure rule compliance — from session start to task completion, with practical implementation methods.",
+    descriptionZh: "了解Hooks如何作为AI工作流中的强制检查点来确保规则遵守——从会话开始到任务完成，包含实用实现方法。",
+    category: "ai-tutorials",
+    tags: ["hooks", "ai-workflow", "compliance", "automation", "claude-code"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-02",
+  },
+
+  {
+    slug: "llm-stable-json-output-guide",
+    title: "How to Ensure Large Language Models Stably Output JSON: A Practical Guide for Developers",
+    titleZh: "如何确保大语言模型稳定输出JSON：开发者实用指南",
+    description: "A practical guide with 4 layers of strategies — prompt engineering, native LLM capabilities, token constraints, and fallback mechanisms — to ensure stable JSON output from LLMs.",
+    descriptionZh: "4层策略的实用指南——提示工程、原生LLM能力、Token约束和回退机制——确保LLM稳定输出JSON。",
+    category: "ai-tutorials",
+    tags: ["llm", "json", "prompt-engineering", "function-calling", "structured-output", "developer-guide"],
+    difficulty: "intermediate",
+    toolsMentioned: ["chatgpt", "claude", "deepseek"],
+    date: "2026-06-02",
+  },
+
 ];

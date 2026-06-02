@@ -20853,4 +20853,879 @@ def scrape_competitor(url):
 </div>`,
   },
 
+
+  "8-game-changing-claude-code-skills": {
+    content: `<h2>1. Content-Strategy: Say Goodbye to Blank Document Anxiety</h2>
+
+<p>Content creation often starts with the dilemma of not knowing what to create. With Claude Code's content-strategy skill, you can overcome this. Just provide your general direction, and it will help you break down <strong>topic matrices</strong>, build <strong>audience personas</strong>, and find <strong>viral angles</strong>.</p>
+
+<p>For example, if you're running a fitness blog for expats in a new country, you can use the command:</p>
+
+<pre><code class="language-text">Generate a topic matrix, audience persona, and 3 viral angles for a fitness blog targeting expats who just moved to [Country Name].
+</code></pre>
+
+<p>This skill is a boon for freelancers, indie developers, and content creators, making the process of filling that blank document a thing of the past.</p>
+
+<h2>2. Frontend-Design: Ditch the AI Slop Look</h2>
+
+<p>We have all seen those AI-generated web pages that scream "made by AI". Claude Code's frontend-design skill ensures your pages are professional. It focuses on <strong>proper layout</strong>, <strong>accurate color matching</strong>, and <strong>clear hierarchy</strong>.</p>
+
+<p>Suppose you need a landing page for a new e-commerce store selling handmade crafts. Use the command:</p>
+
+<pre><code class="language-text">Create a frontend design for an e-commerce landing page selling handmade crafts. Ensure proper layout, color matching that reflects a warm and creative vibe, and clear visual hierarchy.
+</code></pre>
+
+<p>It follows real design principles, allowing you to get a polished page with just one command, whether it is a dashboard or a component library.</p>
+
+<h2>3. SVG-Logo-Designer: Save on Design Fees</h2>
+
+<p>Designing a logo can be costly, but with this skill, you can get professional SVG logos. Describe your brand name and style, and it will generate multiple sets. These logos are vector-based, so they can be infinitely scaled. You can also export them as PNGs for commercial use.</p>
+
+<p>If you are starting a coffee shop named "Brew Haven" with a cozy and artisanal style, use:</p>
+
+<pre><code class="language-text">Create multiple SVG logo options for a coffee shop called "Brew Haven" with a cozy and artisanal style. Export them as PNGs for commercial use.
+</code></pre>
+
+<p>It is perfect for small business owners and side hustlers looking to cut costs.</p>
+
+<h2>4. Animation-Designer: Bring Your Web Pages to Life</h2>
+
+<p>A static web page can be boring. This skill specializes in <strong>interaction transitions</strong>, <strong>scroll effects</strong>, and <strong>micro-interactions</strong> using Framer Motion and CSS animations.</p>
+
+<p>For a portfolio website, you can use the command:</p>
+
+<pre><code class="language-text">Add interaction transitions, scroll effects, and micro-interactions to a portfolio website using Framer Motion and CSS animations. Make the website feel dynamic and engaging.
+</code></pre>
+
+<p>It turns your static pages into a lively product, enhancing user experience.</p>
+
+<h2>5. DOCX: A Must-Have for Office Workers</h2>
+
+<p>Creating well-formatted Word documents like weekly reports, contracts, and requirement documents is a breeze. Claude Code handles <strong>titles, tables, and directories</strong> automatically.</p>
+
+<p>When you need a weekly report template for a marketing team, use:</p>
+
+<pre><code class="language-text">Generate a formatted Word document for a marketing team's weekly report, including proper titles, tables to track campaign performance, and an automatic directory.
+</code></pre>
+
+<p>No more dealing with a mess of plain text; everything is organized and up to standard.</p>
+
+<h2>6. PPTX: Your Personal PPT Wizard</h2>
+
+<p>Creating a PPT from scratch is time-consuming. With this skill, just provide an outline or an article, and it will generate a complete PPT with well-arranged points and proper pagination. It can even read your existing PPTs for secondary creation.</p>
+
+<p>If you need a PPT for a product launch, use:</p>
+
+<pre><code class="language-text">Generate a complete PPT for a product launch based on the following outline: [Outline Points]. Ensure proper pagination and key points are well-organized.
+</code></pre>
+
+<p>It is a huge time-saver for presentations.</p>
+
+<h2>7. XLSX: The Savior for Spreadsheet Lovers</h2>
+
+<p>Dealing with Excel sheets can be tedious, but this skill makes it easy. It can <strong>calculate formulas</strong>, create <strong>pivot tables</strong>, handle <strong>VLOOKUP across sheets</strong>, and automatically clean and align data.</p>
+
+<p>For a sales data analysis, use the command:</p>
+
+<pre><code class="language-text">Analyze the following sales data [Attach Data], calculate formulas, create a pivot table to show monthly sales by product, handle VLOOKUP to merge customer data, and automatically clean and align the data.
+</code></pre>
+
+<p>It saves you from endless hours of spreadsheet work.</p>
+
+<h2>8. PDF: The Underrated Workhorse</h2>
+
+<p>PDFs are common but tricky to handle. This skill can <strong>extract tables from the entire document</strong>, <strong>merge PDFs and add watermarks</strong>, and even summarize long contracts or papers.</p>
+
+<p>When you need to extract data from a research paper PDF and summarize it, use:</p>
+
+<pre><code class="language-text">Extract all tables from this research paper PDF [Attach PDF], and write a summary of the key findings.
+</code></pre>
+
+<p>It is a huge time-saver for researchers, bidders, and anyone dealing with lengthy PDFs.</p>
+
+<p>By mastering these 8 skills, Claude Code transforms from a mere coding tool into an all-round creative team. Whether you are creating content, designing websites, or handling office documents, it has you covered. Start implementing these skills in your workflow and see the difference it makes in your productivity and output.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/six-advanced-claude-code-skills">Six Advanced Claude Code Skills: Master AI Coding From Beginner To Expert &rarr;</a></p>
+</div>`,
+    contentZh: `<h2>1. 内容策略：告别空白文档焦虑</h2>
+
+<p>内容创作常常从"不知道写什么"的困境开始。有了Claude Code的内容策略技能，你可以轻松克服这一点。只需提供你的大致方向，它就能帮你分解<strong>话题矩阵</strong>、构建<strong>受众画像</strong>、找到<strong>传播角度</strong>。</p>
+
+<p>例如，如果你在运营一个面向海外新移民的健身博客，可以使用以下命令：</p>
+
+<pre><code class="language-text">为面向刚到[国家名]的外籍人士的健身博客，生成一个话题矩阵、受众画像和3个传播角度。
+</code></pre>
+
+<p>这个技能对自由职业者、独立开发者和内容创作者来说都是福音，让填充空白文档的过程成为过去式。</p>
+
+<h2>2. 前端设计：摆脱AI风格痕迹</h2>
+
+<p>我们都见过那些一眼就能看出是AI生成的网页。Claude Code的前端设计技能能确保你的页面看起来专业。它专注于<strong>合理的布局</strong>、<strong>准确的颜色搭配</strong>和<strong>清晰的层级结构</strong>。</p>
+
+<p>假设你需要为一家手工工艺品电商网站设计落地页，可以使用以下命令：</p>
+
+<pre><code class="language-text">为销售手工工艺品的电商网站创建前端设计。确保布局合理、色彩搭配体现温暖创意的氛围、视觉层级清晰。
+</code></pre>
+
+<p>它遵循真实的设计原则，无论是仪表盘还是组件库，你只需一个命令就能获得一个精美的页面。</p>
+
+<h2>3. SVG标志设计：省下设计费用</h2>
+
+<p>设计一个标志可能很昂贵，但有了这个技能，你可以获得专业的SVG标志。描述你的品牌名称和风格，它就会生成多组方案。这些标志基于矢量，可以无限缩放。你还可以将它们导出为PNG用于商业用途。</p>
+
+<p>如果你正在创办一家名为"Brew Haven"的咖啡馆，风格温馨而手工感十足，可以使用以下命令：</p>
+
+<pre><code class="language-text">为一家名为"Brew Haven"的咖啡馆创建多个SVG标志选项，风格温馨且有手工感。将标志导出为PNG用于商业用途。
+</code></pre>
+
+<p>这对于想要削减成本的小企业主和副业创业者来说非常完美。</p>
+
+<h2>4. 动画设计：让你的网页活起来</h2>
+
+<p>静态网页可能很无聊。这个技能专注于使用Framer Motion和CSS动画实现<strong>交互转场</strong>、<strong>滚动效果</strong>和<strong>微交互</strong>。</p>
+
+<p>对于一个作品集网站，你可以使用以下命令：</p>
+
+<pre><code class="language-text">为作品集网站添加交互转场、滚动效果和微交互，使用Framer Motion和CSS动画。让网站感觉充满活力和吸引力。
+</code></pre>
+
+<p>它将你的静态页面转变为一个生动的产品，提升用户体验。</p>
+
+<h2>5. DOCX：办公人员的必备技能</h2>
+
+<p>创建格式精美的Word文档，如周报、合同和需求文档，变得轻而易举。Claude Code会自动处理<strong>标题、表格和目录</strong>。</p>
+
+<p>当你需要为市场团队制作周报模板时，可以使用：</p>
+
+<pre><code class="language-text">为市场团队的周报生成一个格式化的Word文档，包含合适的标题、追踪活动效果的表格和自动目录。
+</code></pre>
+
+<p>不再需要处理混乱的纯文本；一切井然有序、符合标准。</p>
+
+<h2>6. PPTX：你的个人PPT助手</h2>
+
+<p>从零开始创建PPT很耗时。有了这个技能，只需提供大纲或一篇文章，它就能生成完整的PPT，要点排列合理、分页恰当。它甚至能读取你现有的PPT进行二次创作。</p>
+
+<p>如果你需要为产品发布会准备PPT，可以使用：</p>
+
+<pre><code class="language-text">基于以下大纲为产品发布会生成完整的PPT：[大纲要点]。确保分页恰当、关键点组织良好。
+</code></pre>
+
+<p>这对演示来说是一个巨大的时间节省。</p>
+
+<h2>7. XLSX：电子表格爱好者的救星</h2>
+
+<p>处理Excel表格可能很繁琐，但这个技能让一切变得简单。它可以<strong>计算公式</strong>、创建<strong>数据透视表</strong>、处理<strong>跨表格的VLOOKUP</strong>，并自动清洗和对齐数据。</p>
+
+<p>对于销售数据分析，可以使用以下命令：</p>
+
+<pre><code class="language-text">分析以下销售数据[附上数据]，计算公式，创建数据透视表展示各产品月销售额，使用VLOOKUP合并客户数据，并自动清洗和对齐数据。
+</code></pre>
+
+<p>它让你免于无休止的表格工作。</p>
+
+<h2>8. PDF：被低估的多面手</h2>
+
+<p>PDF很常见但处理起来比较棘手。这个技能可以<strong>从整个文档中提取表格</strong>、<strong>合并PDF并添加水印</strong>，甚至可以总结冗长的合同或论文。</p>
+
+<p>当你需要从研究论文PDF中提取数据并总结时，可以使用：</p>
+
+<pre><code class="language-text">从这篇研究论文PDF[附上PDF]中提取所有表格，并撰写关键发现的总结。
+</code></pre>
+
+<p>对于研究人员、投标人以及任何处理长篇PDF的人来说，这是一个巨大的时间节省。</p>
+
+<p>通过掌握这8项技能，Claude Code从单纯的编码工具转变为一个全能的创意团队。无论你是创作内容、设计网站还是处理办公文档，它都能胜任。现在就开始将这些技能应用到你的工作流程中，看看它们对你的生产力和成果带来的改变吧。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/six-advanced-claude-code-skills">六个高级Claude Code技能：从新手到AI编程高手 &rarr;</a></p>
+</div>`,
+  },
+
+  "github-repositories-guide-developers": {
+    content: `<h2>1. Preparatory Environment Setup</h2>
+
+<p>First complete Git local installation and global configuration before operating GitHub repositories.</p>
+
+<h3>Install Git on mainstream OS</h3>
+
+<pre><code class="language-bash"># Ubuntu / Debian Linux
+sudo apt update && sudo apt install git -y
+
+# MacOS via Homebrew
+brew install git
+
+# Windows users download official installer from git-scm.com and complete default setup
+</code></pre>
+
+<h3>Global user information configuration (bind GitHub account)</h3>
+
+<pre><code class="language-bash"># Replace with your registered GitHub mailbox and username
+git config --global user.name "YourGithubName"
+git config --global user.email "yourmail@example.com"
+
+# Verify configuration result
+git config --global --list
+</code></pre>
+
+<h2>2. Three Common Ways to Obtain Remote GitHub Repository Code</h2>
+
+<h3>Method 1: Clone full repository to local</h3>
+
+<pre><code class="language-bash"># HTTPS clone (universal for all networks)
+git clone https://github.com/UserName/TargetRepo.git
+
+# SSH clone (recommended after configuring SSH key, no repeated password input)
+git clone git@github.com:UserName/TargetRepo.git
+
+# Clone specified single branch only to save disk space
+git clone -b dev https://github.com/UserName/TargetRepo.git
+</code></pre>
+
+<h3>Method 2: Download ZIP package without Git environment</h3>
+
+<p>Visit repository homepage, click Code, then Download ZIP. Suitable for users who only need to browse source code temporarily.</p>
+
+<h3>Method 3: Initialize empty local folder and link remote repo</h3>
+
+<pre><code class="language-bash">mkdir my-project && cd my-project
+git init
+git remote add origin https://github.com/UserName/TargetRepo.git
+git pull origin main
+</code></pre>
+
+<h2>3. Core Local Code Commit and Push Workflow</h2>
+
+<p>Standard four-step submission process for code modification, the most frequently used daily operation for developers:</p>
+
+<pre><code class="language-bash"># Step 1: Track all newly added/modified files under current directory
+git add .
+
+# Step 2: Write commit remark (use English description for international open source standard)
+git commit -m "feat: add overseas multi-language config file"
+
+# Step 3: Pull latest remote code to avoid conflict before upload
+git pull origin main
+
+# Step 4: Push local commits to remote main branch of GitHub
+git push origin main
+</code></pre>
+
+<blockquote><p>Specification tip: Follow Angular commit standard for remarks: feat (new feature) / fix (bug fix) / docs (document update), convenient for subsequent version iteration.</p></blockquote>
+
+<h2>4. Branch Management for Team Collaborative Development</h2>
+
+<p>Multi-branch is the core of team co-development, avoid direct modification on main production branch:</p>
+
+<pre><code class="language-bash"># Create new feature branch and switch into it immediately
+git checkout -b feature/europe-market
+
+# Check all existing local branches
+git branch
+
+# After finishing development on feature branch, switch back to main
+git checkout main
+
+# Merge completed feature branch into main branch
+git merge feature/europe-market
+
+# Delete useless local feature branch after merge
+git branch -d feature/europe-market
+
+# Push new remote branch to GitHub
+git push origin feature/europe-market
+</code></pre>
+
+<h2>5. Practical Tips for Overseas Developers</h2>
+
+<h3>5.1 Generate SSH key to skip repeated password verification</h3>
+
+<pre><code class="language-bash"># Generate RSA SSH key, bind your GitHub mailbox
+ssh-keygen -t ed25519 -C "yourmail@example.com"
+</code></pre>
+
+<p>Copy content inside <code>~/.ssh/id_ed25519.pub</code>, paste into GitHub account Settings &gt; SSH and GPG keys to finish binding.</p>
+
+<h3>5.2 Ignore redundant files via .gitignore file</h3>
+
+<p>Create <code>.gitignore</code> at project root to exclude cache, environment configuration and dependent folders from upload:</p>
+
+<pre><code class="language-text"># Sample .gitignore content for Node.js project
+node_modules/
+.env
+*.log
+.DS_Store
+dist/
+</code></pre>
+
+<h3>5.3 Switch remote repository address (transfer repo to new Github account)</h3>
+
+<pre><code class="language-bash">git remote set-url origin https://github.com/NewOwner/NewRepoName.git
+# Check modified remote address
+git remote -v
+</code></pre>
+
+<h2>6. Practical Application Scenarios for Cross-border Projects</h2>
+
+<ol>
+<li><strong>Open-source tool secondary development</strong>: Clone open-source warehouse, create independent feature branch, modify code, submit PR to original author for merge.</li>
+<li><strong>Overseas website version iteration</strong>: Maintain main as online production code, develop new regional features on independent branches.</li>
+<li><strong>Team distributed collaboration</strong>: Remote members pull main branch regularly, develop on personal branch and submit PR for administrator review.</li>
+</ol>
+
+<h2>Final Troubleshooting for Common Errors</h2>
+
+<ul>
+<li><strong>Push failure due to code conflict</strong>: Execute <code>git pull origin main</code> first to merge remote content then push again.</li>
+<li><strong>Accidental wrong commit modification</strong>: <code>git commit --amend</code> modify latest commit comment without creating new record.</li>
+</ul>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/git-github-beginners-guide">Git &amp; GitHub Beginner's Guide: Core Concepts &amp; Operation &rarr;</a></p>
+</div>`,
+    contentZh: `<p>很多初入海外开发的开发者对GitHub的基本操作感到困惑，比如如何克隆仓库、管理分支和部署项目。这篇实战教程整理了标准工业级的GitHub工作流程，涵盖了安装步骤、常用命令、仓库管理和远程同步，既适合个人开源项目，也适合跨境开发团队的协作。</p>
+
+<h2>1. 环境准备与安装</h2>
+
+<p>在操作GitHub仓库之前，首先完成Git的本地安装和全局配置。这是所有后续操作的基础，一步也不能跳过。</p>
+
+<h3>在主流操作系统上安装Git</h3>
+
+<pre><code class="language-bash"># Ubuntu / Debian Linux
+sudo apt update && sudo apt install git -y
+
+# MacOS 通过 Homebrew
+brew install git
+
+# Windows 用户从 git-scm.com 下载官方安装程序，按默认设置完成安装
+</code></pre>
+
+<h3>全局用户信息配置（绑定GitHub账号）</h3>
+
+<pre><code class="language-bash"># 替换为你的GitHub注册邮箱和用户名
+git config --global user.name "YourGithubName"
+git config --global user.email "yourmail@example.com"
+
+# 验证配置结果
+git config --global --list
+</code></pre>
+
+<h2>2. 获取远程GitHub仓库代码的三种方式</h2>
+
+<p>根据你的具体需求，可以选择不同的方式从GitHub获取代码。下面介绍三种最常用的方法。</p>
+
+<h3>方式一：克隆完整仓库到本地</h3>
+
+<pre><code class="language-bash"># HTTPS 克隆（通用，适用于所有网络环境）
+git clone https://github.com/UserName/TargetRepo.git
+
+# SSH 克隆（推荐，配置SSH Key后无需重复输入密码）
+git clone git@github.com:UserName/TargetRepo.git
+
+# 仅克隆指定分支以节省磁盘空间
+git clone -b dev https://github.com/UserName/TargetRepo.git
+</code></pre>
+
+<h3>方式二：无需Git环境下载ZIP包</h3>
+
+<p>访问仓库主页，点击 Code，再点击 Download ZIP。适用于只需临时浏览源代码的用户，不需要安装Git。</p>
+
+<h3>方式三：初始化本地空文件夹并关联远程仓库</h3>
+
+<pre><code class="language-bash">mkdir my-project && cd my-project
+git init
+git remote add origin https://github.com/UserName/TargetRepo.git
+git pull origin main
+</code></pre>
+
+<h2>3. 核心本地代码提交与推送流程</h2>
+
+<p>代码修改的标准四步提交流程，是开发者最常用的日常操作，需要反复练习直到形成肌肉记忆：</p>
+
+<pre><code class="language-bash"># 第一步：追踪当前目录下所有新增/修改的文件
+git add .
+
+# 第二步：编写提交说明（国际化开源标准建议使用英文）
+git commit -m "feat: add overseas multi-language config file"
+
+# 第三步：拉取最新远程代码，避免上传时产生冲突
+git pull origin main
+
+# 第四步：将本地提交推送到GitHub远程主分支
+git push origin main
+</code></pre>
+
+<blockquote><p>规范建议：提交说明遵循 Angular 提交标准：feat（新功能）/ fix（Bug修复）/ docs（文档更新），方便后续版本迭代。</p></blockquote>
+
+<h2>4. 团队协作开发的分支管理</h2>
+
+<p>多分支是团队协作开发的核心，千万不要直接在生产主分支上修改代码，这是新手最容易犯的错误。正确做法是：</p>
+
+<pre><code class="language-bash"># 创建新功能分支并立即切换过去
+git checkout -b feature/europe-market
+
+# 查看所有本地分支
+git branch
+
+# 在功能分支上完成开发后，切换回主分支
+git checkout main
+
+# 将已完成的功能分支合并到主分支
+git merge feature/europe-market
+
+# 合并后删除无用的本地功能分支
+git branch -d feature/europe-market
+
+# 将新的远程分支推送到GitHub
+git push origin feature/europe-market
+</code></pre>
+
+<h2>5. 面向海外开发者的实用技巧</h2>
+
+<h3>5.1 生成SSH密钥跳过重复密码验证</h3>
+
+<pre><code class="language-bash"># 生成RSA SSH密钥，绑定你的GitHub邮箱
+ssh-keygen -t ed25519 -C "yourmail@example.com"
+</code></pre>
+
+<p>复制 <code>~/.ssh/id_ed25519.pub</code> 文件内容，粘贴到 GitHub 账户 Settings &gt; SSH and GPG keys 完成绑定。</p>
+
+<h3>5.2 通过.gitignore文件忽略冗余文件</h3>
+
+<p>在项目根目录创建 <code>.gitignore</code>，排除缓存、环境配置和依赖文件夹，避免上传不必要的内容：</p>
+
+<pre><code class="language-text"># Node.js 项目的 .gitignore 示例
+node_modules/
+.env
+*.log
+.DS_Store
+dist/
+</code></pre>
+
+<h3>5.3 切换远程仓库地址（将仓库迁移到新GitHub账号）</h3>
+
+<pre><code class="language-bash">git remote set-url origin https://github.com/NewOwner/NewRepoName.git
+# 检查修改后的远程地址
+git remote -v
+</code></pre>
+
+<h2>6. 跨境项目的实际应用场景</h2>
+
+<ol>
+<li><strong>开源工具二次开发</strong>：克隆开源仓库，创建独立功能分支，修改代码，向原作者提交PR请求合并。这是参与开源社区的标准流程。</li>
+<li><strong>海外网站版本迭代</strong>：main分支维护线上生产代码，在独立分支上开发新地区功能，测试通过后再合并发布。</li>
+<li><strong>团队分布式协作</strong>：远程成员定期拉取main分支，在个人分支上开发并提交PR给管理员审核，确保代码质量。</li>
+</ol>
+
+<h2>常见错误排查</h2>
+
+<ul>
+<li><strong>代码冲突导致推送失败</strong>：先执行 <code>git pull origin main</code> 合并远程内容，解决冲突后再重新推送。</li>
+<li><strong>意外提交了错误修改</strong>：使用 <code>git commit --amend</code> 修改最新提交的说明，无需创建新记录。如果已经推送，需要用 <code>git push --force</code> 覆盖远程记录。</li>
+</ul>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/git-github-beginners-guide">Git与GitHub初学者指南：核心概念与操作 &rarr;</a></p>
+</div>`,
+  },
+
+  "hooks-ai-workflow-gatekeeper": {
+    content: `<h2>Why Hooks Matter: AI Forgets, But Hooks Don't</h2>
+
+<p>AI struggles to consistently remember all the rules you set, especially as context lengthens, tasks multiply, or conversations get fragmented. Global prompts, while useful, are just text and can be overlooked. Hooks solve this by acting as <strong>enforceable checkpoints</strong> in an AI's workflow.</p>
+
+<p>Think of Hooks as a <strong>community gate</strong> for your AI's operations. A security guard (representing global prompts) might get distracted, but a gate (Hooks) ensures everyone swipes a card (follows your rules) before entering. It turns your reminders into mandatory checks — if the AI fails a check, it cannot proceed.</p>
+
+<h2>What Hooks Do in Practice</h2>
+
+<p>Hooks insert mandatory actions into key stages of an AI's workflow:</p>
+
+<ul>
+<li><strong>Before Starting (SessionStart)</strong>: Force the AI to read essential documents (e.g., <code>PROGRESS.md</code>).</li>
+<li><strong>Before Acting (UserPromptSubmit)</strong>: Check for risky actions like deleting files or modifying sensitive configurations.</li>
+<li><strong>After Finishing (Stop)</strong>: Ensure post-task steps like running tests, documenting changes, or clarifying next steps are completed.</li>
+</ul>
+
+<h2>Implementing Hooks: Two Practical Methods</h2>
+
+<h3>Method 1: Leverage Prebuilt Configurations</h3>
+
+<p>You can use pre-configured Hooks setups. For example, with tools like Codex, you can prompt the AI to apply existing Hooks configurations:</p>
+
+<pre><code class="language-text">I want Hooks configured for my workflow. Help me inspect and apply the global Hooks config for Codex in my current project.
+</code></pre>
+
+<p>Once applied, you can verify the setup by checking your tool's settings panel — the new Hooks rules will appear there.</p>
+
+<h3>Method 2: Create Custom Rules</h3>
+
+<p>Define your own non-negotiable rules. If your project requires reading a specific file (e.g., <code>PROJECT_GUIDELINES.md</code>) before each task or running a <code>sanity_test.py</code> after completion, instruct your AI tool to add these as Hooks:</p>
+
+<pre><code class="language-text">Add a Hook to ensure the AI reads \`PROJECT_GUIDELINES.md\` before starting any task and runs \`sanity_test.py\` after finishing.
+</code></pre>
+
+<p>Focus on the critical rules you cannot afford the AI to skip — simplicity is key.</p>
+
+<h2>Key Caveats: Hooks Are Not a Silver Bullet</h2>
+
+<p>Hooks excel at enforcing procedural rules (like reading docs or running tests). However, for <strong>high-stakes scenarios</strong> involving real API keys, customer data, production environments, or payment/database permissions, rely on:</p>
+
+<ul>
+<li><strong>Least Privilege Access</strong>: Restrict the AI's permissions to only what is necessary.</li>
+<li><strong>Human Oversight</strong>: Use test accounts and manual approval for sensitive operations.</li>
+</ul>
+
+<h2>Wrapping Up</h2>
+
+<p>Hooks transform your AI from a forgetful assistant into a reliable worker by turning soft reminders into hard checkpoints. Use them to lock in critical workflows, and pair them with other security measures for sensitive tasks.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Practical Explanation of Agent, Skill and Harness in Modern AI Development &rarr;</a></p>
+</div>`,
+    contentZh: `<p>如果你曾经用"不要删除这个文件"、"先阅读项目文档再操作"或"完成前运行测试"等规则来指示AI，却发现它在几次交互后或上下文变复杂时就忘记了这些指令，那你并不孤单。这就是<strong>Hooks</strong>发挥作用的地方——一种让AI可靠地遵守你规则的工具。</p>
+
+<h2>为什么Hooks重要：AI会忘记，但Hooks不会</h2>
+
+<p>AI很难始终记住你设置的所有规则，特别是在上下文变长、任务增多或对话变得零散的情况下。全局提示虽然有用，但它们只是文本，很容易被忽略。Hooks通过充当AI工作流中的<strong>强制检查点</strong>完美地解决了这个痛点。</p>
+
+<p>可以把Hooks想象成AI操作的<strong>社区门禁</strong>。保安（代表全局提示）可能会分心或打瞌睡，但门禁（Hooks）确保每个人在进入前都必须刷卡（遵守你的规则）。它将你的软性提醒转变为硬性强制检查——如果AI未能通过检查，就无法继续执行任务。这就是为什么说Hooks比你的人工提醒可靠得多。</p>
+
+<h2>Hooks在实际中做什么</h2>
+
+<p>Hooks在AI工作流的关键阶段插入强制操作，覆盖任务的整个生命周期：</p>
+
+<ul>
+<li><strong>开始之前（SessionStart）</strong>：强制AI在启动时阅读必要的文档（例如项目进度文件 <code>PROGRESS.md</code> 或编码规范）。</li>
+<li><strong>行动之前（UserPromptSubmit）</strong>：在AI执行每个操作前检查风险，比如删除文件、修改敏感配置或调用外部API。</li>
+<li><strong>完成之后（Stop）</strong>：确保所有任务后步骤都已完成，包括运行测试用例、记录变更内容或明确下一步行动计划。</li>
+</ul>
+
+<h2>实现Hooks：两种实用方法</h2>
+
+<h3>方法一：利用预置配置</h3>
+
+<p>你可以直接使用预先配置好的Hooks设置，省去从零开始的麻烦。例如，使用Codex这类工具时，直接让AI帮你应用已有的Hooks配置：</p>
+
+<pre><code class="language-text">我想为我的工作流配置Hooks。帮我检查并在当前项目中应用Codex的全局Hooks配置。
+</code></pre>
+
+<p>应用完成后，打开工具的设置面板确认——新的Hooks规则会出现在那里，你可以随时查看和调整。</p>
+
+<h3>方法二：创建自定义规则</h3>
+
+<p>如果预置配置不满足你的需求，可以创建自己的规则。比如你的项目需要在每个任务前读取 <code>PROJECT_GUIDELINES.md</code>，完成后运行 <code>sanity_test.py</code>：</p>
+
+<pre><code class="language-text">添加一个Hook，确保AI在开始任何任务之前读取\`PROJECT_GUIDELINES.md\`，并在完成后运行\`sanity_test.py\`。
+</code></pre>
+
+<p>关键原则是只设置那些你绝不能让AI跳过的核心规则，不要贪多——简洁才能保证可靠执行。</p>
+
+<h2>关键注意事项：Hooks不是万能药</h2>
+
+<p>Hooks擅长执行程序性规则，比如必须阅读文档或必须运行测试。但对于涉及真实API密钥、客户隐私数据、生产环境或支付/数据库权限的<strong>高风险场景</strong>，仅靠Hooks是不够的。你必须同时采取以下措施：</p>
+
+<ul>
+<li><strong>最小权限原则</strong>：把AI的权限限制到最小，只给它完成工作所必需的那部分权限。</li>
+<li><strong>人工监督</strong>：对敏感操作使用专门的测试账户，关键步骤设置手动审批流程。</li>
+</ul>
+
+<h2>总结</h2>
+
+<p>Hooks通过将软性提醒转变为硬性检查点，把AI从一个健忘的助手升级为一个可靠的工作伙伴。用它们来锁定关键工作流，再配合其他安全措施来应对敏感任务，你的AI工作流程就能真正高效且安全地运转起来。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">现代AI开发中Agent、Skill和Harness的实用解释 &rarr;</a></p>
+</div>`,
+  },
+
+  "llm-stable-json-output-guide": {
+    content: `<h2>1. Prompt Engineering with Few-Shot Learning</h2>
+
+<p>The first layer is to guide the LLM using well-crafted prompts, especially leveraging few-shot learning. Instead of vague instructions, provide concrete examples of input and expected JSON output.</p>
+
+<p>For instance, if you want to extract a user's name and age from a chat message, structure your prompt like this:</p>
+
+<pre><code class="language-text">Task: Extract name and age from the following chat message and output as JSON.
+
+Example Input: 小明今年十八岁
+Example Output: {"name": "小明", "age": 18}
+
+Current Input: 你好，我是张三，今年25岁
+Expected Output:
+</code></pre>
+
+<p>By showing the model clear examples, it learns to mimic the desired JSON structure, reducing the chance of irrelevant text or formatting errors.</p>
+
+<h2>2. Leverage Native LLM Capabilities</h2>
+
+<p>Modern LLMs come with built-in features to enforce structured output. Two key methods are <strong>JSON Mode</strong> and <strong>Function Calling</strong>.</p>
+
+<h3>JSON Mode</h3>
+
+<p>Many LLM APIs, such as OpenAI's, offer a <code>response_format</code> parameter. You can set it to <code>{ "type": "json_object" }</code> to instruct the model to prioritize JSON output.</p>
+
+<p>Here is an example using Python and the OpenAI API:</p>
+
+<pre><code class="language-python">import openai
+
+response = openai.ChatCompletion.create(
+  model="gpt-4o",
+  messages=[
+    {"role": "user", "content": "Extract name and age from '李四今年30岁' and return JSON."}
+  ],
+  response_format={"type": "json_object"}
+)
+
+print(response.choices[0].message.content)
+</code></pre>
+
+<h3>Function Calling</h3>
+
+<p>Function calling allows you to define a schema for the JSON output. The LLM will generate JSON that adheres to this schema.</p>
+
+<p>Define a function schema for extracting user information:</p>
+
+<pre><code class="language-python">functions = [
+  {
+    "name": "extract_user_info",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "age": {"type": "integer"}
+      },
+      "required": ["name", "age"]
+    }
+  }
+]
+
+response = openai.ChatCompletion.create(
+  model="gpt-4o",
+  messages=[
+    {"role": "user", "content": "我叫王五，今年40岁"}
+  ],
+  functions=functions,
+  function_call={"name": "extract_user_info"}
+)
+
+# Parse the function call response
+function_response = response.choices[0].message.function_call.arguments
+print(function_response)
+</code></pre>
+
+<h2>3. Underlying Constraints for Local Models</h2>
+
+<p>If you are running an LLM locally, you can enforce output constraints at the token generation level. This involves monitoring the model's token output and blocking any tokens that would break JSON syntax.</p>
+
+<p>Using a library like <code>transformers</code> in Python, you can implement a token filter:</p>
+
+<pre><code class="language-python">from transformers import AutoTokenizer, AutoModelForCausalLM
+import re
+
+tokenizer = AutoTokenizer.from_pretrained("your-local-model")
+model = AutoModelForCausalLM.from_pretrained("your-local-model")
+
+def is_valid_json_token(token):
+    # Check if the token is part of valid JSON syntax
+    json_patterns = [r'^\\{.*', r'^\\}.*', r'^".*"', r'^[0-9].*', r'^,.*', r'^:.*', r'^\\[.*', r'^\\].*']
+    for pattern in json_patterns:
+        if re.match(pattern, token):
+            return True
+    return False
+
+# Generate text with token filtering
+input_ids = tokenizer("Extract name and age from '赵六今年28岁' and output JSON: ", return_tensors="pt")
+output = model.generate(
+    input_ids,
+    max_length=100,
+    pad_token_id=tokenizer.eos_token_id,
+    bad_words_ids=[[tokenizer.encode(token)[0]] for token in tokenizer.vocab if not is_valid_json_token(tokenizer.decode([token]))]
+)
+
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+</code></pre>
+
+<p>This code filters out tokens that do not contribute to valid JSON, ensuring the output remains syntactically correct.</p>
+
+<h2>4. Fallback Mechanism for Error Handling</h2>
+
+<p>Even with the above layers, errors can still occur. Implement a fallback mechanism to validate the JSON output and retry if necessary.</p>
+
+<pre><code class="language-python">import json
+
+def validate_and_retry(response_text, model, tokenizer):
+    try:
+        json.loads(response_text)
+        return response_text
+    except json.JSONDecodeError as e:
+        # Send the error back to the LLM for correction
+        error_message = f"Invalid JSON: {str(e)}. Please fix the JSON and try again."
+        correction_response = openai.ChatCompletion.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "user", "content": error_message + "\nOriginal output: " + response_text}
+            ],
+            response_format={"type": "json_object"}
+        )
+        return correction_response.choices[0].message.content
+</code></pre>
+
+<p>This function checks if the output is valid JSON. If not, it sends the error back to the LLM to generate a corrected version.</p>
+
+<h2>Conclusion</h2>
+
+<p>By combining these four layers — prompt engineering with few-shot examples, native LLM features like JSON Mode and function calling, underlying token constraints for local models, and a fallback error-handling mechanism — you can ensure stable JSON output from LLMs in any environment. This multi-layered approach is not only practical for production but also demonstrates a strong engineering mindset, which is highly valued in technical interviews and real-world development.</p>
+
+<p>For those using cloud-based LLM APIs, the third layer (underlying constraints for local models) is not accessible, as you do not have direct control over the model's token generation process. This makes the other three layers even more critical for ensuring reliability.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/12-core-ai-concepts-guide">Master 12 Core Concepts of AI Large Models in One Guide &rarr;</a></p>
+</div>`,
+    contentZh: `<p>要让大语言模型稳定输出JSON，很多开发者容易掉进一个陷阱：完全依赖提示工程，比如简单地在提示词里写"输出JSON"或"不要添加额外文字"。但在生产环境中，这种方式并不可靠。要构建一个健壮的解决方案，我们需要一个多层策略——结合提示工程、模型原生能力、底层约束和回退机制。下面用实战步骤和代码示例逐一讲解每一层。</p>
+
+<h2>1. 带少样本学习的提示工程</h2>
+
+<p>第一层是使用精心设计的提示词来引导LLM，特别是利用少样本学习。不要使用模糊的指令，而是提供输入和预期JSON输出的具体示例，让模型照猫画虎。</p>
+
+<p>例如，如果你想从聊天消息中提取用户的姓名和年龄，可以这样构建提示词：</p>
+
+<pre><code class="language-text">任务：从以下聊天消息中提取姓名和年龄，以JSON格式输出。
+
+输入示例：小明今年十八岁
+输出示例：{"name": "小明", "age": 18}
+
+当前输入：你好，我是张三，今年25岁
+预期输出：
+</code></pre>
+
+<p>通过向模型展示清晰的输入输出对，它就会学习模仿所需的JSON结构，大大减少输出无关文本或格式出错的概率。</p>
+
+<h2>2. 利用原生LLM能力</h2>
+
+<p>现代LLM大多内置了强制执行结构化输出的功能。两种最实用的方法是<strong>JSON模式</strong>和<strong>函数调用</strong>。</p>
+
+<h3>JSON模式</h3>
+
+<p>许多LLM API（比如OpenAI的API）提供了 <code>response_format</code> 参数。你只需要把它设为 <code>{ "type": "json_object" }</code>，模型就会优先考虑输出JSON格式。</p>
+
+<p>下面是使用Python和OpenAI API的完整示例：</p>
+
+<pre><code class="language-python">import openai
+
+response = openai.ChatCompletion.create(
+  model="gpt-4o",
+  messages=[
+    {"role": "user", "content": "从'李四今年30岁'中提取姓名和年龄，返回JSON格式。"}
+  ],
+  response_format={"type": "json_object"}
+)
+
+print(response.choices[0].message.content)
+</code></pre>
+
+<h3>函数调用</h3>
+
+<p>函数调用则更进一步：你可以为JSON输出定义一个明确的模式（Schema），LLM生成的JSON会严格遵循这个模式，不会跑偏。</p>
+
+<p>下面是一个提取用户信息的函数模式定义：</p>
+
+<pre><code class="language-python">functions = [
+  {
+    "name": "extract_user_info",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "age": {"type": "integer"}
+      },
+      "required": ["name", "age"]
+    }
+  }
+]
+
+response = openai.ChatCompletion.create(
+  model="gpt-4o",
+  messages=[
+    {"role": "user", "content": "我叫王五，今年40岁"}
+  ],
+  functions=functions,
+  function_call={"name": "extract_user_info"}
+)
+
+# 解析函数调用响应
+function_response = response.choices[0].message.function_call.arguments
+print(function_response)
+</code></pre>
+
+<h2>3. 本地模型的底层约束</h2>
+
+<p>如果你是在本地运行LLM，还可以在Token生成这一底层做文章。通过监控模型逐个输出的Token，实时拦截那些会破坏JSON语法的Token。</p>
+
+<p>用Python的 <code>transformers</code> 库，你可以实现一个Token级别的过滤器：</p>
+
+<pre><code class="language-python">from transformers import AutoTokenizer, AutoModelForCausalLM
+import re
+
+tokenizer = AutoTokenizer.from_pretrained("your-local-model")
+model = AutoModelForCausalLM.from_pretrained("your-local-model")
+
+def is_valid_json_token(token):
+    # 检查该Token是否为有效JSON语法的一部分
+    json_patterns = [r'^\\{.*', r'^\\}.*', r'^".*"', r'^[0-9].*', r'^,.*', r'^:.*', r'^\\[.*', r'^\\].*']
+    for pattern in json_patterns:
+        if re.match(pattern, token):
+            return True
+    return False
+
+# 使用Token过滤生成文本
+input_ids = tokenizer("从'赵六今年28岁'中提取姓名和年龄，输出JSON格式：", return_tensors="pt")
+output = model.generate(
+    input_ids,
+    max_length=100,
+    pad_token_id=tokenizer.eos_token_id,
+    bad_words_ids=[[tokenizer.encode(token)[0]] for token in tokenizer.vocab if not is_valid_json_token(tokenizer.decode([token]))]
+)
+
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+</code></pre>
+
+<p>这段代码的核心思路是：只允许那些能构成有效JSON的Token通过，其余的全部拦截，从源头上保证输出格式正确。</p>
+
+<h2>4. 错误处理的回退机制</h2>
+
+<p>即使前面三层都用上了，错误还是有可能出现。这时候就需要一个兜底的回退机制：先验证输出是不是合法JSON，如果不是，就让LLM自己修正。</p>
+
+<pre><code class="language-python">import json
+
+def validate_and_retry(response_text, model, tokenizer):
+    try:
+        json.loads(response_text)
+        return response_text
+    except json.JSONDecodeError as e:
+        # 将错误返回给LLM进行修正
+        error_message = f"无效JSON：{str(e)}。请修复JSON并重试。"
+        correction_response = openai.ChatCompletion.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "user", "content": error_message + "\n原始输出：" + response_text}
+            ],
+            response_format={"type": "json_object"}
+        )
+        return correction_response.choices[0].message.content
+</code></pre>
+
+<p>这个函数先用 <code>json.loads</code> 尝试解析。如果抛异常了，就把错误信息塞回给LLM，让它基于原来的输出重新生成一个合法的JSON。大多数情况下，LLM看到自己的错误后都能正确修正。</p>
+
+<h2>结论</h2>
+
+<p>通过结合这四层——带少样本示例的提示工程、JSON模式和函数调用等原生LLM特性、本地模型的底层Token约束以及错误处理的回退机制——你可以在任何环境下确保LLM稳定输出JSON。这种多层方法不仅对生产环境非常实用，也能体现出扎实的工程思维，在技术面试和实际开发中都是加分项。</p>
+
+<p>对于使用云端LLM API的开发者来说，第三层（本地模型的底层约束）用不了，因为你无法控制服务端Token的生成过程。这也意味着前面三层更加关键，必须做得足够扎实才能保证可靠性。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/12-core-ai-concepts-guide">一篇文章掌握AI大模型12个核心概念 &rarr;</a></p>
+</div>`,
+  },
+
 };
