@@ -1412,4 +1412,56 @@ export const articles: Article[] = [
     date: "2026-06-02",
   },
 
+
+  {
+    slug: "codegraph-open-source-knowledge-graphs",
+    title: "CodeGraph: Open-Source Tool to Supercharge AI Coding Agents with Knowledge Graphs",
+    titleZh: "CodeGraph：用知识图谱为AI编程代理加速的开源工具",
+    description: "CodeGraph is an open-source project with 28.5k GitHub stars that creates a structured knowledge graph of your codebase, reducing AI tool calls by 17x and cutting costs by 35%.",
+    descriptionZh: "CodeGraph是一个拥有28.5k GitHub星标的开源项目，为你的代码库创建结构化知识图谱，将AI工具调用减少17倍，成本降低35%。",
+    category: "ai-tools",
+    tags: ["codegraph", "knowledge-graph", "ai-coding", "open-source", "claude-code"],
+    difficulty: "intermediate",
+    toolsMentioned: ["codegraph", "claude"],
+    date: "2026-06-03",
+  },
+
+  {
+    slug: "agent-skill-hit-rate",
+    title: "How to Ensure Agent Skill Hit Rate When Skills Are Overwhelming",
+    titleZh: "当技能数量过多时，如何确保代理技能命中率",
+    description: "As your AI Agent's skill set grows, accuracy plummets. Learn 4 practical strategies — optimized descriptions, skill trees, negative samples, and recall-rerank — to maintain high hit rates.",
+    descriptionZh: "随着AI Agent技能集的增长，命中率会急剧下降。学习4个实用策略——优化描述、技能树、负样本和召回重排序——来保持高命中率。",
+    category: "ai-tutorials",
+    tags: ["ai-agent", "skills", "routing", "prompt-engineering", "rag"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-03",
+  },
+
+  {
+    slug: "connect-deepseek-to-claude-code",
+    title: "Step-by-Step Guide: Connect DeepSeek LLM to Claude Code for Cost-Effective Local & Cloud Development",
+    titleZh: "分步指南：将DeepSeek LLM连接到Claude Code，实现高性价比的本地与云端开发",
+    description: "A production-ready guide to integrating DeepSeek into Claude Code. Covers API key setup, bridge script building, parameter tuning, and verification testing for overseas developers.",
+    descriptionZh: "将DeepSeek集成到Claude Code的生产级指南。涵盖API密钥设置、桥接脚本构建、参数调优和验证测试，面向海外开发者。",
+    category: "ai-tutorials",
+    tags: ["deepseek", "claude-code", "api-integration", "cost-optimization", "overseas-development"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "deepseek"],
+    date: "2026-06-03",
+  },
+
+  {
+    slug: "claude-code-9-skill-framework",
+    title: "Unlock Team Potential with Claude Code's 9-Skill Framework for AI-Driven Development",
+    titleZh: "用Claude Code的9技能框架释放团队潜力，实现AI驱动开发",
+    description: "Claude Code team engineer Thariq's 9-skill framework maps the entire development lifecycle — awareness, production, validation, and delivery. Learn to turn tacit knowledge into reusable assets.",
+    descriptionZh: "Claude Code团队工程师Thariq的9技能框架覆盖整个开发生命周期——认知、生产、验证和交付。学习将隐性知识转化为可复用的资产。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "skills", "framework", "team-productivity", "ai-development", "devops"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-03",
+  },
 ];

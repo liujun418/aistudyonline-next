@@ -21728,4 +21728,1033 @@ def validate_and_retry(response_text, model, tokenizer):
 </div>`,
   },
 
+  "codegraph-open-source-knowledge-graphs": {
+    content: `<h2>What is CodeGraph?</h2>
+
+<p>CodeGraph is a specialized tool built for AI coding agents (like Claude Code, Codex, Gemini, Cursor, and OpenCode). It creates a <strong>structured knowledge graph</strong> of your entire codebase, including:</p>
+
+<ul>
+<li>Function definitions</li>
+<li>Variable symbols</li>
+<li>Call relationships</li>
+<li>Dependency chains</li>
+</ul>
+
+<p>Instead of AI agents repeatedly scanning files (a slow and token-wasteful process), they query this pre-built knowledge graph. This drastically reduces tool calls, speeds up responses, and cuts costs.</p>
+
+<h2>Why CodeGraph is a Game-Changer</h2>
+
+<p>Let's look at the hard numbers from real-world tests:</p>
+
+<ul>
+<li>In a large codebase with 4,000 files, AI tool calls dropped from <strong>52 to just 3</strong> — a <strong>17x efficiency boost</strong>.</li>
+<li>Across 7 industrial-grade projects, CodeGraph delivered:
+<ul>
+<li>35% cost reduction on average.</li>
+<li>57% less token usage.</li>
+<li>46% faster response times.</li>
+<li>71% fewer tool calls.</li>
+</ul>
+</li>
+</ul>
+
+<p>For example, when testing with the VS Code codebase (TypeScript, ~10k files), CodeGraph reduced tool calls by 85%, cut tokens by 78%, and made responses 52% faster.</p>
+
+<h2>How to Use CodeGraph (Practical Setup)</h2>
+
+<p>Using CodeGraph is straightforward, especially since it natively supports popular AI coding tools like Claude Code, Cursor, and OpenCode. Here's how to get started:</p>
+
+<h3>Step 1: Install and Initialize</h3>
+
+<p>First, clone the repository and install dependencies:</p>
+
+<pre><code class="language-bash">git clone https://github.com/colbymchenry/codegraph.git
+cd codegraph
+npm install  # or yarn install</code></pre>
+
+<h3>Step 2: Index Your Codebase</h3>
+
+<p>Run the indexing command to build the knowledge graph for your project. Replace <code>./your-project</code> with your codebase path:</p>
+
+<pre><code class="language-bash">npx codegraph index ./your-project</code></pre>
+
+<h3>Step 3: Integrate with Your AI Coding Agent</h3>
+
+<p>CodeGraph works out-of-the-box with tools like Claude Code and Cursor. For example, in Cursor, simply enable the CodeGraph plugin, and the AI will automatically query the knowledge graph instead of scanning files.</p>
+
+<p>For custom integrations, use the provided API to fetch data from the knowledge graph. Here's a sample snippet to retrieve function call relationships:</p>
+
+<pre><code class="language-python">import requests
+
+def get_call_relationships(function_name):
+    response = requests.get(
+        "http://localhost:3000/codegraph/call-relationships",
+        params={"function": function_name}
+    )
+    return response.json()
+
+# Example usage
+relationships = get_call_relationships("user_authenticate")
+print(relationships)</code></pre>
+
+<h2>Security and Compatibility</h2>
+
+<p>One major advantage of CodeGraph is its <strong>100% local operation</strong>. Your code data never leaves your machine, so you don't have to worry about leaks. It also supports multiple programming languages and frameworks, making it versatile for projects like:</p>
+
+<ul>
+<li>Web apps (React, Vue, Angular)</li>
+<li>Backend services (Node.js, Python Django/Flask)</li>
+<li>Mobile apps (iOS, React Native)</li>
+</ul>
+
+<h2>Final Thoughts</h2>
+
+<p>CodeGraph is a must-have for any team using AI coding agents. It turns slow, inefficient code exploration into a fast, cost-effective process. With its open-source nature, strong community support (28.5k GitHub stars), and tangible performance gains, it's a tool that truly makes AI coding agents "self-evolve."</p>
+
+<p>To get started, head to <a href="https://github.com/colbymchenry/codegraph">CodeGraph's GitHub repo</a> and try it on your next project — your AI coding assistant will thank you.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/codegraph-17x-coding-efficiency">CodeGraph: The Tool That Boosts Coding Efficiency by 17x for Global Developers &rarr;</a></p>
+</div>`,
+    contentZh: `<p>随着AI编程工具的快速发展，如何让AI代理更高效地理解和操作大型代码库成为开发者面临的核心挑战。传统方式下AI代理需要反复扫描文件，既消耗大量Token又耗费时间。CodeGraph通过构建结构化的代码知识图谱，彻底改变了这一局面，让代码探索变得前所未有的快速和精准。无论你使用Claude Code、Cursor还是其他AI编码工具，CodeGraph都能显著提升开发效率，降低使用成本。</p>
+
+<h2>什么是CodeGraph？</h2>
+
+<p>CodeGraph是一个专为AI编程代理（如Claude Code、Codex、Gemini、Cursor和OpenCode）设计的工具。它为你的整个代码库创建<strong>结构化知识图谱</strong>，包括：</p>
+
+<ul>
+<li>函数定义</li>
+<li>变量符号</li>
+<li>调用关系</li>
+<li>依赖链</li>
+</ul>
+
+<p>AI代理不再需要反复扫描文件（这是一个缓慢且浪费Token的过程），而是直接查询这个预先构建的知识图谱。这大大减少了工具调用次数，加快了响应速度，并降低了成本。</p>
+
+<h2>为什么CodeGraph是颠覆性的</h2>
+
+<p>让我们看看真实测试中的具体数据：</p>
+
+<ul>
+<li>在一个包含4,000个文件的大型代码库中，AI工具调用从<strong>52次降至仅3次</strong>——<strong>17倍的效率提升</strong>。</li>
+<li>在7个工业级项目中，CodeGraph实现了：
+<ul>
+<li>平均成本降低35%。</li>
+<li>Token使用量减少57%。</li>
+<li>响应速度提升46%。</li>
+<li>工具调用次数减少71%。</li>
+</ul>
+</li>
+</ul>
+
+<p>例如，在使用VS Code代码库（TypeScript，约1万个文件）进行测试时，CodeGraph将工具调用减少了85%，Token消耗降低了78%，响应速度提高了52%。</p>
+
+<h2>如何使用CodeGraph（实用设置）</h2>
+
+<p>使用CodeGraph非常简单，特别是它原生支持Claude Code、Cursor和OpenCode等流行的AI编程工具。以下是入门步骤：</p>
+
+<h3>第1步：安装和初始化</h3>
+
+<p>首先，克隆仓库并安装依赖：</p>
+
+<pre><code class="language-bash">git clone https://github.com/colbymchenry/codegraph.git
+cd codegraph
+npm install  # 或 yarn install</code></pre>
+
+<h3>第2步：索引你的代码库</h3>
+
+<p>运行索引命令来为你的项目构建知识图谱。将<code>./your-project</code>替换为你的代码库路径：</p>
+
+<pre><code class="language-bash">npx codegraph index ./your-project</code></pre>
+
+<h3>第3步：与你的AI编程代理集成</h3>
+
+<p>CodeGraph可以直接与Claude Code和Cursor等工具配合使用。例如，在Cursor中，只需启用CodeGraph插件，AI就会自动查询知识图谱，而不是扫描文件。</p>
+
+<p>对于自定义集成，可以使用提供的API从知识图谱中获取数据。以下是一个获取函数调用关系的示例代码：</p>
+
+<pre><code class="language-python">import requests
+
+def get_call_relationships(function_name):
+    response = requests.get(
+        "http://localhost:3000/codegraph/call-relationships",
+        params={"function": function_name}
+    )
+    return response.json()
+
+# 使用示例
+relationships = get_call_relationships("user_authenticate")
+print(relationships)</code></pre>
+
+<h2>安全性与兼容性</h2>
+
+<p>CodeGraph的一大优势是<strong>100%本地运行</strong>。你的代码数据永远不会离开你的机器，因此无需担心数据泄露。它还支持多种编程语言和框架，适用于以下类型的项目：</p>
+
+<ul>
+<li>Web应用（React、Vue、Angular）</li>
+<li>后端服务（Node.js、Python Django/Flask）</li>
+<li>移动应用（iOS、React Native）</li>
+</ul>
+
+<h2>总结</h2>
+
+<p>CodeGraph是任何使用AI编程代理的团队的必备工具。它将缓慢低效的代码探索转变为快速经济的过程。凭借其开源特性、强大的社区支持（28.5k GitHub星标）和切实的性能提升，它是一个真正能让AI编程代理"自我进化"的工具。无论你的项目规模大小，CodeGraph都能帮助你节省大量开发时间和API调用成本，让你的AI编程助手发挥出最大的潜力。</p>
+
+<p>要开始使用，请访问<a href="https://github.com/colbymchenry/codegraph">CodeGraph的GitHub仓库</a>，在你的下一个项目中尝试——你的AI编程助手会感谢你的。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/codegraph-17x-coding-efficiency">CodeGraph：将全球开发者编码效率提升17倍的工具 &rarr;</a></p>
+</div>`,
+  },
+
+  "agent-skill-hit-rate": {
+    content: `<h2>1. Optimize Skill Descriptions for Clear Trigger Scenarios</h2>
+
+<p>The core of an Agent's skill routing lies in how well each skill is described. Vague descriptions like <em>"Data Analysis Assistant"</em> or <em>"General Office Tool"</em> confuse the model, leading to misselection. Instead, focus on <strong>defining <em>when</em> a skill should be used</strong> (its trigger scenarios).</p>
+
+<ul>
+<li><strong>Bad Practice</strong>:
+
+<pre><code class="language-text">Skill Name: PPT Generator
+Description: Responsible for generating PPTs.</code></pre></li>
+<li><strong>Good Practice</strong>:
+
+<pre><code class="language-text">Skill Name: PPT Generator for Business Scenarios
+Description: Use when the user needs to create materials for reports, funding pitches, quarterly summaries, or demonstration documents.</code></pre></li>
+</ul>
+
+<p>Anthropic's <em>Progressive Disclosure</em> principle (used in Claude) emphasizes this: the model first reads skill names and descriptions to decide which to load fully. Thus, invest in crafting <strong>distinguishable, scenario-focused descriptions</strong> — treat them as "titles and abstracts" in vector search. The clearer the scenario, the higher the hit rate.</p>
+
+<h2>2. Build a Skill Tree for Hierarchical Routing</h2>
+
+<p>When you have dozens or hundreds of skills, avoid flattening them all. Instead, <strong>structure skills into a "Skill Tree"</strong> to reduce the decision-making burden on the model.</p>
+
+<ul>
+<li><strong>Step 1: Categorize by Broad Domains</strong>
+For example: <em>R&amp;D, Operations, Marketing, Finance</em>.</li>
+<li><strong>Step 2: Subcategorize Within Domains</strong>
+Under <em>R&amp;D</em>, add subcategories like <em>Code Generation, Code Review, Test Case Generation</em>.</li>
+</ul>
+
+<p>This hierarchical approach narrows the search space. The model first selects a domain, then a subcategory, and finally the specific skill — similar to how large-scale Agent systems operate in production.</p>
+
+<h2>3. Add Negative Samples to Clarify When <em>Not</em> to Use a Skill</h2>
+
+<p>Many developers overlook this: tell the model not just <em>when</em> to use a skill, but <em>when not to</em>. This reduces "false triggers" drastically.</p>
+
+<ul>
+<li><strong>Example</strong>:
+
+<pre><code class="language-text">Skill Name: SQL Generator
+Description: Use only for generating SQL queries. Do NOT use for database design or performance optimization.</code></pre>
+
+<pre><code class="language-text">Skill Name: Frontend Code Generator
+Description: Use only for frontend code generation. Do NOT use for backend API development.</code></pre></li>
+</ul>
+
+<p>Including <em>"When NOT to Use"</em> in skill descriptions is a best practice in top-tier AI communities, as it sharpens the model's understanding of skill boundaries.</p>
+
+<h2>4. Implement Recall + Rerank for Large Skill Sets</h2>
+
+<p>When skills number in the hundreds or more, don't let the large language model (LLM) choose directly from the entire pool. Instead, adopt a <strong>"Recall + Rerank"</strong> workflow, similar to Retrieval-Augmented Generation (RAG):</p>
+
+<ol>
+<li><strong>Recall Top Candidates</strong>: Use embedding-based or keyword search to retrieve the top 10 most relevant skills.</li>
+<li><strong>Rerank with LLM</strong>: Pass these top 10 to the LLM for final selection.</li>
+</ol>
+
+<p>Here's a simplified code snippet illustrating this logic (using Python and a hypothetical embedding library):</p>
+
+<pre><code class="language-python">from embedding_library import EmbeddingModel, retrieve_top_k
+
+# Step 1: Retrieve top 10 skills via embedding search
+user_query = "Generate a Python function to sort a list"
+top_10_skills = retrieve_top_k(user_query, k=10)
+
+# Step 2: Pass to LLM for final reranking
+llm_prompt = f'''Given the user query: "{user_query}",
+rank the following skills by relevance and select the best one:
+{top_10_skills}
+'''
+final_skill = llm_client.generate(llm_prompt)</code></pre>
+
+<p>This approach transforms skill routing into a scalable retrieval problem, a technique widely used in advanced Agent research.</p>
+
+<h2>Conclusion</h2>
+
+<p>As your Agent's skill set expands, treat skill routing as a <em>retrieval and semantic matching challenge</em>. By optimizing descriptions, hierarchizing skills, adding negative samples, and implementing recall-rerank, you'll ensure your Agent consistently selects the right skill — even with hundreds of options. These strategies aren't just theoretical; they're battle-tested in industrial AI development and will set your Agent (and your technical interviews) apart.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Practical Explanation of Agent, Skill and Harness in Modern AI Development &rarr;</a></p>
+</div>`,
+    contentZh: `<h2>1. 优化技能描述，明确触发场景</h2>
+
+<p>Agent技能路由的核心在于每个技能描述的质量。像"数据分析助手"或"通用办公工具"这样模糊的描述会让模型混淆，导致误选。相反，你应该专注于<strong>定义技能<em>何时</em>应该被使用</strong>（即触发场景）。</p>
+
+<ul>
+<li><strong>反面示例</strong>：
+
+<pre><code class="language-text">技能名称：PPT生成器
+描述：负责生成PPT。</code></pre></li>
+<li><strong>正面示例</strong>：
+
+<pre><code class="language-text">技能名称：商务场景PPT生成器
+描述：当用户需要创建报告材料、融资演讲、季度总结或演示文档时使用。</code></pre></li>
+</ul>
+
+<p>Anthropic的<em>渐进式披露</em>原则（在Claude中使用）强调了这一点：模型首先读取技能名称和描述来决定加载哪个技能。因此，投入精力编写<strong>可区分、场景聚焦的描述</strong>——把它们当作向量搜索中的"标题和摘要"。场景越清晰，命中率越高。</p>
+
+<h2>2. 构建技能树进行分层路由</h2>
+
+<p>当你有几十个甚至几百个技能时，避免将它们全部扁平化。相反，<strong>将技能组织成"技能树"</strong>，以减少模型的决策负担。</p>
+
+<ul>
+<li><strong>第1步：按大领域分类</strong>
+例如：<em>研发、运营、营销、财务</em>。</li>
+<li><strong>第2步：在领域内细分</strong>
+在<em>研发</em>下，添加<em>代码生成、代码审查、测试用例生成</em>等子类别。</li>
+</ul>
+
+<p>这种分层方法缩小了搜索空间。模型首先选择一个领域，然后选择子类别，最后选择具体技能——类似于大规模Agent系统在生产环境中的运作方式。</p>
+
+<h2>3. 添加负样本，明确<em>何时不</em>使用技能</h2>
+
+<p>很多开发者忽略了这一点：不仅要告诉模型<em>何时</em>使用技能，还要告诉它<em>何时不</em>使用。这能大幅减少"误触发"。</p>
+
+<ul>
+<li><strong>示例</strong>：
+
+<pre><code class="language-text">技能名称：SQL生成器
+描述：仅用于生成SQL查询。不要用于数据库设计或性能优化。</code></pre>
+
+<pre><code class="language-text">技能名称：前端代码生成器
+描述：仅用于前端代码生成。不要用于后端API开发。</code></pre></li>
+</ul>
+
+<p>在技能描述中加入<em>"何时不使用"</em>是顶级AI社区的最佳实践，因为它能强化模型对技能边界的理解。</p>
+
+<h2>4. 对大型技能集实施召回+重排序</h2>
+
+<p>当技能数量达到数百甚至更多时，不要让大语言模型直接从整个池中选择。相反，采用<strong>"召回+重排序"</strong>工作流，类似于检索增强生成（RAG）：</p>
+
+<ol>
+<li><strong>召回候选</strong>：使用基于嵌入或关键词搜索来检索最相关的10个技能。</li>
+<li><strong>LLM重排序</strong>：将这10个候选传给LLM做最终选择。</li>
+</ol>
+
+<p>以下是一个简化的代码示例（使用Python和一个假设的嵌入库）：</p>
+
+<pre><code class="language-python">from embedding_library import EmbeddingModel, retrieve_top_k
+
+# 第1步：通过嵌入搜索检索前10个技能
+user_query = "生成一个对列表排序的Python函数"
+top_10_skills = retrieve_top_k(user_query, k=10)
+
+# 第2步：传给LLM进行最终重排序
+llm_prompt = f'''给定用户查询："{user_query}"，
+根据相关性对以下技能进行排序并选择最佳的一个：
+{top_10_skills}
+'''
+final_skill = llm_client.generate(llm_prompt)</code></pre>
+
+<p>这种方法将技能路由转化为可扩展的检索问题，是高级Agent研究中广泛使用的技术。</p>
+
+<h2>结论</h2>
+
+<p>随着Agent技能集不断扩展，将技能路由视为一个<em>检索和语义匹配的挑战</em>。通过优化描述、分层技能、添加负样本和实施召回重排序，你将确保你的Agent始终选择正确的技能——即使有数百个选项。这些策略不仅仅是理论上的，它们已经在工业级AI开发中得到实战验证，将使你的Agent（以及你的技术面试）脱颖而出。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">现代AI开发中Agent、Skill和Harness的实用解释 &rarr;</a></p>
+</div>`,
+  },
+
+  "connect-deepseek-to-claude-code": {
+    content: `<h2>1. Pre-Deployment Preparation Work</h2>
+
+<h3>1.1 Apply DeepSeek Official API Credentials</h3>
+
+<p>Visit DeepSeek's official developer portal to register an account, create API keys for DeepSeek-V4 series models. Store the generated API key securely; avoid hardcoding keys directly inside project source files for security compliance.</p>
+
+<h3>1.2 Install Dependent Runtime Environment</h3>
+
+<p>Ensure your local machine has Python and Claude Code client pre-installed. Run terminal installation commands for dependency packages required for API forwarding:</p>
+
+<pre><code class="language-bash">pip install openai python-dotenv requests</code></pre>
+
+<p>Create a project folder and enter the working directory:</p>
+
+<pre><code class="language-bash">mkdir claude-deepseek-bridge && cd claude-deepseek-bridge</code></pre>
+
+<h2>2. Build Custom API Forward Bridge (Core Step)</h2>
+
+<p>DeepSeek follows OpenAI-compatible API request format, build a lightweight middleware script to connect Claude Code with DeepSeek backend. Create <code>.env</code> environment configuration file first to save sensitive credentials:</p>
+
+<pre><code class="language-env">DEEPSEEK_API_KEY=your_deepseek_api_key_here
+DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
+TARGET_MODEL=deepseek-v4</code></pre>
+
+<p>Create <code>deepseek_bridge.py</code> forwarding script to unify request format matching Claude Code calling specification:</p>
+
+<pre><code class="language-python">import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+
+def get_deepseek_client():
+    client = OpenAI(
+        api_key=os.getenv("DEEPSEEK_API_KEY"),
+        base_url=os.getenv("DEEPSEEK_BASE_URL")
+    )
+    return client
+
+def llm_call(prompt, temperature=0.1):
+    client = get_deepseek_client()
+    res = client.chat.completions.create(
+        model=os.getenv("TARGET_MODEL"),
+        messages=[{"role":"user","content":prompt}],
+        temperature=temperature
+    )
+    return res.choices[0].message.content</code></pre>
+
+<h2>3. Configure Claude Code Custom Model Source</h2>
+
+<p>Open Claude Code configuration panel, select custom model access option, fill in local bridge service address or remote API entry. Two configuration modes for different development scenarios:</p>
+
+<h3>Mode 1: Local Runtime Connection</h3>
+
+<p>Start local bridge service via terminal:</p>
+
+<pre><code class="language-bash">python deepseek_bridge.py</code></pre>
+
+<p>In Claude Code settings, add custom model endpoint: <code>http://127.0.0.1:5000/v1</code> and bind pre-set DeepSeek model name.</p>
+
+<h3>Mode 2: Remote Server Deployment</h3>
+
+<p>Deploy bridge script to your overseas cloud VPS, open corresponding firewall port, input public network URL into Claude Code remote model configuration.</p>
+
+<h2>4. Parameter Optimization for Code Scenarios</h2>
+
+<p>Adjust generation hyperparameters inside Claude Code workspace configuration to fit programming development:</p>
+
+<ul>
+<li>Temperature set between 0.05~0.2 to reduce random output and stabilize code syntax;</li>
+<li>Max context length aligned with DeepSeek's native long-text limit to support full-project file reading.</li>
+</ul>
+
+<p>Sample configuration snippet saved as <code>workspace.config.json</code>:</p>
+
+<pre><code class="language-json">{
+  "model": "deepseek-v4",
+  "temperature": 0.1,
+  "max_tokens": 8192,
+  "stream": true
+}</code></pre>
+
+<h2>5. Functional Verification Test</h2>
+
+<p>Run a practical coding task inside Claude Code to verify successful docking, test command:</p>
+
+<pre><code class="language-text">Generate a complete Flask backend user login interface with parameter verification and exception capture, output standard Python code.</code></pre>
+
+<p>If DeepSeek returns structured executable code without formatting chaos, the entire access process is finished normally.</p>
+
+<h2>6. Practical Business Advantages for Overseas Developers</h2>
+
+<ol>
+<li><strong>Cost Control</strong>: DeepSeek's billing price is far lower than mainstream closed-source models, effectively lowering monthly API expenditure for long-term development;</li>
+<li><strong>Flexible Switching</strong>: Modify <code>TARGET_MODEL</code> field in <code>.env</code> to switch between DeepSeek coding model and general chat model without altering Claude Code overall configuration;</li>
+<li><strong>Compliance Friendly</strong>: Cloud API access avoids local large-model hardware deployment cost, applicable for small overseas independent teams and solo developers.</li>
+</ol>
+
+<h2>Common Troubleshooting Tips</h2>
+
+<ul>
+<li>API request failure: Double-check API key validity and base URL spelling, confirm account balance on DeepSeek backend;</li>
+<li>Slow response speed: Switch to nearby regional API access node provided by DeepSeek official;</li>
+<li>Code format disorder: Lower temperature value in configuration file and restart Claude Code workspace.</li>
+</ul>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/deepseek-v4-cost-effective">DeepSeek V4: The Cost-Effective King of AI Models for Developers &rarr;</a></p>
+</div>`,
+    contentZh: `<p>在AI开发工具日益多样化的今天，将不同模型和工具组合使用已成为提升开发效率的关键策略。DeepSeek凭借其极高的性价比和出色的编码能力，成为越来越多海外开发者的首选模型。而Claude Code作为Anthropic推出的命令行AI编程工具，提供了强大的代码生成、项目管理和自动化能力。将两者无缝集成，你可以在享受DeepSeek经济实惠API价格的同时，获得Claude Code便捷高效的开发体验。本文将通过详细的步骤和代码示例，带你一步步完成这个集成过程。</p>
+
+<h2>1. 部署前的准备工作</h2>
+
+<h3>1.1 申请DeepSeek官方API凭证</h3>
+
+<p>访问DeepSeek官方开发者门户注册账号，为DeepSeek-V4系列模型创建API密钥。请妥善保存生成的API密钥，出于安全合规考虑，避免将密钥直接硬编码在项目源代码中。</p>
+
+<h3>1.2 安装依赖运行时环境</h3>
+
+<p>确保本地机器已预装Python和Claude Code客户端。运行终端命令安装API转发所需的依赖包：</p>
+
+<pre><code class="language-bash">pip install openai python-dotenv requests</code></pre>
+
+<p>创建项目文件夹并进入工作目录：</p>
+
+<pre><code class="language-bash">mkdir claude-deepseek-bridge && cd claude-deepseek-bridge</code></pre>
+
+<h2>2. 构建自定义API转发桥（核心步骤）</h2>
+
+<p>DeepSeek采用与OpenAI兼容的API请求格式，构建一个轻量级中间件脚本将Claude Code与DeepSeek后端连接起来。首先创建<code>.env</code>环境配置文件来保存敏感凭证：</p>
+
+<pre><code class="language-env">DEEPSEEK_API_KEY=your_deepseek_api_key_here
+DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
+TARGET_MODEL=deepseek-v4</code></pre>
+
+<p>创建<code>deepseek_bridge.py</code>转发脚本，统一请求格式以匹配Claude Code调用规范：</p>
+
+<pre><code class="language-python">import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+
+def get_deepseek_client():
+    client = OpenAI(
+        api_key=os.getenv("DEEPSEEK_API_KEY"),
+        base_url=os.getenv("DEEPSEEK_BASE_URL")
+    )
+    return client
+
+def llm_call(prompt, temperature=0.1):
+    client = get_deepseek_client()
+    res = client.chat.completions.create(
+        model=os.getenv("TARGET_MODEL"),
+        messages=[{"role":"user","content":prompt}],
+        temperature=temperature
+    )
+    return res.choices[0].message.content</code></pre>
+
+<h2>3. 配置Claude Code自定义模型源</h2>
+
+<p>打开Claude Code配置面板，选择自定义模型接入选项，填写本地桥接服务地址或远程API入口。针对不同的开发场景有两种配置模式：</p>
+
+<h3>模式1：本地运行连接</h3>
+
+<p>通过终端启动本地桥接服务：</p>
+
+<pre><code class="language-bash">python deepseek_bridge.py</code></pre>
+
+<p>在Claude Code设置中添加自定义模型端点：<code>http://127.0.0.1:5000/v1</code>并绑定预设的DeepSeek模型名称。</p>
+
+<h3>模式2：远程服务器部署</h3>
+
+<p>将桥接脚本部署到你的海外云VPS，开放相应的防火墙端口，将公网URL输入到Claude Code远程模型配置中。</p>
+
+<h2>4. 编码场景的参数优化</h2>
+
+<p>在Claude Code工作区配置中调整生成超参数以适配编程开发：</p>
+
+<ul>
+<li>Temperature设置在0.05~0.2之间，减少随机输出，稳定代码语法；</li>
+<li>最大上下文长度与DeepSeek原生长文本限制对齐，支持完整项目文件读取。</li>
+</ul>
+
+<p>示例配置片段保存为<code>workspace.config.json</code>：</p>
+
+<pre><code class="language-json">{
+  "model": "deepseek-v4",
+  "temperature": 0.1,
+  "max_tokens": 8192,
+  "stream": true
+}</code></pre>
+
+<h2>5. 功能验证测试</h2>
+
+<p>在Claude Code中运行一个实际的编码任务来验证是否成功对接，测试命令：</p>
+
+<pre><code class="language-text">生成一个完整的Flask后端用户登录接口，包含参数验证和异常捕获，输出标准Python代码。</code></pre>
+
+<p>如果DeepSeek返回结构化的可执行代码且没有格式混乱，说明整个接入过程正常完成。</p>
+
+<h2>6. 面向海外开发者的实际商业优势</h2>
+
+<ol>
+<li><strong>成本控制</strong>：DeepSeek的计费价格远低于主流闭源模型，以DeepSeek V4为例，其API调用成本仅为Claude的七分之一、GPT-5.5 Pro的四十分之一，有效降低长期开发的月度API支出；</li>
+<li><strong>灵活切换</strong>：修改<code>.env</code>中的<code>TARGET_MODEL</code>字段即可在DeepSeek编程模型和通用聊天模型间切换，无需改动Claude Code整体配置，切换过程仅需几秒钟；</li>
+<li><strong>合规友好</strong>：云端API访问避免了本地大模型硬件部署成本（通常需要数千美元的GPU投资），适用于小型海外独立团队和单人开发者，无需承担高昂的硬件投入。</li>
+</ol>
+
+<h2>常见故障排查</h2>
+
+<ul>
+<li>API请求失败：双重检查API密钥有效性和Base URL拼写，确认DeepSeek后台账户余额充足；</li>
+<li>响应速度慢：切换到DeepSeek官方提供的就近区域API接入节点；</li>
+<li>代码格式混乱：降低配置文件中的temperature值并重启Claude Code工作区。</li>
+</ul>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/deepseek-v4-cost-effective">DeepSeek V4：开发者性价比最高的AI模型 &rarr;</a></p>
+</div>`,
+  },
+
+  "claude-code-9-skill-framework": {
+    content: `<h2>1. Awareness: Laying the Foundation for AI Understanding</h2>
+
+<p>The awareness phase is all about ensuring Claude Code "understands" your system, data, and troubleshooting protocols.</p>
+
+<h3>Internal Library &amp; API Documentation</h3>
+
+<p>Teams often struggle with Claude Code's lack of context about internal tools. To address this, create a Skill that documents:</p>
+
+<ul>
+<li>Internal library usage (e.g., proprietary SDKs).</li>
+<li>API endpoints, including authentication and edge cases.</li>
+<li>Unwritten "gotchas" (e.g., performance quirks in a payment processing module).</li>
+</ul>
+
+<p><em>Example Prompt for Claude:</em></p>
+
+<pre><code class="language-text">You are an expert on our internal analytics SDK. Explain how to track user behavior across web and mobile, including handling session timeouts and batch data uploads.</code></pre>
+
+<h3>Data Retrieval &amp; Analysis</h3>
+
+<p>Claude Code needs clear guidance on accessing and analyzing data. Build a Skill that includes:</p>
+
+<ul>
+<li>Data source credentials (e.g., database URLs, API keys).</li>
+<li>Query templates (e.g., SQL for user retention, Python for cohort analysis).</li>
+<li>Tool integrations (e.g., connecting to Looker or Tableau).</li>
+</ul>
+
+<p><em>Example Command for Data Extraction:</em></p>
+
+<pre><code class="language-python"># Skill: Fetch user churn data from Redshift
+import redshift_connector
+
+def get_churn_data(start_date, end_date):
+    conn = redshift_connector.connect(
+        host='your-redshift-cluster.amazonaws.com',
+        database='analytics',
+        user='your_user',
+        password='your_password'
+    )
+    cursor = conn.cursor()
+    cursor.execute(f'''
+        SELECT user_id, churn_date
+        FROM churn_metrics
+        WHERE churn_date BETWEEN '{start_date}' AND '{end_date}'
+    ''')
+    return cursor.fetchall()</code></pre>
+
+<h3>Troubleshooting Playbooks</h3>
+
+<p>When issues arise, Claude Code should act as a first responder. Create a Skill with:</p>
+
+<ul>
+<li>Error code mappings (e.g., <code>ERR_PAYMENT_FAILED</code> &rarr; "Check Stripe webhook logs").</li>
+<li>Log retrieval steps (e.g., how to pull AWS CloudWatch logs for a specific service).</li>
+<li>Escalation paths (e.g., when to involve the SRE team).</li>
+</ul>
+
+<p><em>Example Troubleshooting Flow:</em></p>
+
+<pre><code class="language-text">Skill: Debugging API Timeouts
+1. Retrieve the request ID from the user's error message.
+2. Query CloudWatch Logs for that request ID:
+   aws logs filter-log-events --log-group-name /aws/apigateway/your-api --filter-pattern "RequestId=\\"{request_id}\\""
+3. Identify latency bottlenecks (e.g., database queries taking &gt;500ms).
+4. Suggest optimizations (e.g., adding an index or caching response).</code></pre>
+
+<h2>2. Production: Scaling AI-Driven Outputs</h2>
+
+<p>In the production phase, the goal is to standardize and automate Claude Code's deliverables.</p>
+
+<h3>Code Scaffolding &amp; Templates</h3>
+
+<p>To ensure consistency, build Skills for project templates and boilerplates:</p>
+
+<ul>
+<li>Frontend component templates (e.g., React hooks for form handling).</li>
+<li>Backend service skeletons (e.g., Node.js Express API with authentication).</li>
+<li>Migration scripts (e.g., Django database migrations).</li>
+</ul>
+
+<p><em>Example Command to Generate a React Component:</em></p>
+
+<pre><code class="language-bash"># Skill: Create a reusable React form component
+npx create-react-component FormWithValidation --template=typescript --include=hooks,validation</code></pre>
+
+<h3>Business Process &amp; Team Automation</h3>
+
+<p>Automate repetitive workflows to free up engineering time:</p>
+
+<ul>
+<li>Meeting note summarization (e.g., parsing Slack huddles into Jira tickets).</li>
+<li>Release checklists (e.g., "Run smoke tests, then trigger GitHub Actions deployment").</li>
+<li>Incident reporting (e.g., generating a post-mortem template).</li>
+</ul>
+
+<p><em>Example Script for Incident Reporting:</em></p>
+
+<pre><code class="language-python"># Skill: Generate incident post-mortem
+def create_incident_report(incident_id, timeline, root_cause, actions):
+    report = f'''
+    ## Incident {incident_id} Post-Mortem
+    - **Timeline**: {timeline}
+    - **Root Cause**: {root_cause}
+    - **Remediation Actions**:
+    {''.join([f'- {action}\\n' for action in actions])}
+    '''
+    return report
+
+# Usage
+print(create_incident_report("INC-123", "2026-04-21 10:00-12:00", "Database connection leak", ["Patch connection pool settings", "Add monitoring for connection counts"]))</code></pre>
+
+<h2>3. Validation: Ensuring Quality &amp; Reliability</h2>
+
+<p>Validation ensures Claude Code's outputs are not just functional but robust.</p>
+
+<h3>Code Quality &amp; Review</h3>
+
+<p>Build Skills to enforce code standards and catch issues early:</p>
+
+<ul>
+<li>Linting rules (e.g., ESLint for JavaScript, PyLint for Python).</li>
+<li>Security scans (e.g., checking for SQL injection in backend code).</li>
+<li>Peer review checklists (e.g., "Does this PR include unit tests?").</li>
+</ul>
+
+<p><em>Example Command for Adversarial Code Review:</em></p>
+
+<pre><code class="language-bash"># Skill: Run adversarial review on a PR
+npx code-review --pr=123 --mode=adversarial --checks=security,performance,tests</code></pre>
+
+<h3>Product Validation</h3>
+
+<p>Go beyond code and validate real-world functionality:</p>
+
+<ul>
+<li>End-to-end testing scripts (e.g., Cypress for frontend flows).</li>
+<li>API contract tests (e.g., Pact for microservice interactions).</li>
+<li>Video recording of test runs (to verify UI behavior).</li>
+</ul>
+
+<p><em>Example Cypress Test for User Onboarding:</em></p>
+
+<pre><code class="language-javascript">// Skill: Validate onboarding flow
+describe('User Onboarding', () => {
+  it('completes sign-up and profile setup', () => {
+    cy.visit('/signup')
+    cy.get('[data-testid=email-input]').type('test@example.com')
+    cy.get('[data-testid=password-input]').type('securePass123')
+    cy.get('[data-testid=submit-button]').click()
+    cy.url().should('include', '/profile')
+    cy.get('[data-testid=profile-name]').type('John Doe')
+    cy.get('[data-testid=save-profile]').click()
+    cy.contains('Profile saved successfully')
+  })
+})</code></pre>
+
+<h2>4. Delivery: Shipping &amp; Maintaining AI-Built Work</h2>
+
+<p>The delivery phase focuses on getting work into production and keeping it running.</p>
+
+<h3>Continuous Integration &amp; Deployment</h3>
+
+<p>Automate the path from code to production:</p>
+
+<ul>
+<li>CI/CD pipeline configurations (e.g., GitHub Actions for Node.js).</li>
+<li>Deployment scripts (e.g., AWS CDK for infrastructure).</li>
+<li>Rollback procedures (e.g., "Revert to previous ECS task definition").</li>
+</ul>
+
+<p><em>Example GitHub Actions Workflow:</em></p>
+
+<pre><code class="language-yaml"># Skill: Deploy to staging on PR approval
+name: Staging Deployment
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: \${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: \${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - run: npm ci && npm run build
+      - run: aws s3 sync dist/ s3://your-staging-bucket</code></pre>
+
+<h3>Infrastructure Operations</h3>
+
+<p>Manage production environments with confidence:</p>
+
+<ul>
+<li>Resource provisioning (e.g., Terraform for AWS resources).</li>
+<li>Scaling workflows (e.g., "Scale ECS service to 3 tasks during peak hours").</li>
+<li>Incident response (e.g., "Restart Redis cluster and clear cache").</li>
+</ul>
+
+<p><em>Example Terraform for Database Provisioning:</em></p>
+
+<pre><code class="language-hcl"># Skill: Provision a PostgreSQL database
+resource "aws_db_instance" "app_db" {
+  identifier           = "app-db"
+  engine               = "postgres"
+  instance_class       = "db.t3.small"
+  username             = "db_admin"
+  password             = var.db_password
+  allocated_storage    = 20
+  skip_final_snapshot  = true
+  deletion_protection  = false
+}</code></pre>
+
+<h2>Why This Framework Matters for Your Team</h2>
+
+<p>By mapping your team's capabilities to these 9 skills, you can:</p>
+
+<ul>
+<li><strong>Identify gaps</strong>: See where tribal knowledge still lives in engineers' heads (e.g., no formalized troubleshooting playbook).</li>
+<li><strong>Boost efficiency</strong>: Automate repetitive tasks, so Claude Code handles grunt work while engineers focus on innovation.</li>
+<li><strong>Reduce risk</strong>: Rigorous validation and deployment processes ensure AI-built code is production-ready.</li>
+</ul>
+
+<p>Start by auditing your team against each skill category. For every gap, create an actionable Skill (using code, scripts, or prompts) and watch as Claude Code transforms from a tool into a true extension of your engineering team.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/8-game-changing-claude-code-skills">8 Game-Changing Skills of Claude Code to Transform You into an All-Round Creative Team &rarr;</a></p>
+</div>`,
+    contentZh: `<h2>1. 认知阶段：为AI理解奠定基础</h2>
+
+<p>认知阶段的核心是确保Claude Code"理解"你的系统、数据和故障排查协议。</p>
+
+<h3>内部库与API文档</h3>
+
+<p>团队常常面临Claude Code缺乏内部工具上下文的问题。为解决这个问题，创建一个记录以下内容的技能：</p>
+
+<ul>
+<li>内部库的使用方法（如专有SDK）。</li>
+<li>API端点，包括认证和边界情况。</li>
+<li>未文档化的"坑"（如支付处理模块的性能问题）。</li>
+</ul>
+
+<p><em>给Claude的示例提示词：</em></p>
+
+<pre><code class="language-text">你是我们内部分析SDK的专家。解释如何在Web和移动端跟踪用户行为，包括处理会话超时和批量数据上传。</code></pre>
+
+<h3>数据检索与分析</h3>
+
+<p>Claude Code需要清晰的访问和分析数据指导。构建一个包含以下内容的技能：</p>
+
+<ul>
+<li>数据源凭证（如数据库URL、API密钥）。</li>
+<li>查询模板（如用户留存SQL、群组分析Python代码）。</li>
+<li>工具集成（如连接Looker或Tableau）。</li>
+</ul>
+
+<p><em>数据提取示例命令：</em></p>
+
+<pre><code class="language-python"># 技能：从Redshift获取用户流失数据
+import redshift_connector
+
+def get_churn_data(start_date, end_date):
+    conn = redshift_connector.connect(
+        host='your-redshift-cluster.amazonaws.com',
+        database='analytics',
+        user='your_user',
+        password='your_password'
+    )
+    cursor = conn.cursor()
+    cursor.execute(f'''
+        SELECT user_id, churn_date
+        FROM churn_metrics
+        WHERE churn_date BETWEEN '{start_date}' AND '{end_date}'
+    ''')
+    return cursor.fetchall()</code></pre>
+
+<h3>故障排查手册</h3>
+
+<p>当问题出现时，Claude Code应该充当第一响应者。创建一个包含以下内容的技能：</p>
+
+<ul>
+<li>错误代码映射（如<code>ERR_PAYMENT_FAILED</code> &rarr; "检查Stripe Webhook日志"）。</li>
+<li>日志检索步骤（如如何获取特定服务的AWS CloudWatch日志）。</li>
+<li>升级路径（如何时需要联系SRE团队）。</li>
+</ul>
+
+<p><em>故障排查流程示例：</em></p>
+
+<pre><code class="language-text">技能：调试API超时
+1. 从用户的错误消息中获取请求ID。
+2. 在CloudWatch Logs中查询该请求ID：
+   aws logs filter-log-events --log-group-name /aws/apigateway/your-api --filter-pattern "RequestId=\\"{request_id}\\""
+3. 识别延迟瓶颈（如数据库查询超过500ms）。
+4. 建议优化方案（如添加索引或缓存响应）。</code></pre>
+
+<h2>2. 生产阶段：规模化AI驱动的输出</h2>
+
+<p>在生产阶段，目标是标准化和自动化Claude Code的交付物。</p>
+
+<h3>代码脚手架与模板</h3>
+
+<p>为确保一致性，为项目模板和样板代码构建技能：</p>
+
+<ul>
+<li>前端组件模板（如用于表单处理的React Hooks）。</li>
+<li>后端服务骨架（如带有认证的Node.js Express API）。</li>
+<li>迁移脚本（如Django数据库迁移）。</li>
+</ul>
+
+<p><em>生成React组件的示例命令：</em></p>
+
+<pre><code class="language-bash"># 技能：创建可复用的React表单组件
+npx create-react-component FormWithValidation --template=typescript --include=hooks,validation</code></pre>
+
+<h3>业务流程与团队自动化</h3>
+
+<p>自动化重复性工作流以释放工程时间：</p>
+
+<ul>
+<li>会议纪要总结（如将Slack讨论解析为Jira任务）。</li>
+<li>发布检查清单（如"运行冒烟测试，然后触发GitHub Actions部署"）。</li>
+<li>事故报告（如生成事后复盘模板）。</li>
+</ul>
+
+<p><em>事故报告示例脚本：</em></p>
+
+<pre><code class="language-python"># 技能：生成事故事后复盘报告
+def create_incident_report(incident_id, timeline, root_cause, actions):
+    report = f'''
+    ## 事故 {incident_id} 事后复盘
+    - **时间线**：{timeline}
+    - **根因**：{root_cause}
+    - **修复措施**：
+    {''.join([f'- {action}\\n' for action in actions])}
+    '''
+    return report
+
+# 使用示例
+print(create_incident_report("INC-123", "2026-04-21 10:00-12:00", "数据库连接泄漏", ["修复连接池设置", "添加连接数监控"]))</code></pre>
+
+<h2>3. 验证阶段：确保质量与可靠性</h2>
+
+<p>验证确保Claude Code的输出不仅功能正常，而且健壮可靠。</p>
+
+<h3>代码质量与审查</h3>
+
+<p>构建技能来强制执行代码标准并及早发现问题：</p>
+
+<ul>
+<li>代码检查规则（如JavaScript的ESLint、Python的PyLint）。</li>
+<li>安全扫描（如检查后端代码中的SQL注入）。</li>
+<li>同行评审检查清单（如"这个PR包含单元测试吗？"）。</li>
+</ul>
+
+<p><em>对抗性代码审查示例命令：</em></p>
+
+<pre><code class="language-bash"># 技能：对PR运行对抗性审查
+npx code-review --pr=123 --mode=adversarial --checks=security,performance,tests</code></pre>
+
+<h3>产品验证</h3>
+
+<p>超越代码层面，验证真实世界的功能：</p>
+
+<ul>
+<li>端到端测试脚本（如用于前端流程的Cypress）。</li>
+<li>API契约测试（如用于微服务交互的Pact）。</li>
+<li>测试运行视频录制（验证UI行为）。</li>
+</ul>
+
+<p><em>用户引导流程的Cypress测试示例：</em></p>
+
+<pre><code class="language-javascript">// 技能：验证用户引导流程
+describe('用户注册引导', () => {
+  it('完成注册和资料设置', () => {
+    cy.visit('/signup')
+    cy.get('[data-testid=email-input]').type('test@example.com')
+    cy.get('[data-testid=password-input]').type('securePass123')
+    cy.get('[data-testid=submit-button]').click()
+    cy.url().should('include', '/profile')
+    cy.get('[data-testid=profile-name]').type('John Doe')
+    cy.get('[data-testid=save-profile]').click()
+    cy.contains('个人资料保存成功')
+  })
+})</code></pre>
+
+<h2>4. 交付阶段：发布与维护AI构建的成果</h2>
+
+<p>交付阶段专注于将成果投入生产并保持其稳定运行。</p>
+
+<h3>持续集成与部署</h3>
+
+<p>自动化从代码到生产的路径：</p>
+
+<ul>
+<li>CI/CD流水线配置（如Node.js的GitHub Actions）。</li>
+<li>部署脚本（如基础设施的AWS CDK）。</li>
+<li>回滚流程（如"恢复到之前的ECS任务定义"）。</li>
+</ul>
+
+<p><em>GitHub Actions工作流示例：</em></p>
+
+<pre><code class="language-yaml"># 技能：PR审批后部署到预发布环境
+name: 预发布部署
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: \${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: \${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - run: npm ci && npm run build
+      - run: aws s3 sync dist/ s3://your-staging-bucket</code></pre>
+
+<h3>基础设施运营</h3>
+
+<p>自信地管理生产环境：</p>
+
+<ul>
+<li>资源预配（如用于AWS资源的Terraform）。</li>
+<li>扩容工作流（如"高峰期将ECS服务扩至3个任务"）。</li>
+<li>事故响应（如"重启Redis集群并清除缓存"）。</li>
+</ul>
+
+<p><em>数据库预配的Terraform示例：</em></p>
+
+<pre><code class="language-hcl"># 技能：预配PostgreSQL数据库
+resource "aws_db_instance" "app_db" {
+  identifier           = "app-db"
+  engine               = "postgres"
+  instance_class       = "db.t3.small"
+  username             = "db_admin"
+  password             = var.db_password
+  allocated_storage    = 20
+  skip_final_snapshot  = true
+  deletion_protection  = false
+}</code></pre>
+
+<h2>为什么这个框架对你的团队很重要</h2>
+
+<p>通过将团队的能力映射到这9个技能，你可以：</p>
+
+<ul>
+<li><strong>发现差距</strong>：看到哪些团队经验仍然只存在于工程师的头脑中（如没有正式的故障排查手册）。</li>
+<li><strong>提升效率</strong>：自动化重复性任务，让Claude Code处理基础工作，工程师专注于创新。</li>
+<li><strong>降低风险</strong>：严格的验证和部署流程确保AI构建的代码达到生产级质量。</li>
+</ul>
+
+<p>从对照每个技能类别审计你的团队开始。针对每个差距，创建一个可操作的技能（使用代码、脚本或提示词），然后看着Claude Code从一个工具转变为你工程团队真正的延伸。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/8-game-changing-claude-code-skills">8个改变游戏规则的Claude Code技能，将你转变为全能创意团队 &rarr;</a></p>
+</div>`,
+  },
 };
