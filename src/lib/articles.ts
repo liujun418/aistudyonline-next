@@ -1464,4 +1464,64 @@ export const articles: Article[] = [
     toolsMentioned: ["claude"],
     date: "2026-06-03",
   },
+
+  {
+    slug: "design-md-trae-framework-guide",
+    title: "Elevate AI Design Aesthetics with DESIGN.md: A Practical Guide for TRAE Framework",
+    titleZh: "用DESIGN.md提升AI设计美学：TRAE框架实战指南",
+    description:
+      "Learn how to use DESIGN.md and the frontend-design skill to transform AI-generated interfaces from generic to polished with the TRAE framework.",
+    descriptionZh:
+      "学习如何使用DESIGN.md和前端设计技能，借助TRAE框架将AI生成的界面从千篇一律转变为精致专业。",
+    category: "ai-tutorials",
+    tags: ["design", "trae", "design-md", "frontend-design", "ai-design", "tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "cursor"],
+    date: "2026-06-04",
+  },
+
+  {
+    slug: "free-access-codex-hermes-guide",
+    title: "Free Access to Codex, Hermes, and More: A Practical Guide for Overseas Users",
+    titleZh: "免费使用Codex、Hermes等AI工具：海外用户实用指南",
+    description:
+      "A practical guide to accessing Codex, Hermes, and more AI tools for free using the Agnes API. Step-by-step setup for overseas website owners.",
+    descriptionZh:
+      "使用Agnes API免费访问Codex、Hermes等AI工具的实用指南。面向海外网站拥有者的分步设置教程。",
+    category: "ai-tutorials",
+    tags: ["codex", "hermes", "agnes", "free-ai", "api", "overseas"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex-agent", "hermes-agent"],
+    date: "2026-06-04",
+  },
+
+  {
+    slug: "mastering-cc-switch-ai-coding",
+    title: "Mastering CC Switch: The Ultimate Tool for Managing AI Coding Tools",
+    titleZh: "掌握CC Switch：管理AI编程工具的终极利器",
+    description:
+      "A complete guide to CC Switch, the cross-platform desktop app for managing multiple AI coding tools like Claude Code, Codex, and Gemini CLI.",
+    descriptionZh:
+      "CC Switch完整指南，这是一款跨平台桌面应用，用于统一管理Claude Code、Codex和Gemini CLI等多个AI编程工具。",
+    category: "ai-tools",
+    tags: ["cc-switch", "ai-coding", "tool-management", "claude-code", "codex", "gemini"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-04",
+  },
+
+  {
+    slug: "vibecoding-workflow-110k-stars",
+    title: "Vibecoding Workflow: The 110K Star Open-Source Tool for AI-Powered Coding",
+    titleZh: "Vibecoding工作流：11万星标的AI编程开源工具",
+    description:
+      "Explore Vibecoding, the 110K+ GitHub star open-source workflow with 28 agents, 125 skills, and 60 commands for supercharging AI-powered development.",
+    descriptionZh:
+      "探索Vibecoding——拥有11万+GitHub星标的开源AI编程工作流，包含28个代理、125项技能和60个命令，为AI驱动开发加速。",
+    category: "ai-tools",
+    tags: ["vibecoding", "open-source", "ai-coding", "agents", "skills", "workflow"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-04",
+  },
 ];

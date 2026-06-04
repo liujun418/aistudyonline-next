@@ -22757,4 +22757,924 @@ resource "aws_db_instance" "app_db" {
 <p><strong>下一篇：</strong> <a href="/article/8-game-changing-claude-code-skills">8个改变游戏规则的Claude Code技能，将你转变为全能创意团队 &rarr;</a></p>
 </div>`,
   },
+
+
+  // ====== design-md-trae-framework-guide ======
+  "design-md-trae-framework-guide": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Design Tutorial · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> How to use DESIGN.md and the frontend-design skill to transform AI-generated interfaces from generic to polished with the TRAE framework.</p>
+</div>
+
+<p>In the realm of AI-driven development, one persistent shortcoming is often observed in <strong>aesthetics and design</strong>. AI models, when lacking clear directives, tend to fall back on default preferences, resulting in homogenized interfaces that feel disjointed in vision and interaction. The solution? <strong>Design First, Deliver Later</strong>. This article walks through a practical case study using the TRAE intelligent agent framework to create a vocabulary learning app for junior high school students, demonstrating how to leverage <code>DESIGN.md</code> and design skills to transform AI-generated designs.</p>
+
+<h2>The Problem: AI's Design Limitations</h2>
+
+<p>AI-generated UIs often suffer from:</p>
+
+<ul>
+<li><strong>Homogeneity</strong>: Over-reliance on default styles (e.g., Tailwind CSS's default purple-blue gradient).</li>
+<li><strong>Lack of Cohesion</strong>: Inconsistent visual language and broken interaction flows.</li>
+<li><strong>Cheap Aesthetics</strong>: Generic components and uninspired color palettes.</li>
+</ul>
+
+<p>This happens because AI, without explicit guidance, defaults to safe, overused design patterns.</p>
+
+<h2>Solution: Design First with DESIGN.md and Skills</h2>
+
+<p>To break free from this "AI look," adopt a two-step approach:</p>
+
+<ol>
+<li><strong>Frontend-Design Skill</strong>: Constrains AI to avoid cookie-cutter layouts and pushes for bold, distinctive designs.</li>
+<li><strong>DESIGN.md</strong>: A design specification document that defines global styles, component rules, color schemes, typography, spacing, and interaction guidelines.</li>
+</ol>
+
+<h2>Step 1: Choose the Framework and Define the Project</h2>
+
+<p>Use the <strong>TRAE</strong> framework (beginner-friendly) and set out to build a lightweight vocabulary review app for junior high school students.</p>
+
+<h3>Common Mistakes in Round 1 (Without Design Guardrails)</h3>
+
+<ul>
+<li>No defined design system.</li>
+<li>No design skill employed.</li>
+<li>Vague style prompts (e.g., "make it cute and minimal").</li>
+</ul>
+
+<p>The result? A functional but disjointed app with basic but inconsistent layout, confusing interactions, and generic color schemes.</p>
+
+<h2>Step 2: Implement Design Safeguards in Round 2</h2>
+
+<h3>Install the Frontend-Design Skill</h3>
+
+<p>First, install the <code>frontend-design</code> skill. In most agent frameworks, this is as simple as:</p>
+
+<pre><code class="language-plaintext"># Example command to install in TRAE
+trae install skill frontend-design
+</code></pre>
+
+<p>This skill forces AI to move beyond template layouts and create unique designs.</p>
+
+<h3>Create or Download DESIGN.md</h3>
+
+<p><code>DESIGN.md</code> acts as a design playbook for AI. You can generate it by chatting with AI (if you have design knowledge) or download pre-made templates from sites like <a href="https://styles.refero.design" target="_blank" rel="noopener">styles.refero.design</a>, which offers thousands of design systems from top websites.</p>
+
+<p>For our vocabulary app, download a template and customize it, defining:</p>
+
+<ul>
+<li><strong>Color Palette</strong>: A cohesive scheme (e.g., earthy greens and neutrals for a calming study app).</li>
+<li><strong>Typography</strong>: Readable fonts and hierarchy.</li>
+<li><strong>Component Rules</strong>: Consistent buttons, cards, and navigation.</li>
+<li><strong>Interaction Guidelines</strong>: Clear feedback, intuitive navigation, and prohibited design choices.</li>
+</ul>
+
+<h3>Integrate DESIGN.md into Your Project</h3>
+
+<p>Most frameworks require referencing DESIGN.md in your prompts or configuration. In TRAE, simply add this to your prompt:</p>
+
+<pre><code class="language-plaintext"># UI DESIGN
+Strictly follow DESIGN.md
+</code></pre>
+
+<h2>Round 2: The Transformed Outcome</h2>
+
+<p>With the <code>frontend-design</code> skill and <code>DESIGN.md</code> in place, the AI-generated app now features:</p>
+
+<ul>
+<li><strong>Unified Visual Language</strong>: Consistent colors, fonts, and components across all pages.</li>
+<li><strong>Polished Interactions</strong>: Intuitive navigation, subtle hover effects, and unobtrusive feedback.</li>
+<li><strong>Professional Aesthetics</strong>: A cohesive look that feels intentional, not generic.</li>
+</ul>
+
+<p><em>Example DESIGN.md structure:</em></p>
+
+<pre><code class="language-markdown"># DESIGN.md - VocabApp
+## Color Palette
+- Primary: #4CAF50 (Green)
+- Secondary: #81C784 (Light Green)
+- Neutral: #F5F5F5 (Off-white)
+- Text: #333333 (Dark Gray)
+
+## Typography
+- Heading: 'Inter', sans-serif, 24px, bold
+- Body: 'Inter', sans-serif, 16px, regular
+- Small Text: 'Inter', sans-serif, 14px, regular
+
+## Components
+- Button: Rounded corners (8px), solid fill, hover effect (scale 1.02)
+- Card: Rounded corners (12px), shadow on hover, padding 16px
+</code></pre>
+
+<h2>Conclusion</h2>
+
+<p>By investing just <strong>1 minute</strong> to install a design skill and <strong>10 minutes</strong> to curate a <code>DESIGN.md</code>, you can transform AI-generated interfaces from generic to polished. This approach ensures your product has a distinct visual identity, free from the "AI look."</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/free-ai-knowledge-base-tool-tutorial">Free AI Knowledge Base Tool Tutorial &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI设计教程 · 难度：中级</p>
+<p><strong>你将学到：</strong>如何使用DESIGN.md和前端设计技能，借助TRAE框架将AI生成的界面从千篇一律转变为精致专业。</p>
+</div>
+
+<p>在AI驱动开发的世界里，一个常见痛点始终困扰着开发者——<strong>美学和设计感</strong>。当缺乏明确指令时，AI模型倾向于使用默认偏好，导致界面千篇一律、视觉混乱且缺乏质感。解决方案是什么？<strong>先设计，后交付</strong>。本文通过TRAE智能代理框架构建初中生词汇学习应用的实际案例，展示如何利用<code>DESIGN.md</code>和设计技能彻底改变AI生成的设计质量。</p>
+
+<h2>问题：AI的设计局限</h2>
+
+<p>AI生成的界面通常存在以下问题：</p>
+
+<ul>
+<li><strong>同质化</strong>：过度依赖默认样式，例如Tailwind CSS默认的紫蓝渐变。</li>
+<li><strong>缺乏连贯性</strong>：视觉语言不一致，交互流程断裂。</li>
+<li><strong>廉价审美</strong>：组件通用化，配色缺乏灵感。</li>
+</ul>
+
+<p>这是因为AI在没有明确指导的情况下，会默认使用安全但过时的设计模式。</p>
+
+<h2>解决方案：用DESIGN.md和技能实现设计优先</h2>
+
+<p>要打破这种"AI风格"，需要采用两步法：</p>
+
+<ol>
+<li><strong>前端设计技能</strong>：约束AI避免模板化布局，推动大胆独特的设计。</li>
+<li><strong>DESIGN.md</strong>：定义全局样式、组件规则、配色方案、排版、间距和交互指南的设计规范文档。</li>
+</ol>
+
+<h2>第一步：选择框架并定义项目</h2>
+
+<p>使用<strong>TRAE</strong>框架，目标是构建一个轻量级的初中生词汇复习应用。</p>
+
+<h3>第一轮常见错误（无设计护栏）</h3>
+
+<ul>
+<li>没有定义设计系统。</li>
+<li>没有使用设计技能。</li>
+<li>风格提示语过于模糊（例如"做得可爱简约"）。</li>
+</ul>
+
+<p>结果如何？应用功能可用但缺乏整体感——布局基础但不一致，交互令人困惑，配色方案过于普通。</p>
+
+<h2>第二步：在第二轮中实施设计保障</h2>
+
+<h3>安装前端设计技能</h3>
+
+<p>安装<code>frontend-design</code>技能非常简单：</p>
+
+<pre><code class="language-plaintext"># 在TRAE中安装技能的命令
+trae install skill frontend-design
+</code></pre>
+
+<p>这个技能强制AI超越模板布局的限制，创造出独特的设计。</p>
+
+<h3>创建或下载DESIGN.md</h3>
+
+<p><code>DESIGN.md</code>充当AI的设计手册。你可以通过与AI对话来生成它，也可以从<a href="https://styles.refero.design" target="_blank" rel="noopener">styles.refero.design</a>等网站下载预制模板，这些网站提供来自顶级网站的数千个设计系统。</p>
+
+<p>为词汇应用下载模板并进行自定义：</p>
+
+<ul>
+<li><strong>配色方案</strong>：统一协调的配色，例如使用大地绿和中性色营造安静的学习氛围。</li>
+<li><strong>排版</strong>：清晰易读的字体和层级结构。</li>
+<li><strong>组件规则</strong>：一致的按钮、卡片和导航设计。</li>
+<li><strong>交互指南</strong>：清晰的反馈、直观的导航和被禁止的设计选择。</li>
+</ul>
+
+<h3>将DESIGN.md整合到项目中</h3>
+
+<p>大多数框架需要在提示语或配置中引用DESIGN.md。在TRAE中，只需在提示语中添加以下内容：</p>
+
+<pre><code class="language-plaintext"># UI设计
+严格遵守DESIGN.md
+</code></pre>
+
+<h2>第二轮：焕然一新的成果</h2>
+
+<p>有了<code>frontend-design</code>技能和<code>DESIGN.md</code>后，AI生成的应用呈现出以下特点：</p>
+
+<ul>
+<li><strong>统一视觉语言</strong>：所有页面的颜色、字体和组件保持一致。</li>
+<li><strong>精致交互</strong>：直观的导航、微妙的悬停效果和不突兀的反馈。</li>
+<li><strong>专业美学</strong>：整体观感精心设计，不显千篇一律。</li>
+</ul>
+
+<p><em>DESIGN.md结构示例：</em></p>
+
+<pre><code class="language-markdown"># DESIGN.md - 词汇应用
+## 配色方案
+- 主色: #4CAF50 (绿色)
+- 辅色: #81C784 (浅绿)
+- 中性色: #F5F5F5 (米白)
+- 文字色: #333333 (深灰)
+
+## 排版
+- 标题: 'Inter', sans-serif, 24px, 粗体
+- 正文: 'Inter', sans-serif, 16px, 常规
+- 小字: 'Inter', sans-serif, 14px, 常规
+
+## 组件
+- 按钮: 圆角(8px), 实心填充, 悬停效果(放大1.02)
+- 卡片: 圆角(12px), 悬停阴影, 内边距16px
+</code></pre>
+
+<h2>总结</h2>
+
+<p>只需花费<strong>1分钟</strong>安装设计技能和<strong>10分钟</strong>整理<code>DESIGN.md</code>，你就能将AI生成的界面从普通变为精致。这种方法确保你的产品拥有独特的视觉识别，彻底摆脱"AI风格"的束缚。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/free-ai-knowledge-base-tool-tutorial">免费AI知识库工具教程 &rarr;</a></p>
+</div>`,
+  },
+
+  // ====== free-access-codex-hermes-guide ======
+  "free-access-codex-hermes-guide": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools Tutorial · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> How to access Codex, Hermes, and more AI tools for free using the Agnes API — perfect for overseas website operators.</p>
+</div>
+
+<p>In the realm of AI tools, accessing powerful resources like Codex and Hermes often comes with costs or restrictions. However, this guide walks through a practical, long-term free method to utilize these tools, perfect for those running overseas websites who need reliable AI capabilities without breaking the bank.</p>
+
+<h2>Leveraging Codex++ and Agnes API</h2>
+
+<p>First, introduce <strong>Codex++</strong>, an open-source tool that allows you to replace the underlying model of Codex. Paired with <strong>Agnes API</strong>, a free offering from a top 10 global AI lab, you can access robust AI capabilities at no cost.</p>
+
+<p>Agnes provides three flagship multimodal models for free:</p>
+
+<ul>
+<li><strong>Text & Agent</strong>: <code>Agnes-2.0-Flash</code></li>
+<li><strong>Image Generation</strong>: <code>Agnes-Image-2.1-Flash</code></li>
+<li><strong>Video Generation</strong>: <code>Agnes-Video-V2.0</code></li>
+</ul>
+
+<p>These models cover text, image, and video generation, making them suitable for a wide range of tasks for overseas websites, such as content creation, product image generation, and more.</p>
+
+<h2>Step-by-Step Setup for Codex++ with Agnes</h2>
+
+<ol>
+<li><p><strong>Get Codex++ from GitHub</strong><br />
+Navigate to the Codex++ repository on GitHub and set it up. This tool acts as a bridge to connect Codex with alternative models.</p></li>
+<li><p><strong>Configure the Supplier in Codex++</strong></p>
+<ul>
+<li>Go to the Codex++ management console.</li>
+<li>In "Supplier Configuration", click "Add".</li>
+<li>Fill in the details:<br />
+- <strong>Name</strong>: Agnes<br />
+- <strong>Access Method</strong>: Pure API<br />
+- <strong>Base URL</strong>: <code>https://apihub.agnes-ai.com/v1</code><br />
+- <strong>API Key</strong>: Generate an API key from the Agnes platform.</li>
+<li>Select "Chat" for the upstream protocol and fetch models from the upstream.</li>
+<li>Save and restart Codex.</li>
+</ul></li>
+<li><p><strong>Test the Configuration</strong><br />
+Open Codex, select <code>agnes-2.0-flash</code> as the model, and send a test message to verify it works.</p></li>
+</ol>
+
+<h2>Building Custom Skills with Playwright CLI</h2>
+
+<p>To extend functionality, create custom skills using Playwright CLI. Here's how to set up a skill for generating images with Agnes-Image-2.1-Flash:</p>
+
+<ol>
+<li><strong>Create a Project Folder</strong>: Make a new folder and open it in the terminal.</li>
+<li><strong>Install Dependencies</strong>:</li>
+</ol>
+
+<pre><code class="language-bash">npm install -g @playwright/cli@latest
+playwright-cli install --skills
+</code></pre>
+
+<ol start="3">
+<li><strong>Configure the Skill Folder</strong>: Rename the folder storing skills from <code>.claude</code> to <code>.codex</code> within your project directory.</li>
+<li><strong>Develop an Image Generation Skill</strong>: Use the Skill Creator in Codex to define a skill that calls the Agnes-Image-2.1-Flash API.</li>
+</ol>
+
+<pre><code class="language-python">import requests
+import json
+import urllib.request
+import urllib.error
+
+# Configuration
+API_KEY = "YOUR_AGNES_API_KEY"  # Replace with your actual API key
+BASE_URL = "https://apihub.agnes-ai.com/v1"
+ENDPOINT = "/images/generations"
+MODEL = "agnes-image-2.1-flash"
+
+def generate_image(prompt, size="1024x1024", image_url=None, save_path=None):
+    payload = {
+        "model": MODEL,
+        "prompt": prompt,
+        "size": size,
+    }
+    if image_url:
+        payload["extra_body"] = {
+            "image_urls": [image_url],
+            "response_format": "url"
+        }
+    data = json.dumps(payload).encode('utf-8')
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {API_KEY}"
+    }
+    response = requests.post(f"{BASE_URL}{ENDPOINT}", headers=headers, data=data)
+    response_data = response.json()
+    if save_path and "data" in response_data:
+        image_url = response_data["data"][0]["url"]
+        urllib.request.urlretrieve(image_url, save_path)
+    return response_data
+</code></pre>
+
+<ol start="5">
+<li><strong>Test the Skill</strong>:</li>
+</ol>
+
+<pre><code class="language-bash">python .codex/skills/agnes-imagegen/script/generate.py --prompt "A futuristic cityscape"
+</code></pre>
+
+<h2>Deploying Hermes Agent with Agnes API</h2>
+
+<p>Hermes Agent is a powerful tool. By integrating it with Agnes API, you can use it for free:</p>
+
+<ol>
+<li><strong>Set Up WSL</strong>: Use WSL as the runtime environment for Hermes.</li>
+<li><strong>Install Hermes Agent</strong>:</li>
+</ol>
+
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+</code></pre>
+
+<ol start="3">
+<li><strong>Configure Agnes API in Hermes</strong>: When prompted, select <code>custom (direct API)</code>, set the API base URL to <code>https://apihub.agnes-ai.com/v1</code>, enter your Agnes API key, choose <code>Chat Completions</code> for the API format, and select <code>agnes-2.0-flash</code> as the model.</li>
+<li><strong>Add a Messaging Channel</strong>:</li>
+</ol>
+
+<pre><code class="language-bash">hermes gateway setup
+</code></pre>
+
+<ol start="5">
+<li><strong>Test Hermes</strong>: Send a message to your Hermes-enabled channel and approve the tool call when prompted.</li>
+</ol>
+
+<h2>Practical Applications for Overseas Websites</h2>
+
+<ul>
+<li><strong>Content Creation</strong>: Use Agnes-Image-2.1-Flash to generate unique images for blog posts or product pages.</li>
+</ul>
+
+<pre><code class="language-bash">python .codex/skills/agnes-imagegen/script/generate.py --prompt "A cute little horse by a river, watercolor style"
+</code></pre>
+
+<ul>
+<li><strong>Automated Tasks</strong>: Deploy Hermes to handle customer inquiries, fetch data, or automate content updates.</li>
+<li><strong>Multimodal Marketing</strong>: Leverage Agnes-Video-V2.0 to create promotional videos for free.</li>
+</ul>
+
+<p>By following this guide, you can harness the power of Codex, Hermes, and Agnes API to enhance your overseas website's functionality without incurring costs.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/codex-agent-desktop-jarvis">Codex Agent: Your Desktop Jarvis &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI工具教程 · 难度：初级</p>
+<p><strong>你将学到：</strong>如何使用Agnes API免费访问Codex、Hermes等AI工具——特别适合海外网站运营者。</p>
+</div>
+
+<p>在AI工具的世界里，访问Codex和Hermes等强大资源通常需要付费或受到限制。不过，本文将介绍一种实用的长期免费方案，特别适合那些需要可靠AI能力但预算有限的海外网站运营者。许多AI工具虽然功能强大，但每月高昂的订阅费用让个人开发者和初创团队望而却步。通过巧妙组合开源工具和免费API，你完全可以构建一套零成本的AI工作流，在出海创业中抢占先机。</p>
+
+<h2>利用Codex++和Agnes API</h2>
+
+<p>首先介绍<strong>Codex++</strong>，这是一个开源工具，允许你替换Codex的底层模型。配合<strong>Agnes API</strong>——全球前十AI实验室的免费服务，你可以免费获得强大的AI能力。Codex++的核心价值在于它打破了模型绑定的限制，让你可以自由切换不同的大语言模型，不再被单一供应商锁定。</p>
+
+<p>Agnes免费提供三个旗舰多模态模型：</p>
+
+<ul>
+<li><strong>文本与代理</strong>：<code>Agnes-2.0-Flash</code></li>
+<li><strong>图像生成</strong>：<code>Agnes-Image-2.1-Flash</code></li>
+<li><strong>视频生成</strong>：<code>Agnes-Video-V2.0</code></li>
+</ul>
+
+<p>这些模型覆盖文本、图像和视频生成，适用于海外网站的广泛任务，包括内容创作、产品图片生成等。三个模型完全免费，没有隐藏收费条目，非常适合预算有限的出海创业者长期使用。</p>
+
+<h2>Codex++对接Agnes的分步设置</h2>
+
+<ol>
+<li><p><strong>从GitHub获取Codex++</strong><br />
+访问Codex++的GitHub仓库并进行设置。该工具充当Codex与替代模型之间的桥梁，让Codex能够调用外部API而非受限的内部模型。</p></li>
+<li><p><strong>在Codex++中配置供应商</strong></p>
+<ul>
+<li>进入Codex++管理控制台。</li>
+<li>在"供应商配置"中点击"添加"。</li>
+<li>填写详细信息：<br />
+- <strong>名称</strong>：Agnes<br />
+- <strong>访问方式</strong>：纯API<br />
+- <strong>基础URL</strong>：<code>https://apihub.agnes-ai.com/v1</code><br />
+- <strong>API密钥</strong>：从Agnes平台生成API密钥</li>
+<li>选择"聊天"作为上游协议，并从上游获取模型。</li>
+<li>保存并重启Codex。</li>
+</ul></li>
+<li><p><strong>测试配置</strong><br />
+打开Codex，选择<code>agnes-2.0-flash</code>作为模型，发送测试消息验证是否正常工作。如果配置正确，你应该能收到与原生Codex类似的回复质量。</p></li>
+</ol>
+
+<h2>用Playwright CLI构建自定义技能</h2>
+
+<p>为了扩展功能，可以使用Playwright CLI创建自定义技能。以下是设置图像生成技能的详细步骤：</p>
+
+<ol>
+<li><strong>创建项目文件夹</strong>：新建一个文件夹并在终端中打开。</li>
+<li><strong>安装依赖</strong>：</li>
+</ol>
+
+<pre><code class="language-bash">npm install -g @playwright/cli@latest
+playwright-cli install --skills
+</code></pre>
+
+<ol start="3">
+<li><strong>配置技能文件夹</strong>：将存储技能的文件夹从<code>.claude</code>重命名为<code>.codex</code>。</li>
+<li><strong>开发图像生成技能</strong>：使用Codex中的技能创建器定义调用Agnes-Image-2.1-Flash API的技能。下面是一个完整的Python脚本示例：</li>
+</ol>
+
+<pre><code class="language-python">import requests
+import json
+import urllib.request
+import urllib.error
+
+# 配置
+API_KEY = "YOUR_AGNES_API_KEY"  # 替换为你的实际API密钥
+BASE_URL = "https://apihub.agnes-ai.com/v1"
+ENDPOINT = "/images/generations"
+MODEL = "agnes-image-2.1-flash"
+
+def generate_image(prompt, size="1024x1024", image_url=None, save_path=None):
+    payload = {
+        "model": MODEL,
+        "prompt": prompt,
+        "size": size,
+    }
+    if image_url:
+        payload["extra_body"] = {
+            "image_urls": [image_url],
+            "response_format": "url"
+        }
+    data = json.dumps(payload).encode('utf-8')
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {API_KEY}"
+    }
+    response = requests.post(f"{BASE_URL}{ENDPOINT}", headers=headers, data=data)
+    response_data = response.json()
+    if save_path and "data" in response_data:
+        image_url = response_data["data"][0]["url"]
+        urllib.request.urlretrieve(image_url, save_path)
+    return response_data
+</code></pre>
+
+<ol start="5">
+<li><strong>测试技能</strong>：</li>
+</ol>
+
+<pre><code class="language-bash">python .codex/skills/agnes-imagegen/script/generate.py --prompt "未来城市景观"
+</code></pre>
+
+<h2>将Hermes Agent与Agnes API集成部署</h2>
+
+<p>Hermes Agent是一个强大的AI代理工具，但其Token消耗量比较大。通过与Agnes API集成，你可以免费使用它并获得完整的代理功能：</p>
+
+<ol>
+<li><strong>设置WSL</strong>：使用WSL作为Hermes的运行环境，确保系统兼容性。</li>
+<li><strong>安装Hermes Agent</strong>：</li>
+</ol>
+
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+</code></pre>
+
+<ol start="3">
+<li><strong>在Hermes中配置Agnes API</strong>：提示时选择<code>custom (direct API)</code>，设置API基础URL为<code>https://apihub.agnes-ai.com/v1</code>，输入Agnes API密钥，选择<code>Chat Completions</code>作为API格式，选择<code>agnes-2.0-flash</code>作为模型。</li>
+<li><strong>添加消息渠道</strong>：</li>
+</ol>
+
+<pre><code class="language-bash">hermes gateway setup
+</code></pre>
+
+<ol start="5">
+<li><strong>测试Hermes</strong>：向Hermes启用的渠道发送消息，提示时批准工具调用。你可以让Hermes查询天气、搜索信息或自动化执行各种日常任务。</li>
+</ol>
+
+<h2>海外网站的实用应用</h2>
+
+<ul>
+<li><strong>内容创作</strong>：使用Agnes-Image-2.1-Flash为博客文章或产品页面生成独特图片，大幅降低设计外包成本。</li>
+</ul>
+
+<pre><code class="language-bash">python .codex/skills/agnes-imagegen/script/generate.py --prompt "河边的小马，水彩风格"
+</code></pre>
+
+<ul>
+<li><strong>自动化任务</strong>：部署Hermes处理客户咨询、获取数据或自动更新内容，实现24小时无人值守运营。</li>
+<li><strong>多模态营销</strong>：利用Agnes-Video-V2.0免费创建产品推广视频，无需专业的视频编辑技能。</li>
+</ul>
+
+<p>通过本指南，你可以利用Codex、Hermes和Agnes API的强大能力增强海外网站功能，而无需承担额外成本。这套免费方案的核心优势在于零成本启动、灵活组合以及持续更新，帮助你在出海创业的道路上走得更远。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/codex-agent-desktop-jarvis">Codex Agent：你的桌面贾维斯 &rarr;</a></p>
+</div>`,
+  },
+
+  // ====== mastering-cc-switch-ai-coding ======
+  "mastering-cc-switch-ai-coding": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> How to use CC Switch to manage multiple AI coding tools — Claude Code, Codex, Gemini CLI — from a single cross-platform desktop application.</p>
+</div>
+
+<p>As an AI developer, juggling multiple AI coding tools like Claude Code, Codex, and Gemini CLI can be a hassle, especially when switching between them and managing configurations. Enter <strong>CC Switch</strong> — a cross-platform desktop application (supporting Mac, Linux, and Windows) designed to unify the management of these tools.</p>
+
+<h2>What is CC Switch?</h2>
+
+<p>CC Switch acts as a central hub for AI coding tools. It eliminates the need to manually edit configuration files (like <code>settings.json</code> for Claude Code, <code>agent.toml</code> for Codex, and <code>.env</code> for Gemini CLI) when switching AI providers. With CC Switch, you can:</p>
+
+<ul>
+<li>Switch between AI providers with a single click.</li>
+<li>Manage Skills, system prompts, conversation history, and MCP services globally.</li>
+<li>Track usage costs across different AI tools to identify the most cost-effective options.</li>
+</ul>
+
+<h2>Getting Started with CC Switch</h2>
+
+<h3>Step 1: Download and Install</h3>
+
+<ol>
+<li>Visit the CC Switch official website and select the version for your operating system.</li>
+<li>Run the installer and follow the on-screen instructions. Once installed, launch CC Switch.</li>
+</ol>
+
+<h3>Step 2: Initial Setup</h3>
+
+<p>When you first open CC Switch, you will see the main interface. Click the settings icon in the top-left corner, scroll down to the "General" section, and enable the "Skip Claude Code Initial Setup" option. This skips the Anthropic login prompt when using Claude Code, a common fix for network issues.</p>
+
+<h2>Configuring AI Providers</h2>
+
+<ol>
+<li>Click the <code>+</code> icon in the top-right corner of CC Switch.</li>
+<li>Choose an AI provider from the preset list (e.g., Kimi for Coding).</li>
+<li><strong>Configure API Keys and Models</strong>: For example, with Kimi for Coding, go to the Kimi Code console, create a new API key, paste it into CC Switch's configuration field, set the model (e.g., Kimi 2.5), and enable features like 1M context window.</li>
+<li>Click "Add" to save. To switch, simply click "Enable" next to the provider.</li>
+</ol>
+
+<h2>Managing Skills</h2>
+
+<p>Skills are reusable tools that can be used across multiple AI coding tools:</p>
+
+<ol>
+<li>Click the wrench icon in the top-right corner to open the Skills Manager.</li>
+<li><strong>Import Existing Skills</strong>: Click "Import Existing" to scan your system for installed skills.</li>
+<li><strong>Install New Skills</strong>: Use the search bar to find skills. Switch the search type to <code>skill.sh</code> for better results. Click "Install" to add a skill. You can also install skills from ZIP files.</li>
+<li><strong>Update Skills</strong>: Click "Check for Updates" to update installed skills.</li>
+</ol>
+
+<h2>System Prompt Management</h2>
+
+<p>CC Switch lets you manage system prompts across all AI tools:</p>
+
+<ol>
+<li>Click the text icon in the top-right corner to open Prompt Management.</li>
+<li><strong>Add a Prompt</strong>: Click "Add Prompt" and name it (e.g., "Frontend Project"). Paste your system prompt into the content field and save.</li>
+<li><strong>Switch Prompts</strong>: Use the toggle switch next to a prompt to apply it across all AI tools. This automatically updates configuration files like <code>claude.md</code> for Claude Code and <code>agent.md</code> for Codex.</li>
+</ol>
+
+<h2>Conversation History Management</h2>
+
+<ol>
+<li>Click the history icon in the top-right corner.</li>
+<li><strong>Search and Filter</strong>: Use the search bar to find specific conversations.</li>
+<li><strong>Restore Conversations</strong>: Copy the command provided by CC Switch and paste it into your terminal to restore a conversation.</li>
+<li><strong>Delete Conversations</strong>: Select conversations and click "Delete" to remove them.</li>
+</ol>
+
+<h2>MCP Service Management</h2>
+
+<p>MCP (Model Control Protocol) services extend the functionality of AI tools:</p>
+
+<ol>
+<li>Click the MCP icon in the top-right corner.</li>
+<li><strong>Add an MCP Service</strong>: Choose a preset MCP service (e.g., <code>fetch</code> for web requests) or create a custom one. Configure the service details and apply it to your desired AI tools.</li>
+<li><strong>Test the MCP Service</strong>: In Claude Code, use the <code>MCP</code> command to test the service.</li>
+</ol>
+
+<h2>Tracking Usage Costs</h2>
+
+<ol>
+<li>Go to Settings &gt; Usage Statistics.</li>
+<li><strong>View Metrics</strong>: See token usage, request counts, and costs for tools like Claude Code, Codex, and Gemini.</li>
+<li><strong>Cost Comparison</strong>: Use the cost breakdown to identify which tool is the most affordable. You can also set cost multipliers for proxy services.</li>
+</ol>
+
+<h2>Conclusion</h2>
+
+<p>CC Switch is a game-changer for AI developers, simplifying the management of multiple AI coding tools. By centralizing configuration, skills, prompts, and usage tracking, it saves time and reduces errors. Whether you are switching between AI providers, managing skills, or keeping an eye on costs, CC Switch has you covered.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/claude-code-install-setup">Claude Code Installation & Setup &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI工具 · 难度：初级</p>
+<p><strong>你将学到：</strong>如何使用CC Switch跨平台桌面应用统一管理多个AI编程工具——Claude Code、Codex和Gemini CLI。</p>
+</div>
+
+<p>作为AI开发者，同时使用Claude Code、Codex和Gemini CLI等多个AI编程工具并在它们之间切换，管理配置是一件麻烦事。<strong>CC Switch</strong>应运而生——这是一款跨平台桌面应用（支持Mac、Linux和Windows），旨在统一管理这些工具。</p>
+
+<h2>什么是CC Switch？</h2>
+
+<p>CC Switch充当AI编程工具的中央枢纽。它消除了在切换AI供应商时手动编辑配置文件（如Claude Code的<code>settings.json</code>、Codex的<code>agent.toml</code>和Gemini CLI的<code>.env</code>）的需要。使用CC Switch，你可以：</p>
+
+<ul>
+<li>一键切换AI供应商。</li>
+<li>全局管理技能、系统提示词、对话历史和MCP服务。</li>
+<li>追踪不同AI工具的使用成本，找出最具性价比的方案。</li>
+</ul>
+
+<h2>开始使用CC Switch</h2>
+
+<h3>第一步：下载和安装</h3>
+
+<ol>
+<li>访问CC Switch官方网站，选择对应操作系统版本。</li>
+<li>运行安装程序，按照屏幕提示完成安装后启动CC Switch。</li>
+</ol>
+
+<h3>第二步：初始设置</h3>
+
+<p>首次打开CC Switch时，你会看到主界面。点击左上角的设置图标，向下滚动到"通用"部分，启用"跳过Claude Code初始设置"选项。这会跳过使用Claude Code时的Anthropic登录提示，是解决网络问题的常用方法。</p>
+
+<h2>配置AI供应商</h2>
+
+<ol>
+<li>点击CC Switch右上角的<code>+</code>图标。</li>
+<li>从预设列表中选择一个AI供应商（例如Kimi for Coding）。</li>
+<li><strong>配置API密钥和模型</strong>：以Kimi for Coding为例，进入Kimi Code控制台创建新的API密钥，粘贴到CC Switch的配置字段中，设置模型（如Kimi 2.5），启用100万上下文窗口等功能。</li>
+<li>点击"添加"保存配置。要切换供应商，只需点击对应供应商旁的"启用"按钮。</li>
+</ol>
+
+<h2>管理技能</h2>
+
+<p>技能是可跨多个AI编程工具复用的组件：</p>
+
+<ol>
+<li>点击右上角的扳手图标打开技能管理器。</li>
+<li><strong>导入现有技能</strong>：点击"导入现有"扫描系统中已安装的技能。</li>
+<li><strong>安装新技能</strong>：使用搜索栏查找技能。将搜索类型切换为<code>skill.sh</code>可获得更好的搜索结果。点击"安装"添加技能，也可以从ZIP文件安装。</li>
+<li><strong>更新技能</strong>：点击"检查更新"更新已安装的技能。</li>
+</ol>
+
+<h2>系统提示词管理</h2>
+
+<p>CC Switch可以统一管理所有AI工具的系统提示词：</p>
+
+<ol>
+<li>点击右上角的文本图标打开提示词管理。</li>
+<li><strong>添加提示词</strong>：点击"添加提示词"并命名（例如"前端项目"）。将系统提示词粘贴到内容字段并保存。</li>
+<li><strong>切换提示词</strong>：使用提示词旁的开关将其应用到所有AI工具。这会自动更新Claude Code的<code>claude.md</code>和Codex的<code>agent.md</code>等配置文件。</li>
+</ol>
+
+<h2>对话历史管理</h2>
+
+<ol>
+<li>点击右上角的历史图标。</li>
+<li><strong>搜索和筛选</strong>：使用搜索栏查找特定对话。</li>
+<li><strong>恢复对话</strong>：复制CC Switch提供的命令，粘贴到终端中恢复对话。</li>
+<li><strong>删除对话</strong>：选中对话并点击"删除"。</li>
+</ol>
+
+<h2>MCP服务管理</h2>
+
+<p>MCP（模型控制协议）服务扩展了AI工具的功能：</p>
+
+<ol>
+<li>点击右上角的MCP图标。</li>
+<li><strong>添加MCP服务</strong>：选择预设的MCP服务（如用于网络请求的<code>fetch</code>）或创建自定义服务。配置服务详情并将其应用到目标AI工具。</li>
+<li><strong>测试MCP服务</strong>：在Claude Code中使用<code>MCP</code>命令测试服务。</li>
+</ol>
+
+<h2>追踪使用成本</h2>
+
+<ol>
+<li>进入设置 &gt; 使用统计。</li>
+<li><strong>查看指标</strong>：查看Claude Code、Codex和Gemini等工具的Token使用量、请求次数和成本。</li>
+<li><strong>成本对比</strong>：使用成本分析找出最经济的工具。你还可以为代理服务设置成本倍数。</li>
+</ol>
+
+<h2>总结</h2>
+
+<p>CC Switch是AI开发者的游戏规则改变者，简化了多个AI编程工具的管理。通过集中管理配置、技能、提示词和使用追踪，它节省了时间并减少了错误。无论你是切换AI供应商、管理技能还是关注成本，CC Switch都能满足你的需求。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-install-setup">Claude Code安装与配置 &rarr;</a></p>
+</div>`,
+  },
+
+  // ====== vibecoding-workflow-110k-stars ======
+  "vibecoding-workflow-110k-stars": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> How to use the Vibecoding workflow — an open-source toolkit with 28 agents, 125 skills, and 60 commands to supercharge your AI coding.</p>
+</div>
+
+<p>In the world of AI programming, the "Vibecoding" workflow, open-sourced by an Anthropic hackathon champion, has taken the developer community by storm with over 110K GitHub stars. This is not just a collection of scattered prompts — it is a comprehensive toolkit designed to supercharge your AI coding experience.</p>
+
+<h2>What is Vibecoding?</h2>
+
+<p>Vibecoding is a robust AI coding workflow that packages 28 agents, 125 skills, 60 commands, and advanced features like memory optimization, security scanning, and research-first workflows. It is built to cover every stage of the development lifecycle:</p>
+
+<ul>
+<li>Writing requirements and code</li>
+<li>Debugging and testing</li>
+<li>Code review and optimization</li>
+</ul>
+
+<p>It seamlessly integrates with popular AI coding tools like Claude Code, Codex, and Cursor, making it a versatile addition to any developer's toolkit.</p>
+
+<h2>Key Components and Practical Usage</h2>
+
+<h3>1. Agents & Skills</h3>
+
+<p>The workflow includes 28 specialized agents and 125 skills, each tailored to specific tasks. For example, to generate a React component:</p>
+
+<pre><code class="language-plaintext">/claude create-react-component --name Button --props "text: string, onClick: () => void"
+</code></pre>
+
+<p>This command triggers an agent that crafts a fully functional React button component with the specified props.</p>
+
+<h3>2. Command Line Integration</h3>
+
+<p>With 60 built-in commands, you can automate repetitive tasks. To scan a codebase for security vulnerabilities:</p>
+
+<pre><code class="language-plaintext">/claude security-scan --dir ./src --severity high
+</code></pre>
+
+<p>This command runs a security agent that flags high-severity issues in your source directory.</p>
+
+<h3>3. Memory Optimization</h3>
+
+<p>Vibecoding's memory optimization ensures AI tools retain context across sessions:</p>
+
+<pre><code class="language-plaintext">/claude save-session --name login-feature
+/claude load-session --name login-feature
+</code></pre>
+
+<h3>4. Research-First Workflow</h3>
+
+<p>When building a feature that requires external research:</p>
+
+<pre><code class="language-plaintext">/claude research --topic "React Server Components best practices" --depth deep
+</code></pre>
+
+<p>This agent fetches and synthesizes the latest best practices, integrating them into your development process.</p>
+
+<h2>Integrating with Your Tools</h2>
+
+<p>Vibecoding works out-of-the-box with:</p>
+
+<ul>
+<li><strong>Claude Code</strong>: Run <code>claudecode init --vibecoding</code> to enable the workflow.</li>
+<li><strong>Codex</strong>: Add <code>vibecoding: true</code> to your <code>agent.toml</code> configuration.</li>
+<li><strong>Cursor</strong>: Install the Vibecoding plugin via the Cursor extension marketplace.</li>
+</ul>
+
+<h2>Getting Started</h2>
+
+<ol>
+<li><strong>Install Dependencies</strong>: Ensure you have Claude Code, Codex, or Cursor installed.</li>
+<li><strong>Clone the Repository</strong>:</li>
+</ol>
+
+<pre><code class="language-plaintext">git clone https://github.com/affaan-m/everything-claude-code.git
+cd everything-claude-code
+</code></pre>
+
+<ol start="3">
+<li><strong>Initialize Vibecoding</strong>:</li>
+</ol>
+
+<pre><code class="language-plaintext"># For Claude Code
+./setup-claude.sh
+
+# For Codex
+./setup-codex.sh
+</code></pre>
+
+<ol start="4">
+<li><strong>Start Coding</strong>: Use the <code>/claude</code> command prefix to access all Vibecoding features.</li>
+</ol>
+
+<h2>Conclusion</h2>
+
+<p>Vibecoding is a game-changer for developers looking to harness AI's full potential. By packaging agents, skills, and commands into a cohesive workflow, it streamlines everything from coding to research. Whether you are writing a small script or building a large application, Vibecoding will help you work smarter, not harder.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/ultimate-ai-coding-apps-minutes">Ultimate AI Coding Guide: Build Apps Within Minutes &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI工具 · 难度：初级</p>
+<p><strong>你将学到：</strong>如何使用Vibecoding工作流——一个包含28个代理、125项技能和60个命令的开源工具包，加速你的AI编程。</p>
+</div>
+
+<p>在AI编程的世界里，由Anthropic黑客松冠军开源的"Vibecoding"工作流以超过11万GitHub星标席卷了开发者社区。它不是一个零散的提示词集合，而是一个旨在极大提升AI编程体验的综合性工具包。无论你是刚接触AI编程的新手还是经验丰富的开发者，这个工作流都能提供立即可用的价值，让你的编程效率实现质的飞跃。</p>
+
+<h2>什么是Vibecoding？</h2>
+
+<p>Vibecoding是一个强大的AI编程工作流，包含28个代理、125项技能、60个命令以及记忆优化、安全扫描和研究优先工作流等高级功能。它覆盖开发生命周期的每个阶段：</p>
+
+<ul>
+<li>编写需求和代码</li>
+<li>调试和测试</li>
+<li>代码审查和优化</li>
+</ul>
+
+<p>它能无缝集成Claude Code、Codex和Cursor等主流AI编程工具，是任何开发者工具包中的全能选手。这个工作流的设计理念是让AI成为真正的开发伙伴而非简单的代码补全工具，从而彻底改变你的编码方式。</p>
+
+<h2>核心组件与实用方法</h2>
+
+<h3>1. 代理与技能</h3>
+
+<p>该工作流包含28个专业代理和125项技能，每个都针对特定任务定制。例如，生成一个React组件：</p>
+
+<pre><code class="language-plaintext">/claude create-react-component --name Button --props "text: string, onClick: () => void"
+</code></pre>
+
+<p>此命令会触发一个代理，创建一个具有指定属性的完整React按钮组件。这种按需生成组件的方式比手动编写快得多，而且代码质量和一致性有充分保障。</p>
+
+<h3>2. 命令行集成</h3>
+
+<p>借助60个内置命令，你可以自动化重复性任务。扫描代码库中的安全漏洞：</p>
+
+<pre><code class="language-plaintext">/claude security-scan --dir ./src --severity high
+</code></pre>
+
+<p>此命令运行安全代理，标记源代码目录中的高危问题。这相当于为你配备了一位7x24小时不间断工作的安全审计员，确保你的代码安全可靠。</p>
+
+<h3>3. 记忆优化</h3>
+
+<p>Vibecoding的记忆优化确保AI工具跨会话保留上下文：</p>
+
+<pre><code class="language-plaintext">/claude save-session --name login-feature
+/claude load-session --name login-feature
+</code></pre>
+
+<p>对于需要长期维护的大型项目来说，这个功能尤为重要。它让AI记住之前的对话上下文和项目状态，避免了每次重新开始时都要重复说明项目需求的烦恼。</p>
+
+<h3>4. 研究优先工作流</h3>
+
+<p>在构建需要外部研究的功能时：</p>
+
+<pre><code class="language-plaintext">/claude research --topic "React Server Components最佳实践" --depth deep
+</code></pre>
+
+<p>该代理会获取并综合最新最佳实践，将其整合到你的开发流程中。你无需在多个浏览器标签页之间来回切换查找资料，AI会自动为你完成全部研究工作。</p>
+
+<h2>集成你的工具</h2>
+
+<p>Vibecoding开箱即用地支持：</p>
+
+<ul>
+<li><strong>Claude Code</strong>：运行<code>claudecode init --vibecoding</code>启用工作流。</li>
+<li><strong>Codex</strong>：在<code>agent.toml</code>配置中添加<code>vibecoding: true</code>。</li>
+<li><strong>Cursor</strong>：通过Cursor扩展市场安装Vibecoding插件。</li>
+</ul>
+
+<p>无论你使用哪种主流的AI编程工具，Vibecoding都能完美适配，无需额外配置即可立即使用。</p>
+
+<h2>快速开始</h2>
+
+<ol>
+<li><strong>安装依赖</strong>：确保已安装Claude Code、Codex或Cursor。</li>
+<li><strong>克隆仓库</strong>：</li>
+</ol>
+
+<pre><code class="language-plaintext">git clone https://github.com/affaan-m/everything-claude-code.git
+cd everything-claude-code
+</code></pre>
+
+<ol start="3">
+<li><strong>初始化Vibecoding</strong>：</li>
+</ol>
+
+<pre><code class="language-plaintext"># 适用于Claude Code
+./setup-claude.sh
+
+# 适用于Codex
+./setup-codex.sh
+</code></pre>
+
+<ol start="4">
+<li><strong>开始编程</strong>：使用<code>/claude</code>命令前缀访问所有Vibecoding功能。从这一刻起，你就拥有了一个装备了28个专业代理的强大AI开发团队。</li>
+</ol>
+
+<h2>总结</h2>
+
+<p>Vibecoding是希望充分发挥AI潜力的开发者的游戏规则改变者。通过将代理、技能和命令打包成一个连贯的工作流，它简化了从编码到研究的一切流程。无论你是在编写小型脚本还是构建大型应用，Vibecoding都能帮助你更聪明地工作，而非更辛苦。11万GitHub星标已经证明了社区对它的高度认可——现在就加入数百万开发者的行列，体验AI编程的未来。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ultimate-ai-coding-apps-minutes">终极AI编码指南：几分钟内构建你的全球应用 &rarr;</a></p>
+</div>`,
+  },
+
 };
