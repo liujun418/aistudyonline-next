@@ -1569,4 +1569,20 @@ export const articles: Article[] = [
     date: "2026-06-05",
   },
 
+
+  {
+    slug: "google-gemma-4-12b-local-deployment",
+    title: "Google's Gemma 4 12B: Revolutionizing AI with Local Deployment on 16GB Laptops",
+    titleZh: "Google Gemma 4 12B：在16GB笔记本上本地部署的AI革命",
+    description:
+      "Google DeepMind's Gemma 4 12B runs offline on a 16GB RAM laptop. Learn how this open-source multimodal model transforms overseas AI projects with local deployment, cost savings, and privacy compliance.",
+    descriptionZh:
+      "Google DeepMind的Gemma 4 12B可在16GB内存笔记本上离线运行。了解这款开源多模态模型如何通过本地部署、成本节省和隐私合规来改变海外AI项目。",
+    category: "ai-news",
+    tags: ["gemma", "google", "local-ai", "open-source", "multimodal", "offshore"],
+    difficulty: "beginner",
+    toolsMentioned: ["gemini"],
+    date: "2026-06-05",
+  },
+
 ];
