@@ -14553,6 +14553,439 @@ export const _tools2 = [
     scene: "development",
   },
 
+  {
+    id: "trae-framework",
+    name: "TRAE Framework",
+    description: "AI-powered design framework for building beautiful UIs with natural language.",
+    descriptionZh: "使用自然语言构建精美UI的AI驱动设计框架。",
+    category: "design",
+    tags: ["design", "ui", "framework", "open-source", "ai-design"],
+    difficulty: "intermediate",
+    url: "https://github.com/trae/trae",
+    rating: r(4.5),
+    pricing: "Free (Open Source)",
+    useCase: "TRAE Framework is an AI-powered design framework that generates beautiful UI components from natural language descriptions.",
+    icon: "\u{1F3A8}",
+    company: "TRAE",
+    companyZh: "TRAE",
+    founded: "2025",
+    headquarters: "Open Source",
+    descriptionLong: "TRAE Framework is an AI-powered design framework that helps developers and designers build beautiful user interfaces using natural language. It combines intelligent design principles with practical implementation tools, generating consistent, aesthetically pleasing UI components from simple descriptions. As an open-source project, it provides a structured approach to AI-assisted UI design, making professional-looking interfaces accessible to everyone while offering full customization.",
+    descriptionLongZh: "TRAE Framework是一个AI驱动的设计框架，通过自然语言帮助开发者和设计师构建漂亮的用户界面。结合智能设计原则和实用工具，从描述生成一致美观的UI组件。",
+    advantages: [
+      "AI-powered UI generation from natural language",
+      "Open source with full customization freedom",
+      "Consistent, aesthetically pleasing design system",
+      "Rapid prototyping for frontend projects"
+    ],
+    advantagesZh: [
+      "通过自然语言实现AI驱动UI生成",
+      "开源且完全可自定义",
+      "一致美观的设计系统",
+      "前端项目的快速原型开发"
+    ],
+    useCases: [
+      "Rapid UI prototyping from text descriptions",
+      "Building responsive frontend components with AI",
+      "Creating consistent design systems and libraries",
+      "Accelerating web application development workflow"
+    ],
+    useCasesZh: [
+      "从文字描述快速进行UI原型设计",
+      "用AI构建响应式前端组件",
+      "创建一致的设计系统和组件库",
+      "加速Web应用开发工作流"
+    ],
+    targetAudience: "Frontend developers and designers who want AI-powered tools for rapid UI generation and prototyping.",
+    targetAudienceZh: "需要AI驱动的快速UI生成和原型工具的前端开发者和设计师。",
+    pricingTiers: [
+      {
+        tier: "Free (Open Source)",
+        tierZh: "免费版（开源）",
+        price: "$0",
+        features: ["All features", "Full source code", "Community support"],
+        featuresZh: ["全部功能", "完整源代码", "社区支持"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Source code and documentation",
+        descriptionZh: "源代码和文档",
+        url: "https://github.com/trae/trae"
+      }
+    ],
+    skills: ["UI design", "frontend development", "prototyping", "AI design", "open source"],
+    pros: ["Open source and free", "AI-powered generation", "Consistent design output", "Fast prototyping"],
+    prosZh: ["开源免费", "AI驱动生成", "一致的设计输出", "快速原型开发"],
+    cons: ["Relatively new project", "Limited community size", "Requires frontend knowledge"],
+    consZh: ["相对较新的项目", "社区规模有限", "需要前端知识"],
+    scene: "design-video",
+  },
+
+  {
+    id: "design-md",
+    name: "DESIGN.md",
+    description: "Specification format for defining AI design aesthetics and visual direction.",
+    descriptionZh: "用于定义AI设计美学和视觉方向的规范格式。",
+    category: "design",
+    tags: ["design", "specification", "aesthetics", "ui-design", "standards"],
+    difficulty: "intermediate",
+    url: "https://designmd.dev",
+    rating: r(4.3),
+    pricing: "Free (Open Source)",
+    useCase: "DESIGN.md is a specification format for defining visual design direction, aesthetics, and style guidelines for AI-generated UIs.",
+    icon: "\u{1F4C4}",
+    company: "Design MD",
+    companyZh: "Design MD",
+    founded: "2025",
+    headquarters: "Open Source",
+    descriptionLong: "DESIGN.md is a specification format designed to define and communicate AI design aesthetics and visual direction. It provides a structured way to describe design preferences, color schemes, typography, spacing, and overall visual style in a markdown format that both humans and AI can understand. By using DESIGN.md, developers can ensure consistent design output from AI tools, making it an essential companion for AI-assisted frontend development workflows.",
+    descriptionLongZh: "DESIGN.md是一种规范格式，用于定义和传达AI设计美学和视觉方向。以标记格式结构化描述设计偏好、配色方案、排版和整体视觉风格。",
+    advantages: [
+      "Standardized design specification format",
+      "Works with any AI design tool",
+      "Human and machine readable markdown",
+      "Ensures consistent AI design output"
+    ],
+    advantagesZh: [
+      "标准化的设计规范格式",
+      "可与任何AI设计工具配合使用",
+      "人类和机器均可读的标记格式",
+      "确保一致的AI设计输出"
+    ],
+    useCases: [
+      "Defining visual design direction for AI projects",
+      "Creating consistent design systems across tools",
+      "Communicating design preferences to AI assistants",
+      "Documenting UI/UX standards for teams"
+    ],
+    useCasesZh: [
+      "为AI项目定义视觉设计方向",
+      "跨工具创建一致的设计系统",
+      "向AI助手传达设计偏好",
+      "为团队记录UI/UX标准"
+    ],
+    targetAudience: "UI/UX designers and frontend developers who want a standardized way to communicate design preferences to AI tools.",
+    targetAudienceZh: "希望以标准化方式向AI工具传达设计偏好的UI/UX设计师和前端开发者。",
+    pricingTiers: [
+      {
+        tier: "Free (Open Source)",
+        tierZh: "免费版（开源）",
+        price: "$0",
+        features: ["Full specification", "Documentation", "Examples"],
+        featuresZh: ["完整规范", "文档", "示例"]
+      }
+    ],
+    extensions: [
+      {
+        name: "Website",
+        description: "Official documentation site",
+        descriptionZh: "官方文档网站",
+        url: "https://designmd.dev"
+      }
+    ],
+    skills: ["UI design", "design systems", "visual design", "documentation", "standards"],
+    pros: ["Open and free standard", "Easy to adopt", "Tool-agnostic", "Clear communication"],
+    prosZh: ["开放免费标准", "易于采用", "工具无关", "沟通清晰"],
+    cons: ["Early stage standard", "Limited adoption yet", "Requires complementary tools"],
+    consZh: ["早期阶段标准", "采用率有限", "需要配合工具使用"],
+    scene: "design-video",
+  },
+
+  {
+    id: "cc-switch",
+    name: "CC Switch",
+    description: "Tool for managing and switching between multiple AI coding tools like Claude Code, Cursor, and Codex.",
+    descriptionZh: "用于管理和切换多个AI编程工具（如Claude Code、Cursor、Codex）的工具。",
+    category: "coding",
+    tags: ["ai-coding", "tool-management", "claude-code", "cursor", "codex"],
+    difficulty: "beginner",
+    url: "https://github.com/cc-switch/cc-switch",
+    rating: r(4.4),
+    pricing: "Free (Open Source)",
+    useCase: "CC Switch is a cross-platform tool for managing multiple AI coding tools from a single interface.",
+    icon: "\u{1F504}",
+    company: "CC Switch",
+    companyZh: "CC Switch",
+    founded: "2025",
+    headquarters: "Open Source",
+    descriptionLong: "CC Switch is an open-source tool designed to help developers manage and switch between multiple AI coding tools seamlessly. It provides a unified interface for accessing Claude Code, Cursor, Codex, Gemini CLI, and other AI coding assistants. With its intuitive controls, developers can quickly switch between different AI tools, compare outputs, and choose the best tool for each task. It eliminates the overhead of managing multiple terminal sessions and configurations.",
+    descriptionLongZh: "CC Switch是一款开源工具，帮助开发者无缝管理和切换多个AI编程工具。提供统一界面访问Claude Code、Cursor、Codex和Gemini CLI。",
+    advantages: [
+      "Unified interface for multiple AI coding tools",
+      "Quick switching between tools",
+      "Open source and community-driven",
+      "Cross-platform support"
+    ],
+    advantagesZh: [
+      "多AI编程工具的统一界面",
+      "工具间快速切换",
+      "开源社区驱动",
+      "跨平台支持"
+    ],
+    useCases: [
+      "Managing multiple AI coding assistants",
+      "Comparing outputs from different AI tools",
+      "Streamlining development workflow",
+      "Switching between tools mid-task"
+    ],
+    useCasesZh: [
+      "管理多个AI编程助手",
+      "比较不同AI工具的输出",
+      "简化开发工作流",
+      "在任务中快速切换工具"
+    ],
+    targetAudience: "Developers who use multiple AI coding tools and need a unified way to manage and switch between them.",
+    targetAudienceZh: "使用多种AI编程工具并需要统一管理和切换方式的开发者。",
+    pricingTiers: [
+      {
+        tier: "Free (Open Source)",
+        tierZh: "免费版（开源）",
+        price: "$0",
+        features: ["All features", "Cross-platform", "Community updates"],
+        featuresZh: ["全部功能", "跨平台", "社区更新"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Source code and documentation",
+        descriptionZh: "源代码和文档",
+        url: "https://github.com/cc-switch/cc-switch"
+      }
+    ],
+    skills: ["tool management", "AI coding", "workflow optimization", "developer tools"],
+    pros: ["Simplifies multi-tool management", "Open source", "Easy to use", "Cross-platform"],
+    prosZh: ["简化多工具管理", "开源", "易于使用", "跨平台"],
+    cons: ["New project with small community", "Dependent on external tools", "Limited customization"],
+    consZh: ["新项目社区较小", "依赖外部工具", "定制有限"],
+    scene: "development",
+  },
+
+  {
+    id: "vibecoding",
+    name: "Vibecoding",
+    description: "110K-star open-source tool for building software by talking to AI through voice and conversation.",
+    descriptionZh: "11万星标开源工具，通过语音和对话与AI交流来构建软件。",
+    category: "coding",
+    tags: ["voice-coding", "ai-coding", "open-source", "conversation-driven", "development"],
+    difficulty: "beginner",
+    url: "https://github.com/vibecoding/vibecoding",
+    rating: r(4.8),
+    pricing: "Free (Open Source)",
+    useCase: "Vibecoding is an open-source platform that lets you build software by talking to AI through voice and conversation-driven development.",
+    icon: "\u{1F399}",
+    company: "Vibecoding",
+    companyZh: "Vibecoding",
+    founded: "2024",
+    headquarters: "Open Source",
+    descriptionLong: "Vibecoding is a groundbreaking open-source tool with over 110,000 GitHub stars that enables developers to build software by talking to AI. It uses voice and conversation-driven development, allowing users to describe features, request changes, and debug issues through natural conversation. With its multi-agent architecture, Vibecoding handles code generation, testing, and deployment through an intuitive conversational interface, making software development accessible to non-programmers while boosting experienced developers productivity.",
+    descriptionLongZh: "Vibecoding是一款突破性的开源工具，拥有超过11万GitHub星标，让开发者通过与AI对话来构建软件。使用语音和对话驱动的开发方式。",
+    advantages: [
+      "Conversation-driven software development",
+      "110K+ GitHub stars with active community",
+      "Voice input support for hands-free coding",
+      "Multi-agent architecture for complex tasks"
+    ],
+    advantagesZh: [
+      "对话驱动的软件开发方式",
+      "11万+GitHub星标的活跃社区",
+      "语音输入支持免提编程",
+      "多代理架构处理复杂任务"
+    ],
+    useCases: [
+      "Building full applications through conversation",
+      "Voice-driven code generation and debugging",
+      "Rapid prototyping with natural language",
+      "Learning programming through AI pair programming"
+    ],
+    useCasesZh: [
+      "通过对话构建完整应用",
+      "语音驱动的代码生成和调试",
+      "使用自然语言快速原型开发",
+      "通过AI结对编程学习编程"
+    ],
+    targetAudience: "Developers and non-programmers who want to build software through natural conversation and voice commands.",
+    targetAudienceZh: "希望通过自然对话和语音指令构建软件的开发者和非编程人员。",
+    pricingTiers: [
+      {
+        tier: "Free (Open Source)",
+        tierZh: "免费版（开源）",
+        price: "$0",
+        features: ["All features", "Voice support", "Multi-agent system", "Community access"],
+        featuresZh: ["全部功能", "语音支持", "多代理系统", "社区访问"]
+      }
+    ],
+    extensions: [
+      {
+        name: "GitHub Repository",
+        description: "Source code and documentation",
+        descriptionZh: "源代码和文档",
+        url: "https://github.com/vibecoding/vibecoding"
+      }
+    ],
+    skills: ["voice coding", "conversational AI", "software development", "AI pair programming", "rapid prototyping"],
+    pros: ["Conversation-driven workflow", "Large community", "Voice support", "Beginner friendly"],
+    prosZh: ["对话驱动工作流", "大规模社区", "语音支持", "新手友好"],
+    cons: ["Voice recognition limitations", "Complex projects need refinement", "Newer approach with learning curve"],
+    consZh: ["语音识别限制", "复杂项目需要完善", "较新的方法有学习曲线"],
+    scene: "development",
+  },
+
+  {
+    id: "claude-design",
+    name: "Claude Design",
+    description: "AI-powered presentation and design tool for creating interactive, editable presentations from natural language.",
+    descriptionZh: "AI驱动的演示和设计工具，通过自然语言创建交互式可编辑演示文稿。",
+    category: "productivity",
+    tags: ["presentation", "design", "claude", "slides", "interactive"],
+    difficulty: "beginner",
+    url: "https://claude.ai/design",
+    rating: r(4.6),
+    pricing: "Free with Claude account",
+    useCase: "Claude Design is an AI-powered tool that creates interactive, editable presentations from natural language descriptions.",
+    icon: "\u{1F4CA}",
+    company: "Anthropic",
+    companyZh: "Anthropic",
+    founded: "2021",
+    headquarters: "San Francisco, CA",
+    descriptionLong: "Claude Design is Anthropic's AI-powered presentation and design tool that transforms natural language into interactive, editable presentations. Users describe what they want in plain English, and Claude Design generates beautifully designed slides with smart layouts, consistent themes, and interactive elements. It supports real-time editing, allowing users to refine content, adjust layouts, and add multimedia elements through natural conversation. Perfect for professionals who need polished presentations quickly.",
+    descriptionLongZh: "Claude Design是Anthropic推出的AI驱动演示设计工具，将自然语言转化为交互式可编辑演示文稿。通过日常语言描述需求即可生成精美幻灯片。",
+    advantages: [
+      "Natural language presentation creation",
+      "Interactive and editable output",
+      "Professional design with smart layouts",
+      "Real-time collaborative editing"
+    ],
+    advantagesZh: [
+      "自然语言创建演示文稿",
+      "交互式可编辑输出",
+      "智能布局的专业设计",
+      "实时协作编辑"
+    ],
+    useCases: [
+      "Creating business presentations from prompts",
+      "Designing educational slide decks quickly",
+      "Drafting pitch decks and proposals",
+      "Building interactive meeting materials"
+    ],
+    useCasesZh: [
+      "从提示词创建商业演示文稿",
+      "快速设计教育幻灯片",
+      "起草推介文档和提案",
+      "构建交互式会议材料"
+    ],
+    targetAudience: "Business professionals, educators, and presenters who want to create polished presentations using natural language.",
+    targetAudienceZh: "希望通过自然语言创建精美演示文稿的商业人士、教育工作者和演讲者。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "$0",
+        features: ["Basic presentations", "Limited templates", "Claude account required"],
+        featuresZh: ["基础演示", "有限模板", "需要Claude账户"]
+      },
+      {
+        tier: "Claude Pro",
+        tierZh: "专业版",
+        price: "$20/mo",
+        features: ["Unlimited presentations", "All templates", "Priority access"],
+        featuresZh: ["无限演示", "所有模板", "优先访问"]
+      }
+    ],
+    extensions: [
+      {
+        name: "Claude AI",
+        description: "Anthropic's AI assistant platform",
+        descriptionZh: "Anthropic的AI助手平台",
+        url: "https://claude.ai"
+      }
+    ],
+    skills: ["presentation design", "business communication", "visual storytelling", "slide creation"],
+    pros: ["Easy natural language interface", "Professional output", "Interactive elements", "Fast creation"],
+    prosZh: ["简单的自然语言界面", "专业输出", "交互元素", "快速创建"],
+    cons: ["Claude account required", "Limited free tier", "Requires internet connection"],
+    consZh: ["需要Claude账户", "免费版有限制", "需要网络连接"],
+    scene: "office-productivity",
+  },
+
+  {
+    id: "gemma",
+    name: "Google Gemma",
+    description: "Google's open-source lightweight AI model family that runs locally on consumer hardware.",
+    descriptionZh: "Google的开源轻量级AI模型系列，可在消费级硬件上本地运行。",
+    category: "chatbots",
+    tags: ["open-source", "llm", "google", "local-ai", "lightweight"],
+    difficulty: "intermediate",
+    url: "https://ai.google.dev/gemma",
+    rating: r(4.5),
+    pricing: "Free (Open Source)",
+    useCase: "Google Gemma is an open-source, lightweight AI model family for local deployment on consumer hardware with strong performance.",
+    icon: "\u{1F916}",
+    company: "Google DeepMind",
+    companyZh: "Google DeepMind",
+    founded: "2024",
+    headquarters: "Mountain View, CA",
+    descriptionLong: "Google Gemma is a family of lightweight, open-source AI models developed by Google DeepMind. Built from the same research as Gemini, Gemma models are designed to run efficiently on consumer hardware including laptops with as little as 16GB RAM. They support multimodal inputs, offer strong performance on reasoning and coding tasks, and come in multiple sizes (2B, 7B, 12B parameters). With permissive licensing, Gemma enables developers to deploy powerful AI capabilities locally, ensuring privacy and reducing cloud costs.",
+    descriptionLongZh: "Google Gemma是Google DeepMind开发的轻量级开源AI模型系列。基于与Gemini相同的研究成果，可在消费级硬件上高效运行。",
+    advantages: [
+      "Runs locally on consumer hardware (16GB RAM)",
+      "Open source with permissive licensing",
+      "Strong performance for lightweight models",
+      "Multimodal input support"
+    ],
+    advantagesZh: [
+      "在消费级硬件上本地运行（16GB内存）",
+      "开源且许可友好",
+      "轻量级模型的强劲性能",
+      "多模态输入支持"
+    ],
+    useCases: [
+      "Local AI deployment for privacy compliance",
+      "Offline AI assistance on personal devices",
+      "Cost-effective self-hosted AI solutions",
+      "Edge computing and IoT applications"
+    ],
+    useCasesZh: [
+      "隐私合规的本地AI部署",
+      "个人设备上的离线AI助手",
+      "高性价比的自托管AI解决方案",
+      "边缘计算和物联网应用"
+    ],
+    targetAudience: "Developers and organizations who need open-source, lightweight AI models for local deployment on consumer hardware.",
+    targetAudienceZh: "需要开源轻量级AI模型在消费级硬件上本地部署的开发者和组织。",
+    pricingTiers: [
+      {
+        tier: "Free (Open Source)",
+        tierZh: "免费版（开源）",
+        price: "$0",
+        features: ["All model sizes", "Open weights", "Commercial use", "Local deployment"],
+        featuresZh: ["全部模型大小", "开源权重", "商业使用", "本地部署"]
+      }
+    ],
+    extensions: [
+      {
+        name: "Google AI Studio",
+        description: "Online model playground",
+        descriptionZh: "在线模型测试平台",
+        url: "https://aistudio.google.com"
+      },
+      {
+        name: "Kaggle",
+        description: "Model download and notebooks",
+        descriptionZh: "模型下载和笔记本",
+        url: "https://www.kaggle.com/models/google/gemma"
+      }
+    ],
+    skills: ["local AI", "open source LLM", "edge deployment", "privacy", "Google AI"],
+    pros: ["Consumer hardware compatible", "Open source", "Strong performance", "Google-backed"],
+    prosZh: ["兼容消费级硬件", "开源", "性能强劲", "Google支持"],
+    cons: ["Limited cloud service", "Smaller than Gemini", "Requires technical setup"],
+    consZh: ["云服务有限", "比Gemini小", "需要技术设置"],
+    scene: "free-open-source",
+  },
+
 ] as Tool[];
 
 export const tools: Tool[] = [..._tools1, ..._tools2];

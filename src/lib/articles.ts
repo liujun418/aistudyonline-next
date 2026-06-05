@@ -1476,7 +1476,7 @@ export const articles: Article[] = [
     category: "ai-tutorials",
     tags: ["design", "trae", "design-md", "frontend-design", "ai-design", "tutorial"],
     difficulty: "intermediate",
-    toolsMentioned: ["claude", "cursor"],
+    toolsMentioned: ["claude", "cursor", "trae-framework", "design-md"],
     date: "2026-06-04",
   },
 
@@ -1506,7 +1506,7 @@ export const articles: Article[] = [
     category: "ai-tools",
     tags: ["cc-switch", "ai-coding", "tool-management", "claude-code", "codex", "gemini"],
     difficulty: "beginner",
-    toolsMentioned: ["claude"],
+    toolsMentioned: ["claude", "cc-switch"],
     date: "2026-06-04",
   },
 
@@ -1521,7 +1521,7 @@ export const articles: Article[] = [
     category: "ai-tools",
     tags: ["vibecoding", "open-source", "ai-coding", "agents", "skills", "workflow"],
     difficulty: "beginner",
-    toolsMentioned: ["claude"],
+    toolsMentioned: ["claude", "vibecoding"],
     date: "2026-06-04",
   },
   {
@@ -1550,7 +1550,7 @@ export const articles: Article[] = [
     category: "ai-tutorials",
     tags: ["claude-design", "presentation", "ai-tools", "design", "beginner", "tutorial"],
     difficulty: "beginner",
-    toolsMentioned: ["claude"],
+    toolsMentioned: ["claude", "claude-design"],
     date: "2026-06-05",
   },
 
@@ -1565,7 +1565,7 @@ export const articles: Article[] = [
     category: "ai-tutorials",
     tags: ["vibe-coding", "ai-coding", "claude-code", "cursor", "beginner", "software-development"],
     difficulty: "beginner",
-    toolsMentioned: ["claude", "cursor", "chatgpt"],
+    toolsMentioned: ["claude", "cursor", "chatgpt", "vibecoding"],
     date: "2026-06-05",
   },
 
@@ -1581,7 +1581,7 @@ export const articles: Article[] = [
     category: "ai-news",
     tags: ["gemma", "google", "local-ai", "open-source", "multimodal", "offshore"],
     difficulty: "beginner",
-    toolsMentioned: ["gemini"],
+    toolsMentioned: ["gemini", "gemma"],
     date: "2026-06-05",
   },
 
