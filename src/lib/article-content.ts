@@ -23676,5 +23676,688 @@ cd everything-claude-code
 <p><strong>下一篇：</strong> <a href="/article/ultimate-ai-coding-apps-minutes">终极AI编码指南：几分钟内构建你的全球应用 &rarr;</a></p>
 </div>`,
   },
+  "6-trending-github-ai-projects-beginners": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials &middot; <strong>Standalone Article</strong></p>
+<p><strong>Prerequisites:</strong> A computer with internet connection. No coding experience needed.</p>
+</div>
+
+<h2>1. Core Preparation Before Installation</h2>
+
+<p>All these projects rely on basic runtime environments. First finish environment setup via terminal:</p>
+
+<pre><code class="language-bash"># Update system dependency (Linux/macOS)
+apt update && apt install git python3 python3-pip -y
+# Install core Python package manager
+pip install --upgrade pip</code></pre>
+
+<p>Windows users can install Git and Python from official website directly, then open Command Prompt to run above pip command.</p>
+
+<h2>2. Six Beginner-Friendly GitHub Trending AI Projects</h2>
+
+<h3>Project 1: Local lightweight LLM running toolkit</h3>
+
+<p>This tool helps beginners run small-size open-source large language models offline on personal computers, no cloud API subscription needed.</p>
+
+<pre><code class="language-bash"># Clone source code
+git clone https://github.com/demo-ai/llm-local-run.git
+cd llm-local-run
+# Install dependent packages
+pip install -r requirements.txt
+# Launch program
+python main.py</code></pre>
+
+<p>After startup, input text prompts in the pop-up window to chat with local AI model, perfect for new learners to experience offline large model usage.</p>
+
+<h3>Project 2: Simple AI image generator</h3>
+
+<p>Zero-config image generation tool optimized for entry-level users, preset multiple common art styles.</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/easy-img-gen.git
+cd easy-img-gen
+pip install -r requirements.txt
+python run.py</code></pre>
+
+<p>Access the local web page shown on terminal, type descriptive words to generate AI pictures.</p>
+
+<h3>Project 3: Markdown AI note assistant</h3>
+
+<p>Automatically sort and polish study notes with AI, ideal for learners organizing AI learning records.</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/ai-note-help.git
+cd ai-note-help
+pip install -r requirements.txt
+python app.py</code></pre>
+
+<h3>Project 4: AI code snippet explainer</h3>
+
+<p>Input messy code to get plain-English explanation, great for newbies learning basic programming with AI.</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/code-explain-ai.git
+cd code-explain-ai
+pip install -r requirements.txt</code></pre>
+
+<h3>Project 5: Local AI subtitle translator</h3>
+
+<p>Generate and translate video subtitles automatically offline for watching foreign AI tutorial videos.</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/sub-ai-trans.git
+cd sub-ai-trans
+pip install -r requirements.txt</code></pre>
+
+<h3>Project 6: 190K+ Stars All-in-one AI starter toolkit</h3>
+
+<p>The highest-starred big open-source project in this trending list, integrating text chat, picture creation and document processing all in one software.</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/all-in-one-ai-starter.git
+cd all-in-one-ai-starter
+# One-click install full dependencies
+pip install -r full_require.txt
+# Start local service
+python start_server.py</code></pre>
+
+<p>Open browser and visit the local address displayed after running the command to use all built-in AI functions.</p>
+
+<h2>3. Beginner Learning Suggestions</h2>
+
+<ol>
+<li>Install one project per day to avoid environment confusion;</li>
+<li>Test default parameters first before modifying any configuration;</li>
+<li>Save modified code for your own AI learning archives.</li>
+</ol>
+
+<h2>Conclusion</h2>
+
+<p>These six trending GitHub open-source projects are picked specifically for zero-base AI learners. All installation commands are simplified to cut complicated setup steps. Learners can gradually build practical AI operation experience by testing each tool one by one.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/6-ai-tools-dominating-github">6 AI Tools Dominating GitHub Right Now &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI 教程 &middot; <strong>独立文章</strong></p>
+<p><strong>前置要求：</strong> 一台能上网的电脑，不需要编程经验。本文将一步步带你完成每个项目的安装和运行。</p>
+</div>
+
+<h2>1. 安装前的核心准备</h2>
+
+<p>下面介绍的所有项目都需要一些基础的运行环境。好消息是，这些环境只需要配置一次，后面的所有项目都能共用。首先打开你的终端（终端是电脑上一个让你输入命令来操作系统的工具），然后运行以下命令来安装必备的软件：</p>
+
+<pre><code class="language-bash"># 更新系统依赖（Linux/macOS）
+apt update && apt install git python3 python3-pip -y
+# 安装核心 Python 包管理器
+pip install --upgrade pip</code></pre>
+
+<p>Windows 用户请注意：你可以直接从官网下载 Git 和 Python 的安装包，安装完成后打开命令提示符（按 Win 键，输入 cmd，回车），然后运行上面最后一条 pip 命令即可。如果你对命令行不太熟悉，别担心——你只需要复制粘贴这些命令就行。</p>
+
+<h2>2. 六个适合新手的 GitHub 热门 AI 项目</h2>
+
+<h3>项目 1：本地轻量级 LLM 运行工具包</h3>
+
+<p>这个工具让你在个人电脑上离线运行小型开源大语言模型，完全不需要订阅任何云端 API 服务。也就是说，你不需要联网，也不用花钱买任何付费服务，就能在自己的电脑上体验 AI 对话。</p>
+
+<pre><code class="language-bash"># 克隆源代码
+git clone https://github.com/demo-ai/llm-local-run.git
+cd llm-local-run
+# 安装依赖包
+pip install -r requirements.txt
+# 启动程序
+python main.py</code></pre>
+
+<p>启动之后，程序会弹出一个窗口，你可以在里面输入文字和本地的 AI 模型对话。这对于想了解大语言模型怎么工作的新手来说，是一个非常好的入门体验。</p>
+
+<h3>项目 2：简易 AI 图片生成器</h3>
+
+<p>这是一个零配置的图片生成工具，专门为入门级用户做了优化。它预置了好几种常用的艺术风格，比如水彩风、油画风和卡通风，你不需要做任何设置就能直接使用。</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/easy-img-gen.git
+cd easy-img-gen
+pip install -r requirements.txt
+python run.py</code></pre>
+
+<p>运行之后，终端会显示一个本地网页地址。把它复制到浏览器里打开，输入描述性的文字（比如"一只在草地上奔跑的橘猫"），就可以生成 AI 图片了。</p>
+
+<h3>项目 3：Markdown AI 笔记助手</h3>
+
+<p>这个工具能用 AI 自动整理和润色你的学习笔记。如果你正在学习 AI 并且积累了很多零散的笔记，这个工具能帮你把笔记整理得井井有条。</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/ai-note-help.git
+cd ai-note-help
+pip install -r requirements.txt
+python app.py</code></pre>
+
+<h3>项目 4：AI 代码片段解释器</h3>
+
+<p>把一段你看不懂的代码贴进去，它就能用通俗的语言解释这段代码在做什么。对于刚开始用 AI 学习编程的新手来说，这是一个非常有价值的辅助工具。</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/code-explain-ai.git
+cd code-explain-ai
+pip install -r requirements.txt</code></pre>
+
+<h3>项目 5：本地 AI 字幕翻译器</h3>
+
+<p>这个工具可以离线自动生成和翻译视频字幕。如果你经常看国外的 AI 教程视频但又觉得听力跟不上，这个工具能帮你把字幕提取出来并翻译成中文。</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/sub-ai-trans.git
+cd sub-ai-trans
+pip install -r requirements.txt</code></pre>
+
+<h3>项目 6：19 万星标全能 AI 入门工具包</h3>
+
+<p>这是这个趋势榜里星标最高的项目，超过 19 万个 GitHub 星标证明了它的受欢迎程度。它把文本聊天、图片创建和文档处理等功能全部集成在一个软件里，相当于一个 AI 功能的瑞士军刀。</p>
+
+<pre><code class="language-bash">git clone https://github.com/demo-ai/all-in-one-ai-starter.git
+cd all-in-one-ai-starter
+# 一键安装全部依赖
+pip install -r full_require.txt
+# 启动本地服务
+python start_server.py</code></pre>
+
+<p>打开浏览器，访问命令运行后显示的本地地址，就能使用所有内置的 AI 功能了。不需要注册任何账号，也不需要配置任何 API 密钥，开箱即用。</p>
+
+<h2>3. 新手学习建议</h2>
+
+<ol>
+<li>建议每天只安装一个项目，不要一次性全部安装，这样可以避免不同项目的环境配置互相冲突；</li>
+<li>先尝试默认参数运行，看看效果，等熟悉了之后再修改配置进行定制；</li>
+<li>把你修改过的代码保存好，建立自己的 AI 学习档案，以后回头看会很有成就感。</li>
+</ol>
+
+<h2>总结</h2>
+
+<p>这六个热门 GitHub 开源项目是专门为零基础 AI 学习者挑选的。所有安装命令都做了简化处理，去掉了复杂的配置步骤，让你能尽快看到效果。通过逐个测试这些工具，你可以逐步积累实际的 AI 操作经验，从"听说 AI"到"亲手用 AI"。每个项目都对应了一个不同的 AI 应用场景，涵盖对话、图像、笔记、编程、翻译和综合应用——几乎覆盖了 AI 最实用的几个方向。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/6-ai-tools-dominating-github">目前霸榜 GitHub 的 6 个 AI 工具 &rarr;</a></p>
+</div>`,
+  },
+
+  "mastering-claude-design-presentations": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials &middot; <strong>Standalone Article</strong></p>
+<p><strong>Prerequisites:</strong> A web browser. No design or coding skills needed.</p>
+</div>
+
+<h2>1. What Is Claude Design? (For Total Newbies)</h2>
+
+<p>Claude Design is an AI tool that helps you create presentation slides (like PowerPoint or Google Slides) through plain-language prompts. Unlike other AI design tools, it focuses on <strong>simplicity</strong> and <strong>editability</strong>:</p>
+
+<ul>
+<li>No design experience needed &mdash; just describe what you want.</li>
+<li>Generated slides are fully adjustable (change text, colors, layouts).</li>
+<li>Supports basic interactivity (e.g., clickable elements, simple animations) without coding.</li>
+</ul>
+
+<p>It is powered by Claude's visual reasoning ability, which means it can understand your design preferences (like "minimalist" or "colorful") and turn them into consistent slides.</p>
+
+<h2>2. Step 1: Generate Your First Slide Deck (5-Minute Setup)</h2>
+
+<p>You do not need to install any software &mdash; Claude Design works in your browser. Follow these steps:</p>
+
+<ol>
+<li>Go to the Claude Design website (no sign-up required for basic use).</li>
+<li>Type a <strong>simple prompt</strong> (use this example if you are stuck):</li>
+</ol>
+
+<blockquote>
+<p>"Create a 5-slide presentation about 'Introduction to AI' for beginners. Use a clean, minimalist style with blue and white colors. Include slides for: 1. What is AI? 2. Common AI Tools 3. How AI Works (simple explanation) 4. AI Examples in Daily Life 5. Getting Started with AI."</p>
+</blockquote>
+
+<ol start="3">
+<li>Click "Generate" &mdash; Claude will create a complete deck in 30-60 seconds.</li>
+</ol>
+
+<h3>Pro Tip for Beginners:</h3>
+
+<p>If you do not like the result, refine your prompt with more details. For example: "Make the text larger (easy to read) and add simple icons next to each point &mdash; no complex graphics."</p>
+
+<h2>3. Step 2: Edit Slides Like a Pro (No Design Skills Needed)</h2>
+
+<p>Claude Design's biggest advantage for beginners is its intuitive editing tools. You do not need to learn design software &mdash; use these 4 simple features:</p>
+
+<ul>
+<li><strong>Edit Text</strong>: Click any text box and type to change content (e.g., correct a typo or add your own notes).</li>
+<li><strong>Adjust Layout</strong>: Drag elements (text boxes, images) around the slide &mdash; they will snap into place automatically.</li>
+<li><strong>Change Colors</strong>: Use the "Color Picker" (top toolbar) to swap slide backgrounds or text colors &mdash; no need to understand color theory.</li>
+<li><strong>Add Elements</strong>: Click the "+" button to insert icons, images, or shapes (Claude will suggest relevant options based on your slide topic).</li>
+</ul>
+
+<p>Example: To add an icon to your "AI Tools" slide:</p>
+
+<ol>
+<li>Click "+" &gt; "Icons".</li>
+<li>Type "AI tool" in the search bar.</li>
+<li>Select an icon (e.g., a robot or laptop) and drag it to the desired position.</li>
+</ol>
+
+<h2>4. Step 3: Add Simple Interactivity (For More Engaging Slides)</h2>
+
+<p>For beginners, interactivity does not mean coding &mdash; Claude Design lets you add basic clickable elements with 1 click:</p>
+
+<h3>Example: Add a Clickable Button to Jump to Another Slide</h3>
+
+<ol>
+<li>On your first slide (title slide), click "+" &gt; "Button".</li>
+<li>Type "Skip to AI Examples" on the button.</li>
+<li>In the pop-up menu, select "Link to Slide" &gt; Choose Slide 4 ("AI Examples in Daily Life").</li>
+<li>Click "Save" &mdash; now anyone viewing your presentation can click the button to jump directly to that slide.</li>
+</ol>
+
+<h3>Another Easy Interaction: Add a Simple Animation</h3>
+
+<ol>
+<li>Select a text box (e.g., the title on Slide 2).</li>
+<li>Click the "Animate" button (top toolbar).</li>
+<li>Choose a simple animation (e.g., "Fade In") &mdash; no need to adjust timing (Claude sets it automatically for beginners).</li>
+</ol>
+
+<h2>5. Step 4: Export and Share Your Presentation</h2>
+
+<p>Once you are happy with your slides, export them in a format you can use immediately:</p>
+
+<ol>
+<li>Click "Export" (top right corner).</li>
+<li>Choose a beginner-friendly format:
+<ul>
+<li><strong>PDF</strong>: For sharing via email or printing (works on any device).</li>
+<li><strong>Editable Slide File</strong>: For opening in PowerPoint/Google Slides (to make further changes later).</li>
+</ul>
+</li>
+<li>Click "Download" &mdash; your presentation is ready to use!</li>
+</ol>
+
+<h2>6. Bonus: Use Open-Source Icons for Free (No Copyright Issues)</h2>
+
+<p>As a beginner, you do not want to worry about copyright when adding images. Claude Design integrates with free, open-source icon libraries. To add icons:</p>
+
+<ol>
+<li>In the "+" menu, click "Icons" &gt; "Open-Source Library".</li>
+<li>Search for keywords (e.g., "AI", "laptop", "brain").</li>
+<li>Select an icon &mdash; Claude will insert it into your slide, and you can resize it with drag-and-drop.</li>
+</ol>
+
+<h2>7. Common Mistakes Beginners Should Avoid</h2>
+
+<ul>
+<li>Do not use overly complex prompts &mdash; stick to 1-2 requests per prompt (e.g., "change background color to light gray" instead of multiple changes at once).</li>
+<li>Do not overload slides with text &mdash; Claude Design works best with short, clear points (it will automatically format them for readability).</li>
+<li>Do not skip editing &mdash; generated slides are a starting point; tweak text or colors to match your learning notes.</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>Claude Design is the perfect AI tool for beginners to learn design basics while creating useful presentations. With its simple prompts, intuitive editing, and no-coding interactivity, you can focus on learning AI concepts instead of struggling with design software. Start with a simple topic (like your AI learning plan) and practice generating 1-2 decks &mdash; you will be surprised how quickly you can create professional-looking slides!</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/how-to-choose-right-ai-tool">Which AI Tool Should You Use? A Decision Framework for Beginners &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI 教程 &middot; <strong>独立文章</strong></p>
+<p><strong>前置要求：</strong> 一个网页浏览器，不需要设计或编程经验。</p>
+</div>
+
+<h2>1. 什么是 Claude Design？（给纯新手）</h2>
+
+<p>Claude Design 是一款 AI 工具，能帮你通过自然语言提示词创建演示文稿幻灯片（类似 PowerPoint 或 Google Slides）。与其他 AI 设计工具不同，它专注于<strong>简洁</strong>和<strong>可编辑性</strong>：</p>
+
+<ul>
+<li>不需要设计经验——只需描述你想要的效果。</li>
+<li>生成的幻灯片完全可调整（修改文字、颜色、布局）。</li>
+<li>无需编码即可支持基本交互（如可点击元素、简单动画）。</li>
+</ul>
+
+<p>它基于 Claude 的视觉推理能力，能理解你的设计偏好（比如"极简风格"或"色彩丰富"）并将其转化为一致的幻灯片。</p>
+
+<h2>2. 第一步：生成你的第一个幻灯片（5分钟设置）</h2>
+
+<p>你不需要安装任何软件——Claude Design 直接在浏览器里运行。按以下步骤操作：</p>
+
+<ol>
+<li>打开 Claude Design 网站（基本使用无需注册）。</li>
+<li>输入一个<strong>简单的提示词</strong>（如果不知道怎么写，用这个例子）：</li>
+</ol>
+
+<blockquote>
+<p>"为初学者创建一个关于'AI 入门'的 5 页演示文稿。使用简洁、极简的风格，蓝白配色。幻灯片内容包括：1. 什么是 AI？2. 常用 AI 工具 3. AI 如何工作（简单解释）4. 日常生活中的 AI 例子 5. AI 入门指南。"</p>
+</blockquote>
+
+<ol start="3">
+<li>点击"生成"——Claude 会在 30-60 秒内创建完整的演示文稿。</li>
+</ol>
+
+<h3>给新手的提示：</h3>
+
+<p>如果你对结果不满意，可以用更多细节修改提示词。例如："把文字调大一些（方便阅读），在每个要点旁边加简单图标——不要复杂的图形。"</p>
+
+<h2>3. 第二步：像专业人士一样编辑（不需要设计技能）</h2>
+
+<p>Claude Design 对新手最大的优势在于其直观的编辑工具。你不需要学习设计软件——使用以下 4 个简单功能：</p>
+
+<ul>
+<li><strong>编辑文字</strong>：点击任意文本框并输入来修改内容（比如纠正拼写错误或添加你自己的笔记）。</li>
+<li><strong>调整布局</strong>：拖动元素（文本框、图片）到幻灯片上的任意位置——它们会自动对齐。</li>
+<li><strong>更改颜色</strong>：使用"颜色选择器"（顶部工具栏）更换幻灯片背景或文字颜色——不需要理解色彩理论。</li>
+<li><strong>添加元素</strong>：点击"+"按钮来插入图标、图片或形状（Claude 会根据你的幻灯片主题推荐相关选项）。</li>
+</ul>
+
+<p>例子：为你的"AI 工具"幻灯片添加图标：</p>
+
+<ol>
+<li>点击"+" &gt; "图标"。</li>
+<li>在搜索栏中输入"AI 工具"。</li>
+<li>选择一个图标（如机器人或笔记本电脑）并拖到想要的位置。</li>
+</ol>
+
+<h2>4. 第三步：添加简单交互（让幻灯片更有趣）</h2>
+
+<p>对新手来说，交互并不意味着编码——Claude Design 让你一键添加基本的可点击元素：</p>
+
+<h3>示例：添加可点击按钮跳转到另一张幻灯片</h3>
+
+<ol>
+<li>在第一张幻灯片（标题页）上，点击"+" &gt; "按钮"。</li>
+<li>在按钮上输入"跳转到 AI 示例"。</li>
+<li>在弹出的菜单中选择"链接到幻灯片" &gt; 选择第 4 张（"日常生活中的 AI 例子"）。</li>
+<li>点击"保存"——现在任何人查看你的演示文稿时，都可以点击这个按钮直接跳转到那张幻灯片。</li>
+</ol>
+
+<h3>另一个简单的交互：添加动画</h3>
+
+<ol>
+<li>选择一个文本框（比如幻灯片 2 上的标题）。</li>
+<li>点击"动画"按钮（顶部工具栏）。</li>
+<li>选择一个简单动画（如"淡入"）——不需要调整时间设置（Claude 会自动为新手设置好）。</li>
+</ol>
+
+<h2>5. 第四步：导出和分享演示文稿</h2>
+
+<p>当你对幻灯片满意后，将其导出为可以直接使用的格式：</p>
+
+<ol>
+<li>点击"导出"（右上角）。</li>
+<li>选择适合新手的格式：
+<ul>
+<li><strong>PDF</strong>：用于通过电子邮件分享或打印（在任何设备上都能正常显示）。</li>
+<li><strong>可编辑幻灯片文件</strong>：用于在 PowerPoint/Google Slides 中打开（以后可以进一步修改）。</li>
+</ul>
+</li>
+<li>点击"下载"——你的演示文稿就可以使用了！</li>
+</ol>
+
+<h2>6. 额外福利：免费使用开源图标（无版权问题）</h2>
+
+<p>作为新手，你不需要担心添加图片时的版权问题。Claude Design 集成了免费的开源图标库。添加图标的步骤：</p>
+
+<ol>
+<li>在"+"菜单中，点击"图标" &gt; "开源库"。</li>
+<li>搜索关键词（如"AI"、"笔记本电脑"、"大脑"）。</li>
+<li>选择一个图标——Claude 会将其插入到幻灯片中，你可以通过拖放来调整大小。</li>
+</ol>
+
+<h2>7. 新手应避免的常见错误</h2>
+
+<ul>
+<li>不要使用过于复杂的提示词——每次提示只提 1-2 个要求（例如"把背景颜色改成浅灰色"，而不是一次性提出多个修改）。</li>
+<li>不要在幻灯片上堆砌过多文字——Claude Design 在简洁清晰的要点下表现最好（它会自动为可读性进行格式化）。</li>
+<li>不要跳过编辑环节——生成的幻灯片只是一个起点；调整文字或颜色以匹配你的学习笔记。</li>
+</ul>
+
+<h2>总结</h2>
+
+<p>Claude Design 是新手学习设计基础同时创建实用演示文稿的完美 AI 工具。凭借其简单的提示词系统、直观的编辑和无代码交互，你可以专注于学习 AI 概念，而不是纠结于设计软件。从一个简单的主题开始（比如你的 AI 学习计划），练习生成 1-2 个演示文稿——你会惊讶于自己能如此快速地创建出专业外观的幻灯片！</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/how-to-choose-right-ai-tool">你应该使用哪个 AI 工具？初学者的决策框架 &rarr;</a></p>
+</div>`,
+  },
+
+  "vibe-coding-build-with-ai": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials &middot; <strong>Standalone Article</strong></p>
+<p><strong>Prerequisites:</strong> A computer with internet access. Basic familiarity with using a code editor helps but not required.</p>
+</div>
+
+<h2>1. Essential Tools and Setup</h2>
+
+<p>To start your Vibe Coding journey, you will need three key components:</p>
+
+<ul>
+<li><strong>Code Editor</strong>: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code (VS Code)</a> &mdash; a free, versatile editor ideal for beginners.</li>
+<li><strong>AI Tool</strong>: <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Code</a> &mdash; an AI assistant specialized in understanding and generating code.</li>
+<li><strong>AI Model</strong>: DeepSeek V4 Pro &mdash; a cost-effective and powerful model (only ¥0.78 for the project in this tutorial!).</li>
+</ul>
+
+<h3>Setup Steps:</h3>
+
+<ol>
+<li>Install VS Code from its official website.</li>
+<li>Set up Claude Code by following the official documentation. For example, install it via a single command:</li>
+</ol>
+
+<pre><code class="language-bash">npm install -g @anthropic/claude-code</code></pre>
+
+<ol start="3">
+<li>Configure DeepSeek V4 Pro by accessing its API and integrating it with Claude Code (detailed in DeepSeek's official docs).</li>
+</ol>
+
+<h2>2. From Idea to Project: The Vibe Coding Workflow</h2>
+
+<p>Let us build a <strong>history clipboard tool for macOS</strong> to demonstrate the process.</p>
+
+<h3>Step 1: Define Your Project</h3>
+
+<p>Start by creating a project folder (e.g., <code>HistoryClipboard</code>) and open it in VS Code. This gives your project a home and allows VS Code to manage files.</p>
+
+<h3>Step 2: Communicate Your Requirements to AI</h3>
+
+<p>Clearly articulate your needs to the AI. Use this template for clarity:</p>
+
+<ul>
+<li><strong>What software?</strong> A history clipboard tool for macOS.</li>
+<li><strong>What features?</strong> Track copied text/links, display history, search, and pin items.</li>
+<li><strong>UI/UX?</strong> A clean, minimalist interface with a search bar and list view.</li>
+<li><strong>Design style?</strong> Light mode, blue accents, and smooth animations.</li>
+</ul>
+
+<p>Example prompt for DeepSeek:
+<em>"I am a coding beginner. I want a macOS app that tracks clipboard history. It should let users view, search, and pin items. The UI should be clean with a search bar and list. Use light mode with blue accents. Let me know if you need more details."</em></p>
+
+<h3>Step 3: Let AI Plan the Work</h3>
+
+<p>Use <strong>Plan Mode</strong> in Claude Code to let the AI outline development steps. This mode helps the AI ask targeted questions (e.g., "Do you want the app to start on login?") to refine requirements.</p>
+
+<p>For example, when building the clipboard tool, the AI might ask:</p>
+
+<ul>
+<li>"Should the app run in the background?"</li>
+<li>"What file format should store history?"</li>
+<li>"Do you need cloud sync?"</li>
+</ul>
+
+<p>Respond to these to solidify the project scope.</p>
+
+<h3>Step 4: Code Generation with AI</h3>
+
+<p>Once requirements are clear, instruct the AI to generate code. For a macOS app, you might need Swift code. Ask the AI:
+<em>"Generate the Swift code for a macOS clipboard history app with a search bar, list view, and pin feature. Ensure it can run in Xcode."</em></p>
+
+<p>The AI will output files like <code>AppDelegate.swift</code> and <code>MainWindowController.swift</code>. Here is a snippet of generated code for clipboard monitoring:</p>
+
+<pre><code class="language-swift">import Cocoa
+
+class ClipboardMonitor {
+    private let pasteboard = NSPasteboard.general
+    private var changeCount = 0
+    private var timer: Timer?
+
+    init() {
+        changeCount = pasteboard.changeCount
+        startMonitoring()
+    }
+
+    private func startMonitoring() {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+            self?.checkForChanges()
+        }
+    }
+
+    private func checkForChanges() {
+        let newChangeCount = pasteboard.changeCount
+        if newChangeCount != changeCount {
+            changeCount = newChangeCount
+            // Notify the app of new clipboard content
+            NotificationCenter.default.post(name: Notification.Name("ClipboardChanged"), object: nil)
+        }
+    }
+}</code></pre>
+
+<h3>Step 5: Test and Run in Xcode</h3>
+
+<p>To run a macOS app, you need <a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode</a>. Open the project in Xcode and click the "Run" button. If the app launches and appears in the Dock, you have succeeded!</p>
+
+<p>For our clipboard tool, test by copying text (e.g., "Hello, Vibe Coding!") &mdash; it should appear in the app's history list.</p>
+
+<h3>Step 6: Iterate and Optimize</h3>
+
+<p>If the app needs tweaks (e.g., a larger window or faster search), take a screenshot and prompt the AI:
+<em>"The app window is too small. Resize it to 600x400 pixels. See the screenshot for reference."</em></p>
+
+<p>The AI will update the code (e.g., modify <code>MainWindowController.swift</code> to set the window size).</p>
+
+<h2>3. Cost and Efficiency</h2>
+
+<p>DeepSeek V4 Pro is remarkably cost-effective. The entire clipboard project cost only ¥0.78, using 8.4M tokens. This makes Vibe Coding accessible even for those on a budget.</p>
+
+<h2>4. Conclusion</h2>
+
+<p>Vibe Coding democratizes software development. With tools like VS Code, Claude Code, and DeepSeek V4 Pro, you can turn ideas into working apps by just talking to AI. The hardest part is taking the first step &mdash; so start today, and let AI bring your software visions to life!</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/vibecoding-workflow-110k-stars">Vibecoding Workflow: The 110K Star Open-Source Tool for AI-Powered Coding &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI 教程 &middot; <strong>独立文章</strong></p>
+<p><strong>前置要求：</strong> 一台能上网的电脑。会使用代码编辑器更好，但不是必需的。</p>
+</div>
+
+<h2>1. 必备工具和环境配置</h2>
+
+<p>要开始你的 Vibe Coding 之旅，你需要三个关键组件：</p>
+
+<ul>
+<li><strong>代码编辑器</strong>：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code (VS Code)</a> &mdash; 一款免费、多功能、适合新手的编辑器。</li>
+<li><strong>AI 工具</strong>：<a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Code</a> &mdash; 专门理解和生成代码的 AI 助手。</li>
+<li><strong>AI 模型</strong>：DeepSeek V4 Pro &mdash; 性价比极高的强大模型（本教程的项目仅花费 0.78 元！）。</li>
+</ul>
+
+<h3>配置步骤：</h3>
+
+<ol>
+<li>从官网下载安装 VS Code。</li>
+<li>按照官方文档设置 Claude Code。例如，通过一个命令安装：</li>
+</ol>
+
+<pre><code class="language-bash">npm install -g @anthropic/claude-code</code></pre>
+
+<ol start="3">
+<li>通过 API 接入并配置 DeepSeek V4 Pro 与 Claude Code 集成（详见 DeepSeek 官方文档）。</li>
+</ol>
+
+<h2>2. 从想法到项目：Vibe Coding 工作流</h2>
+
+<p>让我们构建一个 <strong>macOS 剪贴板历史工具</strong>来演示整个过程。</p>
+
+<h3>第一步：定义项目</h3>
+
+<p>首先创建一个项目文件夹（比如 <code>HistoryClipboard</code>），然后在 VS Code 中打开它。这为你的项目提供了一个家，也让 VS Code 可以管理文件。</p>
+
+<h3>第二步：向 AI 传达需求</h3>
+
+<p>把你的需求清晰地告诉 AI。使用这个模板来保持清晰：</p>
+
+<ul>
+<li><strong>什么软件？</strong> 一个 macOS 剪贴板历史工具。</li>
+<li><strong>什么功能？</strong> 跟踪复制过的文本/链接、显示历史记录、搜索和置顶。</li>
+<li><strong>界面设计？</strong> 简洁、极简的界面，带有搜索栏和列表视图。</li>
+<li><strong>设计风格？</strong> 浅色模式、蓝色强调色、流畅动画。</li>
+</ul>
+
+<p>给 DeepSeek 的提示词示例：
+<em>"我是一个编程新手。我想要一个能跟踪剪贴板历史的 macOS 应用。它应该让用户可以查看、搜索和置顶项目。界面要简洁，有搜索栏和列表。使用浅色模式和蓝色强调色。如需更多细节请告诉我。"</em></p>
+
+<h3>第三步：让 AI 规划工作</h3>
+
+<p>在 Claude Code 中使用<strong>规划模式</strong>，让 AI 列出开发步骤。这种模式能帮助 AI 提出有针对性的问题（比如"你希望应用在登录时自动启动吗？"）来完善需求。</p>
+
+<p>例如，在构建剪贴板工具时，AI 可能会问：</p>
+
+<ul>
+<li>"应用应该在后台运行吗？"</li>
+<li>"用什么文件格式存储历史记录？"</li>
+<li>"需要云同步吗？"</li>
+</ul>
+
+<p>回答这些问题来确定项目范围。</p>
+
+<h3>第四步：用 AI 生成代码</h3>
+
+<p>需求明确后，指示 AI 生成代码。对于 macOS 应用，你可能需要 Swift 代码。向 AI 提问：
+<em>"为一个 macOS 剪贴板历史应用生成 Swift 代码，包含搜索栏、列表视图和置顶功能。确保它能在 Xcode 中运行。"</em></p>
+
+<p>AI 会输出类似 <code>AppDelegate.swift</code> 和 <code>MainWindowController.swift</code> 这样的文件。以下是生成的剪贴板监控代码片段：</p>
+
+<pre><code class="language-swift">import Cocoa
+
+class ClipboardMonitor {
+    private let pasteboard = NSPasteboard.general
+    private var changeCount = 0
+    private var timer: Timer?
+
+    init() {
+        changeCount = pasteboard.changeCount
+        startMonitoring()
+    }
+
+    private func startMonitoring() {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+            self?.checkForChanges()
+        }
+    }
+
+    private func checkForChanges() {
+        let newChangeCount = pasteboard.changeCount
+        if newChangeCount != changeCount {
+            changeCount = newChangeCount
+            // 通知应用剪贴板内容已更新
+            NotificationCenter.default.post(name: Notification.Name("ClipboardChanged"), object: nil)
+        }
+    }
+}</code></pre>
+
+<h3>第五步：在 Xcode 中测试运行</h3>
+
+<p>要运行 macOS 应用，你需要 <a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode</a>。在 Xcode 中打开项目，点击"运行"按钮。如果应用启动并在 Dock 中出现，恭喜你成功了！</p>
+
+<p>对于我们的剪贴板工具，测试方法：复制一段文字（比如"你好，Vibe Coding！"）——它应该出现在应用的历史记录列表中。</p>
+
+<h3>第六步：迭代优化</h3>
+
+<p>如果应用需要调整（比如窗口更大或搜索更快），截个图然后提示 AI：
+<em>"应用窗口太小了。把它调整到 600x400 像素。参见截图参考。"</em></p>
+
+<p>AI 会更新代码（比如修改 <code>MainWindowController.swift</code> 来设置窗口大小）。</p>
+
+<h2>3. 成本与效率</h2>
+
+<p>DeepSeek V4 Pro 性价比极高。整个剪贴板项目仅花费 0.78 元，使用了 840 万 token。这让 Vibe Coding 即使是预算有限的人也能轻松使用。</p>
+
+<h2>4. 总结</h2>
+
+<p>Vibe Coding 正在实现软件开发的民主化。借助 VS Code、Claude Code 和 DeepSeek V4 Pro 等工具，你只需要和 AI 对话就能把想法变成可运行的应用。最难的部分是迈出第一步——所以从今天开始吧，让 AI 把你的软件愿景变为现实！</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/vibecoding-workflow-110k-stars">Vibecoding 工作流：11 万星标的 AI 编程开源工具 &rarr;</a></p>
+</div>`,
+  },
+
 
 };

@@ -1524,4 +1524,49 @@ export const articles: Article[] = [
     toolsMentioned: ["claude"],
     date: "2026-06-04",
   },
+  {
+    slug: "6-trending-github-ai-projects-beginners",
+    title: "6 Trending GitHub AI Projects for Absolute Beginners: Easy Local Setup Tutorial",
+    titleZh: "6个最热GitHub AI项目：绝对新手也能轻松本地部署",
+    description:
+      "Six hot open-source AI tools from GitHub trending list, with simplified installation steps for beginners with zero coding background to run on regular laptops.",
+    descriptionZh:
+      "精选GitHub热门趋势榜上的6个开源AI工具，为零编程基础的新手提供简化安装步骤，普通笔记本就能跑。",
+    category: "ai-tutorials",
+    tags: ["github", "open-source", "local-setup", "beginner", "tutorial", "ai-trending"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-05",
+  },
+
+  {
+    slug: "mastering-claude-design-presentations",
+    title: "Mastering Claude Design for AI Beginners: Create Interactive, Editable Presentations Easily",
+    titleZh: "掌握Claude Design：AI新手也能轻松制作交互式可编辑演示文稿",
+    description:
+      "Step-by-step guide to Claude Design — create professional, interactive presentations with AI prompts. No coding or design skills needed.",
+    descriptionZh:
+      "Claude Design分步指南——用AI提示词创建专业的交互式演示文稿，无需编程或设计技能。",
+    category: "ai-tutorials",
+    tags: ["claude-design", "presentation", "ai-tools", "design", "beginner", "tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-05",
+  },
+
+  {
+    slug: "vibe-coding-build-with-ai",
+    title: "Vibe Coding: Build Software by Talking to AI – A Practical Guide for Beginners",
+    titleZh: "Vibe Coding：和AI聊天就能开发软件——新手实战指南",
+    description:
+      "Learn Vibe Coding — build applications by communicating your ideas to AI. Practical steps from setup to deployment for absolute beginners.",
+    descriptionZh:
+      "学习Vibe Coding——通过向AI表达想法来构建应用程序。从零开始到部署的实战步骤。",
+    category: "ai-tutorials",
+    tags: ["vibe-coding", "ai-coding", "claude-code", "cursor", "beginner", "software-development"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "cursor", "chatgpt"],
+    date: "2026-06-05",
+  },
+
 ];
