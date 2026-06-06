@@ -24564,4 +24564,423 @@ if __name__ == "__main__":
 <p><strong>下一篇：</strong> <a href="/article/open-source-ai-models-run-on-laptop">2026年开源AI模型：哪些可以在你的笔记本上运行 &rarr;</a></p>
 </div>`,
   },
+
+  // ====== Enhance Claude Code Customizations ======
+  "enhance-claude-code-customizations": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Claude Code Customization Guide · Difficulty: Intermediate</p>
+<p><strong>What you'll learn:</strong> How to extend Claude Code with MCP tools for web search, webpage parsing, and image recognition, plus customize the HUD plugin for Coding Plan monitoring.</p>
+</div>
+
+<p>If you've been struggling with Claude Code's limitations like no web search, image recognition issues, or webpage parsing troubles, this guide is for you. We'll explore practical tools and customizations to supercharge your Claude Code usage, with step-by-step hands-on instructions.</p>
+
+<h2>Unlock Core Capabilities with MCP</h2>
+
+<p>MCP, short for Model Context Protocol, acts as a bridge between AI and external software, enabling features like web search, webpage parsing, and image recognition. Here are three essential open-source MCP tools from GitHub that can supercharge your Claude Code experience.</p>
+
+<h3>1. brave-search-mcp-server for Web Search</h3>
+
+<p>To enable web search in Claude Code, <strong>brave-search-mcp-server</strong> is a top choice. It boasts an independent search index and AI-friendly data output.</p>
+
+<p><strong>Step 1: Get a Brave Search API Key</strong><br>
+Obtain your API key (for free tier details, consult Gemini or Brave's official docs).</p>
+
+<p><strong>Step 2: Install via Terminal</strong><br>
+Run the following command (replace <code>YOUR_API_KEY</code> with your actual key):</p>
+
+<pre><code class="language-powershell">claude mcp add brave-search --api-key YOUR_API_KEY --npm -y @brave-search-mcp-server</code></pre>
+
+<p><strong>Usage:</strong> Simply prompt Claude Code with "帮我搜一下 XXXX" (Help me search for XXXX), and it will automatically invoke the brave-search tool.</p>
+
+<h3>2. server-fetch for Webpage Parsing</h3>
+
+<p><strong>server-fetch</strong> filters out clutter from webpages, extracting only core code and text for AI analysis.</p>
+
+<p><strong>Installation Command:</strong></p>
+
+<pre><code class="language-powershell">claude mcp add fetch --npm -y @modelcontextprotocol/server-fetch</code></pre>
+
+<p><strong>Usage:</strong> Share a webpage link with Claude Code, e.g., "按这个链接里的开源项目说明，帮我搭个环境" (Help me set up the environment according to the open-source project instructions in this link), and it will efficiently parse the page.</p>
+
+<h3>3. Screenshot MCP for Image Recognition</h3>
+
+<p><strong>Screenshot MCP</strong> lets Claude Code capture your screen or specific windows to identify bugs or analyze visual content.</p>
+
+<p><strong>Installation Command:</strong></p>
+
+<pre><code class="language-powershell">claude mcp add screenshot --npm -y mcp-screenshot-service</code></pre>
+
+<p><strong>Usage:</strong> When facing a broken program, just say "看下我现在的屏幕，帮我找 bug 出在哪" (Look at my current screen and help me find where the bug is), and it will automatically capture and analyze the screen.</p>
+
+<h2>Customize the Claude HUD Plugin for Coding Plan Monitoring</h2>
+
+<p>If you use a domestic Coding Plan and find the default Claude HUD plugin does not support it, you can customize it with Claude Code.</p>
+
+<h3>Step 1: Analyze the Plugin and Mechanism</h3>
+
+<ul>
+<li>Claude Code's CLI offers high flexibility, and the plugin is open-source, making modification feasible.</li>
+<li>Notice that the mechanism of Claude's subscription and domestic Coding Plan (5-hour and weekly limits) is similar, so we can replace the data source.</li>
+</ul>
+
+<h3>Step 2: Implement the Customization</h3>
+
+<ol>
+<li><p><strong>Search for Coding Plan Data Access Methods</strong><br>
+Ask Claude Code: "Use brave-search to find how to get data for my coding plan".</p></li>
+<li><p><strong>Replace Data in the Plugin Code</strong><br>
+Instruct Claude Code to write a script to replace the Claude subscription data section in the plugin with your Coding Plan data. Use the command below as a reference (adjust based on your actual plugin structure):</p>
+
+<pre><code class="language-javascript">// Sample script snippet to replace data source
+function fetchCodingPlanData() {
+  // Your logic to fetch Coding Plan data
+  return {
+    contextUsage: "2%",
+    hourlyUsage: "4h 21m",
+    weeklyUsage: "3d 19h"
+  };
+}
+// Replace the original Claude data fetching function</code></pre></li>
+<li><p><strong>Set Auto-Refresh</strong><br>
+Configure the plugin to refresh every 5 minutes to ensure real-time data.</p></li>
+</ol>
+
+<h2>Conclusion</h2>
+
+<p>By leveraging MCP tools and customizing plugins, you can transform Claude Code into a more powerful, tailored AI tool. Remember, the key to mastering AI tools lies in understanding their principles and getting hands-on. Explore more MCP tools on GitHub and keep experimenting to unlock even more potential!</p>
+
+<h2>FAQ</h2>
+
+<h3>Q: Do I need programming skills to install MCP tools?</h3>
+<p>No. Installing MCP tools requires only running a few terminal commands. Basic familiarity with copy-paste and running commands in PowerShell or Terminal is sufficient.</p>
+
+<h3>Q: Can I use MCP tools with other AI assistants?</h3>
+<p>Yes. While this guide focuses on Claude Code, MCP is an open protocol. Tools like Cursor, VS Code extensions, and other AI coding assistants that support MCP can also use these tools.</p>
+
+<h3>Q: Are there risks to installing MCP tools?</h3>
+<p>MCP tools have access to your system (files, network, browser). Only install tools from trusted sources like the official MCP GitHub organization or well-maintained open-source projects. Review what each tool does before installing.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/claude-code-install-setup">Claude Code Installation &amp; Setup: From Zero to Your First AI-Generated Web Page →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> Claude Code 自定义指南 · 难度：中级</p>
+<p><strong>你将学到：</strong> 如何使用MCP工具扩展Claude Code实现网页搜索、页面解析和图像识别，以及自定义HUD插件来监控编程计划（Coding Plan）使用情况。</p>
+</div>
+
+<p>如果你一直在为Claude Code的限制而苦恼，比如无法联网搜索、图像识别不灵、网页解析困难，这篇文章就是为你准备的。我们将探索实用的工具和自定义配置，大幅提升你的Claude Code使用体验，附带一步步的实操指导。</p>
+
+<h2>用MCP解锁核心能力</h2>
+
+<p>MCP（Model Context Protocol，模型上下文协议）是AI与外部软件之间的桥梁，可以实现网页搜索、页面解析和图像识别等功能。以下是三个来自GitHub的开源MCP工具，可以大幅提升你的Claude Code体验。</p>
+
+<h3>1. brave-search-mcp-server：网页搜索</h3>
+
+<p>要在Claude Code中启用网页搜索，<strong>brave-search-mcp-server</strong> 是最佳选择。它拥有独立的搜索索引和AI友好的数据输出格式。</p>
+
+<p><strong>第一步：获取Brave Search API密钥</strong><br>
+获取你的API密钥（免费套餐详情请查阅Gemini或Brave官方文档）。</p>
+
+<p><strong>第二步：通过终端安装</strong><br>
+运行以下命令（将 <code>YOUR_API_KEY</code> 替换为你的实际密钥）：</p>
+
+<pre><code class="language-powershell">claude mcp add brave-search --api-key YOUR_API_KEY --npm -y @brave-search-mcp-server</code></pre>
+
+<p><strong>使用方法：</strong> 直接告诉Claude Code "帮我搜一下XXXX"，它会自动调用brave-search工具完成搜索。</p>
+
+<h3>2. server-fetch：网页内容解析</h3>
+
+<p><strong>server-fetch</strong> 可以过滤网页中的杂乱内容，只提取核心代码和文本供AI分析。</p>
+
+<p><strong>安装命令：</strong></p>
+
+<pre><code class="language-powershell">claude mcp add fetch --npm -y @modelcontextprotocol/server-fetch</code></pre>
+
+<p><strong>使用方法：</strong> 把网页链接分享给Claude Code，比如"按这个链接里的开源项目说明，帮我搭个环境"，它会高效解析页面内容。</p>
+
+<h3>3. Screenshot MCP：图像识别</h3>
+
+<p><strong>Screenshot MCP</strong> 让Claude Code能够截取你的屏幕或特定窗口，用于识别bug或分析视觉内容。</p>
+
+<p><strong>安装命令：</strong></p>
+
+<pre><code class="language-powershell">claude mcp add screenshot --npm -y mcp-screenshot-service</code></pre>
+
+<p><strong>使用方法：</strong> 当程序出问题时，直接说"看下我现在的屏幕，帮我找 bug 出在哪"，它会自动截屏并分析。</p>
+
+<h2>为Coding Plan监控自定义Claude HUD插件</h2>
+
+<p>如果你使用的是国内编程计划（Coding Plan），发现默认的Claude HUD插件不支持它，可以用Claude Code自行定制。</p>
+
+<h3>第一步：分析插件与机制</h3>
+
+<ul>
+<li>Claude Code的CLI灵活性很高，插件也是开源的，修改起来可行。</li>
+<li>Claude订阅与国内Coding Plan（5小时和每周限额）的机制类似，因此可以替换数据源。</li>
+</ul>
+
+<h3>第二步：实现自定义</h3>
+
+<ol>
+<li><p><strong>查找Coding Plan数据访问方法</strong><br>
+让Claude Code用brave-search搜索如何获取Coding Plan的数据。</p></li>
+<li><p><strong>替换插件中的数据源</strong><br>
+让Claude Code写一个脚本，将插件中Claude订阅数据部分替换为你的Coding Plan数据。参考以下代码（根据实际插件结构调整）：</p>
+
+<pre><code class="language-javascript">// 替换数据源的示例脚本片段
+function fetchCodingPlanData() {
+  // 获取 Coding Plan 数据的逻辑
+  return {
+    contextUsage: "2%",
+    hourlyUsage: "4h 21m",
+    weeklyUsage: "3d 19h"
+  };
+}
+// 替换原始的 Claude 数据获取函数</code></pre></li>
+<li><p><strong>设置自动刷新</strong><br>
+将插件配置为每5分钟刷新一次，确保数据实时更新。</p></li>
+</ol>
+
+<h2>总结</h2>
+
+<p>通过使用MCP工具和自定义插件，你可以将Claude Code变成一个更强大、更个性化的AI工具。记住，掌握AI工具的关键在于理解原理并亲手实践。去GitHub上探索更多MCP工具，不断实验，解锁更多潜力吧！</p>
+
+<h2>常见问题</h2>
+
+<h3>问：安装MCP工具需要编程技能吗？</h3>
+<p>不需要。安装MCP工具只需要运行几个终端命令。掌握基本的复制粘贴和在PowerShell或终端中运行命令的能力就足够了。</p>
+
+<h3>问：MCP工具可以和其他AI助手一起使用吗？</h3>
+<p>可以。虽然本指南专注于Claude Code，但MCP是一个开放协议。支持MCP的Cursor、VS Code扩展和其他AI编程助手同样可以使用这些工具。</p>
+
+<h3>问：安装MCP工具有风险吗？</h3>
+<p>MCP工具可以访问你的系统（文件、网络、浏览器）。请只从可信来源安装工具，比如官方的MCP GitHub组织或维护良好的开源项目。安装前了解每个工具的功能。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-install-setup">Claude Code安装与配置：从零开始到你的第一个AI网页 →</a></p>
+</div>`,
+  },
+
+  // ====== Claude Code Automate While Sleep ======
+  "claude-code-automate-while-sleep": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Claude Code Productivity Guide · Difficulty: Beginner</p>
+<p><strong>What you'll learn:</strong> How to use Claude Code's /goal, /loop, /batch, /simplify, /debug, and /doctor commands to automate tasks autonomously — even while you sleep.</p>
+</div>
+
+<p>As developers, we often find ourselves stuck in a repetitive cycle when using AI coding assistants like Claude Code — constantly prompting, reviewing, and prompting again. This not only drains our energy but also limits the efficiency of AI. However, by leveraging specific commands, we can transform Claude Code into a self-sufficient worker that completes tasks autonomously, even while we sleep.</p>
+
+<h2>1. /goal: Define Completion Criteria and Let It Run</h2>
+
+<p>The <code>/goal</code> command is the cornerstone of autonomous task execution. Instead of micromanaging each iteration, you define clear completion conditions, and Claude Code will keep working until those conditions are met.</p>
+
+<p><strong>How It Works:</strong> When you use <code>/goal</code>, you specify concrete success metrics (e.g., "All tests in <code>/test/auth</code> must pass" or "The login page renders without errors"). A built-in evaluator (powered by Haiku) then checks after each iteration if the goal is achieved.</p>
+
+<p><strong>Best Practices:</strong></p>
+
+<ul>
+<li><strong>Be Specific:</strong> Avoid vague goals like "Fix the bug." Instead, write something like:</li>
+</ul>
+
+<pre><code class="language-plaintext">/goal Ensure all tests in /test/auth pass, npm test exits with code 0, and no other test files are modified.</code></pre>
+
+<ul>
+<li><strong>Use Safeguards:</strong> You can set limits like maximum iterations or timeouts:</li>
+</ul>
+
+<pre><code class="language-plaintext">/goal Complete the user dashboard with all CRUD operations working. Stop after 20 iterations or 30 minutes.</code></pre>
+
+<ul>
+<li><strong>Check Status or Cancel:</strong> Use <code>/goal</code> to check progress or <code>/goal clear</code> to cancel the task.</li>
+</ul>
+
+<p>To fully leverage <code>/goal</code>, combine it with a clear spec (including objectives, acceptance criteria, and boundaries), then enable Auto Mode to reduce tool confirmation prompts. This lets you step away while Claude Code works.</p>
+
+<h2>2. /loop: Monitor Status at Intervals</h2>
+
+<p>When you need to track ongoing processes (e.g., deployment status, long-running builds), <code>/loop</code> is invaluable. It periodically checks the state so you don't have to.</p>
+
+<p><strong>Usage Scenarios:</strong></p>
+
+<ul>
+<li><p>Check deployment status every 5 minutes:</p>
+
+<pre><code class="language-plaintext">/loop 5m Check if the production deployment is live and returns a 200 OK.</code></pre></li>
+<li><p>Let Claude Code dynamically adjust the interval (shorter when near completion, longer when idle):</p>
+
+<pre><code class="language-plaintext">/loop Check the progress of the data migration job.</code></pre></li>
+<li><p>Run maintenance checks using default instructions (from <code>.claude/loop.md</code>):</p>
+
+<pre><code class="language-plaintext">/loop</code></pre></li>
+</ul>
+
+<p><strong>Limitations:</strong> <code>/loop</code> isn't a 24/7 background service. It works within the current session and consumes tokens even when there's no change. For event-driven needs (e.g., code review comments), use event-driven notifications instead.</p>
+
+<h2>3. /batch: Split Large Tasks Into Manageable Units</h2>
+
+<p>For big projects (e.g., migrating a codebase to a new framework), <code>/batch</code> splits the work into 5-30 independent units, each handled by a background subagent.</p>
+
+<p><strong>Workflow:</strong></p>
+
+<ol>
+<li><p>Provide a high-level change description:</p>
+
+<pre><code class="language-plaintext">/batch Migrate the entire codebase from React Class Components to Function Components with Hooks.</code></pre></li>
+<li><p>Review and confirm the split plan. Ensure boundaries, dependencies, and file scopes are clear to avoid conflicting changes.</p></li>
+<li><p>Each subagent works in its own Git worktree, and changes are merged into a single pull request.</p></li>
+</ol>
+
+<p><strong>Critical Note:</strong> The success of <code>/batch</code> depends on proper splitting. Always review the plan thoroughly before approval.</p>
+
+<h2>4. /simplify: Refine and Clean Up After Changes</h2>
+
+<p>After implementing a feature or fix, <code>/simplify</code> optimizes the code by reusing helpers, simplifying logic, and fixing security issues.</p>
+
+<p><strong>How to Use:</strong> Run it after a change:</p>
+
+<pre><code class="language-plaintext">/simplify Review the recently added payment processing module for code simplicity and security.</code></pre>
+
+<p><strong>Version Consideration:</strong> Since v2.1.154, <code>/simplify</code> focuses less on correctness bugs (use <code>/code-review</code> for that). Treat it as a pre-commit cleanup tool, and always verify with tests, linters, and manual reviews.</p>
+
+<h2>5. /debug and /doctor: Troubleshoot Issues</h2>
+
+<p>When Claude Code malfunctions (e.g., hooks not triggering, tools not loading), use these commands:</p>
+
+<p><strong>/debug:</strong> Diagnose issues within Claude Code's workflow. It provides structured logs to identify problems like uninvoked skills or deprecated API suggestions:</p>
+
+<pre><code class="language-plaintext">/debug Investigate why the database connection hook isn't triggering.</code></pre>
+
+<p><strong>/doctor:</strong> Fix environment, installation, or configuration issues. Run it first if Claude Code fails to start:</p>
+
+<pre><code class="language-plaintext">/doctor Check and fix the local development environment setup.</code></pre>
+
+<h2>Putting It All Together</h2>
+
+<p>The key to autonomous AI coding is clear goal definition. By using <code>/goal</code> with precise specs, complementing it with <code>/loop</code> for status tracking, <code>/batch</code> for large tasks, <code>/simplify</code> for refinement, and <code>/debug</code>/<code>/doctor</code> for troubleshooting, you can turn Claude Code into a reliable teammate that works while you rest. Remember, the AI is only as good as the instructions you give — so define your endpoints clearly, and let it handle the rest.</p>
+
+<h2>FAQ</h2>
+
+<h3>Q: Do I need to be an experienced developer to use these commands?</h3>
+<p>No. These commands are designed for all skill levels. Beginners can start with simple <code>/goal</code> and <code>/loop</code> commands, then gradually adopt <code>/batch</code> and <code>/simplify</code> as they become more comfortable.</p>
+
+<h3>Q: Can I run multiple /goal tasks simultaneously?</h3>
+<p>No. Claude Code focuses on one autonomous task at a time. For parallel work, use <code>/batch</code> which spawns multiple subagents in separate worktrees.</p>
+
+<h3>Q: Will these commands consume my API credits even when idle?</h3>
+<p>Yes, to some extent. <code>/loop</code> continues to check status at intervals, which uses tokens. <code>/goal</code> only consumes tokens when actively making changes. Use conservative loop intervals and set clear completion criteria to minimize waste.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/claude-code-browser-automation">Efficient Browser Control with Claude Code: Minimize Token Consumption →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> Claude Code 效率指南 · 难度：初级</p>
+<p><strong>你将学到：</strong> 如何使用Claude Code的 /goal、/loop、/batch、/simplify、/debug 和 /doctor 命令来自动化执行任务——即使在你睡觉时也能工作。</p>
+</div>
+
+<p>作为开发者，我们经常发现自己陷入了使用AI编程助手（如Claude Code）时的重复循环——不断提示、审查、再提示。这不仅消耗我们的精力，也限制了AI的效率。但是，通过利用特定的命令，我们可以将Claude Code转变为一个自给自足的工人，即使在我们睡觉时也能自主完成任务。</p>
+
+<h2>1. /goal：定义完成标准，让它自动运行</h2>
+
+<p><code>/goal</code> 命令是自主任务执行的基石。你不需要逐轮手动干预，只需定义清晰的完成条件，Claude Code会持续工作直到这些条件达成。</p>
+
+<p><strong>工作原理：</strong> 使用 <code>/goal</code> 时，你指定具体的成功指标（例如"/test/auth中的所有测试必须通过"或"登录页面无错误渲染"）。内置评估器（由Haiku驱动）会在每次迭代后检查目标是否达成。</p>
+
+<p><strong>最佳实践：</strong></p>
+
+<ul>
+<li><strong>具体明确：</strong> 避免模糊的目标如"修复bug"。应该这样写：</li>
+</ul>
+
+<pre><code class="language-plaintext">/goal 确保 /test/auth 中的所有测试通过，npm test 退出码为 0，且不修改其他测试文件。</code></pre>
+
+<ul>
+<li><strong>设置安全限制：</strong> 可以限制最大迭代次数或超时时间：</li>
+</ul>
+
+<pre><code class="language-plaintext">/goal 完成用户仪表盘的所有CRUD操作。20次迭代或30分钟后停止。</code></pre>
+
+<ul>
+<li><strong>检查进度或取消：</strong> 使用 <code>/goal</code> 查看进度，使用 <code>/goal clear</code> 取消任务。</li>
+</ul>
+
+<p>要充分发挥 <code>/goal</code> 的威力，将其与清晰的规格说明（包括目标、验收标准和边界条件）结合使用，然后启用自动模式（Auto Mode）减少工具确认提示。这样你就可以放心离开，让Claude Code继续工作。</p>
+
+<h2>2. /loop：定时监控状态</h2>
+
+<p>当你需要跟踪正在运行的进程（如部署状态、长时间构建）时，<code>/loop</code> 非常有用。它会定期检查状态，你无需亲自操作。</p>
+
+<p><strong>使用场景：</strong></p>
+
+<ul>
+<li><p>每5分钟检查一次部署状态：</p>
+
+<pre><code class="language-plaintext">/loop 5m 检查生产环境部署是否上线并返回 200 OK。</code></pre></li>
+<li><p>让Claude Code动态调整检查间隔（接近完成时更短，空闲时更长）：</p>
+
+<pre><code class="language-plaintext">/loop 检查数据迁移任务的进度。</code></pre></li>
+<li><p>使用默认指令（来自 <code>.claude/loop.md</code>）运行维护检查：</p>
+
+<pre><code class="language-plaintext">/loop</code></pre></li>
+</ul>
+
+<p><strong>局限性：</strong> <code>/loop</code> 不是7x24小时的背景服务。它在当前会话内工作，即使没有变化也会消耗Token。对于事件驱动的需求（如代码审查评论），请使用事件驱动通知。</p>
+
+<h2>3. /batch：将大任务拆分为可管理的单元</h2>
+
+<p>对于大型项目（例如将代码库迁移到新框架），<code>/batch</code> 将工作拆分为5-30个独立单元，每个单元由后台子代理处理。</p>
+
+<p><strong>工作流程：</strong></p>
+
+<ol>
+<li><p>提供高层变更描述：</p>
+
+<pre><code class="language-plaintext">/batch 将整个代码库从React Class组件迁移到带有Hooks的函数组件。</code></pre></li>
+<li><p>审查并确认拆分方案。确保边界、依赖关系和文件范围清晰，避免冲突变更。</p></li>
+<li><p>每个子代理在自己的Git工作树中工作，变更最终合并到一个拉取请求中。</p></li>
+</ol>
+
+<p><strong>关键提示：</strong> <code>/batch</code> 的成功取决于合理拆分。在批准之前务必仔细审查方案。</p>
+
+<h2>4. /simplify：变更后的优化和清理</h2>
+
+<p>实现功能或修复问题后，<code>/simplify</code> 通过复用辅助函数、简化逻辑和修复安全问题来优化代码。</p>
+
+<p><strong>使用方法：</strong> 在变更后运行：</p>
+
+<pre><code class="language-plaintext">/simplify 审查最近添加的支付处理模块的代码简洁性和安全性。</code></pre>
+
+<p><strong>版本说明：</strong> 自 v2.1.154 起，<code>/simplify</code> 不再侧重正确性bug（请使用 <code>/code-review</code> 进行审查）。将其视为提交前的清理工具，并始终通过测试、linter和人工审查来验证。</p>
+
+<h2>5. /debug 和 /doctor：排查问题</h2>
+
+<p>当Claude Code出现故障时（例如钩子未触发、工具未加载），使用以下命令：</p>
+
+<p><strong>/debug：</strong> 诊断Claude Code工作流中的问题。它提供结构化日志来识别问题，如技能未调用或已弃用的API建议：</p>
+
+<pre><code class="language-plaintext">/debug 调查为什么数据库连接钩子没有触发。</code></pre>
+
+<p><strong>/doctor：</strong> 修复环境、安装或配置问题。如果Claude Code无法启动，先运行此命令：</p>
+
+<pre><code class="language-plaintext">/doctor 检查并修复本地开发环境设置。</code></pre>
+
+<h2>融会贯通</h2>
+
+<p>自主AI编程的关键在于清晰的目标定义。通过将 <code>/goal</code> 与精确规格说明结合使用，辅以 <code>/loop</code> 进行状态跟踪、<code>/batch</code> 处理大型任务、<code>/simplify</code> 进行优化，以及 <code>/debug</code>/<code>/doctor</code> 进行故障排查，你可以将Claude Code变成一个在你休息时也能工作的可靠队友。记住，AI的能力取决于你给出的指令——所以清晰地定义你的目标，让它处理其余部分。</p>
+
+<h2>常见问题</h2>
+
+<h3>问：使用这些命令需要有经验的开发背景吗？</h3>
+<p>不需要。这些命令面向所有技能水平的用户。初学者可以从简单的 <code>/goal</code> 和 <code>/loop</code> 命令开始，随着熟练度提升再逐步采用 <code>/batch</code> 和 <code>/simplify</code>。</p>
+
+<h3>问：可以同时运行多个 /goal 任务吗？</h3>
+<p>不可以。Claude Code一次只专注于一个自主任务。需要并行工作时，使用 <code>/batch</code>，它会在单独的工作树中生成多个子代理。</p>
+
+<h3>问：这些命令在空闲时也会消耗API额度吗？</h3>
+<p>会，在一定程度上。<code>/loop</code> 会定期检查状态，消耗Token。<code>/goal</code> 只在积极进行变更时消耗Token。使用保守的循环间隔并设置清晰的完成标准来最小化浪费。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-browser-automation">用Claude Code高效操控浏览器：最小化Token消耗 →</a></p>
+</div>`,
+  },
+
 };

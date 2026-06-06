@@ -1585,4 +1585,34 @@ export const articles: Article[] = [
     date: "2026-06-05",
   },
 
+  {
+    slug: "enhance-claude-code-customizations",
+    title: "Enhance Your Claude Code Experience with Practical Tools and Customizations",
+    titleZh: "用实用工具和自定义增强你的Claude Code体验",
+    description:
+      "Extend Claude Code with MCP tools for web search, webpage parsing, and image recognition, plus customize the HUD plugin for Coding Plan monitoring.",
+    descriptionZh:
+      "用MCP工具扩展Claude Code实现网页搜索、页面解析和图像识别，以及自定义HUD插件监控Coding Plan使用情况。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "mcp", "customization", "tools", "productivity"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-06",
+  },
+
+  {
+    slug: "claude-code-automate-while-sleep",
+    title: "How to Let Claude Code Automate Tasks While You Sleep: A Practical Guide to Boosting Productivity",
+    titleZh: "如何在睡眠中让Claude Code自动完成任务：提升生产力的实用指南",
+    description:
+      "Master Claude Code's /goal, /loop, /batch, /simplify, /debug, and /doctor commands to automate development tasks autonomously.",
+    descriptionZh:
+      "掌握Claude Code的/goal、/loop、/batch、/simplify、/debug和/doctor命令，自主自动化开发任务。",
+    category: "ai-use-cases",
+    tags: ["claude-code", "automation", "productivity", "autonomous", "commands"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-06",
+  },
+
 ];
