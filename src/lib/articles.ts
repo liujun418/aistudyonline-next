@@ -1615,4 +1615,19 @@ export const articles: Article[] = [
     date: "2026-06-06",
   },
 
+  {
+    slug: "vibe-coding-ai-beginners-step-by-step",
+    title: "Vibe Coding for AI Beginners: Build Software by Talking to AI (Step-by-Step Guide)",
+    titleZh: "Vibe Coding AI 入门：通过和 AI 对话构建软件（一步步指南）",
+    description:
+      "Learn Vibe Coding step by step — build functional software by talking to AI. Zero coding experience required. Complete guide from setup to deployment.",
+    descriptionZh:
+      "一步步学习 Vibe Coding——通过和 AI 对话来构建功能性软件。无需任何编程经验。从环境搭建到部署的完整指南。",
+    category: "ai-tutorials",
+    tags: ["vibe-coding", "ai-coding", "claude-code", "cursor", "beginner", "software-development"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "cursor", "chatgpt", "vibecoding"],
+    date: "2026-06-06",
+  },
+
 ];

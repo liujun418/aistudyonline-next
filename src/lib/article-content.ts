@@ -24983,4 +24983,262 @@ function fetchCodingPlanData() {
 </div>`,
   },
 
+  // ====== Vibe Coding for AI Beginners: Step-by-Step Guide ======
+  "vibe-coding-ai-beginners-step-by-step": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials &middot; <strong>Standalone Article</strong></p>
+<p><strong>Prerequisites:</strong> A computer with internet access. No coding experience required.</p>
+<p><strong>Reading time:</strong> 10 minutes</p>
+</div>
+
+<h2>1. What is Vibe Coding?</h2>
+
+<p>Vibe Coding is a workflow where you use natural language to communicate with AI tools (like Claude Code and DeepSeek V4 Pro) to design, develop, and deploy software. It&rsquo;s all about translating your ideas into plain language and letting AI handle the technical heavy lifting. No need to learn programming syntax &mdash; just explain what you want, and AI will generate the code for you.</p>
+
+<h2>2. Essential Tools for Vibe Coding (All Free)</h2>
+
+<ul>
+<li><strong>Code Editor</strong>: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code (VS Code)</a> &mdash; A beginner-friendly editor to manage your project files.</li>
+<li><strong>AI Coding Tool</strong>: <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Code</a> &mdash; Helps translate your natural language requests into code.</li>
+<li><strong>AI Model</strong>: <a href="https://deepseek.com/" target="_blank" rel="noopener">DeepSeek V4 Pro</a> &mdash; A powerful model for planning and executing software development tasks.</li>
+</ul>
+
+<h2>3. Step 1: Set Up Your Development Environment</h2>
+
+<p>First, install the necessary tools:</p>
+
+<h3>Install Visual Studio Code</h3>
+
+<ol>
+<li>Go to the <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code download page</a> and install it for your operating system (Windows, macOS, or Linux).</li>
+</ol>
+
+<h3>Install Claude Code (via Terminal)</h3>
+
+<p>Open your terminal (Command Prompt for Windows, Terminal for macOS/Linux) and run:</p>
+
+<pre><code class="language-bash">pip install claude-code</code></pre>
+
+<h3>Set Up DeepSeek API</h3>
+
+<ol>
+<li>Sign up for a <a href="https://deepseek.com/" target="_blank" rel="noopener">DeepSeek account</a> and get your API key.</li>
+<li>In VS Code, create a new file named <code>.env</code> and add your API key:</li>
+</ol>
+
+<pre><code class="language-env">DEEPSEEK_API_KEY=your_api_key_here</code></pre>
+
+<h2>4. Step 2: Start a Project from Scratch</h2>
+
+<p>Let&rsquo;s build a <strong>clipboard history tool</strong> (a simple app that saves and manages your copied text).</p>
+
+<h3>1. Create a Project Folder</h3>
+
+<ul>
+<li>Create a new folder on your computer (e.g., <code>ClipboardHistory</code>).</li>
+<li>Open this folder in VS Code (File &rarr; Open Folder).</li>
+</ul>
+
+<h3>2. Define Your Software Requirements (Talk to AI)</h3>
+
+<p>In Claude Code, write a detailed prompt explaining your idea. Use this template:</p>
+
+<pre><code class="language-text">I&rsquo;m a coding beginner. I want to build a clipboard history tool for macOS. Here&rsquo;s what it should do:
+- Record every text I copy to my clipboard.
+- Display a list of recent clipboard items.
+- Let me search and copy items back to the clipboard.
+- Design style: Clean and minimal, with a light color scheme.</code></pre>
+
+<h3>3. Let AI Plan the Development (Plan Mode)</h3>
+
+<p>Enable <strong>Plan Mode</strong> in Claude Code (this helps AI break down your request into actionable steps). AI will ask you clarifying questions (e.g., &ldquo;Do you want the app to start automatically when your computer boots?&rdquo;). Answer these to refine your requirements.</p>
+
+<h2>5. Step 3: AI Generates Code and Project Structure</h2>
+
+<p>Once your requirements are clear, AI will generate all necessary files and code. In VS Code, you&rsquo;ll see a structure like this:</p>
+
+<pre><code class="language-plaintext">ClipboardHistory/
+├── main.py          # Main application logic
+├── interface.py     # User interface code
+├── clipboard.py     # Clipboard monitoring logic
+└── README.md        # Project documentation</code></pre>
+
+<h3>Run the Initial Code</h3>
+
+<p>To start the app, run this command in your terminal (from the project folder):</p>
+
+<pre><code class="language-bash">python main.py</code></pre>
+
+<h2>6. Step 4: Test and Iterate</h2>
+
+<p>Your first version might be basic, but you can now test and improve it.</p>
+
+<h3>Test the Clipboard Function</h3>
+
+<ol>
+<li>Copy some text (e.g., &ldquo;Hello, Vibe Coding!&rdquo;).</li>
+<li>Check if the app records it. If not, tell AI:</li>
+</ol>
+
+<pre><code class="language-text">The clipboard isn&rsquo;t recording text. Please fix this and explain how to test it.</code></pre>
+
+<h3>Improve the Interface</h3>
+
+<p>If the app&rsquo;s window is too small, take a screenshot and ask AI to fix it:</p>
+
+<pre><code class="language-text">The app window is too small. Please adjust the size to 800x600 pixels. Here&rsquo;s a screenshot of the issue: [attach your screenshot]</code></pre>
+
+<h2>7. Step 5: Optimize and Add Features</h2>
+
+<p>Once the core functionality works, add new features by talking to AI. For example:</p>
+
+<pre><code class="language-text">Add a &ldquo;pin to top&rdquo; feature so I can keep important clipboard items visible. Also, let me delete items I don&rsquo;t need.</code></pre>
+
+<h2>8. Cost and Efficiency</h2>
+
+<p>DeepSeek V4 Pro is incredibly cost-effective. For a project like the clipboard tool, you&rsquo;ll likely spend less than $2 (using around 5 million tokens). To save costs, use the <strong>context compression</strong> feature in Claude Code (click the circular icon at the bottom of the chat window) to reduce unnecessary token usage.</p>
+
+<h2>9. Final Thoughts</h2>
+
+<p>Vibe Coding democratizes software development &mdash; you don&rsquo;t need to be a coder to build useful apps. The key is to <strong>communicate your ideas clearly</strong> and <strong>iterate based on AI&rsquo;s feedback</strong>. Start with a small project (like a to-do list or a simple game) and practice talking to AI &mdash; you&rsquo;ll be surprised at what you can create!</p>
+
+<p>For more beginner-friendly AI tutorials, stay tuned to our website. Happy coding!</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/vibe-coding-build-with-ai">Vibe Coding: Build Software by Talking to AI &mdash; A Practical Guide &rarr;</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI 教程 &middot; <strong>独立文章</strong></p>
+<p><strong>前置要求：</strong> 一台能上网的电脑。不需要任何编程经验。</p>
+<p><strong>阅读时间：</strong> 10 分钟</p>
+</div>
+
+<h2>1. 什么是 Vibe Coding？</h2>
+
+<p>Vibe Coding 是一种工作流——你用自然语言与 AI 工具（如 Claude Code 和 DeepSeek V4 Pro）交流，来设计、开发和部署软件。它的核心思想是把你的想法翻译成通俗的语言，让 AI 来处理繁重的技术工作。你不需要学习编程语法，只需说明你想要什么，AI 就会为你生成代码。</p>
+
+<h2>2. 必备工具（全部免费）</h2>
+
+<ul>
+<li><strong>代码编辑器</strong>：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code (VS Code)</a> — 适合新手使用的编辑器，帮你管理项目文件。</li>
+<li><strong>AI 编程工具</strong>：<a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Code</a> — 把你的自然语言需求翻译成代码。</li>
+<li><strong>AI 模型</strong>：<a href="https://deepseek.com/" target="_blank" rel="noopener">DeepSeek V4 Pro</a> — 用于规划和执行软件开发任务的强大模型。</li>
+</ul>
+
+<h2>3. 第一步：搭建开发环境</h2>
+
+<p>首先，安装必要的工具：</p>
+
+<h3>安装 Visual Studio Code</h3>
+
+<ol>
+<li>前往 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code 下载页面</a>，根据你的操作系统（Windows、macOS 或 Linux）安装。</li>
+</ol>
+
+<h3>安装 Claude Code（通过终端）</h3>
+
+<p>打开终端（Windows 使用命令提示符，macOS/Linux 使用 Terminal），运行：</p>
+
+<pre><code class="language-bash">pip install claude-code</code></pre>
+
+<h3>配置 DeepSeek API</h3>
+
+<ol>
+<li>注册 <a href="https://deepseek.com/" target="_blank" rel="noopener">DeepSeek 账号</a>并获取你的 API 密钥。</li>
+<li>在 VS Code 中新建一个名为 <code>.env</code> 的文件，添加你的 API 密钥：</li>
+</ol>
+
+<pre><code class="language-env">DEEPSEEK_API_KEY=your_api_key_here</code></pre>
+
+<h2>4. 第二步：从零开始一个项目</h2>
+
+<p>让我们构建一个<strong>剪贴板历史工具</strong>（一个保存和管理你复制文本的简单应用）。</p>
+
+<h3>1. 创建项目文件夹</h3>
+
+<ul>
+<li>在你的电脑上新建一个文件夹（比如 <code>ClipboardHistory</code>）。</li>
+<li>在 VS Code 中打开这个文件夹（文件 → 打开文件夹）。</li>
+</ul>
+
+<h3>2. 向 AI 描述你的需求</h3>
+
+<p>在 Claude Code 中写一段详细的提示词来解释你的想法。使用这个模板：</p>
+
+<pre><code class="language-text">我是一个编程新手。我想为 macOS 构建一个剪贴板历史工具。它应该能：
+- 记录我复制到剪贴板的每段文本。
+- 显示最近的剪贴板项目列表。
+- 让我可以搜索并重新复制项目到剪贴板。
+- 设计风格：简洁清爽，浅色配色。</code></pre>
+
+<h3>3. 让 AI 规划开发（规划模式）</h3>
+
+<p>在 Claude Code 中启用<strong>规划模式</strong>（这能帮助 AI 把你的需求拆解成可操作的步骤）。AI 会问你一些澄清性问题（比如"你希望应用在电脑启动时自动运行吗？"）。回答这些问题来完善你的需求。</p>
+
+<h2>5. 第三步：AI 生成代码和项目结构</h2>
+
+<p>需求明确后，AI 会生成所有必要的文件和代码。在 VS Code 中，你会看到类似这样的结构：</p>
+
+<pre><code class="language-plaintext">ClipboardHistory/
+├── main.py          # 主应用逻辑
+├── interface.py     # 用户界面代码
+├── clipboard.py     # 剪贴板监控逻辑
+└── README.md        # 项目文档</code></pre>
+
+<h3>运行初始代码</h3>
+
+<p>要启动应用，在终端中（项目文件夹目录下）运行：</p>
+
+<pre><code class="language-bash">python main.py</code></pre>
+
+<h2>6. 第四步：测试与迭代</h2>
+
+<p>第一个版本可能很基础，但现在你可以测试并改进了。</p>
+
+<h3>测试剪贴板功能</h3>
+
+<ol>
+<li>复制一些文字（比如"你好，Vibe Coding！"）。</li>
+<li>检查应用是否记录了它。如果没有，告诉 AI：</li>
+</ol>
+
+<pre><code class="language-text">剪贴板没有记录文本。请修复这个问题，并说明如何测试。</code></pre>
+
+<h3>改进界面</h3>
+
+<p>如果应用窗口太小，截个图让 AI 来修复：</p>
+
+<pre><code class="language-text">应用窗口太小了。请将尺寸调整为 800x600 像素。这里是问题的截图：[附上你的截图]</code></pre>
+
+<h2>7. 第五步：优化与添加功能</h2>
+
+<p>核心功能正常工作后，通过和 AI 对话来添加新功能。例如：</p>
+
+<pre><code class="language-text">添加一个"置顶"功能，让我可以保持重要的剪贴板项目可见。同时，让我可以删除不需要的项目。</code></pre>
+
+<h2>8. 成本与效率</h2>
+
+<p>DeepSeek V4 Pro 性价比极高。对于剪贴板工具这样的项目，你可能花费不到 2 美元（使用约 500 万 token）。为了节省成本，可以使用 Claude Code 中的<strong>上下文压缩</strong>功能（点击聊天窗口底部的圆形图标）来减少不必要的 token 消耗。</p>
+
+<h2>9. 总结</h2>
+
+<p>Vibe Coding 正在实现软件开发的民主化——你不需要成为程序员也能构建有用的应用。关键是要<strong>清晰地表达你的想法</strong>，并<strong>根据 AI 的反馈进行迭代</strong>。从一个小项目开始（比如待办事项列表或简单游戏），练习与 AI 对话——你会对自己能创造出的东西感到惊讶！</p>
+
+<p>更多适合初学者的 AI 教程，请持续关注我们的网站。祝你编码愉快！</p>
+
+<h2>常见问题</h2>
+
+<h3>问：我真的不需要任何编程知识就能用 Vibe Coding 构建应用吗？</h3>
+<p>是的。Vibe Coding 的核心设计理念就是让非程序员也能创建软件。你只需要用自然语言清晰描述你的需求，AI 会处理所有代码编写工作。当然，了解一些基本概念会让你能更精准地与 AI 对话。</p>
+
+<h3>问：Vibe Coding 适合构建哪些类型的项目？</h3>
+<p>从简单的工具型应用（如剪贴板历史、待办事项列表、记事本）到中型的 Web 应用和自动化脚本都可以。对于非常复杂的企业级系统，Vibe Coding 可以处理原型和 MVP 阶段，但生产级系统还是建议有经验的开发者参与。</p>
+
+<h3>问：使用 DeepSeek V4 Pro 真的很便宜吗？</h3>
+<p>确实如此。DeepSeek V4 Pro 的定价远低于多数同类模型。像本教程中的剪贴板工具这类小型项目，总花费通常不到 2 美元。你可以在 DeepSeek 官网查看最新的价格详情。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/vibe-coding-build-with-ai">Vibe Coding：和 AI 聊天就能开发软件——新手实战指南 &rarr;</a></p>
+</div>`,
+  },
 };
