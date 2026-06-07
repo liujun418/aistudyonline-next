@@ -25241,4 +25241,1149 @@ function fetchCodingPlanData() {
 <p><strong>下一篇：</strong> <a href="/article/vibe-coding-build-with-ai">Vibe Coding：和 AI 聊天就能开发软件——新手实战指南 &rarr;</a></p>
 </div>`,
   },
+"ai-core-terminology-workflows-beginners": {
+    content: `<p>If you are new to AI, you may feel confused by endless buzzwords like Token, Context Window, Prompt, RAG, MCP, Agent and Workflow. These terms are not random jargon. They record the whole evolution path of AI: from a simple chatbot to a powerful system that handles real-world work.</p>
+<p>This article explains each concept in plain language, matches <strong>practical operations, commands and code examples</strong>, and helps zero-based AI learners understand the logic, functions and usage scenarios of these terms step by step. You can apply all the operations directly to mainstream AI tools such as Claude Code and Codex.</p>
+<h2>1. Token & Context Window: How Much Content Can AI Read at One Time?</h2>
+<h3>Basic Definition</h3>
+<p>AI cannot read text like humans. It splits all input content into small basic units called <strong>Tokens</strong>. A Chinese phrase or an English word may be divided into multiple tokens.</p>
+<p><strong>Context Window</strong> refers to the maximum number of tokens an AI model can process and remember in a single session. It determines three core points:</p>
+<ol>
+  <li>The total volume of content AI can view at once</li>
+  <li>The cost of each AI call (most platforms charge by tokens)</li>
+  <li>Why AI forgets early conversation content</li>
+</ol>
+<p>When your dialogue, files, prompts and tool outputs exceed the context window limit, the earliest content will be automatically truncated.</p>
+<h3>Practical Operation & Detection</h3>
+<p>We can check the token usage and context window status via Claude Code CLI.</p>
+<pre><code class="language-bash"># Check current session token usage and remaining context window
+/cli token stats</code></pre>
+<h4>Usage Tips for Beginners</h4>
+<ul>
+  <li>Do not pile all files and history dialogues into one session. Split long content into multiple parts.</li>
+  <li>For models with an 8k token limit, keep the total content below 7k to avoid truncation.</li>
+  <li>Long conversations can use the built-in compression function to save context space.</li>
+</ul>
+<h2>2. Prompt & Prompt Engineering: Let AI Understand Your Tasks Clearly</h2>
+<h3>Basic Definition</h3>
+<p>A <strong>Prompt</strong> is the instruction you send to AI. <strong>Prompt Engineering</strong> is the skill of writing standardized, clear instructions, just like writing a detailed job description for AI.</p>
+<p>Vague prompts lead to empty and useless outputs. Standard prompts define AI’s role, tasks, background, output format and acceptance rules.</p>
+<h3>Practical Comparison & Standard Template</h3>
+<p>❌ Poor vague prompt</p>
+<pre><code class="language-plaintext">Write a work plan for me.</code></pre>
+<p>✅ Standard prompt for beginners (copy and use directly)</p>
+<pre><code class="language-plaintext">You are a professional project manager. Write a 1-week AI learning work plan for absolute beginners.
+Requirements:
+1. Divide tasks by day;
+2. Match simple practice cases for each task;
+3. Output in table format;
+4. Avoid complex professional terms.</code></pre>
+<h4>Common Command in AI Tools</h4>
+<pre><code class="language-plaintext"># Load fixed prompt rules for the current project (take Claude Code as an example)
+/prompt load ./basic-rule.md</code></pre>
+<h2>3. RAG (Retrieval Augmented Generation): Let AI Query External Materials</h2>
+<h3>Basic Definition</h3>
+<p>A major flaw of pure prompt: AI can only rely on its training data. It will make up answers for unfamiliar internal documents, new materials or private files (AI hallucination).</p>
+<p><strong>RAG</strong> solves this problem. Its core logic: <strong>Retrieve relevant information from the knowledge base first, then generate answers based on the retrieved content</strong>.</p>
+<p>RAG also involves related concepts:</p>
+<ul>
+  <li><strong>Embedding</strong>: Convert text into digital vectors for semantic matching</li>
+  <li><strong>Vector Database</strong>: Store massive vector data and quickly search similar content</li>
+  <li><strong>Agentic RAG</strong>: Advanced RAG, which actively splits questions, supplements materials and verifies conflicting information</li>
+</ul>
+<h3>Practical RAG Deployment Steps (for Local Files)</h3>
+<ol>
+  <li>Prepare your document (such as <code>employee-manual.md</code>) and put it in the project folder</li>
+  <li>Run commands to build a local knowledge base and enable RAG</li>
+</ol>
+<pre><code class="language-bash"># Import local documents into RAG knowledge base (Claude Code)
+/rag add ./employee-manual.md
+# Enable automatic retrieval mode
+/rag enable auto</code></pre>
+<ol>
+  <li>Ask questions to test the effect</li>
+</ol>
+<pre><code class="language-plaintext">According to the employee manual, how many working days in advance should I apply for annual leave?</code></pre>
+<p>AI will first retrieve the document content, then give accurate answers instead of guessing.</p>
+<h2>4. Tool Calling: Let AI Move from Answering Questions to Performing Actions</h2>
+<h3>Basic Definition</h3>
+<p>RAG gives AI the ability to "check materials", while <strong>Tool Calling (Function Calling)</strong> gives AI the ability to "operate tools". AI is no longer limited to text generation, and can call third-party tools to complete actual operations.</p>
+<p>Common applicable tools: calendar, code runner, order system, browser tools, database, etc.</p>
+<h3>Simple Python Demo of Tool Calling</h3>
+<p>This case realizes that AI calls the time query tool:</p>
+<pre><code class="language-python"># Define a simple time query tool
+import datetime
+
+def get_current_time():
+    return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# AI triggers tool calling according to instructions
+user_input = "Tell me the current system time"
+if "time" in user_input:
+    result = get_current_time()
+    print(f"Current time: {result}")</code></pre>
+<h3>Tool Calling Command in AI Agent</h3>
+<pre><code class="language-plaintext"># Call the built-in code running tool to execute the above script
+/tool run python ./time-tool.py</code></pre>
+<h2>5. MCP (Model Context Protocol): Unified Standard for AI to Connect External Tools</h2>
+<h3>Basic Definition</h3>
+<p>When there are more and more tools, each tool requires an independent interface, which leads to high development and maintenance costs.</p>
+<p><strong>MCP</strong> is a unified connection protocol for AI and external tools, equivalent to the <strong>USB-C interface in the AI world</strong>. It unifies the access rules of all tools, including parameter transmission, permission management, result return and security control.</p>
+<h3>Practical MCP Installation & Connection</h3>
+<p>Take connecting the web search MCP service as an example:</p>
+<pre><code class="language-bash"># Install Brave Search MCP server
+npm install -g @brave-search-mcp-server
+# Add MCP tool to Claude Code
+claude mcp add brave-search --api-key YOUR_API_KEY</code></pre>
+<p>After configuration, you only need to send natural language instructions, and AI will automatically call the MCP tool to complete the search.</p>
+<h2>6. Context Engineering & Context Engine: Manage Information Seen by AI</h2>
+<h3>Basic Definition</h3>
+<p><strong>Prompt Engineering</strong> focuses on a single instruction, while <strong>Context Engineering</strong> focuses on the overall information flow. It reasonably matches dialogue history, user data, document content and tool results for AI.</p>
+<p>Core principle: Do not send excessive information to interfere with AI, nor send too little information to cause misjudgment — provide <strong>exactly the required content</strong>.</p>
+<p><strong>Context Engine</strong> is the automated system of Context Engineering. It automatically filters sensitive content, compresses long text and sorts key information.</p>
+<h3>Practical Configuration File Example</h3>
+<p>Create <code>context-config.json</code> in the project folder to limit context rules:</p>
+<pre><code class="language-json">{
+  "keep_recent_dialogue": 5,
+  "compress_long_text": true,
+  "filter_sensitive_data": true,
+  "max_token_per_request": 6000
+}</code></pre>
+<p>Load the configuration file in the AI tool:</p>
+<pre><code class="language-plaintext">/context load ./context-config.json</code></pre>
+<h2>7. Skill: Reuse Mature Workflows and Avoid Repeated Teaching</h2>
+<h3>Basic Definition</h3>
+<p>A <strong>Skill</strong> is a reusable solidified workflow. A prompt is a one-time instruction, while a Skill is a long-term standard operating procedure (SOP).</p>
+<p>For repetitive work such as writing weekly reports, sorting code and processing forms, you can solidify the whole process into a Skill. Next time you just call the Skill directly.</p>
+<h3>Create & Call Custom Skill</h3>
+<ol>
+  <li>Create a new Skill for "AI Weekly Report Generation"</li>
+</ol>
+<pre><code class="language-plaintext">Create a new skill named weekly-report. The requirements: sort this week's work content, extract core achievements, list pending problems and next week's plan, and use formal workplace tone.</code></pre>
+<ol>
+  <li>Call the existing Skill with one click</li>
+</ol>
+<pre><code class="language-plaintext">Use weekly-report to generate my work weekly report.</code></pre>
+<h2>8. Computer Use: Let AI Operate Computers Like Humans</h2>
+<h3>Basic Definition</h3>
+<p>Tool Calling is to call API interfaces, while <strong>Computer Use</strong> is to let AI directly operate the computer: identify the screen, control the mouse and keyboard, complete page clicking, form filling, file uploading and other manual operations.</p>
+<p>It is suitable for old systems and web pages without open APIs, such as internal approval systems, legacy background management pages, etc.</p>
+<h3>Practical Operation (Combined with Playwright CLI)</h3>
+<pre><code class="language-bash"># Start headed browser for manual simulation operations
+playwright-cli open https://your-work-system.com --headed --persistent
+# Automatically click the login button
+playwright-cli click "text=Login"
+# Automatically fill account and password
+playwright-cli fill "input[name=username]" "test-user"
+playwright-cli fill "input[name=password]" "test-123456"</code></pre>
+<h2>9. Agent: AI Automatically Splits Tasks and Executes Cycles</h2>
+<h3>Basic Definition</h3>
+<p>An <strong>Agent</strong> is an autonomous AI execution body. Different from one-round dialogue and single tool calling, Agent follows a loop logic: <strong>Make a plan → Perform actions → Observe results → Adjust steps</strong>.</p>
+<p>Given a general goal, Agent will split complex tasks into multiple subtasks, select tools independently and solve problems round by round. It is widely used in code development, project debugging and data analysis.</p>
+<h3>Agent Core Startup Command (Claude Code)</h3>
+<pre><code class="language-bash"># Set the overall goal and start automatic cycle execution
+/goal Debug the project startup error, check logs and configuration files, fix bugs and ensure the project runs normally. Stop after 15 iterations.
+# Enable automatic mode to reduce manual confirmation
+/auto on</code></pre>
+<h2>10. Harness Engineering: Make Agent Run Safely and Controllably</h2>
+<h3>Basic Definition</h3>
+<p>Powerful Agents have risks such as misdeleting files, modifying production code and leaking data. <strong>Harness Engineering</strong> is the safety control system for Agents, equivalent to safety belts and brakes.</p>
+<p>It includes permission control, sandbox operation, log tracking, manual approval, rollback mechanism and cost control.</p>
+<h3>Simple Sandbox Restriction Configuration</h3>
+<p>Create <code>harness-rule.md</code> to limit Agent permissions:</p>
+<pre><code class="language-markdown"># Agent Safety Rules
+1. Only allow operating files in the ./test folder;
+2. Prohibit deleting any files;
+3. All code modifications must be reviewed manually before submission;
+4. Automatically stop when token consumption exceeds 10000 per hour.</code></pre>
+<p>Load the rule file:</p>
+<pre><code class="language-plaintext">/harness load ./harness-rule.md</code></pre>
+<h2>11. Workflow & Workspace Agent: Access Formal Business Processes</h2>
+<h3>11.1 Workflow</h3>
+<p><strong>Workflow</strong> connects AI, databases, message notifications, manual approval and timing tasks into a complete business process. It is responsible for arranging the execution sequence of each step, suitable for long-link business such as customer consultation, order processing and report statistics.</p>
+<h3>11.2 Workspace Agent</h3>
+<ul>
+  <li>Ordinary Agent: Equivalent to a temporary worker, completing a single task</li>
+  <li><strong>Workspace Agent</strong>: Equivalent to a long-term on-site assistant. It always exists in the team workspace, mastering team documents, personnel division, historical work and permission rules. It can automatically associate long-term context to complete work.</li>
+</ul>
+<h3>Simple Workflow Command Example</h3>
+<pre><code class="language-plaintext"># Start the customer consultation process workflow
+/workflow start customer-service-flow
+# View the running status of the workflow
+/workflow status</code></pre>
+<h2>Full Evolution Logic & Beginner Learning Suggestions</h2>
+<h3>AI Evolution Main Line</h3>
+<p>Chatbot (Prompt) → Query External Knowledge (RAG) → Perform Actions (Tool Calling + MCP) → Reuse Workflow (Skill) → Simulate Manual Operation (Computer Use) → Autonomous Task Execution (Agent) → Safe Launch (Harness) → Access Business Scenarios (Workflow + Workspace Agent)</p>
+<h3>Learning Steps for Zero-Based Learners</h3>
+<ol>
+  <li>Master <strong>Token & Context Window</strong> first to control usage cost and content volume</li>
+  <li>Practice <strong>Prompt Writing</strong> to improve basic AI output quality</li>
+  <li>Learn <strong>RAG</strong> to solve the problem of private document query</li>
+  <li>Try <strong>Tool Calling & MCP</strong> to realize simple automated operations</li>
+  <li>Solidify repeated operations into <strong>Skills</strong> to improve efficiency</li>
+  <li>Gradually learn <strong>Agent, Harness and Workflow</strong> to build complex AI systems</li>
+</ol>
+<p>All the above commands and code snippets can be directly applied to Claude Code, Codex and other mainstream AI tools. Start with simple cases and practice step by step, and you can easily master the mainstream AI technologies.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/12-core-ai-concepts-guide">Continue reading &rarr;</a></p>
+</div>`,
+    contentZh: `<p>如果你刚开始接触 AI，可能会被无穷无尽的术语搞晕：Token、上下文窗口、提示词、RAG、MCP、Agent、工作流……这些不是随意的行话。它们记录了 AI 完整的演进路径：从一个简单的聊天机器人，到能处理实际工作的强大系统。</p>
+<p>本文用通俗的语言解释每个概念，搭配<strong>实际操作、命令和代码示例</strong>，帮助零基础的 AI 学习者一步步理解这些术语的逻辑、功能和使用场景。所有操作都可以直接应用到 Claude Code、Codex 等主流 AI 工具中。</p>
+<h2>1. Token 与上下文窗口：AI 一次能"读"多少内容？</h2>
+<h3>基本定义</h3>
+<p>AI 不能像人类一样读文本。它会将所有输入内容拆分成小的基本单位，称为 <strong>Token</strong>。一个中文词组或一个英文单词可能被拆成多个 Token。</p>
+<p><strong>上下文窗口</strong>指的是 AI 模型在单次会话中能处理和记忆的最大 Token 数。它决定了三个核心点：</p>
+<ol>
+  <li>AI 一次能看到的总体内容量</li>
+  <li>每次 AI 调用的成本（大部分平台按 Token 计费）</li>
+  <li>为什么 AI 会"忘记"早期的对话内容</li>
+</ol>
+<p>当你的对话、文件、提示词和工具输出超过上下文窗口限制时，最早的内容会被自动截断。</p>
+<h3>实际检测操作</h3>
+<p>我们可以通过 Claude Code CLI 查看 Token 用量和上下文窗口状态。</p>
+<pre><code class="language-bash"># Check current session token usage and remaining context window
+/cli token stats</code></pre>
+<h4>初学者使用技巧</h4>
+<ul>
+  <li>不要把所有文件和对话历史都塞进一个会话。把长内容分成多个部分处理。</li>
+  <li>对于 8k Token 限制的模型，保持总内容在 7k 以内，避免被截断。</li>
+  <li>长对话可以使用内置压缩功能来节省上下文空间。</li>
+</ul>
+<h2>2. 提示词与提示工程：让 AI 清晰理解你的任务</h2>
+<h3>基本定义</h3>
+<p><strong>提示词</strong>是你发给 AI 的指令。<strong>提示工程</strong>是编写标准化、清晰指令的技能，就像给 AI 写一份详细的工作说明书。</p>
+<p>模糊的提示词只会得到空洞无用的输出。标准提示词定义了 AI 的角色、任务、背景、输出格式和验收标准。</p>
+<h3>实用对比与标准模板</h3>
+<p>❌ 糟糕的模糊提示词</p>
+<pre><code class="language-plaintext">Write a work plan for me.</code></pre>
+<p>✅ 初学者标准提示（可直接复制使用）</p>
+<pre><code class="language-plaintext">You are a professional project manager. Write a 1-week AI learning work plan for absolute beginners.
+Requirements:
+1. Divide tasks by day;
+2. Match simple practice cases for each task;
+3. Output in table format;
+4. Avoid complex professional terms.</code></pre>
+<h4>AI 工具中的常用命令</h4>
+<pre><code class="language-plaintext"># Load fixed prompt rules for the current project (take Claude Code as an example)
+/prompt load ./basic-rule.md</code></pre>
+<h2>3. RAG（检索增强生成）：让 AI 查询外部资料</h2>
+<h3>基本定义</h3>
+<p>纯提示词的一个重大缺陷：AI 只能依赖它的训练数据。对于不熟悉的内部文档、新材料或私人文件，AI 会编造答案（这就是 AI 幻觉）。</p>
+<p><strong>RAG</strong> 解决了这个问题。它的核心逻辑是：<strong>先从知识库中检索相关信息，然后基于检索到的内容生成答案</strong>。</p>
+<p>RAG 还涉及相关概念：</p>
+<ul>
+  <li><strong>Embedding（嵌入）</strong>：将文本转换为数字向量，用于语义匹配</li>
+  <li><strong>向量数据库</strong>：存储海量向量数据，快速搜索相似内容</li>
+  <li><strong>Agentic RAG</strong>：高级 RAG，能够主动拆分问题、补充资料和验证冲突信息</li>
+</ul>
+<h3>RAG 实际部署步骤（针对本地文件）</h3>
+<ol>
+  <li>准备你的文档（如 <code>employee-manual.md</code>），放入项目文件夹</li>
+  <li>运行命令构建本地知识库并启用 RAG</li>
+</ol>
+<pre><code class="language-bash"># Import local documents into RAG knowledge base (Claude Code)
+/rag add ./employee-manual.md
+# Enable automatic retrieval mode
+/rag enable auto</code></pre>
+<ol>
+  <li>提问题测试效果</li>
+</ol>
+<pre><code class="language-plaintext">According to the employee manual, how many working days in advance should I apply for annual leave?</code></pre>
+<p>AI 会先检索文档内容，然后给出准确答案，而不是猜测。</p>
+<h2>4. 工具调用：让 AI 从回答问题到执行操作</h2>
+<h3>基本定义</h3>
+<p>RAG 给了 AI"查资料"的能力，而<strong>工具调用（Function Calling）</strong>给了 AI"操作工具"的能力。AI 不再局限于文字生成，可以调用第三方工具完成实际操作。</p>
+<p>常见的适用工具：日历、代码运行器、订单系统、浏览器工具、数据库等。</p>
+<h3>工具调用的简易 Python 演示</h3>
+<p>以下案例实现 AI 调用时间查询工具：</p>
+<pre><code class="language-python"># Define a simple time query tool
+import datetime
+
+def get_current_time():
+    return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# AI triggers tool calling according to instructions
+user_input = "Tell me the current system time"
+if "time" in user_input:
+    result = get_current_time()
+    print(f"Current time: {result}")</code></pre>
+<h3>AI Agent 中的工具调用命令</h3>
+<pre><code class="language-plaintext"># Call the built-in code running tool to execute the above script
+/tool run python ./time-tool.py</code></pre>
+<h2>5. MCP（模型上下文协议）：AI 连接外部工具的统一标准</h2>
+<h3>基本定义</h3>
+<p>当工具越来越多时，每个工具都需要独立的接口，导致开发和维护成本高昂。</p>
+<p><strong>MCP</strong> 是 AI 与外部工具的统一连接协议，相当于"AI 世界的 USB-C 接口"。它统一了所有工具的接入规则，包括参数传输、权限管理、结果返回和安全控制。</p>
+<h3>MCP 实际安装与连接</h3>
+<p>以连接网页搜索 MCP 服务为例：</p>
+<pre><code class="language-bash">npm install -g @brave-search-mcp-server
+claude mcp add brave-search --api-key YOUR_API_KEY</code></pre>
+<p>配置完成后，你只需发送自然语言指令，AI 就会自动调用 MCP 工具完成搜索。</p>
+<h2>6. 上下文工程与上下文引擎：管理 AI 看到的信息</h2>
+<h3>基本定义</h3>
+<p><strong>提示工程</strong>关注单条指令，而<strong>上下文工程</strong>关注整体信息流。它合理地为 AI 搭配对话历史、用户数据、文档内容和工具结果。</p>
+<p>核心原则：不要发送过多信息干扰 AI，也不要发送过少信息导致误判——提供<strong>恰好需要的内容</strong>。</p>
+<p><strong>上下文引擎</strong>是上下文工程的自动化系统。它能自动过滤敏感内容、压缩长文本和排序关键信息。</p>
+<h3>实际配置文件示例</h3>
+<p>在项目文件夹中创建 <code>context-config.json</code>，限制上下文规则：</p>
+<pre><code class="language-json">{
+  "keep_recent_dialogue": 5,
+  "compress_long_text": true,
+  "filter_sensitive_data": true,
+  "max_token_per_request": 6000
+}</code></pre>
+<p>在 AI 工具中加载配置文件：</p>
+<pre><code class="language-plaintext">/context load ./context-config.json</code></pre>
+<h2>7. Skill（技能）：复用成熟工作流，避免重复教学</h2>
+<h3>基本定义</h3>
+<p><strong>Skill</strong> 是可复用的固化工作流。提示词是一次性指令，而 Skill 是长期使用的标准操作流程（SOP）。</p>
+<p>对于写周报、整理代码、处理表单等重复性工作，你可以将整个流程固化为一个 Skill。下次直接调用即可。</p>
+<h3>创建与调用自定义 Skill</h3>
+<p>1. 创建一个名为"AI 周报生成"的新 Skill</p>
+<pre><code class="language-plaintext">Create a new skill named weekly-report. The requirements: sort this week's work content,
+extract core achievements, list pending problems and next week's plan, and use formal workplace tone.</code></pre>
+<p>2. 一键调用已有的 Skill</p>
+<pre><code class="language-plaintext">Use weekly-report to generate my work weekly report.</code></pre>
+<h2>8. Computer Use：让 AI 像人一样操作电脑</h2>
+<h3>基本定义</h3>
+<p>工具调用是调用 API 接口，而<strong>Computer Use</strong>是让 AI 直接操作电脑：识别屏幕、控制鼠标和键盘，完成页面点击、表单填写、文件上传等人工操作。</p>
+<p>它适用于没有开放 API 的老系统和网页，如内部审批系统、旧版后台管理页面等。</p>
+<h3>实际操作（结合 Playwright CLI）</h3>
+<pre><code class="language-bash"># Start headed browser for manual simulation operations
+playwright-cli open https://your-work-system.com --headed --persistent
+# Automatically click the login button
+playwright-cli click "text=Login"
+# Automatically fill account and password
+playwright-cli fill "input[name=username]" "test-user"
+playwright-cli fill "input[name=password]" "test-123456"</code></pre>
+<h2>9. Agent：AI 自动拆分任务并循环执行</h2>
+<h3>基本定义</h3>
+<p><strong>Agent</strong> 是自主 AI 执行体。与单轮对话和单一工具调用不同，Agent 遵循循环逻辑：<strong>制定计划 → 执行动作 → 观察结果 → 调整步骤</strong>。</p>
+<p>给定一个总体目标，Agent 会将复杂任务拆分为多个子任务，自主选择工具并逐轮解决问题。广泛应用于代码开发、项目调试和数据分析。</p>
+<h3>Agent 核心启动命令（Claude Code）</h3>
+<pre><code class="language-bash"># Set the overall goal and start automatic cycle execution
+/goal Debug the project startup error, check logs and configuration files, fix bugs and ensure the project runs normally. Stop after 15 iterations.
+# Enable automatic mode to reduce manual confirmation
+/auto on</code></pre>
+<h2>10. Harness 工程：让 Agent 安全可控地运行</h2>
+<h3>基本定义</h3>
+<p>强大的 Agent 也有风险：误删文件、修改生产代码、泄露数据等。<strong>Harness 工程</strong>是 Agent 的安全控制系统，相当于安全带的刹车。</p>
+<p>它包含权限控制、沙箱运行、日志追踪、人工审批、回滚机制和成本控制。</p>
+<h3>简易沙箱限制配置</h3>
+<p>创建 <code>harness-rule.md</code> 限制 Agent 权限：</p>
+<pre><code class="language-markdown"># Agent Safety Rules
+1. Only allow operating files in the ./test folder;
+2. Prohibit deleting any files;
+3. All code modifications must be reviewed manually before submission;
+4. Automatically stop when token consumption exceeds 10000 per hour.</code></pre>
+<p>加载规则文件：</p>
+<pre><code class="language-plaintext">/harness load ./harness-rule.md</code></pre>
+<h2>11. 工作流与工作空间 Agent：接入正式业务流程</h2>
+<h3>11.1 工作流</h3>
+<p><strong>工作流</strong>将 AI、数据库、消息通知、人工审批和定时任务连接成完整的业务流程。它负责安排每一步的执行顺序，适用于客户咨询、订单处理和报表统计等长链路业务。</p>
+<h3>11.2 工作空间 Agent</h3>
+<ul>
+  <li>普通 Agent：相当于临时工，完成单一任务</li>
+  <li><strong>工作空间 Agent</strong>：相当于长期在岗的助理。它始终存在于团队工作空间中，掌握团队文档、人员分工、历史工作和权限规则。能自动关联长期上下文完成工作。</li>
+</ul>
+<h3>简单工作流命令示例</h3>
+<pre><code class="language-plaintext"># Start the customer consultation process workflow
+/workflow start customer-service-flow
+# View the running status of the workflow
+/workflow status</code></pre>
+<h2>完整演进逻辑与入门学习建议</h2>
+<h3>AI 演进主线</h3>
+<p>聊天机器人（提示词）→ 查询外部知识（RAG）→ 执行动作（工具调用 + MCP）→ 复用工作流（Skill）→ 模拟人工操作（Computer Use）→ 自主执行任务（Agent）→ 安全上线（Harness）→ 接入业务场景（工作流 + 工作空间 Agent）</p>
+<h3>零基础学习步骤</h3>
+<ol>
+  <li>先掌握 <strong>Token 和上下文窗口</strong>，控制使用成本和内容量</li>
+  <li>练习<strong>提示词编写</strong>，提高 AI 基础输出质量</li>
+  <li>学习 <strong>RAG</strong>，解决私密文档查询问题</li>
+  <li>尝试<strong>工具调用和 MCP</strong>，实现简单的自动化操作</li>
+  <li>将重复操作固化为<strong>Skill</strong>，提升效率</li>
+  <li>逐步学习 <strong>Agent、Harness 和工作流</strong>，构建复杂 AI 系统</li>
+</ol>
+<p>以上所有命令和代码片段都可以直接应用到 Claude Code、Codex 等主流 AI 工具中。从简单案例开始，一步步实践，就能轻松掌握主流 AI 技术。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/12-core-ai-concepts-guide">继续阅读 &rarr;</a></p>
+</div>`,
+  },
+  "anthropic-harness-dynamic-workflows": {
+    content: `<p>Anthropic officially released the brand-new <strong>Dynamic Workflow Harness</strong> system for Claude Code, completely upgrading large-scale multi-agent task orchestration. Unlike rigid fixed pipelines, this dynamic harness lets Claude autonomously plan, split tasks, run parallel sub-agents, verify results and resume interrupted long jobs, perfectly solving complex cross-file engineering tasks that single-pass AI cannot handle.</p>
+<h2>Core Architecture & Advantages</h2>
+<ul>
+  <li>Claude automatically generates executable orchestration scripts, storing task logic outside the context window instead of relying on limited token context.</li>
+  <li>Supports <strong>tens to hundreds of parallel subagents</strong> in one session, suitable for massive codebase debugging, full-project migration, multi-round security audits and long-duration research tasks.</li>
+  <li>Built-in result verification mechanism: independent review agents check outputs before final delivery, greatly reducing errors.</li>
+  <li>Breakpoint resume: long-running tasks can pause and continue without restarting, stable for hours or even days of continuous operation.</li>
+  <li>Compatible with Claude Code CLI, desktop app, VS Code extension, Claude API, Amazon Bedrock, Vertex AI and Microsoft Foundry.</li>
+</ul>
+<h2>Access & Permission Rules</h2>
+<ul>
+  <li>Max & Team plans: Dynamic Workflows enabled by default.</li>
+  <li>Enterprise plans: Requires administrator manual activation.</li>
+  <li>Pro users: Need to turn on the feature manually in settings.</li>
+  <li>Important reminder: Dynamic workflows consume far more tokens than normal sessions; large-scale Opus tasks may sharply increase usage costs.</li>
+</ul>
+<h2>Practical Startup Commands & Operations</h2>
+<h3>Enable UltraCode High-Efficiency Mode</h3>
+<pre><code class="language-bash">/effort xhigh</code></pre>
+<p>Switch Claude to maximum computing power mode, matching complex dynamic workflow execution.</p>
+<h3>Start Custom Dynamic Workflow Directly</h3>
+<pre><code class="language-plaintext">Create dynamic harness workflow to scan all bugs across backend service files, run parallel audits and output fixed solutions</code></pre>
+<h3>Bind Workflow with Auto Goal Loop</h3>
+<p>Combine <code>/goal</code> and <code>/loop</code> for unattended automatic operation overnight:</p>
+<pre><code class="language-bash">/goal Finish full legacy code migration, pass all unit tests, stop after 30 iterations
+/loop Check migration progress every 10 minutes, report abnormal node status</code></pre>
+<h3>View Running Workflow Status</h3>
+<pre><code class="language-bash">/workflow status</code></pre>
+<h3>Stop Ongoing Dynamic Task</h3>
+<pre><code class="language-bash">/workflow clear</code></pre>
+<h2>Best Use Cases & Avoid Scenarios</h2>
+<p>✅ Ideal scenarios</p>
+<ul>
+  <li>Cross-hundreds-of-files legacy code reconstruction</li>
+  <li>Full-codebase vulnerability detection & repair</li>
+  <li>Large-scale multi-module joint debugging</li>
+  <li>Multi-round adversarial review of technical schemes</li>
+</ul>
+<p>❌ Not recommended</p>
+<ul>
+  <li>Simple single-file code writing & modification</li>
+  <li>Short daily prompt queries</li>
+  <li>Low-complexity routine tasks (will waste massive tokens unnecessarily)</li>
+</ul>
+<h2>Practical Usage Tips</h2>
+<ol>
+  <li>Always turn on Auto Mode to reduce manual confirmation prompts.</li>
+  <li>Start with small-scoped tasks first to test token consumption rules.</li>
+  <li>Use lightweight Sonnet for routine subtasks, switch Opus only for core complex links.</li>
+  <li>Combine custom Skills to further cut redundant token overhead.</li>
+</ol>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/agent-skill-harness-explained">Continue reading &rarr;</a></p>
+</div>`,
+    contentZh: `<p>Anthropic 为 Claude Code 正式发布了全新的<strong>动态工作流 Harness</strong> 系统，全面升级了大规模多代理任务编排能力。与僵化的固定流水线不同，这个动态 Harness 让 Claude 能够自主规划、拆分任务、运行并行子代理、验证结果和恢复中断的长任务，完美解决单次 AI 无法处理的跨文件复杂工程任务。这是 Anthropic 在 AI 工程化领域的重要突破，让 Claude Code 从简单的代码辅助工具升级为能够自主管理大型项目的智能引擎。</p>
+<h2>核心架构与优势</h2>
+<p>动态工作流 Harness 的核心在于其灵活的架构设计。与传统的固定流水线不同，它允许 AI 根据任务需求动态调整执行策略。这种设计带来了几个关键优势：</p>
+<ul>
+  <li>Claude 自动生成可执行的编排脚本，将任务逻辑存储在上下文窗口之外，而不是依赖有限的 Token 上下文。这意味着即使处理超大型项目，也不会因为上下文窗口限制而导致任务中断或质量下降。</li>
+  <li>支持单个会话中<strong>数十到数百个并行子代理</strong>，适合海量代码库调试、全项目迁移、多轮安全审计和长时间研究任务。每个子代理可以独立处理一个模块，大幅提升整体效率。</li>
+  <li>内置结果验证机制：独立审查代理在最终交付前检查输出，大幅减少错误。这种"写代码的人不负责审查"的模式有效降低了 bug 率。</li>
+  <li>断点续传：长时间运行的任务可以暂停后继续，无需重新启动，稳定运行数小时甚至数天。这对于大型迁移项目尤其重要，你可以在下班时暂停，第二天继续。</li>
+  <li>兼容 Claude Code CLI、桌面应用、VS Code 扩展、Claude API、Amazon Bedrock、Vertex AI 和 Microsoft Foundry，无论你使用什么开发环境都能无缝集成。</li>
+</ul>
+<h2>访问与权限规则</h2>
+<p>不同用户计划的访问权限有所不同，使用前请确认你的计划支持动态工作流：</p>
+<ul>
+  <li>Max 和 Team 计划：默认启用动态工作流，开箱即用</li>
+  <li>企业计划：需要管理员手动激活，建议先在测试环境中验证</li>
+  <li>Pro 用户：需要在设置中手动开启该功能，位置在 Settings -> Features -> Dynamic Workflows</li>
+  <li>重要提醒：动态工作流消耗的 Token 远超普通会话；大规模 Opus 任务可能会急剧增加使用成本。建议先在小范围内测试，掌握消耗规律后再扩展到全项目。</li>
+</ul>
+<h2>实用启动命令与操作</h2>
+<p>以下是最常用的动态工作流启动命令，你可以直接复制使用：</p>
+<h3>启用 UltraCode 高效模式</h3>
+<pre><code class="language-bash">/effort xhigh</code></pre>
+<p>将 Claude 切换到最大计算能力模式，匹配复杂动态工作流的执行需求。这个命令会分配更多计算资源给当前任务。</p>
+<h3>直接启动自定义动态工作流</h3>
+<p>用自然语言描述你的需求，Claude 会自动生成工作流：</p>
+<pre><code class="language-plaintext">Create dynamic harness workflow to scan all bugs across backend service files, run parallel audits and output fixed solutions</code></pre>
+<h3>使用自动目标循环绑定工作流</h3>
+<p>结合 <code>/goal</code> 和 <code>/loop</code> 实现夜间无人值守自动运行：</p>
+<pre><code class="language-bash">/goal Finish full legacy code migration, pass all unit tests, stop after 30 iterations
+/loop Check migration progress every 10 minutes, report abnormal node status</code></pre>
+<p><code>/goal</code> 设定最终目标，<code>/loop</code> 设置检查频率。两者配合可以让 Claude 在你睡觉时持续工作。</p>
+<h3>查看运行中的工作流状态</h3>
+<pre><code class="language-bash">/workflow status</code></pre>
+<p>这个命令会显示当前所有运行中的工作流及其进度，包括已完成的任务数、剩余任务和预计完成时间。</p>
+<h3>停止正在运行的动态任务</h3>
+<pre><code class="language-bash">/workflow clear</code></pre>
+<p>如果发现工作流出现问题或需要调整策略，使用此命令可以安全停止所有运行中的任务。</p>
+<h2>最佳使用场景与应避免的场景</h2>
+<p>了解哪些场景适合使用动态工作流，哪些不适合，可以帮助你最大化效率：</p>
+<p>✅ 理想场景</p>
+<ul>
+  <li>跨数百个文件的遗留代码重构——这是动态工作流最能发挥价值的场景，AI 可以同时处理多个模块</li>
+  <li>全代码库漏洞检测与修复——并行扫描所有文件，大幅缩短检测时间</li>
+  <li>大规模多模块联合调试——多个子代理同时工作，快速定位问题根源</li>
+  <li>技术方案的多轮对抗审查——通过独立审查代理确保方案质量</li>
+</ul>
+<p>❌ 不推荐</p>
+<ul>
+  <li>简单的单文件代码编写与修改——用普通会话就能完成，不需要启动动态工作流</li>
+  <li>日常简短提示词查询——比如"解释这段代码"，用普通对话即可</li>
+  <li>低复杂度的日常任务——会白白浪费大量 Token，收益远小于成本</li>
+</ul>
+<h2>实用使用技巧</h2>
+<p>以下技巧可以帮助你更高效地使用动态工作流：</p>
+<ol>
+  <li>始终开启自动模式，减少手动确认提示。在开始工作流之前运行 <code>/auto on</code>，让 Claude 自主执行而不需要每一步都等你确认。</li>
+  <li>先从小范围任务开始，测试 Token 消耗规律。比如先让工作流处理一个模块，观察消耗后再扩展到全项目。</li>
+  <li>常规子任务使用轻量级 Sonnet，仅在核心复杂环节切换 Opus。这种分层策略可以在保证质量的同时大幅降低成本。</li>
+  <li>结合自定义 Skill，进一步削减冗余 Token 开销。将常用的工作流模式保存为 Skill，避免每次重复生成相同的指令。</li>
+</ol>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/agent-skill-harness-explained">继续阅读 &rarr;</a></p>
+</div>`,
+  },
+  "cli-skill-browser-ai-automation": {
+    content: `<p>In the realm of automation, the combination of CLI (Command-Line Interface) tools and custom skills is revolutionizing how we handle browser-based tasks. This framework empowers AI to automate browser operations, taking over mechanical and repetitive work while being incredibly token-efficient—even allowing for <strong>0-token automation workflows</strong> that don’t require AI involvement at all. Let’s dive into how this works, with practical steps and code examples.</p>
+<h2>1. Core Components and Advantages</h2>
+<h3>Key Tools</h3>
+<ul>
+  <li><strong>Agent Frameworks</strong>: Claude Code or Codex (for AI-driven task orchestration).</li>
+  <li><strong>Browser Automation Tool</strong>: Playwright CLI (a new open-source tool from Microsoft in early 2026, designed for efficient browser control).</li>
+  <li><strong>Skills</strong>: Custom scripts or workflows that encapsulate repeatable processes, reducing token usage and streamlining AI interactions.</li>
+</ul>
+<h3>Why This Framework Stands Out</h3>
+<ul>
+  <li><strong>Token Efficiency</strong>: Playwright CLI reduces token consumption by up to 4x compared to traditional Playwright MCP methods. It fetches web content on-demand (e.g., webpage snapshots or screenshots are stored locally, not sent to AI unless needed).</li>
+  <li><strong>0-Token Workflows</strong>: Many tasks can be automated with fixed scripts, eliminating AI token costs entirely.</li>
+  <li><strong>No Browser Expertise Needed</strong>: You can automate tasks using natural language—no deep knowledge of browser internals is required.</li>
+</ul>
+<h2>2. Setup and Basic Usage</h2>
+<h3>Step 1: Install Dependencies</h3>
+<p>First, ensure you have <strong>Node.js</strong> installed. Visit the <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js official website</a> to download and install the version matching your operating system.</p>
+<p>Next, install Playwright CLI via npm (Node Package Manager):</p>
+<pre><code class="language-bash">npm install -g @playwright/cli</code></pre>
+<p>Also, make sure <strong>Google Chrome</strong> (or Microsoft Edge) is installed on your machine for browser automation.</p>
+<h3>Step 2: Playwright CLI Basics</h3>
+<p>Playwright CLI supports two browser modes:</p>
+<ul>
+  <li><strong>Headed Mode</strong> (<code>--headed</code>): Visible browser window (great for debugging).</li>
+  <li><strong>Headless Mode</strong> (default): Invisible, background browser (saves memory for batch tasks).</li>
+</ul>
+<p>To open a webpage in headed mode (e.g., Google):</p>
+<pre><code class="language-bash">playwright-cli open google.com --headed</code></pre>
+<p>When you run this command, Playwright CLI outputs a concise webpage summary (not the entire DOM) and a snapshot file path. AI can fetch the full DOM from this snapshot only if needed, minimizing token usage.</p>
+<p>For taking a screenshot:</p>
+<pre><code class="language-bash">playwright-cli screenshot</code></pre>
+<p>This saves a PNG image locally, and AI decides whether to process it—no need to send image data to AI directly.</p>
+<p>To retain login states (e.g., cookies) across sessions, use the <code>--persistent</code> flag:</p>
+<pre><code class="language-bash">playwright-cli open google.com --headed --persistent</code></pre>
+<h2>3. Integrating with AI Agents (Claude Code & Codex)</h2>
+<p>AI agents like Claude Code or Codex need “skills” to understand how to use Playwright CLI. Here’s how to set this up:</p>
+<h3>Step 1: Create a Project and Install Skills</h3>
+<ol>
+  <li>Create a project folder and open a terminal in that directory.</li>
+  <li>Install the Playwright CLI skills:</li>
+</ol>
+<pre><code class="language-bash">    playwright-cli install --skill</code></pre>
+<h3>Step 2: Connect to Claude Code</h3>
+<p>Launch Claude Code and check available skills:</p>
+<pre><code class="language-plaintext">What skills do you have?</code></pre>
+<p>Claude Code should list <code>playwright-cli</code> as a skill, confirming integration.</p>
+<h3>Step 3: Connect to Codex</h3>
+<p>Rename the skills folder from <code>.claude</code> to <code>.codex</code> in your project directory. Then, in Codex, run:</p>
+<pre><code class="language-plaintext">/skills</code></pre>
+<p>Codex will list <code>playwright-cli</code>, showing it’s ready for use.</p>
+<h2>4. Practical Examples</h2>
+<h3>Example 1: Scrape E-Commerce Reviews (0-Token Workflow)</h3>
+<p>Let’s extract the first 100 reviews from a Tmall product page and save them as a CSV file.</p>
+<h4>Step 1: Let AI Explore and Refine (First Run)</h4>
+<p>Ask Codex to handle the task with natural language:</p>
+<pre><code class="language-plaintext">Use playwright-cli --headed --persistent to open this Tmall product page, scrape the first 100 reviews, and save them to a CSV file.</code></pre>
+<p>Codex will experiment with Playwright CLI commands, which might involve some trial and error. Once successful, it will output a CSV file with the reviews.</p>
+<h4>Step 2: Save the Workflow as a Skill</h4>
+<p>To optimize future runs, turn this process into a reusable skill. Prompt Codex:</p>
+<pre><code class="language-plaintext">Create a new skill called "save-tmall-reviews" that encapsulates opening the product page, scraping reviews, and saving to CSV. Include all steps and fixes for any issues encountered.</code></pre>
+<p>Codex will generate a skill file that you can store in your project.</p>
+<h4>Step 3: Run with the Skill (Reduced Token Usage)</h4>
+<p>Now, re-run the task using the skill:</p>
+<pre><code class="language-plaintext">Use the "save-tmall-reviews" skill to scrape reviews for this Tmall product.</code></pre>
+<p>With the skill’s guidance, Codex completes the task with ~5% of the original token usage.</p>
+<h4>Step 4: Convert to a 0-Token Script</h4>
+<p>For fully automated, token-free execution, ask Codex to write a fixed script. Prompt:</p>
+<pre><code class="language-plaintext">Write a PowerShell script that combines all Playwright CLI commands to scrape Tmall reviews and save them to CSV. Include delays to ensure reliability.</code></pre>
+<p>Codex will generate a script like this (simplified example):</p>
+<pre><code class="language-powershell"># Open the product page
+playwright-cli open "https://detail.tmall.com/..." --headed --persistent
+
+# Wait for the page to load
+playwright-cli wait-for-selector "text=查看全部评价" --timeout 5000
+
+# Click to view all reviews
+playwright-cli click "text=查看全部评价"
+
+# Extract reviews and save as CSV
+playwright-cli eval "() => { /* JavaScript to extract reviews */ }" | ConvertTo-Csv | Out-File "reviews.csv"</code></pre>
+<p>Run this script directly in PowerShell—no AI involvement, no tokens used.</p>
+<h3>Example 2: Automate Article Publishing on Platform X</h3>
+<p>Publishing Markdown articles on Platform X is tedious (formatting issues, image uploads). Let’s automate it.</p>
+<h4>Step 1: Prepare the Article (Markdown to HTML)</h4>
+<p>First, convert the Markdown article to HTML and download images locally. Use this Python script (generated by Codex):</p>
+<pre><code class="language-python">import requests
+import re
+import os
+from bs4 import BeautifulSoup
+import pandoc
+
+# Download images from the Markdown article and reformat to local paths
+def download_images_and_convert(md_path, img_dir="images", html_output="article.html"):
+    # Create image directory
+    os.makedirs(img_dir, exist_ok=True)
+    
+    # Read Markdown content
+    with open(md_path, "r", encoding="utf-8") as f:
+        md_content = f.read()
+    
+    # Extract and download images
+    img_links = re.findall(r"!\[.*?\]\((.*?)\)", md_content)
+    for i, img_link in enumerate(img_links):
+        img_name = f"00{i+1}.png"
+        img_path = os.path.join(img_dir, img_name)
+        response = requests.get(img_link)
+        with open(img_path, "wb") as f:
+            f.write(response.content)
+        # Replace remote image link with local path
+        md_content = md_content.replace(img_link, img_path)
+    
+    # Convert Markdown to HTML with pandoc
+    html_content = pandoc.convert_text(md_content, to="html", format="md")
+    
+    # Ensure each image is in its own paragraph
+    html_content = re.sub(r"<img(.*?)>", r"<p><img\\1></p>", html_content)
+    
+    # Save HTML
+    with open(html_output, "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+if __name__ == "__main__":
+    download_images_and_convert("article.md")</code></pre>
+<h4>Step 2: Automate Publishing with Playwright CLI</h4>
+<p>Prompt Codex to automate the publishing workflow:</p>
+<pre><code class="language-plaintext">Use playwright-cli --headed --persistent to open Platform X, create a new article, paste the HTML content, and replace image placeholders with the local images in the "images" folder. Ensure images are uploaded in order.</code></pre>
+<p>Codex will generate Playwright CLI commands to:</p>
+<ol>
+  <li>Open Platform X and create a draft.</li>
+  <li>Paste the HTML content.</li>
+  <li>Locate image placeholders and replace them with local images via copy-paste.</li>
+</ol>
+<h4>Step 3: Save as a Reusable Skill</h4>
+<p>Finally, save this workflow as a skill for future use:</p>
+<pre><code class="language-plaintext">Create a skill called "publish-to-platform-x" that includes downloading images, converting to HTML, and automating the publishing process on Platform X.</code></pre>
+<h3>Example 3: Automated Testing for Web Apps</h3>
+<p>For a self-developed web app (e.g., a resume optimization tool), use Playwright CLI to run automated tests.</p>
+<h4>Step 1: Generate Test Cases with AI</h4>
+<p>Prompt Codex to analyze your app’s code and create test cases:</p>
+<pre><code class="language-plaintext">Read the code of my resume optimization web app, then write a Chinese test document outlining the main flow (register → login → upload resume → get AI suggestions). Then, use playwright-cli to execute these tests.</code></pre>
+<p>Codex will produce a test document like this (simplified):</p>
+<pre><code class="language-markdown"># Test Cases for Resume Optimization App
+## 1. Registration
+- Step 1: Open the app’s registration page.
+- Step 2: Enter a test email and password.
+- Step 3: Submit and verify successful registration.
+
+## 2. Login
+- Step 1: Navigate to the login page.
+- Step 2: Enter the registered email and password.
+- Step 3: Verify successful login and redirection to the dashboard.
+
+## 3. Resume Upload and AI Suggestions
+- Step 1: Click "Upload Resume" and select a test resume file.
+- Step 2: Wait for AI analysis and suggestions to load.
+- Step 3: Verify the suggestions appear correctly.</code></pre>
+<h4>Step 2: Execute Tests with Playwright CLI</h4>
+<p>Codex will generate Playwright CLI commands to run these tests:</p>
+<pre><code class="language-bash"># Open the registration page
+playwright-cli open "http://localhost:5000/register" --headed --persistent
+
+# Fill registration form
+playwright-cli fill "input[name='email']" "test@example.com"
+playwright-cli fill "input[name='password']" "testpass123"
+playwright-cli click "text=Register"
+
+# Login after registration
+playwright-cli open "http://localhost:5000/login" --headed --persistent
+playwright-cli fill "input[name='email']" "test@example.com"
+playwright-cli fill "input[name='password']" "testpass123"
+playwright-cli click "text=Login"
+
+# Upload resume and test AI suggestions
+playwright-cli set-input-files "input[type='file']" "test_resume.pdf"
+playwright-cli click "text=Upload & Analyze"
+playwright-cli wait-for-selector "div.ai-suggestions" --timeout 10000</code></pre>
+<h2>5. Workflow Summary</h2>
+<p>To implement this framework effectively, follow these steps:</p>
+<ol>
+  <li><strong>Prepare</strong>: Install Node.js, Playwright CLI, and Chrome.</li>
+  <li><strong>Integrate with AI Agents</strong>: Install skills for Claude Code or Codex.</li>
+  <li><strong>Task Execution</strong>: Let AI explore and complete a complex task using Playwright CLI.</li>
+  <li><strong>Refine with Skills</strong>: Ask AI to summarize the workflow into a reusable skill.</li>
+  <li><strong>Optimize</strong>: Re-run the task with the skill to reduce token usage by up to 10x.</li>
+  <li><strong>0-Token Automation</strong>: For fixed workflows, ask AI to write a standalone script and run it directly.</li>
+</ol>
+<p>This CLI + Skill framework is a game-changer for browser automation, offering efficiency, cost savings, and simplicity. Whether you’re scraping data, publishing content, or testing apps, it empowers you to automate repetitive tasks with minimal effort.</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/claude-code-browser-automation">Continue reading &rarr;</a></p>
+</div>`,
+    contentZh: `<p>在自动化领域，CLI（命令行界面）工具与自定义技能的组合正在彻底改变我们处理浏览器任务的方式。这个框架让 AI 能够自动化浏览器操作，接管机械重复的工作，同时极其节省 Token——甚至可以实现完全<strong>不需要 AI 参与的零 Token 自动化工作流</strong>。让我们一起通过实际步骤和代码示例，深入了解它的工作原理。</p>
+<h2>1. 核心组件与优势</h2>
+<h3>关键工具</h3>
+<ul>
+  <li><strong>Agent 框架</strong>：Claude Code 或 Codex（用于 AI 驱动的任务编排）</li>
+  <li><strong>浏览器自动化工具</strong>：Playwright CLI（微软在 2026 年初推出的全新开源工具，专为高效浏览器控制设计）</li>
+  <li><strong>Skills（技能）</strong>：封装可重复流程的自定义脚本或工作流，减少 Token 使用，简化 AI 交互</li>
+</ul>
+<h3>为什么这个框架脱颖而出</h3>
+<ul>
+  <li><strong>Token 效率</strong>：与传统 Playwright MCP 方法相比，Playwright CLI 可将 Token 消耗降低最多 4 倍。它按需获取网页内容（例如网页快照或截图存储在本地，只在需要时才发送给 AI）</li>
+  <li><strong>零 Token 工作流</strong>：许多任务可以用固定脚本自动化，完全消除 AI Token 成本</li>
+  <li><strong>无需浏览器专业知识</strong>：你可以用自然语言自动化任务，不需要深入了解浏览器内部原理</li>
+</ul>
+<h2>2. 安装与基本使用</h2>
+<h3>第一步：安装依赖</h3>
+<p>首先确保你的电脑上安装了 <strong>Node.js</strong>。访问 <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js 官方网站</a>下载并安装与你的操作系统匹配的版本。</p>
+<p>接下来，通过 npm（Node 包管理器）安装 Playwright CLI：</p>
+<pre><code class="language-bash">npm install -g @playwright/cli</code></pre>
+<p>另外，请确保电脑上安装了 <strong>Google Chrome</strong>（或 Microsoft Edge）以进行浏览器自动化。</p>
+<h3>第二步：Playwright CLI 基础</h3>
+<p>Playwright CLI 支持两种浏览器模式：</p>
+<ul>
+  <li><strong>有头模式</strong>（<code>--headed</code>）：可见的浏览器窗口（适合调试）</li>
+  <li><strong>无头模式</strong>（默认）：不可见的后台浏览器（批量任务时节省内存）</li>
+</ul>
+<p>以有头模式打开网页（例如 Google）：</p>
+<pre><code class="language-bash">playwright-cli open google.com --headed</code></pre>
+<p>运行此命令时，Playwright CLI 输出简洁的网页摘要（而非整个 DOM）和快照文件路径。AI 只在需要时从此快照中获取完整 DOM，从而最大程度减少 Token 使用。</p>
+<p>截图命令：</p>
+<pre><code class="language-bash">playwright-cli screenshot</code></pre>
+<p>这会将 PNG 图片保存到本地，AI 自行决定是否处理——无需将图片数据直接发送给 AI。</p>
+<p>要在多个会话之间保留登录状态（如 cookies），使用 <code>--persistent</code> 标志：</p>
+<pre><code class="language-bash">playwright-cli open google.com --headed --persistent</code></pre>
+<h2>3. 与 AI Agent 集成（Claude Code 和 Codex）</h2>
+<p>像 Claude Code 或 Codex 这样的 AI Agent 需要"技能"来理解如何使用 Playwright CLI。以下是设置方法：</p>
+<h3>第一步：创建项目并安装技能</h3>
+<p>1. 创建一个项目文件夹，并在该目录中打开终端。</p>
+<p>2. 安装 Playwright CLI 技能：</p>
+<pre><code class="language-bash">playwright-cli install --skill</code></pre>
+<h3>第二步：连接到 Claude Code</h3>
+<p>启动 Claude Code 并检查可用技能：</p>
+<pre><code class="language-plaintext">What skills do you have?</code></pre>
+<p>Claude Code 应该会列出 <code>playwright-cli</code> 作为可用技能，确认集成成功。</p>
+<h3>第三步：连接到 Codex</h3>
+<p>将项目目录中的 <code>.claude</code> 技能文件夹重命名为 <code>.codex</code>。然后在 Codex 中运行：</p>
+<pre><code class="language-plaintext">/skills</code></pre>
+<p>Codex 会列出 <code>playwright-cli</code>，表示已准备就绪。</p>
+<h2>4. 实战示例</h2>
+<h3>示例 1：抓取电商评论（零 Token 工作流）</h3>
+<p>让我们从淘宝商品页面提取前 100 条评论并保存为 CSV 文件。</p>
+<h4>第一步：让 AI 探索和优化（首次运行）</h4>
+<p>用自然语言让 Codex 处理任务：</p>
+<pre><code class="language-plaintext">Use playwright-cli --headed --persistent to open this Tmall product page, scrape the first 100 reviews, and save them to a CSV file.</code></pre>
+<p>Codex 会尝试 Playwright CLI 命令，可能会经历一些试错过程。成功后，它会输出包含评论的 CSV 文件。</p>
+<h4>第二步：将工作流保存为技能</h4>
+<p>为了优化后续运行，将这个流程转化为可复用的技能。让 Codex 执行：</p>
+<pre><code class="language-plaintext">Create a new skill called "save-tmall-reviews" that encapsulates opening the product page, scraping reviews, and saving to CSV. Include all steps and fixes for any issues encountered.</code></pre>
+<p>Codex 会生成一个技能文件，你可以保存在项目中。</p>
+<h4>第三步：使用技能运行（降低 Token 使用）</h4>
+<p>现在用技能重新运行任务：</p>
+<pre><code class="language-plaintext">Use the "save-tmall-reviews" skill to scrape reviews for this Tmall product.</code></pre>
+<p>有了技能的指导，Codex 只需原来约 5% 的 Token 就能完成任务。</p>
+<h4>第四步：转换为零 Token 脚本</h4>
+<p>要实现完全自动化的零 Token 执行，让 Codex 编写固定脚本：</p>
+<pre><code class="language-plaintext">Write a PowerShell script that combines all Playwright CLI commands to scrape Tmall reviews and save them to CSV. Include delays to ensure reliability.</code></pre>
+<p>Codex 会生成类似以下的脚本（简化示例）：</p>
+<pre><code class="language-powershell"># Open the product page
+playwright-cli open "https://detail.tmall.com/..." --headed --persistent
+
+# Wait for the page to load
+playwright-cli wait-for-selector "text=查看全部评价" --timeout 5000
+
+# Click to view all reviews
+playwright-cli click "text=查看全部评价"
+
+# Extract reviews and save as CSV
+playwright-cli eval "() => { /* JavaScript to extract reviews */ }" | ConvertTo-Csv | Out-File "reviews.csv"</code></pre>
+<p>直接在 PowerShell 中运行此脚本——无需 AI 参与，不消耗任何 Token。</p>
+<h3>示例 2：在 X 平台自动发布文章</h3>
+<p>在 X 平台上发布 Markdown 文章很繁琐（格式问题、图片上传等）。让我们来自动化它。</p>
+<h4>第一步：准备文章（Markdown 转 HTML）</h4>
+<p>首先，将 Markdown 文章转换为 HTML 并下载图片到本地。使用以下由 Codex 生成的 Python 脚本：</p>
+<pre><code class="language-python">import requests
+import re
+import os
+from bs4 import BeautifulSoup
+import pandoc
+
+# Download images from the Markdown article and reformat to local paths
+def download_images_and_convert(md_path, img_dir="images", html_output="article.html"):
+    # Create image directory
+    os.makedirs(img_dir, exist_ok=True)
+
+    # Read Markdown content
+    with open(md_path, "r", encoding="utf-8") as f:
+        md_content = f.read()
+
+    # Extract and download images
+    img_links = re.findall(r"!\[.*?\]\((.*?)\)", md_content)
+    for i, img_link in enumerate(img_links):
+        img_name = f"00{i+1}.png"
+        img_path = os.path.join(img_dir, img_name)
+        response = requests.get(img_link)
+        with open(img_path, "wb") as f:
+            f.write(response.content)
+        # Replace remote image link with local path
+        md_content = md_content.replace(img_link, img_path)
+
+    # Convert Markdown to HTML with pandoc
+    html_content = pandoc.convert_text(md_content, to="html", format="md")
+
+    # Ensure each image is in its own paragraph
+    html_content = re.sub(r"<img(.*?)>", r"<p><img\\1></p>", html_content)
+
+    # Save HTML
+    with open(html_output, "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+if __name__ == "__main__":
+    download_images_and_convert("article.md")</code></pre>
+<h4>第二步：用 Playwright CLI 自动化发布</h4>
+<p>让 Codex 自动化发布流程：</p>
+<pre><code class="language-plaintext">Use playwright-cli --headed --persistent to open Platform X, create a new article, paste the HTML content, and replace image placeholders with the local images in the "images" folder. Ensure images are uploaded in order.</code></pre>
+<p>Codex 会生成 Playwright CLI 命令来：</p>
+<p>1. 打开 X 平台并创建草稿。</p>
+<p>2. 粘贴 HTML 内容。</p>
+<p>3. 定位图片占位符并通过复制粘贴替换为本地图片。</p>
+<h4>第三步：保存为可复用的技能</h4>
+<p>最后，将这个工作流保存为技能供以后使用：</p>
+<pre><code class="language-plaintext">Create a skill called "publish-to-platform-x" that includes downloading images, converting to HTML, and automating the publishing process on Platform X.</code></pre>
+<h3>示例 3：Web 应用自动化测试</h3>
+<p>对于自开发的 Web 应用（如简历优化工具），使用 Playwright CLI 运行自动化测试。</p>
+<h4>第一步：用 AI 生成测试用例</h4>
+<p>让 Codex 分析你的应用代码并创建测试用例：</p>
+<pre><code class="language-plaintext">Read the code of my resume optimization web app, then write a Chinese test document outlining the main flow (register -- login -- upload resume -- get AI suggestions). Then, use playwright-cli to execute these tests.</code></pre>
+<p>Codex 会生成如下测试文档（简化版）：</p>
+<pre><code class="language-markdown"># Test Cases for Resume Optimization App
+## 1. Registration
+- Step 1: Open the app's registration page.
+- Step 2: Enter a test email and password.
+- Step 3: Submit and verify successful registration.
+
+## 2. Login
+- Step 1: Navigate to the login page.
+- Step 2: Enter the registered email and password.
+- Step 3: Verify successful login and redirection to the dashboard.
+
+## 3. Resume Upload and AI Suggestions
+- Step 1: Click "Upload Resume" and select a test resume file.
+- Step 2: Wait for AI analysis and suggestions to load.
+- Step 3: Verify the suggestions appear correctly.</code></pre>
+<h4>第二步：用 Playwright CLI 执行测试</h4>
+<p>Codex 会生成 Playwright CLI 命令来运行这些测试：</p>
+<pre><code class="language-bash"># Open the registration page
+playwright-cli open "http://localhost:5000/register" --headed --persistent
+
+# Fill registration form
+playwright-cli fill "input[name='email']" "test@example.com"
+playwright-cli fill "input[name='password']" "testpass123"
+playwright-cli click "text=Register"
+
+# Login after registration
+playwright-cli open "http://localhost:5000/login" --headed --persistent
+playwright-cli fill "input[name='email']" "test@example.com"
+playwright-cli fill "input[name='password']" "testpass123"
+playwright-cli click "text=Login"
+
+# Upload resume and test AI suggestions
+playwright-cli set-input-files "input[type='file']" "test_resume.pdf"
+playwright-cli click "text=Upload & Analyze"
+playwright-cli wait-for-selector "div.ai-suggestions" --timeout 10000</code></pre>
+<h2>5. 工作流总结</h2>
+<p>要有效实施这个框架，请遵循以下步骤：</p>
+<ol>
+  <li><strong>准备工作</strong>：安装 Node.js、Playwright CLI 和 Chrome</li>
+  <li><strong>与 AI Agent 集成</strong>：为 Claude Code 或 Codex 安装技能</li>
+  <li><strong>任务执行</strong>：让 AI 使用 Playwright CLI 探索并完成复杂任务</li>
+  <li><strong>用技能优化</strong>：让 AI 将工作流总结为可复用的技能</li>
+  <li><strong>优化运行</strong>：使用技能重新运行任务，将 Token 使用量降低最多 10 倍</li>
+  <li><strong>零 Token 自动化</strong>：对于固定工作流，让 AI 编写独立脚本并直接运行</li>
+</ol>
+<p>这个 CLI + Skill 框架是浏览器自动化的革命性方案，兼具高效、节约成本和简单易用的特点。无论你是抓取数据、发布内容还是测试应用，它都能让你以最小的努力自动化重复性任务。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/claude-code-browser-automation">继续阅读 &rarr;</a></p>
+</div>`,
+  },
+  "agency-agents-chinese-version-100k": {
+    content: `<p>In the realm of AI agent development, the open-source project <strong>agency-agents</strong> has emerged as a game-changer, especially with its Chinese version that has surpassed the original in functionality and relevance, boasting over 100K stars on GitHub. This project offers a robust library of AI agent roles, tools, and frameworks, making it an indispensable resource for developers and businesses looking to leverage AI for various tasks. Here’s a practical guide to understanding and utilizing this powerful tool.</p>
+<h2>1. What is agency-agents?</h2>
+<p><strong>agency-agents</strong> is an open-source AI agent role library designed to provide ready-to-use AI expert roles, each tailored for specific tasks and industries. Unlike generic AI templates, these agents are built as true expert systems, defining *how to think* and *how to act* in their respective domains.</p>
+<ul>
+  <li><strong>Core Features</strong>:</li>
+  <li>215 expert AI roles covering 18 departments (e.g., marketing, data science, HR).</li>
+  <li>17 integrated tools (e.g., Claude Code, Cursor, Copilot) for seamless workflow automation.</li>
+  <li>A five-layer design framework that structures agent behavior:</li>
+</ul>
+<ol>
+  <li><strong>Identity Setting</strong>: Defines the agent’s unique personality and expertise.</li>
+  <li><strong>Core Mission</strong>: Outlines what the agent does and doesn’t do.</li>
+  <li><strong>Key Rules</strong>: Establishes domain-specific constraints.</li>
+  <li><strong>Delivery Definition</strong>: Specifies tangible outputs (e.g., a data analysis report with actionable insights).</li>
+  <li><strong>Success Metrics</strong>: Sets quantifiable goals for performance.</li>
+</ol>
+<h2>2. Why the Chinese Version Stands Out</h2>
+<p>The Chinese version of agency-agents goes beyond translation—it’s a localized enhancement with <strong>50 original roles</strong> built for Chinese-specific scenarios. These roles address unique needs in the Chinese market, making them invaluable for businesses and developers targeting this region.</p>
+<h3>Example Chinese-Specific Roles:</h3>
+<ul>
+  <li><strong>Douyin (TikTok) Operations Expert</strong>:</li>
+  <li>Task: Optimize video content, manage user engagement, and analyze platform trends.</li>
+  <li>Command Snippet (Python) for Trend Analysis:</li>
+</ul>
+<pre><code class="language-python">        import requests
+        import pandas as pd
+        
+        def fetch_douyin_trends(keyword):
+            url = "https://api.douyin.com/trends"
+            params = {"keyword": keyword, "region": "China"}
+            response = requests.get(url, params=params)
+            data = response.json()
+            trends_df = pd.DataFrame(data["trends"])
+            return trends_df
+        
+        # Example usage
+        douyin_trends = fetch_douyin_trends("AI agents")
+        print(douyin_trends.head())</code></pre>
+<ul>
+  <li><strong>College Entrance Exam (Gaokao) Counselor</strong>:</li>
+  <li>Task: Analyze student scores, recommend universities/majors, and simulate admission odds.</li>
+  <li>Command Snippet (Python) for Admission Simulation:</li>
+</ul>
+<pre><code class="language-python">        def simulate_admission(score, rank, target_universities):
+            admission_results = {}
+            for uni, requirements in target_universities.items():
+                if score >= requirements["min_score"] and rank <= requirements["max_rank"]:
+                    admission_results[uni] = "Admitted"
+                else:
+                    admission_results[uni] = "Rejected"
+            return admission_results
+        
+        # Example usage
+        target_uni = {
+            "Peking University": {"min_score": 680, "max_rank": 500},
+            "Tsinghua University": {"min_score": 675, "max_rank": 800}
+        }
+        result = simulate_admission(685, 450, target_uni)
+        print(result)</code></pre>
+<ul>
+  <li><strong>Aquaculture Audit Officer</strong>:</li>
+  <li>Task: Automate inspection reports, track species growth, and ensure regulatory compliance.</li>
+  <li>Command Snippet (Python) for Growth Tracking:</li>
+</ul>
+<pre><code class="language-python">        import numpy as np
+        import matplotlib.pyplot as plt
+        
+        def track_aquaculture_growth(species, growth_data):
+            days = np.arange(len(growth_data))
+            plt.plot(days, growth_data, label=species)
+            plt.xlabel("Days")
+            plt.ylabel("Growth (cm)")
+            plt.title(f"{species} Growth Tracking")
+            plt.legend()
+            plt.savefig("growth_tracking.png")
+            return "growth_tracking.png"
+        
+        # Example usage
+        carp_growth = [5, 7, 10, 13, 16, 19]
+        report_image = track_aquaculture_growth("Carp", carp_growth)
+        print(f"Growth report saved as: {report_image}")</code></pre>
+<h2>3. Technical Ecosystem: 17 Tools + Product Matrix</h2>
+<p>agency-agents supports a matrix of 17 mainstream development tools, enabling one-click installation and integration. This ecosystem includes:</p>
+<ul>
+  <li>Coding tools: Claude Code, Cursor, Copilot, Geminai CLI.</li>
+  <li>Productivity tools: Windsurf, Aider, Tse, CodeX CLI.</li>
+  <li>Specialized tools: DeepFlow, Kiro, Qwen Code, Augment.</li>
+</ul>
+<p>To set up the toolchain, use the following command (Linux/macOS):</p>
+<pre><code class="language-bash"># Clone the repository
+git clone https://github.com/agency-agents/agency-agents.git
+cd agency-agents
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install all tools (one-click)
+python setup_tools.py --all</code></pre>
+<h2>4. Performance Comparison: Chinese Version vs. Original</h2>
+<p>|Metric|Original Version|Chinese Version| |---|---|---| |GitHub Stars|103K (Reddit/Global)|12.4K (China-Focused)| |Agent Roles|184|215 (50+ original)| |Departments|15|18 (3+ new)| |Tools|11|17| |Language|English|Chinese (Fully Localized)|</p>
+<h2>5. Getting Started (Open-Source & Free)</h2>
+<p>agency-agents is open-source and free to use. To get started:</p>
+<ol>
+  <li><strong>Clone the Repository</strong>:</li>
+</ol>
+<pre><code class="language-bash">    git clone https://github.com/agency-agents/agency-agents.git
+    cd agency-agents</code></pre>
+<ol>
+  <li><strong>Run a Sample Agent (e.g., Douyin Operations Expert)</strong>:</li>
+</ol>
+<pre><code class="language-python">    from agency_agents import DouyinOperationsAgent
+    
+    # Initialize the agent
+    douyin_agent = DouyinOperationsAgent(
+        account_id="your_douyin_account",
+        api_key="your_api_key"
+    )
+    
+    # Analyze a video's performance
+    video_performance = douyin_agent.analyze_video(video_id="123456")
+    print(video_performance)
+    
+    # Generate a content plan
+    content_plan = douyin_agent.generate_content_plan(
+        niche="AI technology",
+        target_audience="tech enthusiasts"
+    )
+    print(content_plan)</code></pre>
+<h2>6. Conclusion</h2>
+<p>The Chinese version of agency-agents is a testament to how localization and specialization can elevate AI agent functionality. With its 215 expert roles, 17 integrated tools, and China-specific features, it’s a must-try for developers and businesses looking to harness AI for targeted, practical applications. Whether you’re optimizing social media campaigns, navigating educational advising, or managing industrial audits, agency-agents provides the tools and structure to turn AI into a true expert collaborator.</p>
+<p>For more projects and updates, follow the official GitHub repository or the project’s social media channels. Happy building!</p>
+
+<div class="next-step">
+<p><strong>Next:</strong> <a href="/article/6-ai-tools-dominating-github">Continue reading &rarr;</a></p>
+</div>`,
+    contentZh: `<p>在 AI Agent 开发领域，开源项目 <strong>agency-agents</strong> 已经成为一股颠覆性力量，尤其是其中文版在功能和相关性上超越了原版，在 GitHub 上获得了超过 10 万颗星。该项目提供了丰富的 AI Agent 角色、工具和框架库，使其成为希望利用 AI 完成各种任务的开发者和企业不可或缺的资源。以下是一份理解和使用这个强大工具的实用指南。</p>
+<h2>1. 什么是 agency-agents？</h2>
+<p><strong>agency-agents</strong> 是一个开源 AI Agent 角色库，旨在提供即开即用的 AI 专家角色，每个角色都针对特定任务和行业量身定制。与通用 AI 模板不同，这些 Agent 被构建为真正的专家系统，定义了在其各自领域<strong>如何思考</strong>和<strong>如何行动</strong>。</p>
+<p><strong>核心特性</strong>：</p>
+<ul>
+  <li>215 个 AI 专家角色，覆盖 18 个部门（如营销、数据科学、人力资源等）</li>
+  <li>17 个集成工具（如 Claude Code、Cursor、Copilot），实现无缝工作流自动化</li>
+  <li>五层设计框架，结构化 Agent 行为：</li>
+</ul>
+<ol>
+  <li><strong>身份设定</strong>：定义 Agent 的独特个性和专业知识</li>
+  <li><strong>核心使命</strong>：概述 Agent 做什么和不做什么</li>
+  <li><strong>关键规则</strong>：建立领域特定的约束条件</li>
+  <li><strong>交付定义</strong>：指定具体的输出（如带可操作建议的数据分析报告）</li>
+  <li><strong>成功指标</strong>：设定可量化的绩效目标</li>
+</ol>
+<h2>2. 中文版为何脱颖而出</h2>
+<p>agency-agents 的中文版不仅仅是翻译——它是本地化的增强版本，包含<strong>50 个为中国特定场景打造的原创角色</strong>。这些角色针对中国市场的独特需求而设计，使其对瞄准该地区的开发者和企业极具价值。</p>
+<h3>中文特定角色示例：</h3>
+<p><strong>抖音运营专家</strong>：</p>
+<ul>
+  <li>任务：优化视频内容、管理用户互动、分析平台趋势</li>
+  <li>趋势分析命令片段（Python）：</li>
+</ul>
+<pre><code class="language-python">import requests
+import pandas as pd
+
+def fetch_douyin_trends(keyword):
+    url = "https://api.douyin.com/trends"
+    params = {"keyword": keyword, "region": "China"}
+    response = requests.get(url, params=params)
+    data = response.json()
+    trends_df = pd.DataFrame(data["trends"])
+    return trends_df
+
+# Example usage
+douyin_trends = fetch_douyin_trends("AI agents")
+print(douyin_trends.head())</code></pre>
+<p><strong>高考志愿咨询师</strong>：</p>
+<ul>
+  <li>任务：分析学生成绩、推荐大学/专业、模拟录取概率</li>
+  <li>录取模拟命令片段（Python）：</li>
+</ul>
+<pre><code class="language-python">def simulate_admission(score, rank, target_universities):
+    admission_results = {}
+    for uni, requirements in target_universities.items():
+        if score >= requirements["min_score"] and rank <= requirements["max_rank"]:
+            admission_results[uni] = "录取"
+        else:
+            admission_results[uni] = "未录取"
+    return admission_results
+
+# Example usage
+target_uni = {
+    "Peking University": {"min_score": 680, "max_rank": 500},
+    "Tsinghua University": {"min_score": 675, "max_rank": 800}
+}
+result = simulate_admission(685, 450, target_uni)
+print(result)</code></pre>
+<p><strong>水产养殖审计员</strong>：</p>
+<ul>
+  <li>任务：自动化检查报告、跟踪物种生长、确保合规</li>
+  <li>生长跟踪命令片段（Python）：</li>
+</ul>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+def track_aquaculture_growth(species, growth_data):
+    days = np.arange(len(growth_data))
+    plt.plot(days, growth_data, label=species)
+    plt.xlabel("Days")
+    plt.ylabel("Growth (cm)")
+    plt.title(f"{species} Growth Tracking")
+    plt.legend()
+    plt.savefig("growth_tracking.png")
+    return "growth_tracking.png"
+
+# Example usage
+carp_growth = [5, 7, 10, 13, 16, 19]
+report_image = track_aquaculture_growth("Carp", carp_growth)
+print(f"Growth report saved as: {report_image}")</code></pre>
+<h2>3. 技术生态：17 个工具与产品矩阵</h2>
+<p>agency-agents 支持 17 个主流开发工具的产品矩阵，实现一键安装和集成。这个生态系统包括：</p>
+<ul>
+  <li>编码工具：Claude Code、Cursor、Copilot、Gemini CLI</li>
+  <li>效率工具：Windsurf、Aider、Tse、CodeX CLI</li>
+  <li>专用工具：DeepFlow、Kiro、通义灵码、Augment</li>
+</ul>
+<p>要设置工具链，在 Linux/macOS 上使用以下命令：</p>
+<pre><code class="language-bash"># Clone the repository
+git clone https://github.com/agency-agents/agency-agents.git
+cd agency-agents
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install all tools (one-click)
+python setup_tools.py --all</code></pre>
+<h2>4. 性能对比：中文版 vs 原版</h2>
+<ul>
+  <li><strong>GitHub Stars</strong>：原版 103K（全球） vs 中文版 12.4K（聚焦中国）</li>
+  <li><strong>Agent 角色</strong>：原版 184 vs 中文版 215（50 个原创）</li>
+  <li><strong>部门覆盖</strong>：原版 15 vs 中文版 18（新增 3 个）</li>
+  <li><strong>集成工具</strong>：原版 11 vs 中文版 17</li>
+  <li><strong>语言</strong>：原版英文 vs 中文版（完全本地化）</li>
+</ul>
+<h2>5. 快速开始（开源免费）</h2>
+<p>agency-agents 是开源且免费使用的。开始使用：</p>
+<p>1. <strong>克隆仓库</strong>：</p>
+<pre><code class="language-bash"># Clone the repository
+git clone https://github.com/agency-agents/agency-agents.git
+cd agency-agents</code></pre>
+<p>2. <strong>运行示例 Agent（如抖音运营专家）</strong>：</p>
+<pre><code class="language-python">from agency_agents import DouyinOperationsAgent
+
+# Initialize the agent
+douyin_agent = DouyinOperationsAgent(
+    account_id="your_douyin_account",
+    api_key="your_api_key"
+)
+
+# Analyze a video's performance
+video_performance = douyin_agent.analyze_video(video_id="123456")
+print(video_performance)
+
+# Generate a content plan
+content_plan = douyin_agent.generate_content_plan(
+    niche="AI technology",
+    target_audience="tech enthusiasts"
+)
+print(content_plan)</code></pre>
+<h2>6. 结论</h2>
+<p>agency-agents 的中文版证明了本地化和专业化如何提升 AI Agent 的功能。凭借其 215 个专家角色、17 个集成工具和中国特定功能，它成为希望利用 AI 进行针对性、实际应用的开发者和企业必试的项目。无论你是在优化社交媒体活动、指导教育咨询，还是管理工业审计，agency-agents 都提供了将 AI 转变为真正专家协作伙伴的工具和框架。</p>
+<p>更多项目和更新，请关注官方 GitHub 仓库或项目的社交媒体频道。祝你构建愉快！</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/6-ai-tools-dominating-github">继续阅读 &rarr;</a></p>
+</div>`,
+  },
 };

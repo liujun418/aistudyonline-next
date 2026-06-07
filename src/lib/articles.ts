@@ -1630,4 +1630,56 @@ export const articles: Article[] = [
     date: "2026-06-06",
   },
 
+
+  {
+    slug: "ai-core-terminology-workflows-beginners",
+    title: "AI Core Terminology & Practical Workflows: A Beginner's Complete Guide",
+    titleZh: "AI核心术语与实用工作流程：初学者完整指南",
+    description: "Master essential AI concepts: Token, Context Window, Prompt, RAG, MCP, Agent, Workflow and more -- with practical commands and code examples for Claude Code.",
+    descriptionZh: "掌握核心AI概念：Token、上下文窗口、提示词、RAG、MCP、Agent、工作流等——附带Claude Code实用命令和代码示例。",
+    category: "ai-basics",
+    tags: ["ai-basics", "terminology", "beginner-guide", "llm", "rag", "mcp", "agent", "workflow"],
+    difficulty: "beginner",
+    toolsMentioned: ["chatgpt", "claude", "gemini"],
+    date: "2026-06-07",
+  },
+
+  {
+    slug: "anthropic-harness-dynamic-workflows",
+    title: "Anthropic Harness Dynamic Workflows: Full Practical Guide for Claude Code Developers",
+    titleZh: "Anthropic Harness动态工作流：Claude Code开发者完整实战指南",
+    description: "Master Anthropic's Dynamic Workflow Harness for Claude Code -- parallel sub-agents, breakpoint resume, autonomous task orchestration, and practical startup commands.",
+    descriptionZh: "掌握Anthropic为Claude Code推出的动态工作流Harness系统——并行子代理、断点续传、自主任务编排及实用启动命令。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "dynamic-workflow", "harness", "multi-agent", "automation"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-07",
+  },
+
+  {
+    slug: "cli-skill-browser-ai-automation",
+    title: "CLI + Skill: A Browser AI Automation Framework to Bid Farewell to Repetitive Tasks",
+    titleZh: "CLI + Skill：告别重复任务的浏览器AI自动化框架",
+    description: "Learn how CLI tools and custom skills create a token-efficient browser automation framework -- with Playwright CLI, 0-token workflows, and practical examples.",
+    descriptionZh: "学习如何使用CLI工具和自定义技能构建高效的浏览器自动化框架——包含Playwright CLI、零Token工作流和实战示例。",
+    category: "ai-use-cases",
+    tags: ["cli", "skill", "browser-automation", "playwright", "token-efficiency"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-07",
+  },
+
+  {
+    slug: "agency-agents-chinese-version-100k",
+    title: "Unleash the Power of AI Agents with the Chinese Version of agency-agents: Outperforming the Original with 100K+ Stars",
+    titleZh: "用中文版agency-agents释放AI代理的力量：10万+Star超越原版",
+    description: "Explore agency-agents open-source project with 215 expert AI roles, 17 integrated tools, and China-specific features that outperforms the original with 100K+ stars.",
+    descriptionZh: "探索拥有215个AI专家角色、17个集成工具和中国专属功能的开源项目agency-agents，以10万+Star超越原版。",
+    category: "ai-tools",
+    tags: ["agency-agents", "ai-agents", "open-source", "github", "chinese-localization"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-07",
+  },
 ];
