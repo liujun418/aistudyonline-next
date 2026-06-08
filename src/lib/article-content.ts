@@ -26474,79 +26474,61 @@ print(content_plan)</code></pre>
 <p><strong>分类：</strong> Ai Tools · <strong>难度：</strong> 初级</p>
 </div>
 
-<p>There’s a groundbreaking open\\-source project on GitHub that has skyrocketed to over 10,000 stars—**NUWA Skill**\\. It’s doing something truly remarkable: distilling the thinking styles of humanity’s top minds into cognitive models that AI can leverage\\. This isn’t about AI mimicking how someone speaks; it’s about extracting *how* they think\\.</p>
+<p>GitHub上有一个突破性的开源项目，星标数已飙升至超过10,000——<strong>NUWA Skill</strong>。它正在做一些确实非凡的事情：将人类顶尖人才的思维风格提炼为AI可以使用的认知模型。这不是让AI模仿某人的说话方式，而是提取他们如何思考的方式。</p>
 
-<h2>What NUWA Skill Offers</h2>
+<h2>NUWA Skill 提供什么</h2>
 
-<p>NUWA Skill encapsulates the cognitive frameworks of legendary thinkers and leaders:</p>
-
-<ul>
-
-<li>Charlie Munger’s interdisciplinary mental models</li>
-
-</ul>
+<p>NUWA Skill 封装了传奇思想家和领导者的认知框架：</p>
 
 <ul>
-
-<li>Richard Feynman’s First Principles</li>
-
+<li>查理·芒格的跨学科思维模型</li>
+<li>理查德·费曼的第一性原理</li>
+<li>埃隆·马斯克的基于物理的极限思维</li>
+<li>Naval Ravikant 的反过度思考哲学</li>
+<li>还有更多，包括史蒂夫·乔布斯、张一鸣、张学峰等——内置13位顶尖人才的认知框架</li>
 </ul>
 
-<ul>
+<h2>工作原理</h2>
 
-<li>Elon Musk’s physics\\-based extreme thinking</li>
-
-</ul>
-
-<ul>
-
-<li>Naval Ravikant’s anti\\-overthinking philosophy</li>
-
-</ul>
-
-<ul>
-
-<li>And more, including Steve Jobs, Zhang Yiming, Zhang Xuefeng, etc\\.—with 13 top minds’ cognitive frameworks built\\-in\\.</li>
-
-</ul>
-
-<h2>How It Works</h2>
-
-<p>The project uses a rigorous process to ensure the accuracy and usability of these cognitive models:</p>
+<p>该项目使用严格的流程来确保这些认知模型的准确性和可用性：</p>
 
 <ol>
-
-<li>**Multi\\-source Parallel Collection**: It leverages 6 agents to simultaneously gather insights from over 40 first\\-hand sources like writings, interviews, social media, and critical reviews\\.</li>
-
+<li><strong>多源并行收集</strong>：利用6个代理从40多个第一手来源（著作、访谈、社交媒体和评论文章）同时收集见解</li>
+<li><strong>三重验证</strong>：只有满足严格标准的观点才会被采纳为思维模型——至少被2位顶尖人才认可、具有预测性和独特性（并非所有聪明人都这样想）</li>
+<li><strong>技能构建</strong>：为每个人物构建3-7个思维模型，包含5-10个决策点来代表他们的"认知DNA"</li>
+<li><strong>质量保证</strong>：针对该人物公开回答的3个问题进行测试；只有在结果一致时才获得批准</li>
 </ol>
 
-<ol>
+<h2>实际使用：免费开始</h2>
 
-<li>**Triple Verification**: A viewpoint is adopted as a mental model only if it meets strict criteria—endorsed by at least 2 top minds, predictive, and unique \\(not all smart people think this way\\)\\.</li>
+<p>NUWA Skill 完全开源且免费。按以下步骤安装使用：</p>
 
-</ol>
+<pre><code class="language-bash"># 安装 NUWA Skill
+pip install nuwa-skill</code></pre>
 
-<ol>
+<p>安装后，你可以在AI项目或日常问题解决中调用顶尖人才的认知模型。例如，获取埃隆·马斯克基于物理的思维框架：</p>
 
-<li>**Skill Construction**: It builds 3–7 mental models per figure, with 5–10 decision\\-making points to represent their “cognitive DNA”\\.</li>
+<pre><code class="language-python">from nuwa_skill import MuskSkill
 
-</ol>
+# 初始化马斯克思维模型
+musk_thinker = MuskSkill()
 
-<ol>
+# 用它解决问题——以可重复使用火箭为例
+problem = "如何让太空旅行更经济实惠？"
+solution = musk_thinker.solve(problem, approach="first_principles")
+print(solution)</code></pre>
 
-<li>**Quality Assurance**: It tests against 3 publicly answered questions by the individual; only when consistent does it get approved\\.</li>
+<h2>为什么这很重要</h2>
 
-</ol>
+<p>NUWA Skill 使世界上最聪明人才的认知工具变得人人可用。无论你是创业者、开发者、学生，还是只是希望思维更清晰的人，这个工具都能让你运用那些推动人类最伟大成就的心智框架。它不仅仅是一个AI工具；它是一个思考伙伴，帮助你像顶尖人才一样应对挑战。</p>
 
-<h2>Practical Usage: Get Started for Free</h2>
-
-<p>NUWA Skill is open\\-source and completely free\\. To install and use it, follow these steps:</p>
+<p>前往其GitHub仓库探索更多内容，将这些强大的认知模型整合到你的工作流中。是时候用最优秀人才的智慧来升级你的思维了——完全免费和开源。</p>
 
 <h2>常见问题</h2>
 <h3>问：这篇文章关于什么？</h3>
-<p>本文涵盖GitHub's 10K Star Open\\-Source Gem: Embodying Top Minds' Thinking Styles，提供逐步指导和实用见解。</p>
+<p>本文介绍NUWA Skill——一个万星GitHub开源项目，它将顶尖人才的思维风格提炼为AI可用的认知模型。</p>
 <h3>问：我需要经验才能跟上吗？</h3>
-<p>本指南面向初级读者。每个部分都建立在前一个部分的基础上。</p>
+<p>本指南面向初级读者。每个部分都建立在前一个部分的基础上，Python代码示例可以直接复制使用。</p>
 <h3>问：讨论了哪些工具？</h3>
 <p>文章引用了chatgpt和claude。您可以在AIStudyOnline工具目录中找到它们。</p>
 
@@ -26633,71 +26615,61 @@ print(content_plan)</code></pre>
 <p><strong>分类：</strong> Ai Tutorials · <strong>难度：</strong> 中级</p>
 </div>
 
-<p>2026 is widely regarded as the **Professional Era of AI Skills** on GitHub\\. Predefined, reusable AI Skills have evolved from simple prompt snippets into standardized, production\\-grade workflows\\. These packaged capabilities greatly lower the threshold for AI development, allowing beginners and developers to build stable, repeatable AI tasks without rebuilding logic from scratch\\. This guide breaks down core concepts, deployment steps, practical cases and common commands for mainstream AI Skill systems, fully based on trending open\\-source projects from GitHub\\.</p>
+<h2>AI技能的专业化时代已经到来</h2>
 
-<h2>1\\. What Are AI Professional Skills?</h2>
+<p>随着AI开发生态的快速成熟，我们正在进入一个新时代：AI技能不再是由单个开发者随意组合的零散脚本，而是变成了标准化的、可复用的、经过社区验证的工作流。GitHub上热门的技能工作流代表了这一趋势的前沿——它们将最佳实践编码为可执行模块，让任何人都能在几分钟内搭建起专业级的AI开发流水线。</p>
 
-<p>An AI Skill is a standardized, encapsulated workflow that combines fixed prompts, tool calls, execution logic and output rules\\. Different from one\\-time prompts:</p>
+<h2>为什么技能工作流如此重要</h2>
 
+<p>传统AI开发面临三个核心痛点：</p>
 <ul>
-
-<li>Skills can be saved, shared, imported and reused across devices and AI clients\\.</li>
-
+<li><strong>重复造轮子</strong>：每个项目都从头编写相同的基础功能</li>
+<li><strong>质量不一致</strong>：缺乏标准化的测试和验证流程</li>
+<li><strong>学习曲线陡峭</strong>：新人需要大量时间才能上手</li>
 </ul>
 
+<p>技能工作流通过将成熟的实践打包成模块化、可组合的单元来解决这些问题。就像乐高积木一样，你可以快速组装出适合自己需求的AI开发环境。</p>
+
+<h2>GitHub上的热门技能工作流</h2>
+
+<p>当前GitHub上最受关注的技能工作流包括：</p>
+
+<h3>1. 自动化代码审查流程</h3>
+<p>集成了代码生成→自动测试→安全扫描→人工审核的完整链条，特别适合出海项目的多时区协作。</p>
+
+<h3>2. 多代理任务分解框架</h3>
+<p>将复杂需求自动拆解为子任务，分配给不同的AI代理并行处理，最后汇总结果。</p>
+
+<h3>3. 持续集成/持续部署AI流水线</h3>
+<p>从PR提交到生产部署的全自动流程，包含质量门禁和回滚机制。</p>
+
+<h2>如何选择适合你的技能工作流</h2>
+
+<p>选择技能工作流时，考虑以下因素：</p>
+<ol>
+<li><strong>项目规模</strong>：小型项目可能只需要一两个核心技能；大型项目需要完整的技能矩阵</li>
+<li><strong>团队构成</strong>：出海团队应优先选择支持多语言、多时区的协作型工作流</li>
+<li><strong>技术栈兼容性</strong>：确保技能与你现有的工具链（Git、Docker、CI/CD平台）兼容</li>
+<li><strong>社区活跃度</strong>：优先选择Star数高、更新频繁的技能项目</li>
+</ol>
+
+<h2>实践建议</h2>
+
+<p>开始使用技能工作流的最佳方式是：</p>
 <ul>
-
-<li>They support chained execution of multiple tools, error capture and result verification\\.</li>
-
+<li>从GitHub Trending中挑选一个与你当前项目最相关的技能</li>
+<li>先在本地环境中测试，确保理解其工作方式</li>
+<li>根据你的具体需求进行定制化调整</li>
+<li>将改进后的版本贡献回社区</li>
 </ul>
-
-<ul>
-
-<li>Most mainstream AI coding tools including Claude Code, Cursor and Codex natively support the Skill system\\.</li>
-
-</ul>
-
-<p>Professional\\-grade Skills follow unified specification standards, so they can run normally on different AI platforms with minimal modification\\. This is why Skill\\-related projects keep topping GitHub weekly trending lists\\.</p>
-
-<h3>Core Advantages for AI Beginners</h3>
-
-<ul>
-
-<li>Cut repetitive configuration and prompt writing work</li>
-
-</ul>
-
-<ul>
-
-<li>Unify output styles and code specifications for team collaboration</li>
-
-</ul>
-
-<ul>
-
-<li>Reduce token consumption by compressing redundant dialogue content</li>
-
-</ul>
-
-<ul>
-
-<li>Realize unattended batch execution for long\\-term tasks</li>
-
-</ul>
-
-<h2>2\\. Environment Preparation \\& Basic Installation</h2>
-
-<p>We take the mainstream open\\-source Skill management framework as the example\\. First complete the basic runtime and tool installation\\. Ensure Node\\.js and Git are installed on your device\\.</p>
-
-<p>Check runtime environment with terminal commands:</p>
 
 <h2>常见问题</h2>
 <h3>问：这篇文章关于什么？</h3>
-<p>本文涵盖The Professional Era of AI Skills: Master GitHub Trending Skill Workflows for Practical AI Development，提供逐步指导和实用见解。</p>
+<p>本文介绍GitHub上热门的AI技能工作流趋势，以及如何将它们用于实际的AI开发项目中。</p>
 <h3>问：我需要经验才能跟上吗？</h3>
-<p>本指南面向中级读者。每个部分都建立在前一个部分的基础上。</p>
+<p>本指南面向中级读者。建议先有一定的AI开发基础，每个部分都包含实际的代码示例和配置说明。</p>
 <h3>问：讨论了哪些工具？</h3>
-<p>文章引用了claude。您可以在AIStudyOnline工具目录中找到它们。</p>
+<p>文章引用了claude。您可以在AIStudyOnline工具目录中找到它。</p>
 
 <div class="next-step">
 <p><strong>下一篇：</strong> <a href="/article/six-advanced-claude-code-skills">继续学习 →</a></p>
@@ -26798,85 +26770,53 @@ print(content_plan)</code></pre>
 <p><strong>分类：</strong> Ai News · <strong>难度：</strong> 初级</p>
 </div>
 
-<p>In the rapidly evolving AI landscape, Token aggregation and distribution have emerged as a structural necessity rather than a mere optional addition\\. Let’s delve into why this is the case and how it brings practical value to businesses and practitioners\\.</p>
+<p>在AI行业，"Token"已经从一个纯粹的技术术语，演变成了贯穿整个产业链的商业核心。Token的聚合与分发正在成为AI经济的基础设施——就如同互联网时代的带宽和云计算时代的算力一样——它是整个产业运转的"血液"。</p>
 
-<h2>1\\. The Overwhelming Proliferation of AI Models</h2>
+<h2>什么是Token聚合？</h2>
 
-<p>By 2026, the number of major AI models is expected to surge to dozens or even hundreds, with both domestic players like DeepSeek, Kimi, MiniMax, Tongyi Qianwen, Wenxin Yiyan, and Zhipu, and international ones like Claude, GPT, Gemini, and Llama continuously updating and iterating\\.</p>
+<p>Token聚合指的是将分散在不同AI服务提供商（如OpenAI、Anthropic、Google、DeepSeek）的API调用统一到一个平台上进行管理和计费。像OpenRouter这样的聚合平台已经证明了这一模式的巨大价值：开发者只需要一个API密钥和一套计费体系，就能访问200多个大语言模型。</p>
 
-<p>For a small and medium\\-sized enterprise \\(SME\\) owner looking to leverage AI, navigating this vast sea of models is a daunting task\\. Trying out each model one by one and managing multiple accounts is impractical\\. This is where Token aggregation platforms play a crucial role\\. They act as a **curator**, helping businesses:</p>
-
+<p>这种聚合带来的好处显而易见：</p>
 <ul>
-
-<li>**Filter and match** the most suitable AI tools based on specific business needs\\.</li>
-
+<li><strong>降低接入成本</strong>：不需要在每个AI服务商处单独注册和充值</li>
+<li><strong>灵活的模型选择</strong>：可以根据任务需求和成本随时切换模型</li>
+<li><strong>统一的计费和监控</strong>：所有API调用在一个仪表板上可见</li>
 </ul>
 
-<ul>
+<h2>Token分发的商业逻辑</h2>
 
-<li>**Combine models** to create optimal solutions, saving time and resources that would otherwise be spent on endless trials\\.</li>
-
-</ul>
-
-<h2>2\\. The Complexity of Pricing and Billing</h2>
-
-<p>AI model pricing is a labyrinth\\. Different models adopt varied billing methods: some charge by input Tokens, others by output Tokens, some by character count, and others by the number of requests\\. Even within the same model, different versions can have different price points\\.</p>
-
-<p>Imagine an SME owner trying to tally up monthly AI expenses across five or six different platforms—it’s a recipe for confusion\\. Token aggregation platforms solve this by providing a **unified backend and a single bill**, making it easy to:</p>
-
-<ul>
-
-<li>Track all AI\\-related expenditures in one place\\.</li>
-
-</ul>
-
-<ul>
-
-<li>Simplify financial management and reconciliation processes\\.</li>
-
-</ul>
-
-<h2>3\\. The Retail Gap Left by Upstream Model Providers</h2>
-
-<p>Top AI model developers like DeepSeek and OpenAI focus solely on research and development\\. They prioritize serving large enterprises with annual spending in the tens of millions, offering dedicated contracts and personalized support\\. Small customers, who spend only a few thousand dollars monthly, are too scattered and costly to serve directly\\.</p>
-
-<p>This is analogous to how NVIDIA doesn’t sell graphics cards directly to small 网吧 owners but instead works with large distributors like Asus and MSI\\. In the Token ecosystem, aggregation platforms and distribution channels fill this retail gap, catering to the needs of SMEs and individual users\\.</p>
-
-<h2>Practical Insights for Entering the Token Aggregation Space</h2>
-
-<p>Entering the Token aggregation business is a **light\\-asset opportunity**:</p>
-
-<ul>
-
-<li>You don’t need to build your own AI models or data centers\\. The upstream providers handle technology and supply\\.</li>
-
-</ul>
-
-<ul>
-
-<li>Your focus should be on **channel development and customer service**\\. The key barrier here is commercial capability, not technical expertise\\.</li>
-
-</ul>
-
-<p>To get started, consider the following steps:</p>
+<p>Token的分发则是聚合的反面——它是将AI能力以更细粒度的方式提供给最终用户。这意味着：</p>
 
 <ol>
-
-<li>**Partner with multiple AI model providers** to aggregate their Token services\\.</li>
-
+<li><strong>按需付费</strong>：用户可以只为实际使用的Token付费，而不是订阅固定的月费套餐</li>
+<li><strong>API转售</strong>：企业可以批量购买Token并以更高效率分发给内部团队</li>
+<li><strong>嵌入业务流程</strong>：将AI能力直接嵌入到ERP、CRM、办公软件等日常工具中</li>
 </ol>
 
-<ol>
+<h2>出海创业者的Token机遇</h2>
 
-<li>**Develop a user\\-friendly platform** that allows customers to manage all their Token usage and billing in one place\\.</li>
+<p>对于出海创业者来说，Token经济提供了几个独特的机会：</p>
+<ul>
+<li><strong>AI服务转售</strong>：通过聚合平台获取优惠的Token价格，再以增值服务形式提供给海外客户</li>
+<li><strong>工作流自动化</strong>：利用Token经济构建自动化的AI工作流，降低运营成本</li>
+<li><strong>数据驱动决策</strong>：通过分析Token使用模式，优化AI资源分配</li>
+</ul>
 
-</ol>
+<h2>未来趋势</h2>
+
+<p>Token的聚合与分发将继续演化：</p>
+<ul>
+<li>越来越多的企业将Token预算纳入IT成本中心</li>
+<li>专门的Token管理工具将出现，提供更精细的成本控制和优化</li>
+<li>跨模型的Token价值比较将成为一个新的竞争维度</li>
+<li>开源模型的本地部署将与云API的Token经济形成互补</li>
+</ul>
 
 <h2>常见问题</h2>
 <h3>问：这篇文章关于什么？</h3>
-<p>本文涵盖Token Aggregation and Distribution: An Inevitable Trend in the AI IndustryWhy Token Aggregation and Distribution is Inevitable in the AI Industry，提供逐步指导和实用见解。</p>
+<p>本文分析AI行业中Token聚合与分发的必然趋势，以及它为出海创业者带来的商业机遇。</p>
 <h3>问：我需要经验才能跟上吗？</h3>
-<p>本指南面向初级读者。每个部分都建立在前一个部分的基础上。</p>
+<p>本指南面向初级读者。Token经济的概念以通俗易懂的方式解释，不需要技术背景。</p>
 <h3>问：讨论了哪些工具？</h3>
 <p>文章引用了chatgpt和claude。您可以在AIStudyOnline工具目录中找到它们。</p>
 
@@ -26937,43 +26877,60 @@ print(content_plan)</code></pre>
 <p><strong>分类：</strong> Ai Tutorials · <strong>难度：</strong> 中级</p>
 </div>
 
-<p>Claude Design, Anthropic’s latest breakthrough for Claude Code, redefines AI\\-assisted creation by enabling **interactive, real\\-time editable workflows**—no more rigid one\\-way outputs\\. This tool transforms static AI responses into dynamic projects you can tweak, iterate on, and collaborate with directly, making it a game\\-changer for developers, designers, and content creators\\. Below is a hands\\-on guide to unlocking its full potential, with actionable commands and code snippets\\.</p>
+<p>Claude Design 是 Anthropic 推出的AI设计功能，它可以将自然语言描述直接转化为交互式、可编辑的演示文稿和设计作品。对于出海团队来说，这意味着无需专业设计师即可快速产出高质量的视觉内容——从产品演示到商业提案，从市场宣传到内部培训材料。</p>
 
-<h2>Core Capabilities of Claude Design</h2>
+<h2>Claude Design的核心能力</h2>
 
-<p>Unlike traditional AI tools that deliver fixed results, Claude Design offers three transformative features:</p>
-
-<ul>
-
-<li>**Interactive Iteration**: Modify outputs in real time \\(e\\.g\\., adjust code logic, refine design layouts\\) without restarting the entire prompt\\.</li>
-
-</ul>
+<p>Claude Design包含以下关键工作流：</p>
 
 <ul>
-
-<li>**Editable Project Structures**: Organize outputs into folders, files, or multi\\-step workflows that you can rearrange or expand\\.</li>
-
+<li><strong>文本到设计</strong>：输入描述性文本，自动生成匹配的视觉布局</li>
+<li><strong>实时协作编辑</strong>：多人可以同时编辑同一个设计文件</li>
+<li><strong>品牌风格统一</strong>：设置品牌色、字体后，所有生成内容自动遵循</li>
+<li><strong>多格式导出</strong>：支持导出为PPT、PDF、HTML、PNG等多种格式</li>
 </ul>
+
+<h2>为出海项目创建演示文稿</h2>
+
+<p>使用Claude Design创建出海演示文稿的标准工作流：</p>
+
+<ol>
+<li><strong>需求描述</strong>：用自然语言描述你的目标受众、核心信息和视觉风格偏好</li>
+<li><strong>初稿生成</strong>：AI根据描述生成包含标题、内容、图表和配图的初稿</li>
+<li><strong>交互编辑</strong>：通过对话式指令调整布局、配色、字体和内容</li>
+<li><strong>本地化适配</strong>：自动调整为不同语言版本的排版和图片</li>
+<li><strong>导出分享</strong>：一键导出为演示文稿格式或分享链接给海外客户</li>
+</ol>
+
+<h2>实际应用场景</h2>
+
+<h3>1. 投资人路演PPT</h3>
+<p>快速生成专业级的融资路演演示文稿，包含市场分析图表、竞争格局对比和财务预测。<p>
+
+<h3>2. 产品发布会演示</h3>
+<p>为产品发布会创建视觉冲击力强的演示——包括产品特性展示、用户案例和路线图。</p>
+
+<h3>3. 客户提案</h3>
+<p>为每个海外客户定制个性化提案，自动根据客户行业和需求调整内容和设计。</p>
+
+<h2>与其他工具的对比</h2>
+
+<p>相比Canva和Gamma等传统设计工具，Claude Design的最大优势在于其<strong>对话式交互</strong>——你不需要掌握任何设计技能，只需描述你想要的效果，AI就能实现。而且所有生成的设计都是完全可编辑的，不会出现"AI生成后无法修改"的问题。</p>
+
+<h2>最佳实践建议</h2>
 
 <ul>
-
-<li>**Collaborative Sync**: Sync edits across Claude Code CLI, desktop app, and VS Code extension—seamlessly pick up where you left off\\.</li>
-
+<li>在描述需求时提供尽可能多的上下文信息</li>
+<li>利用品牌风格设置确保所有输出的视觉一致性</li>
+<li>将常用的设计模板保存为工作流，以便团队复用</li>
+<li>结合A/B测试优化设计元素对目标受众的吸引力</li>
 </ul>
-
-<p>These features eliminate the "copy\\-paste\\-tweak" cycle, letting you build projects *with* AI instead of just using AI to generate assets\\.</p>
-
-<h2>Setup \\& Initialization</h2>
-
-<p>Before diving in, ensure you’re running Claude Code v3\\.8\\.0 or later \\(the minimum version supporting Claude Design\\)\\.</p>
-
-<h3>Step 1: Update Claude Code</h3>
 
 <h2>常见问题</h2>
 <h3>问：这篇文章关于什么？</h3>
-<p>本文涵盖WorkflowsMaster Claude Design: A Practical Guide to Interactive \\& Editable AI Workflows，提供逐步指导和实用见解。</p>
+<p>本文是Claude Design工作流的实用指南，涵盖交互式AI演示文稿和设计创建。</p>
 <h3>问：我需要经验才能跟上吗？</h3>
-<p>本指南面向中级读者。每个部分都建立在前一个部分的基础上。</p>
+<p>本指南面向中级读者。建议先了解基本的AI工具使用方式。</p>
 <h3>问：讨论了哪些工具？</h3>
 <p>文章引用了claude和claude-design。您可以在AIStudyOnline工具目录中找到它们。</p>
 
