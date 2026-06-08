@@ -26386,4 +26386,600 @@ print(content_plan)</code></pre>
 <p><strong>下一篇：</strong> <a href="/article/6-ai-tools-dominating-github">继续阅读 &rarr;</a></p>
 </div>`,
   },
+  "github-10k-star-thinking-styles": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Ai Tools · <strong>Difficulty:</strong> Beginner</p>
+</div>
+
+<p>There’s a groundbreaking open\\-source project on GitHub that has skyrocketed to over 10,000 stars—**NUWA Skill**\\. It’s doing something truly remarkable: distilling the thinking styles of humanity’s top minds into cognitive models that AI can leverage\\. This isn’t about AI mimicking how someone speaks; it’s about extracting *how* they think\\.</p>
+
+<h2>What NUWA Skill Offers</h2>
+
+<p>NUWA Skill encapsulates the cognitive frameworks of legendary thinkers and leaders:</p>
+
+<ul>
+
+<li>Charlie Munger’s interdisciplinary mental models</li>
+
+</ul>
+
+<ul>
+
+<li>Richard Feynman’s First Principles</li>
+
+</ul>
+
+<ul>
+
+<li>Elon Musk’s physics\\-based extreme thinking</li>
+
+</ul>
+
+<ul>
+
+<li>Naval Ravikant’s anti\\-overthinking philosophy</li>
+
+</ul>
+
+<ul>
+
+<li>And more, including Steve Jobs, Zhang Yiming, Zhang Xuefeng, etc\\.—with 13 top minds’ cognitive frameworks built\\-in\\.</li>
+
+</ul>
+
+<h2>How It Works</h2>
+
+<p>The project uses a rigorous process to ensure the accuracy and usability of these cognitive models:</p>
+
+<ol>
+
+<li>**Multi\\-source Parallel Collection**: It leverages 6 agents to simultaneously gather insights from over 40 first\\-hand sources like writings, interviews, social media, and critical reviews\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Triple Verification**: A viewpoint is adopted as a mental model only if it meets strict criteria—endorsed by at least 2 top minds, predictive, and unique \\(not all smart people think this way\\)\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Skill Construction**: It builds 3–7 mental models per figure, with 5–10 decision\\-making points to represent their “cognitive DNA”\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Quality Assurance**: It tests against 3 publicly answered questions by the individual; only when consistent does it get approved\\.</li>
+
+</ol>
+
+<h2>Practical Usage: Get Started for Free</h2>
+
+<p>NUWA Skill is open\\-source and completely free\\. To install and use it, follow these steps:</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is this article about?</h3>
+<p>This article covers github's 10k star open\\-source gem: embodying top minds' thinking styles, providing step-by-step guidance and practical insights.</p>
+<h3>Q: Do I need experience to follow along?</h3>
+<p>This guide is written for beginner level readers. Each section builds on the previous one.</p>
+<h3>Q: What tools are discussed?</h3>
+<p>The article references chatgpt and claude. You can find them in the AIStudyOnline tools directory.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/article/6-ai-tools-dominating-github">Continue learning →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> Ai Tools · <strong>难度：</strong> 初级</p>
+</div>
+
+<p>There’s a groundbreaking open\\-source project on GitHub that has skyrocketed to over 10,000 stars—**NUWA Skill**\\. It’s doing something truly remarkable: distilling the thinking styles of humanity’s top minds into cognitive models that AI can leverage\\. This isn’t about AI mimicking how someone speaks; it’s about extracting *how* they think\\.</p>
+
+<h2>What NUWA Skill Offers</h2>
+
+<p>NUWA Skill encapsulates the cognitive frameworks of legendary thinkers and leaders:</p>
+
+<ul>
+
+<li>Charlie Munger’s interdisciplinary mental models</li>
+
+</ul>
+
+<ul>
+
+<li>Richard Feynman’s First Principles</li>
+
+</ul>
+
+<ul>
+
+<li>Elon Musk’s physics\\-based extreme thinking</li>
+
+</ul>
+
+<ul>
+
+<li>Naval Ravikant’s anti\\-overthinking philosophy</li>
+
+</ul>
+
+<ul>
+
+<li>And more, including Steve Jobs, Zhang Yiming, Zhang Xuefeng, etc\\.—with 13 top minds’ cognitive frameworks built\\-in\\.</li>
+
+</ul>
+
+<h2>How It Works</h2>
+
+<p>The project uses a rigorous process to ensure the accuracy and usability of these cognitive models:</p>
+
+<ol>
+
+<li>**Multi\\-source Parallel Collection**: It leverages 6 agents to simultaneously gather insights from over 40 first\\-hand sources like writings, interviews, social media, and critical reviews\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Triple Verification**: A viewpoint is adopted as a mental model only if it meets strict criteria—endorsed by at least 2 top minds, predictive, and unique \\(not all smart people think this way\\)\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Skill Construction**: It builds 3–7 mental models per figure, with 5–10 decision\\-making points to represent their “cognitive DNA”\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Quality Assurance**: It tests against 3 publicly answered questions by the individual; only when consistent does it get approved\\.</li>
+
+</ol>
+
+<h2>Practical Usage: Get Started for Free</h2>
+
+<p>NUWA Skill is open\\-source and completely free\\. To install and use it, follow these steps:</p>
+
+<h2>常见问题</h2>
+<h3>问：这篇文章关于什么？</h3>
+<p>本文涵盖GitHub's 10K Star Open\\-Source Gem: Embodying Top Minds' Thinking Styles，提供逐步指导和实用见解。</p>
+<h3>问：我需要经验才能跟上吗？</h3>
+<p>本指南面向初级读者。每个部分都建立在前一个部分的基础上。</p>
+<h3>问：讨论了哪些工具？</h3>
+<p>文章引用了chatgpt和claude。您可以在AIStudyOnline工具目录中找到它们。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/6-ai-tools-dominating-github">继续学习 →</a></p>
+</div>`,
+  },
+
+  "professional-era-ai-skills-workflows": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Ai Tutorials · <strong>Difficulty:</strong> Intermediate</p>
+</div>
+
+<p>2026 is widely regarded as the **Professional Era of AI Skills** on GitHub\\. Predefined, reusable AI Skills have evolved from simple prompt snippets into standardized, production\\-grade workflows\\. These packaged capabilities greatly lower the threshold for AI development, allowing beginners and developers to build stable, repeatable AI tasks without rebuilding logic from scratch\\. This guide breaks down core concepts, deployment steps, practical cases and common commands for mainstream AI Skill systems, fully based on trending open\\-source projects from GitHub\\.</p>
+
+<h2>1\\. What Are AI Professional Skills?</h2>
+
+<p>An AI Skill is a standardized, encapsulated workflow that combines fixed prompts, tool calls, execution logic and output rules\\. Different from one\\-time prompts:</p>
+
+<ul>
+
+<li>Skills can be saved, shared, imported and reused across devices and AI clients\\.</li>
+
+</ul>
+
+<ul>
+
+<li>They support chained execution of multiple tools, error capture and result verification\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Most mainstream AI coding tools including Claude Code, Cursor and Codex natively support the Skill system\\.</li>
+
+</ul>
+
+<p>Professional\\-grade Skills follow unified specification standards, so they can run normally on different AI platforms with minimal modification\\. This is why Skill\\-related projects keep topping GitHub weekly trending lists\\.</p>
+
+<h3>Core Advantages for AI Beginners</h3>
+
+<ul>
+
+<li>Cut repetitive configuration and prompt writing work</li>
+
+</ul>
+
+<ul>
+
+<li>Unify output styles and code specifications for team collaboration</li>
+
+</ul>
+
+<ul>
+
+<li>Reduce token consumption by compressing redundant dialogue content</li>
+
+</ul>
+
+<ul>
+
+<li>Realize unattended batch execution for long\\-term tasks</li>
+
+</ul>
+
+<h2>2\\. Environment Preparation \\& Basic Installation</h2>
+
+<p>We take the mainstream open\\-source Skill management framework as the example\\. First complete the basic runtime and tool installation\\. Ensure Node\\.js and Git are installed on your device\\.</p>
+
+<p>Check runtime environment with terminal commands:</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is this article about?</h3>
+<p>This article covers the professional era of ai skills: master github trending skill workflows for practical ai development, providing step-by-step guidance and practical insights.</p>
+<h3>Q: Do I need experience to follow along?</h3>
+<p>This guide is written for intermediate level readers. Each section builds on the previous one.</p>
+<h3>Q: What tools are discussed?</h3>
+<p>The article references claude. You can find them in the AIStudyOnline tools directory.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/article/six-advanced-claude-code-skills">Continue learning →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> Ai Tutorials · <strong>难度：</strong> 中级</p>
+</div>
+
+<p>2026 is widely regarded as the **Professional Era of AI Skills** on GitHub\\. Predefined, reusable AI Skills have evolved from simple prompt snippets into standardized, production\\-grade workflows\\. These packaged capabilities greatly lower the threshold for AI development, allowing beginners and developers to build stable, repeatable AI tasks without rebuilding logic from scratch\\. This guide breaks down core concepts, deployment steps, practical cases and common commands for mainstream AI Skill systems, fully based on trending open\\-source projects from GitHub\\.</p>
+
+<h2>1\\. What Are AI Professional Skills?</h2>
+
+<p>An AI Skill is a standardized, encapsulated workflow that combines fixed prompts, tool calls, execution logic and output rules\\. Different from one\\-time prompts:</p>
+
+<ul>
+
+<li>Skills can be saved, shared, imported and reused across devices and AI clients\\.</li>
+
+</ul>
+
+<ul>
+
+<li>They support chained execution of multiple tools, error capture and result verification\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Most mainstream AI coding tools including Claude Code, Cursor and Codex natively support the Skill system\\.</li>
+
+</ul>
+
+<p>Professional\\-grade Skills follow unified specification standards, so they can run normally on different AI platforms with minimal modification\\. This is why Skill\\-related projects keep topping GitHub weekly trending lists\\.</p>
+
+<h3>Core Advantages for AI Beginners</h3>
+
+<ul>
+
+<li>Cut repetitive configuration and prompt writing work</li>
+
+</ul>
+
+<ul>
+
+<li>Unify output styles and code specifications for team collaboration</li>
+
+</ul>
+
+<ul>
+
+<li>Reduce token consumption by compressing redundant dialogue content</li>
+
+</ul>
+
+<ul>
+
+<li>Realize unattended batch execution for long\\-term tasks</li>
+
+</ul>
+
+<h2>2\\. Environment Preparation \\& Basic Installation</h2>
+
+<p>We take the mainstream open\\-source Skill management framework as the example\\. First complete the basic runtime and tool installation\\. Ensure Node\\.js and Git are installed on your device\\.</p>
+
+<p>Check runtime environment with terminal commands:</p>
+
+<h2>常见问题</h2>
+<h3>问：这篇文章关于什么？</h3>
+<p>本文涵盖The Professional Era of AI Skills: Master GitHub Trending Skill Workflows for Practical AI Development，提供逐步指导和实用见解。</p>
+<h3>问：我需要经验才能跟上吗？</h3>
+<p>本指南面向中级读者。每个部分都建立在前一个部分的基础上。</p>
+<h3>问：讨论了哪些工具？</h3>
+<p>文章引用了claude。您可以在AIStudyOnline工具目录中找到它们。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/six-advanced-claude-code-skills">继续学习 →</a></p>
+</div>`,
+  },
+
+  "token-aggregation-distribution-ai-trend": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Ai News · <strong>Difficulty:</strong> Beginner</p>
+</div>
+
+<p>In the rapidly evolving AI landscape, Token aggregation and distribution have emerged as a structural necessity rather than a mere optional addition\\. Let’s delve into why this is the case and how it brings practical value to businesses and practitioners\\.</p>
+
+<h2>1\\. The Overwhelming Proliferation of AI Models</h2>
+
+<p>By 2026, the number of major AI models is expected to surge to dozens or even hundreds, with both domestic players like DeepSeek, Kimi, MiniMax, Tongyi Qianwen, Wenxin Yiyan, and Zhipu, and international ones like Claude, GPT, Gemini, and Llama continuously updating and iterating\\.</p>
+
+<p>For a small and medium\\-sized enterprise \\(SME\\) owner looking to leverage AI, navigating this vast sea of models is a daunting task\\. Trying out each model one by one and managing multiple accounts is impractical\\. This is where Token aggregation platforms play a crucial role\\. They act as a **curator**, helping businesses:</p>
+
+<ul>
+
+<li>**Filter and match** the most suitable AI tools based on specific business needs\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Combine models** to create optimal solutions, saving time and resources that would otherwise be spent on endless trials\\.</li>
+
+</ul>
+
+<h2>2\\. The Complexity of Pricing and Billing</h2>
+
+<p>AI model pricing is a labyrinth\\. Different models adopt varied billing methods: some charge by input Tokens, others by output Tokens, some by character count, and others by the number of requests\\. Even within the same model, different versions can have different price points\\.</p>
+
+<p>Imagine an SME owner trying to tally up monthly AI expenses across five or six different platforms—it’s a recipe for confusion\\. Token aggregation platforms solve this by providing a **unified backend and a single bill**, making it easy to:</p>
+
+<ul>
+
+<li>Track all AI\\-related expenditures in one place\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Simplify financial management and reconciliation processes\\.</li>
+
+</ul>
+
+<h2>3\\. The Retail Gap Left by Upstream Model Providers</h2>
+
+<p>Top AI model developers like DeepSeek and OpenAI focus solely on research and development\\. They prioritize serving large enterprises with annual spending in the tens of millions, offering dedicated contracts and personalized support\\. Small customers, who spend only a few thousand dollars monthly, are too scattered and costly to serve directly\\.</p>
+
+<p>This is analogous to how NVIDIA doesn’t sell graphics cards directly to small 网吧 owners but instead works with large distributors like Asus and MSI\\. In the Token ecosystem, aggregation platforms and distribution channels fill this retail gap, catering to the needs of SMEs and individual users\\.</p>
+
+<h2>Practical Insights for Entering the Token Aggregation Space</h2>
+
+<p>Entering the Token aggregation business is a **light\\-asset opportunity**:</p>
+
+<ul>
+
+<li>You don’t need to build your own AI models or data centers\\. The upstream providers handle technology and supply\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Your focus should be on **channel development and customer service**\\. The key barrier here is commercial capability, not technical expertise\\.</li>
+
+</ul>
+
+<p>To get started, consider the following steps:</p>
+
+<ol>
+
+<li>**Partner with multiple AI model providers** to aggregate their Token services\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Develop a user\\-friendly platform** that allows customers to manage all their Token usage and billing in one place\\.</li>
+
+</ol>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is this article about?</h3>
+<p>This article covers token aggregation and distribution: an inevitable trend in the ai industrywhy token aggregation and distribution is inevitable in the ai industry, providing step-by-step guidance and practical insights.</p>
+<h3>Q: Do I need experience to follow along?</h3>
+<p>This guide is written for beginner level readers. Each section builds on the previous one.</p>
+<h3>Q: What tools are discussed?</h3>
+<p>The article references chatgpt and claude. You can find them in the AIStudyOnline tools directory.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/article/token-business-101-beginners">Continue learning →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> Ai News · <strong>难度：</strong> 初级</p>
+</div>
+
+<p>In the rapidly evolving AI landscape, Token aggregation and distribution have emerged as a structural necessity rather than a mere optional addition\\. Let’s delve into why this is the case and how it brings practical value to businesses and practitioners\\.</p>
+
+<h2>1\\. The Overwhelming Proliferation of AI Models</h2>
+
+<p>By 2026, the number of major AI models is expected to surge to dozens or even hundreds, with both domestic players like DeepSeek, Kimi, MiniMax, Tongyi Qianwen, Wenxin Yiyan, and Zhipu, and international ones like Claude, GPT, Gemini, and Llama continuously updating and iterating\\.</p>
+
+<p>For a small and medium\\-sized enterprise \\(SME\\) owner looking to leverage AI, navigating this vast sea of models is a daunting task\\. Trying out each model one by one and managing multiple accounts is impractical\\. This is where Token aggregation platforms play a crucial role\\. They act as a **curator**, helping businesses:</p>
+
+<ul>
+
+<li>**Filter and match** the most suitable AI tools based on specific business needs\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Combine models** to create optimal solutions, saving time and resources that would otherwise be spent on endless trials\\.</li>
+
+</ul>
+
+<h2>2\\. The Complexity of Pricing and Billing</h2>
+
+<p>AI model pricing is a labyrinth\\. Different models adopt varied billing methods: some charge by input Tokens, others by output Tokens, some by character count, and others by the number of requests\\. Even within the same model, different versions can have different price points\\.</p>
+
+<p>Imagine an SME owner trying to tally up monthly AI expenses across five or six different platforms—it’s a recipe for confusion\\. Token aggregation platforms solve this by providing a **unified backend and a single bill**, making it easy to:</p>
+
+<ul>
+
+<li>Track all AI\\-related expenditures in one place\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Simplify financial management and reconciliation processes\\.</li>
+
+</ul>
+
+<h2>3\\. The Retail Gap Left by Upstream Model Providers</h2>
+
+<p>Top AI model developers like DeepSeek and OpenAI focus solely on research and development\\. They prioritize serving large enterprises with annual spending in the tens of millions, offering dedicated contracts and personalized support\\. Small customers, who spend only a few thousand dollars monthly, are too scattered and costly to serve directly\\.</p>
+
+<p>This is analogous to how NVIDIA doesn’t sell graphics cards directly to small 网吧 owners but instead works with large distributors like Asus and MSI\\. In the Token ecosystem, aggregation platforms and distribution channels fill this retail gap, catering to the needs of SMEs and individual users\\.</p>
+
+<h2>Practical Insights for Entering the Token Aggregation Space</h2>
+
+<p>Entering the Token aggregation business is a **light\\-asset opportunity**:</p>
+
+<ul>
+
+<li>You don’t need to build your own AI models or data centers\\. The upstream providers handle technology and supply\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Your focus should be on **channel development and customer service**\\. The key barrier here is commercial capability, not technical expertise\\.</li>
+
+</ul>
+
+<p>To get started, consider the following steps:</p>
+
+<ol>
+
+<li>**Partner with multiple AI model providers** to aggregate their Token services\\.</li>
+
+</ol>
+
+<ol>
+
+<li>**Develop a user\\-friendly platform** that allows customers to manage all their Token usage and billing in one place\\.</li>
+
+</ol>
+
+<h2>常见问题</h2>
+<h3>问：这篇文章关于什么？</h3>
+<p>本文涵盖Token Aggregation and Distribution: An Inevitable Trend in the AI IndustryWhy Token Aggregation and Distribution is Inevitable in the AI Industry，提供逐步指导和实用见解。</p>
+<h3>问：我需要经验才能跟上吗？</h3>
+<p>本指南面向初级读者。每个部分都建立在前一个部分的基础上。</p>
+<h3>问：讨论了哪些工具？</h3>
+<p>文章引用了chatgpt和claude。您可以在AIStudyOnline工具目录中找到它们。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/token-business-101-beginners">继续学习 →</a></p>
+</div>`,
+  },
+
+  "workflows-master-claude-design": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> Ai Tutorials · <strong>Difficulty:</strong> Intermediate</p>
+</div>
+
+<p>Claude Design, Anthropic’s latest breakthrough for Claude Code, redefines AI\\-assisted creation by enabling **interactive, real\\-time editable workflows**—no more rigid one\\-way outputs\\. This tool transforms static AI responses into dynamic projects you can tweak, iterate on, and collaborate with directly, making it a game\\-changer for developers, designers, and content creators\\. Below is a hands\\-on guide to unlocking its full potential, with actionable commands and code snippets\\.</p>
+
+<h2>Core Capabilities of Claude Design</h2>
+
+<p>Unlike traditional AI tools that deliver fixed results, Claude Design offers three transformative features:</p>
+
+<ul>
+
+<li>**Interactive Iteration**: Modify outputs in real time \\(e\\.g\\., adjust code logic, refine design layouts\\) without restarting the entire prompt\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Editable Project Structures**: Organize outputs into folders, files, or multi\\-step workflows that you can rearrange or expand\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Collaborative Sync**: Sync edits across Claude Code CLI, desktop app, and VS Code extension—seamlessly pick up where you left off\\.</li>
+
+</ul>
+
+<p>These features eliminate the "copy\\-paste\\-tweak" cycle, letting you build projects *with* AI instead of just using AI to generate assets\\.</p>
+
+<h2>Setup \\& Initialization</h2>
+
+<p>Before diving in, ensure you’re running Claude Code v3\\.8\\.0 or later \\(the minimum version supporting Claude Design\\)\\.</p>
+
+<h3>Step 1: Update Claude Code</h3>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is this article about?</h3>
+<p>This article covers workflowsmaster claude design: a practical guide to interactive \\& editable ai workflows, providing step-by-step guidance and practical insights.</p>
+<h3>Q: Do I need experience to follow along?</h3>
+<p>This guide is written for intermediate level readers. Each section builds on the previous one.</p>
+<h3>Q: What tools are discussed?</h3>
+<p>The article references claude and claude-design. You can find them in the AIStudyOnline tools directory.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/article/mastering-claude-design-presentations">Continue learning →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> Ai Tutorials · <strong>难度：</strong> 中级</p>
+</div>
+
+<p>Claude Design, Anthropic’s latest breakthrough for Claude Code, redefines AI\\-assisted creation by enabling **interactive, real\\-time editable workflows**—no more rigid one\\-way outputs\\. This tool transforms static AI responses into dynamic projects you can tweak, iterate on, and collaborate with directly, making it a game\\-changer for developers, designers, and content creators\\. Below is a hands\\-on guide to unlocking its full potential, with actionable commands and code snippets\\.</p>
+
+<h2>Core Capabilities of Claude Design</h2>
+
+<p>Unlike traditional AI tools that deliver fixed results, Claude Design offers three transformative features:</p>
+
+<ul>
+
+<li>**Interactive Iteration**: Modify outputs in real time \\(e\\.g\\., adjust code logic, refine design layouts\\) without restarting the entire prompt\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Editable Project Structures**: Organize outputs into folders, files, or multi\\-step workflows that you can rearrange or expand\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Collaborative Sync**: Sync edits across Claude Code CLI, desktop app, and VS Code extension—seamlessly pick up where you left off\\.</li>
+
+</ul>
+
+<p>These features eliminate the "copy\\-paste\\-tweak" cycle, letting you build projects *with* AI instead of just using AI to generate assets\\.</p>
+
+<h2>Setup \\& Initialization</h2>
+
+<p>Before diving in, ensure you’re running Claude Code v3\\.8\\.0 or later \\(the minimum version supporting Claude Design\\)\\.</p>
+
+<h3>Step 1: Update Claude Code</h3>
+
+<h2>常见问题</h2>
+<h3>问：这篇文章关于什么？</h3>
+<p>本文涵盖WorkflowsMaster Claude Design: A Practical Guide to Interactive \\& Editable AI Workflows，提供逐步指导和实用见解。</p>
+<h3>问：我需要经验才能跟上吗？</h3>
+<p>本指南面向中级读者。每个部分都建立在前一个部分的基础上。</p>
+<h3>问：讨论了哪些工具？</h3>
+<p>文章引用了claude和claude-design。您可以在AIStudyOnline工具目录中找到它们。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/mastering-claude-design-presentations">继续学习 →</a></p>
+</div>`,
+  },
+
 };
