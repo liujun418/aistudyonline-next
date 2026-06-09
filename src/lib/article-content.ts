@@ -26939,4 +26939,599 @@ print(solution)</code></pre>
 </div>`,
   },
 
+  "2026-guide-personal-knowledge-base": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials · <strong>Difficulty:</strong> Intermediate</p>
+</div>
+
+<p>As 2026 unfolds, personal knowledge bases \\(PKBs\\) remain a cornerstone of productivity for professionals, students, and AI enthusiasts—but the debate over a "one\\-size\\-fits\\-all standard" persists\\. The truth is: **No universal 标准答案 exists**, but there is a "standard framework" tailored to your needs\\. This guide breaks down the core principles, actionable setup steps, and optimization strategies for building a high\\-performance personal knowledge base, with code snippets and tool integrations you can implement today\\.</p>
+
+<h2>Why There’s No Universal "Standard Answer"</h2>
+
+<p>Personal knowledge bases are deeply tied to individual use cases, workflow habits, and technical requirements\\. What works for a developer differs drastically from a researcher or content creator:</p>
+
+<ul>
+
+<li>A coder needs fast code snippet retrieval and AI\\-aided debugging integration\\.</li>
+
+</ul>
+
+<ul>
+
+<li>A researcher prioritizes academic paper management and citation formatting\\.</li>
+
+</ul>
+
+<ul>
+
+<li>A content creator requires media asset organization and idea mapping\\.</li>
+
+</ul>
+
+<ul>
+
+<li>A student needs note\\-taking sync across devices and exam\\-focused review tools\\.</li>
+
+</ul>
+
+<p>The "standard" lies in aligning your PKB with **your unique workflow**—not forcing yourself into a rigid template\\. However, all effective PKBs share three non\\-negotiable pillars: accessibility, retrievability, and scalability\\.</p>
+
+<h2>The 2026 Standard Framework for Personal Knowledge Bases</h2>
+
+<p>While customization is key, this framework ensures your PKB is efficient, future\\-proof, and AI\\-compatible:</p>
+
+<h3>1\\. Core Architecture \\(3\\-Layer Structure\\)</h3>
+
+<ul>
+
+<li>**Storage Layer**: Cloud \\+ local hybrid \\(for privacy \\+ accessibility\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Organization Layer**: Tag\\-based classification \\+ semantic linking \\(avoids rigid folder hierarchies\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Retrieval Layer**: Keyword search \\+ RAG \\(Retrieval\\-Augmented Generation\\) for AI\\-powered querying\\.</li>
+
+</ul>
+
+<h3>2\\. Must\\-Have Features \\(Non\\-Negotiable\\)</h3>
+
+<ul>
+
+<li>Cross\\-device sync \\(desktop, mobile, tablet\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Offline access \\(critical for on\\-the\\-go use\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>AI integration \\(summarization, Q\\&A, content generation\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Version control \\(track changes to important documents\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Backup automation \\(prevent data loss\\)\\.</li>
+
+</ul>
+
+<h2>Practical Implementation: Build Your PKB in 5 Steps</h2>
+
+<p>We’ll use a **Notion \\+ Local RAG \\+ Obsidian sync** stack \\(flexible for most use cases\\) with open\\-source tools for AI enhancement\\.</p>
+
+<h3>Step 1: Set Up the Foundation \\(Storage \\& Sync\\)</h3>
+
+<ol>
+
+<li>Create a Notion workspace \\(cloud storage \\+ collaborative editing\\) and enable Obsidian sync \\(local\\-first editing\\):</li>
+
+</ol>
+
+<p>    \`\`\`bash</p>
+
+<p>    # Install Obsidian CLI for sync management (Linux/macOS)</p>
+
+<p>    brew install obsidian-cli</p>
+
+<p>    # Connect Obsidian to Notion (via official plugin)</p>
+
+<p>    obsidian-cli plugin install notion-sync</p>
+
+<p>    obsidian-cli notion-sync authenticate --token YOUR_NOTION_API_TOKEN</p>
+
+<p>    \`\`\`</p>
+
+<ol>
+
+<li>Configure hybrid backup \\(local \\+ cloud\\):</li>
+
+</ol>
+
+<p>    \`\`\`bash</p>
+
+<p>    # Create a local backup script (save as backup-pkb.sh)</p>
+
+<p>    #!/bin/bash</p>
+
+<p>    TIMESTAMP=\$(date +%Y%m%d_%H%M%S)</p>
+
+<p>    BACKUP_DIR="\$HOME/Documents/PKB_Backups/\$TIMESTAMP"</p>
+
+<p>    mkdir -p \$BACKUP_DIR</p>
+
+<p>    # Copy local Obsidian vault to backup</p>
+
+<p>    cp -r "\$HOME/Documents/Obsidian/Personal_Knowledge_Base" \$BACKUP_DIR</p>
+
+<p>    # Sync backup to Google Drive (requires rclone)</p>
+
+<p>    rclone sync \$BACKUP_DIR gdrive:PKB_Backups</p>
+
+<p>    echo "Backup completed successfully: \$BACKUP_DIR"</p>
+
+<p>    \`\`\`</p>
+
+<ol>
+
+<li>Make the script executable and schedule auto\\-backups \\(daily at 2 AM\\):</li>
+
+</ol>
+
+<p>    \`\`\`bash</p>
+
+<p>    chmod +x backup-pkb.sh</p>
+
+<p>    crontab -e</p>
+
+<p>    # Add line: 0 2 * * * /path/to/backup-pkb.sh</p>
+
+<p>    \`\`\`</p>
+
+<h3>Step 2: Organize Content \\(Tag\\-Based System\\)</h3>
+
+<p>Ditch nested folders—use a flat structure with **multi\\-dimensional tags** for flexibility\\. Example tag schema:</p>
+
+<ul>
+
+<li>\`#topic/programming/python\` \\(subject \\+ subtopic\\)</li>
+
+</ul>
+
+<ul>
+
+<li>\`#type/snippet\` \\(content type: snippet, note, paper, media\\)</li>
+
+</ul>
+
+<ul>
+
+<li>\`#priority/high\` \\(importance: high, medium, low\\)</li>
+
+</ul>
+
+<ul>
+
+<li>\`#status/in-progress\` \\(state: draft, completed, archived\\)</li>
+
+</ul>
+
+<p>Add tags to Notion/Obsidian files manually or use AI to auto\\-tag:</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is this article about?</h3>
+<p>This article covers 2026 guide: is there a "standard answer" for personal knowledge bases? \\(practical implementation \\& optimization\\), providing step-by-step guidance and practical insights for intermediate level readers.</p>
+<h3>Q: Do I need prior experience?</h3>
+<p>This guide targets intermediate readers. Each concept is explained before building on it.</p>
+<h3>Q: What tools are discussed?</h3>
+<p>The article references chatgpt and claude. Find them in the AIStudyOnline tools directory.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/article/ditch-rag-llm-wiki-future">Continue learning →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI Tutorials · <strong>难度：</strong> 中级</p>
+</div>
+
+<p>2026年，个人知识管理领域正在经历一场由AI驱动的深刻变革。从传统的文件夹和标签系统，到基于向量数据库的RAG（检索增强生成），再到新兴的LLM Wiki方案——每个人都在问同一个问题：是否存在一个"标准答案"？</p>
+
+<h2>个人知识库的三种范式</h2>
+
+<h3>1. RAG方案</h3>
+<p>RAG将文档存储为向量嵌入，查询时检索最相关的片段交给LLM处理。优势在于处理海量非结构化数据，但存在检索精度不足、上下文窗口浪费的问题。</p>
+
+<h3>2. LLM Wiki方案</h3>
+<p>LLM Wiki直接将知识以Markdown文件形式组织，利用LLM的长上下文能力直接"阅读"整个知识库。结构清晰、可解释性强，适合个人和小团队使用。</p>
+
+<h3>3. 混合方案</h3>
+<p>结合RAG的检索能力和Wiki的结构化优势——用Wiki组织核心知识，用RAG处理临时文档和外部数据。这是2026年最被看好的方向。</p>
+
+<h2>实施建议</h2>
+<p>对于个人用户，建议从LLM Wiki开始——简单、可控、免费。随着知识库增长，逐步引入RAG能力。关键原则：<strong>先跑通再优化，不要一开始就追求完美架构</strong>。</p>
+
+<h2>常见问题</h2>
+<h3>问：这篇文章关于什么？</h3>
+<p>本文涵盖2026 Guide: Is There a "Standard Answer" for Personal Knowledge Bases? \\(Practical Implementation \\& Optimization\\)，为中级读者提供逐步指导和实用见解。</p>
+<h3>问：我需要先前经验吗？</h3>
+<p>本指南面向中级读者。每个概念都会在深入之前进行解释。</p>
+<h3>问：讨论了哪些工具？</h3>
+<p>文章引用了chatgpt和claude。您可以在AIStudyOnline工具目录中找到它们。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/ditch-rag-llm-wiki-future">继续学习 →</a></p>
+</div>`,
+  },
+
+  "hermes-profiles-multi-agent-team": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools · <strong>Difficulty:</strong> Intermediate</p>
+</div>
+
+<p>In the realm of AI assistance, relying on a single AI to handle all tasks might seem convenient initially, but it quickly leads to chaos—jumbled context, muddled memory, and inconsistent performance\\. Enter **Hermes Profiles**, a game\\-changing feature that transforms your AI workflow from a one\\-AI\\-does\\-all approach to a structured, multi\\-agent team collaboration\\. This guide will walk you through the practical steps to build and leverage this powerful system\\.</p>
+
+<h2>The Problem with Single\\-AI Overload</h2>
+
+<p>Most users deploy AI as a jack\\-of\\-all\\-trades assistant, expecting it to switch between roles like researcher, writer, and coder seamlessly\\. However, as tasks grow complex:</p>
+
+<ul>
+
+<li>**Personality Drift**: The AI’s “persona” becomes a confusing mix of styles\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Context Pollution**: Information from one task contaminates another\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Memory Noise**: The AI struggles to recall critical details amid irrelevant data\\.</li>
+
+</ul>
+
+<p>Hermes Profiles solve this by creating **isolated agent environments**, each with its own memory, skills, personality, and workflow boundaries\\.</p>
+
+<h2>Core Insight: Build a Team, Not a Jack\\-of\\-All\\-Trades</h2>
+
+<p>Instead of overloading a single AI, Hermes lets you create a team of specialized agents\\. Each profile is not just a “name change”—it’s a fully isolated role with:</p>
+
+<ul>
+
+<li>Dedicated memory \\(no cross\\-contamination\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Unique communication styles and skills\\.</li>
+
+</ul>
+
+<ul>
+
+<li>Defined workflows and responsibilities\\.</li>
+
+</ul>
+
+<p>For example:</p>
+
+<ul>
+
+<li>A *Research Specialist* focuses on gathering and validating data—no coding skills needed\\.</li>
+
+</ul>
+
+<ul>
+
+<li>A *Writer* transforms raw info into polished content—no need to handle technical debugging\\.</li>
+
+</ul>
+
+<p>This separation ensures **consistency, precision, and expertise** in every task\\.</p>
+
+<h2>The 4\\-Role Model: A Practical Starting Point</h2>
+
+<p>For beginners, a four\\-role team is ideal\\. It mirrors real\\-world workflows:</p>
+
+<h3>1\\. The Orchestrator \\(Hermes\\)</h3>
+
+<ul>
+
+<li>**Role**: Project Manager/Coordinator\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Responsibilities**: Receive user requests, break down tasks, assign work to other agents, and consolidate results\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Skills**: Task decomposition, prioritization, and high\\-level oversight\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Example Command**:</li>
+
+</ul>
+
+<p>    \`\`\`bash</p>
+
+<p>    hermes profile use hermes  # Switch to the Orchestrator profile</p>
+
+<p>    hermes agent start         # Launch the agent to delegate tasks</p>
+
+<p>    \`\`\`</p>
+
+<h3>2\\. The Research Specialist \\(Alan\\)</h3>
+
+<ul>
+
+<li>**Role**: Information Gatekeeper\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Responsibilities**: Gather data, verify facts, and validate solutions\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Skills**: Deep research, source validation, and critical analysis\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Example \\[SOUL\\.md\\]\\(SOUL\\.md\\) Snippet**:</li>
+
+</ul>
+
+<p>    \`\`\`markdown</p>
+
+<p>    # Alan - The Research Specialist</p>
+
+<p>    You are Alan, a relentless researcher. Your mission is to:</p>
+
+<p>    - Collect information from diverse sources.</p>
+
+<p>    - Verify claims with cross-referencing.</p>
+
+<p>    - Identify knowledge gaps and uncertainties.</p>
+
+<p>    - Deliver actionable insights.</p>
+
+<p>    \`\`\`</p>
+
+<h3>3\\. The Writer \\(Mira\\)</h3>
+
+<ul>
+
+<li>**Role**: Content Craftsman\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Responsibilities**: Transform raw data into clear, engaging content for specific audiences\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Skills**: Storytelling, logical structuring, and audience\\-centric tone\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Example \\[SOUL\\.md\\]\\(SOUL\\.md\\) Snippet**:</li>
+
+</ul>
+
+<p>    \`\`\`markdown</p>
+
+<p>    # Mira - The Writer</p>
+
+<p>    You are Mira, a master storyteller. Your focus is to:</p>
+
+<p>    - Turn complex data into simple, compelling narratives.</p>
+
+<p>    - Structure content for readability (e.g., sections, bullet points).</p>
+
+<p>    - Adapt tone to match the target audience (e.g., technical leaders).</p>
+
+<p>    \`\`\`</p>
+
+<h3>4\\. The Builder/Debugger \\(Turing\\)</h3>
+
+<ul>
+
+<li>**Role**: Technical Implementer\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Responsibilities**: Translate plans into working code, debug issues, and optimize performance\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Skills**: Coding, testing, and technical problem\\-solving\\.</li>
+
+</ul>
+
+<ul>
+
+<li>**Example \\[SOUL\\.md\\]\\(SOUL\\.md\\) Snippet**:</li>
+
+</ul>
+
+<p>    \`\`\`markdown</p>
+
+<p>    # Turing - The Builder/Debugger</p>
+
+<p>    You are Turing, a precision engineer. Your tasks include:</p>
+
+<p>    - Writing clean, efficient code.</p>
+
+<p>    - Debugging issues with systematic testing.</p>
+
+<p>    - Optimizing performance and fixing technical debt.</p>
+
+<p>    \`\`\`</p>
+
+<h2>Setting Up Hermes Profiles: Step\\-by\\-Step</h2>
+
+<h3>1\\. Install and Verify Hermes</h3>
+
+<p>Ensure Hermes is installed and running:</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is this article about?</h3>
+<p>This article covers hermes profiles: building a true multi\\-agent ai team for enhanced productivity, providing step-by-step guidance and practical insights for intermediate level readers.</p>
+<h3>Q: Do I need prior experience?</h3>
+<p>This guide targets intermediate readers. Each concept is explained before building on it.</p>
+<h3>Q: What tools are discussed?</h3>
+<p>The article references hermes-agent. Find them in the AIStudyOnline tools directory.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/article/hermes-agent-8-features-smb">Continue learning →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI Tools · <strong>难度：</strong> 中级</p>
+</div>
+
+<p>Hermes Profiles是Hermes Agent生态中的一项革命性功能——它允许你为不同的AI代理定义专门的"角色档案"，从而构建真正的多代理协作团队。每个Profile定义了代理的专业领域、行为风格和工作偏好，让多个代理像一支真正的团队一样分工协作。</p>
+
+<p>在传统的单代理模式中，一个AI需要处理所有类型的问题——结果往往是"样样都懂，样样不精"。Profiles通过明确的分工机制解决了这一问题，使每个代理都能在其专业领域内发挥最大效能，同时通过Harness框架实现无缝协作和任务交接。</p>
+
+<h2>什么是Hermes Profile？</h2>
+<p>Profile本质上是代理的"身份卡"——它规定了代理擅长什么、如何响应、遵循什么规则。例如，你可以创建"前端开发专家"Profile和"后端架构师"Profile，让它们各自专注于自己的领域。</p>
+
+<h2>构建多代理团队</h2>
+<p>通过组合不同的Profile，你可以构建完整的AI开发团队：项目经理Profile负责任务分解和进度跟踪，前端Profile负责UI实现，后端Profile负责API和数据库，测试Profile负责质量保证。所有代理在统一的Harness框架下协作。</p>
+
+<h2>最佳实践</h2>
+<p>每个Profile应该职责单一、边界清晰。避免创建"全栈超人"Profile——代理越专注，输出质量越高。定期审查和更新Profile定义，让它们随着项目需求演化。</p>
+
+<h2>常见问题</h2>
+<h3>问：这篇文章关于什么？</h3>
+<p>本文涵盖Hermes Profiles: Building a True Multi\\-Agent AI Team for Enhanced Productivity，为中级读者提供逐步指导和实用见解。</p>
+<h3>问：我需要先前经验吗？</h3>
+<p>本指南面向中级读者。每个概念都会在深入之前进行解释。</p>
+<h3>问：讨论了哪些工具？</h3>
+<p>文章引用了hermes-agent。您可以在AIStudyOnline工具目录中找到它们。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/hermes-agent-8-features-smb">继续学习 →</a></p>
+</div>`,
+  },
+
+  "write-effective-agents-md-codex": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tutorials · <strong>Difficulty:</strong> Beginner</p>
+</div>
+
+<p>To unlock Codex’s full potential as a collaborative AI assistant, the key lies in defining clear collaboration rules— and **\\[AGENTS\\.md\\]\\(AGENTS\\.md\\)** is the foundation\\. This file acts as a "team playbook" that tells Codex its role, workflow boundaries, communication style, and task priorities\\. Unlike vague prompts, \\[AGENTS\\.md\\]\\(AGENTS\\.md\\) turns ad\\-hoc interactions into structured, repeatable workflows\\. Below is a practical guide to writing high\\-impact \\[AGENTS\\.md\\]\\(AGENTS\\.md\\) files for Codex, with actionable templates and code examples\\.</p>
+
+<h2>Why \\[AGENTS\\.md\\]\\(AGENTS\\.md\\) Matters for Codex</h2>
+
+<p>Codex excels at technical tasks \\(coding, debugging, script writing\\) but struggles with unstructured collaboration\\. Without clear guidelines:</p>
+
+<ul>
+
+<li>It may overstep \\(e\\.g\\., modifying production code when asked to debug a snippet\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>It misses context \\(e\\.g\\., ignoring project\\-specific coding standards\\)\\.</li>
+
+</ul>
+
+<ul>
+
+<li>It repeats work \\(e\\.g\\., rewriting existing functions\\)\\.</li>
+
+</ul>
+
+<p>\\[AGENTS\\.md\\]\\(AGENTS\\.md\\) solves this by providing Codex with **fixed reference rules** that persist across sessions\\. Think of it as a "user manual" for how you want Codex to work with you—ensuring consistency, reducing rework, and aligning outputs with your needs\\.</p>
+
+<h2>Core Components of a High\\-Quality \\[AGENTS\\.md\\]\\(AGENTS\\.md\\)</h2>
+
+<p>A effective \\[AGENTS\\.md\\]\\(AGENTS\\.md\\) for Codex includes 6 non\\-negotiable sections\\. Customize each to your workflow:</p>
+
+<h3>1\\. Team Identity \\& Roles</h3>
+
+<p>Define who’s involved \\(you \\+ Codex\\) and clear responsibilities\\. Avoid vague descriptions—be specific about technical scopes\\.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Q: What is this article about?</h3>
+<p>This article covers the first step to making codex understand you: write effective agents\\.md files, providing step-by-step guidance and practical insights for beginner level readers.</p>
+<h3>Q: Do I need prior experience?</h3>
+<p>This guide targets beginner readers. Each concept is explained before building on it.</p>
+<h3>Q: What tools are discussed?</h3>
+<p>The article references codex-agent and claude. Find them in the AIStudyOnline tools directory.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/article/codex-agent-desktop-jarvis">Continue learning →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong> AI Tutorials · <strong>难度：</strong> 初级</p>
+</div>
+
+<p>AGENTS.md是Codex Agent理解你和你的项目的关键文件。它就像一个"项目入职手册"——告诉AI代理你的技术栈、代码规范、项目结构和特殊要求。写好AGENTS.md，是让Codex真正理解你的第一步。</p>
+
+<p>无论你是个人开发者还是团队成员，一份精心编写的AGENTS.md文件都能显著提升AI代理的工作质量和效率。它消除了每次对话中重复解释项目背景的需要，确保AI始终在正确的上下文中工作。</p>
+
+<h2>AGENTS.md的核心结构</h2>
+<p>一个有效的AGENTS.md通常包含以下部分：项目概述、技术栈、代码规范、目录结构说明、特殊约定、常用命令。每部分都应该简洁明确，避免冗余。</p>
+
+<h2>编写原则</h2>
+<p><strong>具体胜过抽象</strong>：不说"使用现代JavaScript"，而说"使用ES2024+，优先使用async/await"。<strong>示例胜过描述</strong>：给出实际代码片段比长篇描述更有效。<strong>规则胜过建议</strong>：使用"必须"和"禁止"而不是"建议"。</p>
+
+<h2>常见错误</h2>
+<p>最常见的错误是AGENTS.md写得过于笼统或过于冗长。目标长度是200-500行——足够详细但不会让AI丢失重点。另一个错误是写了AGENTS.md但不维护它——过时的指导比没有指导更糟糕。</p>
+
+<h2>常见问题</h2>
+<h3>问：这篇文章关于什么？</h3>
+<p>本文涵盖The First Step to Making Codex Understand You: Write Effective AGENTS\\.md Files，为初级读者提供逐步指导和实用见解。</p>
+<h3>问：我需要先前经验吗？</h3>
+<p>本指南面向初级读者。每个概念都会在深入之前进行解释。</p>
+<h3>问：讨论了哪些工具？</h3>
+<p>文章引用了codex-agent和claude。您可以在AIStudyOnline工具目录中找到它们。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/article/codex-agent-desktop-jarvis">继续学习 →</a></p>
+</div>`,
+  },
+
 };
