@@ -1766,4 +1766,34 @@ export const articles: Article[] = [
     toolsMentioned: ["claude"],
     date: "2026-06-07",
   },
+
+  {
+    slug: "mastering-ai-programming-agents-2026",
+    title: "Mastering AI Programming Agents: A Practical Guide to 6 Leading Tools in 2026",
+    titleZh: "掌握AI编程代理：2026年六大领先工具实战指南",
+    description:
+      "Six AI programming agents are reshaping how developers write code in 2026. Compare Claude Code, Cursor, GitHub Copilot, Codex Agent, OpenClaw, and LangChain — with use cases, code examples, and selection criteria for overseas projects.",
+    descriptionZh:
+      "六款AI编程代理正在重塑2026年的开发方式。对比Claude Code、Cursor、GitHub Copilot、Codex Agent、OpenClaw和LangChain——包含实际用例、代码示例和海外项目选择标准。",
+    category: "ai-tutorials",
+    tags: ["ai-programming", "ai-agents", "claude-code", "cursor", "copilot", "codex", "openclaw", "langchain", "overseas-development"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "cursor", "github-copilot", "codex-agent", "openclaw", "langchain"],
+    date: "2026-06-10",
+  },
+
+  {
+    slug: "mastering-multi-agent-collaboration-patterns",
+    title: "Mastering Multi-Agent Collaboration: A Practical Guide to 5 Core Patterns with Hands-On Code",
+    titleZh: "掌握多智能体协作：5种核心模式与手把手代码实战",
+    description:
+      "Master five multi-agent collaboration patterns — Supervisor, Hierarchical, Swarm, Sequential Chain, and Network — with working code examples using LangGraph and AutoGen. Learn A2A protocol, MCP integration, and security best practices.",
+    descriptionZh:
+      "掌握五种多智能体协作模式——Supervisor、Hierarchical、Swarm、Sequential Chain和Network——附LangGraph和AutoGen的可运行代码示例。学习A2A协议、MCP集成和安全最佳实践。",
+    category: "ai-tutorials",
+    tags: ["multi-agent", "collaboration", "langgraph", "autogen", "ai-agents", "patterns", "overseas-development"],
+    difficulty: "intermediate",
+    toolsMentioned: ["langchain", "claude"],
+    date: "2026-06-10",
+  },
 ];
