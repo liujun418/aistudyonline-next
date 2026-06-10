@@ -13,28 +13,35 @@ import { categories } from "@/lib/categories";
 import { topTools } from "@/lib/rankings";
 import type { Locale } from "@/lib/i18n";
 
-// Client-side random shuffle — fresh picks on every page load
-function clientShuffle<T>(arr: T[]): T[] {
+// Daily rotation helpers — deterministically shuffle using date as seed
+function dailySeed() {
+  const d = new Date();
+  return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+}
+
+function dailyShuffle<T>(arr: T[]): T[] {
+  const seed = dailySeed();
   const shuffled = [...arr];
+  // Simple deterministic shuffle based on date
   for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = (seed * (i + 1) * 7) % (i + 1);
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
   return shuffled;
 }
 
-// Featured tools: 4 random high-rated tools (rating >= 4)
+// Featured tools: daily rotation, pick 4 top-rated tools shuffled by date
 function getFeaturedToolIds(): string[] {
-  const topRated = tools.filter((t) => (t.rating || 0) >= 4);
-  return clientShuffle(topRated).slice(0, 4).map((t) => t.id);
+  const topRated = [...tools].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  return dailyShuffle(topRated).slice(0, 4).map((t) => t.id);
 }
 
-// Featured models: 4 random models
+// Featured models: daily rotation, pick 4 shuffled by date
 function getFeaturedModelIds(): string[] {
-  return clientShuffle([...models]).slice(0, 4).map((m) => m.id);
+  return dailyShuffle([...models]).slice(0, 4).map((m) => m.id);
 }
 
-// Editor's Picks: 4 newest articles across different categories, randomly ordered
+// Editor's Picks: 4 newest articles across different categories
 function getEditorsPicks(): string[] {
   const byDate = [...articles].sort((a, b) => b.date.localeCompare(a.date));
   const seen = new Set<string>();
@@ -50,13 +57,14 @@ function getEditorsPicks(): string[] {
       if (!picks.includes(a)) { picks.push(a); if (picks.length >= 4) break; }
     }
   }
-  return clientShuffle(picks).map((a) => a.slug);
+  return picks.map((a) => a.slug);
 }
 
-// Top Picks: 6 articles from latest 12, randomly shuffled
+// Top Picks: 6 most recent articles, daily rotation within recent ones
 function getFeaturedArticleSlugs(): string[] {
   const byDate = [...articles].sort((a, b) => b.date.localeCompare(a.date));
-  return clientShuffle(byDate.slice(0, 12)).slice(0, 6).map((a) => a.slug);
+  // Take latest 12, shuffle by date, pick 6
+  return dailyShuffle(byDate.slice(0, 12)).slice(0, 6).map((a) => a.slug);
 }
 
 function getHome(dict: Record<string, unknown> | undefined) {
