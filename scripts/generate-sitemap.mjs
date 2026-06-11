@@ -67,7 +67,7 @@ for (const loc of ["en", "zh"]) {
   }
   // Static pages
   for (const p of ["/about", "/privacy", "/terms", "/refund"]) {
-    xml += addUrlWithHreflang(loc, "/" + p, today, "0.5", "monthly");
+    xml += addUrlWithHreflang(loc, p, today, "0.5", "monthly");
   }
   // Categories
   for (const c of categoryIds) {
