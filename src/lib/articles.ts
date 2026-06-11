@@ -1796,4 +1796,46 @@ export const articles: Article[] = [
     toolsMentioned: ["langchain", "claude"],
     date: "2026-06-10",
   },
+  {
+    slug: "4-ai-memory-solutions-comparison",
+    title: "4 Leading AI Memory Solutions: A Practical Guide to Choosing the Right One for Your Needs",
+    titleZh: "四大AI记忆方案对比：选择最适合你的持久上下文方案",
+    description:
+      "Compare 4 leading AI memory solutions — Gbrain, Microsoft GraphRAG, Graphify, and Karpathy's LLM Wiki — with a 5-dimension comparison and practical selection guide for your specific use case.",
+    descriptionZh:
+      "对比4款领先的AI记忆方案——Gbrain、Microsoft GraphRAG、Graphify和Karpathy的LLM Wiki——附带5维对比和实用选择指南，帮你找到最适合的方案。",
+    category: "ai-comparisons",
+    tags: ["ai-memory", "gbrain", "graphrag", "graphify", "llm-wiki", "knowledge-base", "comparison"],
+    difficulty: "intermediate",
+    toolsMentioned: ["gbrain", "graphrag", "graphify", "llm-wiki", "lightrag"],
+    date: "2026-06-11",
+  },
+  {
+    slug: "ai-browser-automation-6-routes",
+    title: "Exploring AI Browser Automation: 6 Technical Routes, Architecture, and Practical Selection",
+    titleZh: "探索AI浏览器自动化：6条技术路线、架构与实用选择",
+    description:
+      "Browser automation tools fall into 6 core technical routes — CDP direct control, accessibility tree, screenshot recognition, cloud browsers, anti-detection browsing, and AI-native automation. Explore each route with practical tools and code examples.",
+    descriptionZh:
+      "浏览器自动化工具可归为6大核心技术路线——CDP直接控制、无障碍树交互、截图识别、云浏览器、反检测浏览和AI原生自动化。探索每条路线及实用工具和代码示例。",
+    category: "ai-tutorials",
+    tags: ["browser-automation", "playwright", "puppeteer", "cdp", "web-scraping", "ai-native", "overseas"],
+    difficulty: "intermediate",
+    toolsMentioned: ["playwright", "puppeteer", "stagehand", "camoufox", "scrapingbee", "browserbase", "browserless", "bug0"],
+    date: "2026-06-11",
+  },
+  {
+    slug: "skillclaw-ai-agents-self-evolving",
+    title: "SkillClaw: Empowering AI Agents with Self-Evolving, Shareable Skills",
+    titleZh: "SkillClaw：用自我进化的可共享技能赋能AI代理",
+    description:
+      "Alibaba's open-source SkillClaw enables AI agents to automatically refine, deduplicate, and share skills. Explore its architecture, two evolution engines, and practical setup guide for autonomous skill management.",
+    descriptionZh:
+      "阿里巴巴开源的SkillClaw让AI代理自动优化、去重和共享技能。探索其架构、两种进化引擎和自主技能管理的实际部署指南。",
+    category: "ai-tools",
+    tags: ["skillclaw", "self-evolving", "ai-agents", "open-source", "skills", "autonomous-learning"],
+    difficulty: "intermediate",
+    toolsMentioned: ["skillclaw"],
+    date: "2026-06-11",
+  },
 ];
