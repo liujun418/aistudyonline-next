@@ -171,12 +171,12 @@ const enSections: Section[] = [
     type: "list",
     title: "2. Cookies & Tracking Technologies",
     intro:
-      "Our website uses the following types of cookies and tracking technologies:",
+      "Our website uses the following types of cookies and tracking technologies. Upon your first visit, a cookie consent banner allows you to Accept All Cookies or Reject Non-Essential cookies:",
     items: [
-      "Essential Cookies: A locale preference cookie that stores your language selection (en/zh). This cookie is strictly necessary for the proper functioning of the website.",
-      "Google Analytics Cookies (GA4): Used to collect anonymized traffic data and analyze how visitors interact with our site. These cookies collect information in aggregated form that does not directly identify individuals.",
-      "Google AdSense Cookies: Google AdSense uses cookies, including the DART cookie, to serve personalized advertisements based on your visits to our site and other websites across the internet.",
-      'Opt-Out Options: You may opt out of personalized advertising by visiting Google Ads Settings (https://adssettings.google.com) or by visiting www.aboutads.info to opt out of third-party personalized advertising.',
+      "Essential Cookies: A locale preference cookie that stores your language selection (en/zh). This cookie is strictly necessary for the proper functioning of the website and is always set regardless of your consent choice.",
+      "Google Analytics Cookies (GA4): Used to collect anonymized traffic data and analyze how visitors interact with our site. These cookies collect information in aggregated form that does not directly identify individuals. GA4 is only loaded if you accept non-essential cookies.",
+      "Google AdSense Cookies: Google AdSense uses cookies, including the DART cookie, to serve personalized advertisements based on your visits to our site and other sites across the internet. AdSense cookies are only loaded if you accept non-essential cookies.",
+      'Opt-Out Options: You may opt out of personalized advertising by visiting Google Ads Settings (https://adssettings.google.com) or by visiting www.aboutads.info to opt out of third-party personalized advertising. You can also change your cookie preference at any time by clearing your browser cookies and revisiting our site.',
     ],
   },
   {
@@ -216,22 +216,32 @@ const enSections: Section[] = [
   },
   {
     type: "text",
-    title: "9. Data Security",
+    title: "9. Third-Party Services & Libraries",
+    body: `${SITE_NAME} uses the following third-party services and libraries: Google Analytics 4 (GA4) for anonymous traffic analysis, Google AdSense for advertising, and highlight.js (BSD-3-Clause licensed) for code syntax highlighting. highlight.js operates entirely client-side and does not collect personal data, set cookies, or communicate with any external servers. The remaining services are governed by their respective privacy policies.`,
+  },
+  {
+    type: "text",
+    title: "10. Static Website Architecture",
+    body: `${SITE_NAME} is a statically generated website. We do not operate a backend server, database, or user account system. No user-submitted data is permanently stored. All content is pre-built and served as static files via a content delivery network (CDN). This architecture inherently limits the scope of data processing and collection.`,
+  },
+  {
+    type: "text",
+    title: "11. Data Security",
     body: "All data transmitted between your browser and our website is encrypted using HTTPS (SSL/TLS). We do not operate user accounts, store passwords, or maintain databases containing personal information. Analytics data is stored and secured by Google. We implement reasonable security measures to protect the limited data we process. However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure.",
   },
   {
     type: "text",
-    title: "10. Children's Privacy",
+    title: "12. Children's Privacy",
     body: `Our website is not directed at children under the age of 13 (in compliance with the Children's Online Privacy Protection Act — COPPA) or under the age of 16 (in compliance with GDPR age requirements). We do not knowingly collect any personal information from children. If you believe a child has provided us with personal data, please contact us immediately at ${CONTACT_EMAIL}, and we will take prompt steps to delete such information.`,
   },
   {
     type: "text",
-    title: "11. Changes to This Policy",
+    title: "13. Changes to This Policy",
     body: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we make material changes, we will update the 'Last Updated' date at the top of this page and notify users via a site banner. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.",
   },
   {
     type: "email",
-    title: "12. Contact",
+    title: "14. Contact",
     beforeEmail:
       "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at",
     afterEmail: ".",
@@ -247,12 +257,12 @@ const zhSections: Section[] = [
   {
     type: "list",
     title: "二、Cookie 与跟踪技术",
-    intro: "本网站使用以下类型的 Cookie 和跟踪技术：",
+    intro: "本网站使用以下类型的 Cookie 和跟踪技术。首次访问时，Cookie 同意横幅允许您选择「接受所有 Cookie」或「拒绝非必要 Cookie」：",
     items: [
-      "必要 Cookie：用于存储您的语言偏好（中文/英文）的 Cookie。该 Cookie 对于网站的正常运行是绝对必要的。",
-      "Google Analytics Cookie（GA4）：用于收集匿名流量数据并分析访客与网站的互动方式。这些 Cookie 以聚合形式收集信息，不会直接识别个人身份。",
-      "Google AdSense Cookie：Google AdSense 使用 Cookie（包括 DART Cookie）根据您访问本网站及其他网站的历史投放个性化广告。",
-      "退出选项：您可以通过访问 Google 广告设置（https://adssettings.google.com）选择退出个性化广告，或访问 www.aboutads.info 选择退出第三方个性化广告。",
+       "必要 Cookie：用于存储您的语言偏好（中文/英文）的 Cookie。该 Cookie 对于网站的正常运行是绝对必要的，无论您的同意选择如何都会设置。",
+      "Google Analytics Cookie（GA4）：用于收集匿名流量数据并分析访客与网站的互动方式。这些 Cookie 以聚合形式收集信息，不会直接识别个人身份。GA4 仅在您接受非必要 Cookie 时加载。",
+      "Google AdSense Cookie：Google AdSense 使用 Cookie（包括 DART Cookie）根据您访问本网站及其他网站的历史投放个性化广告。AdSense Cookie 仅在您接受非必要 Cookie 时加载。",
+      "退出选项：您可以通过访问 Google 广告设置（https://adssettings.google.com）选择退出个性化广告，或访问 www.aboutads.info 选择退出第三方个性化广告。您也可以随时清除浏览器 Cookie 并重新访问我们的网站来更改您的 Cookie 偏好。",
     ],
   },
   {
@@ -292,22 +302,32 @@ const zhSections: Section[] = [
   },
   {
     type: "text",
-    title: "九、数据安全",
+    title: "九、第三方服务与库",
+    body: `${SITE_NAME} 使用以下第三方服务和库：Google Analytics 4（GA4）用于匿名流量分析、Google AdSense 用于广告投放、以及 highlight.js（BSD-3-Clause 许可）用于代码语法高亮。highlight.js 完全在客户端运行，不会收集个人数据、设置 Cookie 或与任何外部服务器通信。其余服务受其各自隐私政策的约束。`,
+  },
+  {
+    type: "text",
+    title: "十、静态网站架构",
+    body: `${SITE_NAME} 是一个静态生成的网站。我们不运营后端服务器、数据库或用户账户系统。不会永久存储用户提交的数据。所有内容都是预构建的，通过内容分发网络（CDN）以静态文件形式提供服务。这种架构从根本上限制了数据处理和收集的范围。`,
+  },
+  {
+    type: "text",
+    title: "十一、数据安全",
     body: "您的浏览器与本网站之间传输的所有数据均通过 HTTPS（SSL/TLS）加密。我们不运营用户账户、不存储密码、也不维护包含个人信息的数据库。分析数据由 Google 存储和保护。我们采取合理的安全措施来保护我们所处理的有限数据。但请注意，互联网传输或电子存储的方法并非 100% 安全。",
   },
   {
     type: "text",
-    title: "十、儿童隐私保护",
+    title: "十二、儿童隐私保护",
     body: `本网站不面向 13 岁以下儿童（符合《儿童在线隐私保护法》COPPA）或 16 岁以下未成年人（符合 GDPR 年龄要求）。我们不会故意收集任何儿童的个人信息。如果您认为儿童向我们提供了个人数据，请立即通过 ${CONTACT_EMAIL} 与我们联系，我们将迅速采取措施删除此类信息。`,
   },
   {
     type: "text",
-    title: "十一、本政策的变更",
+    title: "十三、本政策的变更",
     body: "我们可能会不时更新本隐私政策，以反映我们的实践变更或法律要求。当进行重大变更时，我们将更新本页面顶部的「最后更新」日期，并通过网站横幅通知用户。建议您定期查阅本隐私政策，以了解我们如何保护您的信息。",
   },
   {
     type: "email",
-    title: "十二、联系方式",
+    title: "十四、联系方式",
     beforeEmail:
       "如果您对本隐私政策或我们的数据实践有任何疑问、疑虑或请求，请通过以下邮箱联系我们：",
     afterEmail: "。",

@@ -6,6 +6,7 @@ import "@/app/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 import { locales, isValidLocale, localeDir, getDictionary } from "@/lib/i18n";
 import { SITE_URL, SITE_NAME } from "@/lib/constants";
 import type { Locale } from "@/lib/i18n";
@@ -155,6 +156,7 @@ export default async function LocaleLayout({
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>
+        <CookieConsent />
       </body>
     </html>
   );
