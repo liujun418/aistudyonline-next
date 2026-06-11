@@ -16,7 +16,7 @@ function addUrlWithHreflang(loc, pathSuffix, lastmod, prio, freq) {
   const altZh = `<xhtml:link rel="alternate" hreflang="zh" href="${esc(zhUrl)}"/>`;
   const altX  = `<xhtml:link rel="alternate" hreflang="x-default" href="${esc(enUrl)}"/>`;
   const url = loc === "en" ? enUrl : zhUrl;
-  return `<url><loc>${esc(url)}</loc>${altEn}${altZh}${altX}<lastmod>${lastmod}</lastmod><priority>${prio}</priority><changefreq>${freq}</changefreq></url>`;
+  return `\n  <url>\n    <loc>${esc(url)}</loc>\n    ${altEn}\n    ${altZh}\n    ${altX}\n    <lastmod>${lastmod}</lastmod>\n    <priority>${prio}</priority>\n    <changefreq>${freq}</changefreq>\n  </url>`;
 }
 
 // Parse articles with dates
@@ -53,7 +53,7 @@ const categoryIds = readSlugs(resolve("../src/lib/categories.ts"), 'id:\\s*"([^"
 
 const today = new Date().toISOString().split("T")[0] + "T00:00:00+00:00";
 
-let xml = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>';
+let xml = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n';
 xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">';
 
 // Homepages (en + zh)
@@ -93,7 +93,7 @@ for (const loc of ["en", "zh"]) {
   }
 }
 
-xml += "</urlset>";
+xml += "\n</urlset>";
 
 const out = resolve("../public/sitemap.xml");
 writeFileSync(out, xml);
