@@ -29797,4 +29797,368 @@ skillclaw start --daemon</code></pre>
 <p><strong>下一篇：</strong> <a href="/article/6-ai-tools-dominating-github">统治GitHub的6大AI工具：接管你的工作流 →</a></p>
 </div>`,
   },
+
+  // ====== Claude Code Zero-to-Hero ======
+  "claude-code-zero-to-hero-beginners": {
+    content: `<div class="article-meta-banner">
+<p><strong>Learning Path:</strong> Claude Code Beginner Quickstart</p>
+<p><strong>Prerequisites:</strong> A free Anthropic account, basic understanding of one programming language, a code editor</p>
+<p><strong>What you'll build:</strong> Confidence using Claude Code to write, debug, and automate code — all from natural language prompts.</p>
+</div>
+
+<h2>Why Claude Code for Beginners?</h2>
+
+<p>Claude Code, Anthropic's AI-powered coding assistant, is designed to streamline development workflows—from writing snippets to debugging complex logic—without steep learning curves. This beginner-friendly guide distills the core of Claude Code's functionality into actionable steps, with hands-on examples to get you coding in minutes.</p>
+
+<p>Unlike overly technical AI coding tools, Claude Code stands out for:</p>
+
+<ul>
+<li><strong>Natural Language Flexibility</strong>: Explain tasks in plain English (no rigid prompts required).</li>
+<li><strong>Context Awareness</strong>: Understands project structure, dependencies, and your coding style.</li>
+<li><strong>Real-Time Feedback</strong>: Flags errors, suggests optimizations, and explains <em>why</em> changes improve code.</li>
+<li><strong>Multi-Language Support</strong>: Works with Python, JavaScript, TypeScript, Java, and more—no extra setup for different languages.</li>
+</ul>
+
+<h2>Prerequisites</h2>
+
+<ul>
+<li>A free Anthropic account (sign up at <a href="https://anthropic.com" target="_blank" rel="noopener">anthropic.com</a>).</li>
+<li>Basic understanding of one programming language (we'll use Python for examples, but concepts apply universally).</li>
+<li>A code editor (VS Code recommended—install the <a href="https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code" target="_blank" rel="noopener">Claude Code extension</a> for seamless integration).</li>
+</ul>
+
+<p>If you haven't installed the required tools yet, check out our <a href="/article/claude-code-essential-three-tools">Claude Code Essential Setup guide</a> for Node.js, Git, and terminal setup.</p>
+
+<h2>Step 1: Set Up Claude Code (2 Minutes)</h2>
+
+<h3>Option 1: Web Interface</h3>
+
+<ol>
+<li>Log into your Anthropic account and navigate to <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a>.</li>
+<li>Create a new project (e.g., "Beginner Practice") and select your language (Python).</li>
+</ol>
+
+<h3>Option 2: VS Code Extension (Recommended)</h3>
+
+<ol>
+<li>Install the extension via the VS Code Marketplace (link above).</li>
+<li>Authenticate with your Anthropic API key (find it in <a href="https://claude.ai/settings/api-keys" target="_blank" rel="noopener">Account Settings → API Keys</a>).</li>
+<li>Open a new file (e.g., <code>claude_practice.py</code>) and activate Claude Code with <code>Ctrl+Shift+P → "Claude Code: Open Assistant"</code>.</li>
+</ol>
+
+<pre><code class="language-bash"># Verify extension installation (VS Code terminal)
+code --list-extensions | grep "Anthropic.claude-code"</code></pre>
+
+<p>For a detailed installation walkthrough, see our <a href="/article/claude-code-install-setup">Claude Code Installation & Setup guide</a> covering Windows, Mac, and Linux.</p>
+
+<h2>Step 2: Write Your First Code with Claude Code (3 Minutes)</h2>
+
+<p>Claude Code excels at translating plain language into working code. Let's start with a simple task: "Create a function that takes a list of numbers and returns the sum of even numbers."</p>
+
+<h3>Step 2.1: Ask Claude Code for Help</h3>
+
+<p>In the VS Code Claude Code panel, type:</p>
+
+<pre><code class="language-plaintext">Write a Python function called sum_even_numbers that takes a list of integers as input and returns the sum of all even numbers in the list. Include 2 test cases.</code></pre>
+
+<h3>Step 2.2: Generate and Refine Code</h3>
+
+<p>Claude Code will output something like this—copy it into your file:</p>
+
+<pre><code class="language-python">def sum_even_numbers(numbers):
+    """Return the sum of even numbers in a list."""
+    even_sum = 0
+    for num in numbers:
+        if num % 2 == 0:
+            even_sum += num
+    return even_sum
+
+# Test case 1: Mixed even and odd numbers
+test1 = sum_even_numbers([1, 2, 3, 4, 5, 6])
+print("Test 1 Result:", test1)  # Expected: 12
+
+# Test case 2: All odd numbers (should return 0)
+test2 = sum_even_numbers([3, 5, 7, 9])
+print("Test 2 Result:", test2)  # Expected: 0</code></pre>
+
+<h3>Step 2.3: Run and Debug</h3>
+
+<p>If the code works, great! If not (e.g., a typo), ask Claude Code to fix it:</p>
+
+<pre><code class="language-plaintext">My code returns 10 for test1 instead of 12—what's wrong?</code></pre>
+
+<p>Claude Code will identify the issue (e.g., a missing <code>num</code> in the loop) and provide a corrected version.</p>
+
+<h2>Step 3: Level Up—Automate Repetitive Tasks (2 Minutes)</h2>
+
+<p>Let's tackle a common workflow: parsing CSV data. Ask Claude Code:</p>
+
+<pre><code class="language-plaintext">Write Python code to read a CSV file named "sales_data.csv" (columns: Date, Product, Revenue), filter rows where Revenue &gt; 1000, and save the filtered data to "high_revenue.csv". Use the csv module (no pandas needed).</code></pre>
+
+<h3>Generated Code (With Explanations)</h3>
+
+<pre><code class="language-python">import csv
+
+def filter_high_revenue(input_file, output_file, threshold):
+    """Filter CSV rows where Revenue exceeds the threshold and save to new file."""
+    with open(input_file, mode='r', newline='', encoding='utf-8') as infile:
+        reader = csv.DictReader(infile)
+        # Filter rows: convert Revenue to float and check threshold
+        high_revenue_rows = [row for row in reader if float(row['Revenue']) > threshold]
+
+    with open(output_file, mode='w', newline='', encoding='utf-8') as outfile:
+        writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+        writer.writeheader()
+        writer.writerows(high_revenue_rows)
+
+# Run the function
+filter_high_revenue("sales_data.csv", "high_revenue.csv", 1000)
+print("Filtered data saved to high_revenue.csv")</code></pre>
+
+<h3>Key Claude Code Feature: Explain Code</h3>
+
+<p>If you don't understand a part (e.g., <code>csv.DictReader</code>), ask:</p>
+
+<pre><code class="language-plaintext">Explain what csv.DictReader does in simple terms.</code></pre>
+
+<p>Claude Code will break it down: "<code>csv.DictReader</code> reads CSV rows as dictionaries, where keys are the column headers (e.g., 'Date', 'Product')—so you can access values by column name instead of index."</p>
+
+<h2>Step 4: Debug Like a Pro (2 Minutes)</h2>
+
+<p>Let's introduce a bug intentionally to see Claude Code's debugging power. Modify the CSV code:</p>
+
+<pre><code class="language-python"># Bug: Forgetting to convert Revenue to float (will cause string comparison error)
+high_revenue_rows = [row for row in reader if row['Revenue'] > threshold]</code></pre>
+
+<p>Run the code—you'll get an error like <code>TypeError: '&gt;' not supported between instances of 'str' and 'int'</code>. Paste the error into Claude Code:</p>
+
+<pre><code class="language-plaintext">I got this error: TypeError: '>' not supported between instances of 'str' and 'int'—how to fix it?</code></pre>
+
+<p>Claude Code will diagnose the issue ("You're comparing a string (Revenue) to an integer (threshold)") and provide the corrected line:</p>
+
+<pre><code class="language-python">high_revenue_rows = [row for row in reader if float(row['Revenue']) > threshold]</code></pre>
+
+<h2>Pro Tips for Claude Code Mastery</h2>
+
+<ol>
+<li><strong>Be Specific</strong>: Instead of "Write a website," say "Write a basic Flask app with a home page that displays 'Hello, Claude Code!' and a /about route."</li>
+<li><strong>Leverage Context</strong>: Share your project's <code>requirements.txt</code> or existing code so Claude Code aligns with dependencies.</li>
+<li><strong>Ask for Optimizations</strong>: After generating code, ask "Can you make this more efficient?" to learn best practices.</li>
+<li><strong>Use Shortcuts</strong>: In VS Code, use <code>Ctrl+K</code> to quickly send selected code to Claude Code for debugging.</li>
+</ol>
+
+<p>For more pro tips, explore our <a href="/article/top-10-claude-code-commands">Top 10 Claude Code Commands</a> and <a href="/article/12-claude-code-terminal-commands">12 Essential Claude Code Terminal Commands</a> guides.</p>
+
+<h2>Common Use Cases for Beginners</h2>
+
+<ul>
+<li><strong>Homework/Projects</strong>: Claude Code explains concepts while writing code (e.g., "Explain OOP while creating a Python class for a to-do list").</li>
+<li><strong>Automation</strong>: Batch rename files, scrape web data (with permission), or clean datasets.</li>
+<li><strong>Learning New Languages</strong>: Ask Claude Code to translate code between languages (e.g., "Convert this Python function to JavaScript").</li>
+</ul>
+
+<p>See how other overseas entrepreneurs leverage Claude Code in our <a href="/article/claude-code-overseas-business-guide">Claude Code for Overseas Business</a> guide.</p>
+
+<h2>Conclusion</h2>
+
+<p>Claude Code is the ultimate beginner-friendly coding assistant—its ability to understand plain language, provide context-rich explanations, and debug in real time eliminates the frustration of learning to code alone. In just 9 minutes, you've learned to write, debug, and automate tasks—now apply these skills to your own projects. Start small, experiment with different tasks, and let Claude Code guide you as you grow.</p>
+
+<p>Need me to help you generate a custom Claude Code prompt for a specific project (e.g., a to-do app, data visualization, or web scraper)?</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Do I need to know programming to use Claude Code?</h3>
+<p>Not really. Claude Code is designed for beginners too. While basic familiarity with concepts like variables and functions helps, Claude Code can explain everything as it goes. The free tier is a great way to start learning without upfront cost.</p>
+
+<h3>Q: Is Claude Code free to use?</h3>
+<p>Claude Code requires an Anthropic API key which is a paid service (pay-as-you-go). However, there is a free trial credit when you first sign up for an API account. For a cost comparison of AI coding tools, check our guide on <a href="/article/free-vs-paid-ai-tools-worth-it">Free vs Paid AI Tools</a>.</p>
+
+<h3>Q: Can Claude Code work with languages other than Python?</h3>
+<p>Yes. Claude Code supports Python, JavaScript, TypeScript, Java, Go, Ruby, Rust, and many more. You don't need to configure anything per language—just describe what you want to build, and Claude Code adapts automatically.</p>
+
+<div class="next-step">
+<p><strong>Next in this path:</strong> <a href="/article/claude-code-install-setup">Part 1: Claude Code Installation & Setup: From Zero to Your First AI-Generated Web Page →</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>Learning Path:</strong> Claude Code 初学者快速入门</p>
+<p><strong>Prerequisites:</strong> 免费 Anthropic 账号、一门编程语言的基础了解、代码编辑器</p>
+<p><strong>What you'll build:</strong> 用自然语言提示词编写、调试和自动化代码的信心。</p>
+</div>
+
+<h2>为什么初学者选择 Claude Code？</h2>
+
+<p>Claude Code 是 Anthropic 推出的 AI 编程助手，专为简化开发工作流而设计——从编写代码片段到调试复杂逻辑，无需陡峭的学习曲线。这份初学者友好指南将 Claude Code 的核心功能提炼为可操作的步骤，配合动手示例，让你在几分钟内开始编程。</p>
+
+<p>与过于技术性的 AI 编程工具不同，Claude Code 的突出优势在于：</p>
+
+<ul>
+<li><strong>自然语言灵活性</strong>：用日常英语解释任务（无需严格的提示词格式）。</li>
+<li><strong>上下文感知</strong>：理解项目结构、依赖关系和你的编码风格。</li>
+<li><strong>实时反馈</strong>：标记错误、建议优化并解释<em>为什么</em>修改能改进代码。</li>
+<li><strong>多语言支持</strong>：支持 Python、JavaScript、TypeScript、Java 等——无需为不同语言额外配置。</li>
+</ul>
+
+<h2>前置条件</h2>
+
+<ul>
+<li>免费 Anthropic 账号（在 <a href="https://anthropic.com" target="_blank" rel="noopener">anthropic.com</a> 注册）。</li>
+<li>对一门编程语言有基本了解（本指南用 Python 举例，但概念通用）。</li>
+<li>代码编辑器（推荐 VS Code——安装 <a href="https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code" target="_blank" rel="noopener">Claude Code 扩展</a> 获得无缝集成体验）。</li>
+</ul>
+
+<p>如果尚未安装所需工具，请先阅读我们的 <a href="/article/claude-code-essential-three-tools">Claude Code 必备设置指南</a> 了解 Node.js、Git 和终端配置。</p>
+
+<h2>第一步：设置 Claude Code（2 分钟）</h2>
+
+<h3>选项 1：网页界面</h3>
+
+<ol>
+<li>登录你的 Anthropic 账号，进入 <a href="https://claude.ai/code" target="_blank" rel="noopener">Claude Code</a>。</li>
+<li>创建一个新项目（例如"初学者练习"），选择 Python 语言。</li>
+</ol>
+
+<h3>选项 2：VS Code 扩展（推荐）</h3>
+
+<ol>
+<li>通过 VS Code 市场安装扩展（链接同上）。</li>
+<li>使用你的 Anthropic API 密钥进行身份验证（在 <a href="https://claude.ai/settings/api-keys" target="_blank" rel="noopener">账户设置 → API 密钥</a> 中查找）。</li>
+<li>打开一个新文件（例如 <code>claude_practice.py</code>），通过 <code>Ctrl+Shift+P → "Claude Code: Open Assistant"</code> 激活 Claude Code。</li>
+</ol>
+
+<pre><code class="language-bash"># 验证扩展安装（VS Code 终端）
+code --list-extensions | grep "Anthropic.claude-code"</code></pre>
+
+<p>详细的安装说明请参阅我们的 <a href="/article/claude-code-install-setup">Claude Code 安装与配置指南</a>，涵盖 Windows、Mac 和 Linux。</p>
+
+<h2>第二步：用 Claude Code 编写你的第一段代码（3 分钟）</h2>
+
+<p>Claude Code 擅长将日常语言转化为可运行的代码。让我们从一个简单的任务开始："创建一个函数，接收一个数字列表并返回其中所有偶数的和。"</p>
+
+<h3>步骤 2.1：向 Claude Code 求助</h3>
+
+<p>在 VS Code 的 Claude Code 面板中输入：</p>
+
+<pre><code class="language-plaintext">写一个名为 sum_even_numbers 的 Python 函数，接收一个整数列表作为输入，
+返回列表中所有偶数的和。包含 2 个测试用例。</code></pre>
+
+<h3>步骤 2.2：生成和优化代码</h3>
+
+<p>Claude Code 会输出类似这样的代码——复制到你的文件中：</p>
+
+<pre><code class="language-python">def sum_even_numbers(numbers):
+    """返回列表中偶数的和。"""
+    even_sum = 0
+    for num in numbers:
+        if num % 2 == 0:
+            even_sum += num
+    return even_sum
+
+# 测试用例 1：混合奇偶数
+test1 = sum_even_numbers([1, 2, 3, 4, 5, 6])
+print("Test 1 Result:", test1)  # 预期：12
+
+# 测试用例 2：全奇数（应返回 0）
+test2 = sum_even_numbers([3, 5, 7, 9])
+print("Test 2 Result:", test2)  # 预期：0</code></pre>
+
+<h3>步骤 2.3：运行和调试</h3>
+
+<p>如果代码正常运行，太好了！如果不行（比如输入错误），让 Claude Code 修复它：</p>
+
+<pre><code class="language-plaintext">我的代码 test1 返回 10 而不是 12——哪里出错了？</code></pre>
+
+<p>Claude Code 会定位问题（例如循环中缺少变量更新）并给出修复后的版本。</p>
+
+<h2>第三步：进阶——自动化重复任务（2 分钟）</h2>
+
+<p>我们来处理一个常见场景：解析 CSV 数据。向 Claude Code 提问：</p>
+
+<pre><code class="language-plaintext">写一段 Python 代码，读取名为 "sales_data.csv" 的 CSV 文件（列：Date, Product, Revenue），
+筛选 Revenue > 1000 的行，将结果保存到 "high_revenue.csv"。使用 csv 模块（不需要 pandas）。</code></pre>
+
+<h3>生成的代码（含解释）</h3>
+
+<pre><code class="language-python">import csv
+
+def filter_high_revenue(input_file, output_file, threshold):
+    """筛选 Revenue 超过阈值的 CSV 行并保存到新文件。"""
+    with open(input_file, mode='r', newline='', encoding='utf-8') as infile:
+        reader = csv.DictReader(infile)
+        # 筛选行：将 Revenue 转为 float 并检查阈值
+        high_revenue_rows = [row for row in reader if float(row['Revenue']) > threshold]
+
+    with open(output_file, mode='w', newline='', encoding='utf-8') as outfile:
+        writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
+        writer.writeheader()
+        writer.writerows(high_revenue_rows)
+
+# 运行函数
+filter_high_revenue("sales_data.csv", "high_revenue.csv", 1000)
+print("筛选后的数据已保存到 high_revenue.csv")</code></pre>
+
+<h3>Claude Code 关键功能：解释代码</h3>
+
+<p>如果你不理解某部分代码（比如 <code>csv.DictReader</code>），可以问：</p>
+
+<pre><code class="language-plaintext">用通俗的语言解释 csv.DictReader 的作用。</code></pre>
+
+<p>Claude Code 会这样解释："<code>csv.DictReader</code> 将 CSV 行读取为字典，键是列标题（如 'Date'、'Product'）——这样你可以通过列名而不是索引来访问值。"</p>
+
+<h2>第四步：像专家一样调试（2 分钟）</h2>
+
+<p>我们故意引入一个 bug 来体验 Claude Code 的调试能力。修改 CSV 代码：</p>
+
+<pre><code class="language-python"># Bug：忘记将 Revenue 转为 float（会导致字符串比较错误）
+high_revenue_rows = [row for row in reader if row['Revenue'] > threshold]</code></pre>
+
+<p>运行代码——你会遇到类似 <code>TypeError: '>' not supported between instances of 'str' and 'int'</code> 的错误。把错误粘贴给 Claude Code：</p>
+
+<pre><code class="language-plaintext">我遇到这个错误：TypeError: '>' not supported between instances of 'str' and 'int'——如何修复？</code></pre>
+
+<p>Claude Code 会诊断问题（"你在比较字符串（Revenue）和整数（threshold）"）并给出修正后的代码行：</p>
+
+<pre><code class="language-python">high_revenue_rows = [row for row in reader if float(row['Revenue']) > threshold]</code></pre>
+
+<h2>Claude Code 大师级技巧</h2>
+
+<ol>
+<li><strong>要具体</strong>：与其说"写一个网站"，不如说"写一个基本的 Flask 应用，首页显示'Hello, Claude Code!'，还有一个 /about 路由"。</li>
+<li><strong>利用上下文</strong>：分享项目的 <code>requirements.txt</code> 或现有代码，让 Claude Code 了解依赖关系。</li>
+<li><strong>请求优化</strong>：生成代码后问"能让它更高效吗？"来学习最佳实践。</li>
+<li><strong>使用快捷键</strong>：在 VS Code 中用 <code>Ctrl+K</code> 快速将选中代码发送给 Claude Code 调试。</li>
+</ol>
+
+<p>更多进阶技巧，请参阅我们的 <a href="/article/top-10-claude-code-commands">Top 10 Claude Code 命令指南</a> 和 <a href="/article/12-claude-code-terminal-commands">12 个必备 Claude Code 终端命令</a>。</p>
+
+<h2>初学者的常见用例</h2>
+
+<ul>
+<li><strong>作业/项目</strong>：Claude Code 边写代码边解释概念（例如"在创建待办事项列表的 Python 类时解释 OOP"）。</li>
+<li><strong>自动化</strong>：批量重命名文件、抓取网页数据（需获得许可）或清洗数据集。</li>
+<li><strong>学习新语言</strong>：让 Claude Code 在编程语言之间转换代码（例如"将这个 Python 函数转换为 JavaScript"）。</li>
+</ul>
+
+<p>想了解其他海外创业者如何利用 Claude Code，请阅读我们的 <a href="/article/claude-code-overseas-business-guide">Claude Code 海外业务指南</a>。</p>
+
+<h2>结论</h2>
+
+<p>Claude Code 是终极的初学者友好编程助手——它理解日常语言、提供上下文丰富的解释并实时调试，消除了独自学习编程的挫败感。在短短 9 分钟内，你已经学会了编写、调试和自动化任务——现在将这些技能应用到自己的项目中。从小处着手，尝试不同任务，让 Claude Code 陪伴你成长。</p>
+
+<p>需要我帮你生成一个针对特定项目的 Claude Code 提示词吗（例如待办事项应用、数据可视化或网页爬虫）？</p>
+
+<h2>常见问题</h2>
+
+<h3>问：使用 Claude Code 需要编程知识吗？</h3>
+<p>不一定。Claude Code 也为初学者设计。虽然了解变量、函数等基本概念有帮助，但 Claude Code 可以边用边解释一切。免费试用额度是一个不错的学习起点。</p>
+
+<h3>问：Claude Code 是免费的吗？</h3>
+<p>Claude Code 需要 Anthropic API 密钥，这是付费服务（按用量付费）。不过首次注册 API 账户时有免费试用额度。关于 AI 编程工具的成本对比，请查看我们的 <a href="/article/free-vs-paid-ai-tools-worth-it">免费 vs 付费 AI 工具指南</a>。</p>
+
+<h3>问：Claude Code 能处理 Python 以外的语言吗？</h3>
+<p>可以。Claude Code 支持 Python、JavaScript、TypeScript、Java、Go、Ruby、Rust 等多种语言。无需按语言单独配置——只需描述你想构建的内容，Claude Code 会自动适应。</p>
+
+<div class="next-step">
+<p><strong>本路径下一节：</strong> <a href="/article/claude-code-install-setup">Part 1：Claude Code 安装与配置：从零到你的第一个 AI 网页 →</a></p>
+</div>`,
+  },
 };

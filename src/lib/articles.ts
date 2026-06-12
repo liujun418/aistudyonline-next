@@ -1616,6 +1616,21 @@ export const articles: Article[] = [
   },
 
   {
+    slug: "claude-code-zero-to-hero-beginners",
+    title: "Claude Code Zero-to-Hero: A 9-Minute Practical Guide for Beginners",
+    titleZh: "Claude Code从零到精通：9分钟初学者实战指南",
+    description:
+      "Learn Claude Code from zero in 9 minutes — write, debug, and automate code using natural language. A beginner-friendly guide with hands-on Python examples.",
+    descriptionZh:
+      "9分钟从零学会Claude Code——用自然语言写代码、调试和自动化。包含动手Python示例的初学者友好指南。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "beginner", "python", "debugging", "automation", "command-line"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-12",
+  },
+
+  {
     slug: "vibe-coding-ai-beginners-step-by-step",
     title: "Vibe Coding for AI Beginners: Build Software by Talking to AI (Step-by-Step Guide)",
     titleZh: "Vibe Coding AI 入门：通过和 AI 对话构建软件（一步步指南）",
