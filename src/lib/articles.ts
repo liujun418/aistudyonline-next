@@ -1853,4 +1853,34 @@ export const articles: Article[] = [
     toolsMentioned: ["skillclaw"],
     date: "2026-06-11",
   },
+  {
+    slug: "huawei-ascend-deepseek-v4-breakthrough",
+    title: "China's AI Breakthrough: How Huawei Ascend and DeepSeek V4 Redefine AI Computing Without NVIDIA",
+    titleZh: "中国AI突破：华为昇腾与DeepSeek V4如何在没有NVIDIA的情况下重新定义AI计算",
+    description:
+      "China's collaboration between Huawei Ascend 950 chips and DeepSeek V4 LLM marks a new era of domestic AI computing, achieving 1/7 the cost of international alternatives.",
+    descriptionZh:
+      "华为昇腾950芯片与DeepSeek V4大语言模型的合作标志着国产AI计算的新纪元，成本仅为国际替代方案的七分之一。",
+    category: "ai-news",
+    tags: ["deepseek", "huawei", "ascend", "china-ai", "nvidia-free", "domestic-computing", "ai-chip"],
+    difficulty: "beginner",
+    toolsMentioned: ["deepseek"],
+    date: "2026-06-12",
+  },
+
+  {
+    slug: "large-cap-investment-dashboard-claude-code",
+    title: "Build a Large-Cap Investment Research Dashboard with Claude Code: A Step-by-Step Guide",
+    titleZh: "用Claude Code构建大盘投资研究仪表盘：分步指南",
+    description:
+      "Build a fully functional investment research dashboard with Claude Code in minutes. Pull real-time stock data, calculate financial metrics, and visualize trends for large-cap stocks.",
+    descriptionZh:
+      "用Claude Code在几分钟内构建一个功能完整的投资研究仪表盘。获取实时股票数据、计算财务指标并可视化大盘股趋势。",
+    category: "ai-use-cases",
+    tags: ["claude-code", "investment", "dashboard", "stock-market", "streamlit", "financial-analysis", "data-visualization"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-12",
+  },
+
 ];

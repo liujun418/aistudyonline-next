@@ -30161,4 +30161,472 @@ high_revenue_rows = [row for row in reader if row['Revenue'] > threshold]</code>
 <p><strong>本路径下一节：</strong> <a href="/article/claude-code-install-setup">Part 1：Claude Code 安装与配置：从零到你的第一个 AI 网页 →</a></p>
 </div>`,
   },
+  "huawei-ascend-deepseek-v4-breakthrough": {
+    content: `<p>In the rapidly evolving landscape of artificial intelligence, China has made a remarkable stride in decoupling from NVIDIA dominance. The collaboration between Huawei Ascend 950 chips and DeepSeek V4 large language model (LLM) exemplifies a new era of domestic AI computing, offering practical solutions and tangible benefits for developers and enterprises alike.</p>
+
+<h2>1. The Convergence of Domestic Model and Computing Power</h2>
+
+<p>DeepSeek V4, released in January 2026, marks a milestone with its support for <strong>million-token context windows</strong> and two versions (pro and flash) catering to different performance needs. What makes this groundbreaking is its full compatibility with Huawei Ascend 950 series chips, achieving a seamless migration from NVIDIA hardware. This "domestic model + domestic computing power" synergy has resulted in a top-tier open-source trillion-parameter LLM, running at <strong>1/7 the cost</strong> of international alternatives.</p>
+
+<h2>2. Technical Challenges and Huawei Solutions</h2>
+
+<h3>2.1 Handling Million-Token Context</h3>
+
+<p>The million-token context capability, while powerful for tasks like analyzing entire code repositories or long legal contracts, poses significant hardware challenges:</p>
+
+<ul>
+<li><strong>Memory Explosion</strong>: Storing intermediate results for such lengthy contexts overwhelms traditional GPU memory.</li>
+<li><strong>Memory Wall Bottleneck</strong>: Transferring large datasets between distributed cards becomes a bottleneck.</li>
+<li><strong>Inter-Card Communication Congestion</strong>: The Mixture of Experts (MoE) architecture, which activates only relevant experts, leads to frequent data exchanges across cards.</li>
+<li><strong>High Concurrency Pressure from Agents</strong>: AI agents generating multiple requests simultaneously strain hardware resources.</li>
+</ul>
+
+<p>Huawei Ascend 950 addresses these issues through:</p>
+
+<ul>
+<li><strong>Native Mixed-Precision Support</strong>: FP8 and even extreme MXFP4 precision reduce memory usage while maintaining performance. Ascend 950 delivers 1 PFLOPS at FP8 and 2 PFLOPS at FP4.</li>
+<li><strong>Memory Access Granularity Optimization</strong>: Reducing access granularity from 512B to 128B minimizes bandwidth waste.</li>
+<li><strong>SIMD + SIMT Fusion Architecture</strong>: Combining Single Instruction Multiple Data (SIMD) for batch operations and Single Instruction Multiple Thread (SIMT) for flexible branching, this architecture efficiently handles both large matrix computations and dynamic MoE scheduling.</li>
+<li><strong>Specialized Chip Division (PR and DT)</strong>: Ascend 950 PR focuses on low-latency inference, while DT handles high-intensity training.</li>
+</ul>
+
+<h2>3. SuperNode: Scaling Beyond Single Chips</h2>
+
+<p>Huawei Atlas 950 SuperPod embodies the system architecture innovation over relying solely on advanced semiconductor processes. This supernode scales up to 8192 NPUs with a total interconnect bandwidth of 16,000 TB/s via full optical interconnection. The UnifiedBus protocol unifies communication standards across compute cards, storage, and switches, enabling seamless collaboration. Intelligent memory pooling dynamically distributes data across the cluster memory to overcome single-card limitations.</p>
+
+<h2>4. Developer-Centric Software Ecosystem: CANN</h2>
+
+<p>Huawei Compute Architecture for Neural Networks (CANN) has undergone a transformation to lower the barrier for developers:</p>
+
+<ul>
+<li><strong>Layered Decoupling</strong>: CANN is split into modular components (kernels, communication libraries, compilers), allowing developers to integrate only what they need.</li>
+</ul>
+
+<pre><code class="language-python"># Example: Using CANN for distributed communication
+from ascend.distributed import comm
+comm.init()
+tensor = comm.all_gather(tensor)</code></pre>
+
+<ul>
+<li><strong>Full Open-Source Repositories</strong>: Over 60 repositories are open-sourced, enabling developers to debug and optimize code directly.</li>
+<li><strong>SIMD + SIMT Programming Support</strong>: Developers can leverage this fusion architecture for both high-throughput batch tasks and flexible branching logic.</li>
+<li><strong>Mainstream Framework Compatibility</strong>: CANN supports PyTorch and TensorFlow, with tools like MindStudio Agent enabling efficient model deployment.</li>
+</ul>
+
+<pre><code class="language-python"># Example: Migrating PyTorch model to Ascend
+model = DeepSeekV4()
+optimizer = torch.optim.Adam(model.parameters())
+
+# After CANN adaptation
+from ascend.torch import amp
+model = amp.initialize(model, opt_level="O2")</code></pre>
+
+<h2>5. Practical Implications and Industry Impact</h2>
+
+<p>This domestic AI ecosystem offers tangible advantages. Cost efficiency is achieved by delivering comparable performance to NVIDIA solutions at a fraction of the cost. CANNBot and automated migration tools reduce migration friction. Breaking NVIDIA CUDA monopoly fosters ecosystem diversity and innovation.</p>
+
+<p>For developers looking to adopt this ecosystem, the process is straightforward: download the open-source DeepSeek V4 code from GitHub, modify a few lines of configuration or use Huawei automated migration tools, then deploy on Ascend 950 servers with automatic optimization for FlashAttention and other acceleration libraries.</p>
+
+<p>The collaboration between DeepSeek V4 and Huawei Ascend 950 demonstrates that China AI industry has forged a viable path independent of NVIDIA, combining hardware innovation, system architecture, and developer-friendly software to create a competitive, cost-effective, and open ecosystem.</p>
+
+<p>For a deeper look at DeepSeek V4 cost advantages, read our <a href="/article/deepseek-v4-cost-effective">DeepSeek V4 cost-effective analysis</a>. To understand the broader context of open-source AI models, see <a href="/article/open-source-ai-models-run-on-laptop">open source AI models you can run on your laptop</a>. For foundational AI concepts, check out our <a href="/article/12-core-ai-concepts-guide">12 core AI concepts guide</a> and <a href="/article/ai-core-terminology-workflows-beginners">AI core terminology guide</a>. If you are comparing AI service pricing, our <a href="/article/llm-service-packages-review-2026">LLM service packages review</a> provides a detailed comparison.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can DeepSeek V4 run on NVIDIA hardware too?</h3>
+<p>Yes, DeepSeek V4 is compatible with both NVIDIA and Huawei Ascend platforms. The model was originally developed on NVIDIA CUDA, but Huawei CANN toolkit makes migration straightforward—often requiring only a few lines of configuration changes. The cost advantage is most pronounced on Ascend hardware due to lower total ownership costs.</p>
+
+<h3>What kind of applications benefit most from the million-token context window?</h3>
+<p>The million-token context window is particularly valuable for analyzing entire code repositories, reviewing long legal contracts, processing lengthy financial documents, and building AI agents that need to maintain conversation history over extended interactions. It eliminates the need to chunk documents, preserving full context for more accurate analysis.</p>
+
+<h3>Is the Huawei Ascend ecosystem open for international developers?</h3>
+<p>Yes. Huawei has open-sourced over 60 CANN repositories on GitHub, and the Ascend hardware is available internationally through partners. The CANN toolkit supports mainstream frameworks like PyTorch and TensorFlow, making it accessible to developers worldwide. However, availability may vary by region, so check local distributors for hardware access.</p>
+`,
+    contentZh: `<p>在人工智能飞速发展的今天，中国正在加速摆脱对NVIDIA的依赖。华为昇腾950芯片与DeepSeek V4大语言模型的协作，标志着国产AI计算的新纪元，为开发者和企业带来了实际解决方案和可见的益处。</p>
+
+<h2>1. 国产模型与算力的深度协同</h2>
+
+<p>DeepSeek V4于2026年1月发布，支持百万token上下文窗口，并提供pro和flash两个版本，满足不同性能需求。其最重大的突破在于完全兼容华为昇腾950系列芯片，实现了从NVIDIA硬件的无缝迁移。这种"国产模型加国产算力"的协同效应，生成了顶级开源万亿参数大语言模型，运行成本仅为国际替代方案的七分之一。</p>
+
+<h2>2. 技术挑战与华为的解决方案</h2>
+
+<h3>2.1 处理百万Token上下文的挑战</h3>
+
+<p>百万token上下文能力在分析整个代码仓库或长期法律合同时非常强大，但也带来显著硬件挑战：存储超长上下文的中间结果会溢出传统GPU内存；在分布式卡片之间传输大型数据集成为内存墙瓶颈；MoE架构只激活相关专家导致卡片间频繁数据交换；AI代理同时发起多个请求加剧硬件负担。</p>
+
+<p>华为昇腾950通过多种创新技术解决这些问题。原生混合精度支持FP8和MXFP4精度，在减少内存使用的同时保持性能，昇腾950在FP8下提供1 PFLOPS，在FP4下达到2 PFLOPS。内存访问粒度从512B优化到128B，最小化带宽浪费。SIMD加SIMT融合架构结合批量处理和灵活分支，高效处理矩阵计算和动态MoE调度。专用芯片分工让PR芯片专注低延迟推理，DT芯片处理高强度训练。</p>
+
+<h2>3. SuperNode：系统架构创新</h2>
+
+<p>华为Atlas 950 SuperPod体现了系统架构创新的核心思想。这个超级节点支持将系统扩展到8192个NPU，总互连带宽达到16,000 TB/s，采用全光互连技术。灵衢（UnifiedBus）协议统一了计算卡、存储和交换机的通信标准，实现无缝协作。智能内存池化技术可以在集群内存中动态分配数据，克服单卡限制。</p>
+
+<h2>4. 开发者为中心的软件生态：CANN</h2>
+
+<p>华为CANN（Compute Architecture for Neural Networks）经历了重大变革，显著降低了开发者门槛。CANN采用分层解耦设计，分为内核模块、通信库和编译器，开发者只需集成需要的部分。华为在GitHub上开源了超过60个仓库，让开发者能够直接调试和优化代码。CANN支持PyTorch和TensorFlow等主流框架，迁移PyTorch基础的DeepSeek V4模型到昇腾平台只需要少量的代码修改。</p>
+
+<p>CANN的SIMD加SIMT编程支持让开发者可以利用融合架构同时处理高吞吐量批量任务和灵活分支逻辑。MindStudio Agent等工具进一步简化了模型部署流程。</p>
+
+<h2>5. 实际意义与行业影响</h2>
+
+<p>这个国产AI生态系统提供了实实在在的优势。成本高效是最大的亮点，能以极低的成本实现与NVIDIA方案相当的性能。CANNBot和自动化迁移工具降低了迁移门槛，让开发者可以轻松适配现有模型。打破NVIDIA CUDA垄断促进了生态多样性，推动了竞争和创新。开发者只需下载开源DeepSeek V4代码、修改少量配置、部署到昇腾950服务器，就能享受FlashAttention等加速库的自动优化。</p>
+
+<p>DeepSeek V4与华为昇腾950的合作证明，中国AI产业已经找到了一条不依赖NVIDIA的可行路径，通过硬件创新、系统架构和开发者友好软件的有机结合，打造了一个有竞争力、高性价比和开放包容的生态系统。这不仅解决了算力焦虑问题，也为全球AI格局的多元化和创新铺平了道路。</p>
+
+<p>想深入了解DeepSeek V4的成本优势，请阅读我们的<a href="/article/deepseek-v4-cost-effective">DeepSeek V4性价比分析</a>。了解更多开源AI模型，可以参考<a href="/article/open-source-ai-models-run-on-laptop">可在笔记本上运行的开源AI模型</a>。学习AI基础知识请查看<a href="/article/12-core-ai-concepts-guide">12个AI核心概念</a>和<a href="/article/ai-core-terminology-workflows-beginners">AI核心术语指南</a>。比较AI服务价格时，我们的<a href="/article/llm-service-packages-review-2026">LLM服务套餐评测</a>提供了详细对比。</p>
+
+<h2>常见问题</h2>
+
+<h3>DeepSeek V4可以在NVIDIA硬件上运行吗？</h3>
+<p>可以。DeepSeek V4兼容NVIDIA和华为昇腾平台。模型最初在NVIDIA CUDA上开发，但华为CANN工具集使得迁移很简单，通常只需要修改几行配置。成本优势在昇腾硬件上更为明显。</p>
+
+<h3>百万token上下文窗口最适合哪些应用？</h3>
+<p>它特别适合分析整个代码仓库、审查长期法律合同、处理大量财务文档和构建需要维持对话历史的AI代理。它消除了文档切片的需要，保持完整上下文以获得更精确的分析结果。</p>
+
+<h3>华为昇腾生态对国际开发者开放吗？</h3>
+<p>是的。华为已在GitHub上开源了超过60个CANN仓库，昇腾硬件通过合作伙伴在国际上可购买。CANN支持PyTorch和TensorFlow等主流框架，全球开发者都可以使用。但硬件可用性可能因地区而异，建议查询当地分销商。</p>
+`,
+  },
+
+  "large-cap-investment-dashboard-claude-code": {
+    content: `<h2>Why Claude Code for Investment Dashboards?</h2>
+
+<ul>
+<li><strong>Natural Language to Code</strong>: Explain financial logic in plain English (e.g., "Calculate P/E ratio") without complex syntax.</li>
+<li><strong>Data Integration Expertise</strong>: Seamlessly connects to financial APIs (Yahoo Finance, Alpha Vantage) with pre-built code snippets.</li>
+<li><strong>Real-Time Debugging</strong>: Fixes data parsing, visualization, and metric calculation errors on the fly.</li>
+<li><strong>Customization Flexibility</strong>: Tweak charts, metrics, and data sources with simple prompts—no need to rewrite entire code blocks.</li>
+</ul>
+
+<h2>Prerequisites</h2>
+
+<ul>
+<li>A free Anthropic account (sign up at <a href="https://anthropic.com" target="_blank" rel="noopener">anthropic.com</a>).</li>
+<li>VS Code with the <a href="https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code" target="_blank" rel="noopener">Claude Code extension</a> (install via Marketplace).</li>
+<li>Basic understanding of financial metrics (P/E ratio, market cap, revenue growth) is helpful but not required.</li>
+<li>API key for Alpha Vantage (free tier available at <a href="https://www.alphavantage.co/" target="_blank" rel="noopener">alphavantage.co</a>—needed for real-time stock data).</li>
+</ul>
+
+<h2>Step 1: Set Up the Project (5 Minutes)</h2>
+
+<ol>
+<li>Open VS Code, create a new folder <code>investment_dashboard</code> and a file <code>dashboard.py</code>.</li>
+<li>Activate Claude Code (Ctrl+Shift+P → "Claude Code: Open Assistant").</li>
+<li>Install required libraries by asking Claude Code:</li>
+</ol>
+
+<pre><code class="language-plaintext">List the Python libraries needed for a stock research dashboard (data fetching, visualization, metrics) and provide the pip install command.</code></pre>
+
+<ol start="4">
+<li>Run the generated install command in VS Code Terminal:</li>
+</ol>
+
+<pre><code class="language-bash">pip install yfinance alpha_vantage pandas matplotlib streamlit</code></pre>
+
+<ul>
+<li><code>yfinance</code>: Free stock data from Yahoo Finance (fallback if Alpha Vantage limits are hit).</li>
+<li><code>alpha_vantage</code>: Real-time financial data (earnings, cash flow).</li>
+<li><code>pandas</code>: Data cleaning and analysis.</li>
+<li><code>matplotlib</code>: Basic charts.</li>
+<li><code>streamlit</code>: Builds interactive web dashboards (no frontend coding needed).</li>
+</ul>
+
+<h2>Step 2: Fetch Real-Time Large-Cap Stock Data (10 Minutes)</h2>
+
+<p>We will pull data for 3 large-cap stocks (Apple, Microsoft, Amazon) using Alpha Vantage and yfinance. Ask Claude Code:</p>
+
+<pre><code class="language-plaintext">Write Python code to:
+1. Fetch real-time stock prices, market cap, P/E ratio, and revenue growth for AAPL, MSFT, AMZN using Alpha Vantage (use my API key: YOUR_API_KEY).
+2. Fall back to yfinance if Alpha Vantage rate limits are exceeded.
+3. Store data in a pandas DataFrame with columns: Ticker, Price, Market_Cap, PE_Ratio, Revenue_Growth.</code></pre>
+
+<h3>Generated Code (Customize with Your API Key)</h3>
+
+<pre><code class="language-python">import pandas as pd
+import yfinance as yf
+from alpha_vantage.fundamentaldata import FundamentalData
+
+# Replace with your Alpha Vantage API key
+API_KEY = "YOUR_API_KEY"
+fd = FundamentalData(key=API_KEY, output_format='pandas')
+
+def fetch_large_cap_data(tickers):
+    data = []
+    for ticker in tickers:
+        try:
+            income_stmt, _ = fd.get_income_statement_annual(ticker)
+            overview, _ = fd.get_company_overview(ticker)
+
+            latest_revenue = income_stmt.loc['totalRevenue'].iloc[0]
+            prev_revenue = income_stmt.loc['totalRevenue'].iloc[1]
+            revenue_growth = ((latest_revenue - prev_revenue) / prev_revenue) * 100
+
+            price = float(overview['LatestStockPrice'][0])
+            market_cap = float(overview['MarketCapitalization'][0])
+            pe_ratio = float(overview['PERatio'][0])
+
+            data.append({
+                'Ticker': ticker,
+                'Price': round(price, 2),
+                'Market_Cap': round(market_cap / 1e9, 2),
+                'PE_Ratio': round(pe_ratio, 2),
+                'Revenue_Growth': round(revenue_growth, 2)
+            })
+        except Exception as e:
+            print(f"Alpha Vantage error for {ticker}—using yfinance: {e}")
+            stock = yf.Ticker(ticker)
+            info = stock.info
+            data.append({
+                'Ticker': ticker,
+                'Price': round(info.get('currentPrice', 0), 2),
+                'Market_Cap': round(info.get('marketCap', 0) / 1e9, 2),
+                'PE_Ratio': round(info.get('trailingPE', 0), 2),
+                'Revenue_Growth': round(info.get('revenueGrowth', 0) * 100, 2)
+            })
+    return pd.DataFrame(data)
+
+large_cap_tickers = ["AAPL", "MSFT", "AMZN"]
+df = fetch_large_cap_data(large_cap_tickers)
+print("Large-Cap Stock Data:")
+print(df)</code></pre>
+
+<h3>Test the Data Fetch</h3>
+
+<p>Run the code—you will see a DataFrame with key metrics for the 3 stocks. If you hit Alpha Vantage free tier limit (5 requests/minute), yfinance will automatically take over.</p>
+
+<h2>Step 3: Build an Interactive Dashboard with Streamlit (15 Minutes)</h2>
+
+<p>Streamlit turns Python scripts into web apps with zero frontend code. Ask Claude Code:</p>
+
+<pre><code class="language-plaintext">Use Streamlit to build an interactive dashboard for the large-cap stock DataFrame:
+1. Add a title "Large-Cap Investment Research Dashboard".
+2. Display the DataFrame as a table with sorting.
+3. Add 3 charts:
+   - Line chart: Stock prices over the last 30 days (use yfinance for historical data).
+   - Bar chart: Revenue growth by ticker.
+   - Scatter plot: P/E ratio vs. Market Cap (color-code by ticker).
+4. Add a sidebar to select tickers (allow multiple selection).</code></pre>
+
+<h3>Generated Dashboard Code</h3>
+
+<pre><code class="language-python">import streamlit as st
+import yfinance as yf
+import matplotlib.pyplot as plt
+
+st.set_page_config(page_title="Large-Cap Investment Dashboard", layout="wide")
+
+st.title("Large-Cap Investment Research Dashboard")
+st.sidebar.header("Select Tickers")
+selected_tickers = st.sidebar.multiselect(
+    "Choose large-cap stocks",
+    options=large_cap_tickers,
+    default=large_cap_tickers
+)
+
+filtered_df = df[df['Ticker'].isin(selected_tickers)]
+
+st.subheader("Key Financial Metrics")
+st.dataframe(filtered_df, use_container_width=True)
+
+st.subheader("30-Day Stock Price Trend")
+historical_data = yf.download(selected_tickers, period="30d", progress=False)['Close']
+st.line_chart(historical_data, use_container_width=True)
+
+st.subheader("Revenue Growth (%)")
+plt.figure(figsize=(10, 5))
+bars = plt.bar(filtered_df['Ticker'], filtered_df['Revenue_Growth'], color=['#1f77b4', '#ff7f0e', '#2ca02c'])
+plt.xlabel("Ticker")
+plt.ylabel("Revenue Growth (%)")
+plt.title("Large-Cap Revenue Growth")
+st.pyplot(plt)
+
+st.subheader("P/E Ratio vs. Market Cap (Billion $)")
+plt.figure(figsize=(10, 5))
+for ticker in selected_tickers:
+    ticker_data = filtered_df[filtered_df['Ticker'] == ticker]
+    plt.scatter(
+        ticker_data['Market_Cap'],
+        ticker_data['PE_Ratio'],
+        label=ticker,
+        s=100
+    )
+plt.xlabel("Market Cap (Billion $)")
+plt.ylabel("P/E Ratio")
+plt.title("Valuation vs. Size")
+plt.legend()
+st.pyplot(plt)</code></pre>
+
+<h3>Run the Dashboard</h3>
+
+<p>Add this code to <code>dashboard.py</code> and run it with:</p>
+
+<pre><code class="language-bash">streamlit run dashboard.py</code></pre>
+
+<p>A browser window will open with your interactive dashboard—you can sort metrics, select tickers, and zoom into charts.</p>
+
+<h2>Step 4: Add Advanced Features (10 Minutes)</h2>
+
+<p>Enhance the dashboard with Claude Code. Try these prompts:</p>
+
+<h3>Prompt 1: Add Dividend Yield</h3>
+
+<pre><code class="language-plaintext">Update the data fetch function to include dividend yield (using Alpha Vantage/yfinance) and add it to the DataFrame and dashboard table.</code></pre>
+
+<h3>Prompt 2: Compare to S&amp;P 500</h3>
+
+<pre><code class="language-plaintext">Add a line to the price trend chart showing the S&P 500 (^GSPC) over the same 30-day period for benchmarking.</code></pre>
+
+<h3>Prompt 3: Add Valuation Score</h3>
+
+<pre><code class="language-plaintext">Calculate a "Valuation Score" (1-10) for each stock:
+- PE Ratio &lt; 20: +3 points
+- Revenue Growth &gt; 10%: +3 points
+- Dividend Yield &gt; 2%: +2 points
+- Market Cap &lt; $500B: +2 points
+Add the score to the DataFrame and a bar chart to the dashboard.</code></pre>
+
+<h3>Example of Updated Valuation Score Code</h3>
+
+<pre><code class="language-python">def calculate_valuation_score(row):
+    score = 0
+    if row['PE_Ratio'] > 0 and row['PE_Ratio'] < 20:
+        score += 3
+    if row['Revenue_Growth'] > 10:
+        score += 3
+    if row.get('Dividend_Yield', 0) > 2:
+        score += 2
+    if row['Market_Cap'] < 500:
+        score += 2
+    return min(score, 10)
+
+filtered_df['Valuation_Score'] = filtered_df.apply(calculate_valuation_score, axis=1)
+
+st.subheader("Valuation Score (1-10)")
+st.bar_chart(filtered_df.set_index('Ticker')['Valuation_Score'], use_container_width=True)</code></pre>
+
+<h2>Step 5: Deploy the Dashboard (5 Minutes)</h2>
+
+<p>Share your dashboard with teammates or clients using Streamlit Community Cloud:</p>
+
+<ol>
+<li>Push your code to a GitHub repository.</li>
+<li>The <code>requirements.txt</code> should list: yfinance, alpha_vantage, pandas, matplotlib, streamlit.</li>
+<li>Go to <a href="https://share.streamlit.io" target="_blank" rel="noopener">share.streamlit.io</a>, sign in with GitHub, and click "New app".</li>
+<li>Select your repo, branch, and <code>dashboard.py</code>—click "Deploy".</li>
+<li>Your dashboard is now live with a public URL.</li>
+</ol>
+
+<h2>Pro Tips for Claude Code Dashboard Development</h2>
+
+<ol>
+<li><strong>Be Specific About Metrics</strong>: Instead of "add financial data", say "add free cash flow margin and debt-to-equity ratio".</li>
+<li><strong>Iterate Quickly</strong>: If a chart looks messy, ask "Make the bar chart horizontal and sort by revenue growth descending".</li>
+<li><strong>Handle Edge Cases</strong>: Prompt "Add error handling for missing data (e.g., if PE ratio is NaN, show N/A in the table)".</li>
+<li><strong>Customize Design</strong>: Ask "Change the dashboard theme to dark mode and use brand colors for charts".</li>
+</ol>
+
+<h2>Common Use Cases for Investors</h2>
+
+<ul>
+<li><strong>Large-Cap Screening</strong>: Filter stocks by valuation score, revenue growth, or dividend yield.</li>
+<li><strong>Benchmarking</strong>: Compare individual stocks to the S&amp;P 500 or industry peers.</li>
+<li><strong>Real-Time Monitoring</strong>: Refresh data with a button.</li>
+<li><strong>Reporting</strong>: Export the DataFrame to CSV/Excel.</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>With Claude Code, building a professional investment research dashboard does not require advanced coding skills—just plain English prompts and a clear vision of your metrics. This dashboard gives you real-time insights into large-cap stocks, helping you make data-driven investment decisions. Start by testing with 3-5 stocks, then expand to include industry peers, sector data, or custom metrics.</p>
+
+<p>To get started with Claude Code, check out our <a href="/article/claude-code-install-setup">Claude Code installation guide</a> for a complete setup walkthrough. If you are building tools for global markets, see our <a href="/article/claude-code-overseas-business-guide">Claude Code overseas business guide</a> for practical strategies. For advanced configuration, read about <a href="/article/claude-code-mcp-configuration">MCP server setup</a> to extend Claude Code capabilities. Master essential commands with our <a href="/article/top-10-claude-code-commands">Top 10 Claude Code commands</a> guide, and see <a href="/article/claude-code-in-action">Claude Code in action</a> for a complete project walkthrough.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Do I need coding experience to build this investment dashboard?</h3>
+<p>No. Claude Code generates all the code for you. You just need to describe what you want in plain English. Basic familiarity with your terminal is helpful but not required.</p>
+
+<h3>Is the Alpha Vantage API key free?</h3>
+<p>Yes, Alpha Vantage offers a free tier with 5 API requests per minute and 500 requests per day. This is sufficient for tracking a small portfolio of 3-5 stocks. If you exceed the limit, the code automatically falls back to yfinance (also free).</p>
+
+<h3>Can I deploy this dashboard publicly?</h3>
+<p>Yes. Streamlit Community Cloud offers free hosting for public apps. Simply push your code to a GitHub repository, connect it to Streamlit Cloud, and your dashboard will be live with a public URL. You can also deploy on other platforms like Heroku or Railway for more control.</p>
+`,
+    contentZh: `<h2>为什么选择Claude Code构建投资研究仪表盘？</h2>
+
+<ul>
+<li><strong>自然语言转代码</strong>：用简单英语表述金融逻辑（如"计算P/E比率"），无需复杂语法。</li>
+<li><strong>数据集成专业能力</strong>：支持连接多种金融API（Yahoo Finance、Alpha Vantage），提供预建代码片段。</li>
+<li><strong>实时调试</strong>：及时修复数据解析、可视化和指标计算错误。</li>
+<li><strong>自定义灵活性</strong>：通过简单提示词就能调整图表、指标和数据源，无需重写整个代码。</li>
+</ul>
+
+<h2>前置条件</h2>
+
+<ul>
+<li>免费的Anthropic账户（在anthropic.com注册）。</li>
+<li>安装了Claude Code扩展的VS Code。</li>
+<li>对金融指标（P/E比率、市值、营收增长）的基本了解有助于理解，但不是必须的。</li>
+<li>Alpha Vantage的API密钥（免费版在alphavantage.co获取，用于实时股票数据）。</li>
+</ul>
+
+<h2>步骤1：设置项目（5分钟）</h2>
+
+<ol>
+<li>打开VS Code，创建文件夹investment_dashboard和文件dashboard.py。</li>
+<li>启动Claude Code（Ctrl+Shift+P → "Claude Code: Open Assistant"）。</li>
+<li>向Claude Code询问需要的库。</li>
+</ol>
+
+<pre><code class="language-plaintext">List the Python libraries needed for a stock research dashboard (data fetching, visualization, metrics) and provide the pip install command.</code></pre>
+
+<ol start="4">
+<li>在终端中执行安装命令。</li>
+</ol>
+
+<pre><code class="language-bash">pip install yfinance alpha_vantage pandas matplotlib streamlit</code></pre>
+
+<h2>步骤2：获取实时大盘股数据（10分钟）</h2>
+
+<p>我们将使用Alpha Vantage和yfinance获取3只大盘股（苹果、微软、亚马逊）的数据。向Claude Code发送提示词，它将生成一个包含数据获取函数、错误处理和yfinance备用方案的Python脚本。运行后你将看到一个包含三只股票关键指标的DataFrame。如果触及Alpha Vantage免费版限制，yfinance将自动接管。</p>
+
+<p>生成的代码包含完整的fetch_large_cap_data函数，可以自动处理API限流和错误情况。</p>
+
+<h2>步骤3：用Streamlit构建交互式仪表盘（15分钟）</h2>
+
+<p>Streamlit可以将Python脚本转变为Web应用，无需前端编程。向Claude Code发送提示词来生成包含数据表格、股价线图、营收增长条形图和P/E比率散点图的仪表盘代码。运行streamlit run dashboard.py即可在浏览器中打开交互式仪表盘，你可以排序指标、选择股票代码和缩放图表。</p>
+
+<h2>步骤4：添加进阶功能（10分钟）</h2>
+
+<p>可以请Claude Code帮助添加股息率、与标普500对比、以及估值评分功能。估值评分系统根据PE比率、营收增长、股息率和市值进行综合评估，满分10分。Claude Code会根据你的提示自动生成相应的代码，你只需要复制粘贴即可。</p>
+
+<h2>步骤5：部署仪表盘（5分钟）</h2>
+
+<p>通过Streamlit Community Cloud免费部署是分享仪表盘的最简单方式。将代码推送到GitHub仓库，登录share.streamlit.io，选择仓库和dashboard.py文件，点击"Deploy"即可获得公开链接。整个部署过程只需要几分钟。</p>
+
+<h2>Claude Code仪表盘开发专家技巧</h2>
+
+<p>在开发过程中，有几个技巧可以提升效率。首先，描述指标时要具体，不要说"添加财务数据"，而是说"添加自由现金流利润率和负债权益比率"。其次，快速迭代，如果图表不理想，直接告诉Claude Code"把条形图变成横向的，按营收增长降序排列"。此外，要处理边界情况，让Claude Code为缺失数据添加处理逻辑，比如PE比率为空时显示"N/A"而不是报错。最后，可以自定义设计，要求切换到暗色模式并使用品牌颜色。</p>
+
+<h2>投资者常见用例</h2>
+
+<p>这个仪表盘可以用于多种投资场景。你可以按估值评分、营收增长或股息率筛选大盘股；将个股与标普500指数或同行业公司进行基准对比；通过刷新按钮实现实时监控；还可以使用下载按钮将DataFrame导出为CSV或Excel文件用于进一步分析。</p>
+
+<h2>结论</h2>
+
+<p>用Claude Code构建专业投资研究仪表盘不需要高级编程技能，只需要英语提示词和明确的指标目标。这个仪表盘为你提供大盘股的实时洞察，帮助你做出数据驱动的投资决策。建议先用3-5只股票测试，然后扩展到行业对手、行业数据或自定义指标。了解更多Claude Code用法，请查看我们的Claude Code安装指南和海外业务指南。</p>
+
+<p>想深入了解Claude Code吗？请阅读我们的<a href="/article/claude-code-install-setup">Claude Code安装指南</a>完成环境配置，查看<a href="/article/claude-code-overseas-business-guide">Claude Code海外业务指南</a>获取实用策略，学习<a href="/article/claude-code-mcp-configuration">MCP服务器配置</a>扩展功能，掌握<a href="/article/top-10-claude-code-commands">Claude Code常用命令</a>提高效率，以及观看<a href="/article/claude-code-in-action">Claude Code实战</a>了解完整项目流程。</p>
+
+<h2>常见问题</h2>
+
+<h3>构建这个投资仪表盘需要编程经验吗？</h3>
+<p>不需要。Claude Code会为你生成所有代码，你只需用英文描述需求。终端基本操作会有帮助，但不是必须的。</p>
+
+<h3>Alpha Vantage API密钥是免费的吗？</h3>
+<p>是的，Alpha Vantage提供免费版，每分钟5次请求，每天500次，足以跟踪3-5只股票。如果超出限制，代码会自动切换到免费的yfinance。</p>
+
+<h3>这个仪表盘可以公开部署吗？</h3>
+<p>可以。Streamlit Community Cloud提供免费主机，将代码推送到GitHub并连接Streamlit Cloud即可获得公开链接，也可以在Heroku或Railway上部署以获得更多控制。</p>
+`,
+  },
+
 };
