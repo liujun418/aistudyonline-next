@@ -30629,4 +30629,511 @@ st.bar_chart(filtered_df.set_index('Ticker')['Valuation_Score'], use_container_w
 `,
   },
 
+
+  "ai-wechat-mini-programs-guide": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Use Cases &middot; <strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Platform:</strong> WeChat Mini Program Development</p>
+</div>
+
+<h2>1. Essential Tools for AI Mini Program Development</h2>
+
+<p>Selecting the right tools is the first step to streamline your development and launch process. Here's a curated list tailored for both beginners and experienced developers:</p>
+
+<ul>
+<li><strong>uni-app</strong>: A cross-platform framework that lets you write one codebase for WeChat Mini Programs, H5 web pages, and native apps. This flexibility is crucial&mdash;if your Mini Program faces approval issues, you can pivot to an H5 version without restarting development.</li>
+
+<li><strong>HBuilderX</strong>: An integrated development environment (IDE) optimized for compiling apps built with frameworks like uni-app. It simplifies tasks like packaging and deploying your code.</li>
+
+<li><strong>CodeBuddy (by Tencent)</strong>: An AI-powered coding assistant that generates code via natural language prompts. It's ideal for beginners, as it supports models like Xiaomi's MIIMO v2.5 (which currently offers generous free token allowances).</li>
+
+<li><strong>WeChat Developer Tools</strong>: A must-have for every developer. It's used for uploading code, previewing, debugging, and submitting your Mini Program for review.</li>
+</ul>
+
+<h2>2. Category Selection: A Make-or-Break Decision</h2>
+
+<p>Choosing the wrong category can lead to endless delays in approval or even rejection. Here's how to pick wisely:</p>
+
+<h3>Recommended Categories for Individual Developers</h3>
+
+<p>Opt for <strong>tool-oriented categories</strong> if you're an individual developer. These categories have faster approval times, higher success rates, and no prerequisite certifications. Examples include:</p>
+
+<ul>
+<li>Productivity tools (e.g., task trackers, habit checklists).</li>
+<li>Utility apps (e.g., image editors, QR code generators).</li>
+</ul>
+
+<p>WeChat favors tool-based Mini Programs, making them a safe bet for newcomers.</p>
+
+<h3>Categories to Avoid</h3>
+
+<p>Steer clear of categories that require special licenses or pre-approval, such as:</p>
+
+<ul>
+<li>Social networking.</li>
+<li>Healthcare, finance, or education.</li>
+</ul>
+
+<p>These domains demand complex paperwork and are rarely feasible for individual developers.</p>
+
+<h2>3. Code Upload and Trial Version Setup</h2>
+
+<p>Once your AI Mini Program is developed, follow these steps to prepare it for launch:</p>
+
+<h3>Uploading Code</h3>
+
+<p>Use the <strong>WeChat Developer Tools</strong> to upload your code to the WeChat backend. Note that uploading code does not mean your app is live&mdash;this is just the first step in the submission process.</p>
+
+<h3>Trial Version</h3>
+
+<p>If your Mini Program is for internal use (e.g., testing with friends or team members), you can skip the formal launch process. Instead:</p>
+
+<ol>
+<li>Set your current version as the trial version in the WeChat Developer Tools.</li>
+<li>Add friends as trial members.</li>
+</ol>
+
+<p>This is perfect for beta testing or small-scale usage.</p>
+
+<h2>4. User Authentication and Filing</h2>
+
+<p>Authentication and filing are mandatory for public-facing Mini Programs. Here's how to tackle them efficiently:</p>
+
+<h3>User Authentication</h3>
+
+<ul>
+<li><strong>Timeline</strong>: Typically takes 3 business days.</li>
+<li><strong>Process</strong>: Submit your identification documents. A third-party agency will verify your information via phone or video call.</li>
+<li><strong>Cost</strong>: &yen;30 per year.</li>
+</ul>
+
+<h3>ICP Filing</h3>
+
+<p>Filing is time-consuming (up to 20 business days) but follows a structured process:</p>
+
+<ol>
+<li><strong>Platform Initial Review</strong>: Takes 1&ndash;2 days. After approval, you'll receive a verification code via SMS.</li>
+<li><strong>Verify Within 24 Hours</strong>: Use the SMS code to complete verification on the ICP filing website.</li>
+<li><strong>Authority Review</strong>: Wait 3 weeks for the regulatory authority to approve your filing.</li>
+<li><strong>Final Submission</strong>: Once you have a filing number, submit your Mini Program for final approval in the WeChat backend.</li>
+</ol>
+
+<p><strong>Pro Tip</strong>: Start authentication and filing <em>while</em> developing your code. This parallel workflow can significantly reduce your total launch time.</p>
+
+<h2>5. Common Pitfalls to Avoid</h2>
+
+<ul>
+<li><strong>Category Misalignment</strong>: Double-check that your Mini Program's features match its chosen category. Mismatches are a top reason for rejection.</li>
+<li><strong>Filing Delays</strong>: Don't wait to start filing&mdash;begin as soon as your authentication is approved.</li>
+<li><strong>Trial vs. Public Launch</strong>: Clarify early whether you need a public launch. Many teams waste time on approval when a trial version suffices for their needs.</li>
+</ul>
+
+<p>By following these steps&mdash;from tool selection to compliance&mdash;you'll navigate the WeChat Mini Program launch process with confidence. Leverage AI for development, but stay vigilant about the operational details that make your app go live.</p>
+
+<p>Want to learn more about using AI for overseas business? Check out our guides on <a href="/article/5-ai-tools-one-person-overseas-business">5 AI tools for one-person businesses</a>, <a href="/article/claude-code-overseas-business-guide">Claude Code for overseas businesses</a>, <a href="/article/ai-workforce-virtual-employees">building virtual AI employees</a>, <a href="/article/ai-money-making-system-one-day">creating money-making systems</a>, and <a href="/article/free-ai-knowledge-base-tool-tutorial">building free AI knowledge bases</a>.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How long does the entire WeChat Mini Program launch process take?</h3>
+<p>The full process from development to launch typically takes 3&ndash;6 weeks for individual developers. Authentication takes 3 business days, ICP filing takes up to 20 business days, and final review takes 1&ndash;7 business days. Starting authentication and filing during development can cut total time significantly.</p>
+
+<h3>Can I launch a WeChat Mini Program as an individual without a company?</h3>
+<p>Yes, individual developers can register personal Mini Programs. The key is choosing the right category&mdash;tool-oriented categories like productivity and utility apps have higher approval rates for individuals. Categories like social networking, healthcare, and finance require business licenses and are not available to individuals.</p>
+
+<h3>What happens if my Mini Program gets rejected during review?</h3>
+<p>WeChat provides specific rejection reasons. Common issues include category mismatch, missing features described in the submission, and incomplete filing. Address the specific feedback, make the required changes, and resubmit. There is no limit on the number of resubmissions, but each review cycle takes 1&ndash;7 business days.</p>
+`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong>AI应用场景 &middot; <strong>难度：</strong>中级</p>
+<p><strong>平台：</strong>微信小程序开发</p>
+</div>
+
+<h2>1. AI小程序开发必备工具</h2>
+
+<p>选择合适的工具是简化和上线流程的第一步。以下是为初学者和有经验的开发者量身定制的工具清单：</p>
+
+<ul>
+<li><strong>uni-app</strong>：跨平台框架，编写一套代码即可生成微信小程序、H5网页和原生应用。如果小程序审核遇到问题，可以切换到H5版本而无需重新开发。</li>
+
+<li><strong>HBuilderX</strong>：集成开发环境，针对uni-app等框架进行了优化。简化了打包和部署流程。</li>
+
+<li><strong>CodeBuddy（腾讯）</strong>：AI编码助手，通过自然语言提示生成代码。支持小米MIIMO v2.5等模型。</li>
+
+<li><strong>微信开发者工具</strong>：必备工具，用于上传代码、预览、调试和提交审核。</li>
+</ul>
+
+<h2>2. 类目选择：决定成败的关键</h2>
+
+<p>选择错误类目可能导致审核无限延迟或直接被拒。以下是如何明智选择：</p>
+
+<h3>个人开发者的推荐类目</h3>
+
+<p>个人开发者应选择<strong>工具类目</strong>，审批速度快、成功率高、无需先决认证。例如效率工具和实用工具。微信倾向于工具类小程序，是新手的稳妥选择。</p>
+
+<h3>应避免的类目</h3>
+
+<p>避免选择需要特殊许可证的类目，如社交网络、医疗、金融或教育。这些需要复杂文书工作，个人难以完成。</p>
+
+<h2>3. 代码上传与体验版设置</h2>
+
+<p>开发完成后，按以下步骤准备上线：</p>
+
+<h3>上传代码</h3>
+
+<p>使用<strong>微信开发者工具</strong>将代码上传到微信后台。上传不等于上线，这只是提交过程的第一步。</p>
+
+<h3>体验版</h3>
+
+<p>如果小程序用于内部测试，可跳过正式上线流程：将当前版本设置为体验版，添加朋友为体验成员即可。</p>
+
+<h2>4. 用户认证与备案</h2>
+
+<p>面向公众的小程序必须完成认证和备案：</p>
+
+<ul>
+<li>用户认证通常需3个工作日，费用每年30元，需提交身份证明并通过电话或视频核实。</li>
+<li>ICP备案最多需20个工作日，流程包括平台初审（1-2天）、短信验证、管局审核（3周）和最终提交。</li>
+</ul>
+
+<p><strong>专家提示</strong>：在开发<em>同时</em>开始认证和备案的并行策略可显著缩短总上线时间。</p>
+
+<h2>5. 常见陷阱</h2>
+
+<ul>
+<li><strong>类目不匹配</strong>：再三确认功能与类目一致，这是被拒的首要原因。</li>
+<li><strong>备案延误</strong>：认证通过后立即开始，不要等到最后。</li>
+<li><strong>体验版vs正式版</strong>：明确是否需要正式上线，很多团队在只需体验版时浪费大量时间在审核上。</li>
+</ul>
+
+<p>遵循这些从工具选择到合规备案的步骤，你将能自信地完成微信小程序上线。利用AI开发，但对运营细节保持警惕。</p>
+
+<p>想了解更多AI海外业务知识？查看<a href="/article/5-ai-tools-one-person-overseas-business">5款AI工具打造单人海外业务</a>、<a href="/article/claude-code-overseas-business-guide">Claude Code海外业务指南</a>、<a href="/article/ai-workforce-virtual-employees">构建虚拟AI员工</a>、<a href="/article/ai-money-making-system-one-day">一天搭建赚钱系统</a>和<a href="/article/free-ai-knowledge-base-tool-tutorial">免费AI知识库教程</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>微信小程序从开发到上线需要多久？</h3>
+<p>个人开发者从开发到上线通常需要3-6周。认证需3个工作日，ICP备案需最多20个工作日，最终审核需1-7个工作日。开发期间同步进行认证和备案能显著缩短总时间。</p>
+
+<h3>个人开发者可以上线小程序吗？</h3>
+<p>可以。选择工具类目（如效率工具、实用工具）审批率最高。社交网络、医疗和金融类目需要营业执照，个人无法使用。</p>
+
+<h3>小程序审核被拒怎么办？</h3>
+<p>微信提供具体拒绝原因，常见包括类目不匹配、功能不符、备案不完整。针对反馈修改后重新提交即可，无次数限制，但每次审核需1-7个工作日。</p>
+`,
+  },
+
+  "claude-code-vs-codex-architecture": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Comparisons &middot; <strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Focus:</strong> Claude Code vs Codex Architectural Differences</p>
+</div>
+
+<h2>Core Architectural Differences: Harness Design</h2>
+
+<p>The &ldquo;Harness&rdquo; of an AI coding tool refers to how it integrates with IDEs, processes context, and executes tasks. Here's how Claude Code and Codex differ:</p>
+
+<h3>1. Claude Code: Context-Centric Harness (200K+ Token Window)</h3>
+
+<p>Claude Code's Harness is built around <strong>deep context retention</strong>, using a &ldquo;unified context pool&rdquo; that combines project files, dependencies, and your coding style into a single, persistent data layer.</p>
+
+<ul>
+<li><strong>Key Architecture Trait</strong>: Stores full project context (multiple files, requirements.txt, Git history) in a vector database, eliminating the need to re-upload files for each task.</li>
+<li><strong>Technical Advantage</strong>: Avoids &ldquo;context fragmentation&rdquo;&mdash;critical for large projects where code logic spans multiple files.</li>
+</ul>
+
+<h3>2. Codex: Task-Oriented Harness (Modular &amp; Lightweight)</h3>
+
+<p>Codex's Harness follows a <strong>modular, event-driven design</strong>, treating each coding task as an independent job. It uses short-lived context sessions and integrates with tools via plugins.</p>
+
+<ul>
+<li><strong>Key Architecture Trait</strong>: Relies on &ldquo;task triggers&rdquo; (e.g., terminal commands, IDE shortcuts) to spin up context on-demand, making it faster for quick tasks.</li>
+<li><strong>Technical Advantage</strong>: Low resource usage&mdash;ideal for lightweight workflows like writing snippets or debugging single files.</li>
+</ul>
+
+<h2>Practical Comparison: 5 Key Workflows</h2>
+
+<h3>1. Large Project Development (Multi-File Context)</h3>
+
+<p><strong>Claude Code: Shines Here</strong></p>
+
+<p>Its context-centric Harness retains full project structure, so you can ask cross-file questions without re-sharing code:</p>
+
+<pre><code class="language-plaintext">Prompt: &quot;In my Django project, how does the User model in users/models.py interact with the Order model in orders/views.py? Refactor the order creation logic to use User's default shipping address.&quot;</code></pre>
+
+<p>Claude Code will pull both files from the context pool, map dependencies, and generate refactored code with consistent style.</p>
+
+<p><strong>Codex: Requires Extra Steps</strong></p>
+
+<p>Codex needs explicit file sharing for cross-file tasks. Pastes consume tokens, and context resets if you switch tasks.</p>
+
+<h3>2. Quick Snippet Writing (Single-File Tasks)</h3>
+
+<p><strong>Codex: Faster &amp; More Efficient</strong></p>
+
+<p>Its task-oriented Harness spins up instantly for quick requests. Example:</p>
+
+<pre><code class="language-plaintext">Prompt: &quot;Write a Python function to validate email addresses using regex. Include 3 test cases.&quot;</code></pre>
+
+<pre><code class="language-python">import re
+
+def validate_email(email):
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return re.match(pattern, email) is not None
+
+# Test cases
+print(validate_email(&quot;test@example.com&quot;))  # True
+print(validate_email(&quot;invalid-email.com&quot;))  # False
+print(validate_email(&quot;user+tag@domain.co.uk&quot;))  # True</code></pre>
+
+<p><strong>Claude Code: Overkill for Snippets</strong></p>
+
+<p>It still works but may ask for project context&mdash;adding unnecessary steps for simple tasks.</p>
+
+<h3>3. IDE Integration &amp; Workflow Automation</h3>
+
+<p><strong>Claude Code: Deep IDE Embedding</strong></p>
+
+<p>Its Harness integrates natively with VS Code via a dedicated extension, offering auto-detecting open files, Git history syncing, and real-time style matching.</p>
+
+<p><strong>Codex: Plugin-Driven Automation</strong></p>
+
+<p>Codex uses plugins for IDE integration, focusing on task automation. Great for scripting and batch tasks like generating docs for an entire repo.</p>
+
+<h3>4. Debugging Complex Logic</h3>
+
+<p><strong>Claude Code: Context-Aware Debugging</strong></p>
+
+<p>Its Harness retains error logs and code context, so you can share just the error message and it locates the function, identifies where the issue is introduced, and provides a fix.</p>
+
+<p><strong>Codex: Needs Explicit Error Context</strong></p>
+
+<p>Codex requires you to share the problematic code snippet, risking missing context.</p>
+
+<h3>5. Cross-Tool Workflows (Code to Tests to Docs)</h3>
+
+<p><strong>Codex: Modular Plugin Synergy</strong></p>
+
+<p>Its Harness works with 90+ plugins to automate end-to-end workflows. Example: use CodeRabbit to test a Python function, then generate Markdown docs.</p>
+
+<p><strong>Claude Code: Built-In Multi-Step Support</strong></p>
+
+<p>No plugins needed&mdash;its Harness handles multi-step tasks natively, generating all components in one go.</p>
+
+<h2>Practical Selection Framework</h2>
+
+<table>
+<thead><tr><th>Factor</th><th>Choose Claude Code If...</th><th>Choose Codex If...</th></tr></thead>
+<tbody>
+<tr><td>Project Size</td><td>Working on large apps (10+ files, complex dependencies)</td><td>Working on small projects/snippets (1-5 files)</td></tr>
+<tr><td>Workflow Type</td><td>Deep development (refactoring, cross-file logic)</td><td>Quick tasks (snippets, debugging single files)</td></tr>
+<tr><td>IDE Usage</td><td>Use VS Code and want deep integration</td><td>Prefer terminal/lightweight IDE integration</td></tr>
+<tr><td>Automation Needs</td><td>Need built-in multi-step workflows</td><td>Need plugin-driven automation (e.g., CI/CD)</td></tr>
+<tr><td>Token Efficiency</td><td>Want to avoid re-sharing files (saves tokens)</td><td>Don't mind pasting snippets (lower setup time)</td></tr>
+</tbody>
+</table>
+
+<h2>Pro Tips for Maximizing Each Tool</h2>
+
+<h3>For Claude Code:</h3>
+<ul>
+<li>Use the @project tag in prompts to force context pool usage.</li>
+<li>Sync your requirements.txt and package.json first for better dependency understanding.</li>
+</ul>
+
+<h3>For Codex:</h3>
+<ul>
+<li>Install the Codex CLI for terminal-based tasks: <code>npm install -g codex-cli</code>.</li>
+<li>Use the --context flag to load multiple files at once to reduce pasting.</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>Claude Code and Codex aren't &ldquo;better&rdquo;&mdash;they're built for different architectures. Choose <strong>Claude Code</strong> if you need deep context retention for large projects, and <strong>Codex</strong> if you want speed and modularity for quick tasks or automation. Many developers use both: Codex for rapid prototyping and Claude Code for refining and scaling projects.</p>
+
+<p>For more comparisons, check out <a href="/article/claude-code-vs-codex-automation">AI-Powered Computer Automation: Claude Code vs. Codex</a>, <a href="/article/ai-workforce-virtual-employees">From Tool Development to AI Workforce</a>, <a href="/article/claude-code-overseas-business-guide">Claude Code for Overseas Businesses</a>, <a href="/article/claude-code-install-setup">Claude Code Installation Guide</a>, and <a href="/article/codex-agent-desktop-jarvis">Codex Agent Desktop Jarvis</a>.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can I use both Claude Code and Codex together in the same project?</h3>
+<p>Yes, many developers use both tools complementarily. Codex excels at rapid prototyping and quick snippets, while Claude Code handles complex refactoring and cross-file logic. You can use Codex for initial drafts and Claude Code for refinement, testing, and scaling.</p>
+
+<h3>Does Claude Code or Codex consume more tokens?</h3>
+<p>Claude Code's context-centric approach initially consumes more tokens by loading full project context. However, for large projects with many inter-file dependencies, it actually saves tokens by avoiding repeated context re-uploads. Codex uses fewer tokens per session but may require more total tokens if you frequently re-share context.</p>
+
+<h3>Which tool has better IDE integration?</h3>
+<p>Claude Code offers deeper VS Code integration with native extension support for auto-detecting open files, syncing Git history, and real-time style matching. Codex focuses on plugin-driven automation with 90+ plugins, making it more versatile for terminal-based and CI/CD workflows.</p>
+`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong>AI对比 &middot; <strong>难度：</strong>中级</p>
+<p><strong>主题：</strong>Claude Code vs Codex架构差异</p>
+</div>
+
+<h2>核心架构差异：Harness设计</h2>
+
+<p>AI编码工具的"Harness"指的是它与IDE集成、处理上下文和执行任务的方式。</p>
+
+<h3>1. Claude Code：上下文中心型Harness（20万+Token窗口）</h3>
+
+<p>Claude Code的Harness围绕<strong>深度上下文保留</strong>构建，使用统一上下文池，将项目文件、依赖和编码风格整合到持久化数据层中。它将完整的项目上下文存储在向量数据库中，无需为每个任务重新上传文件，避免了大型项目中的上下文碎片化问题。</p>
+
+<h3>2. Codex：任务导向型Harness（模块化轻量级）</h3>
+
+<p>Codex采用<strong>模块化事件驱动设计</strong>，将每个编码任务视为独立作业。它使用短期上下文会话并通过插件集成工具。依赖任务触发器按需启动上下文，资源占用低，适合编写代码片段或调试单个文件等轻量级工作流。</p>
+
+<h2>5个关键工作流对比</h2>
+
+<h3>大型项目开发（多文件上下文）</h3>
+<p>Claude Code的上下文中心型Harness保留完整项目结构，可跨文件提问而无需重新共享代码。Codex需要显式文件共享，粘贴消耗Token且切换任务后上下文重置。</p>
+
+<h3>快速片段编写（单文件任务）</h3>
+<p>Codex的任务导向型Harness可即时启动，快速生成代码。Claude Code在这类任务上可能过于笨重，会询问项目上下文。</p>
+
+<h3>IDE集成与工作流自动化</h3>
+<p>Claude Code通过专用扩展原生集成VS Code。Codex使用插件驱动集成，适合脚本和批量任务。</p>
+
+<h3>复杂逻辑调试</h3>
+<p>Claude Code保留错误日志和代码上下文，仅需共享错误消息即可定位问题。Codex需要显式共享问题代码片段。</p>
+
+<h3>跨工具工作流</h3>
+<p>Codex支持90+插件的模块化协同。Claude Code无需插件即可原生处理多步骤任务。</p>
+
+<h2>实用选择框架</h2>
+<p>选择Claude Code的场景：大型应用、深度开发、需要深度VS Code集成、需要内建多步骤工作流、希望避免重复共享文件。选择Codex的场景：小型项目、快速任务、终端界面、插件驱动自动化、不介意粘贴代码片段。</p>
+
+<p>更多对比内容请查看<a href="/article/claude-code-vs-codex-automation">AI驱动电脑自动化：Claude Code vs Codex</a>、<a href="/article/ai-workforce-virtual-employees">从工具开发到AI劳动力</a>、<a href="/article/claude-code-overseas-business-guide">Claude Code海外业务指南</a>、<a href="/article/claude-code-install-setup">Claude Code安装指南</a>和<a href="/article/codex-agent-desktop-jarvis">Codex Agent桌面贾维斯</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>可以在同一项目中使用Claude Code和Codex吗？</h3>
+<p>可以，许多开发者互补使用两者。Codex擅长快速原型开发，Claude Code处理复杂重构和跨文件逻辑。可用Codex初稿、Claude Code优化测试和扩展。</p>
+
+<h3>Claude Code和Codex哪个更消耗Token？</h3>
+<p>Claude Code初始加载完整项目上下文消耗更多Token，但在大型项目中通过避免重复上传反而节省Token。Codex每次会话使用较少Token，但频繁重新共享上下文时总Token更多。</p>
+
+<h3>哪个工具的IDE集成更好？</h3>
+<p>Claude Code通过原生VS Code扩展提供更深度的集成。Codex通过90+插件实现更灵活的工具链自动化和CI/CD集成。</p>
+`,
+  },
+
+  "codex-8-new-features-this-month": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI News &middot; <strong>Difficulty:</strong> Beginner</p>
+<p><strong>Topic:</strong> Codex New Features &amp; Updates</p>
+</div>
+
+<h2>1. Computer Use: Beyond the Terminal, Into Desktop Apps</h2>
+
+<p>Codex now breaks free from terminal limitations&mdash;it can <strong>interact with your entire desktop</strong>. Authorize it, and it gains the ability to view your screen, click UI elements, and type with its own cursor.</p>
+
+<h3>Practical Example: Figma to Tailwind Workflow</h3>
+
+<p>Suppose you need to extract color values from a Figma design and add them to your Tailwind config. Codex handles this end-to-end:</p>
+
+<pre><code class="language-plaintext">Task: Extract color values from the Figma file &quot;UI Kit.fig&quot; and write them into tailwind.config.js.</code></pre>
+
+<p>Codex will open Figma, locate the design file, screenshot the color palette section, identify hex codes via OCR, and generate the Tailwind config.</p>
+
+<h2>2. In-Browser Comment Commands: Talk to Web Pages Directly</h2>
+
+<p>Codex introduces a <strong>browser-based comment system</strong> to manipulate web DOM&mdash;no API knowledge needed. Select any element, add a comment describing the change, and Codex automatically updates the element's CSS. This works like Google Docs comments but for web UIs.</p>
+
+<h2>3. Automations: Long-Term Task Management</h2>
+
+<p>Codex's Automations let you set up <strong>scheduled, recurring tasks</strong> that run across days or weeks. For example, set up a daily check for new performance-related issues in a GitHub repo. Codex will run daily, fetch new issues, and generate a structured report with problem summaries, reproduction steps, and fix suggestions.</p>
+
+<h2>4. Pets: Interactive Status Indicators</h2>
+
+<p>Codex's Pets are <strong>virtual companions</strong> that float on your screen, showing real-time task status. Summon a pet with <code>/slash pet</code> (choose from 8 built-in options or create custom ones with <code>/slash hatch</code>). The pet's animations indicate what Codex is doing.</p>
+
+<h2>5. Mobile Remote Control (ChatGPT App Integration)</h2>
+
+<p>Codex now integrates with the <strong>ChatGPT mobile app</strong>, letting you remote-control tasks on your Mac from anywhere. Start a long-running task on your Mac, leave your desk, and check progress, approve intermediate steps, or view diffs from your phone.</p>
+
+<h2>6. 90+ New Plugins: One-Click Integrations</h2>
+
+<p>Codex now supports <strong>90+ plugins</strong> for tools including Atlassian Rovo (Jira management), CircleCI (CI/CD pipelines), CodeRabbit (code review automation), and Microsoft Suite (Excel, Word, PowerPoint).</p>
+
+<h2>7. GPT-5.5: Faster, Cheaper, and More Powerful</h2>
+
+<p>Under the hood, Codex now runs on <strong>GPT-5.5</strong>, which is faster (optimized for NVIDIA GB200/GB300 NVL72 hardware), cheaper (uses fewer tokens for the same tasks compared to previous models), and more capable at long-term tasks and complex logic.</p>
+
+<h2>8. Skill Synergy: Codex + Claude Code</h2>
+
+<p>Many developers now use <strong>Codex and Claude Code together</strong>: Codex for fast daily coding (keystrokes, UI tweaks, long tasks) and Claude Code for high-stakes work (critical commits, code reviews, complex refactoring).</p>
+
+<p>Example Workflow: Use Codex to draft a new feature's UI components quickly. Switch to Claude Code to refactor for performance and add unit tests. Use Codex's Automations to monitor the feature's GitHub issues post-deployment.</p>
+
+<h2>Conclusion: Codex as Your Digital Coworker</h2>
+
+<p>Codex has evolved into a <strong>full-fledged digital coworker</strong>&mdash;one that interacts with your desktop, manages long-term tasks, and even keeps you company with virtual pets. Whether you're automating workflows, tweaking UIs, or collaborating remotely, Codex's new features make it an indispensable tool for modern developers.</p>
+
+<p>Explore more: <a href="/article/codex-agent-desktop-jarvis">Codex Agent Desktop Jarvis</a>, <a href="/article/claude-code-vs-codex-automation">Claude Code vs Codex Automation</a>, <a href="/article/claude-code-6-hidden-powers">Claude Code Hidden Powers</a>, <a href="/article/ultimate-ai-coding-apps-minutes">Ultimate AI Coding Guide</a>, and <a href="/article/free-access-codex-hermes-guide">Free Access to Codex</a>.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is Codex's Computer Use feature safe?</h3>
+<p>Codex's Computer Use requires explicit authorization and you must grant it permission to view your screen and control your desktop. It operates with full transparency&mdash;you can see every action it takes. Use it with caution, especially on sensitive data, and only grant access to trusted instances.</p>
+
+<h3>What is the cost of GPT-5.5 compared to GPT-4?</h3>
+<p>GPT-5.5 is significantly more cost-efficient than GPT-4. For a task that used 1,000 tokens with GPT-4, GPT-5.5 might use only 700 tokens, reducing costs by approximately 30%. Additionally, it's faster and better optimized for modern NVIDIA hardware.</p>
+
+<h3>Can I use Codex without an internet connection?</h3>
+<p>Codex requires an internet connection for most features, including GPT-5.5 model access, plugin integrations, and remote control via the ChatGPT app. Some local automation features may work with limited functionality offline, but the core AI capabilities depend on cloud connectivity.</p>
+`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong>AI新闻 &middot; <strong>难度：</strong>初级</p>
+<p><strong>主题：</strong>Codex新功能与更新</p>
+</div>
+
+<h2>1. 电脑操控：超越终端，进入桌面应用</h2>
+
+<p>Codex突破了终端限制，可以<strong>与整个桌面交互</strong>。授权后，它能查看屏幕、点击UI元素并使用自己的光标输入。例如，从Figma设计文件中提取颜色值并写入Tailwind配置文件，Codex可以端到端完成：打开Figma、定位设计文件、截图识别十六进制色码、生成Tailwind配置。</p>
+
+<h2>2. 浏览器评论命令：直接与网页对话</h2>
+
+<p>Codex引入了<strong>基于浏览器的评论系统</strong>来操作网页DOM，无需API知识。选择任意元素，添加描述修改的评论，Codex自动更新CSS。这就像Google Docs的评论功能，但用于网页UI。</p>
+
+<h2>3. 自动化任务：长期任务管理</h2>
+
+<p>Codex的Automations功能支持设置<strong>定时重复任务</strong>。例如设置每日检查GitHub仓库的新性能相关问题，Codex会每天运行、获取新问题并生成结构化报告。</p>
+
+<h2>4. 宠物：交互式状态指示器</h2>
+
+<p>Codex的Pets是浮动在屏幕上的<strong>虚拟伙伴</strong>，实时显示任务状态。使用<code>/slash pet</code>召唤宠物，其动画表示Codex的工作状态。</p>
+
+<h2>5. 手机远程控制（ChatGPT App集成）</h2>
+
+<p>Codex与ChatGPT移动应用集成，让您从任何地方远程控制Mac上的任务。开始运行任务后，离开办公桌即可通过手机检查进度、批准中间步骤或查看差异。</p>
+
+<h2>6. 90+新插件：一键集成</h2>
+
+<p>Codex支持90+插件，包括Atlassian Rovo、CircleCI、CodeRabbit和Microsoft套件。</p>
+
+<h2>7. GPT-5.5：更快、更便宜、更强大</h2>
+
+<p>Codex底层运行GPT-5.5，针对NVIDIA GB200/GB300 NVL72硬件优化，更快速、更省Token，在长期任务和复杂逻辑方面表现更佳。</p>
+
+<h2>8. 技能协同：Codex + Claude Code</h2>
+
+<p>许多开发者搭配使用Codex和Claude Code：Codex用于快速日常编码、UI调整和长期任务，而Claude Code用于关键提交、代码审查和复杂重构。这种组合让开发者在日常效率和代码质量之间取得平衡。</p>
+
+<h2>结论：Codex作为你的数字同事</h2>
+
+<p>Codex已从单纯的编码工具进化为成熟的数字同事，能与桌面应用交互、管理跨天的长期自动化任务、通过90+插件扩展功能，甚至用虚拟宠物实时反馈工作状态。无论是自动化工作流、调整UI还是远程协作，Codex的新功能都使其成为现代开发者不可或缺的工具。</p>
+
+<p>了解更多：<a href="/article/codex-agent-desktop-jarvis">Codex Agent桌面贾维斯</a>、<a href="/article/claude-code-vs-codex-automation">Claude Code vs Codex自动化</a>、<a href="/article/claude-code-6-hidden-powers">Claude Code隐藏力量</a>、<a href="/article/ultimate-ai-coding-apps-minutes">终极AI编码指南</a>、<a href="/article/free-access-codex-hermes-guide">免费使用Codex</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>Codex的电脑操控功能安全吗？</h3>
+<p>Codex需要明确授权才能查看屏幕和控制桌面，所有操作完全透明可见。对敏感数据请谨慎使用，仅向受信任实例授予访问权限。</p>
+
+<h3>GPT-5.5相比GPT-4成本如何？</h3>
+<p>GPT-5.5比GPT-4经济得多。GPT-4用1000 Token的任务，GPT-5.5可能只需700 Token，成本降低约30%。同时对现代NVIDIA硬件的优化使其速度更快。</p>
+
+<h3>Codex可以在没有网络的情况下使用吗？</h3>
+<p>Codex大部分功能需要网络连接，包括GPT-5.5模型访问、插件集成和ChatGPT App远程控制。部分本地自动化功能可能离线运行，但核心AI能力依赖云连接。</p>
+`,
+  },
+
 };

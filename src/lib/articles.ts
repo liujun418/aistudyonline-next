@@ -1882,5 +1882,46 @@ export const articles: Article[] = [
     toolsMentioned: ["claude"],
     date: "2026-06-12",
   },
-
+  {
+    slug: "ai-wechat-mini-programs-guide",
+    title: "A Practical Guide to Launching AI-Powered WeChat Mini Programs: Navigating Tools, Categories, and Compliance",
+    titleZh: "AI驱动微信小程序上线实战指南：工具选择、类目选择与合规备案",
+    description:
+      "A comprehensive guide to launching AI-powered WeChat Mini Programs, covering essential tools, category selection, code upload, user authentication, ICP filing, and common pitfalls.",
+    descriptionZh:
+      "一份全面的AI驱动微信小程序上线指南，涵盖必备工具选择、类目选择、代码上传、用户认证、ICP备案和常见陷阱。",
+    category: "ai-use-cases",
+    tags: ["wechat", "mini-program", "ai-development", "compliance", "tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: [],
+    date: "2026-06-14",
+  },
+  {
+    slug: "claude-code-vs-codex-architecture",
+    title: "Claude Code vs. Codex: Architecture Differences & Practical Selection Guide",
+    titleZh: "Claude Code vs Codex：架构差异与实用选择指南",
+    description:
+      "A deep dive into the architectural differences between Claude Code and Codex — context-centric vs task-oriented harness designs — with practical comparison across 5 key workflows.",
+    descriptionZh:
+      "深入解析Claude Code与Codex的架构差异——上下文中心vs任务导向的Harness设计理念——通过5个关键工作流的实用对比。",
+    category: "ai-comparisons",
+    tags: ["claude-code", "codex", "architecture", "comparison", "harness", "ai-coding"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "codex-agent"],
+    date: "2026-06-14",
+  },
+  {
+    slug: "codex-8-new-features-this-month",
+    title: "Codex: 8 New Game-Changing Features This Month for Developers",
+    titleZh: "Codex：本月面向开发者的8个革命性新功能",
+    description:
+      "Codex transforms from a terminal AI coding tool into a versatile digital coworker with 8 groundbreaking features including Computer Use, browser comment commands, automations, and GPT-5.5.",
+    descriptionZh:
+      "Codex从终端AI编码工具转变为全能型数字同事，带来8个革命性功能，包括电脑操控、浏览器评论命令、自动化任务和GPT-5.5。",
+    category: "ai-news",
+    tags: ["codex", "openai", "gpt-5.5", "automation", "computer-use", "new-features"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex-agent"],
+    date: "2026-06-14",
+  },
 ];
