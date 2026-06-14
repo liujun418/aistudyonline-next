@@ -31136,4 +31136,457 @@ print(validate_email(&quot;user+tag@domain.co.uk&quot;))  # True</code></pre>
 `,
   },
 
+  "hermes-official-desktop-app-guide": {
+    content: `<div class="article-meta-banner">
+<p><strong>Category:</strong> AI Tools &middot; <strong>Difficulty:</strong> Beginner</p>
+<p><strong>Topic:</strong> Hermes Desktop App Setup &amp; Configuration</p>
+</div>
+
+<h2>What Is Hermes Official Desktop App?</h2>
+
+<p>Hermes has become a popular AI agent tool for local development and workflow automation. Its newly released official desktop version brings a more user-friendly graphical interface, but many new users run into setup failures, function anomalies and configuration errors during first use. This practical guide walks you through full installation, basic configuration, core operations and typical pitfalls, with actionable commands and settings to help you use the desktop version smoothly.</p>
+
+<h2>1. Pre-Installation Check &amp; Environment Preparation</h2>
+
+<p>Before downloading and launching the Hermes desktop client, complete environment verification to eliminate most startup errors in advance.</p>
+
+<h3>1.1 System Requirements</h3>
+
+<ul>
+<li>Operating System: Windows 10 / Windows 11 (64-bit), macOS 12 and above</li>
+<li>Hardware: Minimum 8GB RAM; 16GB RAM recommended for running large local models</li>
+<li>Network: Stable internet connection for model pulling, plugin synchronization and account login</li>
+<li>Dependencies: Ensure the latest runtime libraries are installed</li>
+</ul>
+
+<h3>1.2 Essential Dependency Installation</h3>
+
+<p>For Windows users, missing VC++ runtime is the top cause of startup crashes. Install the official Microsoft Visual C++ Redistributable first.</p>
+
+<p>If you prefer command-line quick installation via PowerShell (run as Administrator):</p>
+
+<pre><code class="language-powershell"># Install Visual C++ runtime via winget
+winget install Microsoft.VCRedist.2015+.x64</code></pre>
+
+<p>For macOS users, confirm Homebrew and basic command-line tools exist:</p>
+
+<pre><code class="language-bash"># Check Xcode command line tools
+xcode-select --install
+# Verify Homebrew
+brew --version</code></pre>
+
+<h3>1.3 Port Occupation Check</h3>
+
+<p>Hermes desktop client defaults to use local port <code>7860</code> for service listening. If this port is occupied by other applications, the backend service will fail to start.</p>
+
+<p>Run the command to check port usage:</p>
+
+<pre><code class="language-powershell"># Windows check port 7860
+netstat -ano | findstr "7860"</code></pre>
+
+<pre><code class="language-bash"># macOS / Linux check port 7860
+lsof -i :7860</code></pre>
+
+<p>If results show occupied processes, close the corresponding software or modify Hermes service port later.</p>
+
+<h2>2. Official Download &amp; Standard Installation Steps</h2>
+
+<h3>2.1 Official Download Channels</h3>
+
+<p>Always get the installer from Hermes official website or official GitHub release page. Third-party modified installation packages may contain tampered files or malware.</p>
+
+<ul>
+<li>Avoid: Unknown cloud disk links, shared files from unofficial forums</li>
+<li>Recommendation: Download the desktop installer matching your system architecture (x64 / ARM64)</li>
+</ul>
+
+<h3>2.2 Installation Notes (Key Pitfall 1)</h3>
+
+<ol>
+<li><strong>Installation Path</strong>: Do not install Hermes to folders containing Chinese characters, spaces or special symbols (e.g. <code>D:\AI&#x5DE5;&#x5177;\Hermes</code>). Use pure English paths only.<br />
+Recommended: <code>D:\Software\Hermes</code><br />
+Not allowed: <code>C:\&#x5E94;&#x7528;&#x7A0B;&#x5E8F;\Hermes &#x684C;&#x9762;&#x7248;</code></li>
+<li><strong>Permission Settings</strong>: On Windows, right-click the installer and select Run as administrator to prevent file write failures.</li>
+<li><strong>Antivirus Interception</strong>: Add the Hermes installation directory to the whitelist of antivirus software and Windows Defender. The local agent service is often mistakenly flagged as a risk program.</li>
+</ol>
+
+<h2>3. First Launch &amp; Initial Configuration</h2>
+
+<h3>3.1 Account Login &amp; Authorization (Key Pitfall 2)</h3>
+
+<p>After opening the desktop app, you will see the login interface. Two login modes are supported: official account login and local offline mode.</p>
+
+<ul>
+<li><strong>Online Mode</strong>: Log in with your registered Hermes account to sync cloud plugins, model lists and workspace data across devices.</li>
+<li><strong>Offline Mode</strong>: For pure local use, no account required, but cloud resources and official plugin market are unavailable.</li>
+</ul>
+
+<p>Common login failure fixes:</p>
+
+<ol>
+<li>If the login page keeps loading: Switch network or disable system proxy temporarily.</li>
+<li>If authorization fails repeatedly: Clear app cache. Manually delete the cache folder:</li>
+</ol>
+
+<pre><code class="language-plaintext"># Windows cache path
+%USERPROFILE%\.hermes\cache
+# macOS cache path
+~/.hermes/cache</code></pre>
+
+<h3>3.2 Backend Service Startup Configuration</h3>
+
+<p>The Hermes desktop app has a dual structure: frontend UI + local backend service. You can adjust startup parameters on the Settings &gt; Service page.</p>
+
+<h4>Basic Parameter Configuration</h4>
+
+<ul>
+<li>Service Port: Modify to another port (such as <code>7861</code>) if port 7860 is occupied.</li>
+<li>Auto-start Service: Enable to let Hermes run in the background after system boot.</li>
+<li>Log Level: Set to <code>Info</code> for daily use; set to <code>Debug</code> only when troubleshooting errors.</li>
+</ul>
+
+<h4>Advanced Startup Command (For Manual Troubleshooting)</h4>
+
+<p>If the graphical service fails to start, launch the backend manually via command line in the installation directory:</p>
+
+<pre><code class="language-bash"># Enter Hermes installation directory
+cd D:\Software\Hermes\bin
+# Start Hermes backend service with custom port
+hermes-service.exe --port 7861 --no-browser</code></pre>
+
+<h2>4. Core Functions &amp; Practical Usage</h2>
+
+<h3>4.1 Local Model Access</h3>
+
+<p>Hermes desktop version supports docking with mainstream local large models and API services. Go to Models &gt; Add Model to complete configuration.</p>
+
+<h4>Configuration Example for Local OpenAI-Compatible Model</h4>
+
+<p>Fill in the parameters as below:</p>
+
+<ul>
+<li>Model Name: Custom display name</li>
+<li>API Endpoint: <code>http://127.0.0.1:8000/v1</code></li>
+<li>API Key: Fill in the key set by your local model (fill any random string if no key required)</li>
+<li>Context Length: Match the actual context window of the local model</li>
+</ul>
+
+<p>Test the connection with the built-in ping tool. A "Connection Success" prompt means the model is ready for use.</p>
+
+<h3>4.2 AI Agent Workspace Creation</h3>
+
+<ol>
+<li>Click <strong>New Workspace</strong> to create an independent workspace for different projects (code development, document sorting, automation tasks).</li>
+<li>In the workspace, set agent roles, prompt templates and execution permissions.</li>
+<li>Use the <strong>File Association</strong> function: Bind local project folders, so the agent can read and analyze local code and documents.</li>
+</ol>
+
+<h3>4.3 Plugin Management</h3>
+
+<p>The official desktop version integrates a built-in plugin market. You can install code parsing, file processing and web crawling plugins with one click.</p>
+
+<p>Simple plugin calling test prompt:</p>
+
+<pre><code class="language-plaintext">Use the file analysis plugin to count the total lines of code and file quantity in the current project folder, then generate a simple statistical report.</code></pre>
+
+<h2>5. High-Frequency Problems &amp; Solutions (Beginner's Top Pitfalls)</h2>
+
+<h3>Pitfall 1: App flashes back immediately after opening</h3>
+
+<p><strong>Root Cause</strong>: Missing runtime libraries / corrupted installation files / insufficient permissions<br />
+<strong>Solution</strong>:</p>
+
+<ol>
+<li>Reinstall Microsoft Visual C++ Redistributable.</li>
+<li>Uninstall Hermes completely, delete residual folders, then reinstall to a pure English path.</li>
+<li>Always run the app as administrator.</li>
+</ol>
+
+<h3>Pitfall 2: Frontend displays normally, but agent cannot execute tasks</h3>
+
+<p><strong>Root Cause</strong>: Backend service not started / port conflict / model connection failure<br />
+<strong>Troubleshooting Steps</strong>:</p>
+
+<ol>
+<li>Check the service status in the app status bar; restart the backend service if it shows "Stopped".</li>
+<li>Recheck port occupation and modify the service port.</li>
+<li>Re-test the model API connection.</li>
+</ol>
+
+<h3>Pitfall 3: Local files cannot be accessed by the agent</h3>
+
+<p><strong>Root Cause</strong>: System file permission restriction<br />
+<strong>Solution</strong>: On Windows, go to app settings &gt; Privacy, enable <strong>Local File Access Permission</strong>. Do not place project files in system protected folders such as <code>C:\Windows</code> or <code>C:\Program Files</code>.</p>
+
+<h3>Pitfall 4: High CPU and memory usage after long running</h3>
+
+<p><strong>Solution</strong>:</p>
+
+<ol>
+<li>On the service settings page, enable <strong>Automatic idle sleep</strong>.</li>
+<li>Regularly clear conversation records and cache files.</li>
+<li>Use the command to shut down redundant background processes when resources are tight:</li>
+</ol>
+
+<pre><code class="language-powershell"># End all Hermes related processes
+taskkill /f /im hermes-service.exe</code></pre>
+
+<h2>6. Optimization Tips for Daily Use</h2>
+
+<ol>
+<li><strong>Classified Workspaces</strong>: Create independent workspaces for coding, document processing and data analysis to avoid context confusion.</li>
+<li><strong>Prompt Template Saving</strong>: Store commonly used task prompts as templates to improve reuse efficiency.</li>
+<li><strong>Regular Update</strong>: Update the desktop client and plugins in a timely manner to fix known bugs and get new features.</li>
+<li><strong>Network Optimization</strong>: For cloud model users, configure a stable network proxy in app settings to reduce request timeout.</li>
+</ol>
+
+<h2>7. Summary</h2>
+
+<p>Hermes official desktop version lowers the usage threshold of AI agents with a graphical interface, but beginners must pay attention to installation paths, runtime dependencies, port occupation and permission settings. Most common errors can be avoided by following the pre-check steps in this guide.</p>
+
+<p>Mastering the basic service configuration, model docking and plugin usage allows you to leverage Hermes for automated development, batch file processing and intelligent task arrangement. If you encounter complex startup or runtime errors, view detailed logs via the <code>Debug</code> log level to quickly locate problems.</p>
+
+<p>For more Hermes content, check out <a href="/article/hermes-agent-beginner-guide-ep1">Hermes Agent Beginner Guide Episode 1</a>, <a href="/article/mastering-hermes-agent-7-levels">Mastering Hermes Agent: 7 Levels of Configuration</a>, <a href="/article/hermes-agent-8-features-smb">Hermes Agent: 8 Features for SMBs</a>, <a href="/article/hermes-agent-vs-openclaw-comparison">Hermes Agent vs OpenClaw Comparison</a>, <a href="/article/hermes-profiles-multi-agent-team">Hermes Profiles: Multi-Agent Team</a>, and <a href="/article/free-access-codex-hermes-guide">Free Access to Codex and Hermes</a>.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Q: Why does the Hermes desktop app crash immediately on startup?</h3>
+<p>This is typically caused by missing VC++ runtime libraries, corrupted installation files, or insufficient permissions. Reinstall the Microsoft Visual C++ Redistributable, uninstall Hermes completely including residual folders, then reinstall to a pure English path (no Chinese characters or spaces). Always run the installer as administrator on Windows.</p>
+
+<h3>Q: The frontend loads but my agent cannot execute any tasks</h3>
+<p>This usually means the backend service has not started or there is a port conflict. Check the service status in the app status bar — if it shows "Stopped", restart the backend service. Verify that port 7860 is not occupied by another application using <code>netstat -ano | findstr "7860"</code> (Windows) or <code>lsof -i :7860</code> (macOS/Linux). Also re-test the model API connection in the Models settings page.</p>
+
+<h3>Q: Can I use Hermes desktop app completely offline?</h3>
+<p>Yes, Hermes supports a local offline mode that does not require an account. However, offline mode disables cloud plugin synchronization, the official plugin market, and cloud model access. You can still use locally downloaded models and any plugins you have already installed. For full functionality including cloud resources and multi-device sync, an internet connection and Hermes account are recommended.</p>
+
+<div class="next-step">
+<p><strong>Next in this path:</strong> <a href="/article/hermes-agent-beginner-guide-ep1">Hermes Agent Full Beginner Guide Episode 1: Ditch Complex Settings &amp; Master Practical Local AI Deployment</a></p>
+</div>`,
+    contentZh: `<div class="article-meta-banner">
+<p><strong>分类：</strong>AI工具 &middot; <strong>难度：</strong>初级</p>
+<p><strong>主题：</strong>Hermes桌面应用安装与配置</p>
+</div>
+
+<h2>Hermes官方桌面应用是什么？</h2>
+
+<p>Hermes已成为本地开发和流程自动化领域备受欢迎的AI代理工具。其最新推出的官方桌面版本带来了更友好的图形界面，但许多新用户在首次使用时会遇到安装失败、功能异常和配置错误等问题。本实用指南将带你完成完整的安装、基本配置、核心操作和典型陷阱排查，提供可执行的命令和设置建议，帮助你顺利使用桌面版。</p>
+
+<h2>1. 安装前检查与环境准备</h2>
+
+<p>在下载和启动Hermes桌面客户端之前，先完成环境验证，可以提前消除大部分启动错误。</p>
+
+<h3>1.1 系统要求</h3>
+
+<ul>
+<li>操作系统：Windows 10 / Windows 11（64位）、macOS 12及以上</li>
+<li>硬件：最低8GB内存；运行大型本地模型建议16GB内存</li>
+<li>网络：稳定的互联网连接，用于模型下载、插件同步和账户登录</li>
+<li>依赖：确保已安装最新的运行库</li>
+</ul>
+
+<h3>1.2 必备依赖安装</h3>
+
+<p>对于Windows用户，缺少VC++运行库是启动崩溃的首要原因。请先安装官方Microsoft Visual C++ Redistributable。</p>
+
+<p>如果希望通过PowerShell（以管理员身份运行）快速安装：</p>
+
+<pre><code class="language-powershell"># 通过winget安装Visual C++运行库
+winget install Microsoft.VCRedist.2015+.x64</code></pre>
+
+<p>对于macOS用户，确认Homebrew和基本命令行工具已安装：</p>
+
+<pre><code class="language-bash"># 检查Xcode命令行工具
+xcode-select --install
+# 验证Homebrew
+brew --version</code></pre>
+
+<h3>1.3 端口占用检查</h3>
+
+<p>Hermes桌面客户端默认使用本地端口<code>7860</code>进行服务监听。如果此端口被其他应用程序占用，后端服务将无法启动。</p>
+
+<p>使用以下命令检查端口占用：</p>
+
+<pre><code class="language-powershell"># Windows检查端口7860
+netstat -ano | findstr "7860"</code></pre>
+
+<pre><code class="language-bash"># macOS / Linux检查端口7860
+lsof -i :7860</code></pre>
+
+<p>如果结果显示有进程占用，请关闭相应软件或在后续步骤中修改Hermes服务端口。</p>
+
+<h2>2. 官方下载与标准安装步骤</h2>
+
+<h3>2.1 官方下载渠道</h3>
+
+<p>始终从Hermes官方网站或官方GitHub发布页面获取安装包。第三方修改的安装包可能包含被篡改的文件或恶意软件。</p>
+
+<ul>
+<li>避免：未知的网盘链接、非官方论坛的共享文件</li>
+<li>推荐：下载与你系统架构匹配的桌面版安装程序（x64 / ARM64）</li>
+</ul>
+
+<h3>2.2 安装注意事项（关键陷阱1）</h3>
+
+<ol>
+<li><strong>安装路径</strong>：不要将Hermes安装到包含中文、空格或特殊符号的文件夹中（例如<code>D:\AI工具\Hermes</code>）。请只使用纯英文路径。<br />
+推荐：<code>D:\Software\Hermes</code><br />
+禁止：<code>C:\应用程序\Hermes 桌面版</code></li>
+<li><strong>权限设置</strong>：在Windows上，右键点击安装程序并选择"以管理员身份运行"，防止文件写入失败。</li>
+<li><strong>杀毒软件拦截</strong>：将Hermes安装目录添加到杀毒软件和Windows Defender的白名单中。本地代理服务经常被误报为风险程序。</li>
+</ol>
+
+<h2>3. 首次启动与初始配置</h2>
+
+<h3>3.1 账户登录与授权（关键陷阱2）</h3>
+
+<p>打开桌面应用后，你将看到登录界面。支持两种登录模式：官方账户登录和本地离线模式。</p>
+
+<ul>
+<li><strong>在线模式</strong>：使用注册的Hermes账户登录，可在不同设备间同步云端插件、模型列表和工作区数据。</li>
+<li><strong>离线模式</strong>：纯本地使用，无需账户，但无法使用云端资源和官方插件市场。</li>
+</ul>
+
+<p>常见的登录失败解决方法：</p>
+
+<ol>
+<li>如果登录页面一直加载中：切换网络或临时禁用系统代理。</li>
+<li>如果授权反复失败：清除应用缓存。手动删除缓存文件夹：</li>
+</ol>
+
+<pre><code class="language-plaintext"># Windows缓存路径
+%USERPROFILE%\.hermes\cache
+# macOS缓存路径
+~/.hermes/cache</code></pre>
+
+<h3>3.2 后端服务启动配置</h3>
+
+<p>Hermes桌面应用采用双结构设计：前端UI + 本地后端服务。你可以在设置 > 服务页面调整启动参数。</p>
+
+<h4>基本参数配置</h4>
+
+<ul>
+<li>服务端口：如果端口7860被占用，可修改为其他端口（例如<code>7861</code>）。</li>
+<li>自动启动服务：开启后Hermes将在系统启动后在后台运行。</li>
+<li>日志级别：日常使用设置为<code>Info</code>，仅在排查错误时设置为<code>Debug</code>。</li>
+</ul>
+
+<h4>高级启动命令（手动排查用）</h4>
+
+<p>如果图形化服务无法启动，可在安装目录下通过命令行手动启动后端：</p>
+
+<pre><code class="language-bash"># 进入Hermes安装目录
+cd D:\Software\Hermes\bin
+# 使用自定义端口启动Hermes后端服务
+hermes-service.exe --port 7861 --no-browser</code></pre>
+
+<h2>4. 核心功能与实用操作</h2>
+
+<h3>4.1 本地模型接入</h3>
+
+<p>Hermes桌面版支持对接主流本地大模型和API服务。前往模型 > 添加模型完成配置。</p>
+
+<h4>本地OpenAI兼容模型配置示例</h4>
+
+<p>按以下参数填写：</p>
+
+<ul>
+<li>模型名称：自定义显示名称</li>
+<li>API端点：<code>http://127.0.0.1:8000/v1</code></li>
+<li>API密钥：填写本地模型设置的密钥（如无需密钥可填写任意字符串）</li>
+<li>上下文长度：与本地模型的实际上下文窗口匹配</li>
+</ul>
+
+<p>使用内置的ping工具测试连接。显示"连接成功"即表示模型可正常使用。</p>
+
+<h3>4.2 AI代理工作区创建</h3>
+
+<ol>
+<li>点击<strong>新建工作区</strong>，为不同项目（代码开发、文档整理、自动化任务）创建独立工作区。</li>
+<li>在工作区内设置代理角色、提示模板和执行权限。</li>
+<li>使用<strong>文件关联</strong>功能：绑定本地项目文件夹，使代理能够读取和分析本地代码和文档。</li>
+</ol>
+
+<h3>4.3 插件管理</h3>
+
+<p>官方桌面版内置插件市场，可以一键安装代码解析、文件处理和网页抓取等插件。</p>
+
+<p>简单的插件调用测试提示：</p>
+
+<pre><code class="language-plaintext">使用文件分析插件统计当前项目文件夹中的总代码行数和文件数量，然后生成一份简单的统计报告。</code></pre>
+
+<h2>5. 高频问题与解决方案（新手最常见陷阱）</h2>
+
+<h3>陷阱1：打开应用后立即闪退</h3>
+
+<p><strong>根本原因</strong>：缺少运行库/安装文件损坏/权限不足<br />
+<strong>解决方案</strong>：</p>
+
+<ol>
+<li>重新安装Microsoft Visual C++ Redistributable。</li>
+<li>彻底卸载Hermes，删除残留文件夹，然后重新安装到纯英文路径。</li>
+<li>始终以管理员身份运行应用。</li>
+</ol>
+
+<h3>陷阱2：前端显示正常，但代理无法执行任务</h3>
+
+<p><strong>根本原因</strong>：后端服务未启动/端口冲突/模型连接失败<br />
+<strong>排查步骤</strong>：</p>
+
+<ol>
+<li>在应用状态栏检查服务状态；如果显示"已停止"，请重新启动后端服务。</li>
+<li>重新检查端口占用并修改服务端口。</li>
+<li>重新测试模型API连接。</li>
+</ol>
+
+<h3>陷阱3：代理无法访问本地文件</h3>
+
+<p><strong>根本原因</strong>：系统文件权限限制<br />
+<strong>解决方案</strong>：在Windows上，前往应用设置 > 隐私，开启<strong>本地文件访问权限</strong>。不要将项目文件放在系统保护文件夹（如<code>C:\Windows</code>或<code>C:\Program Files</code>）中。</p>
+
+<h3>陷阱4：长时间运行后CPU和内存占用过高</h3>
+
+<p><strong>解决方案</strong>：</p>
+
+<ol>
+<li>在服务设置页面开启<strong>自动空闲休眠</strong>。</li>
+<li>定期清除对话记录和缓存文件。</li>
+<li>在资源紧张时使用命令关闭多余的背景进程：</li>
+</ol>
+
+<pre><code class="language-powershell"># 结束所有Hermes相关进程
+taskkill /f /im hermes-service.exe</code></pre>
+
+<h2>6. 日常使用优化建议</h2>
+
+<ol>
+<li><strong>分类工作区</strong>：为编码、文档处理和数据分析创建独立工作区，避免上下文混乱。</li>
+<li><strong>提示模板保存</strong>：将常用任务提示词保存为模板，提高复用效率。</li>
+<li><strong>定期更新</strong>：及时更新桌面客户端和插件以修复已知问题并获取新功能。</li>
+<li><strong>网络优化</strong>：对于使用云模型的用户，在应用设置中配置稳定的网络代理以减少请求超时。</li>
+</ol>
+
+<h2>7. 总结</h2>
+
+<p>Hermes官方桌面版通过图形界面降低了AI代理的使用门槛，但新手必须注意安装路径、运行依赖、端口占用和权限设置。遵循本指南的预检步骤，可以避免大多数常见错误。</p>
+
+<p>掌握了基本服务配置、模型对接和插件使用后，你就可以利用Hermes实现自动化开发、批量文件处理和智能任务编排。如果遇到复杂的启动或运行时错误，通过<code>Debug</code>日志级别查看详细日志，快速定位问题。</p>
+
+<p>更多Hermes相关内容，请查看<a href="/article/hermes-agent-beginner-guide-ep1">Hermes Agent新手入门第一集</a>、<a href="/article/mastering-hermes-agent-7-levels">掌握Hermes Agent的7级配置</a>、<a href="/article/hermes-agent-8-features-smb">Hermes Agent的8个功能</a>、<a href="/article/hermes-agent-vs-openclaw-comparison">Hermes Agent与OpenClaw对比</a>、<a href="/article/hermes-profiles-multi-agent-team">Hermes Profiles多代理团队</a>和<a href="/article/free-access-codex-hermes-guide">免费使用Codex和Hermes</a>。</p>
+
+<h2>常见问题</h2>
+
+<h3>为什么Hermes桌面应用启动时立刻崩溃？</h3>
+<p>这通常是由于缺少VC++运行库、安装文件损坏或权限不足导致的。请重新安装Microsoft Visual C++ Redistributable，彻底卸载Hermes（包括残留文件夹），然后重新安装到纯英文路径（无中文或空格）。在Windows上务必以管理员身份运行安装程序。</p>
+
+<h3>前端加载正常但代理无法执行任何任务怎么办？</h3>
+<p>这通常意味着后端服务未启动或存在端口冲突。在应用状态栏检查服务状态——如果显示"已停止"，请重启后端服务。使用<code>netstat -ano | findstr "7860"</code>（Windows）或<code>lsof -i :7860</code>（macOS/Linux）确认端口7860未被其他应用占用。同时在模型设置页面重新测试模型API连接。</p>
+
+<h3>Hermes桌面应用可以完全离线使用吗？</h3>
+<p>可以，Hermes支持本地离线模式，无需账户。但离线模式会禁用云端插件同步、官方插件市场和云模型访问。你仍然可以使用本地下载的模型和已安装的插件。如需使用云端资源（包括多设备同步），建议连接互联网并使用Hermes账户登录。</p>
+
+<div class="next-step">
+<p><strong>下一步推荐：</strong> <a href="/article/hermes-agent-beginner-guide-ep1">Hermes Agent新手完全指南第一集：摒弃复杂设置，掌握实用本地AI部署</a></p>
+</div>`,
+  },
+
 };

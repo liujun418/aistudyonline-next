@@ -1924,4 +1924,16 @@ export const articles: Article[] = [
     toolsMentioned: ["codex-agent"],
     date: "2026-06-14",
   },
+  {
+    slug: "hermes-official-desktop-app-guide",
+    title: "Hermes Official Desktop App: Beginner Setup & Common Pitfall Avoidance Guide",
+    titleZh: "Hermes官方桌面应用：新手安装配置与常见避坑指南",
+    description: "A practical guide to installing, configuring, and using the Hermes Official Desktop App. Covers pre-installation checks, environment preparation, core operations, and solutions to common pitfalls that beginners face.",
+    descriptionZh: "一份实用的Hermes官方桌面应用安装、配置和使用指南。涵盖安装前检查、环境准备、核心操作以及新手常见问题的解决方案。",
+    category: "ai-tools",
+    tags: ["hermes-agent", "desktop-app", "installation", "beginner", "setup", "ai-agent", "configuration"],
+    difficulty: "beginner",
+    toolsMentioned: ["hermes-agent"],
+    date: "2026-06-14",
+  },
 ];
