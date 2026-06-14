@@ -3531,5 +3531,143 @@ export const models: AIModel[] = [
     icon: "\u{1F4BB}",
   },
 
+  // ========================================
+  // GLM-5 (added 2026-06-14)
+  // ========================================
+  {
+    id: "glm-5",
+    name: "GLM 5.2",
+    nameZh: "GLM 5.2",
+    developer: "Zhipu AI",
+    developerZh: "智谱AI",
+    releaseDate: "2026",
+    category: "conversation",
+    description: "Zhipu AI's next-generation model with 300K+ context window, strong reasoning, and vector database-backed architecture.",
+    descriptionZh: "智谱AI的下一代模型，300K+上下文窗口，强推理能力与向量数据库支持架构。",
+    descriptionLong: "GLM 5.2 is Zhipu AI's (智谱AI) latest large language model, featuring an impressive 300K+ token context window that exceeds most competitors. It employs a vector database-backed architecture that enables superior long-context retention and retrieval. In practical coding tests, GLM 5.2 demonstrated strong full-stack development capabilities, completing complex e-commerce system development including product management, inventory tracking, order fulfillment, and admin dashboard with data visualization. The model excels in both frontend visual tasks and backend system development, offering near-complete feature sets and robust performance across the full development stack. GLM 5.2 showed significant improvement over its predecessor GLM 5.1, particularly in visual animation rendering tasks with clearer flame textures and better prompt adherence. For production-grade projects requiring reliability and depth, GLM 5.2 ranks among the top choices for domestic AI models. Available through Zhipu AI's API platform with competitive pricing for the Chinese market.",
+    descriptionLongZh: "GLM 5.2 是智谱AI最新的大语言模型，拥有令人印象深刻的300K+ token上下文窗口，超越了大多数竞争对手。采用向量数据库支持的架构，实现卓越的长上下文保持和检索能力。在实际编码测试中，GLM 5.2展示了强大的全栈开发能力，完成了包括产品管理、库存跟踪、订单处理和带有数据可视化的管理仪表盘在内的复杂电商系统开发。该模型在前后端任务中都有出色表现，为国产AI模型中的首选之一。",
+    parameters: "Undisclosed",
+    contextWindow: "300K+ tokens",
+    modalities: ["text", "image"],
+    languages: ["Chinese", "English"],
+    openSource: false,
+    pricing: "API (Zhipu AI Platform)",
+    pricingZh: "API（智谱AI平台）",
+    pricingTiers: [
+      {
+        tier: "API",
+        tierZh: "API",
+        price: "Competitive",
+        features: ["300K+ context", "Strong reasoning", "Vector database support"],
+        featuresZh: ["300K+ 上下文", "强推理能力", "向量数据库支持"],
+      },
+    ],
+    strengths: [
+      "300K+ token context window for long document processing",
+      "Strong full-stack development capabilities in testing",
+      "Vector database-backed architecture for superior context retention",
+      "Significant improvement over GLM 5.1 in visual tasks",
+    ],
+    strengthsZh: [
+      "300K+ token 上下文窗口，适合长文档处理",
+      "测试中表现强大的全栈开发能力",
+      "向量数据库支持的架构，上下文保持能力强",
+      "在视觉任务上相比 GLM 5.1 显著提升",
+    ],
+    weaknesses: [
+      "Limited availability outside China",
+      "Hardcoded address management in test outputs",
+      "Smaller global ecosystem compared to GPT or Claude",
+    ],
+    weaknessesZh: [
+      "中国以外可用性有限",
+      "测试输出中地址管理硬编码",
+      "全球生态不如 GPT 或 Claude",
+    ],
+    bestFor: [
+      "Chinese-language full-stack development",
+      "Long-context document analysis and processing",
+      "Complex backend system development",
+      "Frontend visual animation tasks",
+    ],
+    bestForZh: [
+      "中文全栈开发",
+      "长上下文文档分析和处理",
+      "复杂后端系统开发",
+      "前端视觉动画任务",
+    ],
+    url: "https://www.zhipuai.cn",
+    apiUrl: "https://open.bigmodel.cn",
+    icon: "\u{1F9E0}",
+  },
+
+  // ========================================
+  // Kimi 2 (added 2026-06-14)
+  // ========================================
+  {
+    id: "kimi-2",
+    name: "Kimi 2.7 Code",
+    nameZh: "Kimi 2.7 Code",
+    developer: "Moonshot AI",
+    developerZh: "月之暗面",
+    releaseDate: "2026",
+    category: "code",
+    description: "Moonshot AI's coding-specialized model with 256K context, optimized for task-oriented modular code generation.",
+    descriptionZh: "月之暗面的编程专用模型，256K 上下文，面向任务的模块化代码生成优化。",
+    descriptionLong: "Kimi 2.7 Code is Moonshot AI's (月之暗面) specialized coding model, built as a targeted upgrade from Kimi 2.6 with a focus on software development workflows. It features a 256K token context window and adopts a task-oriented, modular design philosophy for faster task initiation and focused code generation. In practical testing, Kimi 2.7 Code demonstrated strong performance in frontend animation rendering, with burn trajectory closely resembling GPT-5.5's output quality. For backend development, it completed the e-commerce system in 70 minutes with 80% feature completeness and only 1 bug. The model excels at rapid code generation where speed matters, making it a viable option for developers who need quick, task-specific coding assistance. Kimi 2.7 Code's modular architecture means it can quickly switch between different coding tasks without losing context, though it showed some limitations in end-to-end workflow completeness compared to top-tier general models. Its coding speed and task-specific optimizations make it particularly suitable for experienced developers who work in well-defined problem domains and need fast, reliable code generation. Available through Moonshot AI's platform with competitive pricing for the Chinese market.",
+    descriptionLongZh: "Kimi 2.7 Code 是月之暗面的专用编程模型，从 Kimi 2.6 进行了针对性升级。256K token 上下文窗口，面向任务的模块化设计。在实战测试中，70 分钟完成电商系统开发，功能完整度 80%，仅 1 个 Bug。对于需要快速任务特定编程帮助的开发者来说，是一个可行的选择。",
+    parameters: "Undisclosed",
+    contextWindow: "256K tokens",
+    modalities: ["text", "code"],
+    languages: ["Chinese", "English"],
+    openSource: false,
+    pricing: "API (Moonshot AI Platform)",
+    pricingZh: "API（月之暗面平台）",
+    pricingTiers: [
+      {
+        tier: "API",
+        tierZh: "API",
+        price: "Competitive",
+        features: ["256K context", "Coding-optimized", "Fast task initiation"],
+        featuresZh: ["256K 上下文", "编程优化", "快速任务启动"],
+      },
+    ],
+    strengths: [
+      "Fast task initiation with modular architecture",
+      "256K context window for code analysis",
+      "Strong frontend animation rendering",
+      "Low bug count in full-stack testing",
+    ],
+    strengthsZh: [
+      "模块化架构实现快速任务启动",
+      "256K 上下文窗口适合代码分析",
+      "前端动画渲染表现优秀",
+      "全栈测试中 Bug 数量低",
+    ],
+    weaknesses: [
+      "Limited end-to-end workflow completeness",
+      "Broken navigation in complex frontend builds",
+      "Missing some advanced features like flash sale management",
+    ],
+    weaknessesZh: [
+      "端到端工作流完整性有限",
+      "复杂前端构建中导航断裂",
+      "缺少部分高级功能如秒杀管理",
+    ],
+    bestFor: [
+      "Rapid coding task execution",
+      "Frontend animation and visual development",
+      "Well-defined programming domains",
+      "Quick prototyping and code generation",
+    ],
+    bestForZh: [
+      "快速编程任务执行",
+      "前端动画和视觉开发",
+      "明确定义的编程领域",
+      "快速原型设计和代码生成",
+    ],
+    url: "https://kimi.moonshot.cn",
+    icon: "\u{1F31B}",
+  },
 
 ];

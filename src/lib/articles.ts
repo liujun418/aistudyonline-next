@@ -1936,4 +1936,19 @@ export const articles: Article[] = [
     toolsMentioned: ["hermes-agent"],
     date: "2026-06-14",
   },
+
+  {
+    slug: "glm-5-vs-kimi-2-code-comparison",
+    title: "GLM 5.2 vs. Kimi 2.7 Code: A Practical Comparison of Domestic AI Coding Models",
+    titleZh: "GLM 5.2 vs Kimi 2.7 Code：国产AI编程模型实战对比",
+    description:
+      "A comprehensive, practical comparison of GLM 5.2 and Kimi 2.7 Code through frontend and backend testing scenarios — animation rendering, full-stack e-commerce development, and performance metrics across 6 domestic AI models.",
+    descriptionZh:
+      "通过前端和后端测试场景对 GLM 5.2 和 Kimi 2.7 Code 进行全面实战对比——动画渲染、全栈电商开发以及6款国产AI模型的性能指标。",
+    category: "ai-comparisons",
+    tags: ["glm-5", "kimi-2", "ai-comparison", "coding", "domestic-ai", "frontend", "backend"],
+    difficulty: "intermediate",
+    toolsMentioned: ["glm-5", "kimi-2", "deepseek"],
+    date: "2026-06-14",
+  },
 ];
