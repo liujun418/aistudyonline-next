@@ -54,9 +54,9 @@ export default function Footer({
             <Link href={`/${locale}/refund`} className="hover:text-zinc-900 dark:hover:text-white">
               {f.refund}
             </Link>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-zinc-900 dark:hover:text-white">
+            <Link href={`/${locale}/contact`} className="hover:text-zinc-900 dark:hover:text-white">
               {f.contact}
-            </a>
+            </Link>
             <span className="text-zinc-400">{CONTACT_EMAIL}</span>
           </div>
         </div>
