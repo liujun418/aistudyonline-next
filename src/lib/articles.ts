@@ -1951,4 +1951,34 @@ export const articles: Article[] = [
     toolsMentioned: ["glm-5", "kimi-2", "deepseek"],
     date: "2026-06-14",
   },
+
+  {
+    slug: "ai-agent-sandbox-guide",
+    title: "AI Agent Sandbox: A Practical Guide to Secure Autonomous Action",
+    titleZh: "AI Agent沙箱：安全自主行动的实践指南",
+    description:
+      "A comprehensive guide to AI Agent sandboxing covering microVM isolation, dynamic policy control with OPA, state snapshots, and OpenTelemetry observability — everything you need to deploy autonomous AI agents safely.",
+    descriptionZh:
+      "AI Agent沙箱完整实践指南，涵盖微虚拟机隔离、OPA动态策略控制、状态快照和OpenTelemetry可观测性——安全部署自主AI代理所需的全部知识。",
+    category: "ai-tutorials",
+    tags: ["ai-agent", "sandbox", "security", "firecracker", "opa", "opentelemetry", "e2b"],
+    difficulty: "intermediate",
+    toolsMentioned: ["e2b", "firecracker", "langchain", "langgraph", "autogen", "opentelemetry", "open-policy-agent"],
+    date: "2026-06-15",
+  },
+
+  {
+    slug: "multi-agent-system-long-task",
+    title: "Building a Practical Multi-Agent System for Unattended Long-Task Execution",
+    titleZh: "构建实用的多代理系统：无人值守长任务执行",
+    description:
+      "A practical case study of building a multi-agent system that ran unattended for 4 days, generating 140K lines of code — covering graph-based orchestration, YAML pipelines, Scorecard auditing, and Docker-based agent isolation.",
+    descriptionZh:
+      "构建多代理系统无人运行4天、生成14万行代码的实战案例——涵盖图编排、YAML管道、Scorecard审计和Docker代理隔离。",
+    category: "ai-tutorials",
+    tags: ["multi-agent", "orchestration", "codex", "docker", "automation", "yaml", "pipeline"],
+    difficulty: "advanced",
+    toolsMentioned: ["codex", "docker", "puppeteer"],
+    date: "2026-06-15",
+  },
 ];
