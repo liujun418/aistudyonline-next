@@ -32614,4 +32614,643 @@ monitor_pipeline(pipeline_id)</code></pre>
 <p><strong>下一步：</strong> <a href="/article/ai-agent-sandbox-guide">AI代理沙箱：安全自主行动的实践指南 →</a></p>
 </div>`,
   },
+
+  // ====== Article: Harness Engineering Guide ======
+  "harness-engineering-guide": {
+    content: `
+<div class="meta-banner">
+  <span>📅 2026-06-16</span>
+  <span>📂 AI Tutorials</span>
+  <span>⏱️ 12 min read</span>
+  <span>🎯 Intermediate</span>
+</div>
+
+<p>In the realm of AI programming, many developers have encountered frustrating scenarios: requesting AI to tweak a page's style only to have it overhaul the entire layout; specifying a single file should not exceed 200 lines of code, yet AI forgets this constraint and produces a 1000-line monolith after several interactions; or asking AI to fix a bug, only to have it introduce three new ones, leaving the codebase in disarray. While prompt engineering and context engineering offer solutions to the first two issues, the third demands a more systematic approach—<strong>Harness Engineering</strong>.</p>
+
+<h2>What is Harness Engineering?</h2>
+
+<p>Imagine an AI model as a horse. Just as a horse needs reins, a route, and fences to perform optimally, an AI model requires a structured environment and workflow to deliver reliable, end-to-end project results. This environment, encompassing rule files, tool configurations, task orchestration, and testing processes, is what we call <strong>Harness</strong>.</p>
+
+<p>Harness Engineering has gained traction due to compelling evidence. For instance, LangChain's experiment showed that optimizing the Harness around an AI model (while keeping the model itself unchanged) improved coding accuracy rankings from outside the top 30 to the top 5. OpenAI also demonstrated its power, where a small team leveraged Harness to guide AI in generating millions of lines of code, resulting in a product that's now in internal use. The industry now recognizes that the bottleneck in AI programming isn't the model's intelligence, but the quality of the surrounding Harness.</p>
+
+<h2>Evolution of AI Engineering and the Role of Harness</h2>
+
+<p>Harness Engineering is not a sudden innovation. It builds upon two prior stages of AI engineering:</p>
+
+<ol>
+<li><strong>Prompt Engineering</strong>: Focuses on crafting prompts to make AI understand instructions. Techniques include role-setting, few-shot examples, and chain-of-thought prompting.</li>
+<li><strong>Context Engineering</strong>: Enhances prompt engineering by supplying AI with the right information at the right time. This includes rule files (e.g., <code>AGENTS.md</code>), retrieval-augmented generation (RAG) for fetching external data, and memory mechanisms for cross-conversation context.</li>
+<li><strong>Harness Engineering</strong>: Goes a step further by focusing on how AI can <em>reliably complete entire tasks</em>. It encompasses tooling, task decomposition, self-validation, and architectural safeguards. The relationship is hierarchical: prompts &lt; context &lt; harness.</li>
+</ol>
+
+<p>Example Prompt for Prompt Engineering:</p>
+<pre><code class="language-text">You are a senior React developer. Please refactor the following component to use hooks, following the Airbnb style guide.</code></pre>
+
+<p>Example <code>AGENTS.md</code> for Context Engineering:</p>
+<pre><code class="language-markdown"># Project: Video Downloader
+- Tech Stack: Python, React, FastAPI
+- Code Style: PEP8 for Python, Airbnb for React
+- Docs: Frontend specs in docs/frontend.md, security guidelines in docs/security.md</code></pre>
+
+<h2>Core Components of Harness</h2>
+
+<p>To build an effective Harness, focus on these five components:</p>
+
+<h3>1. Context Architecture: Define Project Rules and Background</h3>
+
+<p>Just as any project starts with requirements and specifications, AI projects need a <code>AGENTS.md</code> file to outline the project's tech stack, code standards, and prohibitions. Since AI has limited context capacity, treat <code>AGENTS.md</code> as an index. Place detailed docs in a <code>docs/</code> folder and reference them in <code>AGENTS.md</code>.</p>
+
+<pre><code class="language-text">project/
+├── AGENTS.md
+└── docs/
+    ├── frontend.md
+    ├── security.md
+    └── architecture.md</code></pre>
+
+<h3>2. Execution Capabilities: Equip AI with Tools</h3>
+
+<p>AI models only output text by default. To enable practical actions, equip them with tools:</p>
+
+<ul>
+<li><strong>Terminal Access</strong>: Let AI execute commands (e.g., <code>mkdir</code>, <code>git commit</code>).</li>
+<li><strong>File System Access</strong>: Allow AI to read/write files.</li>
+<li><strong>Browser Control</strong>: Enable AI to test web UIs via tools like <a href="/en/tools/puppeteer">Puppeteer</a>.</li>
+<li><strong>MCP (Multi-Capability Provider)</strong>: Extend functionality, such as database operations or web scraping.</li>
+</ul>
+
+<pre><code class="language-json">{
+  "tools": [
+    {
+      "name": "Terminal",
+      "description": "Execute shell commands",
+      "parameters": { "command": "ls -la" }
+    },
+    {
+      "name": "Browser",
+      "description": "Interact with web pages",
+      "parameters": { "url": "https://example.com", "action": "click", "selector": "#download-btn" }
+    }
+  ]
+}</code></pre>
+
+<h3>3. Task Orchestration: Break Down and Manage Work</h3>
+
+<p>AI struggles with large, vague tasks. Break them into small, verifiable units:</p>
+
+<ul>
+<li><strong>Plan Mode</strong>: Have AI draft a project plan before coding.</li>
+<li><strong>Subagents</strong>: Parallelize independent subtasks (e.g., front-end and back-end development).</li>
+<li><strong>Documentation as Checkpoints</strong>: After each feature, have AI write a summary doc and commit to Git. This serves as a "save point" for the project.</li>
+</ul>
+
+<pre><code class="language-text">Act as a technical project manager. Outline a step-by-step plan to build a video downloader with React and Python. Include milestones and deliverables.</code></pre>
+
+<h3>4. Feedback Mechanisms: Let AI Validate Its Work</h3>
+
+<p>AI can't be trusted to self-declare task completion. Implement validation:</p>
+
+<ul>
+<li><strong>Linting</strong>: Use tools like <code>pylint</code> (Python) or <code>eslint</code> (JavaScript) to check code style.</li>
+<li><strong>Automated Testing</strong>: Run unit/integration tests.</li>
+<li><strong>Browser Testing</strong>: Have AI interact with the app via a headless browser.</li>
+</ul>
+
+<pre><code class="language-bash">pylint src/ --disable=C0114,C0115</code></pre>
+
+<pre><code class="language-python">def test_download_function():
+    result = download_video("https://example.com/video")
+    assert result.status == "success"</code></pre>
+
+<pre><code class="language-javascript">const puppeteer = require('puppeteer');
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000');
+  await page.type('#video-url', 'https://example.com/video');
+  await page.click('#download-btn');
+  await page.waitForSelector('.success-message');
+  await browser.close();
+})();</code></pre>
+
+<h3>5. Architectural Guardrails: Prevent Technical Debt</h3>
+
+<p>AI may replicate poor coding patterns. Enforce architectural rules:</p>
+
+<ul>
+<li><strong>Custom Linters</strong>: Write linters to check for anti-patterns (e.g., UI layer directly accessing the database).</li>
+<li><strong>Pre-commit Hooks</strong>: Use tools like Husky to run linters before commits.</li>
+<li><strong>Regular Code Scans</strong>: Have AI periodically scan the codebase for architectural violations and auto-generate fix PRs.</li>
+</ul>
+
+<pre><code class="language-javascript">module.exports = {
+  rules: {
+    'no-direct-db-access': (context) => ({
+      MemberExpression(node) {
+        if (node.object.name === 'DB' && node.property.name === 'query') {
+          context.report({ node, message: 'Direct DB access is not allowed. Use a service layer.' });
+        }
+      }
+    })
+  }
+};</code></pre>
+
+<pre><code class="language-bash">#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+npm run lint</code></pre>
+
+<h2>Practical Implementation: Building a Video Downloader with Harness</h2>
+
+<p>Let's apply these concepts to build a "Video Downloader and Summarizer" project:</p>
+
+<h3>Step 1: Context Architecture – Define Project Rules</h3>
+<pre><code class="language-markdown"># Video Downloader Project
+- Tech Stack: Python (FastAPI), React, yt-dlp
+- Code Standards: PEP8, Airbnb React
+- Docs: Frontend: docs/frontend.md, API: docs/api.md
+- Prohibitions: Direct database calls from controllers; inline styles in React components.</code></pre>
+
+<h3>Step 2: Execution Capabilities – Configure Tools</h3>
+<p>Set up tool access in your AI environment (e.g., <a href="/en/tools/cursor">Cursor</a>): enable terminal access for running <code>yt-dlp</code> commands, and configure a web scraping tool to fetch video metadata.</p>
+
+<h3>Step 3: Task Orchestration – Plan and Execute</h3>
+<p>Use Plan Mode to have AI outline the project, split into subtasks (Frontend UI, Backend API, Video Processing), and document each checkpoint with Git commits.</p>
+
+<h3>Step 4: Feedback Mechanisms – Test and Validate</h3>
+<p>Lint the code with <code>pylint backend/</code> and <code>eslint frontend/</code>, run automated tests with <code>pytest</code> and <code>npm test</code>, and use <a href="/en/tools/puppeteer">Puppeteer</a> for browser testing.</p>
+
+<h3>Step 5: Architectural Guardrails – Enforce Standards</h3>
+<p>Add pre-commit hooks with Husky to run linters, and write custom linters to enforce architectural boundaries.</p>
+
+<h2>Getting Started with Harness</h2>
+
+<p>For beginners, follow this practical workflow:</p>
+
+<ol>
+<li><strong>Write <code>AGENTS.md</code></strong>: Clearly define project rules.</li>
+<li><strong>Plan Before Coding</strong>: Use Plan Mode to get AI's approval on the approach.</li>
+<li><strong>Equip Tools</strong>: Configure MCPs and skills for web scraping, database access, etc.</li>
+<li><strong>Validate Thoroughly</strong>: Make AI run tests and self-check.</li>
+<li><strong>Document and Commit</strong>: Save progress with docs and Git commits.</li>
+</ol>
+
+<p>If you're new to project engineering, leverage tools like Spec Kit (for spec-driven development) or Superpowers (for built-in workflows like TDD and code reviews).</p>
+
+<h2>FAQ</h2>
+
+<h3>What is the difference between Harness Engineering and Prompt Engineering?</h3>
+<p>Prompt Engineering focuses on crafting the right instructions for AI to understand a single task. Harness Engineering is the broader system that surrounds AI development — it includes context architecture (AGENTS.md, project docs), task orchestration (plan mode, subagents), tool configurations, automated testing pipelines, and architectural guardrails. Think of it as: Prompt Engineering tells AI <em>what</em> to do; Harness Engineering ensures AI <em>reliably delivers</em> the complete result.</p>
+
+<h3>Do I need Harness Engineering for small projects?</h3>
+<p>Yes, but scale it appropriately. For a weekend project, a simple <code>AGENTS.md</code> with tech stack and coding standards plus running <code>npm test</code> before committing is sufficient. The overhead of a full harness (custom linters, pre-commit hooks, subagent orchestration) is justified when you're building production systems, working in teams, or having AI work unattended for extended periods. Start minimal and add components as your project grows.</p>
+
+<h3>How does Harness Engineering work with AI coding agents like Codex CLI?</h3>
+<p>Harness Engineering and AI coding agents are complementary. An agent like <a href="/en/tools/codex">Codex CLI</a> provides the execution engine — it reads code, writes files, runs commands. Harness Engineering provides the structure around it: AGENTS.md tells the agent your project conventions, plan mode forces it to think before coding, automated tests verify its output, and architectural guardrails prevent it from introducing technical debt. Together, they form a complete AI-powered development pipeline where the agent handles implementation while the harness ensures quality and consistency.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/en/article/small-models-2026-opportunity">Seize the 2026 AI Opportunity: Small Models Are the Gateway →</a></p>
+</div>`,
+    contentZh: `
+<div class="meta-banner">
+  <span>📅 2026-06-16</span>
+  <span>📂 AI教程</span>
+  <span>⏱️ 12 分钟阅读</span>
+  <span>🎯 中级</span>
+</div>
+
+<p>在AI编程领域，很多开发者都遇到过令人沮丧的场景：让AI微调一个页面的样式，结果它把整个布局都改了；明确说单个文件不要超过200行代码，几轮交互后AI却忘记了这个约束，生成了一个1000行的庞然大物；让AI修复一个bug，结果它引入了三个新bug，代码库一片混乱。虽然提示词工程和上下文工程可以解决前两个问题，但第三个问题需要一种更系统的方法——<strong>Harness工程</strong>。</p>
+
+<h2>什么是Harness工程？</h2>
+
+<p>把AI模型想象成一匹马。正如马需要缰绳、路线和围栏才能发挥最佳表现一样，AI模型需要结构化的环境和工作流才能可靠地交付端到端项目成果。这个包含规则文件、工具配置、任务编排和测试流程的环境，就是我们所说的<strong>Harness</strong>。</p>
+
+<p>Harness工程之所以受到关注，是因为有令人信服的证据。例如，LangChain的实验表明，优化AI模型周围的Harness（保持模型本身不变）将编码准确率排名从30名开外提升到了前5名。OpenAI也展示了其威力——一个小团队利用Harness引导AI生成了数百万行代码，产出的产品现已内部使用。业界如今认识到，AI编程的瓶颈不是模型的智能，而是周围Harness的质量。</p>
+
+<h2>AI工程的演进与Harness的角色</h2>
+
+<p>Harness工程不是突然的创新，它建立在AI工程的前两个阶段之上：</p>
+
+<ol>
+<li><strong>提示词工程（Prompt Engineering）</strong>：专注于编写提示词让AI理解指令。技术包括角色设定、少样本示例和思维链提示。</li>
+<li><strong>上下文工程（Context Engineering）</strong>：通过在正确的时间为AI提供正确的信息来增强提示词工程。包括规则文件（如<code>AGENTS.md</code>）、检索增强生成（RAG）获取外部数据，以及跨对话记忆机制。</li>
+<li><strong>Harness工程</strong>：更进一步，专注于AI如何<em>可靠地完成完整任务</em>。涵盖工具配置、任务分解、自我验证和架构防护。关系是分层的：提示词 &lt; 上下文 &lt; Harness。</li>
+</ol>
+
+<p>提示词工程示例：</p>
+<pre><code class="language-text">你是一位资深React开发者。请按照Airbnb风格指南，使用hooks重构以下组件。</code></pre>
+
+<p>上下文工程示例（<code>AGENTS.md</code>片段）：</p>
+<pre><code class="language-markdown"># 项目：视频下载器
+- 技术栈：Python, React, FastAPI
+- 代码风格：Python用PEP8，React用Airbnb
+- 文档：前端规范见docs/frontend.md，安全指南见docs/security.md</code></pre>
+
+<h2>Harness的五大核心组件</h2>
+
+<p>要构建有效的Harness，重点关注这五个组件：</p>
+
+<h3>1. 上下文架构：定义项目规则和背景</h3>
+
+<p>正如任何项目都从需求和规范开始，AI项目需要<code>AGENTS.md</code>文件来概述项目的技术栈、代码标准和禁止事项。由于AI的上下文容量有限，将<code>AGENTS.md</code>视为索引，把详细文档放在<code>docs/</code>文件夹中并在<code>AGENTS.md</code>中引用。</p>
+
+<pre><code class="language-text">project/
+├── AGENTS.md
+└── docs/
+    ├── frontend.md
+    ├── security.md
+    └── architecture.md</code></pre>
+
+<h3>2. 执行能力：为AI配备工具</h3>
+
+<p>AI模型默认只能输出文本。要启用实际操作，需要为其配备工具：</p>
+
+<ul>
+<li><strong>终端访问</strong>：让AI执行命令（如<code>mkdir</code>、<code>git commit</code>）。</li>
+<li><strong>文件系统访问</strong>：允许AI读写文件。</li>
+<li><strong>浏览器控制</strong>：通过<a href="/zh/tools/puppeteer">Puppeteer</a>等工具让AI测试Web界面。</li>
+<li><strong>MCP（多能力提供者）</strong>：扩展功能，如数据库操作或网页抓取。</li>
+</ul>
+
+<pre><code class="language-json">{
+  "tools": [
+    {
+      "name": "Terminal",
+      "description": "执行shell命令",
+      "parameters": { "command": "ls -la" }
+    },
+    {
+      "name": "Browser",
+      "description": "与网页交互",
+      "parameters": { "url": "https://example.com", "action": "click", "selector": "#download-btn" }
+    }
+  ]
+}</code></pre>
+
+<h3>3. 任务编排：分解和管理工作</h3>
+
+<p>AI在大型模糊任务上表现不佳。将其分解为小型可验证单元：</p>
+
+<ul>
+<li><strong>计划模式</strong>：让AI在编码前起草项目计划。</li>
+<li><strong>子代理</strong>：并行处理独立子任务（如前端和后端开发）。</li>
+<li><strong>文档检查点</strong>：每完成一个功能，让AI写总结文档并提交到Git，作为项目的"存档点"。</li>
+</ul>
+
+<pre><code class="language-text">担任技术项目经理。为使用React和Python构建视频下载器制定分步计划。包括里程碑和交付物。</code></pre>
+
+<h3>4. 反馈机制：让AI验证自己的工作</h3>
+
+<p>不能信任AI自我声明任务完成。实施验证：</p>
+
+<ul>
+<li><strong>代码检查</strong>：使用<code>pylint</code>（Python）或<code>eslint</code>（JavaScript）检查代码风格。</li>
+<li><strong>自动化测试</strong>：运行单元/集成测试。</li>
+<li><strong>浏览器测试</strong>：让AI通过无头浏览器与应用交互。</li>
+</ul>
+
+<pre><code class="language-bash">pylint src/ --disable=C0114,C0115</code></pre>
+
+<pre><code class="language-python">def test_download_function():
+    result = download_video("https://example.com/video")
+    assert result.status == "success"</code></pre>
+
+<pre><code class="language-javascript">const puppeteer = require('puppeteer');
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000');
+  await page.type('#video-url', 'https://example.com/video');
+  await page.click('#download-btn');
+  await page.waitForSelector('.success-message');
+  await browser.close();
+})();</code></pre>
+
+<h3>5. 架构护栏：防止技术债务</h3>
+
+<p>AI可能会复制不良编码模式。强制执行架构规则：</p>
+
+<ul>
+<li><strong>自定义检查器</strong>：编写检查器检测反模式（如UI层直接访问数据库）。</li>
+<li><strong>预提交钩子</strong>：使用Husky等工具在提交前运行检查器。</li>
+<li><strong>定期代码扫描</strong>：让AI定期扫描代码库的架构违规并自动生成修复PR。</li>
+</ul>
+
+<pre><code class="language-javascript">module.exports = {
+  rules: {
+    'no-direct-db-access': (context) => ({
+      MemberExpression(node) {
+        if (node.object.name === 'DB' && node.property.name === 'query') {
+          context.report({ node, message: '不允许直接访问数据库，请使用服务层。' });
+        }
+      }
+    })
+  }
+};</code></pre>
+
+<pre><code class="language-bash">#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+npm run lint</code></pre>
+
+<h2>实战：用Harness构建视频下载器</h2>
+
+<p>让我们将这些概念应用到"视频下载器和摘要器"项目中：</p>
+
+<h3>第1步：上下文架构——定义项目规则</h3>
+<pre><code class="language-markdown"># 视频下载器项目
+- 技术栈：Python (FastAPI), React, yt-dlp
+- 代码标准：PEP8, Airbnb React
+- 文档：前端docs/frontend.md，API docs/api.md
+- 禁止：控制器直接调用数据库；React组件内联样式。</code></pre>
+
+<h3>第2步：执行能力——配置工具</h3>
+<p>在AI环境（如<a href="/zh/tools/cursor">Cursor</a>）中设置工具访问：启用终端访问以运行<code>yt-dlp</code>命令，配置网页抓取工具获取视频元数据。</p>
+
+<h3>第3步：任务编排——计划与执行</h3>
+<p>使用计划模式让AI制定项目大纲，拆分为子任务（前端UI、后端API、视频处理），在每个检查点用Git提交文档。</p>
+
+<h3>第4步：反馈机制——测试与验证</h3>
+<p>用<code>pylint backend/</code>和<code>eslint frontend/</code>检查代码，用<code>pytest</code>和<code>npm test</code>运行自动化测试，用<a href="/zh/tools/puppeteer">Puppeteer</a>进行浏览器测试。</p>
+
+<h3>第5步：架构护栏——强制标准</h3>
+<p>用Husky添加预提交钩子运行检查器，编写自定义检查器强制执行架构边界。</p>
+
+<h2>Harness入门指南</h2>
+
+<p>对初学者而言，按以下实践流程操作：</p>
+
+<ol>
+<li><strong>编写<code>AGENTS.md</code></strong>：明确定义项目规则。</li>
+<li><strong>先计划后编码</strong>：使用计划模式让AI确认方案。</li>
+<li><strong>配备工具</strong>：为网页抓取、数据库访问等配置MCP和技能。</li>
+<li><strong>全面验证</strong>：让AI运行测试和自我检查。</li>
+<li><strong>文档与提交</strong>：用文档和Git提交保存进度。</li>
+</ol>
+
+<p>如果你是项目工程的新手，可以利用Spec Kit（规范驱动开发）或Superpowers（内置TDD和代码审查等工作流）等工具。</p>
+
+<h2>常见问题</h2>
+
+<h3>Harness工程和提示词工程有什么区别？</h3>
+<p>提示词工程专注于编写正确的指令让AI理解单个任务。Harness工程是围绕AI开发的更广泛系统——包括上下文架构（AGENTS.md、项目文档）、任务编排（计划模式、子代理）、工具配置、自动化测试管道和架构护栏。可以理解为：提示词工程告诉AI<em>做什么</em>；Harness工程确保AI<em>可靠地交付</em>完整结果。</p>
+
+<h3>小项目需要Harness工程吗？</h3>
+<p>需要，但要适度调整。对于周末项目，一个简单的<code>AGENTS.md</code>（包含技术栈和编码标准）加上提交前运行<code>npm test</code>就足够了。完整的Harness（自定义检查器、预提交钩子、子代理编排）适用于构建生产系统、团队协作或让AI长时间无人值守工作的情况。从最小化开始，随项目增长逐步添加组件。</p>
+
+<h3>Harness工程如何与Codex CLI等AI编程代理配合使用？</h3>
+<p>Harness工程和AI编程代理是互补的。像<a href="/zh/tools/codex">Codex CLI</a>这样的代理提供执行引擎——读取代码、编写文件、运行命令。Harness工程提供其周围的结构：AGENTS.md告诉代理你的项目约定，计划模式强制它在编码前思考，自动化测试验证其输出，架构护栏防止它引入技术债务。它们共同构成了完整的AI驱动开发管道——代理处理实现，Harness确保质量和一致性。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/zh/article/small-models-2026-opportunity">抓住2026年AI机遇：小模型是普通人的入场券 →</a></p>
+</div>`,
+  },
+
+  // ====== Article: Small Models 2026 Opportunity ======
+  "small-models-2026-opportunity": {
+    content: `
+<div class="meta-banner">
+  <span>📅 2026-06-16</span>
+  <span>📂 AI Tutorials</span>
+  <span>⏱️ 8 min read</span>
+  <span>🎯 Beginner</span>
+</div>
+
+<p>In 2026, the AI industry is abuzz with tech giants racing to build trillion-parameter behemoths. However, savvy individuals are quietly thriving by taking the opposite approach—leveraging <strong>small models</strong>. This shift isn't just a trend; it's a revolution in how we approach AI development, making it accessible and cost-effective for ordinary people.</p>
+
+<h2>The Rise of Small Model Fine-Tuning</h2>
+
+<p>The game-changer came when an independent developer named CJ shared a tweet on May 11, teaching ordinary people how to fine-tune open-source models. His approach didn't rely on new algorithms or expensive hardware. Instead, he focused on <strong>democratizing the process</strong>—showing that you can train a powerful model with just the cost of a meal, using tools like <a href="/en/tools/google-colab">Google Colab</a>.</p>
+
+<p>CJ's toolkit is a masterclass in efficiency:</p>
+<ul>
+<li><strong><a href="/en/tools/codex">Codex 5.5</a></strong> for top-level planning.</li>
+<li><strong><a href="/en/tools/deepseek">DeepSeek v4 Pro</a></strong> for massive data generation.</li>
+<li><strong><a href="/en/tools/unsloth">Unsloth</a></strong> as the training engine to maximize computing power.</li>
+<li><strong><a href="/en/tools/qwen">Qwen 3.5</a></strong> as the base model.</li>
+</ul>
+
+<p>With this stack, he trained a 4 billion-parameter model for just $173, achieving over 96% accuracy on specific tasks—outperforming general models 20 times its size. He then fine-tuned a voice assistant for a mere <strong>$11</strong>, proving that cost-efficiency isn't just a bonus—it's the new standard.</p>
+
+<h2>Why Small Models Dominate in 2026</h2>
+
+<p>Big tech companies are locked in an expensive arms race for larger models, but small models win in three key areas:</p>
+
+<h3>1. Cost-Effectiveness</h3>
+<p>Traditional reliance on big model APIs is costly. A cross-border customer service agent saw its monthly bill drop from $13,000 to $400 after switching to a fine-tuned small model. Companies like Knowunity reduced inference costs by 68% with small model fine-tuning.</p>
+
+<h3>2. Specialization</h3>
+<p>Small models excel in <strong>vertical tasks</strong>. A $173 fine-tuned 4B model outperforms a $20/month general model subscription in niche domains because it's tailored to your specific needs. It doesn't need to be smarter overall—just unbeatable in your target task.</p>
+
+<h3>3. Accessible Deployment</h3>
+<p>Small models can run on consumer hardware. A 3B-parameter model, after quantization, uses just 1.5–2GB of memory—meaning it can run smoothly on a Raspberry Pi 5 or even an iPhone 15 Pro at 40 tokens per second.</p>
+
+<h2>Practical Steps to Get Started with Small Models</h2>
+
+<p>Ready to build your own small model? Follow this actionable roadmap:</p>
+
+<h3>1. Start Small, Think Small</h3>
+<p>Resist the urge to chase billion-parameter models. Begin with <strong>1B–4B parameter models</strong>. This keeps costs low and helps you master the workflow without overwhelming resources.</p>
+
+<h3>2. Skip Expensive Hardware</h3>
+<p>Use <strong><a href="/en/tools/google-colab">Google Colab Pro</a></strong> instead of buying high-end GPUs. Colab's A100 GPUs cost just $0.6 per hour—no need for costly hardware investments.</p>
+
+<h3>3. Iterate Rapidly</h3>
+<p>Fine-tune <strong>7–10 models in a row</strong> to master the full pipeline of SFT (Supervised Fine-Tuning) and LoRA (Low-Rank Adaptation) + DPO (Direct Preference Optimization). Repetition is key to building intuition.</p>
+
+<h3>4. Leverage Toolchains</h3>
+<p>Divide and conquer: let <a href="/en/tools/codex">Codex</a> handle high-level planning, use <a href="/en/tools/deepseek">DeepSeek</a> for large-scale data generation.</p>
+
+<h3>5. Master Deployment</h3>
+<p>Learn about <strong>quantization</strong> for local inference and cache optimization. This ensures your model runs efficiently on low-cost hardware.</p>
+
+<h2>Build Your Data Factory: The Real Moat</h2>
+
+<p>The true competitive advantage isn't the fine-tuning technique—it's your <strong>data factory</strong>. Here's how to build one:</p>
+
+<ol>
+<li>Use <a href="/en/tools/codex">Codex</a> to create data templates.</li>
+<li>Let <a href="/en/tools/deepseek">DeepSeek</a> generate large volumes of data.</li>
+<li>Set up automatic quality checks to refine data for subsequent generations.</li>
+</ol>
+
+<p>This self-improving loop makes your data more accurate and cost-effective over time. For example, CJ built a 100M-token high-quality dataset for just $80—an industrial-grade process, not just simple data scraping.</p>
+
+<h2>Code Example: Fine-Tuning with Unsloth on Colab</h2>
+
+<p>To get you started, here's a simplified code example for fine-tuning a small model using <a href="/en/tools/unsloth">Unsloth</a> on <a href="/en/tools/google-colab">Google Colab</a>:</p>
+
+<pre><code class="language-python"># Install Unsloth
+!pip install unsloth
+
+# Load the base model (e.g., Qwen 3.5)
+from unsloth import FastLanguageModel
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name="Qwen/Qwen-3.5B",
+    max_seq_length=2048,
+)
+
+# Prepare your dataset (example: JSON format)
+import pandas as pd
+data = pd.read_json("your_dataset.json")
+
+# Fine-tune with LoRA
+model = FastLanguageModel.get_peft_model(
+    model,
+    r=16, # LoRA rank
+    lora_alpha=32,
+    target_modules=["q_proj", "v_proj"],
+    dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM",
+)
+
+# Train
+FastLanguageModel.train(
+    model=model,
+    tokenizer=tokenizer,
+    dataset=data,
+    batch_size=4,
+    epochs=3,
+    max_steps=1000,
+    learning_rate=2e-4,
+    save_path="./fine_tuned_model",
+)</code></pre>
+
+<h2>FAQ</h2>
+
+<h3>How much does it really cost to fine-tune a small model?</h3>
+<p>With <a href="/en/tools/unsloth">Unsloth</a> on <a href="/en/tools/google-colab">Google Colab</a>'s free T4 GPU, you can fine-tune a 1B-4B parameter model for $0. For faster training with A100 GPUs, Colab Pro costs $11.79/month. CJ's famous $173 fine-tuned model included all iterations, data generation, and experimentation — a one-time cost to build a model that outperforms $20/month subscriptions. The total cost for a complete fine-tuning project typically ranges from $0 to $200.</p>
+
+<h3>Which base model should I choose for fine-tuning?</h3>
+<p><a href="/en/tools/qwen">Qwen 3.5</a> (1.5B-4B) is currently the best choice for most use cases — it has an Apache 2.0 license, strong multilingual performance, and excellent fine-tuning results. Llama 3 (8B) is another solid option if you need more capacity. For coding-specific tasks, consider Qwen-Coder or DeepSeek-Coder variants. Start with the smallest model that can plausibly handle your task — you can always scale up.</p>
+
+<h3>Can a fine-tuned small model really replace GPT-5 or Claude?</h3>
+<p>For <strong>specific, narrow tasks</strong> — yes. CJ's $173 4B model achieved 96%+ accuracy on its target task, outperforming general models 20x its size. However, small models lack the broad knowledge and reasoning of large general models. The right strategy is: use fine-tuned small models for your core, repetitive, cost-sensitive tasks; use large models (GPT-5, Claude) for complex reasoning, planning, and tasks requiring broad knowledge.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/en/article/harness-engineering-guide">Harness Engineering: Empowering AI to Deliver Complete Projects →</a></p>
+</div>`,
+    contentZh: `
+<div class="meta-banner">
+  <span>📅 2026-06-16</span>
+  <span>📂 AI教程</span>
+  <span>⏱️ 8 分钟阅读</span>
+  <span>🎯 入门</span>
+</div>
+
+<p>2026年，AI行业充斥着科技巨头争相构建万亿参数巨兽的喧嚣。然而，精明的个体正在通过相反的方式悄然成功——利用<strong>小模型</strong>。这种转变不仅是趋势，更是我们对待AI开发方式的革命，使普通人也能以低成本参与其中。</p>
+
+<h2>小模型微调的崛起</h2>
+
+<p>转折点出现在独立开发者CJ于5月11日发布的一条推文，教普通人如何微调开源模型。他的方法不依赖新算法或昂贵硬件，而是专注于<strong>流程的民主化</strong>——证明只需一顿饭的成本，就能用<a href="/zh/tools/google-colab">Google Colab</a>等工具训练出强大的模型。</p>
+
+<p>CJ的工具组合堪称效率典范：</p>
+<ul>
+<li><strong><a href="/zh/tools/codex">Codex 5.5</a></strong> 负责顶层规划。</li>
+<li><strong><a href="/zh/tools/deepseek">DeepSeek v4 Pro</a></strong> 负责大规模数据生成。</li>
+<li><strong><a href="/zh/tools/unsloth">Unsloth</a></strong> 作为训练引擎最大化算力。</li>
+<li><strong><a href="/zh/tools/qwen">Qwen 3.5</a></strong> 作为基座模型。</li>
+</ul>
+
+<p>用这套组合，他以仅<strong>$173</strong>的成本训练出一个40亿参数模型，在特定任务上达到96%以上准确率——超越20倍于其规模的通才模型。随后他又以仅<strong>$11</strong>微调了一个语音助手，证明成本效益不仅是加分项——而是新标准。</p>
+
+<h2>为什么小模型在2026年占据主导</h2>
+
+<p>大科技公司陷入更大模型的昂贵军备竞赛，而小模型在三个关键领域胜出：</p>
+
+<h3>1. 成本效益</h3>
+<p>传统依赖大模型API成本高昂。某跨境客服代理切换到微调小模型后，月账单从$13,000降至$400。Knowunity等公司通过小模型微调降低了68%的推理成本。</p>
+
+<h3>2. 专业化</h3>
+<p>小模型在<strong>垂直任务</strong>中表现卓越。一个$173微调的4B模型在细分领域超越$20/月的通才模型订阅，因为它为你的特定需求量身定制。它不需要整体更聪明——只需在你的目标任务上无与伦比。</p>
+
+<h3>3. 可及的部署</h3>
+<p>小模型可以在消费级硬件上运行。一个3B参数模型量化后仅需1.5-2GB内存——意味着可以在树莓派5甚至iPhone 15 Pro上以每秒40个token的速度流畅运行。</p>
+
+<h2>小模型入门实操步骤</h2>
+
+<p>准备好构建自己的小模型了吗？按以下可行路线图操作：</p>
+
+<h3>1. 从小处着手</h3>
+<p>克制追逐十亿参数模型的冲动。从<strong>1B-4B参数模型</strong>开始。这能保持低成本，帮你在不耗尽资源的情况下掌握工作流。</p>
+
+<h3>2. 跳过昂贵硬件</h3>
+<p>使用<strong><a href="/zh/tools/google-colab">Google Colab Pro</a></strong>替代购买高端GPU。Colab的A100 GPU仅$0.6/小时——无需昂贵的硬件投资。</p>
+
+<h3>3. 快速迭代</h3>
+<p>连续微调<strong>7-10个模型</strong>来掌握SFT（监督微调）和LoRA（低秩适配）+DPO（直接偏好优化）的完整流程。重复是建立直觉的关键。</p>
+
+<h3>4. 利用工具链</h3>
+<p>分工协作：让<a href="/zh/tools/codex">Codex</a>处理顶层规划，用<a href="/zh/tools/deepseek">DeepSeek</a>进行大规模数据生成。</p>
+
+<h3>5. 掌握部署</h3>
+<p>学习<strong>量化</strong>用于本地推理和缓存优化。这确保你的模型在低成本硬件上高效运行。</p>
+
+<h2>构建你的数据工厂：真正的护城河</h2>
+
+<p>真正的竞争优势不是微调技术——而是你的<strong>数据工厂</strong>。构建方法如下：</p>
+
+<ol>
+<li>用<a href="/zh/tools/codex">Codex</a>创建数据模板。</li>
+<li>让<a href="/zh/tools/deepseek">DeepSeek</a>生成大量数据。</li>
+<li>设置自动质量检查来优化后续迭代的数据。</li>
+</ol>
+
+<p>这个自我改进的循环让你的数据随时间变得更准确、更经济。例如，CJ仅用$80就构建了1亿token的高质量数据集——这是工业级流程，而非简单的数据抓取。</p>
+
+<h2>代码示例：在Colab上用Unsloth微调</h2>
+
+<p>以下是使用<a href="/zh/tools/unsloth">Unsloth</a>在<a href="/zh/tools/google-colab">Google Colab</a>上微调小模型的简化代码示例：</p>
+
+<pre><code class="language-python"># 安装 Unsloth
+!pip install unsloth
+
+# 加载基座模型（如 Qwen 3.5）
+from unsloth import FastLanguageModel
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name="Qwen/Qwen-3.5B",
+    max_seq_length=2048,
+)
+
+# 准备数据集（示例：JSON格式）
+import pandas as pd
+data = pd.read_json("your_dataset.json")
+
+# 使用LoRA微调
+model = FastLanguageModel.get_peft_model(
+    model,
+    r=16, # LoRA秩
+    lora_alpha=32,
+    target_modules=["q_proj", "v_proj"],
+    dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM",
+)
+
+# 训练
+FastLanguageModel.train(
+    model=model,
+    tokenizer=tokenizer,
+    dataset=data,
+    batch_size=4,
+    epochs=3,
+    max_steps=1000,
+    learning_rate=2e-4,
+    save_path="./fine_tuned_model",
+)</code></pre>
+
+<h2>常见问题</h2>
+
+<h3>微调一个小模型实际需要多少成本？</h3>
+<p>使用<a href="/zh/tools/unsloth">Unsloth</a>在<a href="/zh/tools/google-colab">Google Colab</a>的免费T4 GPU上，可以$0微调1B-4B参数模型。如需更快的A100 GPU训练，Colab Pro仅$11.79/月。CJ著名的$173微调模型包含了所有迭代、数据生成和实验——一次性成本构建出超越$20/月订阅的模型。完整微调项目的总成本通常在$0到$200之间。</p>
+
+<h3>微调应该选择哪个基座模型？</h3>
+<p><a href="/zh/tools/qwen">Qwen 3.5</a>（1.5B-4B）目前是大多数场景的最佳选择——Apache 2.0许可、强大的多语言性能和优秀的微调效果。如果需要更大容量，Llama 3（8B）是另一个可靠选择。对于编程特定任务，考虑Qwen-Coder或DeepSeek-Coder变体。从能合理处理你任务的最小模型开始——随时可以扩大规模。</p>
+
+<h3>微调的小模型真的能替代GPT-5或Claude吗？</h3>
+<p>对于<strong>特定、狭窄的任务</strong>——是的。CJ的$173 4B模型在其目标任务上达到96%+准确率，超越了20倍于其规模的通才模型。然而，小模型缺乏大型通才模型的广泛知识和推理能力。正确的策略是：对核心、重复、成本敏感的任务使用微调小模型；对复杂推理、规划和需要广泛知识的任务使用大模型（GPT-5、Claude）。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/zh/article/harness-engineering-guide">Harness工程：赋能AI交付完整项目的实战指南 →</a></p>
+</div>`,
+  },
+
 };

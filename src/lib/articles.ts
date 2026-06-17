@@ -1981,4 +1981,30 @@ export const articles: Article[] = [
     toolsMentioned: ["codex", "docker", "puppeteer"],
     date: "2026-06-15",
   },
+
+  {
+    slug: "harness-engineering-guide",
+    title: "Harness Engineering: Empowering AI to Deliver Complete Projects with Practical Implementation",
+    titleZh: "Harness工程：赋能AI交付完整项目的实战指南",
+    description: "A comprehensive guide to Harness Engineering — the systematic approach to structuring AI development with context architecture, task orchestration, feedback mechanisms, and architectural guardrails for reliable end-to-end project delivery.",
+    descriptionZh: "Harness工程完整指南——通过上下文架构、任务编排、反馈机制和架构护栏构建可靠的AI开发体系，实现端到端项目交付。",
+    category: "ai-tutorials",
+    tags: ["harness-engineering", "ai-development", "context-architecture", "task-orchestration", "codex", "workflow"],
+    difficulty: "intermediate",
+    toolsMentioned: ["codex", "cursor", "puppeteer", "husky"],
+    date: "2026-06-16",
+  },
+  {
+    slug: "small-models-2026-opportunity",
+    title: "Seize the 2026 AI Opportunity: Small Models Are the Gateway for Ordinary People",
+    titleZh: "抓住2026年AI机遇：小模型是普通人的入场券",
+    description: "How fine-tuning small open-source models (1B-4B parameters) with tools like Unsloth and Qwen on Google Colab can outperform giant models at a fraction of the cost — practical roadmap with code examples.",
+    descriptionZh: "如何使用Unsloth和Qwen在Google Colab上微调小型开源模型（1B-4B参数），以极低成本超越巨型模型——含代码示例的实操路线图。",
+    category: "ai-tutorials",
+    tags: ["small-models", "fine-tuning", "unsloth", "qwen", "google-colab", "lora"],
+    difficulty: "beginner",
+    toolsMentioned: ["unsloth", "qwen", "google-colab", "codex", "deepseek"],
+    date: "2026-06-16",
+  },
+
 ];
