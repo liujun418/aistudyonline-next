@@ -33253,4 +33253,545 @@ FastLanguageModel.train(
 </div>`,
   },
 
+
+  // ====== Article: Mastering App Development with Codex ======
+  "mastering-app-dev-with-codex": {
+    content: `
+<div class="meta-banner">
+  <span>📅 2026-06-17</span>
+  <span>📂 AI Tutorials</span>
+  <span>⏱️ 10 min read</span>
+  <span>🎯 Intermediate</span>
+</div>
+
+<p>In the rapidly evolving world of AI-driven development, <a href="/en/tools/codex">Codex</a> has revolutionized how we build applications. This guide takes you through a practical, hands-on journey of creating an AI nail art try-on app from scratch and launching it on the App Store, leveraging Codex's capabilities and ecosystem.</p>
+
+<h2>1. Development Preparation: Setting Up Codex for Success</h2>
+
+<p>First, familiarize yourself with Codex's user-friendly interface. It features a <strong>minimalist design</strong> with two main sections: a project panel on the left and a chat interface on the right. Unlike traditional IDEs cluttered with code files and markdown documents, Codex is intuitive, making it accessible even for non-technical users.</p>
+
+<h3>Essential Plugins for Codex</h3>
+
+<p>To unlock Codex's full potential, install these plugins from the plugin center:</p>
+
+<ul>
+<li><strong><a href="/en/tools/superpower">Superpower</a></strong>: Acts as a product manager, breaking down vague ideas into structured development plans.</li>
+<li><strong>Computer Use</strong>: Enables AI to directly control your computer for tasks like file management and form filling.</li>
+<li><strong>Chrome</strong>: Allows AI to interact with your browser for web-based operations.</li>
+<li><strong>Build iOS Apps</strong>: Lets you preview and test your app in an iOS simulator.</li>
+</ul>
+
+<pre><code class="language-text">Go to Codex Plugin Center → Search for each plugin → Click "Install".</code></pre>
+
+<h2>2. Project Initiation: Creating Your App's Foundation</h2>
+
+<p>Start by creating a project document to organize your work:</p>
+
+<ol>
+<li>In Codex, click <strong>"New Project"</strong> and name it (e.g., "Lala Nail").</li>
+<li>Select the <strong>"5.5 Model"</strong> with <strong>"Medium Reasoning Mode"</strong>—a balance of speed and accuracy.</li>
+</ol>
+
+<p>Now, define your app's purpose. For this tutorial, we'll build an <strong>AI Nail Art Try-On App</strong> that lets users visualize nail designs virtually.</p>
+
+<h2>3. Requirement Alignment: Shaping Your App with Superpower</h2>
+
+<p>Using the <a href="/en/tools/superpower">Superpower</a> plugin, transform your idea into a detailed plan:</p>
+
+<ol>
+<li>Activate Superpower and input your prompt:</li>
+</ol>
+
+<pre><code class="language-text">I want to develop an AI nail art try-on product and publish it on the App Store.</code></pre>
+
+<p>Superpower will conduct a brainstorming session, asking questions like:</p>
+
+<ul>
+<li><em>"What's the core goal?"</em> (e.g., "Enable regular users to try on nail designs easily.")</li>
+<li><em>"How should designs be generated?"</em> (e.g., "AI-generated each time for uniqueness.")</li>
+</ul>
+
+<p>After confirming all details, Superpower delivers a <strong>comprehensive development plan</strong> covering:</p>
+
+<ul>
+<li><strong>Workflow Design</strong>: From user onboarding to design generation and sharing.</li>
+<li><strong>Technical Stack</strong>: <a href="/en/tools/expo">Expo</a>, <a href="/en/tools/react-native">React Native</a>, <a href="/en/tools/supabase">Supabase</a>, and OpenAI's Image2 model.</li>
+<li><strong>Core Features</strong>: User authentication, design generation, saving favorites, and points system.</li>
+</ul>
+
+<h2>4. Frontend Visual Alignment: Designing with AI</h2>
+
+<p>Before coding, align on UI/UX with AI-generated mockups:</p>
+
+<pre><code class="language-text">Generate frontend mockups for the AI nail art app, focusing on a minimalist, elegant style. Include a home screen, try-on interface, and settings page.</code></pre>
+
+<p>Refine the designs by providing feedback (e.g., <em>"Lower the logo for more whitespace"</em>, <em>"Adjust the hand model's proportion"</em>). Once finalized, ask Codex to generate all required screens:</p>
+
+<pre><code class="language-text">Create all app screens (home, try-on, favorites, settings) based on the approved mockup.</code></pre>
+
+<h2>5. Coding Phase: Building Frontend and Backend</h2>
+
+<p>With designs locked in, start development:</p>
+
+<h3>Frontend Development</h3>
+
+<p>Generate the frontend with this prompt:</p>
+
+<pre><code class="language-text">Build the Expo/React Native frontend for the AI nail art app, using the finalized mockups. Include navigation, button interactions, and screen transitions.</code></pre>
+
+<p>After ~44 minutes, Codex will produce a functional frontend. Test it using the <strong>Build iOS Apps</strong> plugin:</p>
+
+<pre><code class="language-text">Use the Build iOS Apps plugin to preview the app in the iOS simulator.</code></pre>
+
+<p>If issues arise (e.g., unresponsive buttons), screenshot the problem and prompt:</p>
+
+<pre><code class="language-text">Fix the button interaction bug on the try-on screen as shown in this screenshot.</code></pre>
+
+<h3>Backend Development</h3>
+
+<p>For the backend, enable <strong>Plan Mode</strong> to structure tasks and run:</p>
+
+<pre><code class="language-text">Continue developing the app step-by-step. Outline the remaining tasks for backend, including image upload, AI generation, and points system.</code></pre>
+
+<p>Codex will handle:</p>
+
+<ul>
+<li><strong><a href="/en/tools/supabase">Supabase</a> Integration</strong>: For user data and storage.</li>
+<li><strong>Image Upload</strong>: Using Supabase Storage.</li>
+<li><strong>AI Generation</strong>: Leveraging OpenAI's Image2 model via Edge Functions.</li>
+<li><strong>Points System</strong>: Tracking user activity and rewards.</li>
+</ul>
+
+<h2>6. Optimizing Workflow: Managing Long Context</h2>
+
+<p>As the project grows, Codex may slow down due to long context. To fix this:</p>
+
+<ol>
+<li>Open a <strong>new chat window</strong> in your project.</li>
+<li>Use this prompt to resume work efficiently:</li>
+</ol>
+
+<pre><code class="language-text">This is a project: [Project Name]
+Please summarize the context:
+1. What's the current goal?
+2. What's been completed?
+3. What's pending?
+4. Key files involved.
+5. Next steps.</code></pre>
+
+<h2>7. Launching Your App: From Testing to App Store</h2>
+
+<p>Finally, prepare your app for launch:</p>
+
+<ol>
+<li><strong>TestFlight Deployment</strong>: Use Codex to upload the test build to App Store Connect:</li>
+</ol>
+
+<pre><code class="language-text">Deploy the app to TestFlight via Expo, handling all App Store Connect configurations.</code></pre>
+
+<ol start="2">
+<li><strong>Automate Form Filling</strong> (optional): If manual steps feel tedious, let Codex control your computer:</li>
+</ol>
+
+<pre><code class="language-text">Automatically fill out the App Store submission form in Chrome.</code></pre>
+
+<ol start="3">
+<li><strong>Submit for Review</strong>: After uploading, submit your app for App Store review. It typically takes 2–3 days to go live.</li>
+</ol>
+
+<h2>FAQ</h2>
+
+<h3>Can I really build and launch an app with Codex if I have no coding experience?</h3>
+<p>Yes — that's exactly what this guide demonstrates. With <a href="/en/tools/superpower">Superpower</a> handling the planning phase, <a href="/en/tools/codex">Codex</a> generating the actual code, and <a href="/en/tools/expo">Expo</a>'s managed build service handling the native configuration, the entire technical stack is abstracted away. You provide the idea and visual feedback; the AI handles implementation. However, expect to spend time iterating on designs, testing functionality, and learning the App Store submission process — plan for 2-4 weeks from idea to launch.</p>
+
+<h3>What are the costs involved in launching an app built with Codex?</h3>
+<p>The main costs are: Codex subscription (for Claude/GPT API access), <a href="/en/tools/supabase">Supabase</a> (free tier is sufficient for launch), <a href="/en/tools/expo">Expo</a> EAS Build ($99/month for cloud builds, or free for local builds), Apple Developer Program ($99/year), and AI image generation API costs (OpenAI Image2 or similar). A minimal budget is approximately $200-300 to launch, with ongoing costs around $50-150/month depending on usage.</p>
+
+<h3>How does Codex compare to using Claude Code or Cursor for app development?</h3>
+<p><a href="/en/tools/codex">Codex</a> is purpose-built for autonomous, end-to-end project execution with plugins for every phase (planning via Superpower, coding, iOS simulation, deployment). <a href="/en/tools/claude">Claude Code</a> excels at code understanding and debugging within existing projects. <a href="/en/tools/cursor">Cursor</a> is best for inline AI-assisted coding within a traditional IDE. For building an app from scratch and launching it, Codex's plugin ecosystem and autonomous workflow make it the most complete solution. For enhancing an existing codebase or pair-programming, Claude Code or Cursor may be better fits.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/en/article/claude-code-free-unlimited-guide">How to Use Claude Code for Free (Unlimited Access) →</a></p>
+</div>`,
+    contentZh: `
+<div class="meta-banner">
+  <span>📅 2026-06-17</span>
+  <span>📂 AI教程</span>
+  <span>⏱️ 10 分钟阅读</span>
+  <span>🎯 中级</span>
+</div>
+
+<p>在快速发展的AI驱动开发世界中，<a href="/zh/tools/codex">Codex</a>彻底改变了我们构建应用的方式。本指南带你完成一个实操之旅——从零开始创建AI美甲试戴应用，并利用Codex的能力和生态将其发布到App Store。</p>
+
+<h2>1. 开发准备：为成功配置Codex</h2>
+
+<p>首先熟悉Codex的用户友好界面。它采用<strong>极简设计</strong>，包含两个主要区域：左侧项目面板和右侧聊天界面。与传统IDE堆满代码文件和markdown文档不同，Codex直观易用，即使非技术用户也能轻松上手。</p>
+
+<h3>Codex必备插件</h3>
+
+<p>要释放Codex的全部潜力，从插件中心安装这些插件：</p>
+
+<ul>
+<li><strong><a href="/zh/tools/superpower">Superpower</a></strong>：充当产品经理，将模糊想法分解为结构化开发计划。</li>
+<li><strong>Computer Use</strong>：让AI直接控制你的电脑，进行文件管理和表单填写等任务。</li>
+<li><strong>Chrome</strong>：允许AI与浏览器交互进行Web操作。</li>
+<li><strong>Build iOS Apps</strong>：让你在iOS模拟器中预览和测试应用。</li>
+</ul>
+
+<pre><code class="language-text">进入Codex插件中心 → 搜索每个插件 → 点击"安装"。</code></pre>
+
+<h2>2. 项目启动：创建应用基础</h2>
+
+<p>首先创建项目文档来组织工作：</p>
+
+<ol>
+<li>在Codex中，点击<strong>"新建项目"</strong>并命名（如"Lala Nail"）。</li>
+<li>选择<strong>"5.5模型"</strong>配合<strong>"中等推理模式"</strong>——速度与准确性的平衡。</li>
+</ol>
+
+<p>现在定义应用目标。本教程中，我们将构建一个<strong>AI美甲试戴应用</strong>，让用户虚拟预览美甲设计。</p>
+
+<h2>3. 需求对齐：用Superpower塑造你的应用</h2>
+
+<p>使用<a href="/zh/tools/superpower">Superpower</a>插件将你的想法转化为详细计划：</p>
+
+<ol>
+<li>激活Superpower并输入提示：</li>
+</ol>
+
+<pre><code class="language-text">我想开发一个AI美甲试戴产品并发布到App Store。</code></pre>
+
+<p>Superpower会进行头脑风暴，提问如：</p>
+<ul>
+<li><em>"核心目标是什么？"</em>（如"让普通用户轻松试戴美甲设计。"）</li>
+<li><em>"设计应如何生成？"</em>（如"每次AI生成以保证独特性。"）</li>
+</ul>
+
+<p>确认所有细节后，Superpower交付一份<strong>全面的开发计划</strong>，涵盖：</p>
+<ul>
+<li><strong>工作流设计</strong>：从用户引导到设计生成和分享。</li>
+<li><strong>技术栈</strong>：<a href="/zh/tools/expo">Expo</a>、<a href="/zh/tools/react-native">React Native</a>、<a href="/zh/tools/supabase">Supabase</a>和OpenAI Image2模型。</li>
+<li><strong>核心功能</strong>：用户认证、设计生成、收藏和积分系统。</li>
+</ul>
+
+<h2>4. 前端视觉对齐：用AI设计</h2>
+
+<p>在编码前，用AI生成的模型图对齐UI/UX：</p>
+
+<pre><code class="language-text">为AI美甲应用生成前端模型图，聚焦极简优雅风格。包含首页、试戴界面和设置页面。</code></pre>
+
+<p>通过反馈优化设计（如<em>"降低logo位置增加留白"</em>、<em>"调整手部模型比例"</em>）。确定后，让Codex生成所有需要的页面。</p>
+
+<h2>5. 编码阶段：构建前后端</h2>
+
+<p>设计确定后，开始开发：</p>
+
+<h3>前端开发</h3>
+
+<pre><code class="language-text">基于确定的模型图，构建AI美甲应用的Expo/React Native前端。包含导航、按钮交互和页面切换。</code></pre>
+
+<p>约44分钟后，Codex会产出功能性前端。用<strong>Build iOS Apps</strong>插件测试，如遇问题截图反馈即可修复。</p>
+
+<h3>后端开发</h3>
+
+<p>启用<strong>Plan Mode</strong>结构化任务，Codex将处理：</p>
+<ul>
+<li><strong><a href="/zh/tools/supabase">Supabase</a>集成</strong>：用户数据和存储。</li>
+<li><strong>图片上传</strong>：使用Supabase Storage。</li>
+<li><strong>AI生成</strong>：通过Edge Functions调用OpenAI Image2。</li>
+<li><strong>积分系统</strong>：追踪用户活动和奖励。</li>
+</ul>
+
+<h2>6. 优化工作流：管理长上下文</h2>
+
+<p>项目增长后Codex可能因长上下文变慢。解决方法：打开<strong>新聊天窗口</strong>，用总结提示恢复工作。</p>
+
+<h2>7. 发布应用：从测试到App Store</h2>
+
+<ol>
+<li><strong>TestFlight部署</strong>：通过Expo上传测试版本到App Store Connect。</li>
+<li><strong>自动填表</strong>（可选）：让Codex在Chrome中自动填写提交表单。</li>
+<li><strong>提交审核</strong>：上传后提交App Store审核，通常2-3天上架。</li>
+</ol>
+
+<h2>常见问题</h2>
+
+<h3>没有任何编程经验，真的能用Codex构建并发布应用吗？</h3>
+<p>可以——这正是本指南所展示的。用<a href="/zh/tools/superpower">Superpower</a>处理规划阶段，<a href="/zh/tools/codex">Codex</a>生成实际代码，<a href="/zh/tools/expo">Expo</a>的托管构建服务处理原生配置，整个技术栈都被抽象掉了。你提供想法和视觉反馈，AI处理实现。但需要花时间迭代设计、测试功能和学习App Store提交流程——从想法到发布计划2-4周。</p>
+
+<h3>用Codex构建并发布应用涉及哪些成本？</h3>
+<p>主要成本：Codex订阅（Claude/GPT API访问）、<a href="/zh/tools/supabase">Supabase</a>（免费层足够发布）、<a href="/zh/tools/expo">Expo</a> EAS Build（云端构建$99/月，本地构建免费）、Apple开发者计划（$99/年）、AI图像生成API费用。最低预算约$200-300即可发布，持续成本约$50-150/月。</p>
+
+<h3>Codex与Claude Code或Cursor在应用开发上有什么区别？</h3>
+<p><a href="/zh/tools/codex">Codex</a>专为自主端到端项目执行而设计，每个阶段都有插件（Superpower规划、编码、iOS模拟、部署）。<a href="/zh/tools/claude">Claude Code</a>擅长现有项目中的代码理解和调试。<a href="/zh/tools/cursor">Cursor</a>最适合传统IDE中的内联AI辅助编码。对于从零构建并发布应用，Codex的插件生态和自主工作流是最完整的方案。对于增强现有代码库或结对编程，Claude Code或Cursor可能更合适。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/zh/article/claude-code-free-unlimited-guide">如何免费使用Claude Code（无限制访问）→</a></p>
+</div>`,
+  },
+
+  // ====== Article: Claude Code Free Unlimited Guide ======
+  "claude-code-free-unlimited-guide": {
+    content: `
+<div class="meta-banner">
+  <span>📅 2026-06-17</span>
+  <span>📂 AI Tutorials</span>
+  <span>⏱️ 8 min read</span>
+  <span>🎯 Beginner</span>
+</div>
+
+<p><a href="/en/tools/claude">Claude Code</a> has emerged as a powerful AI coding assistant, but many developers are unaware that free, unlimited access is achievable without paid subscriptions. This guide breaks down the exact steps to unlock Claude Code's full potential at no cost, with actionable workflows, tool integrations, and code examples to maximize productivity.</p>
+
+<h2>Why Claude Code Stands Out for Free Users</h2>
+
+<p>Before diving into setup, let's highlight why Claude Code is worth your time—even in its free form:</p>
+
+<ul>
+<li><strong>Long Context Window</strong>: Supports up to 200K tokens, ideal for multi-file projects or complex codebases.</li>
+<li><strong>Language Agnostic</strong>: Excels in Python, JavaScript, Java, Rust, and 20+ programming languages.</li>
+<li><strong>Zero Restrictions</strong>: No daily token limits or feature caps for the free method outlined below.</li>
+<li><strong>Code Safety</strong>: Built-in syntax validation and error detection to avoid buggy outputs.</li>
+</ul>
+
+<h2>Prerequisites for Free Access</h2>
+
+<p>You only need two things to get started—no technical expertise required:</p>
+
+<ol>
+<li>A <strong>free Anthropic account</strong> (sign up at anthropic.com—no credit card needed).</li>
+<li>A web browser (Chrome, Firefox, or Edge recommended) or VS Code (for IDE integration).</li>
+</ol>
+
+<h2>Step 1: Access Claude Code via Anthropic's Web Interface (No Installation)</h2>
+
+<p>The simplest way to use Claude Code for free is through Anthropic's official web platform—no downloads or plugins required.</p>
+
+<h3>Step-by-Step Web Setup</h3>
+
+<ol>
+<li>Go to claude.ai and log in with your Anthropic account.</li>
+<li>Click the <strong>"+ New Chat"</strong> button in the top-right corner.</li>
+<li>From the "Model" dropdown, select <strong>"Claude 3 Opus"</strong> or <strong>"Claude 3 Sonnet"</strong> (both include full Claude Code functionality).</li>
+<li>Enable code mode by typing this prompt in the chat box:</li>
+</ol>
+
+<pre><code class="language-text">Enable Claude Code mode. I need help with [your task]. Provide syntax-highlighted code, explanations, and test cases.</code></pre>
+
+<h3>Example Web Workflow: Debugging a Python Function</h3>
+
+<p>Submit this prompt to test Claude Code's capabilities:</p>
+
+<pre><code class="language-text">Debug this Python function — it's supposed to calculate the factorial of a number but returns an error. Fix it and add test cases:
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n)</code></pre>
+
+<p>Claude Code will respond with the fixed code, error explanation, and tests:</p>
+
+<pre><code class="language-python"># Fixed function (removed infinite recursion by changing n to n-1)
+def factorial(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("Factorial is only defined for non-negative integers")
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Test cases
+print(factorial(5))  # Output: 120
+print(factorial(0))  # Output: 1
+try:
+    factorial(-3)
+except ValueError as e:
+    print(e)  # Output: Factorial is only defined for non-negative integers</code></pre>
+
+<h2>Step 2: Unlimited IDE Integration (VS Code, Free Forever)</h2>
+
+<p>For a seamless coding experience, integrate Claude Code directly into VS Code—no paid extensions required.</p>
+
+<h3>Step-by-Step VS Code Setup</h3>
+
+<ol>
+<li>Open VS Code and go to the Extensions tab (Ctrl+Shift+X).</li>
+<li>Search for <strong>"Claude AI"</strong> (by Anthropic) and click "Install".</li>
+<li>After installation, click the Claude icon in the left sidebar.</li>
+<li>Click "Log in with Anthropic"—this opens a browser window to authenticate your free account.</li>
+<li>Once logged in, enable code mode by adding this to your VS Code settings:</li>
+</ol>
+
+<pre><code class="language-json">"claude.codeMode": true,
+"claude.defaultModel": "claude-3-sonnet-20240229"</code></pre>
+
+<h3>Example VS Code Workflow: Generating a FastAPI Endpoint</h3>
+
+<p>Right-click in the file, select <strong>"Ask Claude Code"</strong>, and type:</p>
+
+<pre><code class="language-text">Generate a FastAPI endpoint for user registration with Pydantic validation. Include email, password (hashed), and full_name fields. Add CORS middleware.</code></pre>
+
+<p>Claude Code will auto-generate the complete endpoint with Pydantic models, bcrypt password hashing, CORS middleware, and proper error handling — ready to run immediately.</p>
+
+<h2>Step 3: Advanced Free Usage — Batch Processing & Multi-File Projects</h2>
+
+<p>Claude Code's free version supports complex workflows like batch processing and multi-file analysis:</p>
+
+<h3>Batch Processing: Refactor Multiple Files</h3>
+
+<ol>
+<li>In VS Code, open all files you want to refactor (e.g., <code>utils.py</code>, <code>service.py</code>, <code>controller.py</code>).</li>
+<li>Right-click in the Claude sidebar and select <strong>"Analyze Open Files"</strong>.</li>
+<li>Submit your refactoring prompt — Claude Code will process all files simultaneously and apply changes directly.</li>
+</ol>
+
+<h3>Multi-File Project Support: Debug Cross-File Dependencies</h3>
+
+<p>If your project has dependencies across files, share the relevant code snippets in one prompt:</p>
+
+<pre><code class="language-text">Here's my database.py file:
+[Paste content of database.py]
+
+And my app.py file:
+[Paste content of app.py]
+
+I'm getting a "ConnectionRefusedError" when running app.py. Fix the database connection logic and update both files to work together.</code></pre>
+
+<h2>Step 4: Avoid Common Pitfalls (Free User Pro Tips)</h2>
+
+<ol>
+<li><strong>Be Specific</strong>: Claude Code's free version has no token caps, but vague prompts lead to inefficient outputs. Always include the language/framework, desired outcome, and constraints.</li>
+<li><strong>Use Code Blocks for Clarity</strong>: When sharing existing code, wrap it in triple backticks to help Claude Code parse it correctly.</li>
+<li><strong>Leverage Context Retention</strong>: Claude Code remembers the entire chat history, so you can iterate on previous outputs (e.g., "Modify the FastAPI endpoint you generated to include a login route").</li>
+<li><strong>Offline Workaround</strong>: If you need to use Claude Code without internet, copy the generated code to a local file — all functionality works offline once code is generated.</li>
+</ol>
+
+<h2>FAQ</h2>
+
+<h3>Is Claude Code really completely free with no limits?</h3>
+<p>Yes — Anthropic's free tier includes unlimited access to <a href="/en/tools/claude">Claude Code</a> functionality through both the web interface and VS Code extension. There are no daily token limits, no feature caps on code generation, and no credit card required. The free tier uses Claude 3 Sonnet and Opus models for coding tasks. The only practical limitation is rate limiting during peak usage, which may occasionally slow response times but doesn't block access.</p>
+
+<h3>What's the difference between Claude Code in the browser vs VS Code?</h3>
+<p>The browser version at claude.ai is best for quick debugging, learning, and one-off coding tasks — no installation needed, accessible from any device. The VS Code extension provides deeper IDE integration: right-click context menus, inline code insertion, multi-file analysis, and the ability to apply changes directly to your project files. For serious development work, the VS Code integration is significantly more productive.</p>
+
+<h3>How does Claude Code compare to Codex for free users?</h3>
+<p><a href="/en/tools/claude">Claude Code</a> (free) excels at code understanding, debugging, refactoring, and explaining complex code — it's ideal for enhancing existing projects and learning. <a href="/en/tools/codex">Codex</a> (paid) is purpose-built for autonomous end-to-end project creation with plugins for planning, coding, testing, and deployment. For free users who want to build apps from scratch and launch them, Codex's paid tier is better suited. For free users who need a powerful coding assistant integrated into their existing workflow, Claude Code is the superior choice.</p>
+
+<div class="next-step">
+<p><strong>Next Read:</strong> <a href="/en/article/mastering-app-dev-with-codex">Mastering App Development with Codex: Zero to App Store Launch →</a></p>
+</div>`,
+    contentZh: `
+<div class="meta-banner">
+  <span>📅 2026-06-17</span>
+  <span>📂 AI教程</span>
+  <span>⏱️ 8 分钟阅读</span>
+  <span>🎯 入门</span>
+</div>
+
+<p><a href="/zh/tools/claude">Claude Code</a>已成为强大的AI编程助手，但许多开发者不知道无需付费订阅就可以实现免费、无限制的访问。本指南分解解锁Claude Code全部潜力且零成本的具体步骤，包含可操作的工作流、工具集成和代码示例。</p>
+
+<h2>为什么Claude Code对免费用户突出</h2>
+
+<ul>
+<li><strong>长上下文窗口</strong>：支持最高200K tokens，适合多文件项目或复杂代码库。</li>
+<li><strong>语言无关</strong>：精通Python、JavaScript、Java、Rust等20+编程语言。</li>
+<li><strong>零限制</strong>：下述免费方法没有每日token限制或功能上限。</li>
+<li><strong>代码安全</strong>：内置语法验证和错误检测，避免bug输出。</li>
+</ul>
+
+<h2>免费访问的前提条件</h2>
+
+<p>只需两样东西即可开始——无需技术专业知识：</p>
+<ol>
+<li>一个<strong>免费Anthropic账号</strong>（在anthropic.com注册——无需信用卡）。</li>
+<li>一个Web浏览器或VS Code（用于IDE集成）。</li>
+</ol>
+
+<h2>第1步：通过Anthropic Web界面访问Claude Code（无需安装）</h2>
+
+<p>使用Claude Code免费的最简单方式是通过Anthropic官方Web平台——无需下载或插件。</p>
+
+<h3>Web设置步骤</h3>
+<ol>
+<li>前往claude.ai，用Anthropic账号登录。</li>
+<li>点击右上角<strong>"+ New Chat"</strong>按钮。</li>
+<li>从"Model"下拉菜单选择<strong>"Claude 3 Opus"</strong>或<strong>"Claude 3 Sonnet"</strong>。</li>
+<li>输入提示启用代码模式。</li>
+</ol>
+
+<h3>示例：调试Python函数</h3>
+
+<pre><code class="language-text">调试这个Python函数——它应该计算阶乘但返回错误。修复并添加测试用例：
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n)</code></pre>
+
+<p>Claude Code将返回修复后的代码、错误解释和测试：</p>
+
+<pre><code class="language-python"># 修复后的函数（将n改为n-1消除无限递归）
+def factorial(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("阶乘仅适用于非负整数")
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# 测试用例
+print(factorial(5))  # 输出: 120
+print(factorial(0))  # 输出: 1</code></pre>
+
+<h2>第2步：无限制IDE集成（VS Code，永久免费）</h2>
+
+<p>将Claude Code直接集成到VS Code中——无需付费扩展。</p>
+
+<h3>VS Code设置步骤</h3>
+<ol>
+<li>打开VS Code，进入扩展标签（Ctrl+Shift+X）。</li>
+<li>搜索<strong>"Claude AI"</strong>（Anthropic出品）并点击"安装"。</li>
+<li>点击左侧边栏的Claude图标，选择"Log in with Anthropic"。</li>
+<li>登录后在VS Code设置中启用代码模式。</li>
+</ol>
+
+<h3>示例：生成FastAPI端点</h3>
+<p>右键点击文件选择<strong>"Ask Claude Code"</strong>，输入提示即可自动生成完整的FastAPI端点——包含Pydantic模型、bcrypt密码哈希、CORS中间件和错误处理，立即可运行。</p>
+
+<h2>第3步：高级免费用法——批量处理与多文件项目</h2>
+
+<p>Claude Code免费版支持批量处理和多文件分析等复杂工作流：</p>
+
+<h3>批量处理：重构多个文件</h3>
+<p>在VS Code中打开所有要重构的文件，右键Claude侧边栏选择<strong>"Analyze Open Files"</strong>，提交重构提示——Claude Code将同时处理所有文件并直接应用更改。</p>
+
+<h3>多文件项目：调试跨文件依赖</h3>
+<p>在单个提示中共享相关代码片段，Claude Code会修复连接逻辑并同时更新所有相关文件。</p>
+
+<h2>第4步：避免常见陷阱（免费用户专业建议）</h2>
+
+<ol>
+<li><strong>具体明确</strong>：始终包含语言/框架、期望结果和约束条件。</li>
+<li><strong>用代码块提高清晰度</strong>：共享现有代码时用三反引号包裹。</li>
+<li><strong>利用上下文保留</strong>：Claude Code记住整个聊天历史，可迭代优化之前的输出。</li>
+<li><strong>离线方案</strong>：如需无网络使用，将生成的代码复制到本地文件。</li>
+</ol>
+
+<h2>常见问题</h2>
+
+<h3>Claude Code真的完全免费无限制吗？</h3>
+<p>是的——Anthropic的免费层包括通过Web界面和VS Code扩展对<a href="/zh/tools/claude">Claude Code</a>功能的无限制访问。没有每日token限制，没有代码生成功能上限，也不需要信用卡。免费层使用Claude 3 Sonnet和Opus模型进行编码任务。唯一的实际限制是高峰使用期间的速率限制，可能偶尔减慢响应时间但不会阻止访问。</p>
+
+<h3>浏览器版和VS Code版的Claude Code有什么区别？</h3>
+<p>浏览器版（claude.ai）最适合快速调试、学习和一次性编码任务——无需安装，任何设备可访问。VS Code扩展提供更深的IDE集成：右键上下文菜单、内联代码插入、多文件分析以及直接应用到项目文件的能力。对于严肃的开发工作，VS Code集成效率显著更高。</p>
+
+<h3>Claude Code与Codex在免费使用上如何比较？</h3>
+<p><a href="/zh/tools/claude">Claude Code</a>（免费）擅长代码理解、调试、重构和解释复杂代码——非常适合增强现有项目和学习。<a href="/zh/tools/codex">Codex</a>（付费）专为自主端到端项目创建而设计，具有规划、编码、测试和部署插件。对于想要从零构建并发布应用的免费用户，Codex的付费层更合适。对于需要强大编码助手集成到现有工作流中的免费用户，Claude Code是更优选择。</p>
+
+<div class="next-step">
+<p><strong>下一篇：</strong> <a href="/zh/article/mastering-app-dev-with-codex">用Codex掌握应用开发：从零到App Store上架 →</a></p>
+</div>`,
+  },
+
 };

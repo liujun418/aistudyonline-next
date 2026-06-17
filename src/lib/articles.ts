@@ -2007,4 +2007,30 @@ export const articles: Article[] = [
     date: "2026-06-16",
   },
 
+
+  {
+    slug: "mastering-app-dev-with-codex",
+    title: "Mastering App Development with Codex: A Step-by-Step Guide from Zero to App Store Launch",
+    titleZh: "用Codex掌握应用开发：从零到App Store上架的逐步指南",
+    description: "A hands-on tutorial building an AI nail art try-on app with Codex — covering Superpower for planning, Expo/React Native for frontend, Supabase for backend, and TestFlight deployment to the App Store.",
+    descriptionZh: "用Codex构建AI美甲试戴应用的实操教程——涵盖Superpower规划、Expo/React Native前端、Supabase后端和TestFlight上架App Store。",
+    category: "ai-tutorials",
+    tags: ["codex", "app-development", "expo", "react-native", "supabase", "ios", "mobile"],
+    difficulty: "intermediate",
+    toolsMentioned: ["codex", "superpower", "expo", "react-native", "supabase", "openai"],
+    date: "2026-06-17",
+  },
+  {
+    slug: "claude-code-free-unlimited-guide",
+    title: "How to Use Claude Code for Free (Unlimited Access): A Step-by-Step Practical Guide",
+    titleZh: "如何免费使用Claude Code（无限制访问）：逐步实操指南",
+    description: "A complete guide to using Claude Code completely free with no limits — covering web interface, VS Code integration, batch processing, multi-file projects, and common pitfalls with code examples.",
+    descriptionZh: "完全免费无限制使用Claude Code的完整指南——涵盖Web界面、VS Code集成、批量处理、多文件项目和常见陷阱，含代码示例。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "free", "vscode", "coding-assistant", "debugging", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "vscode"],
+    date: "2026-06-17",
+  },
+
 ];
