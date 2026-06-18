@@ -2033,4 +2033,29 @@ export const articles: Article[] = [
     date: "2026-06-17",
   },
 
+  {
+    slug: "open-source-claude-design-local-deploy",
+    title: "Open-Source Claude Design Local Deployment Guide: Free Self-Hosted AI UI Design Tool",
+    titleZh: "开源Claude Design本地部署指南：免费自托管AI UI设计工具",
+    description: "A complete guide to deploying the open-source Claude Design locally on your PC for unlimited, free AI-powered UI design generation — covering environment setup, model configuration, and common pitfalls.",
+    descriptionZh: "在本地PC上部署开源Claude Design的完整指南——实现无限免费AI界面设计生成，涵盖环境配置、模型对接和常见问题解决。",
+    category: "ai-tutorials",
+    tags: ["claude-design", "self-hosted", "open-source", "ollama", "deployment", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["ollama", "claude-design"],
+    date: "2026-06-18",
+  },
+  {
+    slug: "one-claude-code-two-roles",
+    title: "One Claude Code, Two Roles: Code Writing and Reviewing Without Codex",
+    titleZh: "一个Claude Code，两种角色：无需Codex也能写代码和审代码",
+    description: "Learn how to use a single Claude Code model to both write and review code by leveraging isolated contexts and a dedicated code-review agent — no Codex required.",
+    descriptionZh: "学习如何通过隔离上下文和专用代码审查代理，用一个Claude Code模型同时完成代码编写和审查——无需Codex。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "code-review", "agent", "productivity", "workflow"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "codex"],
+    date: "2026-06-18",
+  },
+
 ];
