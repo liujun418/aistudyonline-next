@@ -10,7 +10,6 @@ import { tools } from "@/lib/tools";
 import { models } from "@/lib/models";
 import { articles } from "@/lib/articles";
 import { categories } from "@/lib/categories";
-import { topTools } from "@/lib/rankings";
 import type { Locale } from "@/lib/i18n";
 
 // Daily rotation helpers — deterministic hash based on date + id
@@ -45,6 +44,26 @@ function getFeaturedModelIds(): string[] {
     .sort((a, b) => dailyHash(a.id) - dailyHash(b.id))
     .slice(0, 4)
     .map((m) => m.id);
+}
+
+// Daily Picks: 10 tools rotated daily by hash, with a one-line reason
+function getDailyPicks(): { toolId: string; reason: string; reasonZh: string }[] {
+  const reasons = [
+    { en: "Making waves this week", zh: "本周热门之选" },
+    { en: "Editor's top pick", zh: "编辑精选推荐" },
+    { en: "Rising star in AI", zh: "AI新星崛起" },
+    { en: "Must-try for beginners", zh: "新手必试" },
+    { en: "Power user favorite", zh: "高级用户最爱" },
+    { en: "Hidden gem", zh: "隐藏宝藏" },
+    { en: "Community loved", zh: "社区口碑之选" },
+    { en: "Trending right now", zh: "当下热门趋势" },
+    { en: "Productivity booster", zh: "效率提升利器" },
+    { en: "Worth your time", zh: "值得一试" },
+  ];
+  return [...tools]
+    .sort((a, b) => dailyHash(a.id) - dailyHash(b.id))
+    .slice(0, 10)
+    .map((t, i) => ({ toolId: t.id, reason: reasons[i].en, reasonZh: reasons[i].zh }));
 }
 
 // Editor's Picks: 4 newest articles across different categories
@@ -127,6 +146,7 @@ export default function HomeClient({
   const home = getHome(dict);
   const featuredToolIds = getFeaturedToolIds();
   const featuredTools = tools.filter((t) => featuredToolIds.includes(t.id));
+  const dailyPicks = getDailyPicks();
   const featuredModelIds = getFeaturedModelIds();
   const featuredModels = models.filter((m) => featuredModelIds.includes(m.id));
   const editorsPicks = getEditorsPicks()
@@ -250,7 +270,7 @@ export default function HomeClient({
         </div>
       </section>
 
-      {/* Section 3: Hot Tools Ranking */}
+      {/* Section 3: Daily Picks */}
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 flex items-center justify-between">
@@ -263,18 +283,18 @@ export default function HomeClient({
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
-            {topTools.map((entry) => {
+            {dailyPicks.map((entry, idx) => {
               const tool = tools.find((t) => t.id === entry.toolId);
               if (!tool) return null;
               return (
                 <Link
-                  key={entry.rank}
+                  key={entry.toolId}
                   href={`/${locale}/tools/${tool.id}`}
                   className="group flex flex-col rounded-xl border border-border bg-surface p-4 shadow-sm transition hover:shadow-md hover:border-primary-300"
                 >
                   <div className="mb-2 flex items-center justify-between">
                     <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
-                      {entry.rank}
+                      {idx + 1}
                     </span>
                     <span className="text-xl" role="img" aria-label={tool.name}>
                       {tool.icon}
