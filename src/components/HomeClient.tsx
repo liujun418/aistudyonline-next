@@ -13,32 +13,38 @@ import { categories } from "@/lib/categories";
 import { topTools } from "@/lib/rankings";
 import type { Locale } from "@/lib/i18n";
 
-// Daily rotation helpers — deterministically shuffle using date as seed
+// Daily rotation helpers — deterministic hash based on date + id
 function dailySeed() {
   const d = new Date();
   return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
 }
 
-function dailyShuffle<T>(arr: T[]): T[] {
+function dailyHash(s: string): number {
   const seed = dailySeed();
-  const shuffled = [...arr];
-  // Simple deterministic shuffle based on date
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = (seed * (i + 1) * 7) % (i + 1);
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  let hash = seed;
+  for (let i = 0; i < s.length; i++) {
+    hash = ((hash << 5) - hash + s.charCodeAt(i)) | 0;
   }
-  return shuffled;
+  return Math.abs(hash);
 }
 
-// Featured tools: daily rotation, pick 4 top-rated tools shuffled by date
+// Featured tools: pick 4 from top-rated pool (rating >= 4.0), rotated daily by hash
 function getFeaturedToolIds(): string[] {
-  const topRated = [...tools].sort((a, b) => (b.rating || 0) - (a.rating || 0));
-  return dailyShuffle(topRated).slice(0, 4).map((t) => t.id);
+  const minRating = 4.0;
+  const eligible = tools.filter((t) => (t.rating || 0) >= minRating);
+  const pool = eligible.length >= 8 ? eligible : tools;
+  return [...pool]
+    .sort((a, b) => dailyHash(a.id) - dailyHash(b.id))
+    .slice(0, 4)
+    .map((t) => t.id);
 }
 
-// Featured models: daily rotation, pick 4 shuffled by date
+// Featured models: pick 4 rotated daily by hash
 function getFeaturedModelIds(): string[] {
-  return dailyShuffle([...models]).slice(0, 4).map((m) => m.id);
+  return [...models]
+    .sort((a, b) => dailyHash(a.id) - dailyHash(b.id))
+    .slice(0, 4)
+    .map((m) => m.id);
 }
 
 // Editor's Picks: 4 newest articles across different categories
@@ -60,11 +66,14 @@ function getEditorsPicks(): string[] {
   return picks.map((a) => a.slug);
 }
 
-// Top Picks: 6 most recent articles, daily rotation within recent ones
+// Top Picks: 6 most recent articles, rotated daily by hash
 function getFeaturedArticleSlugs(): string[] {
   const byDate = [...articles].sort((a, b) => b.date.localeCompare(a.date));
-  // Take latest 12, shuffle by date, pick 6
-  return dailyShuffle(byDate.slice(0, 12)).slice(0, 6).map((a) => a.slug);
+  // Take latest 12, sort by daily hash, pick 6
+  return byDate.slice(0, 12)
+    .sort((a, b) => dailyHash(a.slug) - dailyHash(b.slug))
+    .slice(0, 6)
+    .map((a) => a.slug);
 }
 
 function getHome(dict: Record<string, unknown> | undefined) {
