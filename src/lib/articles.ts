@@ -2058,4 +2058,29 @@ export const articles: Article[] = [
     date: "2026-06-18",
   },
 
+  {
+    slug: "codex-domestic-ai-models",
+    title: "How to Use Codex with Domestic AI Models: A Practical Guide for Everyone",
+    titleZh: "Codex搭配国产AI模型使用指南：人人都能用的实操教程",
+    description: "Step-by-step guide to configuring Codex with domestic AI models like DeepSeek V4 and Mimo v2.5 using CC Switch — no ChatGPT account or special network setup needed.",
+    descriptionZh: "通过CC Switch配置Codex使用DeepSeek V4等国产AI模型的逐步教程——无需ChatGPT账号或特殊网络环境。",
+    category: "ai-tutorials",
+    tags: ["codex", "deepseek", "cc-switch", "coding", "api", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex", "cc-switch", "deepseek"],
+    date: "2026-06-19",
+  },
+  {
+    slug: "long-running-ai-coding-glm-claude",
+    title: "Mastering Long-Running AI Coding Tasks with GLM 5.2 and Claude Code",
+    titleZh: "用GLM 5.2和Claude Code驾驭长时间AI编程任务",
+    description: "A practical case study on running 13-hour AI coding sessions with GLM 5.2's million-token context and Claude Code's goal command for large-scale project porting.",
+    descriptionZh: "实战案例：利用GLM 5.2的百万Token上下文和Claude Code的goal命令，运行13小时AI编码任务完成大型项目迁移。",
+    category: "ai-tutorials",
+    tags: ["glm-5", "claude-code", "long-context", "coding", "workflow", "advanced"],
+    difficulty: "advanced",
+    toolsMentioned: ["claude", "codex"],
+    date: "2026-06-19",
+  },
+
 ];

@@ -1,6 +1,7 @@
 """
-Publish June 18, 2026 articles.
-0 new tools needed — all referenced tools already exist in tools.ts.
+Publish June 19, 2026 articles.
+0 new tools needed — all referenced tools (codex, cc-switch, deepseek, claude) already exist.
+GLM 5.2 model already exists in models.ts.
 """
 
 import os
@@ -13,28 +14,28 @@ with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "open-source-claude-design-local-deploy",
-    title: "Open-Source Claude Design Local Deployment Guide: Free Self-Hosted AI UI Design Tool",
-    titleZh: "开源Claude Design本地部署指南：免费自托管AI UI设计工具",
-    description: "A complete guide to deploying the open-source Claude Design locally on your PC for unlimited, free AI-powered UI design generation — covering environment setup, model configuration, and common pitfalls.",
-    descriptionZh: "在本地PC上部署开源Claude Design的完整指南——实现无限免费AI界面设计生成，涵盖环境配置、模型对接和常见问题解决。",
+    slug: "codex-domestic-ai-models",
+    title: "How to Use Codex with Domestic AI Models: A Practical Guide for Everyone",
+    titleZh: "Codex搭配国产AI模型使用指南：人人都能用的实操教程",
+    description: "Step-by-step guide to configuring Codex with domestic AI models like DeepSeek V4 and Mimo v2.5 using CC Switch — no ChatGPT account or special network setup needed.",
+    descriptionZh: "通过CC Switch配置Codex使用DeepSeek V4等国产AI模型的逐步教程——无需ChatGPT账号或特殊网络环境。",
     category: "ai-tutorials",
-    tags: ["claude-design", "self-hosted", "open-source", "ollama", "deployment", "beginner"],
+    tags: ["codex", "deepseek", "cc-switch", "coding", "api", "beginner"],
     difficulty: "beginner",
-    toolsMentioned: ["ollama", "claude-design"],
-    date: "2026-06-18",
+    toolsMentioned: ["codex", "cc-switch", "deepseek"],
+    date: "2026-06-19",
   },
   {
-    slug: "one-claude-code-two-roles",
-    title: "One Claude Code, Two Roles: Code Writing and Reviewing Without Codex",
-    titleZh: "一个Claude Code，两种角色：无需Codex也能写代码和审代码",
-    description: "Learn how to use a single Claude Code model to both write and review code by leveraging isolated contexts and a dedicated code-review agent — no Codex required.",
-    descriptionZh: "学习如何通过隔离上下文和专用代码审查代理，用一个Claude Code模型同时完成代码编写和审查——无需Codex。",
+    slug: "long-running-ai-coding-glm-claude",
+    title: "Mastering Long-Running AI Coding Tasks with GLM 5.2 and Claude Code",
+    titleZh: "用GLM 5.2和Claude Code驾驭长时间AI编程任务",
+    description: "A practical case study on running 13-hour AI coding sessions with GLM 5.2's million-token context and Claude Code's goal command for large-scale project porting.",
+    descriptionZh: "实战案例：利用GLM 5.2的百万Token上下文和Claude Code的goal命令，运行13小时AI编码任务完成大型项目迁移。",
     category: "ai-tutorials",
-    tags: ["claude-code", "code-review", "agent", "productivity", "workflow"],
-    difficulty: "intermediate",
+    tags: ["glm-5", "claude-code", "long-context", "coding", "workflow", "advanced"],
+    difficulty: "advanced",
     toolsMentioned: ["claude", "codex"],
-    date: "2026-06-18",
+    date: "2026-06-19",
   },
 
 """
@@ -52,633 +53,409 @@ with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 article1_content = r"""
-  // ====== Article: Open-Source Claude Design Local Deployment ======
-  "open-source-claude-design-local-deploy": {
+  // ====== Article: Codex with Domestic AI Models ======
+  "codex-domestic-ai-models": {
     content: `
 <div class="meta-banner">
-  <span>📅 2026-06-18</span>
+  <span>📅 2026-06-19</span>
   <span>📂 <a href="/en/learn/ai-tutorials">AI Tutorials</a></span>
-  <span>⏱️ 8 min read</span>
+  <span>⏱️ 6 min read</span>
   <span>🔰 Beginner</span>
 </div>
 
-<p>Most creators only use the official cloud version of <a href="/en/tools/claude-design">Claude Design</a> with strict rate limits and paid subscriptions. Few people know there is a fully open-source replica of Claude Design that you can deploy locally on your PC for unlimited design generation without network restrictions or billing fees. This tutorial covers complete environment setup, source code deployment, model docking, and common troubleshooting for self-hosted open-source Claude Design, with executable code blocks for every step.</p>
+<p>In the realm of AI-assisted coding, <a href="/en/tools/codex">Codex</a> has emerged as a powerful tool, but its reliance on the ChatGPT model can be a barrier for many due to cost and access issues. This guide walks you through using Codex with domestic AI models like <a href="/en/tools/deepseek">DeepSeek V4</a> and Mimo v2.5, making it accessible without a ChatGPT account, phone number verification, or special network configurations.</p>
 
-<h2>1. Core Advantages of Self-Hosted Open-Source Claude Design</h2>
+<h2>1. Understanding Codex and Its Ecosystem</h2>
 
-<ol>
-<li><strong>Unlimited generation</strong>: No daily request caps, no token billing for local operation.</li>
-<li><strong>Data privacy</strong>: All design drafts, prompts, and image assets are stored locally without uploading to third-party servers.</li>
-<li><strong>Custom model docking</strong>: Compatible with local open-source vision models, <a href="/en/tools/ollama">Ollama</a>, and remote LLM APIs.</li>
-<li><strong>Customizable functions</strong>: Modify source code to add brand templates, batch export, and team collaborative modules.</li>
-<li><strong>Low hardware threshold</strong>: Runs smoothly on consumer GPUs with 8GB VRAM, even compatible with CPU-only deployment.</li>
-</ol>
+<p>Codex is an <strong>Agent product</strong> designed to assist with coding tasks. It's often used alongside tools like <a href="/en/tools/cc-switch">CC Switch</a>, which lets you swap out its underlying model. By default, Codex uses the ChatGPT model, but you can replace this "brain" with domestic alternatives like DeepSeek V4 or Mimo v2.5 for better accessibility and cost-effectiveness.</p>
 
-<h2>2. Pre-Deployment Environment Preparation</h2>
+<h3>Why Choose Domestic Models?</h3>
 
-<h3>2.1 Dependencies Installation</h3>
+<ul>
+<li><strong><a href="/en/tools/deepseek">DeepSeek V4</a></strong>: Highly recommended online, with excellent overall performance. However, it doesn't support multimodal inputs (e.g., image uploads).</li>
+<li><strong>Mimo v2.5</strong>: Supports multimodal inputs and offers a great user experience.</li>
+</ul>
 
-<p>The open-source project relies on Python 3.10+, Git, and Node.js. Run the following installation commands based on your operating system.</p>
+<h2>2. Download and Install Codex</h2>
 
-<p><strong>Windows (PowerShell Administrator):</strong></p>
+<p>Visit the <a href="/en/tools/codex">Codex official website</a> and download the appropriate version for your operating system (Windows or macOS). The tool is free to download.</p>
 
-<pre><code class="language-powershell"># Install winget dependencies
-winget install Python.Python.3.10 Git.Git OpenJS.NodeJS.LTS
-# Verify installation versions
-python --version
-git --version
-node -v
-npm -v</code></pre>
+<h2>3. Install CC Switch</h2>
 
-<p><strong>macOS (Terminal):</strong></p>
-
-<pre><code class="language-bash"># Install Homebrew if missing
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Install required runtime
-brew install python@3.10 git node</code></pre>
-
-<p><strong>Linux Ubuntu/Debian:</strong></p>
-
-<pre><code class="language-bash">sudo apt update && sudo apt install python3.10 python3-pip git nodejs npm -y</code></pre>
-
-<h3>2.2 GPU Acceleration Setup (Recommended)</h3>
-
-<p>If you have an NVIDIA graphics card, install CUDA toolkit to speed up image rendering:</p>
-
-<pre><code class="language-bash"># Install PyTorch with CUDA support
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</code></pre>
-
-<h2>3. Clone Open-Source Repository & Install Project Dependencies</h2>
-
-<h3>3.1 Pull Source Code</h3>
-
-<p>Create an empty folder and clone the official open-source repo:</p>
-
-<pre><code class="language-bash"># Create working directory
-mkdir claude-design-local && cd claude-design-local
-# Clone source repository
-git clone https://github.com/open-claude-design/claude-design.git
-cd claude-design</code></pre>
-
-<h3>3.2 Backend Python Dependencies Installation</h3>
-
-<pre><code class="language-bash"># Create independent virtual environment to avoid version conflicts
-python3 -m venv venv
-# Activate virtual env (Windows)
-venv\\Scripts\\activate
-# Activate virtual env (macOS/Linux)
-source venv/bin/activate
-# Install all backend requirements
-pip install -r requirements.txt</code></pre>
-
-<h3>3.3 Frontend Web Build</h3>
-
-<pre><code class="language-bash"># Enter frontend folder
-cd web
-# Install npm packages
-npm install
-# Build static frontend files
-npm run build</code></pre>
-
-<h2>4. Model Configuration: Docking Local & Remote Vision Models</h2>
-
-<p>Open-source Claude Design does not embed models by default; you need to configure model access in the config file.</p>
-
-<h3>4.1 Modify Core Configuration File</h3>
-
-<pre><code class="language-bash"># Open configuration file for editing
-cp config.example.yaml config.yaml</code></pre>
-
-<p>Edit <code>config.yaml</code> to set model source. Sample <a href="/en/tools/ollama">Ollama</a> local model configuration:</p>
-
-<pre><code class="language-yaml">model_provider: ollama
-vision_model: llama3.2-vision:11b
-api_base: http://127.0.0.1:11434
-api_key: dummy-key
-max_image_size: 1024
-render_batch: 4</code></pre>
-
-<h3>4.2 Pull Local Vision Model via Ollama</h3>
-
-<p>If using Ollama as model backend, run this command to download the vision model before launching the service:</p>
-
-<pre><code class="language-bash">ollama pull llama3.2-vision:11b</code></pre>
-
-<h2>5. Launch Local Service & Access Web UI</h2>
-
-<h3>5.1 Start Backend Service</h3>
-
-<p>Keep the virtual environment activated and execute:</p>
-
-<pre><code class="language-bash"># Launch backend API service
-python main.py --host 0.0.0.0 --port 7890</code></pre>
-
-<h3>5.2 Access Design Panel</h3>
-
-<p>Open your browser and visit <code>http://127.0.0.1:7890</code> — the fully functional open-source <a href="/en/tools/claude-design">Claude Design</a> interface will load. You can input UI design prompts, upload reference sketches, generate page layouts, and export PNG/SVG design files locally without any network limits.</p>
-
-<p>Sample practical design prompt you can directly input in the local tool:</p>
-
-<pre><code class="language-text">Design a minimalist AI tool landing page, mobile-first layout, blue tech tone, include feature card section, download button and footer copyright. Output clean Figma-style layered design.</code></pre>
-
-<h2>6. Common Beginner Pitfalls & Fix Commands</h2>
-
-<h3>Pitfall 1: Port 7890 Occupied, Service Startup Failed</h3>
-
-<p>Check occupied port and kill process:</p>
-
-<pre><code class="language-powershell"># Windows
-netstat -ano | findstr "7890"
-taskkill /F /PID [target-PID-number]</code></pre>
-
-<pre><code class="language-bash"># macOS/Linux
-lsof -i :7890
-kill -9 [process-id]</code></pre>
-
-<h3>Pitfall 2: Image Generation Black Screen, Model Connection Error</h3>
-
-<p>Restart Ollama and reload service:</p>
-
-<pre><code class="language-bash">ollama stop llama3.2-vision:11b
-ollama start
-# Rerun backend
-python main.py</code></pre>
-
-<h3>Pitfall 3: Frontend Page Blank After npm Build</h3>
-
-<p>Reinstall frontend dependencies:</p>
-
-<pre><code class="language-bash">cd web
-rm -rf node_modules package-lock.json
-npm install && npm run build</code></pre>
-
-<h2>7. Advanced Optimization for Long-Term Use</h2>
+<p><a href="/en/tools/cc-switch">CC Switch</a> is a tool that lets you swap Codex's underlying model.</p>
 
 <ol>
-<li><strong>Auto-start service on system boot</strong>: Write a simple startup script to run backend automatically after PC startup.</li>
-<li><strong>Batch export script</strong>: Add a Python script to mass export all generated design drafts to a local folder:</li>
+<li>Go to the <a href="https://github.com/12301230/cc-switch/releases" target="_blank" rel="noopener">CC Switch GitHub page</a>.</li>
+<li>Scroll down to find the installation package:
+<ul>
+<li>For macOS, download the file ending with <code>.dmg</code>.</li>
+<li>For Windows, download the file ending with <code>.msi</code>.</li>
+</ul>
+</li>
+<li>If unsure which version to install, ask DeepSeek:</li>
 </ol>
 
-<pre><code class="language-python"># Batch export all design drafts example
-import os
-import shutil
+<pre><code class="language-text">Which version of CC Switch should I install for my [your OS] system?</code></pre>
 
-export_dir = "./export_designs"
-source_dir = "./static/output"
-os.makedirs(export_dir, exist_ok=True)
+<h2>4. Obtain an API Key from DeepSeek</h2>
 
-for file in os.listdir(source_dir):
-    if file.endswith((".png", ".svg")):
-        shutil.copy2(os.path.join(source_dir, file), export_dir)
-print("All design files exported successfully")</code></pre>
+<p>An <strong>API Key</strong> is like an access credential that allows Codex to communicate with the DeepSeek model.</p>
 
-<ol start="3">
-<li><strong>LAN sharing access</strong>: Modify launch command to allow other devices on the same Wi-Fi to visit your design tool:</li>
+<ol>
+<li>Visit the <a href="https://platform.deepseek.com/" target="_blank" rel="noopener">DeepSeek Open Platform</a>.</li>
+<li>Click on "API Keys" in the left menu.</li>
+<li>Create a new API Key, give it a name for easy recall, and copy the generated key. Keep it secure — it's your personal access credential.</li>
 </ol>
 
-<pre><code class="language-bash">python main.py --host 0.0.0.0 --port 7890</code></pre>
+<h2>5. Configure CC Switch</h2>
 
-<p>Other devices access via <code>http://[your-local-ip]:7890</code>.</p>
+<ol>
+<li>Open CC Switch and click on the third icon (OpenAI icon) at the top.</li>
+<li>Click the "+" button on the right to add a model. Select "DeepSeek" (or your chosen domestic model).</li>
+<li>Paste the DeepSeek API Key into the designated field. Ensure the toggle for model integration is enabled, then click "Add".</li>
+</ol>
+
+<h2>6. Test the Setup</h2>
+
+<ol>
+<li>Fully exit Codex and restart it.</li>
+<li>In Codex, click on "Settings" in the bottom left corner. You should see that you're logged in via the API Key, and the model should show "DeepSeek".</li>
+<li>Send a test message:</li>
+</ol>
+
+<pre><code class="language-text">Hello, what can you help me with?</code></pre>
+
+<p>A normal response indicates success.</p>
 
 <h2>FAQ</h2>
 
-<h3>Does the open-source Claude Design require a powerful GPU?</h3>
-<p>No. While a GPU with 8GB+ VRAM is recommended for optimal performance, the project supports CPU-only deployment. With CPU mode, generation is slower but fully functional. Consumer GPUs like RTX 3060 or even laptop GPUs work well for most design tasks. You can also offload model inference to a remote <a href="/en/tools/ollama">Ollama</a> server on your LAN if your local machine lacks GPU power.</p>
+<h3>Do I need a ChatGPT account to use Codex?</h3>
+<p>Not after this setup. By using <a href="/en/tools/cc-switch">CC Switch</a> with a domestic model's API key, you bypass ChatGPT entirely. You only need a free <a href="/en/tools/deepseek">DeepSeek</a> account (or other domestic provider) to get an API key. This makes Codex accessible to anyone, regardless of OpenAI account restrictions or regional limitations.</p>
 
-<h3>Is the open-source version feature-complete compared to the official Claude Design?</h3>
-<p>The open-source replica covers the core design generation workflow — prompt-to-UI, reference sketch upload, and design export (PNG/SVG). However, the official <a href="/en/tools/claude-design">Claude Design</a> cloud version offers additional features like collaborative editing, version history, and premium design templates. For solo creators and small teams who primarily need AI-powered UI generation, the open-source version is more than sufficient.</p>
+<h3>Which domestic model should I choose — DeepSeek V4 or Mimo v2.5?</h3>
+<p>It depends on your needs. <a href="/en/tools/deepseek">DeepSeek V4</a> offers better overall reasoning and coding performance, making it the top choice for pure code generation tasks. Mimo v2.5 supports multimodal inputs (you can upload images for the AI to analyze), which is useful for UI debugging or design-to-code workflows. If you mainly write and debug code, go with DeepSeek. If you need image understanding alongside coding, pick Mimo v2.5.</p>
 
-<h3>Can I customize the generated UI designs with my own brand styles?</h3>
-<p>Yes. Since the source code is fully open, you can modify the prompt templates, color palettes, and layout presets in the config files. You can also add custom brand assets (logos, fonts, color schemes) to the static assets folder, and the generation pipeline will incorporate them. Advanced users can fine-tune the underlying vision model on their own design dataset for brand-specific outputs.</p>
+<h3>Is CC Switch free to use?</h3>
+<p>Yes, <a href="/en/tools/cc-switch">CC Switch</a> is an open-source tool available for free on GitHub. You only pay for the API usage of the model you connect to — <a href="/en/tools/deepseek">DeepSeek</a>'s API is extremely affordable at roughly one-twentieth of OpenAI's pricing.</p>
 
 <div class="next-step">
-<p><strong>Next Read:</strong> <a href="/en/article/one-claude-code-two-roles">One Claude Code, Two Roles: Code Writing and Reviewing Without Codex →</a></p>
+<p><strong>Next Read:</strong> <a href="/en/article/long-running-ai-coding-glm-claude">Mastering Long-Running AI Coding Tasks with GLM 5.2 and Claude Code →</a></p>
 </div>`,
     contentZh: `
 <div class="meta-banner">
-  <span>📅 2026-06-18</span>
+  <span>📅 2026-06-19</span>
   <span>📂 <a href="/zh/learn/ai-tutorials">AI教程</a></span>
-  <span>⏱️ 8 分钟阅读</span>
+  <span>⏱️ 6 分钟阅读</span>
   <span>🔰 初学者</span>
 </div>
 
-<p>大多数创作者只使用<a href="/zh/tools/claude-design">Claude Design</a>的官方云版本，面临严格的速率限制和付费订阅。很少有人知道有一个完全开源的Claude Design复刻版，可以在本地PC上部署，实现无限设计生成，无需网络限制或计费。本教程涵盖自托管开源Claude Design的完整环境配置、源码部署、模型对接和常见故障排除，每一步都配有可执行代码块。</p>
+<p>在AI辅助编程领域，<a href="/zh/tools/codex">Codex</a>已成为一款强大的工具，但其对ChatGPT模型的依赖因成本和访问问题成为许多人的障碍。本指南带你通过<a href="/zh/tools/cc-switch">CC Switch</a>配置Codex使用<a href="/zh/tools/deepseek">DeepSeek V4</a>等国产AI模型，无需ChatGPT账号、手机号验证或特殊网络环境。</p>
 
-<h2>1. 自托管开源Claude Design的核心优势</h2>
+<h2>1. 理解Codex及其生态系统</h2>
 
-<ol>
-<li><strong>无限生成</strong>：本地运行无每日请求上限，无Token计费。</li>
-<li><strong>数据隐私</strong>：所有设计稿、提示词和图片素材存储在本地，不上传第三方服务器。</li>
-<li><strong>自定义模型对接</strong>：兼容本地开源视觉模型、<a href="/zh/tools/ollama">Ollama</a>和远程LLM API。</li>
-<li><strong>功能可定制</strong>：修改源码添加品牌模板、批量导出和团队协作模块。</li>
-<li><strong>低硬件门槛</strong>：8GB显存的消费级GPU流畅运行，甚至支持纯CPU部署。</li>
-</ol>
+<p>Codex是一款<strong>Agent产品</strong>，专为编程任务设计。它通常配合<a href="/zh/tools/cc-switch">CC Switch</a>使用，后者可以替换其底层模型。默认情况下Codex使用ChatGPT模型，但你可以用DeepSeek V4或Mimo v2.5等国产替代方案替换这个"大脑"，获得更好的可访问性和性价比。</p>
 
-<h2>2. 部署前环境准备</h2>
+<h3>为什么选择国产模型？</h3>
 
-<h3>2.1 依赖安装</h3>
+<ul>
+<li><strong><a href="/zh/tools/deepseek">DeepSeek V4</a></strong>：网上评价很高，综合表现优秀。但不支持多模态输入（如图片上传）。</li>
+<li><strong>Mimo v2.5</strong>：支持多模态输入，用户体验出色。</li>
+</ul>
 
-<p>该开源项目依赖Python 3.10+、Git和Node.js。根据操作系统运行以下安装命令。</p>
+<h2>2. 下载安装Codex</h2>
 
-<p><strong>Windows（PowerShell管理员）：</strong></p>
+<p>访问<a href="/zh/tools/codex">Codex官网</a>，下载适合你操作系统的版本（Windows或macOS）。工具免费下载。</p>
 
-<pre><code class="language-powershell"># 安装winget依赖
-winget install Python.Python.3.10 Git.Git OpenJS.NodeJS.LTS
-# 验证安装版本
-python --version
-git --version
-node -v
-npm -v</code></pre>
+<h2>3. 安装CC Switch</h2>
 
-<p><strong>macOS（终端）：</strong></p>
-
-<pre><code class="language-bash"># 如缺少Homebrew则先安装
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# 安装所需运行时
-brew install python@3.10 git node</code></pre>
-
-<p><strong>Linux Ubuntu/Debian：</strong></p>
-
-<pre><code class="language-bash">sudo apt update && sudo apt install python3.10 python3-pip git nodejs npm -y</code></pre>
-
-<h3>2.2 GPU加速设置（推荐）</h3>
-
-<p>如果你有NVIDIA显卡，安装CUDA工具包加速图像渲染：</p>
-
-<pre><code class="language-bash"># 安装支持CUDA的PyTorch
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121</code></pre>
-
-<h2>3. 克隆开源仓库并安装项目依赖</h2>
-
-<h3>3.1 拉取源码</h3>
-
-<p>创建空文件夹并克隆官方开源仓库：</p>
-
-<pre><code class="language-bash"># 创建工作目录
-mkdir claude-design-local && cd claude-design-local
-# 克隆源码仓库
-git clone https://github.com/open-claude-design/claude-design.git
-cd claude-design</code></pre>
-
-<h3>3.2 后端Python依赖安装</h3>
-
-<pre><code class="language-bash"># 创建独立虚拟环境避免版本冲突
-python3 -m venv venv
-# 激活虚拟环境（Windows）
-venv\\Scripts\\activate
-# 激活虚拟环境（macOS/Linux）
-source venv/bin/activate
-# 安装所有后端依赖
-pip install -r requirements.txt</code></pre>
-
-<h3>3.3 前端Web构建</h3>
-
-<pre><code class="language-bash"># 进入前端文件夹
-cd web
-# 安装npm包
-npm install
-# 构建静态前端文件
-npm run build</code></pre>
-
-<h2>4. 模型配置：对接本地和远程视觉模型</h2>
-
-<p>开源Claude Design默认不嵌入模型，需要在配置文件中设置模型访问。</p>
-
-<h3>4.1 修改核心配置文件</h3>
-
-<pre><code class="language-bash"># 打开配置文件进行编辑
-cp config.example.yaml config.yaml</code></pre>
-
-<p>编辑<code>config.yaml</code>设置模型来源，示例<a href="/zh/tools/ollama">Ollama</a>本地模型配置：</p>
-
-<pre><code class="language-yaml">model_provider: ollama
-vision_model: llama3.2-vision:11b
-api_base: http://127.0.0.1:11434
-api_key: dummy-key
-max_image_size: 1024
-render_batch: 4</code></pre>
-
-<h3>4.2 通过Ollama拉取本地视觉模型</h3>
-
-<p>如果使用Ollama作为模型后端，启动服务前运行此命令下载视觉模型：</p>
-
-<pre><code class="language-bash">ollama pull llama3.2-vision:11b</code></pre>
-
-<h2>5. 启动本地服务并访问Web界面</h2>
-
-<h3>5.1 启动后端服务</h3>
-
-<p>保持虚拟环境激活状态，执行：</p>
-
-<pre><code class="language-bash"># 启动后端API服务
-python main.py --host 0.0.0.0 --port 7890</code></pre>
-
-<h3>5.2 访问设计面板</h3>
-
-<p>打开浏览器访问<code>http://127.0.0.1:7890</code>，功能完整的开源<a href="/zh/tools/claude-design">Claude Design</a>界面将加载。你可以输入UI设计提示词、上传参考草图、生成页面布局，并在本地导出PNG/SVG设计文件，无任何网络限制。</p>
-
-<p>可直接在本地工具中输入的实际设计提示词示例：</p>
-
-<pre><code class="language-text">设计一个极简AI工具落地页，移动端优先布局，蓝色科技调，包含功能卡片区、下载按钮和页脚版权信息。输出清晰的Figma风格分层设计。</code></pre>
-
-<h2>6. 常见新手陷阱及修复命令</h2>
-
-<h3>陷阱1：端口7890被占用，服务启动失败</h3>
-
-<p>检查占用端口并终止进程：</p>
-
-<pre><code class="language-powershell"># Windows
-netstat -ano | findstr "7890"
-taskkill /F /PID [目标PID号]</code></pre>
-
-<pre><code class="language-bash"># macOS/Linux
-lsof -i :7890
-kill -9 [进程ID]</code></pre>
-
-<h3>陷阱2：图像生成黑屏，模型连接错误</h3>
-
-<p>重启Ollama并重新加载服务：</p>
-
-<pre><code class="language-bash">ollama stop llama3.2-vision:11b
-ollama start
-# 重新运行后端
-python main.py</code></pre>
-
-<h3>陷阱3：npm构建后前端页面空白</h3>
-
-<p>重新安装前端依赖：</p>
-
-<pre><code class="language-bash">cd web
-rm -rf node_modules package-lock.json
-npm install && npm run build</code></pre>
-
-<h2>7. 长期使用的高级优化</h2>
+<p><a href="/zh/tools/cc-switch">CC Switch</a>是让你替换Codex底层模型的工具。</p>
 
 <ol>
-<li><strong>开机自启服务</strong>：编写简单的启动脚本，让PC开机后自动运行后端。</li>
-<li><strong>批量导出脚本</strong>：添加Python脚本批量导出所有生成的设计稿到本地文件夹：</li>
+<li>前往<a href="https://github.com/12301230/cc-switch/releases" target="_blank" rel="noopener">CC Switch GitHub页面</a>。</li>
+<li>向下滚动找到安装包：
+<ul>
+<li>macOS下载<code>.dmg</code>结尾的文件。</li>
+<li>Windows下载<code>.msi</code>结尾的文件。</li>
+</ul>
+</li>
+<li>如果不确定该装哪个版本，直接问DeepSeek：</li>
 </ol>
 
-<pre><code class="language-python"># 批量导出所有设计稿示例
-import os
-import shutil
+<pre><code class="language-text">我的系统是[你的操作系统]，应该安装哪个版本的CC Switch？</code></pre>
 
-export_dir = "./export_designs"
-source_dir = "./static/output"
-os.makedirs(export_dir, exist_ok=True)
+<h2>4. 从DeepSeek获取API Key</h2>
 
-for file in os.listdir(source_dir):
-    if file.endswith((".png", ".svg")):
-        shutil.copy2(os.path.join(source_dir, file), export_dir)
-print("所有设计文件导出成功")</code></pre>
+<p><strong>API Key</strong>相当于访问凭证，让Codex能与DeepSeek模型通信。</p>
 
-<ol start="3">
-<li><strong>局域网共享访问</strong>：修改启动命令，让同一Wi-Fi下的其他设备也能访问你的设计工具：</li>
+<ol>
+<li>访问<a href="https://platform.deepseek.com/" target="_blank" rel="noopener">DeepSeek开放平台</a>。</li>
+<li>点击左侧菜单中的"API Keys"。</li>
+<li>创建新API Key，取个好记的名字，复制生成的Key。妥善保管——这是你的个人访问凭证。</li>
 </ol>
 
-<pre><code class="language-bash">python main.py --host 0.0.0.0 --port 7890</code></pre>
+<h2>5. 配置CC Switch</h2>
 
-<p>其他设备通过<code>http://[你的本地IP]:7890</code>访问。</p>
+<ol>
+<li>打开CC Switch，点击顶部的第三个图标（OpenAI图标）。</li>
+<li>点击右侧"+"按钮添加模型，选择"DeepSeek"（或你选的国产模型）。</li>
+<li>将DeepSeek API Key粘贴到指定字段。确保模型集成开关已开启，点击"添加"。</li>
+</ol>
+
+<h2>6. 测试配置</h2>
+
+<ol>
+<li>完全退出Codex后重新启动。</li>
+<li>在Codex中点击左下角"Settings"，应该看到已通过API Key登录，模型显示为"DeepSeek"。</li>
+<li>发送测试消息：</li>
+</ol>
+
+<pre><code class="language-text">你好，你能帮我做什么？</code></pre>
+
+<p>正常回复即表示配置成功。</p>
 
 <h2>常见问题</h2>
 
-<h3>开源Claude Design需要强大的GPU吗？</h3>
-<p>不需要。虽然推荐8GB以上显存的GPU以获得最佳性能，但该项目支持纯CPU部署。CPU模式下生成速度较慢，但功能完整。RTX 3060等消费级GPU甚至笔记本GPU都能很好地处理大多数设计任务。如果本地机器GPU性能不足，也可以将模型推理卸载到局域网中的远程<a href="/zh/tools/ollama">Ollama</a>服务器。</p>
+<h3>使用Codex需要ChatGPT账号吗？</h3>
+<p>此配置完成后不需要。通过<a href="/zh/tools/cc-switch">CC Switch</a>配合国产模型的API Key，你完全绕过了ChatGPT。只需一个免费的<a href="/zh/tools/deepseek">DeepSeek</a>账号（或其他国产厂商账号）获取API Key即可。这让任何人都能使用Codex，不受OpenAI账号限制或地域约束。</p>
 
-<h3>开源版本与官方Claude Design功能对比如何？</h3>
-<p>开源复刻版涵盖了核心设计生成工作流——文本生成UI、参考草图上传和设计导出（PNG/SVG）。然而，官方<a href="/zh/tools/claude-design">Claude Design</a>云版本提供协作编辑、版本历史和高级设计模板等额外功能。对于主要需要AI驱动UI生成的个人创作者和小团队，开源版本完全够用。</p>
+<h3>该选DeepSeek V4还是Mimo v2.5？</h3>
+<p>取决于你的需求。<a href="/zh/tools/deepseek">DeepSeek V4</a>整体推理和编程性能更好，是纯代码生成任务的首选。Mimo v2.5支持多模态输入（可上传图片让AI分析），对UI调试或设计转代码工作流很有用。如果你主要写代码和调试，选DeepSeek。如果需要图像理解配合编程，选Mimo v2.5。</p>
 
-<h3>可以用自己的品牌风格自定义生成的UI设计吗？</h3>
-<p>可以。由于源码完全开放，你可以修改配置文件中的提示词模板、调色板和布局预设。还可以将自定义品牌素材（Logo、字体、配色方案）添加到静态资源文件夹，生成管道会自动融入。高级用户可以在自己的设计数据集上微调底层视觉模型，以获得品牌专属输出。</p>
+<h3>CC Switch免费吗？</h3>
+<p>是的，<a href="/zh/tools/cc-switch">CC Switch</a>是开源工具，在GitHub上免费获取。你只需支付所连接模型的API使用费——<a href="/zh/tools/deepseek">DeepSeek</a>的API价格约为OpenAI的二十分之一，非常实惠。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/one-claude-code-two-roles">一个Claude Code，两种角色：无需Codex也能写代码和审代码 →</a></p>
+<p><strong>下一篇：</strong> <a href="/zh/article/long-running-ai-coding-glm-claude">用GLM 5.2和Claude Code驾驭长时间AI编程任务 →</a></p>
 </div>`,
   },
 """
 
 article2_content = r"""
-  // ====== Article: One Claude Code, Two Roles ======
-  "one-claude-code-two-roles": {
+  // ====== Article: Long-Running AI Coding with GLM 5.2 and Claude Code ======
+  "long-running-ai-coding-glm-claude": {
     content: `
 <div class="meta-banner">
-  <span>📅 2026-06-18</span>
+  <span>📅 2026-06-19</span>
   <span>📂 <a href="/en/learn/ai-tutorials">AI Tutorials</a></span>
-  <span>⏱️ 6 min read</span>
-  <span>⚡ Intermediate</span>
+  <span>⏱️ 8 min read</span>
+  <span>⚡ Advanced</span>
 </div>
 
-<p>In the world of AI-assisted coding, many developers think you need two models like <a href="/en/tools/claude">Claude Code</a> and <a href="/en/tools/codex">Codex</a> to handle writing and reviewing. But what if you only have Claude Code? This guide shows you how to use a single Claude Code model to both write and review code by leveraging isolated contexts, with practical steps and code examples.</p>
+<p>In AI-assisted software development, running large-scale projects over extended periods has long been a challenge. With models like Zhipu AI's GLM 5.2 and tools like <a href="/en/tools/claude">Claude Code</a>, it's now feasible to automate complex tasks for hours — even with massive codebases. This article dives into a practical case study: porting the 400,000-line TypeScript project OpenClaw to Python, showcasing the power of long-context AI models and structured task management.</p>
 
-<h2>Why One Model Can Do Both: Isolated Contexts Matter</h2>
+<h2>1. Why GLM 5.2 + Claude Code Matters</h2>
 
-<p>The key isn't having a second model; it's having a <strong>second clean context</strong>. When a model reviews its own code in the same conversation, it's biased by its original implementation. A separate context, however, acts like a fresh pair of eyes — one that hasn't seen the coding process and only focuses on the code itself.</p>
+<p>GLM 5.2, released by Zhipu AI, stands out with its <strong>million-token context window</strong> and optimized attention mechanisms, making it capable of handling large-scale, long-duration tasks. Paired with <a href="/en/tools/claude">Claude Code</a>'s <code>goal</code> command for looped execution, you get a robust setup for end-to-end AI-driven development.</p>
 
-<p>For example, if you ask Claude Code to review its own code in the same chat, it might miss issues like:</p>
+<p>Most AI models struggle with "lost in the middle" issues when context windows overflow. GLM 5.2's architectural improvements minimize this, ensuring it stays on track even after 13+ hours of continuous operation — critical for projects like OpenClaw with 10+ core modules and 400,000+ lines of code.</p>
 
-<ul>
-<li>Memory leaks in idempotent keys that aren't cleaned up.</li>
-<li>Race conditions in high-concurrency order systems.</li>
-</ul>
+<h2>2. Step 1: Project Analysis and Task Breakdown</h2>
 
-<p>A separate review agent in its own context catches these because it's not influenced by how the code was written.</p>
+<h3>2.1 Reading and Analyzing the Codebase</h3>
 
-<h2>Setting Up a Code-Review Agent in Claude Code</h2>
+<p>First, clone the repository and use Claude Code's agent capabilities to map the architecture:</p>
 
-<p>To create a dedicated review agent, you need a configuration file. Here's how to do it:</p>
+<pre><code class="language-bash">git clone --depth 1 &lt;OpenClaw-repo-url&gt;
+cd python-openclaw</code></pre>
 
-<h3>Step 1: Create the Agent Configuration File</h3>
+<p>Then trigger multi-agent analysis via Claude Code:</p>
 
-<p>In your project's <code>.claude/agents/</code> directory, create a file named <code>code-reviewer.md</code>. This file has two parts: frontmatter (configuration) and a prompt (instructions for the reviewer).</p>
+<pre><code class="language-text">Analyze all .ts files in the 'ts-reference/' directory.
+1. Map import dependencies and draw a call graph.
+2. Identify core modules (utils, agents, plugins, etc.).
+3. Document the dependency hierarchy from bottom to top.
+4. List each module's responsibilities and file count.</code></pre>
 
-<pre><code class="language-markdown">---
-name: code-reviewer
-description: Review code changes for issues.
-tools: Read, Grep, Glob, Bash
-model: inherit
----
-# Code Review Guidelines
-01. Focus only on identifying issues, not fixing them. List problems clearly.
-02. Check for memory leaks, especially in idempotent implementations.
-03. Verify concurrency safety for high-traffic features.
-04. Ensure code follows best practices (readability, maintainability).
-05. Use \`git diff\` to understand changes and review only the modified parts.
-06. Report issues without suggesting code changes — leave fixes to the main conversation.</code></pre>
-
-<h3>Step 2: Understand the Configuration</h3>
+<p>This generates a structured report outlining the project's architecture:</p>
 
 <ul>
-<li><strong><code>name</code></strong>: Identifies the agent (e.g., <code>code-reviewer</code>).</li>
-<li><strong><code>description</code></strong>: Tells the main Claude Code when to use this agent.</li>
-<li><strong><code>tools</code></strong>: Limits the agent to read-only tools (<code>Read</code>, <code>Grep</code>, <code>Glob</code>) and <code>git diff</code> (via Bash) to analyze changes. No write/edit tools to prevent it from fixing code directly.</li>
-<li><strong><code>model: inherit</code></strong>: Uses the same model as the main conversation (so you don't need Codex).</li>
+<li><strong>Layer 1 (Utils)</strong>: <code>utils/shared-types</code> (214 files) — pure utility functions.</li>
+<li><strong>Layer 2 (Infrastructure)</strong>: <code>logging</code>, <code>infra</code>, <code>terminal</code> (273 files) — logging, environment management, terminal rendering.</li>
+<li><strong>Layer 3 (Agent Core)</strong>: <code>agents</code>, <code>auto-reply</code>, <code>context-engine</code> (529 files) — core AI agent logic.</li>
 </ul>
 
-<h2>How to Use the Review Agent in Practice</h2>
+<h3>2.2 Breaking Down Tasks</h3>
 
-<p>Once set up, using the agent is straightforward:</p>
+<p>With the architecture mapped, split the project into granular tasks:</p>
 
-<ol>
-<li><strong>Write Code in the Main Conversation</strong>: Ask Claude Code to write code, e.g., "Implement an idempotent order API to prevent duplicate orders."</li>
-<li><strong>Trigger the Review Agent</strong>: After the code is written, request a review: "Use <code>code-reviewer</code> to check the recent idempotent order API changes."</li>
-<li><strong>Analyze the Feedback</strong>: The review agent will generate a list of issues. For example, it might point out:
+<pre><code class="language-text">For each module in docs/specs/, break down into function-level tasks.
+- Each task must include:
+  - A clear requirement (e.g., "Implement compaction for message summarization").
+  - At least 3 test cases (e.g., test_empty_messages_returns_empty_string).
+  - A validation method (e.g., "Run pytest and ensure 100% coverage").
+- Generate a progress.json file to track task status.</code></pre>
+
+<p>This yields <strong>443 tasks</strong>, each with precise acceptance criteria. Example task:</p>
+
+<pre><code class="language-text">## Task 154: Compaction for Message Summarization
+- Requirement: Implement summarize_messages(messages, model)
+- Test Cases:
+  1. test_summarize_single_message_returns_text
+  2. test_empty_messages_returns_empty_string
+  3. test_fallback_truncation_when_model_fails
+- Validation: Run pytest --cov=agents, ensure coverage >= 90%</code></pre>
+
+<h2>3. Step 2: Long-Running Execution with goal Command</h2>
+
+<p>Claude Code's <code>goal</code> command enables looped execution — the model fetches tasks from <code>progress.json</code>, executes them, and updates status iteratively.</p>
+
+<pre><code class="language-text">/goal Iterate over all tasks in docs/plans until python check_progress.py returns 0.
+- Read progress.json to get the first pending task.
+- Execute all test cases defined in the task (at least 3).
+- If tests fail (RED), stop and mark as failed.
+- If tests pass (GREEN), run ruff check and ruff format --check; fix any issues.
+- Commit changes with git commit --task=N.
+- Update progress.json (done, completed+1, rounds+1).
+- Stop if check_progress.py returns 0; else, continue.</code></pre>
+
+<p>Execute it in Claude Code:</p>
+
+<pre><code class="language-bash">/bypass permissions on
+/goal &lt;prompt-text&gt;</code></pre>
+
+<p>During the 13+ hour run, the model handles code generation, automated testing with <code>pytest</code>, linting with <code>ruff</code>, git commits per task, and progress tracking via <code>progress.json</code>.</p>
+
+<h2>4. Step 3: Validation and Iteration</h2>
+
+<p>Post-execution, validate the output:</p>
+
 <ul>
-<li>"Idempotent keys are not cleaned up, leading to memory bloat."</li>
-<li>"Race condition in concurrent order requests."</li>
-</ul>
-</li>
-<li><strong>Fix Issues in the Main Conversation</strong>: Go back to the main chat and address the issues, then repeat the review process for high-risk changes.</li>
-</ol>
-
-<h2>When to Use the Review Agent (and When to Skip)</h2>
-
-<p>Not all changes need a full review. Use this <strong>risk-based checklist</strong> to decide:</p>
-
-<ul>
-<li><strong>High-Risk Changes (Use the Review Agent)</strong>:
-<ul>
-<li>Authentication/authorization logic.</li>
-<li>Financial transactions (e.g., payment systems).</li>
-<li>Data deletion features.</li>
-<li>High-concurrency features (e.g., order processing).</li>
-</ul>
-</li>
-<li><strong>Low-Risk Changes (Skip the Review)</strong>:
-<ul>
-<li>UI text or style tweaks.</li>
-<li>Documentation updates.</li>
-<li>Small refactors with no business logic changes.</li>
-</ul>
-</li>
+<li><strong>Web Chat</strong>: Functional chat interface at <code>http://localhost:8080</code>.</li>
+<li><strong>Skill Execution</strong>: Run pre-installed skills like image generation.</li>
+<li><strong>Tool Usage</strong>: Fetch web content and save to local files.</li>
 </ul>
 
-<h2>Beyond Claude Code: Applying This to Codex</h2>
+<p>If issues arise (e.g., repetitive task execution), simply prompt:</p>
 
-<p>This approach isn't limited to Claude Code. If you use <a href="/en/tools/codex">Codex</a>, you can create a similar review agent in <code>.codex/agents/reviewer.md</code> with the same structure. Codex even has a built-in <code>/review</code> command for one-click reviews, working the same way as Claude Code's <code>code-reviewer</code>.</p>
+<pre><code class="language-text">The agent is repeating historical tasks. Fix the loop to avoid duplication.</code></pre>
+
+<p>GLM 5.2's improved instruction-following ensures most fixes land in one shot.</p>
 
 <h2>FAQ</h2>
 
-<h3>Can I use the same approach with other AI coding tools?</h3>
-<p>Yes. The core principle — isolated context for review — applies to any AI coding assistant that supports custom agents or separate conversation contexts. <a href="/en/tools/codex">Codex</a> has a built-in <code>/review</code> command, and Cursor supports <code>.cursor/rules</code> for custom review instructions. The key is ensuring the reviewer has no memory of the original coding session, so it evaluates the code objectively.</p>
+<h3>Can I use this approach with models other than GLM 5.2?</h3>
+<p>Yes, any model with a large enough context window can work. The key requirement is maintaining coherence over long sessions without "losing the thread." <a href="/en/tools/claude">Claude</a>'s own Opus and Sonnet models also handle long-context tasks well, though they may have different pricing structures. The million-token window of GLM 5.2 simply makes it particularly cost-effective for marathon coding sessions. You can also experiment with Gemini 2.5 Pro or GPT-5, both of which offer large context windows.</p>
 
-<h3>What if the review agent misses important issues?</h3>
-<p>No review process is perfect. For critical code (auth, payments, data deletion), combine the AI review with traditional methods: peer code review, automated tests, and static analysis tools. The AI review agent is a powerful first-pass filter that catches common issues quickly, but it should complement — not replace — human oversight for high-risk changes.</p>
+<h3>What happens if the model gets stuck in an infinite loop?</h3>
+<p>This is a real risk with looped execution. To mitigate it: (1) set a maximum round limit in your <code>goal</code> prompt, (2) use the progress.json file to detect when the same task is attempted multiple times without completion, and (3) periodically check in on long-running sessions. The <code>check_progress.py</code> script mentioned above should include a guard clause that exits after N consecutive failures on the same task.</p>
 
-<h3>How is this different from Claude Code's built-in review features?</h3>
-<p><a href="/en/tools/claude">Claude Code</a> has built-in code understanding capabilities, but when reviewing its own output in the same conversation, it carries implementation bias. The dedicated agent approach creates a truly independent review by isolating the reviewer in a separate context. This is the same architectural principle that makes Codex's <code>/review</code> command effective — it spawns a fresh agent instance that only sees the diff, not the development history.</p>
+<h3>Is this approach suitable for production code, or just experiments?</h3>
+<p>It depends on the risk level. For low-risk modules like utility functions and data formatting, AI-generated code with automated testing is production-ready. For security-critical code (authentication, payment processing), combine AI generation with human code review. The 443-task OpenClaw porting project demonstrates that AI can handle the bulk of mechanical translation work, freeing developers to focus on architecture decisions and security audits. Treat it like you'd treat any junior developer's output — test thoroughly, review critical paths, and iterate.</p>
 
 <div class="next-step">
-<p><strong>Next Read:</strong> <a href="/en/article/open-source-claude-design-local-deploy">Open-Source Claude Design Local Deployment Guide →</a></p>
+<p><strong>Next Read:</strong> <a href="/en/article/codex-domestic-ai-models">How to Use Codex with Domestic AI Models: A Practical Guide for Everyone →</a></p>
 </div>`,
     contentZh: `
 <div class="meta-banner">
-  <span>📅 2026-06-18</span>
+  <span>📅 2026-06-19</span>
   <span>📂 <a href="/zh/learn/ai-tutorials">AI教程</a></span>
-  <span>⏱️ 6 分钟阅读</span>
-  <span>⚡ 中级</span>
+  <span>⏱️ 8 分钟阅读</span>
+  <span>⚡ 高级</span>
 </div>
 
-<p>在AI辅助编程的世界里，很多开发者认为需要两个模型——<a href="/zh/tools/claude">Claude Code</a>和<a href="/zh/tools/codex">Codex</a>——才能分别处理代码编写和审查。但如果只有Claude Code呢？本指南教你如何通过隔离上下文，用单个Claude Code模型同时完成代码编写和审查，配有实操步骤和代码示例。</p>
+<p>在AI辅助软件开发中，长时间运行大型项目一直是个挑战。随着智谱AI的GLM 5.2和<a href="/zh/tools/claude">Claude Code</a>等工具的出现，即使面对海量代码库，自动化复杂任务数小时已成为可行方案。本文深入一个实战案例：将40万行TypeScript项目OpenClaw移植到Python，展示长上下文AI模型与结构化任务管理的强大威力。</p>
 
-<h2>为什么一个模型能做两件事：隔离上下文是关键</h2>
+<h2>1. 为什么GLM 5.2 + Claude Code如此重要</h2>
 
-<p>关键不在于有第二个模型，而在于有一个<strong>第二个干净的上下文</strong>。当模型在同一对话中审查自己的代码时，它会被原始实现所偏见。而独立上下文就像一双全新的眼睛——它没有看过编码过程，只关注代码本身。</p>
+<p>智谱AI发布的GLM 5.2以其<strong>百万Token上下文窗口</strong>和优化的注意力机制脱颖而出，能够处理大规模、长时间任务。配合<a href="/zh/tools/claude">Claude Code</a>的<code>goal</code>命令循环执行，你得到了一套端到端AI驱动开发的稳健方案。</p>
 
-<p>例如，如果你让Claude Code在同一聊天中审查自己的代码，它可能漏掉以下问题：</p>
+<p>大多数AI模型在上下文窗口溢出时会出现"迷失在中间"的问题。GLM 5.2的架构改进最大限度地减少了这一问题，确保连续运行13小时以上仍能保持方向——这对拥有10+核心模块、40万+行代码的OpenClaw项目至关重要。</p>
 
-<ul>
-<li>未清理的幂等键导致内存泄漏。</li>
-<li>高并发订单系统中的竞态条件。</li>
-</ul>
+<h2>2. 第一步：项目分析与任务拆解</h2>
 
-<p>独立上下文中的审查代理能发现这些问题，因为它不受代码编写过程的影响。</p>
+<h3>2.1 阅读和分析代码库</h3>
 
-<h2>在Claude Code中设置代码审查代理</h2>
+<p>首先克隆仓库，使用Claude Code的Agent能力绘制架构图：</p>
 
-<p>要创建专用的审查代理，需要一个配置文件。以下是操作步骤：</p>
+<pre><code class="language-bash">git clone --depth 1 &lt;OpenClaw仓库地址&gt;
+cd python-openclaw</code></pre>
 
-<h3>步骤1：创建代理配置文件</h3>
+<p>然后通过Claude Code触发多Agent分析：</p>
 
-<p>在项目的<code>.claude/agents/</code>目录中，创建名为<code>code-reviewer.md</code>的文件。该文件包含两部分：frontmatter（配置）和prompt（审查者指令）。</p>
+<pre><code class="language-text">分析'ts-reference/'目录中的所有.ts文件。
+1. 绘制导入依赖关系和调用图。
+2. 识别核心模块（utils、agents、plugins等）。
+3. 记录从底层到顶层的依赖层级。
+4. 列出每个模块的职责和文件数量。</code></pre>
 
-<pre><code class="language-markdown">---
-name: code-reviewer
-description: 审查代码变更中的问题。
-tools: Read, Grep, Glob, Bash
-model: inherit
----
-# 代码审查指南
-01. 只关注发现问题，不修复问题。清晰列出问题。
-02. 检查内存泄漏，特别是幂等实现中的。
-03. 验证高流量功能的并发安全性。
-04. 确保代码遵循最佳实践（可读性、可维护性）。
-05. 使用 \`git diff\` 理解变更，只审查修改的部分。
-06. 报告问题时不建议代码修改——将修复留给主对话。</code></pre>
-
-<h3>步骤2：理解配置</h3>
+<p>这会生成一份结构化报告，描绘项目架构：</p>
 
 <ul>
-<li><strong><code>name</code></strong>：标识代理（如<code>code-reviewer</code>）。</li>
-<li><strong><code>description</code></strong>：告诉主Claude Code何时使用此代理。</li>
-<li><strong><code>tools</code></strong>：将代理限制为只读工具（<code>Read</code>、<code>Grep</code>、<code>Glob</code>）和<code>git diff</code>（通过Bash）来分析变更。无写入/编辑工具，防止直接修改代码。</li>
-<li><strong><code>model: inherit</code></strong>：使用与主对话相同的模型（因此不需要Codex）。</li>
+<li><strong>第一层（工具层）</strong>：<code>utils/shared-types</code>（214个文件）——纯工具函数。</li>
+<li><strong>第二层（基础设施）</strong>：<code>logging</code>、<code>infra</code>、<code>terminal</code>（273个文件）——日志、环境管理、终端渲染。</li>
+<li><strong>第三层（Agent核心）</strong>：<code>agents</code>、<code>auto-reply</code>、<code>context-engine</code>（529个文件）——核心AI Agent逻辑。</li>
 </ul>
 
-<h2>实践中如何使用审查代理</h2>
+<h3>2.2 任务拆解</h3>
 
-<p>设置完成后，使用代理非常简单：</p>
+<p>架构梳理清楚后，将项目拆分为细粒度任务：</p>
 
-<ol>
-<li><strong>在主对话中编写代码</strong>：让Claude Code编写代码，例如"实现幂等订单API以防止重复下单。"</li>
-<li><strong>触发审查代理</strong>：代码写完后请求审查："使用<code>code-reviewer</code>检查最近的幂等订单API变更。"</li>
-<li><strong>分析反馈</strong>：审查代理会生成问题列表。例如可能指出：
+<pre><code class="language-text">对docs/specs/中的每个模块，拆分为函数级任务。
+- 每个任务必须包含：
+  - 明确需求（如"实现消息摘要的压缩功能"）。
+  - 至少3个测试用例（如test_empty_messages_returns_empty_string）。
+  - 验证方法（如"运行pytest确保100%覆盖率"）。
+- 生成progress.json文件跟踪任务状态。</code></pre>
+
+<p>最终得到<strong>443个任务</strong>，每个都有精确的验收标准。示例任务：</p>
+
+<pre><code class="language-text">## 任务154：消息摘要压缩
+- 需求：实现summarize_messages(messages, model)
+- 测试用例：
+  1. test_summarize_single_message_returns_text
+  2. test_empty_messages_returns_empty_string
+  3. test_fallback_truncation_when_model_fails
+- 验证：运行pytest --cov=agents，确保覆盖率>=90%</code></pre>
+
+<h2>3. 第二步：用goal命令长时间运行</h2>
+
+<p>Claude Code的<code>goal</code>命令实现循环执行——模型从<code>progress.json</code>取任务、执行、迭代更新状态。</p>
+
+<pre><code class="language-text">/goal 遍历docs/plans中的所有任务，直到python check_progress.py返回0。
+- 读取progress.json获取第一个待处理任务。
+- 执行任务中定义的所有测试用例（至少3个）。
+- 如果测试失败（RED），停止并标记为失败。
+- 如果测试通过（GREEN），运行ruff check和ruff format --check；修复问题。
+- 用git commit --task=N提交更改。
+- 更新progress.json（done、completed+1、rounds+1）。
+- 如果check_progress.py返回0则停止；否则继续。</code></pre>
+
+<p>在Claude Code中执行：</p>
+
+<pre><code class="language-bash">/bypass permissions on
+/goal &lt;提示词文本&gt;</code></pre>
+
+<p>在13+小时运行期间，模型处理代码生成、<code>pytest</code>自动化测试、<code>ruff</code>代码检查、按任务git提交和<code>progress.json</code>进度跟踪。</p>
+
+<h2>4. 第三步：验证与迭代</h2>
+
+<p>执行完成后验证输出：</p>
+
 <ul>
-<li>"幂等键未清理，导致内存膨胀。"</li>
-<li>"并发订单请求中存在竞态条件。"</li>
-</ul>
-</li>
-<li><strong>在主对话中修复问题</strong>：回到主聊天处理问题，然后对高风险变更重复审查流程。</li>
-</ol>
-
-<h2>何时使用审查代理（以及何时跳过）</h2>
-
-<p>并非所有变更都需要完整审查。使用此<strong>基于风险的检查清单</strong>来决定：</p>
-
-<ul>
-<li><strong>高风险变更（使用审查代理）</strong>：
-<ul>
-<li>认证/授权逻辑。</li>
-<li>金融交易（如支付系统）。</li>
-<li>数据删除功能。</li>
-<li>高并发功能（如订单处理）。</li>
-</ul>
-</li>
-<li><strong>低风险变更（跳过审查）</strong>：
-<ul>
-<li>UI文字或样式调整。</li>
-<li>文档更新。</li>
-<li>不涉及业务逻辑的小重构。</li>
-</ul>
-</li>
+<li><strong>Web聊天</strong>：<code>http://localhost:8080</code>可用的聊天界面。</li>
+<li><strong>技能执行</strong>：运行预装技能如图片生成。</li>
+<li><strong>工具使用</strong>：获取网页内容并保存到本地文件。</li>
 </ul>
 
-<h2>超越Claude Code：将此方法应用到Codex</h2>
+<p>如果出现问题（如重复执行任务），直接提示：</p>
 
-<p>这种方法不限于Claude Code。如果你使用<a href="/zh/tools/codex">Codex</a>，可以在<code>.codex/agents/reviewer.md</code>中创建类似的审查代理，结构相同。Codex甚至有内置的<code>/review</code>命令一键审查，工作方式与Claude Code的<code>code-reviewer</code>相同。</p>
+<pre><code class="language-text">Agent在重复执行历史任务。修复循环逻辑避免重复。</code></pre>
+
+<p>GLM 5.2改进的指令遵循能力确保大多数修复一次到位。</p>
 
 <h2>常见问题</h2>
 
-<h3>可以用同样的方法配合其他AI编程工具吗？</h3>
-<p>可以。核心原则——隔离上下文进行审查——适用于任何支持自定义代理或独立对话上下文的AI编程助手。<a href="/zh/tools/codex">Codex</a>有内置的<code>/review</code>命令，Cursor支持<code>.cursor/rules</code>用于自定义审查指令。关键是确保审查者没有原始编码会话的记忆，从而客观评估代码。</p>
+<h3>除了GLM 5.2，可以用其他模型吗？</h3>
+<p>可以，任何上下文窗口足够大的模型都能胜任。关键是在长会话中保持连贯性不"跑偏"。<a href="/zh/tools/claude">Claude</a>自家的Opus和Sonnet模型也擅长长上下文任务，只是定价结构不同。GLM 5.2的百万Token窗口使其在马拉松式编码任务中性价比特别高。你也可以尝试Gemini 2.5 Pro或GPT-5，它们都提供大上下文窗口。</p>
 
-<h3>如果审查代理漏掉重要问题怎么办？</h3>
-<p>没有任何审查流程是完美的。对于关键代码（认证、支付、数据删除），将AI审查与传统方法结合：同行代码审查、自动化测试和静态分析工具。AI审查代理是一个强大的第一道过滤器，能快速发现常见问题，但它应该补充而非替代高风险变更的人工监督。</p>
+<h3>模型陷入死循环怎么办？</h3>
+<p>这是循环执行的真实风险。缓解措施：(1) 在<code>goal</code>提示词中设置最大轮次限制；(2) 用progress.json检测同一任务多次尝试未完成的情况；(3) 定期检查长时间运行的会话。上述<code>check_progress.py</code>脚本应包含守卫逻辑，同一任务连续失败N次后退出。</p>
 
-<h3>这与Claude Code内置的审查功能有何不同？</h3>
-<p><a href="/zh/tools/claude">Claude Code</a>具有内置的代码理解能力，但在同一对话中审查自己的输出时会带有实现偏见。专用代理方法通过将审查者隔离在独立上下文中，创建真正独立的审查。这与Codex的<code>/review</code>命令有效的架构原理相同——它启动一个新的代理实例，只看到差异，看不到开发历史。</p>
+<h3>这种方法适合生产代码还是仅限实验？</h3>
+<p>取决于风险级别。对于工具函数和数据格式化等低风险模块，AI生成代码配合自动化测试可以达到生产就绪水平。对于安全关键代码（认证、支付处理），应将AI生成与人工代码审查结合。443个任务的OpenClaw移植项目证明，AI可以处理大部分机械性翻译工作，让开发者专注于架构决策和安全审计。把它当作初级开发者的产出对待——充分测试、审查关键路径、迭代改进。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/open-source-claude-design-local-deploy">开源Claude Design本地部署指南 →</a></p>
+<p><strong>下一篇：</strong> <a href="/zh/article/codex-domestic-ai-models">Codex搭配国产AI模型使用指南：人人都能用的实操教程 →</a></p>
 </div>`,
   },
 """
