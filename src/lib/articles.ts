@@ -2083,4 +2083,29 @@ export const articles: Article[] = [
     date: "2026-06-19",
   },
 
+  {
+    slug: "claude-dynamic-workflows",
+    title: "Claude Dynamic Workflows: Transform One AI into a Team of 100 for Explosive Productivity",
+    titleZh: "Claude动态工作流：把一个AI变成百人团队，效率爆炸提升",
+    description: "Learn how Claude's Dynamic Workflows feature turns a solo AI assistant into a project manager that orchestrates hundreds of sub-agents in parallel — 10x efficiency for research, writing, and coding.",
+    descriptionZh: "了解Claude动态工作流如何将单人AI助手变成能并行调度数百个子代理的项目经理——研究、写作、编码效率提升10倍。",
+    category: "ai-tutorials",
+    tags: ["claude", "workflow", "productivity", "agent", "parallel"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-20",
+  },
+  {
+    slug: "codex-complete-guide-domestic",
+    title: "Codex Complete Guide for Domestic Users: Full Installation + Official Plugins Setup (Step-by-Step)",
+    titleZh: "Codex国内用户完整指南：安装+官方插件配置全流程（手把手）",
+    description: "A spoon-feeding guide for Chinese developers to install Codex with domestic AI models, activate all 8+ official plugins, and troubleshoot common issues — no VPN needed.",
+    descriptionZh: "面向国内开发者的手把手教程：用国产AI模型安装Codex、激活全部8+官方插件、解决常见问题——无需VPN。",
+    category: "ai-tutorials",
+    tags: ["codex", "deepseek", "coding", "plugins", "domestic", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex", "deepseek"],
+    date: "2026-06-20",
+  },
+
 ];

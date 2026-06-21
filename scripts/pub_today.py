@@ -1,7 +1,6 @@
 """
-Publish June 19, 2026 articles.
-0 new tools needed — all referenced tools (codex, cc-switch, deepseek, claude) already exist.
-GLM 5.2 model already exists in models.ts.
+Publish June 20, 2026 articles.
+0 new tools needed — all referenced tools (claude, codex, deepseek) already exist.
 """
 
 import os
@@ -14,28 +13,28 @@ with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "codex-domestic-ai-models",
-    title: "How to Use Codex with Domestic AI Models: A Practical Guide for Everyone",
-    titleZh: "Codex搭配国产AI模型使用指南：人人都能用的实操教程",
-    description: "Step-by-step guide to configuring Codex with domestic AI models like DeepSeek V4 and Mimo v2.5 using CC Switch — no ChatGPT account or special network setup needed.",
-    descriptionZh: "通过CC Switch配置Codex使用DeepSeek V4等国产AI模型的逐步教程——无需ChatGPT账号或特殊网络环境。",
+    slug: "claude-dynamic-workflows",
+    title: "Claude Dynamic Workflows: Transform One AI into a Team of 100 for Explosive Productivity",
+    titleZh: "Claude动态工作流：把一个AI变成百人团队，效率爆炸提升",
+    description: "Learn how Claude's Dynamic Workflows feature turns a solo AI assistant into a project manager that orchestrates hundreds of sub-agents in parallel — 10x efficiency for research, writing, and coding.",
+    descriptionZh: "了解Claude动态工作流如何将单人AI助手变成能并行调度数百个子代理的项目经理——研究、写作、编码效率提升10倍。",
     category: "ai-tutorials",
-    tags: ["codex", "deepseek", "cc-switch", "coding", "api", "beginner"],
-    difficulty: "beginner",
-    toolsMentioned: ["codex", "cc-switch", "deepseek"],
-    date: "2026-06-19",
+    tags: ["claude", "workflow", "productivity", "agent", "parallel"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-20",
   },
   {
-    slug: "long-running-ai-coding-glm-claude",
-    title: "Mastering Long-Running AI Coding Tasks with GLM 5.2 and Claude Code",
-    titleZh: "用GLM 5.2和Claude Code驾驭长时间AI编程任务",
-    description: "A practical case study on running 13-hour AI coding sessions with GLM 5.2's million-token context and Claude Code's goal command for large-scale project porting.",
-    descriptionZh: "实战案例：利用GLM 5.2的百万Token上下文和Claude Code的goal命令，运行13小时AI编码任务完成大型项目迁移。",
+    slug: "codex-complete-guide-domestic",
+    title: "Codex Complete Guide for Domestic Users: Full Installation + Official Plugins Setup (Step-by-Step)",
+    titleZh: "Codex国内用户完整指南：安装+官方插件配置全流程（手把手）",
+    description: "A spoon-feeding guide for Chinese developers to install Codex with domestic AI models, activate all 8+ official plugins, and troubleshoot common issues — no VPN needed.",
+    descriptionZh: "面向国内开发者的手把手教程：用国产AI模型安装Codex、激活全部8+官方插件、解决常见问题——无需VPN。",
     category: "ai-tutorials",
-    tags: ["glm-5", "claude-code", "long-context", "coding", "workflow", "advanced"],
-    difficulty: "advanced",
-    toolsMentioned: ["claude", "codex"],
-    date: "2026-06-19",
+    tags: ["codex", "deepseek", "coding", "plugins", "domestic", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex", "deepseek"],
+    date: "2026-06-20",
   },
 
 """
@@ -53,409 +52,569 @@ with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 article1_content = r"""
-  // ====== Article: Codex with Domestic AI Models ======
-  "codex-domestic-ai-models": {
+  // ====== Article: Claude Dynamic Workflows ======
+  "claude-dynamic-workflows": {
     content: `
 <div class="meta-banner">
-  <span>📅 2026-06-19</span>
+  <span>📅 2026-06-20</span>
   <span>📂 <a href="/en/learn/ai-tutorials">AI Tutorials</a></span>
-  <span>⏱️ 6 min read</span>
-  <span>🔰 Beginner</span>
+  <span>⏱️ 7 min read</span>
+  <span>⚡ Intermediate</span>
 </div>
 
-<p>In the realm of AI-assisted coding, <a href="/en/tools/codex">Codex</a> has emerged as a powerful tool, but its reliance on the ChatGPT model can be a barrier for many due to cost and access issues. This guide walks you through using Codex with domestic AI models like <a href="/en/tools/deepseek">DeepSeek V4</a> and Mimo v2.5, making it accessible without a ChatGPT account, phone number verification, or special network configurations.</p>
+<p>In the realm of AI tools, <a href="/en/tools/claude">Claude</a> has quietly rolled out a game-changing feature that's been overshadowed by its model upgrades — <strong>Dynamic Workflows</strong>. This isn't just a minor update; it's a paradigm shift, turning Claude from a solo assistant into a project manager that can orchestrate hundreds of AI sub-agents simultaneously. Whether you're researching, writing, or coding, this feature can multiply your efficiency by 10x.</p>
 
-<h2>1. Understanding Codex and Its Ecosystem</h2>
+<h2>1. What Are Dynamic Workflows?</h2>
 
-<p>Codex is an <strong>Agent product</strong> designed to assist with coding tasks. It's often used alongside tools like <a href="/en/tools/cc-switch">CC Switch</a>, which lets you swap out its underlying model. By default, Codex uses the ChatGPT model, but you can replace this "brain" with domestic alternatives like DeepSeek V4 or Mimo v2.5 for better accessibility and cost-effectiveness.</p>
-
-<h3>Why Choose Domestic Models?</h3>
+<p>Officially defined, Dynamic Workflows are JavaScript scripts for large-scale sub-agent orchestration. Here's how it works:</p>
 
 <ul>
-<li><strong><a href="/en/tools/deepseek">DeepSeek V4</a></strong>: Highly recommended online, with excellent overall performance. However, it doesn't support multimodal inputs (e.g., image uploads).</li>
-<li><strong>Mimo v2.5</strong>: Supports multimodal inputs and offers a great user experience.</li>
+<li><strong>Before</strong>: You interact with Claude one-on-one, task by task, sequentially.</li>
+<li><strong>After</strong>: Claude writes an execution plan (script), launches dozens or even hundreds of sub-agents simultaneously. These sub-agents work independently while cross-verifying each other's outputs, and finally aggregate the results — all while you continue chatting with Claude without interruption.</li>
 </ul>
 
-<h2>2. Download and Install Codex</h2>
+<p>To distinguish it from Claude's other features:</p>
 
-<p>Visit the <a href="/en/tools/codex">Codex official website</a> and download the appropriate version for your operating system (Windows or macOS). The tool is free to download.</p>
-
-<h2>3. Install CC Switch</h2>
-
-<p><a href="/en/tools/cc-switch">CC Switch</a> is a tool that lets you swap Codex's underlying model.</p>
-
-<ol>
-<li>Go to the <a href="https://github.com/12301230/cc-switch/releases" target="_blank" rel="noopener">CC Switch GitHub page</a>.</li>
-<li>Scroll down to find the installation package:
 <ul>
-<li>For macOS, download the file ending with <code>.dmg</code>.</li>
-<li>For Windows, download the file ending with <code>.msi</code>.</li>
+<li><strong>Skills</strong>: Guide Claude on how to perform tasks it already knows (like an operation manual for an employee).</li>
+<li><strong>Plugins</strong>: Provide Claude with new external tools (like giving an employee a new wrench).</li>
+<li><strong>Dynamic Workflows</strong>: Empower Claude to coordinate a team, scheduling dozens of "workers" to operate in parallel.</li>
 </ul>
-</li>
-<li>If unsure which version to install, ask DeepSeek:</li>
-</ol>
 
-<pre><code class="language-text">Which version of CC Switch should I install for my [your OS] system?</code></pre>
+<h3>Real-World Example: Market Research Report</h3>
 
-<h2>4. Obtain an API Key from DeepSeek</h2>
+<ul>
+<li><strong>Traditional Claude</strong>: Generates reports based on templates but with limited data (only a few web pages).</li>
+<li><strong>Plugins</strong>: Pulls real-time data but processes it one by one, slowly.</li>
+<li><strong>Dynamic Workflows</strong>: Scans hundreds of sources simultaneously, cross-verifies facts via multiple agents, filters out low-quality info, and delivers a verified, comprehensive report.</li>
+</ul>
 
-<p>An <strong>API Key</strong> is like an access credential that allows Codex to communicate with the DeepSeek model.</p>
+<h2>2. Three Practical Ways to Get Started</h2>
+
+<h3>Method 1: Keyword Trigger</h3>
+
+<p>Simply include the word <code>workflow</code> in your prompt. Claude will automatically switch to orchestration mode, draft a script, show you the plan for approval, and then execute parallel tasks.</p>
+
+<p><strong>Tips:</strong></p>
+<ul>
+<li>To ignore a highlighted <code>workflow</code> trigger, press <code>Alt+W</code>.</li>
+<li>To disable the keyword trigger entirely, go to <code>/config</code> and turn off the "Workflow Keyword Trigger" option.</li>
+</ul>
+
+<h3>Method 2: Deep Research Command</h3>
+
+<p>Run the built-in <code>deep research</code> command:</p>
+
+<pre><code class="language-text">/deep-research What are the trends in DeFi protocol TVL for 2026?</code></pre>
+
+<p>Claude will then plan, launch sub-agents for parallel scanning, and deliver a research report with cited sources in minutes — work that would normally take hours manually.</p>
+
+<h3>Method 3: UltraCode Mode</h3>
+
+<p>For the most powerful experience, enable UltraCode mode:</p>
+
+<pre><code class="language-text">/effort ultra code</code></pre>
+
+<p>Once activated, Claude automatically plans workflows for every substantial task without needing the <code>workflow</code> keyword. Note: This mode consumes more tokens (as all sub-agents run in high-inference mode). Use it for critical tasks and stick to regular mode for small, daily tasks.</p>
+
+<h2>3. Monitoring and Controlling Workflows</h2>
+
+<p>To check real-time progress, input <code>/workflows</code>. You'll see how many sub-agents are running at each stage, token usage, and time elapsed. Use these key controls:</p>
+
+<ul>
+<li><strong>P</strong>: Pause or resume the entire workflow.</li>
+<li><strong>X</strong>: Stop the currently selected sub-agent or the entire workflow.</li>
+<li><strong>R</strong>: Restart a failed sub-agent.</li>
+<li><strong>S</strong>: Save a successful workflow as a reusable command.</li>
+<li><strong>Enter</strong>: Dive into details of a specific sub-agent (prompts, tools used, returned results).</li>
+</ul>
+
+<h2>4. Real-World Case: Content Research & Production Pipeline</h2>
+
+<p>Here's a four-stage workflow designed for content teams:</p>
 
 <ol>
-<li>Visit the <a href="https://platform.deepseek.com/" target="_blank" rel="noopener">DeepSeek Open Platform</a>.</li>
-<li>Click on "API Keys" in the left menu.</li>
-<li>Create a new API Key, give it a name for easy recall, and copy the generated key. Keep it secure — it's your personal access credential.</li>
+<li><strong>Information Collection</strong>: 30 sub-agents scan news sources, social platforms, and research publications in parallel.</li>
+<li><strong>Cross-Validation</strong>: Independent verification sub-agents check information consistency and filter contradictory content.</li>
+<li><strong>Noise Filtering</strong>: Low-quality content is filtered based on preset criteria.</li>
+<li><strong>Ranking & Output</strong>: Results are sorted by importance and timeliness to generate an editorial brief.</li>
 </ol>
 
-<h2>5. Configure CC Switch</h2>
+<p>What used to take a content team 3-4 hours now takes just 10-15 minutes. Save this workflow with <code>S</code> and reuse it with a slash command (e.g., <code>/content-pipeline</code>). You can even schedule it to run daily for automated market intelligence briefs.</p>
+
+<h2>5. Advanced Tips for Optimal Use</h2>
 
 <ol>
-<li>Open CC Switch and click on the third icon (OpenAI icon) at the top.</li>
-<li>Click the "+" button on the right to add a model. Select "DeepSeek" (or your chosen domestic model).</li>
-<li>Paste the DeepSeek API Key into the designated field. Ensure the toggle for model integration is enabled, then click "Add".</li>
+<li><strong>Model Check for Large Tasks</strong>: Ensure you're using the right model. Running 100 sub-agents on Opus is costly; switch to Haiku for non-core tasks to save tokens.</li>
+<li><strong>Connect MCP Data Sources</strong>: Integrate sources like CoinGecko or DeFiLlama for higher-quality research outputs than web search alone.</li>
+<li><strong>Package Existing Skills into Workflows</strong>: String together skills like "transcribe audio to text" and "SEO optimization" into a seamless content production pipeline.</li>
+<li><strong>Ask Claude for Workflow Recommendations</strong>: Use <code>Based on everything you know about me, what workflows should we build?</code> to get tailored suggestions.</li>
 </ol>
-
-<h2>6. Test the Setup</h2>
-
-<ol>
-<li>Fully exit Codex and restart it.</li>
-<li>In Codex, click on "Settings" in the bottom left corner. You should see that you're logged in via the API Key, and the model should show "DeepSeek".</li>
-<li>Send a test message:</li>
-</ol>
-
-<pre><code class="language-text">Hello, what can you help me with?</code></pre>
-
-<p>A normal response indicates success.</p>
 
 <h2>FAQ</h2>
 
-<h3>Do I need a ChatGPT account to use Codex?</h3>
-<p>Not after this setup. By using <a href="/en/tools/cc-switch">CC Switch</a> with a domestic model's API key, you bypass ChatGPT entirely. You only need a free <a href="/en/tools/deepseek">DeepSeek</a> account (or other domestic provider) to get an API key. This makes Codex accessible to anyone, regardless of OpenAI account restrictions or regional limitations.</p>
+<h3>How is Dynamic Workflows different from regular Claude agent usage?</h3>
+<p>Regular <a href="/en/tools/claude">Claude</a> agent usage is sequential — you ask, Claude responds, one task at a time. Dynamic Workflows let Claude act as an orchestrator: it writes a script, spawns multiple independent sub-agents, and they work in parallel. Think of it as the difference between doing everything yourself vs. managing a team of specialists who each handle their piece simultaneously. The key benefit is parallel processing — 30 research agents scanning different sources at once complete in minutes what would take hours sequentially.</p>
 
-<h3>Which domestic model should I choose — DeepSeek V4 or Mimo v2.5?</h3>
-<p>It depends on your needs. <a href="/en/tools/deepseek">DeepSeek V4</a> offers better overall reasoning and coding performance, making it the top choice for pure code generation tasks. Mimo v2.5 supports multimodal inputs (you can upload images for the AI to analyze), which is useful for UI debugging or design-to-code workflows. If you mainly write and debug code, go with DeepSeek. If you need image understanding alongside coding, pick Mimo v2.5.</p>
+<h3>Does Dynamic Workflows require a specific Claude plan?</h3>
+<p>Dynamic Workflows is available on Claude's paid plans (Pro, Team, Enterprise). The number of concurrent sub-agents and total workflow duration may vary by plan tier. The <code>/effort ultra code</code> mode consumes significantly more tokens since every sub-agent runs at maximum inference quality. For budget-conscious usage, use keyword-triggered workflows on regular mode for daily tasks, and reserve UltraCode for critical projects where quality is paramount.</p>
 
-<h3>Is CC Switch free to use?</h3>
-<p>Yes, <a href="/en/tools/cc-switch">CC Switch</a> is an open-source tool available for free on GitHub. You only pay for the API usage of the model you connect to — <a href="/en/tools/deepseek">DeepSeek</a>'s API is extremely affordable at roughly one-twentieth of OpenAI's pricing.</p>
+<h3>Can I share my workflows with team members?</h3>
+<p>Yes. When you save a successful workflow with <code>S</code>, it becomes a slash command that can be shared. Team members on the same Claude plan can import and run your workflows. This makes Dynamic Workflows particularly powerful for teams — one person designs and refines the workflow, and the whole team benefits from the optimized process.</p>
 
 <div class="next-step">
-<p><strong>Next Read:</strong> <a href="/en/article/long-running-ai-coding-glm-claude">Mastering Long-Running AI Coding Tasks with GLM 5.2 and Claude Code →</a></p>
+<p><strong>Next Read:</strong> <a href="/en/article/codex-complete-guide-domestic">Codex Complete Guide for Domestic Users: Full Installation + Official Plugins Setup →</a></p>
 </div>`,
     contentZh: `
 <div class="meta-banner">
-  <span>📅 2026-06-19</span>
+  <span>📅 2026-06-20</span>
   <span>📂 <a href="/zh/learn/ai-tutorials">AI教程</a></span>
-  <span>⏱️ 6 分钟阅读</span>
-  <span>🔰 初学者</span>
+  <span>⏱️ 7 分钟阅读</span>
+  <span>⚡ 中级</span>
 </div>
 
-<p>在AI辅助编程领域，<a href="/zh/tools/codex">Codex</a>已成为一款强大的工具，但其对ChatGPT模型的依赖因成本和访问问题成为许多人的障碍。本指南带你通过<a href="/zh/tools/cc-switch">CC Switch</a>配置Codex使用<a href="/zh/tools/deepseek">DeepSeek V4</a>等国产AI模型，无需ChatGPT账号、手机号验证或特殊网络环境。</p>
+<p>在AI工具领域，<a href="/zh/tools/claude">Claude</a>悄悄推出了一项被模型升级光环掩盖的革命性功能——<strong>动态工作流（Dynamic Workflows）</strong>。这不是小更新，而是范式转变，将Claude从单人助手变成了能同时调度数百个AI子代理的项目经理。无论你在研究、写作还是编程，这个功能都能让你的效率提升10倍。</p>
 
-<h2>1. 理解Codex及其生态系统</h2>
+<h2>1. 什么是动态工作流？</h2>
 
-<p>Codex是一款<strong>Agent产品</strong>，专为编程任务设计。它通常配合<a href="/zh/tools/cc-switch">CC Switch</a>使用，后者可以替换其底层模型。默认情况下Codex使用ChatGPT模型，但你可以用DeepSeek V4或Mimo v2.5等国产替代方案替换这个"大脑"，获得更好的可访问性和性价比。</p>
-
-<h3>为什么选择国产模型？</h3>
+<p>官方定义：动态工作流是用于大规模子代理编排的JavaScript脚本。通俗来讲：</p>
 
 <ul>
-<li><strong><a href="/zh/tools/deepseek">DeepSeek V4</a></strong>：网上评价很高，综合表现优秀。但不支持多模态输入（如图片上传）。</li>
-<li><strong>Mimo v2.5</strong>：支持多模态输入，用户体验出色。</li>
+<li><strong>以前</strong>：你和Claude一对一交互，逐个任务顺序执行。</li>
+<li><strong>现在</strong>：Claude编写执行计划（脚本），同时启动数十甚至数百个子代理，这些子代理独立工作、交叉验证彼此的输出，最后汇总结果——全程你可以继续和Claude聊天，不受任何打断。</li>
 </ul>
 
-<h2>2. 下载安装Codex</h2>
+<p>与Claude其他功能的区别：</p>
 
-<p>访问<a href="/zh/tools/codex">Codex官网</a>，下载适合你操作系统的版本（Windows或macOS）。工具免费下载。</p>
-
-<h2>3. 安装CC Switch</h2>
-
-<p><a href="/zh/tools/cc-switch">CC Switch</a>是让你替换Codex底层模型的工具。</p>
-
-<ol>
-<li>前往<a href="https://github.com/12301230/cc-switch/releases" target="_blank" rel="noopener">CC Switch GitHub页面</a>。</li>
-<li>向下滚动找到安装包：
 <ul>
-<li>macOS下载<code>.dmg</code>结尾的文件。</li>
-<li>Windows下载<code>.msi</code>结尾的文件。</li>
+<li><strong>Skills（技能）</strong>：指导Claude如何执行它已经会的任务（像员工操作手册）。</li>
+<li><strong>Plugins（插件）</strong>：为Claude提供新的外部工具（像给员工一把新扳手）。</li>
+<li><strong>Dynamic Workflows（动态工作流）</strong>：赋予Claude协调团队的能力，调度数十个"工人"并行运作。</li>
 </ul>
-</li>
-<li>如果不确定该装哪个版本，直接问DeepSeek：</li>
-</ol>
 
-<pre><code class="language-text">我的系统是[你的操作系统]，应该安装哪个版本的CC Switch？</code></pre>
+<h3>实际案例：市场研究报告</h3>
 
-<h2>4. 从DeepSeek获取API Key</h2>
+<ul>
+<li><strong>传统Claude</strong>：基于模板生成报告，数据有限（仅几页网页）。</li>
+<li><strong>插件模式</strong>：拉取实时数据但逐个处理，速度慢。</li>
+<li><strong>动态工作流</strong>：同时扫描数百个来源，多代理交叉验证事实，过滤低质量信息，交付经过验证的全面报告。</li>
+</ul>
 
-<p><strong>API Key</strong>相当于访问凭证，让Codex能与DeepSeek模型通信。</p>
+<h2>2. 三种上手方式</h2>
+
+<h3>方法一：关键词触发</h3>
+
+<p>在提示词中包含 <code>workflow</code> 一词，Claude会自动切换到编排模式，起草脚本、展示计划供你批准，然后并行执行任务。</p>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>忽略高亮的 <code>workflow</code> 触发词，按 <code>Alt+W</code>。</li>
+<li>完全禁用关键词触发，去 <code>/config</code> 关闭"Workflow Keyword Trigger"选项。</li>
+</ul>
+
+<h3>方法二：深度研究命令</h3>
+
+<p>运行内置的 <code>/deep-research</code> 命令：</p>
+
+<pre><code class="language-text">/deep-research 2026年DeFi协议TVL趋势是什么？</code></pre>
+
+<p>Claude会规划、启动子代理并行扫描，几分钟内交付带引用来源的研究报告——手动需要几小时的工作。</p>
+
+<h3>方法三：UltraCode模式</h3>
+
+<p>最强体验，启用UltraCode模式：</p>
+
+<pre><code class="language-text">/effort ultra code</code></pre>
+
+<p>激活后，Claude对每个重要任务自动规划工作流，无需 <code>workflow</code> 关键词。注意：此模式消耗更多Token（所有子代理都以高推理模式运行）。关键任务使用，日常小任务保持常规模式。</p>
+
+<h2>3. 监控和控制工作流</h2>
+
+<p>查看实时进度，输入 <code>/workflows</code>。你会看到每个阶段运行多少子代理、Token使用量和已用时间。关键控制：</p>
+
+<ul>
+<li><strong>P</strong>：暂停或恢复整个工作流。</li>
+<li><strong>X</strong>：停止当前选中的子代理或整个工作流。</li>
+<li><strong>R</strong>：重启失败的子代理。</li>
+<li><strong>S</strong>：保存成功的工作流为可复用命令。</li>
+<li><strong>Enter</strong>：深入查看特定子代理的详情（提示词、使用的工具、返回结果）。</li>
+</ul>
+
+<h2>4. 实战案例：内容研究生产流水线</h2>
+
+<p>为内容团队设计的四阶段工作流：</p>
 
 <ol>
-<li>访问<a href="https://platform.deepseek.com/" target="_blank" rel="noopener">DeepSeek开放平台</a>。</li>
-<li>点击左侧菜单中的"API Keys"。</li>
-<li>创建新API Key，取个好记的名字，复制生成的Key。妥善保管——这是你的个人访问凭证。</li>
+<li><strong>信息采集</strong>：30个子代理并行扫描新闻源、社交平台和研究出版物。</li>
+<li><strong>交叉验证</strong>：独立验证子代理检查信息一致性，过滤矛盾内容。</li>
+<li><strong>噪音过滤</strong>：基于预设标准过滤低质量内容。</li>
+<li><strong>排序输出</strong>：按重要性和时效性排序，生成编辑简报。</li>
 </ol>
 
-<h2>5. 配置CC Switch</h2>
+<p>内容团队原来需要3-4小时的工作现在只需10-15分钟。用 <code>S</code> 保存此工作流，用斜杠命令复用（如 <code>/content-pipeline</code>）。甚至可以设置为每天自动运行，获取自动化市场情报简报。</p>
+
+<h2>5. 高级优化技巧</h2>
 
 <ol>
-<li>打开CC Switch，点击顶部的第三个图标（OpenAI图标）。</li>
-<li>点击右侧"+"按钮添加模型，选择"DeepSeek"（或你选的国产模型）。</li>
-<li>将DeepSeek API Key粘贴到指定字段。确保模型集成开关已开启，点击"添加"。</li>
+<li><strong>大任务检查模型</strong>：确保使用合适的模型。在Opus上运行100个子代理成本高，非核心任务切换到Haiku节省Token。</li>
+<li><strong>连接MCP数据源</strong>：集成CoinGecko或DeFiLlama等数据源，获得比纯网页搜索更高质量的研究输出。</li>
+<li><strong>将现有技能打包成工作流</strong>：将"音频转文字"和"SEO优化"等技能串联成无缝内容生产流水线。</li>
+<li><strong>让Claude推荐工作流</strong>：使用 <code>根据你对我的了解，我们应该构建哪些工作流？</code> 获取个性化建议。</li>
 </ol>
-
-<h2>6. 测试配置</h2>
-
-<ol>
-<li>完全退出Codex后重新启动。</li>
-<li>在Codex中点击左下角"Settings"，应该看到已通过API Key登录，模型显示为"DeepSeek"。</li>
-<li>发送测试消息：</li>
-</ol>
-
-<pre><code class="language-text">你好，你能帮我做什么？</code></pre>
-
-<p>正常回复即表示配置成功。</p>
 
 <h2>常见问题</h2>
 
-<h3>使用Codex需要ChatGPT账号吗？</h3>
-<p>此配置完成后不需要。通过<a href="/zh/tools/cc-switch">CC Switch</a>配合国产模型的API Key，你完全绕过了ChatGPT。只需一个免费的<a href="/zh/tools/deepseek">DeepSeek</a>账号（或其他国产厂商账号）获取API Key即可。这让任何人都能使用Codex，不受OpenAI账号限制或地域约束。</p>
+<h3>动态工作流与普通Claude代理使用有什么不同？</h3>
+<p>普通<a href="/zh/tools/claude">Claude</a>代理使用是顺序的——你问、Claude答，一次一个任务。动态工作流让Claude充当编排者：它编写脚本，启动多个独立子代理，它们并行工作。就像自己动手做所有事 vs. 管理一个专家团队各自同时处理自己那部分。关键优势是并行处理——30个研究代理同时扫描不同来源，几分钟完成顺序执行需要几小时的工作。</p>
 
-<h3>该选DeepSeek V4还是Mimo v2.5？</h3>
-<p>取决于你的需求。<a href="/zh/tools/deepseek">DeepSeek V4</a>整体推理和编程性能更好，是纯代码生成任务的首选。Mimo v2.5支持多模态输入（可上传图片让AI分析），对UI调试或设计转代码工作流很有用。如果你主要写代码和调试，选DeepSeek。如果需要图像理解配合编程，选Mimo v2.5。</p>
+<h3>动态工作流需要特定的Claude套餐吗？</h3>
+<p>动态工作流在Claude的付费套餐（Pro、Team、Enterprise）上可用。并发子代理数量和总工作流时长可能因套餐级别而异。<code>/effort ultra code</code> 模式消耗显著更多的Token，因为每个子代理都以最高推理质量运行。预算敏感时，日常任务使用关键词触发工作流的常规模式，关键项目再使用UltraCode。</p>
 
-<h3>CC Switch免费吗？</h3>
-<p>是的，<a href="/zh/tools/cc-switch">CC Switch</a>是开源工具，在GitHub上免费获取。你只需支付所连接模型的API使用费——<a href="/zh/tools/deepseek">DeepSeek</a>的API价格约为OpenAI的二十分之一，非常实惠。</p>
+<h3>可以和团队成员共享工作流吗？</h3>
+<p>可以。用 <code>S</code> 保存成功的工作流后，它变成一个可共享的斜杠命令。同Claude套餐的团队成员可以导入和运行你的工作流。这使得动态工作流对团队特别强大——一个人设计和优化工作流，整个团队受益于优化后的流程。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/long-running-ai-coding-glm-claude">用GLM 5.2和Claude Code驾驭长时间AI编程任务 →</a></p>
+<p><strong>下一篇：</strong> <a href="/zh/article/codex-complete-guide-domestic">Codex国内用户完整指南：安装+官方插件配置全流程 →</a></p>
 </div>`,
   },
 """
 
 article2_content = r"""
-  // ====== Article: Long-Running AI Coding with GLM 5.2 and Claude Code ======
-  "long-running-ai-coding-glm-claude": {
+  // ====== Article: Codex Complete Guide for Domestic Users ======
+  "codex-complete-guide-domestic": {
     content: `
 <div class="meta-banner">
-  <span>📅 2026-06-19</span>
+  <span>📅 2026-06-20</span>
   <span>📂 <a href="/en/learn/ai-tutorials">AI Tutorials</a></span>
   <span>⏱️ 8 min read</span>
-  <span>⚡ Advanced</span>
+  <span>🔰 Beginner</span>
 </div>
 
-<p>In AI-assisted software development, running large-scale projects over extended periods has long been a challenge. With models like Zhipu AI's GLM 5.2 and tools like <a href="/en/tools/claude">Claude Code</a>, it's now feasible to automate complex tasks for hours — even with massive codebases. This article dives into a practical case study: porting the 400,000-line TypeScript project OpenClaw to Python, showcasing the power of long-context AI models and structured task management.</p>
+<p>For developers in China, accessing and using <a href="/en/tools/codex">Codex</a> effectively — with all official plugins — has long been a challenge due to network restrictions and configuration hurdles. This beginner-friendly, "spoon-feeding" guide breaks down the entire process from installation to plugin activation, ensuring even non-technical users can leverage Codex's full capabilities without complex setups.</p>
 
-<h2>1. Why GLM 5.2 + Claude Code Matters</h2>
-
-<p>GLM 5.2, released by Zhipu AI, stands out with its <strong>million-token context window</strong> and optimized attention mechanisms, making it capable of handling large-scale, long-duration tasks. Paired with <a href="/en/tools/claude">Claude Code</a>'s <code>goal</code> command for looped execution, you get a robust setup for end-to-end AI-driven development.</p>
-
-<p>Most AI models struggle with "lost in the middle" issues when context windows overflow. GLM 5.2's architectural improvements minimize this, ensuring it stays on track even after 13+ hours of continuous operation — critical for projects like OpenClaw with 10+ core modules and 400,000+ lines of code.</p>
-
-<h2>2. Step 1: Project Analysis and Task Breakdown</h2>
-
-<h3>2.1 Reading and Analyzing the Codebase</h3>
-
-<p>First, clone the repository and use Claude Code's agent capabilities to map the architecture:</p>
-
-<pre><code class="language-bash">git clone --depth 1 &lt;OpenClaw-repo-url&gt;
-cd python-openclaw</code></pre>
-
-<p>Then trigger multi-agent analysis via Claude Code:</p>
-
-<pre><code class="language-text">Analyze all .ts files in the 'ts-reference/' directory.
-1. Map import dependencies and draw a call graph.
-2. Identify core modules (utils, agents, plugins, etc.).
-3. Document the dependency hierarchy from bottom to top.
-4. List each module's responsibilities and file count.</code></pre>
-
-<p>This generates a structured report outlining the project's architecture:</p>
+<h2>1. Core Advantages of This Domestic-Friendly Setup</h2>
 
 <ul>
-<li><strong>Layer 1 (Utils)</strong>: <code>utils/shared-types</code> (214 files) — pure utility functions.</li>
-<li><strong>Layer 2 (Infrastructure)</strong>: <code>logging</code>, <code>infra</code>, <code>terminal</code> (273 files) — logging, environment management, terminal rendering.</li>
-<li><strong>Layer 3 (Agent Core)</strong>: <code>agents</code>, <code>auto-reply</code>, <code>context-engine</code> (529 files) — core AI agent logic.</li>
+<li><strong>No Special Network Required</strong>: Works with regular domestic internet (no VPN needed).</li>
+<li><strong>Full Official Plugins Access</strong>: Activate all 8+ official Codex plugins (Browser, Terminal, File Manager, etc.).</li>
+<li><strong>Stable Connection</strong>: Uses domestic API gateways to avoid latency or disconnections.</li>
+<li><strong>Zero Coding Experience Needed</strong>: Follow copy-paste commands and visual steps.</li>
 </ul>
 
-<h3>2.2 Breaking Down Tasks</h3>
+<h2>2. Prerequisites (3 Things You Need)</h2>
 
-<p>With the architecture mapped, split the project into granular tasks:</p>
+<ol>
+<li>A Windows 10/11 or macOS 12+ computer (64-bit, 8GB+ RAM recommended).</li>
+<li>A free <a href="/en/tools/deepseek">DeepSeek</a> API key (domestic AI model alternative to GPT).</li>
+<li>10 minutes of time (the entire process is streamlined to under 10 minutes).</li>
+</ol>
 
-<pre><code class="language-text">For each module in docs/specs/, break down into function-level tasks.
-- Each task must include:
-  - A clear requirement (e.g., "Implement compaction for message summarization").
-  - At least 3 test cases (e.g., test_empty_messages_returns_empty_string).
-  - A validation method (e.g., "Run pytest and ensure 100% coverage").
-- Generate a progress.json file to track task status.</code></pre>
+<h2>3. Step 1: Download Codex Client (Domestic Mirror)</h2>
 
-<p>This yields <strong>443 tasks</strong>, each with precise acceptance criteria. Example task:</p>
+<p>The official Codex download may be inaccessible in China — use a trusted domestic mirror:</p>
 
-<pre><code class="language-text">## Task 154: Compaction for Message Summarization
-- Requirement: Implement summarize_messages(messages, model)
-- Test Cases:
-  1. test_summarize_single_message_returns_text
-  2. test_empty_messages_returns_empty_string
-  3. test_fallback_truncation_when_model_fails
-- Validation: Run pytest --cov=agents, ensure coverage >= 90%</code></pre>
+<ol>
+<li>Visit the Codex China Mirror (Alibaba Cloud-hosted).</li>
+<li>Select the version for your OS:
+<ul>
+<li>Windows: Download <code>Codex-Setup-1.8.2.exe</code> (58MB).</li>
+<li>macOS: Download <code>Codex-1.8.2.dmg</code> (62MB).</li>
+</ul>
+</li>
+<li>Install by double-clicking — no custom settings needed (just click "Next" → "Install" → "Finish").</li>
+</ol>
 
-<h2>3. Step 2: Long-Running Execution with goal Command</h2>
+<h2>4. Step 2: Configure Domestic AI Model Connection</h2>
 
-<p>Claude Code's <code>goal</code> command enables looped execution — the model fetches tasks from <code>progress.json</code>, executes them, and updates status iteratively.</p>
+<p>Codex defaults to ChatGPT, but we'll connect it to <a href="/en/tools/deepseek">DeepSeek</a> for stable access:</p>
 
-<pre><code class="language-text">/goal Iterate over all tasks in docs/plans until python check_progress.py returns 0.
-- Read progress.json to get the first pending task.
-- Execute all test cases defined in the task (at least 3).
-- If tests fail (RED), stop and mark as failed.
-- If tests pass (GREEN), run ruff check and ruff format --check; fix any issues.
-- Commit changes with git commit --task=N.
-- Update progress.json (done, completed+1, rounds+1).
-- Stop if check_progress.py returns 0; else, continue.</code></pre>
+<ol>
+<li>Open Codex after installation. Click "Settings" (gear icon) in the bottom-left corner.</li>
+<li>Select "Model Configuration" → "Custom API".</li>
+<li>Fill in the fields:</li>
+</ol>
 
-<p>Execute it in Claude Code:</p>
+<pre><code class="language-text">API Provider: DeepSeek
+API Base URL: https://api.deepseek.com/v1
+API Key: [Paste your DeepSeek API key here]
+Model: deepseek-chat</code></pre>
 
-<pre><code class="language-bash">/bypass permissions on
-/goal &lt;prompt-text&gt;</code></pre>
+<ol start="4">
+<li>Click "Test Connection" — a green "Connected Successfully" message means it's working.</li>
+<li>Click "Save" to apply the settings.</li>
+</ol>
 
-<p>During the 13+ hour run, the model handles code generation, automated testing with <code>pytest</code>, linting with <code>ruff</code>, git commits per task, and progress tracking via <code>progress.json</code>.</p>
+<h3>How to Get a DeepSeek API Key (30-Second Tutorial)</h3>
 
-<h2>4. Step 3: Validation and Iteration</h2>
+<ol>
+<li>Go to <a href="https://platform.deepseek.com/" target="_blank" rel="noopener">DeepSeek Open Platform</a> and sign up with your phone number.</li>
+<li>After logging in, click "API Keys" → "Create New Key".</li>
+<li>Name the key (e.g., "Codex Usage") and click "Generate" — copy the key immediately (it won't be shown again).</li>
+</ol>
 
-<p>Post-execution, validate the output:</p>
+<h2>5. Step 3: Install All Official Codex Plugins</h2>
+
+<p>Codex's power lies in its plugins — here's how to install and enable all official ones:</p>
+
+<ol>
+<li>In Codex, click "Plugins" (puzzle icon) in the left sidebar.</li>
+<li>Click "Install Official Plugins" → select "All Plugins" (or check individual ones you need):
+<ul>
+<li><strong>Browser</strong>: Web search and page scraping.</li>
+<li><strong>Terminal</strong>: Run shell commands.</li>
+<li><strong>File Manager</strong>: Read/write local files.</li>
+<li><strong>Code Interpreter</strong>: Execute Python/R code.</li>
+<li><strong>PDF Reader</strong>: Analyze PDF documents.</li>
+<li><strong>Image Generator</strong>: Create images from text.</li>
+<li><strong>Excel Processor</strong>: Edit and analyze Excel files.</li>
+<li><strong>Git Integration</strong>: Manage Git repositories.</li>
+</ul>
+</li>
+<li>Click "Install" — wait 20 seconds for all plugins to download.</li>
+</ol>
+
+<h3>Verify Plugin Activation</h3>
+
+<p>Run this test prompt to confirm plugins work:</p>
+
+<pre><code class="language-text">Use the Browser plugin to search for "2024 top Python frameworks", then use the File Manager plugin to save the results to a text file named "python-frameworks-2024.txt" on my desktop.</code></pre>
+
+<h2>6. Step 4: Practical Use Cases</h2>
+
+<h3>1. Automate File Organization (File Manager Plugin)</h3>
+
+<pre><code class="language-text">Use the File Manager plugin to organize my "Downloads" folder:
+1. Create subfolders: "Documents", "Images", "Videos", "Others".
+2. Move all .pdf/.docx/.txt files to "Documents".
+3. Move all .jpg/.png/.gif files to "Images".
+4. Move all .mp4/.mov files to "Videos".
+5. Move remaining files to "Others".
+6. Generate a summary of how many files were moved to each folder.</code></pre>
+
+<h3>2. Run Code Snippets (Code Interpreter Plugin)</h3>
+
+<pre><code class="language-text">Use the Code Interpreter plugin to:
+1. Calculate the sum of the first 100 prime numbers.
+2. Generate a bar chart showing the distribution of these primes.
+3. Save the chart as "prime-numbers-chart.png" on my desktop.
+4. Output the final sum and the file path.</code></pre>
+
+<h3>3. Analyze PDF Data (PDF Reader Plugin)</h3>
+
+<pre><code class="language-text">Use the PDF Reader plugin to:
+1. Open the file "sales-report-2024.pdf" from my Documents folder.
+2. Extract all numerical sales data from the first 5 pages.
+3. Calculate the total revenue and average units sold per month.
+4. Save the analysis as "sales-analysis-2024.txt" in the same folder.</code></pre>
+
+<h2>7. Troubleshooting Common Issues</h2>
+
+<h3>Issue 1: Plugin Installation Fails</h3>
+
+<pre><code class="language-bash"># Windows
+cd C:\Program Files\Codex
+codex --repair-plugins
+
+# macOS
+cd /Applications/Codex.app/Contents/MacOS
+./Codex --repair-plugins</code></pre>
+
+<h3>Issue 2: API Connection Error</h3>
 
 <ul>
-<li><strong>Web Chat</strong>: Functional chat interface at <code>http://localhost:8080</code>.</li>
-<li><strong>Skill Execution</strong>: Run pre-installed skills like image generation.</li>
-<li><strong>Tool Usage</strong>: Fetch web content and save to local files.</li>
+<li>Ensure your API key is not expired (DeepSeek keys are valid for 90 days).</li>
+<li>Check if your internet connection is stable.</li>
+<li>Re-enter the API Base URL: <code>https://api.deepseek.com/v1</code> (no typos).</li>
 </ul>
 
-<p>If issues arise (e.g., repetitive task execution), simply prompt:</p>
+<h3>Issue 3: Terminal Plugin Not Working (Windows)</h3>
 
-<pre><code class="language-text">The agent is repeating historical tasks. Fix the loop to avoid duplication.</code></pre>
-
-<p>GLM 5.2's improved instruction-following ensures most fixes land in one shot.</p>
+<ol>
+<li>Open Codex → "Plugins" → "Terminal" → "Settings".</li>
+<li>Select "Use PowerShell" (default is Command Prompt).</li>
+<li>Click "Save" and retry running commands.</li>
+</ol>
 
 <h2>FAQ</h2>
 
-<h3>Can I use this approach with models other than GLM 5.2?</h3>
-<p>Yes, any model with a large enough context window can work. The key requirement is maintaining coherence over long sessions without "losing the thread." <a href="/en/tools/claude">Claude</a>'s own Opus and Sonnet models also handle long-context tasks well, though they may have different pricing structures. The million-token window of GLM 5.2 simply makes it particularly cost-effective for marathon coding sessions. You can also experiment with Gemini 2.5 Pro or GPT-5, both of which offer large context windows.</p>
+<h3>Do I need a ChatGPT account to use Codex with this setup?</h3>
+<p>No. By configuring <a href="/en/tools/codex">Codex</a> with <a href="/en/tools/deepseek">DeepSeek</a> as the backend model, you completely bypass ChatGPT. You only need a free DeepSeek API key. This makes Codex accessible regardless of OpenAI account restrictions or regional limitations. The DeepSeek API is also dramatically cheaper — roughly one-twentieth of OpenAI's pricing.</p>
 
-<h3>What happens if the model gets stuck in an infinite loop?</h3>
-<p>This is a real risk with looped execution. To mitigate it: (1) set a maximum round limit in your <code>goal</code> prompt, (2) use the progress.json file to detect when the same task is attempted multiple times without completion, and (3) periodically check in on long-running sessions. The <code>check_progress.py</code> script mentioned above should include a guard clause that exits after N consecutive failures on the same task.</p>
+<h3>Can I use other domestic models besides DeepSeek?</h3>
+<p>Yes. The same configuration pattern works with any OpenAI-compatible API. You can use Moonshot AI (Kimi), Zhipu AI (GLM), or Baidu ERNIE Bot by changing the API Base URL and model name in the settings. The key is that the model must support an OpenAI-compatible chat completions endpoint. DeepSeek is recommended as the starting point due to its excellent coding performance and low cost.</p>
 
-<h3>Is this approach suitable for production code, or just experiments?</h3>
-<p>It depends on the risk level. For low-risk modules like utility functions and data formatting, AI-generated code with automated testing is production-ready. For security-critical code (authentication, payment processing), combine AI generation with human code review. The 443-task OpenClaw porting project demonstrates that AI can handle the bulk of mechanical translation work, freeing developers to focus on architecture decisions and security audits. Treat it like you'd treat any junior developer's output — test thoroughly, review critical paths, and iterate.</p>
+<h3>What if Codex updates and breaks the configuration?</h3>
+<p>Codex updates generally preserve custom API configurations. If a major update resets your settings, simply repeat Step 2 (re-entering the API details). Your DeepSeek API key remains valid. For plugin issues after an update, run <code>codex --repair-plugins</code> as shown in the troubleshooting section above.</p>
 
 <div class="next-step">
-<p><strong>Next Read:</strong> <a href="/en/article/codex-domestic-ai-models">How to Use Codex with Domestic AI Models: A Practical Guide for Everyone →</a></p>
+<p><strong>Next Read:</strong> <a href="/en/article/claude-dynamic-workflows">Claude Dynamic Workflows: Transform One AI into a Team of 100 →</a></p>
 </div>`,
     contentZh: `
 <div class="meta-banner">
-  <span>📅 2026-06-19</span>
+  <span>📅 2026-06-20</span>
   <span>📂 <a href="/zh/learn/ai-tutorials">AI教程</a></span>
   <span>⏱️ 8 分钟阅读</span>
-  <span>⚡ 高级</span>
+  <span>🔰 初学者</span>
 </div>
 
-<p>在AI辅助软件开发中，长时间运行大型项目一直是个挑战。随着智谱AI的GLM 5.2和<a href="/zh/tools/claude">Claude Code</a>等工具的出现，即使面对海量代码库，自动化复杂任务数小时已成为可行方案。本文深入一个实战案例：将40万行TypeScript项目OpenClaw移植到Python，展示长上下文AI模型与结构化任务管理的强大威力。</p>
+<p>对于国内开发者来说，有效使用<a href="/zh/tools/codex">Codex</a>及其全部官方插件一直是个挑战，因为网络限制和配置障碍。这篇新手友好、"手把手喂饭"式指南拆解从安装到插件激活的完整流程，确保即使非技术用户也能无复杂配置地利用Codex的全部能力。</p>
 
-<h2>1. 为什么GLM 5.2 + Claude Code如此重要</h2>
-
-<p>智谱AI发布的GLM 5.2以其<strong>百万Token上下文窗口</strong>和优化的注意力机制脱颖而出，能够处理大规模、长时间任务。配合<a href="/zh/tools/claude">Claude Code</a>的<code>goal</code>命令循环执行，你得到了一套端到端AI驱动开发的稳健方案。</p>
-
-<p>大多数AI模型在上下文窗口溢出时会出现"迷失在中间"的问题。GLM 5.2的架构改进最大限度地减少了这一问题，确保连续运行13小时以上仍能保持方向——这对拥有10+核心模块、40万+行代码的OpenClaw项目至关重要。</p>
-
-<h2>2. 第一步：项目分析与任务拆解</h2>
-
-<h3>2.1 阅读和分析代码库</h3>
-
-<p>首先克隆仓库，使用Claude Code的Agent能力绘制架构图：</p>
-
-<pre><code class="language-bash">git clone --depth 1 &lt;OpenClaw仓库地址&gt;
-cd python-openclaw</code></pre>
-
-<p>然后通过Claude Code触发多Agent分析：</p>
-
-<pre><code class="language-text">分析'ts-reference/'目录中的所有.ts文件。
-1. 绘制导入依赖关系和调用图。
-2. 识别核心模块（utils、agents、plugins等）。
-3. 记录从底层到顶层的依赖层级。
-4. 列出每个模块的职责和文件数量。</code></pre>
-
-<p>这会生成一份结构化报告，描绘项目架构：</p>
+<h2>1. 此国内友好配置的核心优势</h2>
 
 <ul>
-<li><strong>第一层（工具层）</strong>：<code>utils/shared-types</code>（214个文件）——纯工具函数。</li>
-<li><strong>第二层（基础设施）</strong>：<code>logging</code>、<code>infra</code>、<code>terminal</code>（273个文件）——日志、环境管理、终端渲染。</li>
-<li><strong>第三层（Agent核心）</strong>：<code>agents</code>、<code>auto-reply</code>、<code>context-engine</code>（529个文件）——核心AI Agent逻辑。</li>
+<li><strong>无需特殊网络</strong>：普通国内网络即可使用（无需VPN）。</li>
+<li><strong>全部官方插件可用</strong>：激活所有8+官方Codex插件（浏览器、终端、文件管理等）。</li>
+<li><strong>连接稳定</strong>：使用国内API网关，避免延迟或断连。</li>
+<li><strong>零编程经验也能用</strong>：按复制粘贴命令和可视化步骤操作即可。</li>
 </ul>
 
-<h3>2.2 任务拆解</h3>
+<h2>2. 准备工作（3样东西）</h2>
 
-<p>架构梳理清楚后，将项目拆分为细粒度任务：</p>
+<ol>
+<li>一台Windows 10/11或macOS 12+电脑（64位，建议8GB+内存）。</li>
+<li>一个免费的<a href="/zh/tools/deepseek">DeepSeek</a> API Key（替代GPT的国产AI模型）。</li>
+<li>10分钟时间（整个流程精简到10分钟以内）。</li>
+</ol>
 
-<pre><code class="language-text">对docs/specs/中的每个模块，拆分为函数级任务。
-- 每个任务必须包含：
-  - 明确需求（如"实现消息摘要的压缩功能"）。
-  - 至少3个测试用例（如test_empty_messages_returns_empty_string）。
-  - 验证方法（如"运行pytest确保100%覆盖率"）。
-- 生成progress.json文件跟踪任务状态。</code></pre>
+<h2>3. 第一步：下载Codex客户端（国内镜像）</h2>
 
-<p>最终得到<strong>443个任务</strong>，每个都有精确的验收标准。示例任务：</p>
+<p>Codex官方下载在国内可能无法访问——使用可信国内镜像：</p>
 
-<pre><code class="language-text">## 任务154：消息摘要压缩
-- 需求：实现summarize_messages(messages, model)
-- 测试用例：
-  1. test_summarize_single_message_returns_text
-  2. test_empty_messages_returns_empty_string
-  3. test_fallback_truncation_when_model_fails
-- 验证：运行pytest --cov=agents，确保覆盖率>=90%</code></pre>
+<ol>
+<li>访问Codex国内镜像（阿里云托管，安全可用）。</li>
+<li>选择对应系统版本：
+<ul>
+<li>Windows：下载 <code>Codex-Setup-1.8.2.exe</code>（58MB）。</li>
+<li>macOS：下载 <code>Codex-1.8.2.dmg</code>（62MB）。</li>
+</ul>
+</li>
+<li>双击安装——无需自定义设置（直接点"下一步"→"安装"→"完成"）。</li>
+</ol>
 
-<h2>3. 第二步：用goal命令长时间运行</h2>
+<h2>4. 第二步：配置国产AI模型连接</h2>
 
-<p>Claude Code的<code>goal</code>命令实现循环执行——模型从<code>progress.json</code>取任务、执行、迭代更新状态。</p>
+<p>Codex默认使用ChatGPT，我们将其连接到<a href="/zh/tools/deepseek">DeepSeek</a>实现稳定访问：</p>
 
-<pre><code class="language-text">/goal 遍历docs/plans中的所有任务，直到python check_progress.py返回0。
-- 读取progress.json获取第一个待处理任务。
-- 执行任务中定义的所有测试用例（至少3个）。
-- 如果测试失败（RED），停止并标记为失败。
-- 如果测试通过（GREEN），运行ruff check和ruff format --check；修复问题。
-- 用git commit --task=N提交更改。
-- 更新progress.json（done、completed+1、rounds+1）。
-- 如果check_progress.py返回0则停止；否则继续。</code></pre>
+<ol>
+<li>安装后打开Codex，点击左下角"Settings"（齿轮图标）。</li>
+<li>选择"Model Configuration" → "Custom API"。</li>
+<li>填写以下信息：</li>
+</ol>
 
-<p>在Claude Code中执行：</p>
+<pre><code class="language-text">API Provider: DeepSeek
+API Base URL: https://api.deepseek.com/v1
+API Key: [在此粘贴你的DeepSeek API key]
+Model: deepseek-chat</code></pre>
 
-<pre><code class="language-bash">/bypass permissions on
-/goal &lt;提示词文本&gt;</code></pre>
+<ol start="4">
+<li>点击"Test Connection"——显示绿色"Connected Successfully"即成功。</li>
+<li>点击"Save"保存设置。</li>
+</ol>
 
-<p>在13+小时运行期间，模型处理代码生成、<code>pytest</code>自动化测试、<code>ruff</code>代码检查、按任务git提交和<code>progress.json</code>进度跟踪。</p>
+<h3>如何获取DeepSeek API Key（30秒教程）</h3>
 
-<h2>4. 第三步：验证与迭代</h2>
+<ol>
+<li>前往<a href="https://platform.deepseek.com/" target="_blank" rel="noopener">DeepSeek开放平台</a>，用手机号注册。</li>
+<li>登录后点击"API Keys" → "创建新Key"。</li>
+<li>命名Key（如"Codex使用"），点击"生成"——立即复制Key（不会再显示）。</li>
+</ol>
 
-<p>执行完成后验证输出：</p>
+<h2>5. 第三步：安装全部官方Codex插件</h2>
+
+<p>Codex的强大在于插件——以下是安装和启用全部官方插件的方法：</p>
+
+<ol>
+<li>在Codex中点击左侧边栏的"Plugins"（拼图图标）。</li>
+<li>点击"Install Official Plugins" → 选择"All Plugins"（或勾选需要的单个插件）：
+<ul>
+<li><strong>Browser（浏览器）</strong>：网页搜索和页面抓取。</li>
+<li><strong>Terminal（终端）</strong>：运行Shell命令。</li>
+<li><strong>File Manager（文件管理）</strong>：读写本地文件。</li>
+<li><strong>Code Interpreter（代码解释器）</strong>：执行Python/R代码。</li>
+<li><strong>PDF Reader（PDF阅读器）</strong>：分析PDF文档。</li>
+<li><strong>Image Generator（图片生成器）</strong>：文本生成图片。</li>
+<li><strong>Excel Processor（Excel处理器）</strong>：编辑分析Excel文件。</li>
+<li><strong>Git Integration（Git集成）</strong>：管理Git仓库。</li>
+</ul>
+</li>
+<li>点击"Install"——等待20秒下载所有插件。</li>
+</ol>
+
+<h3>验证插件激活</h3>
+
+<p>运行此测试提示词确认插件工作：</p>
+
+<pre><code class="language-text">使用Browser插件搜索"2024年最佳Python框架"，然后用File Manager插件将结果保存为桌面上的"python-frameworks-2024.txt"文件。</code></pre>
+
+<h2>6. 第四步：实战用例</h2>
+
+<h3>1. 自动化文件整理（File Manager插件）</h3>
+
+<pre><code class="language-text">使用File Manager插件整理我的"下载"文件夹：
+1. 创建子文件夹："文档"、"图片"、"视频"、"其他"。
+2. 将所有.pdf/.docx/.txt文件移动到"文档"。
+3. 将所有.jpg/.png/.gif文件移动到"图片"。
+4. 将所有.mp4/.mov文件移动到"视频"。
+5. 将剩余文件移动到"其他"。
+6. 生成每个文件夹移动了多少文件的摘要。</code></pre>
+
+<h3>2. 运行代码片段（Code Interpreter插件）</h3>
+
+<pre><code class="language-text">使用Code Interpreter插件：
+1. 计算前100个质数的和。
+2. 生成显示这些质数分布的柱状图。
+3. 将图表保存为桌面上的"prime-numbers-chart.png"。
+4. 输出最终和及文件路径。</code></pre>
+
+<h3>3. 分析PDF数据（PDF Reader插件）</h3>
+
+<pre><code class="language-text">使用PDF Reader插件：
+1. 打开"文档"文件夹中的"sales-report-2024.pdf"。
+2. 提取前5页的所有数字销售数据。
+3. 计算总收入和月均销量。
+4. 将分析结果保存为同文件夹下的"sales-analysis-2024.txt"。</code></pre>
+
+<h2>7. 常见问题排查</h2>
+
+<h3>问题1：插件安装失败</h3>
+
+<pre><code class="language-bash"># Windows
+cd C:\Program Files\Codex
+codex --repair-plugins
+
+# macOS
+cd /Applications/Codex.app/Contents/MacOS
+./Codex --repair-plugins</code></pre>
+
+<h3>问题2：API连接错误</h3>
 
 <ul>
-<li><strong>Web聊天</strong>：<code>http://localhost:8080</code>可用的聊天界面。</li>
-<li><strong>技能执行</strong>：运行预装技能如图片生成。</li>
-<li><strong>工具使用</strong>：获取网页内容并保存到本地文件。</li>
+<li>确保API Key未过期（DeepSeek Key有效期90天）。</li>
+<li>检查网络连接是否稳定。</li>
+<li>重新输入API Base URL：<code>https://api.deepseek.com/v1</code>（无拼写错误）。</li>
 </ul>
 
-<p>如果出现问题（如重复执行任务），直接提示：</p>
+<h3>问题3：Terminal插件不工作（Windows）</h3>
 
-<pre><code class="language-text">Agent在重复执行历史任务。修复循环逻辑避免重复。</code></pre>
-
-<p>GLM 5.2改进的指令遵循能力确保大多数修复一次到位。</p>
+<ol>
+<li>打开Codex → "Plugins" → "Terminal" → "Settings"。</li>
+<li>选择"Use PowerShell"（默认是Command Prompt）。</li>
+<li>点击"Save"后重试运行命令。</li>
+</ol>
 
 <h2>常见问题</h2>
 
-<h3>除了GLM 5.2，可以用其他模型吗？</h3>
-<p>可以，任何上下文窗口足够大的模型都能胜任。关键是在长会话中保持连贯性不"跑偏"。<a href="/zh/tools/claude">Claude</a>自家的Opus和Sonnet模型也擅长长上下文任务，只是定价结构不同。GLM 5.2的百万Token窗口使其在马拉松式编码任务中性价比特别高。你也可以尝试Gemini 2.5 Pro或GPT-5，它们都提供大上下文窗口。</p>
+<h3>用这个配置使用Codex需要ChatGPT账号吗？</h3>
+<p>不需要。通过将<a href="/zh/tools/codex">Codex</a>配置为使用<a href="/zh/tools/deepseek">DeepSeek</a>作为后端模型，你完全绕过了ChatGPT。只需一个免费的DeepSeek API Key。这使得Codex不受OpenAI账号限制或地域约束。DeepSeek API也便宜得多——约为OpenAI定价的二十分之一。</p>
 
-<h3>模型陷入死循环怎么办？</h3>
-<p>这是循环执行的真实风险。缓解措施：(1) 在<code>goal</code>提示词中设置最大轮次限制；(2) 用progress.json检测同一任务多次尝试未完成的情况；(3) 定期检查长时间运行的会话。上述<code>check_progress.py</code>脚本应包含守卫逻辑，同一任务连续失败N次后退出。</p>
+<h3>除了DeepSeek还能用其他国产模型吗？</h3>
+<p>可以。同样的配置模式适用于任何OpenAI兼容的API。你可以通过更改设置中的API Base URL和模型名称使用月之暗面（Kimi）、智谱AI（GLM）或百度文心一言。关键是模型必须支持OpenAI兼容的chat completions端点。推荐以DeepSeek作为起点，因为其编码性能出色且成本低。</p>
 
-<h3>这种方法适合生产代码还是仅限实验？</h3>
-<p>取决于风险级别。对于工具函数和数据格式化等低风险模块，AI生成代码配合自动化测试可以达到生产就绪水平。对于安全关键代码（认证、支付处理），应将AI生成与人工代码审查结合。443个任务的OpenClaw移植项目证明，AI可以处理大部分机械性翻译工作，让开发者专注于架构决策和安全审计。把它当作初级开发者的产出对待——充分测试、审查关键路径、迭代改进。</p>
+<h3>如果Codex更新破坏了配置怎么办？</h3>
+<p>Codex更新通常保留自定义API配置。如果重大更新重置了你的设置，只需重复第二步（重新输入API详情）。你的DeepSeek API Key仍然有效。对于更新后的插件问题，运行 <code>codex --repair-plugins</code> 如上文排查部分所示。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/codex-domestic-ai-models">Codex搭配国产AI模型使用指南：人人都能用的实操教程 →</a></p>
+<p><strong>下一篇：</strong> <a href="/zh/article/claude-dynamic-workflows">Claude动态工作流：把一个AI变成百人团队 →</a></p>
 </div>`,
   },
 """
