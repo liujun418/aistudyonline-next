@@ -2108,4 +2108,29 @@ export const articles: Article[] = [
     date: "2026-06-20",
   },
 
+  {
+    slug: "6-practical-claude-code-plugins",
+    title: "6 Practical Claude Code Plugins for Boosting Productivity in Real Projects",
+    titleZh: "6个实用的Claude Code插件：真实项目中提升效率",
+    description: "Discover 6 underrated yet highly practical Claude Code plugins — Grill Me, Codex, Graphify, Claude Obsidian, NotebookLM CLI, and Impeccable — that solve real development problems from planning to frontend polish.",
+    descriptionZh: "发现6个被低估但极其实用的Claude Code插件——Grill Me、Codex、Graphify、Claude Obsidian、NotebookLM CLI和Impeccable——从规划到前端美化解决真实开发问题。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "plugins", "productivity", "code-review", "graphify"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "codex", "graphify"],
+    date: "2026-06-21",
+  },
+  {
+    slug: "demystifying-ai-engineering-function-calling-skills-mcp",
+    title: "Demystifying AI Engineering: Function Calling, Skills, and MCP",
+    titleZh: "揭秘AI工程：Function Calling、Skills和MCP的层次架构",
+    description: "A clear breakdown of the three core AI engineering concepts — Function Calling (microscopic action layer), Skills (mesoscopic module layer), and MCP (macroscopic integration layer) — with practical code examples.",
+    descriptionZh: "清晰拆解AI工程三大核心概念——Function Calling（微观动作层）、Skills（中观模块层）和MCP（宏观集成层）——附实战代码示例。",
+    category: "ai-basics",
+    tags: ["function-calling", "skills", "mcp", "ai-engineering", "architecture"],
+    difficulty: "intermediate",
+    toolsMentioned: [],
+    date: "2026-06-21",
+  },
+
 ];
