@@ -2133,4 +2133,29 @@ export const articles: Article[] = [
     date: "2026-06-21",
   },
 
+  {
+    slug: "codex-superpowers-transform-coding",
+    title: "Codex Superpowers: Transform Your AI Coding from Random to Engineering-Grade",
+    titleZh: "Codex超能力：将AI编码从随机输出升级为工程级别",
+    description: "A 210k-star open-source tool transforms Codex (and Claude Code, Gemini CLI, Cursor, Copilot) from a code-slinging machine into a disciplined software engineer with requirements gathering, TDD, and sub-agent driven development.",
+    descriptionZh: "一个21万Star的开源工具将Codex（及Claude Code、Gemini CLI、Cursor、Copilot）从代码机器转变为遵循需求澄清→实现规划→TDD→子代理开发的 disciplined 软件工程师。",
+    category: "ai-tutorials",
+    tags: ["codex", "tdd", "sub-agents", "requirements", "code-review", "engineering"],
+    difficulty: "intermediate",
+    toolsMentioned: ["codex-agent", "claude", "cursor", "github-copilot"],
+    date: "2026-06-22",
+  },
+  {
+    slug: "upgrade-obsidian-ai-dashboard",
+    title: "Upgrade Your Obsidian Homepage: Build AI-Powered Smart Dashboard for Knowledge Workflow",
+    titleZh: "升级Obsidian首页：构建AI驱动智能仪表盘赋能知识工作流",
+    description: "Replace your static DataviewJS Obsidian homepage with an AI-powered dashboard that connects Claude Code, Codex, RSS feeds, and GitHub — with one-click deep research, auto-tagging, and vault health inspection.",
+    descriptionZh: "用AI驱动的仪表盘取代静态DataviewJS Obsidian首页，连接Claude Code、Codex、RSS源和GitHub——实现一键深度研究、自动标签和知识库健康检查。",
+    category: "ai-tutorials",
+    tags: ["obsidian", "dashboard", "claude-code", "codex", "plugin", "knowledge-base"],
+    difficulty: "advanced",
+    toolsMentioned: ["claude", "codex-agent"],
+    date: "2026-06-22",
+  },
+
 ];
