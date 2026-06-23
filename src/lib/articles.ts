@@ -2158,4 +2158,29 @@ export const articles: Article[] = [
     date: "2026-06-22",
   },
 
+  {
+    slug: "minimax-m3-flagship-multimodal-agent",
+    title: "MiniMax M3: The Flagship AI Model Merging Coding, Multimodality, and Agent Capabilities",
+    titleZh: "MiniMax M3：融合编程、多模态和Agent能力的旗舰AI模型",
+    description: "Hands-on benchmark of MiniMax M3 — the first open-source model combining native multimodality, million-token context, and agent capabilities — tested across 5 scenarios including 3D maze, pocket watch animation, keyframe extraction, and custom computer-use agents.",
+    descriptionZh: "MiniMax M3实操评测——首个融合原生多模态、百万token上下文和Agent能力的开源模型——5大场景实测：3D迷宫、怀表拆解动画、关键帧提取、自定义Computer-Use Agent。",
+    category: "ai-comparisons",
+    tags: ["minimax", "multimodal", "agent", "threejs", "computer-use", "benchmark", "chinese-model"],
+    difficulty: "intermediate",
+    toolsMentioned: ["minimax-m3", "claude", "deepseek"],
+    date: "2026-06-23",
+  },
+  {
+    slug: "github-vibe-coding-backend-workflow",
+    title: "GitHub as the Core Backend for Vibe Coding: Full Setup & Collaborative AI Development Workflow",
+    titleZh: "GitHub作为Vibe Coding核心后端：完整配置与协作AI开发工作流",
+    description: "Complete guide to integrating GitHub as Vibe Coding's backend — PAT setup, repo binding, version-controlled AI code iteration, community template imports, and GitHub Actions CI/CD for auto-deploying AI-generated code.",
+    descriptionZh: "将GitHub集成为Vibe Coding后端的完整指南——PAT配置、仓库绑定、版本控制AI代码迭代、社区模板导入、GitHub Actions CI/CD自动部署AI生成代码。",
+    category: "ai-tutorials",
+    tags: ["github", "vibe-coding", "ci-cd", "version-control", "collaboration", "workflow"],
+    difficulty: "beginner",
+    toolsMentioned: ["vibecoding", "github-copilot"],
+    date: "2026-06-23",
+  },
+
 ];
