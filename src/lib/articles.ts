@@ -2183,4 +2183,29 @@ export const articles: Article[] = [
     date: "2026-06-23",
   },
 
+  {
+    slug: "mastering-ai-agent-tool-orchestration-meta-tools",
+    title: "Mastering AI Agent Tool Orchestration: The Power of Meta-Tools in Modern Workflows",
+    titleZh: "掌握AI Agent工具编排：Meta-Tools在现代工作流中的力量",
+    description: "How meta-tools like web-tools-guide dominate AI skill marketplaces by solving tool orchestration — with a practical 4-step framework for primary tool selection, fallback mechanisms, user transparency, and bilingual trigger coverage, achieving 10x cost reduction.",
+    descriptionZh: "Meta-Tools如web-tools-guide如何通过解决工具编排问题主导AI技能市场——包含主工具选择、降级机制、用户透明度和双语触发覆盖的4步实操框架，实现10倍成本降低。",
+    category: "ai-tutorials",
+    tags: ["agent", "tool-orchestration", "meta-tools", "workflow", "cost-optimization", "fallback"],
+    difficulty: "intermediate",
+    toolsMentioned: [],
+    date: "2026-06-24",
+  },
+  {
+    slug: "effective-multi-agent-collaboration-4-structures",
+    title: "Effective Multi-Agent Collaboration: 4 Practical Structures Beyond Just Scaling Agents",
+    titleZh: "高效多Agent协作：超越简单堆量的4种实用结构",
+    description: "Stop just adding more agents — learn 4 proven collaboration structures (Orchestrator-Workers, Pipeline, Parallelization, Evaluator-Optimizer) with actionable code examples in Python, and when to use multi-agent vs single-agent approaches.",
+    descriptionZh: "停止简单添加更多Agent——学习4种经过验证的协作结构（Orchestrator-Workers、Pipeline、Parallelization、Evaluator-Optimizer），附可操作的Python代码示例，以及何时使用多Agent vs 单Agent的决策指南。",
+    category: "ai-tutorials",
+    tags: ["multi-agent", "collaboration", "orchestrator", "pipeline", "parallelization", "evaluator-optimizer"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude", "minimax-m3"],
+    date: "2026-06-24",
+  },
+
 ];
