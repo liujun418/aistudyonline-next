@@ -1,6 +1,6 @@
 """
-Publish June 24, 2026 articles.
-0 new tools — all referenced tools/concepts already exist or are patterns.
+Publish June 25, 2026 articles.
+1 new tool: GLM-5.2 (Zhipu AI's coding-focused model)
 """
 
 import os
@@ -8,33 +8,85 @@ import os
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-# ===== Part 1: Add 2 article metadata to articles.ts =====
+# ===== Part 1: Add GLM-5.2 tool to tools.ts =====
+with open('src/lib/tools.ts', 'r', encoding='utf-8') as f:
+    tools_src = f.read()
+
+new_tool = r"""  {
+    id: "glm-5-2",
+    name: "GLM-5.2",
+    description: "Zhipu AI's top domestic coding model with strong backend security, JWT, and OAuth capabilities — competitive with GPT-5.5 and Claude Opus 4.8.",
+    descriptionZh: "智谱AI的国产顶级编程模型，擅长后端安全、JWT和OAuth——与GPT-5.5和Claude Opus 4.8竞争。",
+    category: "chatbots",
+    tags: ["coding", "chinese-model", "security", "backend", "jwt", "oauth"],
+    difficulty: "intermediate",
+    url: "https://open.bigmodel.cn",
+    rating: r(4.3),
+    pricing: "Free tier + Paid API",
+    useCase: "GLM-5.2 excels at backend development with strong security awareness — it was the only model in a multi-model benchmark to correctly implement OAuth anti-forgery checks and pass all 23 test cases for cross-user isolation.",
+    icon: "\u{1F9E0}",
+    company: "Zhipu AI",
+    companyZh: "智谱AI",
+    founded: "2019",
+    headquarters: "Beijing, China",
+    descriptionLong: "GLM-5.2 is Zhipu AI's latest flagship coding model, widely regarded as the top domestic programming model. In rigorous benchmarks against GPT-5.5 and Claude Opus 4.8 using identical prompts, base code, and 4 independent AI reviewers, GLM-5.2 scored 8.14/10 overall (vs Opus 4.8's 8.86 and GPT-5.5's 8.62). Its standout strength is backend security: it was the only model to correctly implement OAuth anti-forgery (CSRF) checks and passed all 23 cross-user isolation test cases where GLM-5.1, GPT-5.5, and Opus 4.8 all failed. In web full-stack development, it scored 9.25/10, nearly matching Opus 4.8 and GPT-5.5 (both 9.4). Sentiment analysis of 6,690 community comments reveals a love-hate dynamic: programming capability is universally praised (1,280 mentions, near-total positive), but access/pricing is heavily criticized (1,269 mentions, near-total negative) due to limited coding plan availability — developers joke that getting GLM-5.2 access in China is harder than accessing GPT-5.5 from the US. Internationally, X/Twitter sentiment is 48.5% positive, with developers calling it an 'open-source DeepSeek moment.' The main trade-off: GLM-5.2 sometimes 'cuts corners,' implementing fewer interfaces than competitors (8 vs 12) but producing cleaner code for what it does write.",
+    descriptionLongZh: "GLM-5.2 是智谱AI最新的旗舰编程模型，被广泛认为是国产顶级编程模型。在使用相同提示、相同基础代码和4个独立AI评审员的严格基准测试中，GLM-5.2 总分 8.14/10（对比 Opus 4.8 的 8.86 和 GPT-5.5 的 8.62）。其突出优势是后端安全：它是唯一正确实现 OAuth 防伪（CSRF）检查的模型，并在 GLM-5.1、GPT-5.5 和 Opus 4.8 全部失败的 23 项跨用户隔离测试中全部通过。在 Web 全栈开发中得分 9.25/10，几乎追平 Opus 4.8 和 GPT-5.5（均为 9.4）。对 6,690 条社区评论的情感分析揭示了爱恨交织的动态：编程能力被普遍赞誉（1,280 次提及，几乎全部正面），但访问/定价被严厉批评（1,269 次提及，几乎全部负面），因编程计划名额有限——开发者戏称在中国获得 GLM-5.2 访问权比从美国访问 GPT-5.5 还难。国际上，X/Twitter 正面情感达 48.5%，开发者称其为'开源 DeepSeek 时刻'。主要权衡：GLM-5.2 有时'偷工减料'，实现的接口数少于竞品（8 vs 12），但所写代码更简洁。",
+    advantages: ["Top backend security (CSRF/OAuth)", "Competitive coding scores (9.25 web, 8.14 overall)", "Strong cross-user isolation", "Clean code output", "Domestic model with competitive pricing"],
+    advantagesZh: ["顶级后端安全(CSRF/OAuth)", "编程得分有竞争力(Web 9.25, 总分 8.14)", "强跨用户隔离", "代码输出简洁", "国产模型价格有竞争力"],
+    useCases: ["Backend API development", "Authentication system migration", "Security-critical applications", "Web full-stack projects", "JWT/OAuth implementation"],
+    useCasesZh: ["后端API开发", "认证系统迁移", "安全关键应用", "Web全栈项目", "JWT/OAuth实现"],
+    targetAudience: "Backend developers who prioritize security and code quality, especially those working on authentication systems and APIs with strict cross-user isolation requirements.",
+    targetAudienceZh: "重视安全性和代码质量的后端开发者，尤其是从事认证系统和有严格跨用户隔离要求的API的开发者。",
+    pricingTiers: [
+      {tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited API calls", "Web chat access"], featuresZh: ["有限API调用", "Web聊天访问"]},
+      {tier: "Coding Plan", tierZh: "编程计划", price: "Paid (limited availability)", features: ["Full coding capabilities", "Priority access", "Higher rate limits"], featuresZh: ["完整编程能力", "优先访问", "更高速率限制"]}
+    ],
+    pros: ["Best-in-class backend security", "Competitive with GPT-5.5/Opus 4.8", "Clean, concise code", "Strong domestic ecosystem"],
+    prosZh: ["顶级后端安全", "与GPT-5.5/Opus 4.8竞争", "代码简洁", "国内生态强"],
+    cons: ["Limited coding plan availability", "Sometimes skips features (cuts corners)", "No multimodal support", "Access harder than overseas models"],
+    consZh: ["编程计划名额有限", "有时跳过功能(偷工减料)", "无多模态支持", "访问难度超海外模型"],
+    extensions: [],
+    skills: [],
+    scene: "development",
+  },
+
+"""
+
+last_tool = tools_src.rfind('] as Tool[];')
+tools_new = tools_src[:last_tool] + new_tool + '] as Tool[];'
+
+with open('src/lib/tools.ts', 'w', encoding='utf-8') as f:
+    f.write(tools_new)
+
+print('Part 1: GLM-5.2 tool added to tools.ts')
+
+# ===== Part 2: Add 2 article metadata to articles.ts =====
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "mastering-ai-agent-tool-orchestration-meta-tools",
-    title: "Mastering AI Agent Tool Orchestration: The Power of Meta-Tools in Modern Workflows",
-    titleZh: "掌握AI Agent工具编排：Meta-Tools在现代工作流中的力量",
-    description: "How meta-tools like web-tools-guide dominate AI skill marketplaces by solving tool orchestration — with a practical 4-step framework for primary tool selection, fallback mechanisms, user transparency, and bilingual trigger coverage, achieving 10x cost reduction.",
-    descriptionZh: "Meta-Tools如web-tools-guide如何通过解决工具编排问题主导AI技能市场——包含主工具选择、降级机制、用户透明度和双语触发覆盖的4步实操框架，实现10倍成本降低。",
+    slug: "codex-autocad-redraw-dwg-one-sentence",
+    title: "Codex + AutoCAD: Redraw Complex DWG with Just One Sentence",
+    titleZh: "Codex+AutoCAD：一句话重绘复杂DWG图纸",
+    description: "How Codex integrates with AutoCAD's COM interface to automatically analyze layers, redraw complex DWG files, and perform quality inspection — all from a single command, reducing hours of manual CAD work to 90 seconds.",
+    descriptionZh: "Codex如何通过AutoCAD COM接口自动分析图层、重绘复杂DWG文件并执行质量检查——只需一条命令，将数小时手动CAD工作缩减到90秒。",
     category: "ai-tutorials",
-    tags: ["agent", "tool-orchestration", "meta-tools", "workflow", "cost-optimization", "fallback"],
+    tags: ["codex", "autocad", "dwg", "cad", "automation", "skill"],
     difficulty: "intermediate",
-    toolsMentioned: [],
-    date: "2026-06-24",
+    toolsMentioned: ["codex-agent"],
+    date: "2026-06-25",
   },
   {
-    slug: "effective-multi-agent-collaboration-4-structures",
-    title: "Effective Multi-Agent Collaboration: 4 Practical Structures Beyond Just Scaling Agents",
-    titleZh: "高效多Agent协作：超越简单堆量的4种实用结构",
-    description: "Stop just adding more agents — learn 4 proven collaboration structures (Orchestrator-Workers, Pipeline, Parallelization, Evaluator-Optimizer) with actionable code examples in Python, and when to use multi-agent vs single-agent approaches.",
-    descriptionZh: "停止简单添加更多Agent——学习4种经过验证的协作结构（Orchestrator-Workers、Pipeline、Parallelization、Evaluator-Optimizer），附可操作的Python代码示例，以及何时使用多Agent vs 单Agent的决策指南。",
-    category: "ai-tutorials",
-    tags: ["multi-agent", "collaboration", "orchestrator", "pipeline", "parallelization", "evaluator-optimizer"],
+    slug: "glm-5-2-coding-prowess-deep-dive",
+    title: "GLM-5.2: A Deep Dive into Its Coding Prowess and Practical Insights",
+    titleZh: "GLM-5.2：深度解析其编程实力与实战洞察",
+    description: "Rigorous benchmark of GLM-5.2 vs GPT-5.5 and Claude Opus 4.8 across authentication migration and web full-stack projects — plus sentiment analysis of 6,690 community comments revealing why developers both love and hate it.",
+    descriptionZh: "GLM-5.2 vs GPT-5.5和Claude Opus 4.8的严格基准测试——认证迁移和Web全栈两大实战项目+6,690条社区评论情感分析，揭示开发者爱恨交织的原因。",
+    category: "ai-comparisons",
+    tags: ["glm", "zhipu", "coding-benchmark", "backend", "security", "chinese-model"],
     difficulty: "intermediate",
-    toolsMentioned: ["claude", "minimax-m3"],
-    date: "2026-06-24",
+    toolsMentioned: ["glm-5-2"],
+    date: "2026-06-25",
   },
 
 """
@@ -45,602 +97,378 @@ articles_new = articles_src[:last_bracket] + new_articles + '];'
 with open('src/lib/articles.ts', 'w', encoding='utf-8') as f:
     f.write(articles_new)
 
-print('Part 1: 2 new articles added to articles.ts')
+print('Part 2: 2 new articles added to articles.ts')
 
-# ===== Part 2: Add 2 article contents to article-content.ts =====
+# ===== Part 3: Add 2 article contents to article-content.ts =====
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "mastering-ai-agent-tool-orchestration-meta-tools": {
+  "codex-autocad-redraw-dwg-one-sentence": {
     content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> June 24, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Concepts:</strong> Meta-Tools, Tool Orchestration, Agent Workflows</p>
+<p><strong>📅 Published:</strong> June 25, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Tools:</strong> Codex, AutoCAD</p>
 </div>
 
-<p>In the rapidly evolving landscape of AI agents, the sheer number of available tools can be overwhelming. However, the true game-changer isn't just having more tools — it's knowing <strong>when and how to use them effectively</strong>. This article dives into the concept of "meta-tools" like <code>web-tools-guide</code>, which dominate skill marketplaces by solving the critical problem of tool orchestration.</p>
+<p>In the realm of CAD design, efficiency and accuracy are paramount. This tutorial introduces a groundbreaking workflow where <strong>Codex</strong> integrates with AutoCAD, enabling you to redraw complex DWG files automatically with just one sentence, zero manual intervention.</p>
 
-<h2>The Rise of Meta-Tools: Doing Nothing to Achieve Everything</h2>
+<h2>Overview: From Input to Redraw in Minutes</h2>
 
-<p>Most AI skills focus on <em>doing tasks</em> — generating code, creating documents, or analyzing data. But <code>web-tools-guide</code>, the top-downloaded skill on many AI platforms, does something entirely different: <strong>it doesn't perform any task directly</strong>. Instead, it acts as a <em>dispatcher</em>, deciding which tool (e.g., <code>web_search</code>, <code>web_fetch</code>, <code>opencli</code>, <code>browser</code>) an AI agent should use for a given scenario.</p>
+<p>The core capability is simple yet powerful: take a DWG file, input a command, and let the AI handle the rest — from layer analysis to redrawing and quality inspection. As shown in the demo, a complex mechanical assembly drawing was redrawn by Codex in just <strong>1 minute and 30 seconds</strong>, with details matching the original precisely when zoomed in.</p>
 
-<h3>Why Meta-Tools Matter</h3>
+<h2>Step-by-Step Workflow</h2>
 
-<ul>
-<li><strong>Efficiency:</strong> Reduce token usage and execution time by choosing the right tool first.</li>
-<li><strong>Cost-Effectiveness:</strong> Avoid wasting resources on redundant or ill-suited tools.</li>
-<li><strong>Reliability:</strong> Handle failures gracefully with predefined fallback strategies.</li>
-</ul>
+<h3>1. Provide the DWG Path</h3>
 
-<h2>A Practical Framework for Tool Orchestration</h2>
+<p>First, specify the path to your source DWG file. This ensures the AI accesses the actual file data, not just screenshots, for accurate processing.</p>
 
-<p>To implement effective tool orchestration, follow this four-step decision tree, inspired by the <code>web-tools-guide</code> paradigm:</p>
+<h3>2. AI Automatically Analyzes Layers and Entities</h3>
 
-<h3>Step 1: Primary Tool Selection (React Paradigm)</h3>
-
-<p>Start with the most efficient tool for the task:</p>
-
-<pre><code class="language-python">def select_primary_tool(query, context):
-    if "url" not in context:
-        return "web_search"  # Use web search for keyword queries
-    elif is_static_document(context["url"]):
-        return "web_fetch"   # Fetch static content directly
-    else:
-        return "opencli"     # Fall back to structured CLI access</code></pre>
-
-<h3>Step 2: Fallback Mechanisms</h3>
-
-<p>If the primary tool fails, define clear degradation paths:</p>
-
-<pre><code class="language-python">def execute_with_fallbacks(tool, query, context):
-    try:
-        return run_tool(tool, query, context)
-    except WebSearchError:
-        return execute_with_fallbacks("opencli", query, context)
-    except OpenCliError:
-        return execute_with_fallbacks("browser", query, context)
-    except Exception as e:
-        return f"Error: {str(e)}. Please check your request or try again."</code></pre>
-
-<h3>Step 3: User Transparency</h3>
-
-<p>Never let failures happen in silence. Inform users at every step:</p>
-
-<pre><code class="language-python">def run_tool(tool, query, context):
-    if tool == "web_search":
-        print(f"Searching for: {query}...")
-    elif tool == "opencli":
-        print(f"Fetching structured data for: {context['url']}...")</code></pre>
-
-<h3>Step 4: Bilingual Trigger Coverage</h3>
-
-<p>Ensure your tool triggers work for both Chinese and English users:</p>
-
-<pre><code class="language-python">trigger_keywords = {
-    "中文": ["搜索", "上网", "查资料", "打开网站"],
-    "English": ["web search", "fetch", "browser", "open website"]
-}
-
-def detect_trigger(query):
-    for lang, keywords in trigger_keywords.items():
-        for keyword in keywords:
-            if keyword in query:
-                return lang, keyword
-    return "English", "web search"  # Default</code></pre>
-
-<h2>Real-World Impact: A Cost and Time Comparison</h2>
-
-<p>Let's compare two approaches to fetching Weibo hot searches:</p>
-
-<h3>Approach 1: <code>opencli</code> (Efficient Path)</h3>
-
-<pre><code class="language-bash">opencli weibo hotsearch --format json</code></pre>
+<p>The AI skill dissects the DWG, identifying:</p>
 
 <ul>
-<li><strong>Time:</strong> ~2 seconds</li>
-<li><strong>Token Usage:</strong> ~50 tokens</li>
-<li><strong>Output:</strong> Structured JSON ready for AI processing.</li>
+<li>Layers and blocks</li>
+<li>Text styles and dimension styles</li>
+<li>The exact number of entities</li>
 </ul>
 
-<h3>Approach 2: <code>browser</code> (Fallback Path)</h3>
+<p>This step is crucial for replicating the original drawing's structure.</p>
 
-<pre><code class="language-python">from selenium import webdriver
+<h3>3. Auto-Redraw via AutoCAD COM</h3>
 
-driver = webdriver.Chrome()
-driver.get("https://weibo.com")
-# Manually parse HTML for hot searches...
-driver.quit()</code></pre>
+<p>Using AutoCAD's COM interface, the AI generates a new, redrawn DWG. Run the following command in Codex:</p>
+
+<pre><code class="language-text">$ Use Sautocad-dwg-redraw
+> 输入: source.dwg
+> 输出: redraw_prompt.md
+> 输出: redraw_exact.dwg
+> OK 实体 + 标注校验</code></pre>
+
+<h3>4. Automatic Quality Inspection</h3>
+
+<p>The redrawn DWG undergoes a rigorous check covering:</p>
 
 <ul>
-<li><strong>Time:</strong> ~15 seconds</li>
-<li><strong>Token Usage:</strong> ~500 tokens</li>
-<li><strong>Output:</strong> Raw HTML requiring further parsing.</li>
+<li>Entity distribution</li>
+<li>Dimensions and leaders</li>
+<li>Layers and blocks</li>
+<li>ModelSpace and PaperSpace alignment</li>
 </ul>
 
-<p>By prioritizing <code>opencli</code> over <code>browser</code>, <code>web-tools-guide</code> reduces costs and delays by <strong>10x</strong> — a massive difference in production environments.</p>
+<p>If any element (e.g., a dimension in the original but missing in the redraw) doesn't match, the system throws an error. This makes the tool not just a redrawing utility but a <strong>quality-assured solution</strong>.</p>
 
-<h2>Building Your Own Meta-Tool: Best Practices</h2>
+<h2>Install and Use the Skill</h2>
 
-<ol>
-<li><strong>Document Failure Paths Explicitly:</strong> List every possible error and its resolution.</li>
-<li><strong>Enforce Tool Ordering:</strong> Define a strict priority list for tools: <code>["web_search", "web_fetch", "opencli", "browser"]</code>.</li>
-<li><strong>Include Bilingual Triggers:</strong> Cover both Chinese and English to maximize usability.</li>
-</ol>
+<p>The skill is open-sourced on GitHub. To install:</p>
 
-<pre><code class="language-python">tool_priority = ["web_search", "web_fetch", "opencli", "browser"]
+<pre><code class="language-bash">git clone https://github.com/yourusername/autocad-dwg-redraw-skill.git</code></pre>
 
-triggers = {
-    "search": {"zh": "搜索", "en": "web search"},
-    "browse": {"zh": "打开网站", "en": "open website"}
-}</code></pre>
+<pre><code class="language-bash">pip install autocad-dwg-redraw-skill</code></pre>
+
+<p>In Codex, reference the skill and input your DWG path — the rest runs fully automated.</p>
 
 <h2>常见问题</h2>
 
-<h3>What's the difference between a meta-tool and a regular AI skill?</h3>
-<p>A regular skill <em>does</em> something — generates text, analyzes data, creates images. A meta-tool <em>decides</em> which tool to use. It's the dispatcher, not the worker. Think of it as a traffic controller: it doesn't drive any cars, but without it, everything crashes. The value of a meta-tool scales with the number of tools in your ecosystem — the more tools you have, the more valuable smart orchestration becomes.</p>
+<h3>Does this require AutoCAD to be installed locally?</h3>
+<p>Yes. The skill communicates with AutoCAD through its COM interface, so AutoCAD must be installed and running on the same machine. The skill handles all the COM automation — you don't need to write any AutoCAD scripts yourself.</p>
 
-<h3>Can I use this pattern with Claude Code's built-in tools?</h3>
-<p>Yes. Claude Code already has built-in tools like <code>WebSearch</code>, <code>WebFetch</code>, and <code>Bash</code>. A meta-tool layer on top would decide: "This query needs a live web search" vs "This URL is static documentation — just fetch it" vs "This requires executing a command." The orchestration logic described here maps directly to how Claude Code's agent loop already works internally — understanding the pattern helps you write better prompts that guide the model toward efficient tool choices.</p>
+<h3>What types of DWG files can it handle?</h3>
+<p>The skill works best with mechanical assembly drawings, architectural floor plans, and engineering diagrams that have well-defined layers and entities. Highly artistic or freeform drawings with irregular entities may produce less accurate results. The quality inspection step will flag any mismatches so you know what needs manual adjustment.</p>
 
-<h3>Is 10x cost reduction realistic?</h3>
-<p>Yes, in specific scenarios. The Weibo example is real: using a CLI tool (~50 tokens, 2s) vs launching a full browser (~500 tokens, 15s) gives ~10x savings on both dimensions. The savings compound when your agent makes dozens of tool calls per task. However, the meta-tool itself consumes some tokens for orchestration logic — the net savings come from avoiding even one expensive wrong tool choice per session.</p>
+<h3>Can I modify existing DWGs instead of redrawing from scratch?</h3>
+<p>The current version focuses on redrawing. The author has announced that a follow-up tutorial will cover single-sentence DWG modification using Codex — stay tuned for that.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/en/article/effective-multi-agent-collaboration-4-structures">Effective Multi-Agent Collaboration: 4 Practical Structures Beyond Just Scaling Agents →</a></p>
+<p><strong>下一篇：</strong> <a href="/en/article/glm-5-2-coding-prowess-deep-dive">GLM-5.2: A Deep Dive into Its Coding Prowess and Practical Insights →</a></p>
 </div>`,
     contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年6月24日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 概念：</strong>Meta-Tools、工具编排、Agent工作流</p>
+<p><strong>📅 发布日期：</strong>2026年6月25日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 工具：</strong>Codex、AutoCAD</p>
 </div>
 
-<p>在AI Agent快速发展的领域中，可用工具的数量可能让人眼花缭乱。然而，真正的游戏规则改变者不只是拥有更多工具——而是知道<strong>何时以及如何有效使用它们</strong>。本文深入探讨"Meta-Tools"概念，如主导技能市场的<code>web-tools-guide</code>，它解决了工具编排这一关键问题。</p>
+<p>在CAD设计领域，效率和精度至关重要。本教程介绍一个突破性的工作流：<strong>Codex</strong>与AutoCAD集成，只需一句话即可自动重绘复杂DWG文件，零人工干预。</p>
 
-<h2>Meta-Tools的崛起：以"无为"成就"无不为"</h2>
+<h2>概览：从输入到重绘只需几分钟</h2>
 
-<p>大多数AI技能专注于<em>执行任务</em>——生成代码、创建文档或分析数据。但<code>web-tools-guide</code>这个许多AI平台上下载量最高的技能，做的却是完全不同的事：<strong>它不直接执行任何任务</strong>。相反，它充当<em>调度器</em>，决定AI Agent在给定场景下应使用哪个工具（如<code>web_search</code>、<code>web_fetch</code>、<code>opencli</code>、<code>browser</code>）。</p>
+<p>核心能力简单而强大：拿一个DWG文件，输入命令，让AI处理其余工作——从图层分析到重绘和质量检查。演示中，一个复杂的机械装配图被Codex在<strong>1分30秒</strong>内重绘完成，放大后细节与原始图纸精确匹配。</p>
 
-<h3>Meta-Tools为何重要</h3>
+<h2>分步工作流</h2>
 
-<ul>
-<li><strong>效率：</strong>通过首次选对工具减少token消耗和执行时间。</li>
-<li><strong>成本效益：</strong>避免在冗余或不合适的工具上浪费资源。</li>
-<li><strong>可靠性：</strong>通过预定义的降级策略优雅处理失败。</li>
-</ul>
+<h3>1. 提供DWG路径</h3>
 
-<h2>工具编排的实操框架</h2>
+<p>首先指定源DWG文件的路径。这确保AI访问实际文件数据而非截图，实现精确处理。</p>
 
-<p>要实现有效的工具编排，遵循这个受<code>web-tools-guide</code>启发的四步决策树：</p>
+<h3>2. AI自动分析图层和实体</h3>
 
-<h3>步骤1：主工具选择（React范式）</h3>
-
-<p>从最高效的工具开始：</p>
-
-<pre><code class="language-python">def select_primary_tool(query, context):
-    if "url" not in context:
-        return "web_search"  # 关键词查询用网页搜索
-    elif is_static_document(context["url"]):
-        return "web_fetch"   # 静态内容直接抓取
-    else:
-        return "opencli"     # 降级到结构化CLI访问</code></pre>
-
-<h3>步骤2：降级机制</h3>
-
-<p>主工具失败时定义清晰的降级路径：</p>
-
-<pre><code class="language-python">def execute_with_fallbacks(tool, query, context):
-    try:
-        return run_tool(tool, query, context)
-    except WebSearchError:
-        return execute_with_fallbacks("opencli", query, context)
-    except OpenCliError:
-        return execute_with_fallbacks("browser", query, context)
-    except Exception as e:
-        return f"错误: {str(e)}。请检查您的请求或重试。"</code></pre>
-
-<h3>步骤3：用户透明</h3>
-
-<p>绝不让失败静默发生。每一步都通知用户：</p>
-
-<pre><code class="language-python">def run_tool(tool, query, context):
-    if tool == "web_search":
-        print(f"正在搜索: {query}...")
-    elif tool == "opencli":
-        print(f"正在获取结构化数据: {context['url']}...")</code></pre>
-
-<h3>步骤4：双语触发覆盖</h3>
-
-<p>确保工具触发器同时支持中英文用户：</p>
-
-<pre><code class="language-python">trigger_keywords = {
-    "中文": ["搜索", "上网", "查资料", "打开网站"],
-    "English": ["web search", "fetch", "browser", "open website"]
-}</code></pre>
-
-<h2>真实效果：成本和时间对比</h2>
-
-<p>对比两种获取微博热搜的方法：</p>
-
-<h3>方案1：<code>opencli</code>（高效路径）</h3>
-
-<pre><code class="language-bash">opencli weibo hotsearch --format json</code></pre>
+<p>AI技能解析DWG，识别：</p>
 
 <ul>
-<li><strong>时间：</strong>约2秒</li>
-<li><strong>Token消耗：</strong>约50 tokens</li>
-<li><strong>输出：</strong>结构化JSON，AI可直接处理。</li>
+<li>图层和图块</li>
+<li>文字样式和标注样式</li>
+<li>精确的实体数量</li>
 </ul>
 
-<h3>方案2：<code>browser</code>（降级路径）</h3>
+<p>此步骤对复制原始图纸的结构至关重要。</p>
 
-<pre><code class="language-python">from selenium import webdriver
-driver = webdriver.Chrome()
-driver.get("https://weibo.com")
-# 手动解析HTML获取热搜...
-driver.quit()</code></pre>
+<h3>3. 通过AutoCAD COM自动重绘</h3>
+
+<p>利用AutoCAD的COM接口，AI生成新的重绘DWG。在Codex中运行以下命令：</p>
+
+<pre><code class="language-text">$ Use Sautocad-dwg-redraw
+> 输入: source.dwg
+> 输出: redraw_prompt.md
+> 输出: redraw_exact.dwg
+> OK 实体 + 标注校验</code></pre>
+
+<h3>4. 自动质量检查</h3>
+
+<p>重绘的DWG经过严格检查，覆盖：</p>
 
 <ul>
-<li><strong>时间：</strong>约15秒</li>
-<li><strong>Token消耗：</strong>约500 tokens</li>
-<li><strong>输出：</strong>原始HTML需要进一步解析。</li>
+<li>实体分布</li>
+<li>尺寸和引线</li>
+<li>图层和图块</li>
+<li>模型空间和图纸空间对齐</li>
 </ul>
 
-<p>通过优先使用<code>opencli</code>而非<code>browser</code>，<code>web-tools-guide</code>将成本和延迟降低了<strong>10倍</strong>——在生产环境中这是巨大的差异。</p>
+<p>如果任何元素不匹配（如原始图纸有但重绘图缺失的尺寸标注），系统会报错。这使得该工具不仅是重绘工具，更是<strong>质量保证方案</strong>。</p>
 
-<h2>构建自己的Meta-Tool：最佳实践</h2>
+<h2>安装和使用Skill</h2>
 
-<ol>
-<li><strong>明确记录失败路径：</strong>列出每种可能的错误及其解决方案。</li>
-<li><strong>强制执行工具排序：</strong>定义严格的工具优先级列表：<code>["web_search", "web_fetch", "opencli", "browser"]</code>。</li>
-<li><strong>包含双语触发器：</strong>覆盖中英文以最大化可用性。</li>
-</ol>
+<p>该Skill在GitHub上开源。安装方法：</p>
 
-<pre><code class="language-python">tool_priority = ["web_search", "web_fetch", "opencli", "browser"]
+<pre><code class="language-bash">git clone https://github.com/yourusername/autocad-dwg-redraw-skill.git</code></pre>
 
-triggers = {
-    "search": {"zh": "搜索", "en": "web search"},
-    "browse": {"zh": "打开网站", "en": "open website"}
-}</code></pre>
+<pre><code class="language-bash">pip install autocad-dwg-redraw-skill</code></pre>
+
+<p>在Codex中引用该Skill并输入DWG路径——其余全自动运行。</p>
 
 <h2>常见问题</h2>
 
-<h3>Meta-Tool和普通AI技能有什么区别？</h3>
-<p>普通技能<em>做</em>某事——生成文本、分析数据、创建图像。Meta-Tool<em>决定</em>使用哪个工具。它是调度器，不是执行者。把它想象成交警：它不开任何车，但没有它一切都会撞车。Meta-Tool的价值随你生态系统中工具数量的增加而放大——工具越多，智能编排就越有价值。</p>
+<h3>需要本地安装AutoCAD吗？</h3>
+<p>是的。该Skill通过COM接口与AutoCAD通信，因此AutoCAD必须安装并在同一台机器上运行。Skill处理所有COM自动化——你不需要自己编写任何AutoCAD脚本。</p>
 
-<h3>能在Claude Code的内置工具中使用这种模式吗？</h3>
-<p>可以。Claude Code已有内置工具如<code>WebSearch</code>、<code>WebFetch</code>和<code>Bash</code>。Meta-Tool层会在上面决定："这个查询需要实时网页搜索" vs "这个URL是静态文档——直接抓取" vs "这需要执行命令"。这里描述的编排逻辑直接映射到Claude Code Agent循环的内部工作方式——理解这种模式有助于你编写更好的提示，引导模型做出高效的工具选择。</p>
+<h3>能处理哪些类型的DWG文件？</h3>
+<p>该Skill最适合具有明确定义图层和实体的机械装配图、建筑平面图和工程图。高度艺术化或不规则实体的自由形式图纸可能产生不太精确的结果。质量检查步骤会标记任何不匹配项，让你知道哪些需要手动调整。</p>
 
-<h3>10倍成本降低现实吗？</h3>
-<p>在特定场景下是的。微博的例子是真实的：使用CLI工具（约50 tokens，2秒）vs启动完整浏览器（约500 tokens，15秒）在两个维度上都带来约10倍的节省。当你的Agent每个任务进行数十次工具调用时，节省会累积。不过，Meta-Tool本身会消耗一些token用于编排逻辑——净节省来自于避免每次会话中哪怕一次昂贵的错误工具选择。</p>
+<h3>能否修改现有DWG而非从头重绘？</h3>
+<p>当前版本专注于重绘。作者已宣布后续教程将介绍使用Codex一句话修改DWG——敬请期待。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/effective-multi-agent-collaboration-4-structures">高效多Agent协作：超越简单堆量的4种实用结构 →</a></p>
+<p><strong>下一篇：</strong> <a href="/zh/article/glm-5-2-coding-prowess-deep-dive">GLM-5.2：深度解析其编程实力与实战洞察 →</a></p>
 </div>`,
   },
 
-  "effective-multi-agent-collaboration-4-structures": {
+  "glm-5-2-coding-prowess-deep-dive": {
     content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> June 24, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Tools:</strong> Claude Code, MiniMax M3</p>
+<p><strong>📅 Published:</strong> June 25, 2026 · <strong>🏷️ Category:</strong> AI Comparisons · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Tools:</strong> GLM-5.2, GPT-5.5, Claude Opus 4.8</p>
 </div>
 
-<p>In the realm of AI agents, merely increasing the number of agents doesn't equate to effective collaboration. True productivity lies in structured coordination. This article dives into four practical multi-agent structures, complete with actionable code examples, to help you leverage agent collaboration for real-world tasks.</p>
+<p>GLM-5.2 has taken the AI coding community by storm, earning the title of "Top Domestic Programming Model." Its coding plan is so sought-after that it's even available on second-hand platforms for a fee, and netizens joke that using GLM-5.2 in China is harder than accessing GPT-5.5 from the US. Let's delve into its practical performance and what it means for developers.</p>
 
-<h2>Why "More Agents" Isn't Synonymous with "Collaboration"</h2>
+<h2>Sentiment Analysis of 6,690 Comments</h2>
 
-<p>Opening multiple agent sessions side by side doesn't mean they're working together. For instance, in a development scenario, you might have one agent fixing bugs, another running tests, and others handling frontend and backend tasks. Without shared context, the bug-fixing agent might be unaware that the testing agent has already encountered the same bug, leading to redundant work.</p>
-
-<p>To achieve true collaboration, three core elements must be defined:</p>
+<p>To understand the community's perception, we analyzed 6,690 comments across platforms like Douyin, Xiaohongshu, Bilibili, X, and V2EX. The results were surprising: negative sentiment (40.3%) was higher than positive (28.6%). But when we broke down the discussion topics, we saw why.</p>
 
 <ul>
-<li><strong>Division of Labor:</strong> Who is responsible for what task?</li>
-<li><strong>Handover Protocol:</strong> How do agents exchange outputs?</li>
-<li><strong>Decision Authority:</strong> Who has the final say in disputes or next steps?</li>
+<li><strong>Programming Capability:</strong> Mentioned 1,280 times, almost all positive.</li>
+<li><strong>Pricing and Access:</strong> Mentioned 1,269 times, almost all negative (due to difficulty in getting the coding plan).</li>
 </ul>
 
-<h2>4 Practical Multi-Agent Structures for Real-World Use</h2>
+<p>This shows a love-hate relationship — developers praise its coding skills but frustrate over access. There's also a stark contrast between domestic and international perceptions. Overseas, on X (Twitter), positive sentiment is over 48.5%, with developers calling it an "open-source DeepSeek moment" and a potential rival to Claude and OpenAI. Domestically, platforms like Douyin (45.9% negative) and Xiaohongshu (43.5% negative) are dominated by complaints about not being able to get access, with little technical discussion.</p>
 
-<h3>1. Orchestrator-Workers: Dynamic Task Allocation</h3>
+<h2>Practical Testing in Real Projects</h2>
 
-<p>This structure is ideal when a single agent can't handle a large task, and the sub-tasks aren't known in advance.</p>
+<p>We tested GLM-5.2 in two real projects, comparing it with GPT-5.5 and Opus 4.8, using strict variable control (same prompt, same base code, each model run independently, and reviewed by 4 separate AIs).</p>
+
+<h3>Project 1: Authentication Migration</h3>
+
+<p>This project tests backend and security capabilities, involving email+password, email verification, password reset, JWT double Token, Refresh rotation, OAuth, and cross-user isolation.</p>
 
 <ul>
-<li><strong>How It Works:</strong> A central orchestrator agent analyzes the main task and dynamically splits it into sub-tasks, assigning each to a specialized worker agent. Once all workers complete their tasks, the orchestrator consolidates the results.</li>
+<li><strong>GLM-5.1, GPT-5.5, and Opus 4.8</strong> all failed to implement the OAuth anti-forgery security check.</li>
+<li><strong>GLM-5.2</strong> was the only one that enforced the correct security check. It also fixed a critical security flaw from GLM-5.1, where users could access or cancel others' tasks using a task ID (data exposure). GLM-5.2 passed all 23 test cases for this.</li>
 </ul>
 
-<pre><code class="language-python"># Main orchestrator logic
-def orchestrate_large_task(task):
-    sub_tasks = analyze_and_split_task(task)  # Split into, e.g., "debug_error", "scan_code", "run_tests"
-    results = []
-    for sub_task in sub_tasks:
-        # Launch a SubAgent with independent context for each sub-task
-        sub_agent = SubAgent(
-            api_key="your_api_key",
-            context=sub_task,
-            model="M3"
-        )
-        result = sub_agent.run()
-        results.append(result)
-    return consolidate_results(results)</code></pre>
+<p>However, GLM-5.2 has a quirk — it likes to cut corners. While GPT-5.5 and Opus 4.8 implemented 12 interfaces, GLM-5.2 only did 8, skipping parts like email verification and password reset. But the code it did write was clean, especially in CSRF and architecture.</p>
+
+<h3>Project 2: Skills · Web Full-Stack Development</h3>
+
+<p>This project assesses web full-stack development capabilities, covering thinking, text, tool_call, tool_result, and done stages.</p>
+
+<p>The scores were remarkably close:</p>
 
 <ul>
-<li><strong>Key Insight:</strong> Sub-tasks are allocated on the fly, and workers only return summarized conclusions to the orchestrator, keeping context manageable.</li>
+<li>Opus 4.8: 9.4</li>
+<li>GPT-5.5: 9.4</li>
+<li>GLM-5.2: 9.25</li>
+<li>GLM-5.1: 8.15</li>
 </ul>
 
-<h3>2. Pipeline: Sequential Task Handover</h3>
+<p>There's no clear winner here — all models performed well.</p>
 
-<p>Use this when a task can be broken into fixed, sequential steps (e.g., "write code → review code → test code").</p>
+<h2>Comprehensive Scoring and Selection Advice</h2>
+
+<p>We submitted the code from each model, anonymized it, had 4 AIs review it, tested it with real cases, and graded it on dimensions like completeness, correctness, security, testing, and quality.</p>
 
 <ul>
-<li><strong>How It Works:</strong> The output of one agent becomes the input of the next, creating a linear workflow.</li>
+<li><strong>Opus 4.8:</strong> 8.86 (best overall)</li>
+<li><strong>GPT-5.5:</strong> 8.62</li>
+<li><strong>GLM-5.2:</strong> 8.14</li>
+<li><strong>GLM-5.1:</strong> 7.77</li>
 </ul>
 
-<pre><code class="language-python"># Agent 1: Write code
-def write_code(task):
-    code = generate_code(task)
-    push_to_git(code, "feature-branch")
-    return "Code pushed to feature-branch"
-
-# Agent 2: Review code
-def review_code(git_link):
-    code = pull_from_git(git_link)
-    feedback = analyze_code_quality(code)
-    push_feedback(feedback, "feedback-branch")
-    return "Feedback pushed to feedback-branch"
-
-# Agent 3: Test code
-def test_code(feedback_link):
-    feedback = pull_from_git(feedback_link)
-    test_results = run_tests(feedback)
-    return test_results</code></pre>
+<h3>How to Choose?</h3>
 
 <ul>
-<li><strong>Best Practice:</strong> Define a fixed output format for each step (e.g., JSON with <code>task_completed</code>, <code>output</code>, and <code>notes</code>) to ensure smooth handover.</li>
+<li><strong>If budget is no issue and you need the highest ceiling:</strong> Opus 4.8 and GPT-5.5 are still top choices.</li>
+<li><strong>If you focus on backend development, don't need multimodal, and want to control costs with a domestic model:</strong> GLM-5.2 is excellent — <em>if you can get access</em>.</li>
 </ul>
 
-<h3>3. Parallelization: Simultaneous, Independent Work</h3>
+<h2>Code Example: JWT Utility with GLM-5.2</h2>
 
-<p>This structure shines when a task can be split into independent sub-tasks that can run concurrently (e.g., developing frontend and backend modules separately).</p>
+<p>To test GLM-5.2 yourself, start with simple commands. For example, to generate a JWT utility class in Python:</p>
 
-<ul>
-<li><strong>How It Works:</strong> Split the main task into non-overlapping sub-tasks and assign each to a separate agent. Once all agents finish, merge their outputs.</li>
-</ul>
+<pre><code class="language-python">import jwt
+import datetime
+from typing import Dict, Optional
 
-<pre><code class="language-python">from concurrent.futures import ThreadPoolExecutor
+class JWTUtil:
+    def __init__(self, secret_key: str, algorithm: str = "HS256"):
+        self.secret_key = secret_key
+        self.algorithm = algorithm
 
-def parallel_development(task):
-    sub_tasks = split_into_independent_tasks(task)  # e.g., "frontend", "backend", "tests"
-    results = []
-    with ThreadPoolExecutor(max_workers=3) as executor:
-        futures = [executor.submit(run_agent, sub_task) for sub_task in sub_tasks]
-        for future in futures:
-            results.append(future.result())
-    return merge_results(results)
+    def generate_token(self, payload: Dict, expire_minutes: Optional[int] = None) -> str:
+        if expire_minutes:
+            payload["exp"] = datetime.datetime.utcnow() + datetime.timedelta(minutes=expire_minutes)
+        return jwt.encode(payload, self.secret_key, algorithm=self.algorithm)
 
-def run_agent(sub_task):
-    agent = Agent(api_key="your_api_key", task=sub_task, model="M3")
-    return agent.execute()</code></pre>
+    def decode_token(self, token: str) -> Dict:
+        return jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
 
-<ul>
-<li><strong>Critical Check:</strong> Ensure sub-tasks are truly independent. If two agents modify the same logic, merging will fail. Use Git worktrees or environment isolation to prevent conflicts.</li>
-</ul>
-
-<h3>4. Evaluator-Optimizer: Iterative Refinement</h3>
-
-<p>Use this when you need to verify and improve an agent's output (e.g., "generate a report → critique it → revise it").</p>
-
-<ul>
-<li><strong>How It Works:</strong> One agent produces an initial output, a separate evaluator agent critiques it, and the original agent (or a new one) revises based on the feedback. This loops until the output meets standards.</li>
-</ul>
-
-<pre><code class="language-python">def iterative_improvement(task):
-    # Agent 1: Generate initial output
-    generator = Agent(api_key="your_api_key", role="generator", task=task)
-    output = generator.execute()
-
-    # Agent 2: Evaluate output
-    evaluator = Agent(
-        api_key="your_api_key",
-        role="evaluator",
-        task=f"Critique this output: {output}"
-    )
-    feedback = evaluator.execute()
-
-    # Agent 1: Revise based on feedback
-    revised_output = generator.execute(f"Revise based on feedback: {feedback}")
-    return revised_output</code></pre>
-
-<ul>
-<li><strong>Must-Do:</strong> Keep the evaluator agent's context independent from the generator's. Sharing context reduces the evaluator's objectivity.</li>
-</ul>
-
-<h2>When to Use Multi-Agent vs. Single-Agent</h2>
-
-<ul>
-<li><strong>Read-Heavy Tasks</strong> (e.g., research, data scraping, code scanning): Multi-agent parallelization is efficient.</li>
-<li><strong>Write-Heavy Tasks</strong> (e.g., code generation, creative writing): A single agent with well-managed context is often more stable, as multi-agent handovers can introduce inconsistencies.</li>
-</ul>
-
-<h2>Actionable Workflow for Your Tasks</h2>
-
-<ol>
-<li><strong>Define Collaboration Basics:</strong> Clarify who does what, how outputs are handed over, and who makes final decisions.</li>
-<li><strong>Assess Task Divisibility:</strong> Determine if the task can be split into independent or sequential steps.</li>
-<li><strong>Choose the Right Structure:</strong> Pick from Orchestrator-Workers, Pipeline, Parallelization, or Evaluator-Optimizer (or stick with a single agent if it suffices).</li>
-</ol>
-
-<p>By focusing on structure rather than just quantity, you can turn a crowd of agents into a cohesive, productive team.</p>
+# Example usage
+jwt_util = JWTUtil(secret_key="your-secret-key")
+token = jwt_util.generate_token({"user_id": 123, "role": "admin"}, expire_minutes=60)
+print(token)
+decoded = jwt_util.decode_token(token)
+print(decoded)</code></pre>
 
 <h2>常见问题</h2>
 
-<h3>Which structure should I start with for a typical development project?</h3>
-<p>Start with <strong>Pipeline</strong> for code generation tasks (write → review → test). It's the simplest to implement and debug because the handover points are fixed. Once you're comfortable, add <strong>Parallelization</strong> for independent modules (frontend + backend simultaneously). Save Orchestrator-Workers for complex, unpredictable tasks where you genuinely don't know the sub-task breakdown upfront.</p>
+<h3>How does GLM-5.2 compare to DeepSeek V4 for coding?</h3>
+<p>They serve different niches. DeepSeek V4 excels at reasoning-heavy tasks (math, competitive programming, logic puzzles) and is fully open-source for self-hosting. GLM-5.2 excels at practical backend engineering — it writes production-grade auth systems with proper security checks that other models miss. If you're building APIs with JWT/OAuth, GLM-5.2 has the edge. If you're doing algorithmic work, DeepSeek V4 is stronger. Both are priced competitively against Western models.</p>
 
-<h3>How do I prevent agents from overwriting each other's work in Parallelization mode?</h3>
-<p>Three techniques: (1) Use Git worktrees so each agent has its own isolated filesystem, (2) assign each agent a non-overlapping file/module scope in the prompt, (3) have a dedicated merge agent that resolves conflicts after all parallel agents complete. The Git worktree approach is the most robust — each agent works in <code>.claude/worktrees/agent-N/</code> and only the merge agent touches the main branch.</p>
+<h3>Why is GLM-5.2 access so difficult?</h3>
+<p>The coding plan has limited capacity — Zhipu AI appears to be rationing access to manage infrastructure costs while demand far exceeds supply. The model's reputation for security-critical coding has driven intense demand from enterprise developers. Secondary-market resale of coding plan slots has emerged as a gray market. Zhipu is expected to expand capacity, but no timeline has been announced.</p>
 
-<h3>When is single-agent better than multi-agent?</h3>
-<p>Single-agent wins when: (1) the task requires deep context that's expensive to replicate across agents, (2) the output needs stylistic consistency (creative writing, UI design), (3) the task is small enough that coordination overhead exceeds execution time. A good rule of thumb: if explaining the task to multiple agents takes longer than doing it with one, stick with single-agent.</p>
+<h3>Should I switch from Claude Code to GLM-5.2 for coding?</h3>
+<p>Not as a full replacement. GLM-5.2 is a model, not a coding agent like Claude Code. You can use GLM-5.2 as the underlying LLM in agent frameworks like OpenCode or via API. For tasks where security correctness is paramount (auth migration, user isolation), GLM-5.2 is worth adding to your toolkit. For general coding workflows, Claude Code's agent loop and tool integration still provide a better overall experience. The ideal setup: use Claude Code for orchestration and GLM-5.2 for security-critical code generation.</p>
 
 <div class="next-step">
-<p><strong>Previous:</strong> <a href="/en/article/mastering-ai-agent-tool-orchestration-meta-tools">Mastering AI Agent Tool Orchestration: The Power of Meta-Tools in Modern Workflows ←</a></p>
+<p><strong>Previous:</strong> <a href="/en/article/codex-autocad-redraw-dwg-one-sentence">Codex + AutoCAD: Redraw Complex DWG with Just One Sentence ←</a></p>
 </div>`,
     contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年6月24日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 工具：</strong>Claude Code、MiniMax M3</p>
+<p><strong>📅 发布日期：</strong>2026年6月25日 · <strong>🏷️ 分类：</strong>AI对比 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 工具：</strong>GLM-5.2、GPT-5.5、Claude Opus 4.8</p>
 </div>
 
-<p>在AI Agent领域，仅仅增加Agent数量并不等于有效协作。真正的生产力在于结构化协调。本文深入探讨四种实用的多Agent结构，附完整的可操作代码示例，帮助你利用Agent协作完成真实任务。</p>
+<p>GLM-5.2 在AI编程社区掀起风暴，赢得"国产顶级编程模型"的称号。其编程计划供不应求，甚至在二手平台上有偿转让，网友戏称在中国使用GLM-5.2比从美国访问GPT-5.5还难。让我们深入了解其实际表现和对开发者的意义。</p>
 
-<h2>为什么"更多Agent"不等于"协作"</h2>
+<h2>6,690条评论的情感分析</h2>
 
-<p>同时打开多个Agent会话并不意味它们在一起工作。例如，在开发场景中，你可能有一个Agent修Bug，另一个跑测试，还有处理前后端任务的。没有共享上下文，修Bug的Agent可能不知道测试Agent已经遇到了同样的Bug，导致重复工作。</p>
-
-<p>要实现真正的协作，必须定义三个核心要素：</p>
+<p>为理解社区认知，我们分析了抖音、小红书、B站、X和V2EX等平台上的6,690条评论。结果令人惊讶：负面情感（40.3%）高于正面（28.6%）。但当我们拆解讨论话题时，明白了原因。</p>
 
 <ul>
-<li><strong>分工：</strong>谁负责什么任务？</li>
-<li><strong>交接协议：</strong>Agent之间如何交换输出？</li>
-<li><strong>决策权：</strong>谁在争议或下一步决策中有最终决定权？</li>
+<li><strong>编程能力：</strong>提及1,280次，几乎全部正面。</li>
+<li><strong>定价和访问：</strong>提及1,269次，几乎全部负面（因难以获得编程计划）。</li>
 </ul>
 
-<h2>4种实用多Agent结构</h2>
+<p>这显示出爱恨交织的关系——开发者赞美其编程能力但为访问问题感到沮丧。国内外认知也存在鲜明对比。海外X（Twitter）上正面情感超过48.5%，开发者称其为"开源DeepSeek时刻"和Claude、OpenAI的潜在对手。国内抖音（45.9%负面）和小红书（43.5%负面）则被无法获取访问的抱怨主导，技术讨论很少。</p>
 
-<h3>1. Orchestrator-Workers（编排器-工作者）：动态任务分配</h3>
+<h2>真实项目实战测试</h2>
 
-<p>当单个Agent无法处理大型任务，且子任务事先未知时，此结构最合适。</p>
+<p>我们在两个真实项目中测试了GLM-5.2，对比GPT-5.5和Opus 4.8，使用严格变量控制（相同提示、相同基础代码、每个模型独立运行、4个独立AI评审）。</p>
+
+<h3>项目1：认证迁移</h3>
+
+<p>此项目测试后端和安全能力，涉及邮箱+密码、邮箱验证、密码重置、JWT双Token、Refresh轮换、OAuth和跨用户隔离。</p>
 
 <ul>
-<li><strong>工作原理：</strong>中央编排器Agent分析主任务并动态拆分为子任务，分配给专门的工作者Agent。所有工作者完成后，编排器整合结果。</li>
+<li><strong>GLM-5.1、GPT-5.5和Opus 4.8</strong>均未实现OAuth防伪安全检查。</li>
+<li><strong>GLM-5.2</strong>是唯一强制正确安全检查的模型。它还修复了GLM-5.1的一个关键安全漏洞——用户可通过任务ID访问或取消他人任务（数据泄露）。GLM-5.2在此项目的23个测试用例中全部通过。</li>
 </ul>
 
-<pre><code class="language-python"># 主编排器逻辑
-def orchestrate_large_task(task):
-    sub_tasks = analyze_and_split_task(task)  # 拆分为如"debug_error"、"scan_code"、"run_tests"
-    results = []
-    for sub_task in sub_tasks:
-        # 为每个子任务启动独立上下文的SubAgent
-        sub_agent = SubAgent(
-            api_key="your_api_key",
-            context=sub_task,
-            model="M3"
-        )
-        result = sub_agent.run()
-        results.append(result)
-    return consolidate_results(results)</code></pre>
+<p>但GLM-5.2有个怪癖——喜欢偷工减料。GPT-5.5和Opus 4.8实现了12个接口，GLM-5.2只做了8个，跳过了邮箱验证和密码重置等部分。但它写的代码确实干净，尤其在CSRF和架构方面。</p>
+
+<h3>项目2：Skills · Web全栈开发</h3>
+
+<p>此项目评估Web全栈开发能力，涵盖thinking、text、tool_call、tool_result和done阶段。</p>
+
+<p>得分非常接近：</p>
 
 <ul>
-<li><strong>关键洞察：</strong>子任务动态分配，工作者只向编排器返回摘要结论，保持上下文可控。</li>
+<li>Opus 4.8：9.4</li>
+<li>GPT-5.5：9.4</li>
+<li>GLM-5.2：9.25</li>
+<li>GLM-5.1：8.15</li>
 </ul>
 
-<h3>2. Pipeline（流水线）：顺序任务交接</h3>
+<p>没有明显赢家——所有模型表现都不错。</p>
 
-<p>当任务可分解为固定的顺序步骤时使用（如"写代码→审代码→测代码"）。</p>
+<h2>综合评分与选择建议</h2>
+
+<p>我们提交每个模型的代码（匿名化），由4个AI评审，用真实案例测试，从完整性、正确性、安全性、测试和质量等维度评分。</p>
 
 <ul>
-<li><strong>工作原理：</strong>一个Agent的输出成为下一个Agent的输入，形成线性工作流。</li>
+<li><strong>Opus 4.8：</strong>8.86（综合最佳）</li>
+<li><strong>GPT-5.5：</strong>8.62</li>
+<li><strong>GLM-5.2：</strong>8.14</li>
+<li><strong>GLM-5.1：</strong>7.77</li>
 </ul>
 
-<pre><code class="language-python"># Agent 1: 写代码
-def write_code(task):
-    code = generate_code(task)
-    push_to_git(code, "feature-branch")
-    return "代码已推送到 feature-branch"
-
-# Agent 2: 审查代码
-def review_code(git_link):
-    code = pull_from_git(git_link)
-    feedback = analyze_code_quality(code)
-    push_feedback(feedback, "feedback-branch")
-    return "反馈已推送到 feedback-branch"
-
-# Agent 3: 测试代码
-def test_code(feedback_link):
-    feedback = pull_from_git(feedback_link)
-    test_results = run_tests(feedback)
-    return test_results</code></pre>
+<h3>如何选择？</h3>
 
 <ul>
-<li><strong>最佳实践：</strong>为每一步定义固定输出格式（如包含<code>task_completed</code>、<code>output</code>和<code>notes</code>的JSON），确保顺利交接。</li>
+<li><strong>预算充足且需要最高上限：</strong>Opus 4.8和GPT-5.5仍是首选。</li>
+<li><strong>专注后端开发、不需要多模态、想用国产模型控制成本：</strong>GLM-5.2非常出色——<em>如果你能获取访问权限的话</em>。</li>
 </ul>
 
-<h3>3. Parallelization（并行化）：同时独立工作</h3>
+<h2>代码示例：GLM-5.2生成的JWT工具类</h2>
 
-<p>当任务可拆分为能并发运行的独立子任务时（如分别开发前后端模块）。</p>
+<pre><code class="language-python">import jwt
+import datetime
+from typing import Dict, Optional
 
-<ul>
-<li><strong>工作原理：</strong>将主任务拆分为不重叠的子任务，分配给不同Agent。全部完成后合并输出。</li>
-</ul>
+class JWTUtil:
+    def __init__(self, secret_key: str, algorithm: str = "HS256"):
+        self.secret_key = secret_key
+        self.algorithm = algorithm
 
-<pre><code class="language-python">from concurrent.futures import ThreadPoolExecutor
+    def generate_token(self, payload: Dict, expire_minutes: Optional[int] = None) -> str:
+        if expire_minutes:
+            payload["exp"] = datetime.datetime.utcnow() + datetime.timedelta(minutes=expire_minutes)
+        return jwt.encode(payload, self.secret_key, algorithm=self.algorithm)
 
-def parallel_development(task):
-    sub_tasks = split_into_independent_tasks(task)  # 如"frontend"、"backend"、"tests"
-    results = []
-    with ThreadPoolExecutor(max_workers=3) as executor:
-        futures = [executor.submit(run_agent, sub_task) for sub_task in sub_tasks]
-        for future in futures:
-            results.append(future.result())
-    return merge_results(results)</code></pre>
+    def decode_token(self, token: str) -> Dict:
+        return jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
 
-<ul>
-<li><strong>关键检查：</strong>确保子任务真正独立。如果两个Agent修改同一逻辑，合并会失败。使用Git worktree或环境隔离防止冲突。</li>
-</ul>
-
-<h3>4. Evaluator-Optimizer（评估器-优化器）：迭代精炼</h3>
-
-<p>当需要验证和改进Agent输出时使用（如"生成报告→批评→修订"）。</p>
-
-<ul>
-<li><strong>工作原理：</strong>一个Agent产出初始结果，独立评估Agent批评它，原Agent（或新Agent）基于反馈修订。循环直到输出达标。</li>
-</ul>
-
-<pre><code class="language-python">def iterative_improvement(task):
-    # Agent 1: 生成初始输出
-    generator = Agent(api_key="your_api_key", role="generator", task=task)
-    output = generator.execute()
-
-    # Agent 2: 评估输出
-    evaluator = Agent(
-        api_key="your_api_key",
-        role="evaluator",
-        task=f"批评此输出: {output}"
-    )
-    feedback = evaluator.execute()
-
-    # Agent 1: 基于反馈修订
-    revised_output = generator.execute(f"基于反馈修订: {feedback}")
-    return revised_output</code></pre>
-
-<ul>
-<li><strong>必须做到：</strong>保持评估Agent的上下文与生成Agent独立。共享上下文会降低评估者的客观性。</li>
-</ul>
-
-<h2>何时用多Agent vs 单Agent</h2>
-
-<ul>
-<li><strong>读密集型任务</strong>（研究、数据抓取、代码扫描）：多Agent并行化效率高。</li>
-<li><strong>写密集型任务</strong>（代码生成、创意写作）：管理好上下文的单Agent通常更稳定，因为多Agent交接可能引入不一致。</li>
-</ul>
-
-<h2>可操作的工作流程</h2>
-
-<ol>
-<li><strong>定义协作基础：</strong>明确谁做什么、输出如何交接、谁做最终决策。</li>
-<li><strong>评估任务可拆分性：</strong>确定任务能否拆分为独立或顺序步骤。</li>
-<li><strong>选择合适的结构：</strong>从Orchestrator-Workers、Pipeline、Parallelization或Evaluator-Optimizer中选择（单Agent够用就单Agent）。</li>
-</ol>
-
-<p>聚焦结构而非数量，你能将一群Agent转变为有凝聚力的高效团队。</p>
+# 使用示例
+jwt_util = JWTUtil(secret_key="your-secret-key")
+token = jwt_util.generate_token({"user_id": 123, "role": "admin"}, expire_minutes=60)
+print(token)
+decoded = jwt_util.decode_token(token)
+print(decoded)</code></pre>
 
 <h2>常见问题</h2>
 
-<h3>典型开发项目应该从哪种结构开始？</h3>
-<p>从<strong>Pipeline</strong>开始用于代码生成任务（写→审→测）。它最容易实现和调试，因为交接点是固定的。熟练后，为独立模块（前后端同时开发）添加<strong>Parallelization</strong>。将Orchestrator-Workers留给复杂、不可预测的任务——那些你事先真不知道子任务如何拆分的场景。</p>
+<h3>GLM-5.2与DeepSeek V4在编程方面相比如何？</h3>
+<p>两者服务于不同领域。DeepSeek V4擅长推理密集型任务（数学、竞赛编程、逻辑谜题），且完全开源可自托管。GLM-5.2擅长实用后端工程——它编写生产级认证系统，包含其他模型遗漏的适当安全检查。如果你在构建JWT/OAuth的API，GLM-5.2有优势。如果你做算法工作，DeepSeek V4更强。两者价格都比西方模型有竞争力。</p>
 
-<h3>如何防止Agent在Parallelization模式下互相覆盖工作？</h3>
-<p>三种技术：(1)使用Git worktree让每个Agent有独立的文件系统，(2)在提示中为每个Agent分配不重叠的文件/模块范围，(3)设置专门的合并Agent在所有并行Agent完成后解决冲突。Git worktree方法最稳健——每个Agent在<code>.claude/worktrees/agent-N/</code>中工作，只有合并Agent接触主分支。</p>
+<h3>为什么GLM-5.2访问这么难？</h3>
+<p>编程计划容量有限——智谱AI似乎在配给访问以管理基础设施成本，而需求远超供应。该模型在安全关键编码方面的声誉推动了企业开发者的强烈需求。编程计划名额的二级市场转售已作为灰色市场出现。智谱预计将扩大容量，但尚未公布时间表。</p>
 
-<h3>什么时候单Agent优于多Agent？</h3>
-<p>单Agent胜出的场景：(1)任务需要深度上下文，跨Agent复制成本高，(2)输出需要风格一致性（创意写作、UI设计），(3)任务小到协调开销超过执行时间。一个好的经验法则：如果向多个Agent解释任务的时间比用一个Agent完成还长，就用单Agent。</p>
+<h3>应该从Claude Code切换到GLM-5.2编程吗？</h3>
+<p>不建议完全替换。GLM-5.2是一个模型，不是像Claude Code那样的编码Agent。你可以在OpenCode等Agent框架中或通过API使用GLM-5.2作为底层LLM。对于安全正确性至关重要的任务（认证迁移、用户隔离），GLM-5.2值得加入你的工具箱。对于通用编码工作流，Claude Code的Agent循环和工具集成仍提供更好的整体体验。理想设置：用Claude Code做编排，GLM-5.2做安全关键代码生成。</p>
 
 <div class="next-step">
-<p><strong>上一篇：</strong> <a href="/zh/article/mastering-ai-agent-tool-orchestration-meta-tools">掌握AI Agent工具编排：Meta-Tools在现代工作流中的力量 ←</a></p>
+<p><strong>上一篇：</strong> <a href="/zh/article/codex-autocad-redraw-dwg-one-sentence">Codex+AutoCAD：一句话重绘复杂DWG图纸 ←</a></p>
 </div>`,
   },
 
@@ -652,6 +480,6 @@ content_new = content_src[:last_brace] + new_contents + '};'
 with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f:
     f.write(content_new)
 
-print('Part 2: 2 article contents added to article-content.ts')
+print('Part 3: 2 article contents added to article-content.ts')
 
 print('\n=== All done! Run build to verify ===')

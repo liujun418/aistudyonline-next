@@ -2208,4 +2208,29 @@ export const articles: Article[] = [
     date: "2026-06-24",
   },
 
+  {
+    slug: "codex-autocad-redraw-dwg-one-sentence",
+    title: "Codex + AutoCAD: Redraw Complex DWG with Just One Sentence",
+    titleZh: "Codex+AutoCAD：一句话重绘复杂DWG图纸",
+    description: "How Codex integrates with AutoCAD's COM interface to automatically analyze layers, redraw complex DWG files, and perform quality inspection — all from a single command, reducing hours of manual CAD work to 90 seconds.",
+    descriptionZh: "Codex如何通过AutoCAD COM接口自动分析图层、重绘复杂DWG文件并执行质量检查——只需一条命令，将数小时手动CAD工作缩减到90秒。",
+    category: "ai-tutorials",
+    tags: ["codex", "autocad", "dwg", "cad", "automation", "skill"],
+    difficulty: "intermediate",
+    toolsMentioned: ["codex-agent"],
+    date: "2026-06-25",
+  },
+  {
+    slug: "glm-5-2-coding-prowess-deep-dive",
+    title: "GLM-5.2: A Deep Dive into Its Coding Prowess and Practical Insights",
+    titleZh: "GLM-5.2：深度解析其编程实力与实战洞察",
+    description: "Rigorous benchmark of GLM-5.2 vs GPT-5.5 and Claude Opus 4.8 across authentication migration and web full-stack projects — plus sentiment analysis of 6,690 community comments revealing why developers both love and hate it.",
+    descriptionZh: "GLM-5.2 vs GPT-5.5和Claude Opus 4.8的严格基准测试——认证迁移和Web全栈两大实战项目+6,690条社区评论情感分析，揭示开发者爱恨交织的原因。",
+    category: "ai-comparisons",
+    tags: ["glm", "zhipu", "coding-benchmark", "backend", "security", "chinese-model"],
+    difficulty: "intermediate",
+    toolsMentioned: ["glm-5-2"],
+    date: "2026-06-25",
+  },
+
 ];
