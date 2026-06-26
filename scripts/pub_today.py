@@ -1,6 +1,6 @@
 """
-Publish June 25, 2026 articles.
-1 new tool: GLM-5.2 (Zhipu AI's coding-focused model)
+Publish June 26, 2026 articles.
+0 new tools — both articles about Claude Code features (data storage, Workflow).
 """
 
 import os
@@ -8,85 +8,33 @@ import os
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-# ===== Part 1: Add GLM-5.2 tool to tools.ts =====
-with open('src/lib/tools.ts', 'r', encoding='utf-8') as f:
-    tools_src = f.read()
-
-new_tool = r"""  {
-    id: "glm-5-2",
-    name: "GLM-5.2",
-    description: "Zhipu AI's top domestic coding model with strong backend security, JWT, and OAuth capabilities — competitive with GPT-5.5 and Claude Opus 4.8.",
-    descriptionZh: "智谱AI的国产顶级编程模型，擅长后端安全、JWT和OAuth——与GPT-5.5和Claude Opus 4.8竞争。",
-    category: "chatbots",
-    tags: ["coding", "chinese-model", "security", "backend", "jwt", "oauth"],
-    difficulty: "intermediate",
-    url: "https://open.bigmodel.cn",
-    rating: r(4.3),
-    pricing: "Free tier + Paid API",
-    useCase: "GLM-5.2 excels at backend development with strong security awareness — it was the only model in a multi-model benchmark to correctly implement OAuth anti-forgery checks and pass all 23 test cases for cross-user isolation.",
-    icon: "\u{1F9E0}",
-    company: "Zhipu AI",
-    companyZh: "智谱AI",
-    founded: "2019",
-    headquarters: "Beijing, China",
-    descriptionLong: "GLM-5.2 is Zhipu AI's latest flagship coding model, widely regarded as the top domestic programming model. In rigorous benchmarks against GPT-5.5 and Claude Opus 4.8 using identical prompts, base code, and 4 independent AI reviewers, GLM-5.2 scored 8.14/10 overall (vs Opus 4.8's 8.86 and GPT-5.5's 8.62). Its standout strength is backend security: it was the only model to correctly implement OAuth anti-forgery (CSRF) checks and passed all 23 cross-user isolation test cases where GLM-5.1, GPT-5.5, and Opus 4.8 all failed. In web full-stack development, it scored 9.25/10, nearly matching Opus 4.8 and GPT-5.5 (both 9.4). Sentiment analysis of 6,690 community comments reveals a love-hate dynamic: programming capability is universally praised (1,280 mentions, near-total positive), but access/pricing is heavily criticized (1,269 mentions, near-total negative) due to limited coding plan availability — developers joke that getting GLM-5.2 access in China is harder than accessing GPT-5.5 from the US. Internationally, X/Twitter sentiment is 48.5% positive, with developers calling it an 'open-source DeepSeek moment.' The main trade-off: GLM-5.2 sometimes 'cuts corners,' implementing fewer interfaces than competitors (8 vs 12) but producing cleaner code for what it does write.",
-    descriptionLongZh: "GLM-5.2 是智谱AI最新的旗舰编程模型，被广泛认为是国产顶级编程模型。在使用相同提示、相同基础代码和4个独立AI评审员的严格基准测试中，GLM-5.2 总分 8.14/10（对比 Opus 4.8 的 8.86 和 GPT-5.5 的 8.62）。其突出优势是后端安全：它是唯一正确实现 OAuth 防伪（CSRF）检查的模型，并在 GLM-5.1、GPT-5.5 和 Opus 4.8 全部失败的 23 项跨用户隔离测试中全部通过。在 Web 全栈开发中得分 9.25/10，几乎追平 Opus 4.8 和 GPT-5.5（均为 9.4）。对 6,690 条社区评论的情感分析揭示了爱恨交织的动态：编程能力被普遍赞誉（1,280 次提及，几乎全部正面），但访问/定价被严厉批评（1,269 次提及，几乎全部负面），因编程计划名额有限——开发者戏称在中国获得 GLM-5.2 访问权比从美国访问 GPT-5.5 还难。国际上，X/Twitter 正面情感达 48.5%，开发者称其为'开源 DeepSeek 时刻'。主要权衡：GLM-5.2 有时'偷工减料'，实现的接口数少于竞品（8 vs 12），但所写代码更简洁。",
-    advantages: ["Top backend security (CSRF/OAuth)", "Competitive coding scores (9.25 web, 8.14 overall)", "Strong cross-user isolation", "Clean code output", "Domestic model with competitive pricing"],
-    advantagesZh: ["顶级后端安全(CSRF/OAuth)", "编程得分有竞争力(Web 9.25, 总分 8.14)", "强跨用户隔离", "代码输出简洁", "国产模型价格有竞争力"],
-    useCases: ["Backend API development", "Authentication system migration", "Security-critical applications", "Web full-stack projects", "JWT/OAuth implementation"],
-    useCasesZh: ["后端API开发", "认证系统迁移", "安全关键应用", "Web全栈项目", "JWT/OAuth实现"],
-    targetAudience: "Backend developers who prioritize security and code quality, especially those working on authentication systems and APIs with strict cross-user isolation requirements.",
-    targetAudienceZh: "重视安全性和代码质量的后端开发者，尤其是从事认证系统和有严格跨用户隔离要求的API的开发者。",
-    pricingTiers: [
-      {tier: "Free", tierZh: "免费版", price: "$0", features: ["Limited API calls", "Web chat access"], featuresZh: ["有限API调用", "Web聊天访问"]},
-      {tier: "Coding Plan", tierZh: "编程计划", price: "Paid (limited availability)", features: ["Full coding capabilities", "Priority access", "Higher rate limits"], featuresZh: ["完整编程能力", "优先访问", "更高速率限制"]}
-    ],
-    pros: ["Best-in-class backend security", "Competitive with GPT-5.5/Opus 4.8", "Clean, concise code", "Strong domestic ecosystem"],
-    prosZh: ["顶级后端安全", "与GPT-5.5/Opus 4.8竞争", "代码简洁", "国内生态强"],
-    cons: ["Limited coding plan availability", "Sometimes skips features (cuts corners)", "No multimodal support", "Access harder than overseas models"],
-    consZh: ["编程计划名额有限", "有时跳过功能(偷工减料)", "无多模态支持", "访问难度超海外模型"],
-    extensions: [],
-    skills: [],
-    scene: "development",
-  },
-
-"""
-
-last_tool = tools_src.rfind('] as Tool[];')
-tools_new = tools_src[:last_tool] + new_tool + '] as Tool[];'
-
-with open('src/lib/tools.ts', 'w', encoding='utf-8') as f:
-    f.write(tools_new)
-
-print('Part 1: GLM-5.2 tool added to tools.ts')
-
-# ===== Part 2: Add 2 article metadata to articles.ts =====
+# ===== Part 1: Add 2 article metadata to articles.ts =====
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "codex-autocad-redraw-dwg-one-sentence",
-    title: "Codex + AutoCAD: Redraw Complex DWG with Just One Sentence",
-    titleZh: "Codex+AutoCAD：一句话重绘复杂DWG图纸",
-    description: "How Codex integrates with AutoCAD's COM interface to automatically analyze layers, redraw complex DWG files, and perform quality inspection — all from a single command, reducing hours of manual CAD work to 90 seconds.",
-    descriptionZh: "Codex如何通过AutoCAD COM接口自动分析图层、重绘复杂DWG文件并执行质量检查——只需一条命令，将数小时手动CAD工作缩减到90秒。",
+    slug: "build-stable-data-storage-large-ai-projects-claude-code",
+    title: "Build Stable Long-Term Data Storage for Large AI Projects With Claude Code",
+    titleZh: "用Claude Code为大型AI项目构建稳定的长期数据存储",
+    description: "A complete Node.js data persistence system for Claude Code agent tasks — auto-classification, timestamp naming, version snapshots with auto-cleanup, crash fault recovery, and one-click rollback to any historical state.",
+    descriptionZh: "为Claude Code Agent任务构建完整的Node.js数据持久化系统——自动分类、时间戳命名、版本快照自动清理、崩溃故障恢复、一键回滚到任意历史状态。",
     category: "ai-tutorials",
-    tags: ["codex", "autocad", "dwg", "cad", "automation", "skill"],
+    tags: ["claude-code", "data-storage", "nodejs", "persistence", "snapshot", "fault-recovery"],
     difficulty: "intermediate",
-    toolsMentioned: ["codex-agent"],
-    date: "2026-06-25",
+    toolsMentioned: ["claude"],
+    date: "2026-06-26",
   },
   {
-    slug: "glm-5-2-coding-prowess-deep-dive",
-    title: "GLM-5.2: A Deep Dive into Its Coding Prowess and Practical Insights",
-    titleZh: "GLM-5.2：深度解析其编程实力与实战洞察",
-    description: "Rigorous benchmark of GLM-5.2 vs GPT-5.5 and Claude Opus 4.8 across authentication migration and web full-stack projects — plus sentiment analysis of 6,690 community comments revealing why developers both love and hate it.",
-    descriptionZh: "GLM-5.2 vs GPT-5.5和Claude Opus 4.8的严格基准测试——认证迁移和Web全栈两大实战项目+6,690条社区评论情感分析，揭示开发者爱恨交织的原因。",
-    category: "ai-comparisons",
-    tags: ["glm", "zhipu", "coding-benchmark", "backend", "security", "chinese-model"],
-    difficulty: "intermediate",
-    toolsMentioned: ["glm-5-2"],
-    date: "2026-06-25",
+    slug: "claude-code-workflow-orchestrating-agent-teams",
+    title: "Claude Code Workflow: From Writing Code to Orchestrating Agent Teams",
+    titleZh: "Claude Code Workflow：从写代码到编排Agent团队",
+    description: "Claude Code's major update — Workflow transforms solo coding into agent team orchestration with JavaScript scripts, 5-stage deep-research pipeline, budget control, and verifiable multi-agent coordination at scale.",
+    descriptionZh: "Claude Code重大更新——Workflow将单人编码转变为Agent团队编排，JavaScript脚本驱动、5阶段深度研究流水线、预算控制、可验证的大规模多Agent协调。",
+    category: "ai-news",
+    tags: ["claude-code", "workflow", "agent-orchestration", "deep-research", "multi-agent", "anthropic"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-26",
   },
 
 """
@@ -97,378 +45,576 @@ articles_new = articles_src[:last_bracket] + new_articles + '];'
 with open('src/lib/articles.ts', 'w', encoding='utf-8') as f:
     f.write(articles_new)
 
-print('Part 2: 2 new articles added to articles.ts')
+print('Part 1: 2 new articles added to articles.ts')
 
-# ===== Part 3: Add 2 article contents to article-content.ts =====
+# ===== Part 2: Add 2 article contents to article-content.ts =====
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "codex-autocad-redraw-dwg-one-sentence": {
+  "build-stable-data-storage-large-ai-projects-claude-code": {
     content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> June 25, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Tools:</strong> Codex, AutoCAD</p>
+<p><strong>📅 Published:</strong> June 26, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Tools:</strong> Claude Code, Node.js</p>
 </div>
 
-<p>In the realm of CAD design, efficiency and accuracy are paramount. This tutorial introduces a groundbreaking workflow where <strong>Codex</strong> integrates with AutoCAD, enabling you to redraw complex DWG files automatically with just one sentence, zero manual intervention.</p>
+<p>This hands-on tutorial belongs to the full Claude Code teaching series, focusing on solving a common pain point for AI developers: unstable, fragmented temporary data storage when running multi-round agent tasks. We will build a persistent, standardized local data warehouse entirely through Claude Code with one-click generation scripts, covering data classification, automatic archiving, version snapshot and fault recovery functions.</p>
 
-<h2>Overview: From Input to Redraw in Minutes</h2>
+<h2>Core Pain Points of Default Temporary Storage in AI Projects</h2>
 
-<p>The core capability is simple yet powerful: take a DWG file, input a command, and let the AI handle the rest — from layer analysis to redrawing and quality inspection. As shown in the demo, a complex mechanical assembly drawing was redrawn by Codex in just <strong>1 minute and 30 seconds</strong>, with details matching the original precisely when zoomed in.</p>
+<p>When you run long-cycle research, multi-step coding or multi-agent tasks on Claude Code, all generated text, table data, API response records and intermediate calculation results are saved as temporary cache files by default, bringing obvious drawbacks:</p>
 
-<h2>Step-by-Step Workflow</h2>
+<ol>
+<li>Temporary folders get cleared after restarting Claude Code, all historical task data lost directly</li>
+<li>Unclassified mixed files make it impossible to quickly retrieve data from specific projects</li>
+<li>No automatic snapshot versioning; you cannot roll back data if AI overwrites key records</li>
+<li>Lack built-in fault recovery logic, incomplete data after unexpected program interruption</li>
+</ol>
 
-<h3>1. Provide the DWG Path</h3>
+<h2>Step 1: Initialize Standard Data Warehouse Directory Structure</h2>
 
-<p>First, specify the path to your source DWG file. This ensures the AI accesses the actual file data, not just screenshots, for accurate processing.</p>
+<p>Send the below requirement prompt to Claude Code to auto-generate the full folder tree and initialization script:</p>
 
-<h3>2. AI Automatically Analyzes Layers and Entities</h3>
+<pre><code class="language-text">Generate a persistent local data storage system for large AI agent projects, include directories for raw input data, intermediate processing records, exported results, version snapshots and error backup logs, output a complete init script in Node.js</code></pre>
 
-<p>The AI skill dissects the DWG, identifying:</p>
+<p>The generated initialization script <code>data-store-init.js</code>:</p>
 
-<ul>
-<li>Layers and blocks</li>
-<li>Text styles and dimension styles</li>
-<li>The exact number of entities</li>
-</ul>
+<pre><code class="language-javascript">const fs = require("fs-extra");
+const path = require("path");
 
-<p>This step is crucial for replicating the original drawing's structure.</p>
+const rootDataDir = path.resolve("./ai-project-data");
+const dirList = [
+  path.join(rootDataDir, "raw-input"),
+  path.join(rootDataDir, "intermediate-cache"),
+  path.join(rootDataDir, "export-output"),
+  path.join(rootDataDir, "version-snapshot"),
+  path.join(rootDataDir, "error-backup")
+];
 
-<h3>3. Auto-Redraw via AutoCAD COM</h3>
+async function initDataWarehouse() {
+  for (const dir of dirList) {
+    await fs.ensureDir(dir);
+    console.log(\`Created storage directory: \${dir}\`);
+  }
+  const configTemplate = {
+    autoSnapshot: true,
+    snapshotInterval: 5,
+    autoBackupOnError: true,
+    maxSnapshotCount: 20
+  };
+  await fs.writeJSON(path.join(rootDataDir, "store-config.json"), configTemplate, { spaces: 2 });
+  console.log("Data warehouse initialization finished");
+}
 
-<p>Using AutoCAD's COM interface, the AI generates a new, redrawn DWG. Run the following command in Codex:</p>
+initDataWarehouse().catch(err => console.error("Init failed:", err));</code></pre>
 
-<pre><code class="language-text">$ Use Sautocad-dwg-redraw
-> 输入: source.dwg
-> 输出: redraw_prompt.md
-> 输出: redraw_exact.dwg
-> OK 实体 + 标注校验</code></pre>
+<pre><code class="language-bash">node data-store-init.js</code></pre>
 
-<h3>4. Automatic Quality Inspection</h3>
+<h2>Step 2: Core Data Read & Write Persistence Module</h2>
 
-<p>The redrawn DWG undergoes a rigorous check covering:</p>
+<p>Ask Claude Code to generate a reusable data operation tool <code>data-operator.js</code>:</p>
 
-<ul>
-<li>Entity distribution</li>
-<li>Dimensions and leaders</li>
-<li>Layers and blocks</li>
-<li>ModelSpace and PaperSpace alignment</li>
-</ul>
+<pre><code class="language-javascript">const fs = require("fs-extra");
+const path = require("path");
+const { v4: uuidv4 } = require("uuid");
+const config = require("./ai-project-data/store-config.json");
 
-<p>If any element (e.g., a dimension in the original but missing in the redraw) doesn't match, the system throws an error. This makes the tool not just a redrawing utility but a <strong>quality-assured solution</strong>.</p>
+const DATA_ROOT = path.resolve("./ai-project-data");
 
-<h2>Install and Use the Skill</h2>
+async function saveIntermediateData(taskName, dataContent) {
+  const fileName = \`\${taskName}_\${Date.now()}_\${uuidv4()}.json\`;
+  const savePath = path.join(DATA_ROOT, "intermediate-cache", fileName);
+  await fs.writeJSON(savePath, dataContent, { spaces: 2 });
+  console.log(\`Intermediate data saved: \${fileName}\`);
+  await checkAndCreateSnapshot();
+  return savePath;
+}
 
-<p>The skill is open-sourced on GitHub. To install:</p>
+async function exportFinalResult(taskName, resultData) {
+  const outPath = path.join(DATA_ROOT, "export-output", \`\${taskName}_final_output.json\`);
+  await fs.writeJSON(outPath, resultData, { spaces: 2 });
+  return outPath;
+}
 
-<pre><code class="language-bash">git clone https://github.com/yourusername/autocad-dwg-redraw-skill.git</code></pre>
+async function checkAndCreateSnapshot() {
+  const snapshotDir = path.join(DATA_ROOT, "version-snapshot");
+  const existSnapshots = await fs.readdir(snapshotDir);
+  if (existSnapshots.length >= config.maxSnapshotCount) {
+    existSnapshots.sort((a, b) => a.split("_")[0] - b.split("_")[0]);
+    await fs.remove(path.join(snapshotDir, existSnapshots[0]));
+  }
+  const snapName = \`\${Date.now()}_task_snapshot\`;
+  await fs.copy(path.join(DATA_ROOT, "intermediate-cache"), path.join(snapshotDir, snapName));
+}
 
-<pre><code class="language-bash">pip install autocad-dwg-redraw-skill</code></pre>
+async function restoreSnapshot(snapshotFolderName) {
+  const source = path.join(DATA_ROOT, "version-snapshot", snapshotFolderName);
+  const target = path.join(DATA_ROOT, "intermediate-cache");
+  await fs.emptyDir(target);
+  await fs.copy(source, target);
+  console.log(\`Restored data from snapshot: \${snapshotFolderName}\`);
+}
 
-<p>In Codex, reference the skill and input your DWG path — the rest runs fully automated.</p>
+module.exports = { saveIntermediateData, exportFinalResult, restoreSnapshot };</code></pre>
+
+<pre><code class="language-bash">npm install fs-extra uuid</code></pre>
+
+<h2>Step 3: Integrate Storage Module Into Claude Code Agent Tasks</h2>
+
+<p>When you run research, code generation or multi-agent tasks, import the storage tool:</p>
+
+<pre><code class="language-javascript">const { saveIntermediateData, exportFinalResult } = require("./data-operator");
+
+async function runAITaskDemo() {
+  const taskData = {
+    taskId: "market-research-001",
+    model: "Claude 3.5 Code",
+    roundCount: 12,
+    rawSearchContent: [...],
+    analysisConclusion: "xxx",
+    codeSnippets: [...]
+  };
+  await saveIntermediateData("market-research", taskData);
+  await exportFinalResult("market-research", taskData.analysisConclusion);
+}
+
+runAITaskDemo();</code></pre>
+
+<h2>Step 4: Fault Backup Mechanism For Abnormal Interruption</h2>
+
+<p>Add error capture logic to auto back up incomplete data when Claude Code task crashes unexpectedly:</p>
+
+<pre><code class="language-javascript">process.on("uncaughtException", async (err) => {
+  console.error("Task interrupted unexpectedly, backing up unfinished data");
+  const unfinishedCache = path.join(DATA_ROOT, "intermediate-cache");
+  const backupTarget = path.join(DATA_ROOT, "error-backup", \`crash_backup_\${Date.now()}\`);
+  await fs.copy(unfinishedCache, backupTarget);
+  process.exit(1);
+});</code></pre>
+
+<h2>Step 5: Quick Management Commands For Daily Use</h2>
+
+<pre><code class="language-bash"># List all saved snapshots
+node data-manage.js list-snapshots
+
+# Roll back data to target snapshot
+node data-manage.js restore 1751234567890_task_snapshot</code></pre>
+
+<h2>Practical Usage Advantages</h2>
+
+<ol>
+<li>All task data permanently saved locally, no loss after restarting Claude Code</li>
+<li>Automatic layered classification separates raw materials, middle records and final outputs</li>
+<li>Timed snapshots with auto cleanup avoid disk overflow</li>
+<li>One-click data rollback to any historical task state</li>
+<li>Crash automatic backup prevents incomplete data wasting long agent running time</li>
+</ol>
+
+<h2>Final Operation Tips</h2>
+
+<ol>
+<li>Add the whole <code>ai-project-data</code> folder into <code>.gitignore</code> to avoid submitting massive local data to GitHub repositories</li>
+<li>Modify <code>store-config.json</code> to adjust snapshot frequency and maximum storage quantity based on your project size</li>
+<li>For ultra-long multi-day agent tasks, extend the snapshot interval to reduce disk write frequency</li>
+</ol>
 
 <h2>常见问题</h2>
 
-<h3>Does this require AutoCAD to be installed locally?</h3>
-<p>Yes. The skill communicates with AutoCAD through its COM interface, so AutoCAD must be installed and running on the same machine. The skill handles all the COM automation — you don't need to write any AutoCAD scripts yourself.</p>
+<h3>Does this work with any Claude Code project or only specific setups?</h3>
+<p>It works with any Claude Code project. The data storage system is a standalone Node.js module that you require() into your task scripts — it doesn't depend on Claude Code internals. As long as your agent tasks run in a Node.js environment, the persistence layer works transparently.</p>
 
-<h3>What types of DWG files can it handle?</h3>
-<p>The skill works best with mechanical assembly drawings, architectural floor plans, and engineering diagrams that have well-defined layers and entities. Highly artistic or freeform drawings with irregular entities may produce less accurate results. The quality inspection step will flag any mismatches so you know what needs manual adjustment.</p>
+<h3>How much disk space does the snapshot system consume?</h3>
+<p>With the default config (max 20 snapshots), disk usage depends on your intermediate data size. For typical AI projects with JSON/CSV intermediate data, 20 snapshots typically consume 50-200MB. The auto-cleanup deletes the oldest snapshot when the limit is reached, so storage stays bounded. Adjust <code>maxSnapshotCount</code> in <code>store-config.json</code> to fit your needs.</p>
 
-<h3>Can I modify existing DWGs instead of redrawing from scratch?</h3>
-<p>The current version focuses on redrawing. The author has announced that a follow-up tutorial will cover single-sentence DWG modification using Codex — stay tuned for that.</p>
+<h3>Can I use this with multi-agent workflows?</h3>
+<p>Yes — and that's one of its best use cases. When multiple agents generate intermediate data concurrently, each gets a unique UUID-based filename, preventing collisions. The snapshot system captures the entire intermediate-cache state at that moment, so you can roll back all agents' data to a consistent point in time.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/en/article/glm-5-2-coding-prowess-deep-dive">GLM-5.2: A Deep Dive into Its Coding Prowess and Practical Insights →</a></p>
+<p><strong>下一篇：</strong> <a href="/en/article/claude-code-workflow-orchestrating-agent-teams">Claude Code Workflow: From Writing Code to Orchestrating Agent Teams →</a></p>
 </div>`,
     contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年6月25日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 工具：</strong>Codex、AutoCAD</p>
+<p><strong>📅 发布日期：</strong>2026年6月26日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 工具：</strong>Claude Code、Node.js</p>
 </div>
 
-<p>在CAD设计领域，效率和精度至关重要。本教程介绍一个突破性的工作流：<strong>Codex</strong>与AutoCAD集成，只需一句话即可自动重绘复杂DWG文件，零人工干预。</p>
+<p>本实操教程属于Claude Code完整教学系列，聚焦解决AI开发者的常见痛点：运行多轮Agent任务时临时数据存储不稳定、碎片化。我们将完全通过Claude Code一键生成脚本构建一个持久化、标准化的本地数据仓库，涵盖数据分类、自动归档、版本快照和故障恢复功能。</p>
 
-<h2>概览：从输入到重绘只需几分钟</h2>
+<h2>AI项目默认临时存储的核心痛点</h2>
 
-<p>核心能力简单而强大：拿一个DWG文件，输入命令，让AI处理其余工作——从图层分析到重绘和质量检查。演示中，一个复杂的机械装配图被Codex在<strong>1分30秒</strong>内重绘完成，放大后细节与原始图纸精确匹配。</p>
+<p>在Claude Code上运行长周期研究、多步编码或多Agent任务时，所有生成的文本、表格数据、API响应记录和中间计算结果默认保存为临时缓存文件，带来明显缺陷：</p>
 
-<h2>分步工作流</h2>
+<ol>
+<li>重启Claude Code后临时文件夹被清理，所有历史任务数据直接丢失</li>
+<li>未分类的混合文件无法快速检索特定项目数据</li>
+<li>无自动快照版本控制；AI覆盖关键记录后无法回滚</li>
+<li>缺少内置故障恢复逻辑，程序意外中断后数据不完整</li>
+</ol>
 
-<h3>1. 提供DWG路径</h3>
+<h2>步骤1：初始化标准数据仓库目录结构</h2>
 
-<p>首先指定源DWG文件的路径。这确保AI访问实际文件数据而非截图，实现精确处理。</p>
+<p>向Claude Code发送以下需求提示，自动生成完整文件夹树和初始化脚本：</p>
 
-<h3>2. AI自动分析图层和实体</h3>
+<pre><code class="language-text">为大型AI Agent项目生成本地持久化数据存储系统，包含原始输入数据、中间处理记录、导出结果、版本快照和错误备份日志目录，输出完整Node.js初始化脚本</code></pre>
 
-<p>AI技能解析DWG，识别：</p>
+<p>生成的初始化脚本 <code>data-store-init.js</code>：</p>
 
-<ul>
-<li>图层和图块</li>
-<li>文字样式和标注样式</li>
-<li>精确的实体数量</li>
-</ul>
+<pre><code class="language-javascript">const fs = require("fs-extra");
+const path = require("path");
 
-<p>此步骤对复制原始图纸的结构至关重要。</p>
+const rootDataDir = path.resolve("./ai-project-data");
+const dirList = [
+  path.join(rootDataDir, "raw-input"),
+  path.join(rootDataDir, "intermediate-cache"),
+  path.join(rootDataDir, "export-output"),
+  path.join(rootDataDir, "version-snapshot"),
+  path.join(rootDataDir, "error-backup")
+];
 
-<h3>3. 通过AutoCAD COM自动重绘</h3>
+async function initDataWarehouse() {
+  for (const dir of dirList) {
+    await fs.ensureDir(dir);
+    console.log(\`已创建存储目录: \${dir}\`);
+  }
+  const configTemplate = {
+    autoSnapshot: true,
+    snapshotInterval: 5,
+    autoBackupOnError: true,
+    maxSnapshotCount: 20
+  };
+  await fs.writeJSON(path.join(rootDataDir, "store-config.json"), configTemplate, { spaces: 2 });
+  console.log("数据仓库初始化完成");
+}
 
-<p>利用AutoCAD的COM接口，AI生成新的重绘DWG。在Codex中运行以下命令：</p>
+initDataWarehouse().catch(err => console.error("初始化失败:", err));</code></pre>
 
-<pre><code class="language-text">$ Use Sautocad-dwg-redraw
-> 输入: source.dwg
-> 输出: redraw_prompt.md
-> 输出: redraw_exact.dwg
-> OK 实体 + 标注校验</code></pre>
+<pre><code class="language-bash">node data-store-init.js</code></pre>
 
-<h3>4. 自动质量检查</h3>
+<h2>步骤2：核心数据读写持久化模块</h2>
 
-<p>重绘的DWG经过严格检查，覆盖：</p>
+<p>让Claude Code生成可复用的数据操作工具 <code>data-operator.js</code>：</p>
 
-<ul>
-<li>实体分布</li>
-<li>尺寸和引线</li>
-<li>图层和图块</li>
-<li>模型空间和图纸空间对齐</li>
-</ul>
+<pre><code class="language-javascript">const fs = require("fs-extra");
+const path = require("path");
+const { v4: uuidv4 } = require("uuid");
+const config = require("./ai-project-data/store-config.json");
 
-<p>如果任何元素不匹配（如原始图纸有但重绘图缺失的尺寸标注），系统会报错。这使得该工具不仅是重绘工具，更是<strong>质量保证方案</strong>。</p>
+const DATA_ROOT = path.resolve("./ai-project-data");
 
-<h2>安装和使用Skill</h2>
+async function saveIntermediateData(taskName, dataContent) {
+  const fileName = \`\${taskName}_\${Date.now()}_\${uuidv4()}.json\`;
+  const savePath = path.join(DATA_ROOT, "intermediate-cache", fileName);
+  await fs.writeJSON(savePath, dataContent, { spaces: 2 });
+  console.log(\`中间数据已保存: \${fileName}\`);
+  await checkAndCreateSnapshot();
+  return savePath;
+}
 
-<p>该Skill在GitHub上开源。安装方法：</p>
+async function exportFinalResult(taskName, resultData) {
+  const outPath = path.join(DATA_ROOT, "export-output", \`\${taskName}_final_output.json\`);
+  await fs.writeJSON(outPath, resultData, { spaces: 2 });
+  return outPath;
+}
 
-<pre><code class="language-bash">git clone https://github.com/yourusername/autocad-dwg-redraw-skill.git</code></pre>
+async function checkAndCreateSnapshot() {
+  const snapshotDir = path.join(DATA_ROOT, "version-snapshot");
+  const existSnapshots = await fs.readdir(snapshotDir);
+  if (existSnapshots.length >= config.maxSnapshotCount) {
+    existSnapshots.sort((a, b) => a.split("_")[0] - b.split("_")[0]);
+    await fs.remove(path.join(snapshotDir, existSnapshots[0]));
+  }
+  const snapName = \`\${Date.now()}_task_snapshot\`;
+  await fs.copy(path.join(DATA_ROOT, "intermediate-cache"), path.join(snapshotDir, snapName));
+}
 
-<pre><code class="language-bash">pip install autocad-dwg-redraw-skill</code></pre>
+async function restoreSnapshot(snapshotFolderName) {
+  const source = path.join(DATA_ROOT, "version-snapshot", snapshotFolderName);
+  const target = path.join(DATA_ROOT, "intermediate-cache");
+  await fs.emptyDir(target);
+  await fs.copy(source, target);
+  console.log(\`已从快照恢复数据: \${snapshotFolderName}\`);
+}
 
-<p>在Codex中引用该Skill并输入DWG路径——其余全自动运行。</p>
+module.exports = { saveIntermediateData, exportFinalResult, restoreSnapshot };</code></pre>
+
+<pre><code class="language-bash">npm install fs-extra uuid</code></pre>
+
+<h2>步骤3：将存储模块集成到Claude Code Agent任务中</h2>
+
+<p>运行研究、代码生成或多Agent任务时，导入存储工具：</p>
+
+<pre><code class="language-javascript">const { saveIntermediateData, exportFinalResult } = require("./data-operator");
+
+async function runAITaskDemo() {
+  const taskData = {
+    taskId: "market-research-001",
+    model: "Claude 3.5 Code",
+    roundCount: 12,
+    rawSearchContent: [...],
+    analysisConclusion: "xxx",
+    codeSnippets: [...]
+  };
+  await saveIntermediateData("market-research", taskData);
+  await exportFinalResult("market-research", taskData.analysisConclusion);
+}
+
+runAITaskDemo();</code></pre>
+
+<h2>步骤4：异常中断的故障备份机制</h2>
+
+<p>添加错误捕获逻辑，在Claude Code任务意外崩溃时自动备份未完成数据：</p>
+
+<pre><code class="language-javascript">process.on("uncaughtException", async (err) => {
+  console.error("任务意外中断，正在备份未完成数据");
+  const unfinishedCache = path.join(DATA_ROOT, "intermediate-cache");
+  const backupTarget = path.join(DATA_ROOT, "error-backup", \`crash_backup_\${Date.now()}\`);
+  await fs.copy(unfinishedCache, backupTarget);
+  process.exit(1);
+});</code></pre>
+
+<h2>步骤5：日常快速管理命令</h2>
+
+<pre><code class="language-bash"># 列出所有已保存快照
+node data-manage.js list-snapshots
+
+# 回滚数据到目标快照
+node data-manage.js restore 1751234567890_task_snapshot</code></pre>
+
+<h2>实际使用优势</h2>
+
+<ol>
+<li>所有任务数据本地永久保存，重启Claude Code不丢失</li>
+<li>自动分层分类，分离原始材料、中间记录和最终输出</li>
+<li>定时快照自动清理，避免磁盘溢出</li>
+<li>一键数据回滚到任意历史任务状态</li>
+<li>崩溃自动备份，防止不完整数据浪费长时间Agent运行</li>
+</ol>
+
+<h2>最终操作提示</h2>
+
+<ol>
+<li>将整个 <code>ai-project-data</code> 文件夹加入 <code>.gitignore</code>，避免提交海量本地数据到GitHub仓库</li>
+<li>根据项目规模修改 <code>store-config.json</code> 调整快照频率和最大存储数量</li>
+<li>超长多天Agent任务，延长快照间隔以减少磁盘写入频率</li>
+</ol>
 
 <h2>常见问题</h2>
 
-<h3>需要本地安装AutoCAD吗？</h3>
-<p>是的。该Skill通过COM接口与AutoCAD通信，因此AutoCAD必须安装并在同一台机器上运行。Skill处理所有COM自动化——你不需要自己编写任何AutoCAD脚本。</p>
+<h3>这适用于任何Claude Code项目还是仅特定设置？</h3>
+<p>适用于任何Claude Code项目。数据存储系统是独立的Node.js模块，你通过require()引入到任务脚本中——不依赖Claude Code内部。只要Agent任务在Node.js环境中运行，持久化层就透明工作。</p>
 
-<h3>能处理哪些类型的DWG文件？</h3>
-<p>该Skill最适合具有明确定义图层和实体的机械装配图、建筑平面图和工程图。高度艺术化或不规则实体的自由形式图纸可能产生不太精确的结果。质量检查步骤会标记任何不匹配项，让你知道哪些需要手动调整。</p>
+<h3>快照系统消耗多少磁盘空间？</h3>
+<p>默认配置（最多20个快照），磁盘使用取决于中间数据大小。对于典型的JSON/CSV中间数据的AI项目，20个快照通常消耗50-200MB。达到限制时自动清理删除最旧快照，所以存储保持有界。在 <code>store-config.json</code> 中调整 <code>maxSnapshotCount</code> 以适应需求。</p>
 
-<h3>能否修改现有DWG而非从头重绘？</h3>
-<p>当前版本专注于重绘。作者已宣布后续教程将介绍使用Codex一句话修改DWG——敬请期待。</p>
+<h3>能用于多Agent工作流吗？</h3>
+<p>可以——这是其最佳用例之一。当多个Agent并发生成中间数据时，每个都获得基于UUID的唯一文件名，避免冲突。快照系统捕获该时刻的整个intermediate-cache状态，因此你可以将所有Agent的数据回滚到一致的时间点。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/glm-5-2-coding-prowess-deep-dive">GLM-5.2：深度解析其编程实力与实战洞察 →</a></p>
+<p><strong>下一篇：</strong> <a href="/zh/article/claude-code-workflow-orchestrating-agent-teams">Claude Code Workflow：从写代码到编排Agent团队 →</a></p>
 </div>`,
   },
 
-  "glm-5-2-coding-prowess-deep-dive": {
+  "claude-code-workflow-orchestrating-agent-teams": {
     content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> June 25, 2026 · <strong>🏷️ Category:</strong> AI Comparisons · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Tools:</strong> GLM-5.2, GPT-5.5, Claude Opus 4.8</p>
+<p><strong>📅 Published:</strong> June 26, 2026 · <strong>🏷️ Category:</strong> AI News · <strong>📊 Level:</strong> Beginner · <strong>🛠️ Tools:</strong> Claude Code</p>
 </div>
 
-<p>GLM-5.2 has taken the AI coding community by storm, earning the title of "Top Domestic Programming Model." Its coding plan is so sought-after that it's even available on second-hand platforms for a fee, and netizens joke that using GLM-5.2 in China is harder than accessing GPT-5.5 from the US. Let's delve into its practical performance and what it means for developers.</p>
+<p>Claude Code has just rolled out a major update — <strong>Workflow</strong>, a feature that transforms Claude Code from a solo coder into an orchestrator of agent teams. This innovation might be Anthropic's next big leap following MCP and Skill, and here's how it works in practice.</p>
 
-<h2>Sentiment Analysis of 6,690 Comments</h2>
+<h2>What Makes Claude Code Workflow Different?</h2>
 
-<p>To understand the community's perception, we analyzed 6,690 comments across platforms like Douyin, Xiaohongshu, Bilibili, X, and V2EX. The results were surprising: negative sentiment (40.3%) was higher than positive (28.6%). But when we broke down the discussion topics, we saw why.</p>
-
-<ul>
-<li><strong>Programming Capability:</strong> Mentioned 1,280 times, almost all positive.</li>
-<li><strong>Pricing and Access:</strong> Mentioned 1,269 times, almost all negative (due to difficulty in getting the coding plan).</li>
-</ul>
-
-<p>This shows a love-hate relationship — developers praise its coding skills but frustrate over access. There's also a stark contrast between domestic and international perceptions. Overseas, on X (Twitter), positive sentiment is over 48.5%, with developers calling it an "open-source DeepSeek moment" and a potential rival to Claude and OpenAI. Domestically, platforms like Douyin (45.9% negative) and Xiaohongshu (43.5% negative) are dominated by complaints about not being able to get access, with little technical discussion.</p>
-
-<h2>Practical Testing in Real Projects</h2>
-
-<p>We tested GLM-5.2 in two real projects, comparing it with GPT-5.5 and Opus 4.8, using strict variable control (same prompt, same base code, each model run independently, and reviewed by 4 separate AIs).</p>
-
-<h3>Project 1: Authentication Migration</h3>
-
-<p>This project tests backend and security capabilities, involving email+password, email verification, password reset, JWT double Token, Refresh rotation, OAuth, and cross-user isolation.</p>
+<p>When you think of workflow tools, Dify or Coze might come to mind. But Claude Code's Workflow is unique:</p>
 
 <ul>
-<li><strong>GLM-5.1, GPT-5.5, and Opus 4.8</strong> all failed to implement the OAuth anti-forgery security check.</li>
-<li><strong>GLM-5.2</strong> was the only one that enforced the correct security check. It also fixed a critical security flaw from GLM-5.1, where users could access or cancel others' tasks using a task ID (data exposure). GLM-5.2 passed all 23 test cases for this.</li>
+<li>Describe a task, and Claude automatically writes a <strong>JavaScript orchestration script</strong>.</li>
+<li>It breaks tasks into stages, assigns each stage to different agents, and coordinates dozens to hundreds of subagents in the background to deliver results.</li>
 </ul>
 
-<p>However, GLM-5.2 has a quirk — it likes to cut corners. While GPT-5.5 and Opus 4.8 implemented 12 interfaces, GLM-5.2 only did 8, skipping parts like email verification and password reset. But the code it did write was clean, especially in CSRF and architecture.</p>
+<p>Unlike the temporary Agent Teams of the past, Workflow <strong>solidifies agent coordination into code</strong>. It becomes auditable, reusable, and version-controllable — no more relying on the model's on-the-spot performance.</p>
 
-<h3>Project 2: Skills · Web Full-Stack Development</h3>
+<h2>Deep Dive into the Built-in Deep-Research Workflow</h2>
 
-<p>This project assesses web full-stack development capabilities, covering thinking, text, tool_call, tool_result, and done stages.</p>
+<p>Let's take the official <code>deep-research</code> workflow as an example. It consists of five stages:</p>
 
-<p>The scores were remarkably close:</p>
+<h3>1. Scope: Multidimensional Disassembly</h3>
+<p>Break down your question into search terms from 5 different angles to ensure comprehensive coverage.</p>
+
+<h3>2. Search: Parallel Search</h3>
+<p>5 agents search simultaneously, each fetching 4-6 results for their assigned angle — no waiting for each other.</p>
+
+<h3>3. Fetch-Extract: Deduplication and Extraction</h3>
+<p>After deduplication, up to 15 webpages are crawled. Each page yields 2-5 verifiable concrete conclusions.</p>
+
+<h3>4. Verify: Cross-Validation</h3>
+<p>For each conclusion, 3 skeptical agents independently look for counterevidence. Conclusions with 2 or more objections are rejected.</p>
+
+<h3>5. Synthesize: Merge and Synthesize</h3>
+<p>Merge verified conclusions, sort them by confidence, and compile a final report with source citations.</p>
+
+<h2>Practical Demo: Researching Claude Code Workflow</h2>
+
+<p>To test this, we used <code>deep-research</code> to investigate Claude Code's latest Workflow feature and write an article. Here's what happened:</p>
 
 <ul>
-<li>Opus 4.8: 9.4</li>
-<li>GPT-5.5: 9.4</li>
-<li>GLM-5.2: 9.25</li>
-<li>GLM-5.1: 8.15</li>
+<li><strong>Time:</strong> 25 minutes</li>
+<li><strong>Agents Involved:</strong> 104</li>
+<li><strong>Token Usage:</strong> 2.8 million</li>
+<li><strong>Claims Verified:</strong> 25</li>
+<li><strong>Output:</strong> A complete article covering Workflow's core positioning, differences from Agent Teams, runtime limits, and the built-in <code>deep-research</code> workflow.</li>
 </ul>
 
-<p>There's no clear winner here — all models performed well.</p>
+<h2>Budget Control: Avoid Token Overspending</h2>
 
-<h2>Comprehensive Scoring and Selection Advice</h2>
+<p>Without budget limits, Workflow could become a "token shredder." To prevent this, you can define a budget directly in the task:</p>
 
-<p>We submitted the code from each model, anonymized it, had 4 AIs review it, tested it with real cases, and graded it on dimensions like completeness, correctness, security, testing, and quality.</p>
+<pre><code class="language-text">workflow 100k</code></pre>
+
+<p>Claude Code will optimize agent count, stage depth, and convergence method based on this budget.</p>
+
+<h2>How to Use Workflow</h2>
+
+<p>There are two ways to activate Workflow:</p>
+
+<h3>1. Trigger with a Prompt Word</h3>
+
+<p>Mention "workflow" in your prompt. The word will turn colorful, and Claude will automatically generate a workflow:</p>
+
+<pre><code class="language-text">请 workflow 帮我深度调研 Claude Code 的 Workflow 功能，写一篇文章</code></pre>
+
+<h3>2. Command Activation</h3>
+
+<p>Use <code>/effort ultracode</code> to let Claude generate a workflow based on your task:</p>
+
+<pre><code class="language-text">/effort ultracode</code></pre>
+
+<p>To check the running workflow and agent count, use:</p>
+
+<pre><code class="language-text">/workflows</code></pre>
+
+<h2>The Significance of Workflow</h2>
+
+<p>Claude Code's Workflow isn't just a new feature — it's a signal that AI programming is shifting from individual capability to <strong>organizational capability</strong>.</p>
 
 <ul>
-<li><strong>Opus 4.8:</strong> 8.86 (best overall)</li>
-<li><strong>GPT-5.5:</strong> 8.62</li>
-<li><strong>GLM-5.2:</strong> 8.14</li>
-<li><strong>GLM-5.1:</strong> 7.77</li>
+<li>In the past, we asked: <em>Can a model write code?</em></li>
+<li>Later, we asked: <em>Can an agent complete a task independently?</em></li>
+<li>Now, we ask: <em>Can a system organize multiple agents to complete complex tasks verifiably within a budget?</em></li>
 </ul>
 
-<h3>How to Choose?</h3>
-
-<ul>
-<li><strong>If budget is no issue and you need the highest ceiling:</strong> Opus 4.8 and GPT-5.5 are still top choices.</li>
-<li><strong>If you focus on backend development, don't need multimodal, and want to control costs with a domestic model:</strong> GLM-5.2 is excellent — <em>if you can get access</em>.</li>
-</ul>
-
-<h2>Code Example: JWT Utility with GLM-5.2</h2>
-
-<p>To test GLM-5.2 yourself, start with simple commands. For example, to generate a JWT utility class in Python:</p>
-
-<pre><code class="language-python">import jwt
-import datetime
-from typing import Dict, Optional
-
-class JWTUtil:
-    def __init__(self, secret_key: str, algorithm: str = "HS256"):
-        self.secret_key = secret_key
-        self.algorithm = algorithm
-
-    def generate_token(self, payload: Dict, expire_minutes: Optional[int] = None) -> str:
-        if expire_minutes:
-            payload["exp"] = datetime.datetime.utcnow() + datetime.timedelta(minutes=expire_minutes)
-        return jwt.encode(payload, self.secret_key, algorithm=self.algorithm)
-
-    def decode_token(self, token: str) -> Dict:
-        return jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
-
-# Example usage
-jwt_util = JWTUtil(secret_key="your-secret-key")
-token = jwt_util.generate_token({"user_id": 123, "role": "admin"}, expire_minutes=60)
-print(token)
-decoded = jwt_util.decode_token(token)
-print(decoded)</code></pre>
+<p>This shift opens up new possibilities for tackling large-scale, multi-faceted challenges with AI.</p>
 
 <h2>常见问题</h2>
 
-<h3>How does GLM-5.2 compare to DeepSeek V4 for coding?</h3>
-<p>They serve different niches. DeepSeek V4 excels at reasoning-heavy tasks (math, competitive programming, logic puzzles) and is fully open-source for self-hosting. GLM-5.2 excels at practical backend engineering — it writes production-grade auth systems with proper security checks that other models miss. If you're building APIs with JWT/OAuth, GLM-5.2 has the edge. If you're doing algorithmic work, DeepSeek V4 is stronger. Both are priced competitively against Western models.</p>
+<h3>How is Workflow different from regular multi-agent setups in Claude Code?</h3>
+<p>The key difference: Workflow is <strong>code-driven</strong>, not prompt-driven. Traditional multi-agent setups rely on the model deciding at runtime which agents to spawn. Workflow generates a JavaScript script that defines the exact orchestration logic — stages, agent assignments, parallelization, verification gates. This script is auditable (you can read exactly what it will do), reusable (run the same workflow on different inputs), and version-controllable (commit it to Git). It's the difference between improvising a team on the spot and having a written playbook.</p>
 
-<h3>Why is GLM-5.2 access so difficult?</h3>
-<p>The coding plan has limited capacity — Zhipu AI appears to be rationing access to manage infrastructure costs while demand far exceeds supply. The model's reputation for security-critical coding has driven intense demand from enterprise developers. Secondary-market resale of coding plan slots has emerged as a gray market. Zhipu is expected to expand capacity, but no timeline has been announced.</p>
+<h3>What's a reasonable budget for a deep-research workflow?</h3>
+<p>Based on the demo: a single deep-research task with 104 agents consumed 2.8M tokens. For quick overviews, budget 500k-1M tokens. For thorough research with adversarial verification (the default), budget 2-3M tokens. Start with a smaller budget and increase if you need deeper coverage. The budget cap is a hard limit — the workflow will optimize within it rather than exceeding it.</p>
 
-<h3>Should I switch from Claude Code to GLM-5.2 for coding?</h3>
-<p>Not as a full replacement. GLM-5.2 is a model, not a coding agent like Claude Code. You can use GLM-5.2 as the underlying LLM in agent frameworks like OpenCode or via API. For tasks where security correctness is paramount (auth migration, user isolation), GLM-5.2 is worth adding to your toolkit. For general coding workflows, Claude Code's agent loop and tool integration still provide a better overall experience. The ideal setup: use Claude Code for orchestration and GLM-5.2 for security-critical code generation.</p>
+<h3>Can I write my own custom workflows?</h3>
+<p>Yes. Workflow scripts are plain JavaScript with a defined API (agent(), parallel(), pipeline(), phase(), log()). You can write them by hand or have Claude Code generate them from a natural language description. Custom workflows can be saved to <code>.claude/workflows/</code> and reused across sessions. The API supports patterns like pipeline (sequential stages), parallel (concurrent agents), and loop-until-dry (iterative discovery).</p>
 
 <div class="next-step">
-<p><strong>Previous:</strong> <a href="/en/article/codex-autocad-redraw-dwg-one-sentence">Codex + AutoCAD: Redraw Complex DWG with Just One Sentence ←</a></p>
+<p><strong>Previous:</strong> <a href="/en/article/build-stable-data-storage-large-ai-projects-claude-code">Build Stable Long-Term Data Storage for Large AI Projects With Claude Code ←</a></p>
 </div>`,
     contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年6月25日 · <strong>🏷️ 分类：</strong>AI对比 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 工具：</strong>GLM-5.2、GPT-5.5、Claude Opus 4.8</p>
+<p><strong>📅 发布日期：</strong>2026年6月26日 · <strong>🏷️ 分类：</strong>AI新闻 · <strong>📊 难度：</strong>初级 · <strong>🛠️ 工具：</strong>Claude Code</p>
 </div>
 
-<p>GLM-5.2 在AI编程社区掀起风暴，赢得"国产顶级编程模型"的称号。其编程计划供不应求，甚至在二手平台上有偿转让，网友戏称在中国使用GLM-5.2比从美国访问GPT-5.5还难。让我们深入了解其实际表现和对开发者的意义。</p>
+<p>Claude Code刚刚推出了重大更新——<strong>Workflow</strong>，这项功能将Claude Code从独立编码者转变为Agent团队的编排器。这一创新可能是Anthropic继MCP和Skill之后的下一个重大飞跃，下面介绍它的实际运作方式。</p>
 
-<h2>6,690条评论的情感分析</h2>
+<h2>Claude Code Workflow有何不同？</h2>
 
-<p>为理解社区认知，我们分析了抖音、小红书、B站、X和V2EX等平台上的6,690条评论。结果令人惊讶：负面情感（40.3%）高于正面（28.6%）。但当我们拆解讨论话题时，明白了原因。</p>
-
-<ul>
-<li><strong>编程能力：</strong>提及1,280次，几乎全部正面。</li>
-<li><strong>定价和访问：</strong>提及1,269次，几乎全部负面（因难以获得编程计划）。</li>
-</ul>
-
-<p>这显示出爱恨交织的关系——开发者赞美其编程能力但为访问问题感到沮丧。国内外认知也存在鲜明对比。海外X（Twitter）上正面情感超过48.5%，开发者称其为"开源DeepSeek时刻"和Claude、OpenAI的潜在对手。国内抖音（45.9%负面）和小红书（43.5%负面）则被无法获取访问的抱怨主导，技术讨论很少。</p>
-
-<h2>真实项目实战测试</h2>
-
-<p>我们在两个真实项目中测试了GLM-5.2，对比GPT-5.5和Opus 4.8，使用严格变量控制（相同提示、相同基础代码、每个模型独立运行、4个独立AI评审）。</p>
-
-<h3>项目1：认证迁移</h3>
-
-<p>此项目测试后端和安全能力，涉及邮箱+密码、邮箱验证、密码重置、JWT双Token、Refresh轮换、OAuth和跨用户隔离。</p>
+<p>提到工作流工具，你可能会想到Dify或Coze。但Claude Code的Workflow是独特的：</p>
 
 <ul>
-<li><strong>GLM-5.1、GPT-5.5和Opus 4.8</strong>均未实现OAuth防伪安全检查。</li>
-<li><strong>GLM-5.2</strong>是唯一强制正确安全检查的模型。它还修复了GLM-5.1的一个关键安全漏洞——用户可通过任务ID访问或取消他人任务（数据泄露）。GLM-5.2在此项目的23个测试用例中全部通过。</li>
+<li>描述任务，Claude自动编写<strong>JavaScript编排脚本</strong>。</li>
+<li>将任务分解为阶段，为每个阶段分配不同的Agent，在后台协调数十到数百个子Agent交付结果。</li>
 </ul>
 
-<p>但GLM-5.2有个怪癖——喜欢偷工减料。GPT-5.5和Opus 4.8实现了12个接口，GLM-5.2只做了8个，跳过了邮箱验证和密码重置等部分。但它写的代码确实干净，尤其在CSRF和架构方面。</p>
+<p>与过去临时的Agent Teams不同，Workflow <strong>将Agent协调固化为代码</strong>。它变得可审计、可复用、可版本控制——不再依赖模型的临场发挥。</p>
 
-<h3>项目2：Skills · Web全栈开发</h3>
+<h2>深入内置Deep-Research工作流</h2>
 
-<p>此项目评估Web全栈开发能力，涵盖thinking、text、tool_call、tool_result和done阶段。</p>
+<p>以官方 <code>deep-research</code> 工作流为例，它包含五个阶段：</p>
 
-<p>得分非常接近：</p>
+<h3>1. Scope：多维度拆解</h3>
+<p>从5个不同角度将问题拆解为搜索词，确保全面覆盖。</p>
+
+<h3>2. Search：并行搜索</h3>
+<p>5个Agent同时搜索，每个获取4-6条结果——互不等待。</p>
+
+<h3>3. Fetch-Extract：去重和提取</h3>
+<p>去重后最多爬取15个网页。每页产出2-5条可验证的具体结论。</p>
+
+<h3>4. Verify：交叉验证</h3>
+<p>每条结论由3个怀疑论Agent独立寻找反证。有2个及以上反对意见的结论被拒绝。</p>
+
+<h3>5. Synthesize：合并与综合</h3>
+<p>合并已验证结论，按置信度排序，编制附来源引用的最终报告。</p>
+
+<h2>实战演示：调研Claude Code Workflow</h2>
+
+<p>为测试，我们用 <code>deep-research</code> 调研Claude Code最新Workflow功能并撰写文章。结果如下：</p>
 
 <ul>
-<li>Opus 4.8：9.4</li>
-<li>GPT-5.5：9.4</li>
-<li>GLM-5.2：9.25</li>
-<li>GLM-5.1：8.15</li>
+<li><strong>时间：</strong>25分钟</li>
+<li><strong>参与Agent：</strong>104个</li>
+<li><strong>Token消耗：</strong>280万</li>
+<li><strong>已验证结论：</strong>25条</li>
+<li><strong>输出：</strong>一篇完整文章，涵盖Workflow核心定位、与Agent Teams的区别、运行时限制和内置 <code>deep-research</code> 工作流。</li>
 </ul>
 
-<p>没有明显赢家——所有模型表现都不错。</p>
+<h2>预算控制：避免Token超支</h2>
 
-<h2>综合评分与选择建议</h2>
+<p>没有预算限制，Workflow可能成为"token碎纸机"。为防止此情况，可直接在任务中定义预算：</p>
 
-<p>我们提交每个模型的代码（匿名化），由4个AI评审，用真实案例测试，从完整性、正确性、安全性、测试和质量等维度评分。</p>
+<pre><code class="language-text">workflow 100k</code></pre>
+
+<p>Claude Code会根据此预算优化Agent数量、阶段深度和收敛方式。</p>
+
+<h2>如何使用Workflow</h2>
+
+<p>有两种激活Workflow的方式：</p>
+
+<h3>1. 提示词触发</h3>
+
+<p>在提示中提及"workflow"。该词会变成彩色，Claude将自动生成工作流：</p>
+
+<pre><code class="language-text">请 workflow 帮我深度调研 Claude Code 的 Workflow 功能，写一篇文章</code></pre>
+
+<h3>2. 命令激活</h3>
+
+<p>使用 <code>/effort ultracode</code> 让Claude根据任务生成工作流：</p>
+
+<pre><code class="language-text">/effort ultracode</code></pre>
+
+<p>查看正在运行的工作流和Agent数量：</p>
+
+<pre><code class="language-text">/workflows</code></pre>
+
+<h2>Workflow的意义</h2>
+
+<p>Claude Code的Workflow不只是一个新功能——它是一个信号，表明AI编程正从个体能力转向<strong>组织能力</strong>。</p>
 
 <ul>
-<li><strong>Opus 4.8：</strong>8.86（综合最佳）</li>
-<li><strong>GPT-5.5：</strong>8.62</li>
-<li><strong>GLM-5.2：</strong>8.14</li>
-<li><strong>GLM-5.1：</strong>7.77</li>
+<li>过去，我们问：<em>模型能写代码吗？</em></li>
+<li>后来，我们问：<em>Agent能独立完成任务吗？</em></li>
+<li>现在，我们问：<em>系统能组织多个Agent在预算内可验证地完成复杂任务吗？</em></li>
 </ul>
 
-<h3>如何选择？</h3>
-
-<ul>
-<li><strong>预算充足且需要最高上限：</strong>Opus 4.8和GPT-5.5仍是首选。</li>
-<li><strong>专注后端开发、不需要多模态、想用国产模型控制成本：</strong>GLM-5.2非常出色——<em>如果你能获取访问权限的话</em>。</li>
-</ul>
-
-<h2>代码示例：GLM-5.2生成的JWT工具类</h2>
-
-<pre><code class="language-python">import jwt
-import datetime
-from typing import Dict, Optional
-
-class JWTUtil:
-    def __init__(self, secret_key: str, algorithm: str = "HS256"):
-        self.secret_key = secret_key
-        self.algorithm = algorithm
-
-    def generate_token(self, payload: Dict, expire_minutes: Optional[int] = None) -> str:
-        if expire_minutes:
-            payload["exp"] = datetime.datetime.utcnow() + datetime.timedelta(minutes=expire_minutes)
-        return jwt.encode(payload, self.secret_key, algorithm=self.algorithm)
-
-    def decode_token(self, token: str) -> Dict:
-        return jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
-
-# 使用示例
-jwt_util = JWTUtil(secret_key="your-secret-key")
-token = jwt_util.generate_token({"user_id": 123, "role": "admin"}, expire_minutes=60)
-print(token)
-decoded = jwt_util.decode_token(token)
-print(decoded)</code></pre>
+<p>这一转变为用AI应对大规模、多方面的挑战开启了新的可能性。</p>
 
 <h2>常见问题</h2>
 
-<h3>GLM-5.2与DeepSeek V4在编程方面相比如何？</h3>
-<p>两者服务于不同领域。DeepSeek V4擅长推理密集型任务（数学、竞赛编程、逻辑谜题），且完全开源可自托管。GLM-5.2擅长实用后端工程——它编写生产级认证系统，包含其他模型遗漏的适当安全检查。如果你在构建JWT/OAuth的API，GLM-5.2有优势。如果你做算法工作，DeepSeek V4更强。两者价格都比西方模型有竞争力。</p>
+<h3>Workflow与Claude Code中常规的多Agent设置有何不同？</h3>
+<p>关键区别：Workflow是<strong>代码驱动</strong>的，而非提示驱动的。传统多Agent设置依赖模型在运行时决定生成哪些Agent。Workflow生成JavaScript脚本，定义确切的编排逻辑——阶段、Agent分配、并行化、验证关卡。这个脚本可审计（你可以精确读取它将做什么）、可复用（在不同输入上运行相同工作流）、可版本控制（提交到Git）。这就像现场即兴组队 vs 拥有书面战术手册的区别。</p>
 
-<h3>为什么GLM-5.2访问这么难？</h3>
-<p>编程计划容量有限——智谱AI似乎在配给访问以管理基础设施成本，而需求远超供应。该模型在安全关键编码方面的声誉推动了企业开发者的强烈需求。编程计划名额的二级市场转售已作为灰色市场出现。智谱预计将扩大容量，但尚未公布时间表。</p>
+<h3>深度研究工作流的合理预算是多少？</h3>
+<p>基于演示：单次深度研究任务，104个Agent消耗280万tokens。快速概览预算50万-100万tokens。带对抗验证的彻底研究（默认）预算200万-300万tokens。从较小预算开始，需要更深覆盖时增加。预算上限是硬限制——工作流会在限制内优化而非超出。</p>
 
-<h3>应该从Claude Code切换到GLM-5.2编程吗？</h3>
-<p>不建议完全替换。GLM-5.2是一个模型，不是像Claude Code那样的编码Agent。你可以在OpenCode等Agent框架中或通过API使用GLM-5.2作为底层LLM。对于安全正确性至关重要的任务（认证迁移、用户隔离），GLM-5.2值得加入你的工具箱。对于通用编码工作流，Claude Code的Agent循环和工具集成仍提供更好的整体体验。理想设置：用Claude Code做编排，GLM-5.2做安全关键代码生成。</p>
+<h3>能编写自己的自定义工作流吗？</h3>
+<p>可以。Workflow脚本是纯JavaScript，具有定义的API（agent()、parallel()、pipeline()、phase()、log()）。你可以手写或让Claude Code从自然语言描述生成。自定义工作流可保存到 <code>.claude/workflows/</code> 并跨会话复用。API支持pipeline（顺序阶段）、parallel（并发Agent）和loop-until-dry（迭代发现）等模式。</p>
 
 <div class="next-step">
-<p><strong>上一篇：</strong> <a href="/zh/article/codex-autocad-redraw-dwg-one-sentence">Codex+AutoCAD：一句话重绘复杂DWG图纸 ←</a></p>
+<p><strong>上一篇：</strong> <a href="/zh/article/build-stable-data-storage-large-ai-projects-claude-code">用Claude Code为大型AI项目构建稳定的长期数据存储 ←</a></p>
 </div>`,
   },
 
@@ -480,6 +626,6 @@ content_new = content_src[:last_brace] + new_contents + '};'
 with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f:
     f.write(content_new)
 
-print('Part 3: 2 article contents added to article-content.ts')
+print('Part 2: 2 article contents added to article-content.ts')
 
 print('\n=== All done! Run build to verify ===')

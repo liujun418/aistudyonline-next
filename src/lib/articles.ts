@@ -2233,4 +2233,29 @@ export const articles: Article[] = [
     date: "2026-06-25",
   },
 
+  {
+    slug: "build-stable-data-storage-large-ai-projects-claude-code",
+    title: "Build Stable Long-Term Data Storage for Large AI Projects With Claude Code",
+    titleZh: "用Claude Code为大型AI项目构建稳定的长期数据存储",
+    description: "A complete Node.js data persistence system for Claude Code agent tasks — auto-classification, timestamp naming, version snapshots with auto-cleanup, crash fault recovery, and one-click rollback to any historical state.",
+    descriptionZh: "为Claude Code Agent任务构建完整的Node.js数据持久化系统——自动分类、时间戳命名、版本快照自动清理、崩溃故障恢复、一键回滚到任意历史状态。",
+    category: "ai-tutorials",
+    tags: ["claude-code", "data-storage", "nodejs", "persistence", "snapshot", "fault-recovery"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-26",
+  },
+  {
+    slug: "claude-code-workflow-orchestrating-agent-teams",
+    title: "Claude Code Workflow: From Writing Code to Orchestrating Agent Teams",
+    titleZh: "Claude Code Workflow：从写代码到编排Agent团队",
+    description: "Claude Code's major update — Workflow transforms solo coding into agent team orchestration with JavaScript scripts, 5-stage deep-research pipeline, budget control, and verifiable multi-agent coordination at scale.",
+    descriptionZh: "Claude Code重大更新——Workflow将单人编码转变为Agent团队编排，JavaScript脚本驱动、5阶段深度研究流水线、预算控制、可验证的大规模多Agent协调。",
+    category: "ai-news",
+    tags: ["claude-code", "workflow", "agent-orchestration", "deep-research", "multi-agent", "anthropic"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude"],
+    date: "2026-06-26",
+  },
+
 ];
