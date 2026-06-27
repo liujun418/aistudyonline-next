@@ -2258,4 +2258,29 @@ export const articles: Article[] = [
     date: "2026-06-26",
   },
 
+  {
+    slug: "karpathy-ai-knowledge-base-3-folders",
+    title: "Build a Karpathy-Style AI Knowledge Base: A 2-Minute Setup with Just 3 Folders",
+    titleZh: "构建Karpathy风格的AI知识库：3个文件夹2分钟搭建",
+    description: "Replicate Karpathy's viral 44K-save AI knowledge base system — raw/, wiki/, outputs/ folder structure + CLAUDE.md schema + agent-browser for automated content collection, all running on Claude Code.",
+    descriptionZh: "复刻Karpathy爆火44K收藏的AI知识库系统——raw/wiki/outputs三文件夹+CLAUDE.md Schema+agent-browser自动内容收集，全部运行在Claude Code上。",
+    category: "ai-tutorials",
+    tags: ["knowledge-base", "karpathy", "claude-code", "agent-browser", "wiki", "productivity"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "agent-browser"],
+    date: "2026-06-27",
+  },
+  {
+    slug: "best-ai-tools-2026-free-powerful-practical",
+    title: "The Best AI Tools of 2026: Free, Powerful, and Practical",
+    titleZh: "2026年最佳AI工具：免费、强大、实用",
+    description: "A comprehensive guide covering 12 scenarios — from deep research (Gemini 3.1 Pro), writing (Claude Opus 4.6), coding (Cursor/Claude Code/Codex), image gen (Nano Banana Pro), video (Seedance 2.0), to AI agents (Genspark) — with free alternatives for every category.",
+    descriptionZh: "覆盖12个场景的全面指南——从深度研究(Gemini 3.1 Pro)、写作(Claude Opus 4.6)、编程(Cursor/Claude Code/Codex)、图像生成(Nano Banana Pro)、视频(Seedance 2.0)到AI Agent(Genspark)——每个类别都有免费替代方案。",
+    category: "ai-comparisons",
+    tags: ["tools", "roundup", "2026", "free", "comparison", "guide"],
+    difficulty: "beginner",
+    toolsMentioned: ["gemini", "claude", "chatgpt", "cursor", "codex-agent", "notebooklm", "genspark", "nano-banana-pro", "elevenlabs", "heygen"],
+    date: "2026-06-27",
+  },
+
 ];
