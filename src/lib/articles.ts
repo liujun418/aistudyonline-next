@@ -2283,4 +2283,29 @@ export const articles: Article[] = [
     date: "2026-06-27",
   },
 
+  {
+    slug: "ai-infrastructure-revolution-bubble-computing-power",
+    title: "AI Infrastructure: Revolution or Bubble? A Deep Dive into the Computing Power Ecosystem",
+    titleZh: "AI基础设施：革命还是泡沫？算力生态深度解析",
+    description: "A deep dive into the AI computing power ecosystem — from Nvidia DGX H100 servers, switches and optical modules, to liquid cooling and NVL72 cabinets. Understand the full supply chain behind the $690B AI infrastructure boom.",
+    descriptionZh: "深度解析AI算力生态系统——从Nvidia DGX H100服务器、交换机和光模块，到液冷和NVL72机柜。理解6900亿美元AI基础设施热潮背后的完整供应链。",
+    category: "ai-tutorials",
+    tags: ["infrastructure", "nvidia", "hardware", "computing-power", "data-center", "supply-chain"],
+    difficulty: "intermediate",
+    toolsMentioned: [],
+    date: "2026-06-28",
+  },
+  {
+    slug: "codex-website-dev-zero-basis-tutorial",
+    title: "Codex Website Development: Zero-Basis Practical Tutorial and Deployment Guide",
+    titleZh: "Codex网站开发：零基础实战教程与部署指南",
+    description: "Build a complete cat-themed website from scratch using Codex — two building methods (personalized and quick creative), image generation, animation effects, and one-click Vercel deployment. No coding experience required.",
+    descriptionZh: "用Codex从零构建完整猫咪主题网站——两种搭建方法（个性化定制和快速创意）、图片生成、动画特效、一键Vercel部署。无需编程经验。",
+    category: "ai-tutorials",
+    tags: ["codex", "web-development", "website", "vercel", "beginner", "tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex-agent", "vercel"],
+    date: "2026-06-28",
+  },
+
 ];
