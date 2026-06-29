@@ -1,6 +1,6 @@
 """
-Publish June 28, 2026 articles.
-No new tools - both articles reference existing tools (Nvidia/Intel are hardware, Codex/Vercel already in tools.ts)
+Publish June 29, 2026 articles.
+No new tools - both articles reference existing tools (Claude, Codex, Anthropic)
 """
 import os
 
@@ -12,28 +12,28 @@ with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "ai-infrastructure-revolution-bubble-computing-power",
-    title: "AI Infrastructure: Revolution or Bubble? A Deep Dive into the Computing Power Ecosystem",
-    titleZh: "AI基础设施：革命还是泡沫？算力生态深度解析",
-    description: "A deep dive into the AI computing power ecosystem — from Nvidia DGX H100 servers, switches and optical modules, to liquid cooling and NVL72 cabinets. Understand the full supply chain behind the $690B AI infrastructure boom.",
-    descriptionZh: "深度解析AI算力生态系统——从Nvidia DGX H100服务器、交换机和光模块，到液冷和NVL72机柜。理解6900亿美元AI基础设施热潮背后的完整供应链。",
+    slug: "most-dangerous-idea-ai-self-improvement",
+    title: "The Most Dangerous Idea in AI: Let It Improve Itself",
+    titleZh: "AI最危险的想法：让它自我改进",
+    description: "Deep dive into Anthropic's paper 'When AI Builds Itself' — AI self-improvement loops, the execution-vs-judgment gap, three future scenarios, and why Claude now writes 80% of Anthropic's code. A critical look at the singularity hypothesis.",
+    descriptionZh: "深度解析Anthropic论文《当AI自我构建》——AI自我改进循环、执行与判断的鸿沟、三种未来情景、以及Claude现在编写Anthropic 80%代码的现状。对奇点假说的批判性审视。",
     category: "ai-tutorials",
-    tags: ["infrastructure", "nvidia", "hardware", "computing-power", "data-center", "supply-chain"],
+    tags: ["anthropic", "claude", "self-improvement", "singularity", "research", "future"],
     difficulty: "intermediate",
-    toolsMentioned: [],
-    date: "2026-06-28",
+    toolsMentioned: ["claude"],
+    date: "2026-06-29",
   },
   {
-    slug: "codex-website-dev-zero-basis-tutorial",
-    title: "Codex Website Development: Zero-Basis Practical Tutorial and Deployment Guide",
-    titleZh: "Codex网站开发：零基础实战教程与部署指南",
-    description: "Build a complete cat-themed website from scratch using Codex — two building methods (personalized and quick creative), image generation, animation effects, and one-click Vercel deployment. No coding experience required.",
-    descriptionZh: "用Codex从零构建完整猫咪主题网站——两种搭建方法（个性化定制和快速创意）、图片生成、动画特效、一键Vercel部署。无需编程经验。",
+    slug: "vibe-coding-practical-guide-ai-dev-workflow-part1",
+    title: "Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)",
+    titleZh: "Vibe Coding实战指南：AI开发完整工作流（上篇）",
+    description: "Part 1 of the Vibe Coding series — four key preparation steps before AI writes code: project initiation & feature list, technology stack selection, project architecture setup, and writing an Agent Constitution. Lay the groundwork right.",
+    descriptionZh: "Vibe Coding系列上篇——AI写代码前的四个关键准备步骤：项目启动与功能清单、技术栈选择、项目架构搭建、编写Agent Constitution。打好地基才能不出乱子。",
     category: "ai-tutorials",
-    tags: ["codex", "web-development", "website", "vercel", "beginner", "tutorial"],
+    tags: ["vibe-coding", "workflow", "agent-constitution", "project-setup", "architecture", "beginner"],
     difficulty: "beginner",
-    toolsMentioned: ["codex-agent", "vercel"],
-    date: "2026-06-28",
+    toolsMentioned: ["codex-agent", "claude", "cursor"],
+    date: "2026-06-29",
   },
 
 """
@@ -51,351 +51,331 @@ with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "ai-infrastructure-revolution-bubble-computing-power": {
+  "most-dangerous-idea-ai-self-improvement": {
     content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> June 28, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Intermediate</p>
+<p><strong>📅 Published:</strong> June 29, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Intermediate · <strong>🛠️ Tools:</strong> Claude</p>
 </div>
 
-<p>Is AI infrastructure a bubble or a revolution? With planned investments like the $500 billion Star Gate Project and North American tech giants' combined capex reaching $690 billion in 2026, the AI computing power gold rush shows no signs of slowing. Nvidia's revenue surged from 186 billion yuan in early 2023 to 1.49 trillion yuan by early 2026 — a nearly 8x increase. Let's dissect the full supply chain: chips, PCBs, optical modules, switches, cooling, and power systems.</p>
+<p>In the current landscape of AI research, one idea stands out as both the most alluring and the most perilous: <strong>letting AI improve itself</strong>. Imagine a scenario where AI writes code, trains the next-generation model, and then that next model turns around to enhance itself, leading to even more powerful subsequent models. Many refer to the realization of this loop as the "singularity" — once operational, AI could break free from human limitations and evolve independently at an exponential pace.</p>
 
-<h2>The Core Components of AI Computing Power</h2>
+<h2>A Deep Dive into Anthropic's Latest Paper</h2>
 
-<h3>1. Computing Hardware: Nvidia DGX H100 AI Server</h3>
+<p>Let's delve into a recent paper by Anthropic titled <em>"When AI Builds Itself"</em>. It opens with two intriguing visuals. One is a pixel-art style Claude logo that self-replicates into a larger version, which then becomes the small unit for the next replication cycle. This visual metaphor illustrates that if AI enters a self-building loop, its growth won't be linear but rather a cascading, accelerating process — one cycle nested within another, getting faster and faster.</p>
 
-<p>A standard <strong>Nvidia DGX H100 AI server</strong> (worth over 2 million RMB) is a marvel of engineering:</p>
+<p>The second visual depicts the evolution of AI development methods: from engineers writing code by hand, to chatbots with AI assisting, to capable agents modifying files autonomously, to agents dispatching sub-agents for multi-hour tasks. The final stage is labeled <em>"Closing the Loop"</em>, where AI designs, trains, and improves the next-generation model iteratively. This is the core argument: AI research might be entering a cycle of self-acceleration and self-revolution.</p>
 
-<ul>
-<li>8 <strong>Nvidia H100 GPU chips</strong>, each surrounded by 6 SK Hynix HBM high-bandwidth memory chips using TSMC's top-tier packaging</li>
-<li>4 Nvidia NVSwitch chips enabling zero-latency communication between GPUs</li>
-<li>2 Intel Xeon CPUs, 2TB of system memory, and PCIe data lines for data scheduling</li>
-<li>High-speed network cards with optical modules for data transmission</li>
-<li>All components mounted on a high-performance PCB</li>
-</ul>
+<p>While insightful, this paper isn't a rigorous academic paper — it contains data but also PR-oriented framing, like emphasizing the "danger" of their models to garner attention. So take the conclusions with a grain of salt.</p>
 
-<pre><code class="language-plaintext"># Key Components of Nvidia DGX H100
-- GPUs: 8 x Nvidia H100
-- Memory: 6 x SK Hynix HBM per GPU
-- Switches: 4 x Nvidia NVSwitch
-- CPUs: 2 x Intel Xeon
-- System Memory: 2TB
-- Network: High-speed NICs with optical modules
-- Carrier: High-performance PCB</code></pre>
+<h2>Concrete Numbers and Practical Cases</h2>
 
-<h3>2. Network Equipment: Switches and Optical Modules</h3>
-
-<p>To ensure efficient collaboration among hundreds of thousands of GPUs, network equipment is crucial:</p>
+<p>Anthropic provides some striking figures:</p>
 
 <ul>
-<li><strong>Leaf Switches (Cabinet-Level):</strong> Distribution centers collecting data from the same or adjacent cabinets, using multi-mode (light blue) and single-mode (yellow) optical fibers via optical modules.</li>
-<li><strong>Spine Switches (Independent-Level):</strong> Aggregate hundreds of leaf switches, connecting countless cabinets into a massive computing cluster.</li>
+<li>Claude now writes over <strong>80% of the code</strong> in Anthropic's official codebase</li>
+<li>A typical engineer's daily code contribution is about <strong>8 times</strong> what it was in 2024</li>
+<li>Tasks that used to take a human 4 minutes can now be completed by Claude in 1.5 hours</li>
+<li>Some tasks have seen a <strong>52x speedup</strong> in small labs</li>
 </ul>
 
-<h3>3. Cooling and Space: Liquid Cooling</h3>
+<p>However, approach these numbers with caution. When Anthropic hyped its Mythos model, real-world tests told a different story: a curl developer found only 1 valid low-severity issue among 5 reported vulnerabilities. Mozilla noted Mythos found 271 vulnerabilities, but none beyond human expert capability. Even a demo vulnerability highlighted by the Mythos team was detectable by 8 smaller models. LLMs still rely on predicting the next token — they haven't evolved into a new species capable of inherent truth-judging or direction-setting. Human review remains indispensable in the short term.</p>
 
-<p>Traditional air cooling limits server density. Liquid cooling, as seen in Elon Musk's XAI data center, solves this: it removes air-cooling systems, reducing server thickness by half. A single cabinet can now hold 8 servers (64 H100 chips), doubling density and cutting costs for cloud vendors.</p>
+<h2>Two Categories of AI Work: Execution and Judgment</h2>
 
-<h2>The Evolution to NVL72: A Paradigm Shift</h2>
-
-<p>Nvidia's latest <strong>GB300 NVL72 cabinet</strong> (mass-produced May 2025) represents a radical redesign:</p>
+<p>Anthropic categorizes AI work into two types:</p>
 
 <ul>
-<li><strong>Compute Trays:</strong> Each contains Nvidia Grace CPUs, Blackwell GPUs, DPUs (security and scheduling), and ConnectX network cards — all Nvidia-owned hardware.</li>
-<li><strong>NVLink Spine Backplane:</strong> A 70-pound copper interconnection system connecting 72 GPUs into a single virtual super GPU, eliminating optical modules inside the cabinet.</li>
-<li><strong>Switch Trays:</strong> 9 trays with NVLink switch chips enable seamless communication.</li>
+<li><strong>Execution:</strong> Writing code, running experiments, fixing bugs, creating reports — given a goal, AI figures out how to achieve it</li>
+<li><strong>Judgment:</strong> Deciding which research problems are worth pursuing, determining result credibility, knowing when to stop or pivot</li>
 </ul>
 
-<p>This design pushes Scale-Up (physical memory sharing) to 72 GPUs, reducing latency and increasing bandwidth to 130TB/s.</p>
+<p>Current models excel at execution but lag behind humans in judgment. This gap, while significant, might be narrowing faster than we think. Anthropic has observed that as Claude writes code faster, human code review has become the new bottleneck.</p>
 
-<h2>Supply Chain Reconstruction and Competitive Landscape</h2>
+<h2>Three Future Scenarios</h2>
 
-<p><strong>Nvidia's Dominance:</strong> It has evolved from a GPU supplier to a system-level infrastructure provider. Cloud vendors must adopt its entire ecosystem — networks, CPUs, GPUs, and cabinet standards. Secondary suppliers risk obsolescence if they can't keep pace.</p>
+<ol>
+<li><strong>Stagnation in AI Capabilities:</strong> Even if AI progress slows, existing tools will still transform industries. A 100-person company could achieve what once required 1,000 people.</li>
+<li><strong>AI Continues to Strengthen, but Humans Set Direction:</strong> Companies become human-AI hybrids with explosive efficiency, but review, validation, and management become bottlenecks.</li>
+<li><strong>AI Sets Its Own Direction:</strong> Humans lose the ability to supervise, validate, or halt progress, leading to complete loss of control over the models.</li>
+</ol>
 
-<h2>Practical Insights for Investors and Builders</h2>
+<p>Anthropic's recommendation: humanity should have the option to slow down or pause AI development. It's worth noting the irony — Anthropic is a leading player in the AI race, pressing the accelerator while warning about dangers and calling for speed limits. Take this with your own critical thinking.</p>
 
-<p>Identify "shovel sellers" in this ecosystem:</p>
+<h2>Personal Reflections</h2>
 
-<ul>
-<li><strong>Chips and Servers:</strong> Nvidia (GPUs, DPUs), Intel/AMD (CPUs), TSMC (packaging)</li>
-<li><strong>Network Equipment:</strong> Cisco, Broadcom (switches), Huawei, ZTE (optical modules)</li>
-<li><strong>Cooling and Power:</strong> Companies specializing in liquid cooling and high-power supply systems</li>
-</ul>
-
-<p>AI infrastructure is not a bubble but a necessary investment for the next tech revolution. Understanding each component's role and dynamics helps you navigate this landscape and seize opportunities.</p>
+<p>An Anthropic employee shared a telling insight: when agents work smoothly, humans feel irrelevant because automation is faster; when agents fail, humans still feel irrelevant because they can't understand the complex work the agent was doing. Each time you delegate a task to AI and it performs well, you're inclined to delegate more. But each delegation also reduces your ability to judge if the AI's work is correct. We cede ground for what seem like wise, reasoned choices, but when we stop to check, we find we've lost comprehension. Yet looking back, each step feels justified. This is the fascinating predicament we face with AI today.</p>
 
 <h2>常见问题</h2>
 
-<h3>Is the AI infrastructure boom a bubble like the dot-com era?</h3>
-<p>The comparison is natural but the dynamics differ. Dot-com was fueled by speculation on future profits; AI infrastructure is backed by real, measurable demand — large models with trillion-level parameters need massive compute for both training and inference. Training one model can require 100,000 GPUs running for 3 months. Revenue at companies across the supply chain (switches, optical modules, storage chips, PCBs) has all grown significantly. The risk isn't a bubble popping — it's overcapacity if model efficiency improvements reduce compute demand faster than new applications increase it.</p>
+<h3>Is AI self-improvement actually happening now, or is this still theoretical?</h3>
+<p>It's partially happening. Claude writes 80% of Anthropic's code — that's AI assisting in building the tools used to create the next AI. But the full "closed loop" where AI autonomously designs, trains, and deploys a better model without human intervention hasn't happened yet. The gap is in judgment: AI can execute tasks but can't reliably decide which research directions are worth pursuing or validate the correctness of its own improvements. We're in Scenario 2 (AI strengthens, humans set direction), not Scenario 3 (AI sets its own direction).</p>
 
-<h3>Why is Nvidia so dominant in AI infrastructure?</h3>
-<p>Nvidia's CUDA ecosystem created a massive software moat — most AI frameworks (PyTorch, TensorFlow) are optimized for CUDA first. Their NVLink and NVSwitch technologies enable GPU-to-GPU communication that competitors can't match. With NVL72, they've moved from selling GPUs to selling entire cabinets where every component (CPU, GPU, DPU, NIC, switch) is Nvidia-designed. Cloud providers effectively must adopt the full Nvidia stack. Competitors like AMD and Intel are closing the hardware gap but remain years behind on the software ecosystem.</p>
+<h3>What does the 80% code figure actually mean?</h3>
+<p>It means Claude generates the majority of code committed to Anthropic's repositories — but humans still review, approve, and merge that code. Think of it like a senior developer delegating to a very fast junior: the junior writes most of the code, but the senior decides what to build and checks the work. The 8x productivity figure reflects this human-in-the-loop workflow, not fully autonomous development. The code Claude writes still goes through human code review, testing, and validation.</p>
 
-<h3>What does this mean for AI developers and startups?</h3>
-<p>Compute costs will likely continue falling per unit of performance, even as total spending rises. The NVL72 architecture reduces per-GPU costs through density improvements. For developers, the key takeaway is that AI model training and inference will get cheaper over time — plan your product roadmaps accordingly. For startups building AI infrastructure tools, the opportunity is in the gaps Nvidia doesn't cover: specialized inference hardware, edge computing, and software that makes heterogeneous compute (mixing GPU brands) practical.</p>
+<h3>Should I be worried about AI replacing developers?</h3>
+<p>The data suggests AI is more of a force multiplier than a replacement. An engineer at Anthropic is now 8x more productive — they're not eliminated, they're amplified. The real risk isn't AI replacing developers but developers who don't use AI being outpaced by those who do. The bottleneck is shifting from writing code to reviewing AI-generated code and making architectural decisions. Skills like code review, system design, and critical judgment are becoming more valuable, not less.</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/en/article/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial and Deployment Guide →</a></p>
+<p><strong>下一篇：</strong> <a href="/en/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1) →</a></p>
 </div>`,
     contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年6月28日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>中级</p>
+<p><strong>📅 发布日期：</strong>2026年6月29日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>中级 · <strong>🛠️ 工具：</strong>Claude</p>
 </div>
 
-<p>AI基础设施是泡沫还是革命？星门计划5000亿美元投资、北美五大科技巨头2026年资本支出预计达6900亿美元——AI算力淘金热毫无降温迹象。Nvidia营收从2023年初的1860亿元飙升至2026年初的1.49万亿元，增长近8倍。让我们拆解完整供应链：芯片、PCB、光模块、交换机、散热和电源系统。</p>
+<p>在当前AI研究格局中，有一个想法既最诱人也最危险：<strong>让AI自我改进</strong>。想象这样一个场景：AI编写代码，训练下一代模型，然后那个下一代模型反过来增强自身，产生更强大的后续模型。许多人将这一循环的实现称为"奇点"——一旦运转起来，AI可能摆脱人类限制，以指数速度独立进化。</p>
 
-<h2>AI算力基础设施的核心组件</h2>
+<h2>深度解析Anthropic最新论文</h2>
 
-<h3>1. 算力硬件：Nvidia DGX H100 AI服务器</h3>
+<p>让我们深入Anthropic最近一篇题为<em>《当AI自我构建》</em>的论文。它以两个引人入胜的视觉开篇。一个是像素艺术风格的Claude标志自我复制成更大版本，然后成为下一个复制周期的小单元。这个视觉隐喻说明：如果AI进入自我构建循环，其增长将不是线性的，而是级联加速的过程——一个循环嵌套在另一个循环中，越来越快。</p>
 
-<p>一台标准 <strong>Nvidia DGX H100 AI服务器</strong>（价值超200万元）是工程奇迹：</p>
+<p>第二个视觉描绘了AI开发方法的演变：从工程师手写代码，到聊天机器人辅助写代码片段，到能自主修改文件和运行代码的Agent，再到Agent派遣子Agent协作完成数小时任务。最终阶段标注为<em>"闭合循环"</em>，AI迭代设计、训练和改进下一代模型。这是核心论点：AI研究可能正进入自我加速和自我革命的循环。</p>
 
-<ul>
-<li>8颗 <strong>Nvidia H100 GPU芯片</strong>，每颗周围环绕6颗SK海力士HBM高带宽内存芯片，采用台积电顶级封装技术</li>
-<li>4颗Nvidia NVSwitch芯片实现GPU间零延迟通信</li>
-<li>2颗Intel Xeon CPU、2TB系统内存、PCIe数据线负责数据调度</li>
-<li>带光模块的高速网卡负责数据传输</li>
-<li>所有组件安装在高性能PCB基板上</li>
-</ul>
+<p>虽然这篇论文有洞察力，但它不是严谨的学术论文——包含数据但也有PR包装，比如强调模型的"危险"来吸引全球关注。所以对结论要持保留态度。</p>
 
-<pre><code class="language-plaintext"># Nvidia DGX H100 关键组件
-- GPU：8 x Nvidia H100
-- 内存：每GPU 6 x SK海力士HBM
-- 交换机芯片：4 x Nvidia NVSwitch
-- CPU：2 x Intel Xeon
-- 系统内存：2TB
-- 网络：带光模块的高速网卡
-- 基板：高性能PCB</code></pre>
+<h2>具体数字和实际案例</h2>
 
-<h3>2. 网络设备：交换机和光模块</h3>
-
-<p>确保数十万GPU高效协作，网络设备至关重要：</p>
+<p>Anthropic提供了一些引人注目的数字：</p>
 
 <ul>
-<li><strong>Leaf交换机（机柜级）：</strong> 充当分配中心，收集同一或相邻机柜的数据，通过光模块连接多模（浅蓝）和单模（黄色）光纤。</li>
-<li><strong>Spine交换机（独立级）：</strong> 汇聚数百台Leaf交换机，将无数机柜连接成庞大算力集群。</li>
+<li>Claude现在编写了Anthropic官方代码库中<strong>超过80%的代码</strong></li>
+<li>典型工程师的每日代码贡献量约为2024年的<strong>8倍</strong></li>
+<li>过去人类需要4分钟完成的任务，Claude现在可在1.5小时内完成</li>
+<li>小型实验室中某些任务实现了<strong>52倍加速</strong></li>
 </ul>
 
-<h3>3. 散热与空间：液冷</h3>
+<p>但应谨慎看待这些数字。当Anthropic炒作其Mythos模型极其强大时，实际测试讲了不同故事：curl工具的开发者发现Mythos报告的5个漏洞中只有1个是有效的低严重性问题。Mozilla提到Mythos帮助找到271个漏洞，但没有超出人类专家能力范围的。甚至Mythos团队重点展示的一个演示漏洞，8个更小的模型也能检测到。大语言模型仍然依赖预测下一个token——它们没有进化成能够固有判断真伪、评估价值或设定方向的新物种。短期内人类审查仍然不可或缺。</p>
 
-<p>传统风冷限制服务器密度。Elon Musk的XAI数据中心采用的液冷方案解决了这个问题：移除风冷系统，服务器厚度减半。单个机柜现在可容纳8台服务器（64颗H100芯片），密度翻倍，为云厂商降低成本。</p>
+<h2>AI工作的两个类别：执行与判断</h2>
 
-<h2>NVL72进化：范式转变</h2>
-
-<p>Nvidia最新的 <strong>GB300 NVL72机柜</strong>（2025年5月量产）是彻底重构：</p>
+<p>Anthropic将AI工作分为两类：</p>
 
 <ul>
-<li><strong>计算托盘：</strong> 每个包含Nvidia Grace CPU、Blackwell GPU、DPU（安全调度）和ConnectX网卡——全部Nvidia自有硬件。</li>
-<li><strong>NVLink Spine背板：</strong> 70磅铜互联系统将72颗GPU连接成单个虚拟超级GPU，机柜内不再需要光模块。</li>
-<li><strong>交换托盘：</strong> 9个托盘搭载NVLink交换芯片实现无缝通信。</li>
+<li><strong>执行：</strong> 编写代码、运行实验、修复Bug、创建报告——给定目标，AI能找出如何实现</li>
+<li><strong>判断：</strong> 决定哪些研究问题值得追求、判断结果可信度、知道何时停止或转向</li>
 </ul>
 
-<p>该设计将Scale-Up（物理内存共享）推向72颗GPU，降低延迟、带宽提升至130TB/s。</p>
+<p>当前模型擅长执行但判断力落后于人类。这个差距虽然显著，但可能比我们想象的缩小得更快。Anthropic观察到，随着Claude写代码越来越快，人类代码审查已成为新的瓶颈。</p>
 
-<h2>供应链重构与竞争格局</h2>
+<h2>三种未来情景</h2>
 
-<p><strong>Nvidia的统治力：</strong> 已从GPU供应商进化为系统级基础设施提供商。云厂商必须采用其完整生态——网络、CPU、GPU和机柜标准。次级供应商跟不上技术就可能被淘汰。</p>
+<ol>
+<li><strong>AI能力停滞：</strong> 即使AI进展放缓，现有工具仍将改变行业。100人的公司可以实现以前需要1000人的产出。</li>
+<li><strong>AI持续增强，但人类设定方向：</strong> 公司成为人机混合体，效率爆发，但审查、验证和管理成为瓶颈。</li>
+<li><strong>AI自主设定方向：</strong> 人类失去监督、验证或停止进展的能力，导致对模型完全失控。</li>
+</ol>
 
-<h2>投资者和建设者的实操洞察</h2>
+<p>Anthropic的建议是：人类应保留减缓或暂停AI发展的选项。值得注意的是其讽刺性——Anthropic是AI竞赛的领先玩家，一边踩油门一边警告危险呼吁限速。对此结论要有自己的批判性思考。</p>
 
-<p>识别这个生态系统中的"卖铲人"：</p>
+<h2>个人反思</h2>
 
-<ul>
-<li><strong>芯片与服务器：</strong> Nvidia（GPU、DPU）、Intel/AMD（CPU）、台积电（封装）</li>
-<li><strong>网络设备：</strong> Cisco、Broadcom（交换机）、华为、中兴（光模块）</li>
-<li><strong>散热与电源：</strong> 专注液冷和大功率供电系统的公司</li>
-</ul>
-
-<p>AI基础设施不是泡沫，而是下一次科技革命的必要投资。理解每个组件的角色和动态，帮助你在这一格局中把握机遇。</p>
+<p>一位Anthropic员工分享了一个有启发性的见解：当Agent顺利工作时，人类感到无关紧要因为自动化更快；当Agent失败时，人类仍然感到无关紧要因为无法理解Agent所做的复杂工作。这种二元性很有道理——每次你把任务委托给AI并且它做得又快又好，你就倾向于委托更多。但每次委托也降低了判断AI工作是否正确的能力。我们因为看似明智、理性的选择而让渡地盘，但当我们停下来检查时，发现自己已经失去了理解力。然而回顾每一步，又似乎都有道理。这就是我们与AI今天面临的迷人困境。</p>
 
 <h2>常见问题</h2>
 
-<h3>AI基础设施热潮像互联网泡沫吗？</h3>
-<p>这个比较很自然但动态不同。互联网泡沫由对未来利润的投机驱动；AI基础设施有真实、可衡量的需求支撑——万亿参数大模型的训练和推理都需要海量算力。训练一个模型可能需要10万GPU运行3个月。供应链各环节公司（交换机、光模块、存储芯片、PCB）的营收都显著增长。风险不是泡沫破裂——而是如果模型效率提升降低算力需求的速度超过新应用增加需求的速度，可能出现产能过剩。</p>
+<h3>AI自我改进现在真的在发生吗，还是仍然只是理论？</h3>
+<p>部分在发生。Claude编写了Anthropic 80%的代码——这是AI协助构建用于创造下一个AI的工具。但完整的"闭合循环"——AI在没有人类干预的情况下自主设计、训练和部署更好的模型——尚未发生。差距在于判断力：AI能执行任务但不能可靠地决定哪些研究方向值得追求或验证自身改进的正确性。我们处于情景2（AI增强，人类设定方向），而非情景3（AI自主设定方向）。</p>
 
-<h3>为什么Nvidia在AI基础设施中如此主导？</h3>
-<p>Nvidia的CUDA生态创造了巨大的软件护城河——大多数AI框架（PyTorch、TensorFlow）优先为CUDA优化。NVLink和NVSwitch技术实现了竞争对手无法匹敌的GPU间通信。通过NVL72，他们已从卖GPU转向卖整机柜，每个组件（CPU、GPU、DPU、网卡、交换机）都是Nvidia设计。云厂商实际上必须采用完整Nvidia方案。AMD和Intel等竞争对手正在缩小硬件差距，但在软件生态上仍落后数年。</p>
+<h3>80%代码这个数字到底意味着什么？</h3>
+<p>这意味着Claude生成了提交到Anthropic仓库的大部分代码——但人类仍然审查、批准和合并这些代码。可以想象成高级开发人员把工作委托给非常快的初级开发：初级写大部分代码，但高级决定构建什么并检查工作。8倍生产力数字反映的是这种"人在回路中"的工作流，而非完全自主开发。Claude写的代码仍然经过人类代码审查、测试和验证。</p>
 
-<h3>这对AI开发者和创业公司意味着什么？</h3>
-<p>算力单位性能成本可能持续下降，即使总支出在上升。NVL72架构通过密度提升降低了单GPU成本。对开发者来说，关键启示是AI模型训练和推理会随时间变得更便宜——据此规划产品路线图。对构建AI基础设施工具的创业公司，机会在Nvidia未覆盖的领域：专用推理硬件、边缘计算、以及让异构计算（混合GPU品牌）变得实用的软件。</p>
+<h3>我应该担心AI取代开发者吗？</h3>
+<p>数据表明AI更像是力量倍增器而非替代品。Anthropic的工程师现在生产力提升了8倍——他们没有被淘汰，而是被放大了。真正的风险不是AI取代开发者，而是不使用AI的开发者被使用AI的开发者超越。瓶颈正从编写代码转向审查AI生成的代码和做架构决策。代码审查、系统设计和批判性判断等技能正变得更有价值，而非更少。</p>
 
 <div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/codex-website-dev-zero-basis-tutorial">Codex网站开发：零基础实战教程与部署指南 →</a></p>
+<p><strong>下一篇：</strong> <a href="/zh/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding实战指南：AI开发完整工作流（上篇） →</a></p>
 </div>`,
   },
 
-  "codex-website-dev-zero-basis-tutorial": {
+  "vibe-coding-practical-guide-ai-dev-workflow-part1": {
     content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> June 28, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Beginner · <strong>🛠️ Tools:</strong> Codex, Vercel</p>
+<p><strong>📅 Published:</strong> June 29, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Beginner · <strong>🛠️ Tools:</strong> Codex, Claude, Cursor</p>
 </div>
 
-<p>Gone are the days when building a website required mastering programming, code, and UI design — filled with confusing technical jargon. With <strong>Codex</strong>, you can overcome technical limitations. Just tell it your needs like a boss, and it will build the website step by step for you. In this tutorial, I'll show you how to build a stunning cat-themed website from scratch with zero coding experience, covering two building methods and one-click deployment.</p>
+<p>You might have been in this situation: you open AI excitedly, eager to build your own project, but end up sitting there, clueless about the first step. Your mind is full of ideas, yet you don't know where to start. So you might just say, "Help me build a certain system," throw everything to AI, and then watch helplessly as it writes more and more chaotically, making you increasingly unsure.</p>
 
-<h2>Method 1: Pure Personalized Building</h2>
+<p>This article is Part 1 of the "Vibe Coding" series, focusing on the workflow of AI development from project initiation to before writing code. The entire series covers: project initiation, task breakdown, technology selection, and project architecture. This part focuses on the early preparation phase — how to lay the groundwork and establish rules before writing code.</p>
 
-<h3>Step 1: Define the Website Framework</h3>
+<h2>Four Key Steps Before AI Writes Business Logic</h2>
 
-<p>Start by outlining your website's structure, sections, and overall style directly in Codex:</p>
+<p>Before letting AI handle business functions, there are four crucial steps: <strong>project initiation and feature list</strong>, <strong>technology stack selection</strong>, <strong>project architecture setup</strong>, and <strong>writing an Agent Constitution</strong>. Only after completing these four steps can you say the groundwork and rules are properly established.</p>
 
-<blockquote>"I want to build a cat website. It should include sections like a cat's profile, daily diary, photo gallery, growth timeline, and favorite recipes. The style should be warm and whimsical."</blockquote>
+<h3>Step 1: Project Initiation and Feature List</h3>
 
-<p>You can also upload a document with detailed requirements. Once you send your request, Codex works in the background — the basic structure and blocks are laid out, though it may lack some ideal elements. That's normal: Codex has just created the skeleton.</p>
+<p>This is the starting point of the entire process, and it's also the step many people are tempted to skip. Project initiation means figuring out what the project is supposed to do. The feature list involves breaking that down into clear, individual features.</p>
 
-<h3>Step 2: Refine Details</h3>
+<p><strong>Key reminder:</strong> if you skimp on this step, rework is likely later. Because if you don't know what you need, AI will be guessing when building the project. When developing with AI, the only thing that changes is the role in development. Previously, you had to clarify business requirements with programmers. Now, AI is your programmer, so you must clarify requirements with AI clearly. Whether dealing with a professional programmer or AI, ambiguous requirements are always dangerous.</p>
 
-<p>Keep submitting modification requests to polish details:</p>
+<h3>Step 2: Technology Stack Selection</h3>
+
+<p>Once you've decided what the project will do, you need to decide what technologies to use. You need to determine the front-end tech stack, component library, back-end language, and framework.</p>
+
+<p>The key here isn't to pick the most advanced or powerful technologies, but the ones that best suit your project and that AI is most familiar with. If you choose wrong, problems often surface halfway through, and starting over is very time-consuming.</p>
+
+<p>Once the technology stack is decided, <strong>don't waver</strong>. If the front-end switches from React to Vue overnight, or the back-end from Python to Go, each waver means rebuilding the previous groundwork.</p>
+
+<h3>Step 3: Project Architecture Setup</h3>
+
+<p>After deciding on the technology stack, set up the project architecture. Whether front-end or back-end, before writing business logic, first set up a solid and stable project architecture. It's like building a skyscraper — you don't start by decorating a room; you first set up the foundation, framework, and load-bearing walls.</p>
+
+<p>This step isn't about having AI write all features like login, orders, and payments right away. Instead, first set up a minimal, runnable framework and establish general rules:</p>
+
+<ul>
+<li><strong>Back-end:</strong> Ensure the project can start, configurations can be read, interfaces return consistently, error handling is uniform, and set up logging, database connections, and permission entry points.</li>
+<li><strong>Front-end:</strong> Decide how to structure directories, standardize components, unify request handling, and manage state.</li>
+</ul>
+
+<p>In short, for both front-end and back-end, first establish a set of rules that every feature will follow.</p>
+
+<h3>Step 4: Writing an Agent Constitution</h3>
+
+<p>Once the groundwork is laid, establish an "Agent Constitution" for the project — a set of rules for AI to follow when working on the project, rules that must be adhered to for any feature.</p>
+
+<p><strong>How it works:</strong> Most AI programming tools have a mechanism where if you place the rule file in a specified location, the tool automatically reads it into AI's context every time it starts a task. Before you ask AI to do anything, it "recites" these rules from start to finish. So it actually influences every decision AI makes.</p>
+
+<p><strong>Where to place it:</strong> Different tools require different locations and filenames. The most reliable way is to ask your AI tool directly:</p>
+
+<pre><code class="language-plaintext">Please create an Agent Constitution file in the location
+that this tool automatically reads.</code></pre>
+
+<p>Don't confuse it with the project architecture design document. The architecture document describes how the project's code is organized. The Agent Constitution defines the behavioral rules AI must follow, such as:</p>
+
+<ul>
+<li>Must follow the architecture design document</li>
+<li>If changing the underlying layer, framework, or adding new dependencies, explain the reason first</li>
+<li>Use the framework's built-in capabilities instead of writing from scratch whenever possible</li>
+<li>Self-inspect after completing each phase</li>
+</ul>
+
+<p><strong>How to write it:</strong> Don't create from scratch. Use a general template, but don't just copy it directly. Give the template to AI and say:</p>
+
+<pre><code class="language-plaintext">Please create a project-specific Agent Constitution based
+on the actual situation of the current project and this
+general template.</code></pre>
+
+<p>The key is "based on your project's actual situation" — your project initiation, feature list, and technology stack aren't in the general template. AI needs to adapt these general rules to your project's specific language, framework, and business for the Constitution to be truly effective.</p>
+
+<p>After customization, glance through it. If there's anything you don't understand, ask AI to explain each rule in plain language.</p>
+
+<h2>Part 1 Summary</h2>
+
+<p>The four steps in Part 1 are:</p>
 
 <ol>
-<li>Open the website preview in Codex</li>
-<li>Click the plus sign in the top right corner</li>
-<li>Select the area to modify and add a comment: <em>"Change the font color of the 'Cat's Diary' section to a soft orange and increase the image spacing."</em></li>
+<li><strong>Project Initiation and Feature List:</strong> Clarify what to build and break it into individual features</li>
+<li><strong>Technology Stack Selection:</strong> Choose what's best for your project and what AI is familiar with, then stick with it</li>
+<li><strong>Project Architecture Setup:</strong> For both front-end and back-end, first set up a runnable framework and establish uniform rules</li>
+<li><strong>Write an Agent Constitution:</strong> Document the rules AI must follow for all features, ensuring AI reviews them before each task</li>
 </ol>
 
-<h3>Step 3: Enhance with Images and Sections</h3>
-
-<p>To add new sections like a photo gallery or favorite recipes, describe them to Codex:</p>
-
-<blockquote>"Add a photo gallery section with images of the cat napping, eating, and playing. The layout should be a grid with hover effects."</blockquote>
-
-<p>If you don't have images, use Codex's built-in <strong>Image 2</strong> feature:</p>
-
-<pre><code class="language-plaintext">@image2 [Orange Cat] Orange cat running in garden, sunny, oil painting style
-@image2 [Orange Cat] Orange cat drinking coffee in cafe, warm scene, illustration style</code></pre>
-
-<h3>Step 4: Add Visual Effects and Animations</h3>
-
-<p>To make your website more dynamic, describe effects to Codex. For inspiration, browse resources like <strong>React Bits</strong> for backgrounds, text animations, and border effects. Copy code for an effect you like and tell Codex:</p>
-
-<blockquote>"Apply this glowing text animation to the 'Cat's Motto' section. The color should be light purple."</blockquote>
-
-<p>Codex will implement it — for example, text animation mimicking a cat's gentle movement, and background texture following the mouse cursor.</p>
-
-<h2>Method 2: Quick Creative Building</h2>
-
-<p>For a faster setup using pre-existing design references:</p>
-
-<ol>
-<li>Find headings and landing page designs online (e.g., from design platforms)</li>
-<li>Copy the prompt of a design you like</li>
-<li>Paste it into Codex combined with your own content:</li>
-</ol>
-
-<blockquote>"Use this landing page layout for a cat website. Replace the content with my cat's details: name 'Mikan', age 3, breed 'American Shorthair Tabby'."</blockquote>
-
-<h2>Deploying Your Website Online</h2>
-
-<p>Your website initially runs only on your local computer. To make it accessible to others, deploy to <strong>Vercel</strong>:</p>
-
-<ol>
-<li>Install the Vercel plugin in Codex</li>
-<li>Log in to your Vercel account to authorize</li>
-<li>In the Codex chat, mention the Vercel plugin: <em>"@Vercel deploy this cat website online"</em></li>
-</ol>
-
-<p>Codex will deploy your site and provide a public URL like <code>https://your-cat-website.vercel.app</code> — anyone can access it anytime.</p>
-
-<h2>Conclusion</h2>
-
-<p>Building a website with Codex is straightforward and requires no technical background. Whether you choose personalized customization or quick creative building, you'll gain a sense of accomplishment. In this AI-driven era, let Codex be your tool to bring ideas to life. Try it out and unleash your creativity!</p>
+<p>After these four steps, the groundwork and rules are in place. Remember: once the groundwork is laid, try not to redo it later. Once the groundwork and rules are set, the next step is to have AI start writing code — how to break each major phase into detailed sub-phases and guide AI step by step will be covered in Part 2.</p>
 
 <h2>常见问题</h2>
 
-<h3>Do I need to know HTML/CSS to use Codex for website building?</h3>
-<p>No — that's the whole point. Codex handles all the coding. You describe what you want in natural language, and it generates the code. That said, having basic HTML/CSS knowledge helps you give more precise instructions and understand what's happening. But it's absolutely not required. Many complete beginners have built and deployed their first website with Codex in under an hour.</p>
+<h3>What's the difference between an Agent Constitution and a project architecture document?</h3>
+<p>The architecture document describes <em>what</em> your project looks like — directory structure, component organization, data flow, and technical decisions. The Agent Constitution describes <em>how</em> AI should behave when working on the project — rules like "explain before changing dependencies" or "use framework built-ins instead of writing from scratch." Think of the architecture as the blueprint of the building, and the Constitution as the safety and quality rules all construction workers must follow. Both are needed; they serve different purposes.</p>
 
-<h3>What's the difference between Method 1 (personalized) and Method 2 (quick creative)?</h3>
-<p>Method 1 gives you full creative control — you describe every section from scratch, refine iteratively, and end up with a unique design. It takes longer but produces more original results. Method 2 uses pre-existing design templates as starting points, which is faster but may result in a less distinctive look. For a portfolio or personal brand site, go with Method 1. For a quick prototype or temporary page, Method 2 works great.</p>
+<h3>Can I skip the preparation steps and just start prompting AI to build features?</h3>
+<p>You can, and many beginners do. But the cost shows up later: AI writes inconsistent code, makes conflicting technology choices, produces spaghetti architecture, and you spend more time fixing than building. The four preparation steps take 1-2 hours upfront but save days of rework. It's the difference between building a house with blueprints and permits versus just stacking bricks and hoping it stands. For any project you intend to maintain beyond a weekend prototype, the preparation is worth it.</p>
 
-<h3>Can I use other deployment platforms besides Vercel?</h3>
-<p>Yes. While Vercel is the most integrated option (Codex has a built-in Vercel plugin), you can also deploy to Netlify, GitHub Pages, Alibaba Cloud, Tencent Cloud, or any static hosting service. The key difference is convenience: Vercel deployment is one command through the plugin, while other platforms may require you to export the code first and configure deployment manually. For beginners, Vercel is strongly recommended as the path of least resistance.</p>
+<h3>Which AI tool is best for Vibe Coding — Codex, Claude Code, or Cursor?</h3>
+<p>All three work well for this workflow. Codex has the most mature Agent Constitution support (AGENTS.md auto-loading) and strong project scaffolding. Claude Code excels at the architecture setup phase — its agent loop naturally handles multi-file project initialization. Cursor is great for the iterative refinement steps where you're tweaking UI and behavior. Many experienced Vibe Coders use a combination: Claude Code for architecture and initial setup, Codex for feature development, Cursor for polishing. But any single one of these tools can handle the full workflow described in this article.</p>
 
 <div class="next-step">
-<p><strong>上一篇：</strong> <a href="/en/article/ai-infrastructure-revolution-bubble-computing-power">AI Infrastructure: Revolution or Bubble? A Deep Dive into the Computing Power Ecosystem ←</a></p>
+<p><strong>上一篇：</strong> <a href="/en/article/most-dangerous-idea-ai-self-improvement">The Most Dangerous Idea in AI: Let It Improve Itself ←</a></p>
 </div>`,
     contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年6月28日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>初级 · <strong>🛠️ 工具：</strong>Codex、Vercel</p>
+<p><strong>📅 发布日期：</strong>2026年6月29日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>初级 · <strong>🛠️ 工具：</strong>Codex、Claude、Cursor</p>
 </div>
 
-<p>建网站需要掌握编程、代码和UI设计的时代已经过去了——充满令人困惑的技术术语。有了 <strong>Codex</strong>，你可以突破技术限制。像老板一样告诉它你的需求，它会一步步为你建网站。本教程展示如何用零编程经验从零构建惊艳的猫咪主题网站，涵盖两种搭建方法和一键部署。</p>
+<p>你可能遇到过这种情况：兴奋地打开AI，渴望构建自己的项目，结果坐在那里不知道第一步该做什么。脑子里满是想法，却不知道从哪里开始。于是你可能会说"帮我建某个系统"，把所有东西丢给AI，然后无奈地看着它写得越来越乱，让你越来越没底。</p>
 
-<h2>方法1：纯个性化搭建</h2>
+<p>本文是"Vibe Coding"系列的上篇，聚焦从项目启动到写代码之前的AI开发工作流。整个系列涵盖：项目启动、任务拆解、技术选型和项目架构。本篇专注早期准备阶段——如何在写代码前打好地基、建立规则。</p>
 
-<h3>第1步：定义网站框架</h3>
+<h2>AI写业务逻辑前的四个关键步骤</h2>
 
-<p>直接在Codex中描述网站结构、板块和整体风格：</p>
+<p>在让AI处理业务功能之前，有四个关键步骤：<strong>项目启动与功能清单</strong>、<strong>技术栈选择</strong>、<strong>项目架构搭建</strong>和<strong>编写Agent Constitution</strong>。只有完成这四步，才能说地基和规则真正建立好了。</p>
 
-<blockquote>"我想建一个猫咪网站。应该包含猫咪简介、日常日记、照片画廊、成长时间线和最爱食谱等板块。风格温暖奇幻。"</blockquote>
+<h3>第1步：项目启动与功能清单</h3>
 
-<p>也可以上传详细需求文档。发出请求后Codex在后台工作——基本结构和板块已布局，但可能缺少一些理想元素。这很正常：Codex刚创建了骨架。</p>
+<p>这是整个流程的起点，也是很多人想跳过的步骤。项目启动就是搞清楚项目要做什么。功能清单就是把要做的事拆成清晰、独立的功能点。</p>
 
-<h3>第2步：细化细节</h3>
+<p><strong>关键提醒：</strong> 如果这一步偷懒，后面很可能会返工。因为如果你不知道自己要什么，AI在构建项目时就是在猜。用AI开发时，唯一改变的是开发中的角色。以前做产品，项目方要向程序员讲清业务需求。现在AI是你的程序员，所以你必须向AI清晰地讲清需求。无论是对专业程序员还是对AI，模糊的需求永远是危险的。</p>
 
-<p>持续提交修改请求打磨细节：</p>
+<h3>第2步：技术栈选择</h3>
+
+<p>决定项目要做什么之后，就要决定用什么技术。需要确定前端技术栈、组件库、后端语言和框架。</p>
+
+<p>关键不是选最先进或最强大的技术，而是选最适合你项目、AI最熟悉的技术。如果选错了，问题常常在半路暴露出来，重来的时间和人力成本非常高。</p>
+
+<p>技术栈一旦确定，<strong>不要动摇</strong>。如果前端一夜之间从React换成Vue，或后端从Python换成Go，每次动摇都意味着之前的地基要重来。</p>
+
+<h3>第3步：项目架构搭建</h3>
+
+<p>技术栈确定后，搭建项目架构。无论前端还是后端，在写业务逻辑之前，先搭建一个扎实稳定的项目架构。就像盖摩天大楼——不是先装修房间，而是先打好地基、搭好框架和承重墙。</p>
+
+<p>这一步不是让AI立刻写出登录、订单、支付等所有功能。而是先搭一个最小可运行的框架，建立通用规则：</p>
+
+<ul>
+<li><strong>后端：</strong> 确保项目能启动、配置能读取、接口返回一致、错误处理统一，搭建日志、数据库连接、权限入口点。</li>
+<li><strong>前端：</strong> 决定目录结构、组件标准化、请求处理统一、状态管理方式。</li>
+</ul>
+
+<p>总之，前后端都先建立一套所有功能都要遵守的规则。</p>
+
+<h3>第4步：编写Agent Constitution</h3>
+
+<p>地基打好后，为项目建立"Agent Constitution"——一套AI在项目上工作时要遵守的规则，任何功能都必须遵守。</p>
+
+<p><strong>它是如何起作用的：</strong> 大多数AI编程工具有一个机制：如果你把规则文件放在指定位置，工具每次启动任务时自动将其读入AI的上下文。在你让AI做任何事之前，它已经从头到尾"背诵"了这些规则。所以它不是摆设，它实际影响AI做出的每一个决定。</p>
+
+<p><strong>放在哪里：</strong> 不同工具需要不同的位置和文件名。最可靠的方法是直接问你的AI工具：</p>
+
+<pre><code class="language-plaintext">请在本工具会自动读取的位置创建Agent Constitution文件。</code></pre>
+
+<p>不要把它和项目架构设计文档混淆。架构文档描述项目代码如何组织。Agent Constitution定义AI必须遵守的行为规则，如：</p>
+
+<ul>
+<li>必须遵循架构设计文档</li>
+<li>如果改变底层、框架或添加新依赖，先说明原因</li>
+<li>尽可能使用框架内置能力而非从头编写</li>
+<li>每完成一个阶段后自我检查</li>
+</ul>
+
+<p><strong>如何编写：</strong> 不要从零创建。使用通用模板，但不要直接复制。把模板交给AI并说：</p>
+
+<pre><code class="language-plaintext">请根据当前项目的实际情况和这个通用模板，
+创建项目专属的Agent Constitution。</code></pre>
+
+<p>关键是"根据你项目的实际情况"——你的项目启动、功能清单和技术栈不在通用模板里。AI需要将这些通用规则适配到你项目的具体语言、框架和业务，Constitution才能真正有效。</p>
+
+<p>定制完成后浏览一遍。如果有看不懂的地方，不要装懂。让AI用通俗语言解释每条规则。</p>
+
+<h2>上篇总结</h2>
+
+<p>上篇的四个步骤：</p>
 
 <ol>
-<li>在Codex中打开网站预览</li>
-<li>点击右上角加号</li>
-<li>选择要修改的区域添加注释：<em>"把'猫咪日记'板块的字体颜色改成柔和的橙色，增加图片间距。"</em></li>
+<li><strong>项目启动与功能清单：</strong> 明确要建什么，拆成独立功能点</li>
+<li><strong>技术栈选择：</strong> 选最适合项目和AI最熟悉的，然后坚持不动摇</li>
+<li><strong>项目架构搭建：</strong> 前后端都先搭可运行框架，建立统一规则</li>
+<li><strong>编写Agent Constitution：</strong> 文档化AI必须遵守的规则，确保AI每次任务前审查</li>
 </ol>
 
-<h3>第3步：用图片和板块增强</h3>
-
-<p>要添加照片画廊或最爱食谱等新板块，向Codex描述：</p>
-
-<blockquote>"添加照片画廊板块，包含猫咪打盹、吃饭和玩耍的图片。布局为带悬停效果的网格。"</blockquote>
-
-<p>如果没有图片，使用Codex内置的 <strong>Image 2</strong> 功能生成：</p>
-
-<pre><code class="language-plaintext">@image2 [橘猫] 橘猫在花园里奔跑，阳光明媚，油画风格
-@image2 [橘猫] 橘猫在咖啡馆里喝咖啡，温馨场景，插画风格</code></pre>
-
-<h3>第4步：添加视觉效果和动画</h3>
-
-<p>让网站更生动，向Codex描述想要的效果。如需灵感，浏览 <strong>React Bits</strong> 等资源获取背景、文字动画和边框效果。复制喜欢的效果代码告诉Codex：</p>
-
-<blockquote>"把这个发光文字动画应用到'猫咪格言'板块。颜色用淡紫色。"</blockquote>
-
-<p>Codex会实现——例如文字动画模仿猫咪轻柔的动作，背景纹理跟随鼠标光标。</p>
-
-<h2>方法2：快速创意搭建</h2>
-
-<p>使用现有设计参考更快搭建：</p>
-
-<ol>
-<li>在网上找标题和落地页设计（如设计平台）</li>
-<li>复制喜欢的设计提示词</li>
-<li>粘贴到Codex并结合自己的内容：</li>
-</ol>
-
-<blockquote>"用这个落地页布局做猫咪网站。替换内容为我的猫的详情：名字'蜜柑'，3岁，品种'美短虎斑'。"</blockquote>
-
-<h2>将网站部署上线</h2>
-
-<p>网站最初只在本地运行。要让别人访问，部署到 <strong>Vercel</strong>：</p>
-
-<ol>
-<li>在Codex中安装Vercel插件</li>
-<li>登录Vercel账号授权</li>
-<li>在Codex聊天中@Vercel插件：<em>"@Vercel 部署这个猫咪网站上线"</em></li>
-</ol>
-
-<p>Codex会部署网站并提供公开URL如 <code>https://your-cat-website.vercel.app</code>——任何人都能随时访问。</p>
-
-<h2>总结</h2>
-
-<p>用Codex建网站简单直接，不需要技术背景。无论选择个性化定制还是快速创意搭建，都会获得成就感。在这个AI驱动的时代，让Codex成为你实现创意的工具。试试看，释放你的创造力！</p>
+<p>完成这四步后，地基和规则就位。记住：地基一旦打好，尽量不要在后面重做。地基和规则就绪后，下一步就是让AI开始写代码——如何将每个大阶段拆成详细子阶段并引导AI一步步走而不跑偏，将在下篇中介绍。</p>
 
 <h2>常见问题</h2>
 
-<h3>用Codex建网站需要懂HTML/CSS吗？</h3>
-<p>不需要——这正是Codex的意义所在。Codex处理所有编码。你用自然语言描述需求，它生成代码。不过，有基础HTML/CSS知识能帮你给出更精准的指令和理解发生了什么。但绝对不是必需的。许多完全零基础的新手在一小时内用Codex搭建并部署了他们的第一个网站。</p>
+<h3>Agent Constitution和项目架构文档有什么区别？</h3>
+<p>架构文档描述你的项目<em>是什么样子</em>——目录结构、组件组织、数据流和技术决策。Agent Constitution描述AI在项目上工作时<em>应该如何行为</em>——如"更改依赖前先解释原因"或"使用框架内置而非从头编写"等规则。可以把架构想象成建筑的蓝图，Constitution是所有施工人员必须遵守的安全和质量规则。两者都需要，服务于不同目的。</p>
 
-<h3>方法1（个性化）和方法2（快速创意）有什么区别？</h3>
-<p>方法1给你完全创意控制——你从零描述每个板块，迭代打磨，最终得到独特设计。耗时更长但产出更原创。方法2使用现有设计模板作为起点，更快但可能导致外观不够独特。做作品集或个人品牌网站用方法1。快速原型或临时页面方法2效果很好。</p>
+<h3>我可以跳过准备步骤直接让AI构建功能吗？</h3>
+<p>可以，很多新手就是这么做的。但代价后来会显现：AI写出不一致的代码、做出冲突的技术选择、产生意大利面式架构，你花在修复上的时间比构建还多。这四个准备步骤前期花1-2小时但能节省数天的返工。这就像盖房子有蓝图和许可证 vs 只是堆砖然后希望它能立住。对于任何你打算维护超过一个周末原型的项目，准备工作是值得的。</p>
 
-<h3>除了Vercel还能用其他部署平台吗？</h3>
-<p>可以。虽然Vercel是集成度最高的选项（Codex有内置Vercel插件），你也可以部署到Netlify、GitHub Pages、阿里云、腾讯云或任何静态托管服务。关键区别是便利性：Vercel部署通过插件一条命令完成，其他平台可能需要先导出代码再手动配置部署。对初学者强烈推荐Vercel作为阻力最小的路径。</p>
+<h3>哪个AI工具最适合Vibe Coding——Codex、Claude Code还是Cursor？</h3>
+<p>三个工具都适合这个工作流。Codex有最成熟的Agent Constitution支持（AGENTS.md自动加载）和强大的项目脚手架。Claude Code在架构搭建阶段表现出色——其Agent循环自然处理多文件项目初始化。Cursor在迭代细化步骤中很出色，适合调整UI和行为。许多有经验的Vibe Coder组合使用：Claude Code做架构和初始搭建，Codex做功能开发，Cursor做打磨。但任何一个工具都能独立完成本文描述的完整工作流。</p>
 
 <div class="next-step">
-<p><strong>上一篇：</strong> <a href="/zh/article/ai-infrastructure-revolution-bubble-computing-power">AI基础设施：革命还是泡沫？算力生态深度解析 ←</a></p>
+<p><strong>上一篇：</strong> <a href="/zh/article/most-dangerous-idea-ai-self-improvement">AI最危险的想法：让它自我改进 ←</a></p>
 </div>`,
   },
 

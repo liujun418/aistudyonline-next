@@ -2308,4 +2308,29 @@ export const articles: Article[] = [
     date: "2026-06-28",
   },
 
+  {
+    slug: "most-dangerous-idea-ai-self-improvement",
+    title: "The Most Dangerous Idea in AI: Let It Improve Itself",
+    titleZh: "AI最危险的想法：让它自我改进",
+    description: "Deep dive into Anthropic's paper 'When AI Builds Itself' — AI self-improvement loops, the execution-vs-judgment gap, three future scenarios, and why Claude now writes 80% of Anthropic's code. A critical look at the singularity hypothesis.",
+    descriptionZh: "深度解析Anthropic论文《当AI自我构建》——AI自我改进循环、执行与判断的鸿沟、三种未来情景、以及Claude现在编写Anthropic 80%代码的现状。对奇点假说的批判性审视。",
+    category: "ai-tutorials",
+    tags: ["anthropic", "claude", "self-improvement", "singularity", "research", "future"],
+    difficulty: "intermediate",
+    toolsMentioned: ["claude"],
+    date: "2026-06-29",
+  },
+  {
+    slug: "vibe-coding-practical-guide-ai-dev-workflow-part1",
+    title: "Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)",
+    titleZh: "Vibe Coding实战指南：AI开发完整工作流（上篇）",
+    description: "Part 1 of the Vibe Coding series — four key preparation steps before AI writes code: project initiation & feature list, technology stack selection, project architecture setup, and writing an Agent Constitution. Lay the groundwork right.",
+    descriptionZh: "Vibe Coding系列上篇——AI写代码前的四个关键准备步骤：项目启动与功能清单、技术栈选择、项目架构搭建、编写Agent Constitution。打好地基才能不出乱子。",
+    category: "ai-tutorials",
+    tags: ["vibe-coding", "workflow", "agent-constitution", "project-setup", "architecture", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["codex-agent", "claude", "cursor"],
+    date: "2026-06-29",
+  },
+
 ];
