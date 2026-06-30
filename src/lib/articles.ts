@@ -2333,4 +2333,29 @@ export const articles: Article[] = [
     date: "2026-06-29",
   },
 
+  {
+    slug: "demystifying-ai-application-layer-3-layers",
+    title: "Demystifying AI Application Layer: From Large Language Models to Intelligent Agents in 3 Layers",
+    titleZh: "拆解AI应用层：从大语言模型到智能Agent的三层金字塔",
+    description: "A beginner-friendly guide to the 3-layer AI pyramid — LLM (brain), Multimodal (senses), Tools & Agents (skeleton) — plus how to build your own AI agent with Kouzi (Coze), no coding required.",
+    descriptionZh: "面向初学者的三层AI金字塔指南——LLM（大脑）、多模态（感官）、工具与Agent（骨架）——附扣子无代码搭建AI Agent实战。",
+    category: "ai-basics",
+    tags: ["llm", "multimodal", "agent", "kouzi", "beginner", "pyramid", "workflow"],
+    difficulty: "beginner",
+    toolsMentioned: ["chatgpt", "gemini", "deepseek", "qwen", "nano-banana-pro", "midjourney", "veo-3-1", "suno", "heygen", "notebooklm", "kouzi"],
+    date: "2026-06-30",
+  },
+  {
+    slug: "2025-ai-toolkit-practical-guide-every-domain",
+    title: "2025 AI Toolkit: A Practical Guide for Every Domain",
+    titleZh: "2025 AI工具大全：全领域实战选型指南",
+    description: "A comprehensive toolkit guide across 9 domains — text, image, video, audio, digital humans, browsers, coding, knowledge bases, and agents — with top picks, free alternatives, and open-source options for each category.",
+    descriptionZh: "覆盖9大领域的全面工具选型指南——文本、图像、视频、音频、数字人、浏览器、编程、知识库和Agent——每类含首选推荐、免费替代和开源选项。",
+    category: "ai-comparisons",
+    tags: ["tools", "roundup", "comparison", "guide", "2025", "free"],
+    difficulty: "beginner",
+    toolsMentioned: ["gemini", "chatgpt", "claude", "grok", "qwen", "deepseek", "nano-banana-pro", "midjourney", "veo-3-1", "minimax-m3", "elevenlabs", "suno", "heygen", "cursor", "trae-framework", "codex-agent", "notebooklm", "kouzi", "runway"],
+    date: "2026-06-30",
+  },
+
 ];
