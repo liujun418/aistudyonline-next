@@ -2358,4 +2358,29 @@ export const articles: Article[] = [
     date: "2026-06-30",
   },
 
+  {
+    slug: "github-weekly-trending-ai-tools-agents-dominate",
+    title: "GitHub Weekly Trending: AI Tools and Agents Dominate the Chart",
+    titleZh: "GitHub周趋势：AI工具与Agent霸榜",
+    description: "This week's top 10 trending GitHub projects — OpenMontage (AI video studio), Agent-Reach (no-API-key web browsing), codebase-memory-mcp (99% token reduction), Cognee (Agent long-term memory), and more. All with star counts and key features.",
+    descriptionZh: "本周GitHub十大热门项目——OpenMontage（AI视频工作室）、Agent-Reach（无需API密钥上网）、codebase-memory-mcp（99% token节省）、Cognee（Agent长期记忆）等。含星数和核心特性。",
+    category: "ai-tutorials",
+    tags: ["github", "trending", "open-source", "agent", "video", "memory", "tools"],
+    difficulty: "beginner",
+    toolsMentioned: ["claude", "cursor", "deer-flow"],
+    date: "2026-07-01",
+  },
+  {
+    slug: "mastering-ai-workflow-beginner-custom-workbench",
+    title: "Mastering AI Workflow: A Beginner-Friendly Guide to Building Your Custom AI Workbench",
+    titleZh: "掌握AI工作流：新手友好的自定义AI工作台搭建指南",
+    description: "Build a personal AI workbench that boosted productivity by 400% — automate repetitive tasks, create custom Skills, and set up mobile AI office using TRAE Work. Step-by-step from task automation to full workbench.",
+    descriptionZh: "搭建提升400%效率的个人AI工作台——用TRAE Work自动化重复任务、创建自定义Skills、搭建移动AI办公。从任务自动化到完整工作台的逐步指南。",
+    category: "ai-tutorials",
+    tags: ["workflow", "automation", "trae", "skills", "productivity", "beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["trae-framework"],
+    date: "2026-07-01",
+  },
+
 ];
