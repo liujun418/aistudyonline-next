@@ -2383,4 +2383,17 @@ export const articles: Article[] = [
     date: "2026-07-01",
   },
 
+  {
+    slug: "dont-be-intimidated-ai-jargon-practical-guide-concepts",
+    title: "Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts from ChatGPT to Workspace Agent",
+    titleZh: "别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南",
+    description: "A complete journey through 12 AI concepts — Token, Prompt Engineering, RAG, Tool Calling, MCP, Context Engineering, Skill, Computer Use, Agent, Harness Engineering, Workflow, and Workspace Agent — with code snippets and actionable tips for each.",
+    descriptionZh: "12个AI概念的完整之旅——Token、提示词工程、RAG、工具调用、MCP、上下文工程、Skill、计算机使用、Agent、Harness工程、工作流和Workspace Agent——每个概念含代码示例和实操建议。",
+    category: "ai-basics",
+    tags: ["concepts", "beginner", "rag", "agent", "mcp", "workflow", "prompt-engineering", "guide"],
+    difficulty: "beginner",
+    toolsMentioned: ["chatgpt", "langchain", "n8n", "pinecone"],
+    date: "2026-07-02",
+  },
+
 ];

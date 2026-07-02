@@ -1,39 +1,27 @@
 """
-Publish July 1, 2026 articles.
-No new tools - GitHub trending projects are not standalone AI tools, TRAE Work is a Trae variant.
+Publish July 2, 2026 article.
+No new tools - mentions dev frameworks (LangChain, Pinecone, LangGraph, etc.) already covered or not standalone AI tools.
 """
 import os
 
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-# ===== Part 1: Add 2 article metadata to articles.ts =====
+# ===== Part 1: Add 1 article metadata to articles.ts =====
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "github-weekly-trending-ai-tools-agents-dominate",
-    title: "GitHub Weekly Trending: AI Tools and Agents Dominate the Chart",
-    titleZh: "GitHub周趋势：AI工具与Agent霸榜",
-    description: "This week's top 10 trending GitHub projects — OpenMontage (AI video studio), Agent-Reach (no-API-key web browsing), codebase-memory-mcp (99% token reduction), Cognee (Agent long-term memory), and more. All with star counts and key features.",
-    descriptionZh: "本周GitHub十大热门项目——OpenMontage（AI视频工作室）、Agent-Reach（无需API密钥上网）、codebase-memory-mcp（99% token节省）、Cognee（Agent长期记忆）等。含星数和核心特性。",
-    category: "ai-tutorials",
-    tags: ["github", "trending", "open-source", "agent", "video", "memory", "tools"],
+    slug: "dont-be-intimidated-ai-jargon-practical-guide-concepts",
+    title: "Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts from ChatGPT to Workspace Agent",
+    titleZh: "别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南",
+    description: "A complete journey through 12 AI concepts — Token, Prompt Engineering, RAG, Tool Calling, MCP, Context Engineering, Skill, Computer Use, Agent, Harness Engineering, Workflow, and Workspace Agent — with code snippets and actionable tips for each.",
+    descriptionZh: "12个AI概念的完整之旅——Token、提示词工程、RAG、工具调用、MCP、上下文工程、Skill、计算机使用、Agent、Harness工程、工作流和Workspace Agent——每个概念含代码示例和实操建议。",
+    category: "ai-basics",
+    tags: ["concepts", "beginner", "rag", "agent", "mcp", "workflow", "prompt-engineering", "guide"],
     difficulty: "beginner",
-    toolsMentioned: ["claude", "cursor", "deer-flow"],
-    date: "2026-07-01",
-  },
-  {
-    slug: "mastering-ai-workflow-beginner-custom-workbench",
-    title: "Mastering AI Workflow: A Beginner-Friendly Guide to Building Your Custom AI Workbench",
-    titleZh: "掌握AI工作流：新手友好的自定义AI工作台搭建指南",
-    description: "Build a personal AI workbench that boosted productivity by 400% — automate repetitive tasks, create custom Skills, and set up mobile AI office using TRAE Work. Step-by-step from task automation to full workbench.",
-    descriptionZh: "搭建提升400%效率的个人AI工作台——用TRAE Work自动化重复任务、创建自定义Skills、搭建移动AI办公。从任务自动化到完整工作台的逐步指南。",
-    category: "ai-tutorials",
-    tags: ["workflow", "automation", "trae", "skills", "productivity", "beginner"],
-    difficulty: "beginner",
-    toolsMentioned: ["trae-framework"],
-    date: "2026-07-01",
+    toolsMentioned: ["chatgpt", "langchain", "n8n", "pinecone"],
+    date: "2026-07-02",
   },
 
 """
@@ -44,400 +32,347 @@ articles_new = articles_src[:last_bracket] + new_articles + '];'
 with open('src/lib/articles.ts', 'w', encoding='utf-8') as f:
     f.write(articles_new)
 
-print('Part 1: 2 new articles added to articles.ts')
+print('Part 1: 1 new article added to articles.ts')
 
-# ===== Part 2: Add 2 article contents to article-content.ts =====
+# ===== Part 2: Add article content to article-content.ts =====
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "github-weekly-trending-ai-tools-agents-dominate": {
+  "dont-be-intimidated-ai-jargon-practical-guide-concepts": {
     content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> July 1, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Beginner</p>
+<p><strong>📅 Published:</strong> July 2, 2026 · <strong>🏷️ Category:</strong> AI Basics · <strong>📊 Level:</strong> Beginner</p>
 </div>
 
-<p>This week on GitHub, AI tools and Agents are making a splash, with video and memory-related tools seeing rapid growth. Let's dive into the top 10 projects that developers are buzzing about.</p>
+<p>The AI landscape is rife with jargon — Prompt, RAG, Agent, MCP, Workflow, and more. But these aren't just buzzwords; they represent a clear evolution of AI from a "chat tool" to a "real-world work system." Let's break down this journey with practical explanations and actionable insights.</p>
 
-<h2>1. OpenMontage — AI Video Production Studio</h2>
-<p><strong>+18.0k stars</strong> in a week, totaling 25.6k stars.</p>
-<ul>
-<li>12 production pipelines for animation, documentary, short film, and subtitle creation</li>
-<li>52 tools covering video generation, image creation, TTS, music, and subtitle processing</li>
-<li>500+ Agent skills with expert guidance at each stage</li>
-<li>Supports real material editing — arguably the most complete open-source video generation system</li>
-</ul>
+<h2>Chapter 1: Token & Context Window — How Much Can AI "See" at Once?</h2>
 
-<h2>2. Agent-Reach — No-API-Key Web Browsing for Agents</h2>
-<p><strong>+7.7k stars</strong> in a week, totaling 4.37k stars.</p>
-<ul>
-<li>Supports 10+ platforms (Twitter, CSDN, Xiaohongshu, Reddit, GitHub)</li>
-<li>One-click installation: copy a line to your Agent and it auto-configures</li>
-<li>Automatic failover: if a platform is blocked, switches to backup without user intervention</li>
-</ul>
+<p>When you interact with AI tools like ChatGPT, you might think it processes text like a human. In reality, AI breaks down input into tiny units called <strong>Tokens</strong>. For example, "I love artificial intelligence" might be split into tokens like <em>I, love, art, if, icial, intelligence</em> (varies by model).</p>
 
-<h2>3. codebase-memory-mcp — Intelligent Code Knowledge Graph</h2>
-<p><strong>+7.7k stars</strong> in a week, totaling 18.0k stars.</p>
-<ul>
-<li>Millisecond-level queries for 158 programming languages</li>
-<li><strong>99% reduction in token consumption</strong> compared to traditional methods</li>
-<li>Indexes the 2.8 million-line Linux kernel in 3 minutes, queries under 1 millisecond</li>
-<li>Single-file installation with zero dependencies, compatible with 11 assistants including Claude Code and Cursor</li>
-</ul>
-
-<h2>4. daily_stock_analysis — LLM-Driven Multi-Market Stock Analysis</h2>
-<p><strong>+7.1k stars</strong> in a week, totaling 50.6k stars.</p>
-<ul>
-<li>Supports A-shares, Hong Kong, US, Japanese, and Korean stocks</li>
-<li>Aggregates market data, news, and technical indicators for auto-generated buy/sell dashboards</li>
-<li>Sends updates to WeCom, Feishu, or Telegram</li>
-<li>Runs on GitHub Actions for zero-cost scheduling</li>
-</ul>
-
-<h2>5. Cognee — Long-Term Memory Platform for AI Agents</h2>
-<p><strong>+5.5k stars</strong> in a week, totaling 24.1k stars.</p>
-<ul>
-<li>Helps Agents remember important information across conversations</li>
-<li>Supports data import, knowledge graph construction, and semantic search</li>
-<li>End-to-end open-source and self-hostable, PostgreSQL as unified backend</li>
-<li>Outperforms previous SOTA in BEAM benchmark: 0.79 score in 100k token scenarios</li>
-</ul>
-
-<h2>6. Anthropic-Cybersecurity-Skills — 817 Security Skills for Agents</h2>
-<p><strong>+5.1k stars</strong> in a week, totaling 22.3k stars.</p>
-<ul>
-<li>Maps to MITRE ATT&CK, NIST CSF, ATLAS frameworks</li>
-<li>Covers 29 security domains: cloud security, threat hunting, incident analysis</li>
-<li>Provides expert-level operation manuals for penetration testing, threat hunting, and DFIR</li>
-</ul>
-
-<h2>7. ai-website-cloner-template — One-Command Website Cloning</h2>
-<p><strong>+4.6k stars</strong> in a week, totaling 22.3k stars.</p>
-<ul>
-<li>One command: <code>ai-website-cloner &lt;target-url&gt;</code></li>
-<li>AI analyzes the target site, extracts design specs, builds sections in parallel, merges into clean Next.js code</li>
-<li>Uses TypeScript, Next.js 16, Tailwind CSS v4 — up-to-date technology stack</li>
-</ul>
-
-<h2>8. Voicebox — Open-Source AI Voice Studio</h2>
-<p><strong>+4.0k stars</strong> in a week, totaling 35.0k stars.</p>
-<ul>
-<li>7 TTS engines supporting 23 languages</li>
-<li>Zero-shot voice cloning and full transcription</li>
-<li>Built with Tauri + Rust for local execution, privacy, and security</li>
-<li>Supports pitch, reverb, and delay effects switching</li>
-</ul>
-
-<h2>9. Penpot — Open-Source Figma Alternative</h2>
-<p><strong>+3.3k stars</strong> in a week, totaling 54.2k stars.</p>
-<ul>
-<li>Supports SVG, CSS, and HTML design with real-time collaboration</li>
-<li>Integrates with MCP servers for design-to-code workflow</li>
-<li>Runs in browser or self-hosted, written in Clojure</li>
-<li>Seamless design handoff and direct usable code export</li>
-</ul>
-
-<h2>10. Deer-Flow — ByteDance's Super Agent Framework</h2>
-<p><strong>+3.3k stars</strong> in a week, totaling 75.1k stars (highest on the list).</p>
-<ul>
-<li>LAN graph-driven, supporting sub-Agent sandbox execution</li>
-<li>Integrates IM channels like Telegram, Feishu, and WeChat</li>
-<li>Breaks down complex tasks for sub-Agents to execute in parallel</li>
-<li>Automates tasks from minutes to hours</li>
-</ul>
-
-<h2>常见问题</h2>
-
-<h3>Which of these projects is most immediately useful for an AI developer?</h3>
-<p>codebase-memory-mcp is the most impactful for daily AI coding work. It indexes your codebase into a knowledge graph and reduces token consumption by 99% — meaning your AI coding assistant can understand your entire project without burning through your context window. It works with Claude Code, Cursor, and 9 other assistants, installs as a single file with zero dependencies, and can index the entire Linux kernel (2.8M lines) in 3 minutes. For anyone doing AI-assisted development on non-trivial codebases, this is a game-changer.</p>
-
-<h3>Are these GitHub trending projects production-ready or just experiments?</h3>
-<p>Mixed. Deer-Flow (75.1k stars, ByteDance-backed) and Penpot (54.2k stars) are mature, production-tested projects. daily_stock_analysis (50.6k stars) is actively used by traders. codebase-memory-mcp (18k stars) is being adopted by professional dev teams. On the newer side, Agent-Reach (4.37k stars) and OpenMontage (25.6k stars) are growing fast but still maturing. The star counts are a decent proxy for maturity — projects above 20k stars generally have stable APIs and active maintenance. Below 10k, expect some rough edges and rapid API changes.</p>
-
-<h3>How do I choose which trending projects to actually adopt?</h3>
-<p>Three criteria: (1) Does it solve a problem you actually have right now? Don't adopt a tool just because it's trending. (2) Check the issue tracker — look at how many open issues there are and how quickly maintainers respond. A project with 50+ unanswered issues is a red flag. (3) Test with a small, non-critical task first. For codebase-memory-mcp, try it on a side project before pointing it at your production codebase. The best GitHub projects become essential parts of your workflow; the rest are interesting experiments you learn from and move on.</p>
-
-<div class="next-step">
-<p><strong>下一篇：</strong> <a href="/en/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: A Beginner-Friendly Guide to Building Your Custom AI Workbench →</a></p>
-</div>`,
-    contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年7月1日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>初级</p>
-</div>
-
-<p>本周GitHub上，AI工具和Agent掀起热潮，视频和记忆相关工具增长迅猛。让我们深入了解开发者热议的十大项目。</p>
-
-<h2>1. OpenMontage — AI视频制作工作室</h2>
-<p>一周<strong>+18.0k stars</strong>，总计25.6k stars。</p>
-<ul>
-<li>12条制作管线：动画、纪录片、短片、字幕创作</li>
-<li>52个工具覆盖视频生成、图像创作、TTS、音乐和字幕处理</li>
-<li>500+ Agent技能，每阶段有专家指导</li>
-<li>支持真实素材编辑——可能是最完整的开源视频生成系统</li>
-</ul>
-
-<h2>2. Agent-Reach — Agent免API密钥上网</h2>
-<p>一周<strong>+7.7k stars</strong>，总计4.37k stars。</p>
-<ul>
-<li>支持10+平台（Twitter、CSDN、小红书、Reddit、GitHub）</li>
-<li>一键安装：复制一行到Agent，自动配置一切</li>
-<li>自动故障切换：平台被屏蔽时自动切换备用方案，无需用户干预</li>
-</ul>
-
-<h2>3. codebase-memory-mcp — 智能代码知识图谱</h2>
-<p>一周<strong>+7.7k stars</strong>，总计18.0k stars。</p>
-<ul>
-<li>158种编程语言的毫秒级查询</li>
-<li>相比传统方法<strong>减少99% token消耗</strong></li>
-<li>3分钟索引280万行Linux内核，查询响应低于1毫秒</li>
-<li>单文件安装零依赖，兼容Claude Code、Cursor等11种编程助手</li>
-</ul>
-
-<h2>4. daily_stock_analysis — LLM驱动多市场股票分析</h2>
-<p>一周<strong>+7.1k stars</strong>，总计50.6k stars。</p>
-<ul>
-<li>支持A股、港股、美股、日股、韩股</li>
-<li>聚合市场数据、新闻和技术指标，自动生成买卖决策仪表盘</li>
-<li>发送更新到企业微信、飞书或Telegram</li>
-<li>运行在GitHub Actions上零成本调度</li>
-</ul>
-
-<h2>5. Cognee — AI Agent长期记忆平台</h2>
-<p>一周<strong>+5.5k stars</strong>，总计24.1k stars。</p>
-<ul>
-<li>帮助Agent跨对话记住重要信息</li>
-<li>支持数据导入、知识图谱构建和语义搜索</li>
-<li>端到端开源可自托管，PostgreSQL统一后端</li>
-<li>BEAM基准测试超越此前SOTA：100k token场景得分0.79</li>
-</ul>
-
-<h2>6. Anthropic-Cybersecurity-Skills — 817项Agent安全技能</h2>
-<p>一周<strong>+5.1k stars</strong>，总计22.3k stars。</p>
-<ul>
-<li>映射MITRE ATT&CK、NIST CSF、ATLAS等框架</li>
-<li>覆盖29个安全领域：云安全、威胁狩猎、事件分析</li>
-<li>提供渗透测试、威胁狩猎和DFIR的专家级操作手册</li>
-</ul>
-
-<h2>7. ai-website-cloner-template — 一条命令克隆网站</h2>
-<p>一周<strong>+4.6k stars</strong>，总计22.3k stars。</p>
-<ul>
-<li>一条命令：<code>ai-website-cloner &lt;目标URL&gt;</code></li>
-<li>AI自动分析目标网站、提取设计规范、并行构建各部分、合并为干净Next.js代码</li>
-<li>使用TypeScript、Next.js 16、Tailwind CSS v4——技术栈最新</li>
-</ul>
-
-<h2>8. Voicebox — 开源AI语音工作室</h2>
-<p>一周<strong>+4.0k stars</strong>，总计35.0k stars。</p>
-<ul>
-<li>7个TTS引擎支持23种语言</li>
-<li>零样本声音克隆和完整转录</li>
-<li>Tauri + Rust构建，本地执行保护隐私安全</li>
-<li>支持切换音高、混响和延迟效果</li>
-</ul>
-
-<h2>9. Penpot — 开源Figma替代品</h2>
-<p>一周<strong>+3.3k stars</strong>，总计54.2k stars。</p>
-<ul>
-<li>支持SVG、CSS和HTML设计，实时协作</li>
-<li>集成MCP服务器实现设计到代码工作流</li>
-<li>浏览器运行或自托管，Clojure编写</li>
-<li>设计稿无缝交接，直接导出可用代码</li>
-</ul>
-
-<h2>10. Deer-Flow — 字节跳动超级Agent框架</h2>
-<p>一周<strong>+3.3k stars</strong>，总计75.1k stars（榜单最高）。</p>
-<ul>
-<li>LAN图驱动，支持子Agent沙箱执行</li>
-<li>集成Telegram、飞书、微信等IM渠道</li>
-<li>拆解复杂任务由子Agent并行执行</li>
-<li>自动化数分钟到数小时的任务</li>
-</ul>
-
-<h2>常见问题</h2>
-
-<h3>哪个项目对AI开发者最直接有用？</h3>
-<p>codebase-memory-mcp对日常AI编程工作影响最大。它将你的代码库索引为知识图谱，减少99%的token消耗——意味着你的AI编程助手可以理解整个项目而不会耗尽上下文窗口。它兼容Claude Code、Cursor等11种助手，单文件安装零依赖，可在3分钟内索引整个Linux内核（280万行代码）。对于在非平凡代码库上进行AI辅助开发的任何人，这都是改变游戏规则的工具。</p>
-
-<h3>这些GitHub热门项目是生产就绪的还是只是实验？</h3>
-<p>混合的。Deer-Flow（75.1k stars，字节跳动支持）和Penpot（54.2k stars）是成熟、经过生产测试的项目。daily_stock_analysis（50.6k stars）被交易者积极使用。codebase-memory-mcp（18k stars）正被专业开发团队采用。较新的方面，Agent-Reach（4.37k stars）和OpenMontage（25.6k stars）增长迅速但仍在成熟中。星数是成熟度的合理代理——超过20k stars的项目通常有稳定的API和活跃维护。低于10k，预计会有一些粗糙边缘和快速API变更。</p>
-
-<h3>如何选择实际采用哪些热门项目？</h3>
-<p>三个标准：（1）它解决了你现在实际遇到的问题吗？不要仅仅因为一个工具热门就采用它。（2）检查issue跟踪器——看有多少未解决的issue以及维护者响应速度。50+未回复issue的项目是红旗。（3）先用小型非关键任务测试。对于codebase-memory-mcp，先在副项目上尝试再指向生产代码库。最好的GitHub项目会成为你工作流中不可或缺的部分；其余的是你从中学习然后继续前进的有趣实验。</p>
-
-<div class="next-step">
-<p><strong>下一篇：</strong> <a href="/zh/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：新手友好的自定义AI工作台搭建指南 →</a></p>
-</div>`,
-  },
-
-  "mastering-ai-workflow-beginner-custom-workbench": {
-    content: `<div class="meta-banner">
-<p><strong>📅 Published:</strong> July 1, 2026 · <strong>🏷️ Category:</strong> AI Tutorials · <strong>📊 Level:</strong> Beginner · <strong>🛠️ Tools:</strong> TRAE Work</p>
-</div>
-
-<p>In the evolving landscape of workplace productivity, leveraging AI to build a customized workflow is no longer a luxury but a necessity. This guide, tailored for beginners, will walk you through the practical steps to create your own AI workbench — just like the one that boosted work efficiency by 400%.</p>
-
-<h2>My AI Workbench: A Glimpse into Customization</h2>
-
-<p>Components of a self-built AI workbench:</p>
-<ul>
-<li><strong>Topic Management:</strong> Automatically scrapes data from various platforms to identify trending topics</li>
-<li><strong>Library:</strong> A web-based system for managing reading lists and notes, with easy retrieval and reading plan formulation</li>
-<li><strong>Schedule Management:</strong> A "Delegate to AI" button — one click assigns tasks to AI for automatic execution, with batch processing for multiple tasks</li>
-<li><strong>Experience Review Library:</strong> A self-coded writing application for fine-grained content modification</li>
-</ul>
-
-<h2>The Right Mindset: Augment, Not Compete</h2>
-
-<p>Forget the anxiety-inducing rhetoric about AI replacing humans. The correct approach is to <strong>use AI to augment yourself</strong>, not compete with it. Just as cars didn't make walking obsolete but expanded our reach, AI should be your tool to achieve more in less time.</p>
-
-<h2>Getting Started with TRAE Work</h2>
-
-<p>For beginners hesitant about technical hurdles, <strong>TRAE Work</strong> is an excellent choice — a leading domestic Agent application that's free to use, accessible on PC, web, and mobile, and integrated with the Feishu ecosystem.</p>
-
-<h2>Step 1: Automate Repetitive Tasks</h2>
-
-<p>The easiest way to start is identifying tasks you repeat weekly and find tedious. Jot them down — these are your candidates for automation.</p>
-
-<h3>Example Automations:</h3>
-
-<p><strong>1. Growth Daily Report:</strong> Previously, checking data across multiple platforms daily was tedious. Now, delegate to TRAE Work:</p>
-<blockquote>"Automatically crawl growth data from [platform names] and generate a daily report."</blockquote>
-
-<p><strong>2. Meeting Summary & Action Items:</strong> TRAE Work automatically reviews Feishu meeting notes at night, extracts methodologies, creates a knowledge base, and schedules to-dos:</p>
-<blockquote>"Read today's Feishu meeting notes, extract key methodologies, create a knowledge base, and schedule action items."</blockquote>
-
-<p><strong>3. Schedule Automation:</strong> Reminders for key focus areas daily, or auto-generated weekly/monthly reports:</p>
-<blockquote>"Remind me of key priorities every morning and generate a weekly summary."</blockquote>
-
-<h2>Step 2: Create Custom Skills</h2>
-
-<p>When tasks have a consistent pattern but aren't identical, turn them into <strong>Skills</strong> — think of them as your personalized AI apps.</p>
-
-<h3>How to Create Skills:</h3>
-
+<p>Tokens matter for three key reasons:</p>
 <ol>
-<li><strong>Find Existing Skills:</strong> Browse the TRAE Work community for pre-built skills. If none fit, ask TRAE Work to search GitHub or Reddit for similar functions.</li>
-<li><strong>Customize Skills:</strong> Once you find a skill, modify it by describing your needs: <em>"I want this Skill to scrape content from [platforms], filter for posts with at least [X] likes, format the output in [specific style], focus on [specific topics], and send the result to Feishu."</em></li>
+<li><strong>Context Limit:</strong> AI models have a maximum token capacity. This includes your query, conversation history, system prompts, document content, and tool responses. Exceeding it means earlier content gets "pushed out" — like a desk that can only hold 10 papers. This limit is called the <strong>Context Window</strong>.</li>
+<li><strong>Cost:</strong> Many AI services charge by token.</li>
+<li><strong>Memory:</strong> AI "forgets" earlier content when the context window overflows.</li>
 </ol>
 
-<h2>Step 3: Build Your AI Workbench</h2>
+<h2>Chapter 2: Prompt Engineering — How to Make AI Understand Your Task</h2>
 
-<p>As you accumulate skills, you'll want a centralized hub — the AI workbench where all automations and skills converge. Tell TRAE Work your requirements for the web page, including features and design. Iterate by communicating about UI adjustments and new features:</p>
-
-<blockquote>"I want to build a web page to manage all my viral content skills. It should display titles, engagement metrics, and allow easy filtering. Let's design the UI and add features like a search bar."</blockquote>
-
-<h2>Step 4: Mobile AI Office</h2>
-
-<p>To truly free yourself from your desk, leverage TRAE Work's mobile capabilities:</p>
+<p>Early AI users were excited by "type a query, get an answer." But they quickly realized <em>how</em> you ask matters:</p>
 <ul>
-<li><strong>Sync Across Devices:</strong> Bind your PC, web, and mobile accounts for cloud synchronization</li>
-<li><strong>Delegate Tasks on the Go:</strong> Dictate an idea into your phone, and TRAE Work files it into your idea library or adds it to your calendar</li>
-<li><strong>Remote Document Handling:</strong> Command TRAE Work via mobile to edit a document on your office computer and send it: <em>"Edit [document name] as per [client's requirements] and send it to [email address]."</em></li>
+<li>Vague: <em>"Help me write a product plan."</em> → generic, useless output</li>
+<li>Detailed: <em>"You are a senior product manager. Write a product plan for an AI tool targeted at developers. Include target users, core pain points, feature modules, business model, and go-to-market strategy. Output in a table."</em> → structured, relevant results</li>
 </ul>
 
-<h2>The Human Touch in an AI-Driven World</h2>
+<p>A good prompt includes: <strong>Role</strong> (who AI should act as), <strong>Task</strong> (clear goal), <strong>Context</strong> (background), <strong>Format</strong> (output structure), <strong>Constraints</strong> (what to avoid), and <strong>Examples</strong> (desired output).</p>
 
-<p>While AI excels at execution and structured thinking, it can't replace <strong>human emotional experiences and real-life experiences</strong>. As you offload tasks to AI, you'll find more time for team collaboration, offline meetups, idea exchanges, and personal relationships. AI handles the "work" and "labor", while you focus on "action" — the unique human elements of creativity, connection, and self-expression.</p>
+<h2>Chapter 3: RAG (Retrieval-Augmented Generation) — How AI Finds External Information</h2>
 
-<p>Start small, automate the repetitive, customize your skills, and build a workbench that grows with you. The future of work is not about competing with AI, but about harnessing it to be more human.</p>
+<p>AI can't know what it hasn't been trained on — like your company's internal docs or yesterday's news. <strong>RAG</strong> solves this by having AI "search first, then answer."</p>
 
-<h2>常见问题</h2>
-
-<h3>What's the difference between TRAE Work and regular Trae (the coding IDE)?</h3>
-<p>TRAE Work is an Agent application focused on task automation and workflow orchestration — it's designed for non-developers to automate daily work tasks. Regular Trae (trae-framework) is an AI coding IDE similar to Cursor, focused on code generation and software development. TRAE Work integrates with Feishu, runs on mobile, and handles things like meeting summaries and data scraping. Think of Trae as your AI programmer and TRAE Work as your AI personal assistant. They complement each other but serve different audiences.</p>
-
-<h3>How much time does it take to set up a useful AI workbench?</h3>
-<p>Start with one automation (Step 1) — that takes about 30 minutes the first time, 5 minutes once you're familiar. After a week of using that one automation, you'll naturally identify 2-3 more repetitive tasks to automate. A basic workbench with 3-5 automations can be built over a weekend. The full workbench described in this article (topic management, library, schedule, review system) took the author about 2-3 weeks of incremental building. The key is starting small and adding incrementally — don't try to build everything at once.</p>
-
-<h3>Can I build an AI workbench without TRAE Work?</h3>
-<p>Yes. The principles apply to any AI automation tool — Claude Code with custom slash commands, Codex with Agent skills, n8n for visual workflows, or even a combination of Zapier + ChatGPT. TRAE Work is recommended because it's free, has mobile support, and integrates with Feishu (popular in Chinese workplaces). If you're outside the Feishu ecosystem, Claude Code + custom scripts or n8n are excellent alternatives. The methodology (identify repetitive tasks → automate → create skills → build workbench) works regardless of the tool.</p>
-
-<div class="next-step">
-<p><strong>上一篇：</strong> <a href="/en/article/github-weekly-trending-ai-tools-agents-dominate">GitHub Weekly Trending: AI Tools and Agents Dominate the Chart ←</a></p>
-</div>`,
-    contentZh: `<div class="meta-banner">
-<p><strong>📅 发布日期：</strong>2026年7月1日 · <strong>🏷️ 分类：</strong>AI教程 · <strong>📊 难度：</strong>初级 · <strong>🛠️ 工具：</strong>TRAE Work</p>
-</div>
-
-<p>在职场生产力不断演变的格局中，利用AI构建自定义工作流已不再是奢侈品而是必需品。本指南专为初学者量身定制，将带你完成创建自己AI工作台的实操步骤——就像那个将工作效率提升400%的工作台一样。</p>
-
-<h2>我的AI工作台：一窥自定义</h2>
-
-<p>自建AI工作台的组件：</p>
-<ul>
-<li><strong>选题管理：</strong> 自动从各平台抓取数据，帮你发现热门话题</li>
-<li><strong>图书馆：</strong> 基于Web的阅读清单和笔记管理系统，方便检索和制定阅读计划</li>
-<li><strong>日程管理：</strong> "委托给AI"按钮——一键将任务分配给AI自动执行，支持多任务打包批处理</li>
-<li><strong>心得复盘库：</strong> 自编码的写作应用，实现精细化内容修改</li>
-</ul>
-
-<h2>正确心态：增强，而非竞争</h2>
-
-<p>忘记那些引发焦虑的"AI取代人类"论调。正确的方式是<strong>用AI增强自己</strong>，而非与它竞争。正如汽车没有让步行过时而是扩展了我们的活动范围，AI应该是你用更少时间实现更多目标的工具。</p>
-
-<h2>从TRAE Work开始</h2>
-
-<p>对于担心技术门槛的初学者，<strong>TRAE Work</strong>是绝佳选择——领先的国产Agent应用，免费使用，支持PC、网页和移动端，集成飞书生态。</p>
-
-<h2>第1步：自动化重复任务</h2>
-
-<p>最简单的开始方式是识别你每周重复且觉得繁琐的任务。记下来——这些就是你的自动化候选。</p>
-
-<h3>示例自动化：</h3>
-
-<p><strong>1. 增长日报：</strong> 以前每天要跨多个平台查数据。现在委托给TRAE Work：</p>
-<blockquote>"自动抓取[平台名称]的增长数据并生成日报。"</blockquote>
-
-<p><strong>2. 会议总结与行动项：</strong> TRAE Work晚上自动审阅飞书会议笔记，提取方法论，创建知识库，安排待办：</p>
-<blockquote>"阅读今天的飞书会议笔记，提取关键方法论，创建知识库，安排行动项。"</blockquote>
-
-<p><strong>3. 日程自动化：</strong> 每日提醒关键重点，或自动生成周/月报：</p>
-<blockquote>"每天早上提醒我关键优先级，生成周报总结。"</blockquote>
-
-<h2>第2步：创建自定义Skills</h2>
-
-<p>当任务有固定模式但不完全相同时，将它们转化为<strong>Skills</strong>——把它们想象成你的个性化AI应用。</p>
-
-<h3>如何创建Skills：</h3>
-
+<p>The RAG process:</p>
 <ol>
-<li><strong>找现有Skills：</strong> 浏览TRAE Work社区找预建技能。没有合适的，让TRAE Work在GitHub或Reddit搜索类似功能。</li>
-<li><strong>自定义Skills：</strong> 找到技能后通过描述需求修改：<em>"我要这个Skill从[平台]抓取内容，筛选至少[X]赞的帖子，按[特定风格]格式化输出，聚焦[特定主题]，并将结果发送到飞书。"</em></li>
+<li><strong>Ingest Data:</strong> Add documents to a Knowledge Base</li>
+<li><strong>Embed Text:</strong> Convert text into numerical vectors (Embeddings) for semantic similarity</li>
+<li><strong>Retrieve:</strong> When you ask, the system retrieves relevant chunks from the Vector Database</li>
+<li><strong>Generate:</strong> AI answers based on the retrieved information</li>
 </ol>
 
-<h2>第3步：搭建AI工作台</h2>
+<p>Example: Ask <em>"How many days in advance do I need to apply for leave?"</em> RAG searches the employee handbook, retrieves the policy, and answers with citations.</p>
 
-<p>随着技能积累，你需要一个集中枢纽——AI工作台，所有自动化和技能汇聚于此。告诉TRAE Work你对网页的需求，包括功能和设计。通过沟通迭代UI调整和新功能：</p>
+<pre><code class="language-python">from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import Pinecone
+import pinecone
 
-<blockquote>"我想建一个网页管理所有爆款内容技能。应显示标题、互动指标，支持便捷筛选。我们来设计UI，添加搜索栏等功能。"</blockquote>
+pinecone.init(api_key="your-api-key", environment="your-environment")
+index = pinecone.Index("your-index-name")
 
-<h2>第4步：移动AI办公</h2>
+embeddings = OpenAIEmbeddings()
+vector_store = Pinecone.from_texts(
+    texts=["Your company policy text here..."],
+    embedding=embeddings,
+    index_name="your-index-name"
+)
 
-<p>要真正摆脱办公桌，利用TRAE Work的移动能力：</p>
+query = "How to apply for leave?"
+docs = vector_store.similarity_search(query)
+print(docs[0].page_content)</code></pre>
+
+<h2>Chapter 4: Tool Calling — How AI Takes Action Beyond Text</h2>
+
+<p>While RAG lets AI access information, <strong>Tool Calling</strong> (Function Calling) lets AI <em>act</em> — checking real-time data, executing code, or interacting with apps.</p>
+
 <ul>
-<li><strong>跨设备同步：</strong> 绑定PC、网页和移动端账号实现云同步</li>
-<li><strong>随时随地委托：</strong> 对着手机口述想法，TRAE Work将其归档到想法库或添加到日历</li>
-<li><strong>远程文档处理：</strong> 通过手机命令TRAE Work编辑办公电脑上的文档并发送：<em>"按[客户要求]编辑[文档名]并发送到[邮箱]。"</em></li>
+<li>Ask: <em>"What's my order status?"</em> → AI calls your e-commerce API → <em>"Order #12345: Shipped."</em></li>
+<li>Ask: <em>"Run this Python code: print(2+2)"</em> → AI executes → <em>"4"</em></li>
 </ul>
 
-<h2>AI驱动世界中的人性触感</h2>
+<p>Define your tool's schema in JSON with name and parameters, then instruct AI to use it when needed.</p>
 
-<p>虽然AI擅长执行和结构化思维，但它无法替代<strong>人类的情感体验和真实生活经历</strong>。当你把任务交给AI，你会发现更多时间用于团队协作、线下聚会、想法交流和个人关系。AI处理"工作"和"劳动"，你专注"行动"——创造力、连接和自我表达这些独特的人类元素。</p>
+<h2>Chapter 5: MCP (Model-Component Protocol) — How AI Connects to Tools Uniformly</h2>
 
-<p>从小处开始，自动化重复的，自定义你的技能，构建一个与你一起成长的工作台。工作的未来不是与AI竞争，而是驾驭它变得更人性化。</p>
+<p>As you add more tools, connecting them becomes chaotic — each has its own interface. <strong>MCP</strong> is a standard protocol for AI to connect to external tools, like USB-C for electronics. It standardizes how tools expose capabilities, how AI discovers and calls them, and how parameters, returns, and security are handled.</p>
+
+<h2>Chapter 6: Context Engineering — What Information Should AI See?</h2>
+
+<p>Beyond writing good prompts, you need to manage the <em>flow of information</em> AI receives — this is <strong>Context Engineering</strong>. For an AI customer support agent, context might include: purchase history, past support tickets, current order status, and refund policies. Too little context → wrong answers; too much → confusion. Use tools like LlamaIndex to automate context assembly.</p>
+
+<h2>Chapter 7: Skill — How AI Reuses Proven Workflows</h2>
+
+<p><strong>Skill</strong> is turning repetitive tasks into reusable AI workflows. Instead of explaining "how to write a weekly report" every time, save the instructions as a Skill:</p>
+<ol>
+<li>Retrieve completed tasks from project management tool</li>
+<li>Extract key achievements and risks</li>
+<li>Format into a template</li>
+<li>Adjust tone to match company standards</li>
+</ol>
+<p>Use tools like Dify or Microsoft Copilot Studio to create and deploy Skills.</p>
+
+<h2>Chapter 8: Computer Use — How AI Operates Like a Human on Desktop/Web</h2>
+
+<p>Not all systems have APIs. <strong>Computer Use</strong> lets AI interact with software and web pages like a human — clicking buttons, filling forms, navigating UIs. Example: automating expense report submission without an API — AI opens the portal, logs in, fills the form, attaches receipt, submits.</p>
+
+<h2>Chapter 9: Agent — How AI Autonomously Completes Complex Tasks</h2>
+
+<p>An <strong>Agent</strong> is AI that can plan, act, and adapt to complete a goal. Unlike a chatbot (responds to queries) or tool-calling AI (single actions), an Agent can:</p>
+<ol>
+<li><strong>Plan:</strong> Break a goal into steps</li>
+<li><strong>Act:</strong> Call tools, use Skills, interact with computers</li>
+<li><strong>Reflect:</strong> Adjust plans based on results</li>
+</ol>
+
+<p>Example: A coding Agent fixing a bug — identifies bug from error → retrieves code file → modifies code → runs tests → if tests fail, repeats.</p>
+
+<pre><code class="language-python">from langchain.agents import AgentType, initialize_agent, load_tools
+
+tools = load_tools(["serpapi", "llm-math"], llm=your_llm)
+agent = initialize_agent(
+    tools, your_llm,
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    verbose=True
+)
+agent.run("What's the weather in Tokyo? Then calculate how many days until summer solstice.")</code></pre>
+
+<h2>Chapter 10: Harness Engineering — How to Deploy Agents Safely</h2>
+
+<p>Agents are powerful but risky — they might delete files, write bad code, or access sensitive data. <strong>Harness Engineering</strong> provides safeguards: <strong>Sandboxing</strong> (restrict access to test branches, not production), <strong>Approval Flows</strong> (human sign-off for critical actions), and <strong>Logging & Auditing</strong> (track every action). Start with a sandbox — have the Agent push to a staging branch first, requiring human merge to main.</p>
+
+<h2>Chapter 11: Workflow — How to Orchestrate AI and Tools into Processes</h2>
+
+<p>Real-world work is a series of steps. <strong>Workflow</strong> tools (n8n, Zapier, LangGraph) string together AI actions, tool calls, and human approvals into automated processes. Example: "New Customer Inquiry → AI Generates Response → Human Approves → Send Email → Log in CRM."</p>
+
+<pre><code class="language-python">from langgraph.graph import StateGraph, START
+
+graph = StateGraph()
+
+def generate_response(state):
+    return {"response": your_llm.generate(state["inquiry"])}
+
+def human_approve(state):
+    return {"approved": input("Approve? (y/n)") == "y"}
+
+def send_email(state):
+    return {"email_sent": True}
+
+graph.add_node("generate", generate_response)
+graph.add_node("approve", human_approve)
+graph.add_node("send", send_email)
+graph.add_edge(START, "generate")
+graph.add_edge("generate", "approve")
+graph.add_edge("approve", "send", cond=lambda s: s["approved"])
+
+app = graph.compile()
+result = app.invoke({"inquiry": "I'm interested in your product."})</code></pre>
+
+<h2>Chapter 12: Workspace Agent — How AI Becomes a Team Member</h2>
+
+<p>A <strong>Workspace Agent</strong> lives in your team's work environment, understanding long-term context: team projects, document locations, customer histories, and role-based permissions. Example: automatically drafts weekly reports by pulling completed tasks from project management, identifying risks from meetings, summarizing code commits, and formatting for approval. Use tools like CrewAI to manage agent roles and workflows within the workspace.</p>
+
+<h2>Conclusion: AI Jargon Is a Map, Not a Maze</h2>
+
+<p>Each term — from Token to Workspace Agent — solves a specific problem in making AI useful for real work. Instead of getting lost in jargon, focus on <em>what problem each concept solves</em> and <em>how you can apply it</em>. Start small: use Prompt Engineering for better outputs, add RAG for external knowledge, then Tool Calling for actions, and build from there. Before you know it, you'll be navigating the AI landscape with confidence.</p>
 
 <h2>常见问题</h2>
 
-<h3>TRAE Work和普通Trae（编程IDE）有什么区别？</h3>
-<p>TRAE Work是一个专注于任务自动化和工作流编排的Agent应用——为非开发者自动化日常工作任务而设计。普通Trae（trae-framework）是类似Cursor的AI编程IDE，专注于代码生成和软件开发。TRAE Work集成飞书，可在移动端运行，处理会议总结和数据抓取等事务。把Trae想象成你的AI程序员，TRAE Work是你的AI个人助理。它们互补但服务不同受众。</p>
+<h3>What's the most important concept for a beginner to master first?</h3>
+<p>Prompt Engineering. It's the foundation everything else builds on — even RAG, Agents, and Workflows ultimately depend on giving AI clear instructions. Master the Role-Task-Context-Format-Constraints-Examples framework first. Once you can consistently get quality outputs from a simple chat interface, the other concepts (RAG, Tool Calling, Agents) become natural extensions rather than confusing abstractions. Most beginners try to jump straight to building Agents without solid prompt skills, and the result is frustration when the Agent does unpredictable things.</p>
 
-<h3>搭建一个有用的AI工作台需要多长时间？</h3>
-<p>从一项自动化开始（第1步）——第一次约需30分钟，熟悉后5分钟。使用一周后，你自然会识别出2-3个更多重复任务来自动化。一个包含3-5项自动化的基础工作台可以在一个周末内搭建完成。本文描述的完整工作台（选题管理、图书馆、日程、复盘系统）作者花了约2-3周逐步构建。关键是小处开始逐步添加——不要试图一次构建所有东西。</p>
+<h3>How are RAG, Tool Calling, and Agents different from each other?</h3>
+<p>Think of them as escalating levels of AI capability: <strong>RAG</strong> lets AI <em>read</em> external information (search docs, retrieve facts). <strong>Tool Calling</strong> lets AI <em>act</em> (call APIs, run code, send emails). <strong>Agents</strong> combine both plus planning — they decide <em>when</em> to read, <em>when</em> to act, and <em>how</em> to adjust when things go wrong. A chatbot with RAG can answer "What's our refund policy?" An AI with Tool Calling can process "Refund order #12345." An Agent can handle "A customer is unhappy about a late delivery — figure out what happened and make it right."</p>
 
-<h3>没有TRAE Work能搭建AI工作台吗？</h3>
-<p>可以。这些原则适用于任何AI自动化工具——带自定义斜杠命令的Claude Code、带Agent技能的Codex、用于可视化工作流的n8n，甚至Zapier+ChatGPT的组合。推荐TRAE Work因为它免费、有移动端支持、集成飞书（在中国职场流行）。如果你不在飞书生态中，Claude Code+自定义脚本或n8n是优秀的替代方案。方法论（识别重复任务→自动化→创建技能→搭建工作台）无论使用什么工具都适用。</p>
+<h3>Do I need to know how to code to use these AI concepts?</h3>
+<p>Not for the concepts themselves — you can use Prompt Engineering, Skills (via no-code tools like Dify), and basic Workflows (via Zapier or n8n's visual editor) without coding. RAG and Tool Calling become easier with some coding knowledge but have no-code alternatives (NotebookLM for RAG, Kouzi for tool-based agents). Computer Use and Harness Engineering are more code-heavy. The chapters in this guide are ordered roughly from least to most technical — start from Chapter 1 and go as far as your comfort level allows. Each chapter builds on the previous ones, so even if you stop at Chapter 7, you'll have a solid practical foundation.</p>
 
 <div class="next-step">
-<p><strong>上一篇：</strong> <a href="/zh/article/github-weekly-trending-ai-tools-agents-dominate">GitHub周趋势：AI工具与Agent霸榜 ←</a></p>
+<p><strong>上一篇：</strong> <a href="/en/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: A Beginner-Friendly Guide to Building Your Custom AI Workbench ←</a></p>
+</div>`,
+    contentZh: `<div class="meta-banner">
+<p><strong>📅 发布日期：</strong>2026年7月2日 · <strong>🏷️ 分类：</strong>AI基础 · <strong>📊 难度：</strong>初级</p>
+</div>
+
+<p>AI领域充斥着术语——Prompt、RAG、Agent、MCP、Workflow等等。但它们不只是流行词；它们代表了AI从"聊天工具"到"实际工作系统"的清晰演变。让我们用实操解释和可执行的洞察来拆解这段旅程。</p>
+
+<h2>第1章：Token与上下文窗口——AI一次能"看到"多少？</h2>
+
+<p>当你与ChatGPT等AI工具交互时，你可能以为它像人类一样处理文本。实际上，AI将输入分解为称为<strong>Token</strong>的微小单元。例如"I love artificial intelligence"可能被分割为<em>I, love, art, if, icial, intelligence</em>（不同模型分割方式不同）。</p>
+
+<p>Token重要的三个原因：</p>
+<ol>
+<li><strong>上下文限制：</strong>AI模型有最大token容量。包括你的查询、对话历史、系统提示、文档内容和工具响应。超出限制意味着更早的内容被"推出"——像一张只能放10张纸的桌子，新纸把旧纸推下去。这个限制叫<strong>上下文窗口</strong>。</li>
+<li><strong>成本：</strong>许多AI服务按token收费。</li>
+<li><strong>记忆：</strong>上下文窗口溢出时AI"忘记"更早的内容。</li>
+</ol>
+
+<h2>第2章：提示词工程——如何让AI理解你的任务</h2>
+
+<p>早期AI用户对"输入问题，得到答案"感到兴奋。但很快发现<em>如何</em>提问很重要：</p>
+<ul>
+<li>模糊：<em>"帮我写产品方案。"</em>→ 通用、无用的输出</li>
+<li>详细：<em>"你是一名高级产品经理。为面向开发者的AI工具写产品方案。包含目标用户、核心痛点、功能模块、商业模式和上市策略。用表格输出。"</em>→ 结构化、相关的结果</li>
+</ul>
+
+<p>好的提示词包含：<strong>角色</strong>（AI应扮演谁）、<strong>任务</strong>（明确目标）、<strong>背景</strong>（上下文信息）、<strong>格式</strong>（输出结构）、<strong>约束</strong>（避免什么）和<strong>示例</strong>（期望输出）。</p>
+
+<h2>第3章：RAG（检索增强生成）——AI如何查找和使用外部信息</h2>
+
+<p>AI不知道没被训练过的内容——比如你公司的内部文档或昨天的新闻。<strong>RAG</strong>通过让AI"先搜索，再回答"来解决这个问题。</p>
+
+<p>RAG流程：</p>
+<ol>
+<li><strong>摄入数据：</strong>将文档添加到知识库</li>
+<li><strong>文本嵌入：</strong>将文本转换为数值向量（Embeddings）以判断语义相似度</li>
+<li><strong>检索：</strong>当你提问时，系统从向量数据库中检索相关片段</li>
+<li><strong>生成：</strong>AI基于检索到的信息回答</li>
+</ol>
+
+<p>示例：问<em>"请假需要提前几天申请？"</em>RAG搜索员工手册，检索相关政策，然后带引用回答。</p>
+
+<pre><code class="language-python">from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import Pinecone
+import pinecone
+
+pinecone.init(api_key="your-api-key", environment="your-environment")
+index = pinecone.Index("your-index-name")
+
+embeddings = OpenAIEmbeddings()
+vector_store = Pinecone.from_texts(
+    texts=["你的公司政策文本..."],
+    embedding=embeddings,
+    index_name="your-index-name"
+)
+
+query = "如何申请请假？"
+docs = vector_store.similarity_search(query)
+print(docs[0].page_content)</code></pre>
+
+<h2>第4章：工具调用——AI如何在文本之外采取行动</h2>
+
+<p>RAG让AI获取信息，<strong>工具调用</strong>（Function Calling）让AI<em>行动</em>——查询实时数据、执行代码或与应用交互。</p>
+
+<ul>
+<li>问：<em>"我的订单状态是什么？"</em>→ AI调用电商API → <em>"订单#12345：已发货。"</em></li>
+<li>问：<em>"运行这段Python代码：print(2+2)"</em>→ AI执行 → <em>"4"</em></li>
+</ul>
+
+<p>用JSON定义工具Schema（名称和参数），然后在提示词中指示AI在需要时使用该工具。</p>
+
+<h2>第5章：MCP（模型组件协议）——AI如何统一连接工具</h2>
+
+<p>随着工具增多，连接变得混乱——每个工具有自己的接口。<strong>MCP</strong>是AI连接外部工具的标准协议，就像电子设备的USB-C。它标准化了工具如何暴露能力、AI如何发现和调用工具、以及参数、返回值和安全的处理方式。</p>
+
+<h2>第6章：上下文工程——AI应该看到什么信息？</h2>
+
+<p>除了写好提示词，你还需要管理AI接收的<em>信息流</em>——这就是<strong>上下文工程</strong>。对于AI客服Agent，上下文可能包括：购买历史、过往工单、当前订单状态和退款政策。上下文太少→错误答案；太多→混乱。使用LlamaIndex等工具自动化上下文组装。</p>
+
+<h2>第7章：Skill——AI如何复用经过验证的工作流</h2>
+
+<p><strong>Skill</strong>是将重复任务转化为可复用AI工作流。不用每次都解释"如何写周报"，将指令保存为Skill：</p>
+<ol>
+<li>从项目管理工具获取已完成任务</li>
+<li>提取关键成就和风险</li>
+<li>格式化为模板</li>
+<li>调整语气匹配公司标准</li>
+</ol>
+<p>使用Dify或Microsoft Copilot Studio等工具创建和部署Skills。</p>
+
+<h2>第8章：Computer Use——AI如何像人类一样操作桌面/网页</h2>
+
+<p>不是所有系统都有API。<strong>Computer Use</strong>让AI像人类一样与软件和网页交互——点击按钮、填写表单、导航UI。示例：无需API自动提交报销单——AI打开报销门户、登录、填写金额、附上收据、提交表单。</p>
+
+<h2>第9章：Agent——AI如何自主完成复杂任务</h2>
+
+<p><strong>Agent</strong>是能规划、行动和适应以完成目标的AI。与聊天机器人（响应查询）或工具调用AI（单次操作）不同，Agent能：</p>
+<ol>
+<li><strong>规划：</strong>将目标分解为步骤</li>
+<li><strong>行动：</strong>调用工具、使用Skills、与计算机交互</li>
+<li><strong>反思：</strong>根据结果调整计划</li>
+</ol>
+
+<p>示例：编程Agent修复Bug——从错误信息识别Bug→获取代码文件→修改代码→运行测试→测试失败则重复。</p>
+
+<pre><code class="language-python">from langchain.agents import AgentType, initialize_agent, load_tools
+
+tools = load_tools(["serpapi", "llm-math"], llm=your_llm)
+agent = initialize_agent(
+    tools, your_llm,
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    verbose=True
+)
+agent.run("东京天气如何？然后计算距离夏至还有多少天。")</code></pre>
+
+<h2>第10章：Harness工程——如何安全部署Agent</h2>
+
+<p>Agent强大但有风险——可能删除文件、写出糟糕代码或访问敏感数据。<strong>Harness工程</strong>提供安全保障：<strong>沙箱</strong>（限制Agent只修改测试分支而非生产代码）、<strong>审批流程</strong>（关键操作需人类签字）和<strong>日志审计</strong>（追踪Agent每项操作）。从沙箱开始——让Agent先推送到staging分支，由人类合并到main。</p>
+
+<h2>第11章：Workflow——如何将AI和工具编排为流程</h2>
+
+<p>实际工作是系列步骤。<strong>Workflow</strong>工具（n8n、Zapier、LangGraph）将AI操作、工具调用和人类审批串联成自动化流程。示例："新客户咨询→AI生成回复→人类审批→发送邮件→记录到CRM。"</p>
+
+<pre><code class="language-python">from langgraph.graph import StateGraph, START
+
+graph = StateGraph()
+
+def generate_response(state):
+    return {"response": your_llm.generate(state["inquiry"])}
+
+def human_approve(state):
+    return {"approved": input("批准？(y/n)") == "y"}
+
+def send_email(state):
+    return {"email_sent": True}
+
+graph.add_node("generate", generate_response)
+graph.add_node("approve", human_approve)
+graph.add_node("send", send_email)
+graph.add_edge(START, "generate")
+graph.add_edge("generate", "approve")
+graph.add_edge("approve", "send", cond=lambda s: s["approved"])
+
+app = graph.compile()
+result = app.invoke({"inquiry": "我对你们的产品感兴趣。"})</code></pre>
+
+<h2>第12章：Workspace Agent——AI如何成为团队成员</h2>
+
+<p><strong>Workspace Agent</strong>存在于团队工作环境中，理解长期上下文：团队项目和任务、文档位置、客户历史、基于角色的权限。示例：自动起草周报——从项目管理工具拉取已完成任务、从会议中识别风险、总结代码提交、格式化后送审。使用CrewAI等工具管理工作空间内的Agent角色和工作流。</p>
+
+<h2>结语：AI术语是地图，不是迷宫</h2>
+
+<p>每个术语——从Token到Workspace Agent——解决了让AI对实际工作有用的特定问题。不要迷失在术语中，专注<em>每个概念解决什么问题</em>和<em>你如何应用它</em>。从小处开始：用提示词工程获得更好的输出，然后添加RAG获取外部知识，接着工具调用执行操作，逐步构建。不知不觉中，你将自信地在AI领域中导航。</p>
+
+<h2>常见问题</h2>
+
+<h3>初学者最应该先掌握哪个概念？</h3>
+<p>提示词工程。它是所有其他概念的基础——甚至RAG、Agent和工作流最终都依赖于给AI清晰的指令。先掌握角色-任务-背景-格式-约束-示例框架。一旦你能从简单的聊天界面持续获得高质量输出，其他概念（RAG、工具调用、Agent）就成为自然的扩展而非令人困惑的抽象。大多数初学者试图直接跳到构建Agent而没有扎实的提示词技能，结果是Agent做不可预测的事情时感到沮丧。</p>
+
+<h3>RAG、工具调用和Agent之间有什么区别？</h3>
+<p>将它们想象成AI能力的逐步升级：<strong>RAG</strong>让AI<em>读取</em>外部信息（搜索文档、检索事实）。<strong>工具调用</strong>让AI<em>行动</em>（调用API、运行代码、发送邮件）。<strong>Agent</strong>结合两者再加上规划——它们决定<em>何时</em>读取、<em>何时</em>行动以及<em>如何</em>在出错时调整。带RAG的聊天机器人能回答"退款政策是什么？"带工具调用的AI能处理"退款订单#12345。"Agent能处理"客户因延迟交付不满——弄清楚发生了什么并妥善解决。"</p>
+
+<h3>使用这些AI概念需要会编程吗？</h3>
+<p>概念本身不需要——你可以无需编码使用提示词工程、Skills（通过Dify等无代码工具）和基础工作流（通过Zapier或n8n的可视化编辑器）。RAG和工具调用有一些编码知识会更容易但有无代码替代方案（NotebookLM做RAG，扣子做基于工具的Agent）。Computer Use和Harness工程更偏代码。本指南的章节大致按技术性从低到高排列——从第1章开始，根据你的舒适程度尽可能深入。每章都以前面章节为基础，所以即使停在第7章，你也会有一个扎实的实践基础。</p>
+
+<div class="next-step">
+<p><strong>上一篇：</strong> <a href="/zh/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：新手友好的自定义AI工作台搭建指南 ←</a></p>
 </div>`,
   },
 
@@ -449,6 +384,6 @@ content_new = content_src[:last_brace] + new_contents + '};'
 with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f:
     f.write(content_new)
 
-print('Part 2: 2 article contents added to article-content.ts')
+print('Part 2: 1 article content added to article-content.ts')
 
 print('\n=== All done! Run build to verify ===')
