@@ -2396,4 +2396,29 @@ export const articles: Article[] = [
     date: "2026-07-02",
   },
 
+  {
+    slug: "understanding-large-language-models-principles-architecture",
+    title: "Understanding Large Language Models: Principles, Architecture, and Practical Usage",
+    titleZh: "大语言模型深度解读：从Transformer原理到实战应用",
+    description: "A comprehensive guide breaking down LLM core principles, Transformer architecture with PyTorch implementation, common limitations (hallucinations, context decay, math errors), and practical tips for choosing and using models effectively in real-world tasks.",
+    descriptionZh: "从Transformer架构原理到PyTorch代码实现，全面解读大语言模型的核心机制、常见局限（幻觉、上下文衰减、数学错误）以及实际使用中的模型选择与提示技巧。",
+    category: "AI Learning",
+    tags: ["LLM", "Transformer", "PyTorch", "AI Architecture", "Prompt Engineering", "Deep Learning"],
+    difficulty: "intermediate",
+    toolsMentioned: ["PyTorch"],
+    date: "2026-07-03",
+  },
+  {
+    slug: "complete-guide-codex-zero-to-advanced",
+    title: "Complete Guide to Codex: From Zero to Advanced Development Workflow",
+    titleZh: "Codex完全指南：从零基础到高级开发工作流",
+    description: "A step-by-step walkthrough of OpenAI Codex from installation and project setup through Git version control, agent.md configuration, Electron refactoring, plugins & skills, and mobile control — covering the complete development workflow for beginners and advanced users alike.",
+    descriptionZh: "从安装配置、项目创建到Git版本控制、agent.md跨项目规则、Electron重构、插件与技能扩展、移动端控制，全方位覆盖Codex开发工作流的每一步操作。",
+    category: "AI Tools",
+    tags: ["Codex", "OpenAI", "AI Development", "CLI", "Git", "Electron", "Automation"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent", "Electron"],
+    date: "2026-07-03",
+  },
+
 ];
