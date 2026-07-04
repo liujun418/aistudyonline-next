@@ -2421,4 +2421,29 @@ export const articles: Article[] = [
     date: "2026-07-03",
   },
 
+  {
+    slug: "ai-bubble-or-opportunity-guide-ordinary-people",
+    title: "Is AI a Bubble or Opportunity? A Guide for Ordinary People to Navigate the AI Wave",
+    titleZh: "AI是泡沫还是机遇？普通人应对AI浪潮的生存指南",
+    description: "Using the 'survivor model' from the 2000 internet bubble (Foundation/Platform/Application layers), this guide maps today's AI landscape and presents three actionable opportunities for ordinary people — career enhancement, side hustles, and frontier innovation — ranked by risk level.",
+    descriptionZh: "用2000年互联网泡沫的'幸存者模型'（基础层/平台层/应用层）映射当今AI格局，并按风险等级为普通人梳理三条可行路径——职业增强、副业创业和前沿创新。",
+    category: "AI Insights",
+    tags: ["AI Bubble", "Investment", "Career", "AI Strategy", "Side Hustle", "Technology Trends"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT", "Claude", "Midjourney"],
+    date: "2026-07-04",
+  },
+  {
+    slug: "top-5-ai-ppt-skills-tested-ranked",
+    title: "Battle of the Best: Top 5 AI PPT Skills Tested and Ranked",
+    titleZh: "AI PPT技能大比拼：5款工具实测排名与推荐",
+    description: "A hands-on comparison of five popular AI PPT generation skills — PPT Master, Banana Slides, Frontend Slides, HTML PPT, and Guizang PPT — tested with the same prompt and ranked by Codex for content quality, design, and functionality.",
+    descriptionZh: "用同一提示词实测5款热门AI PPT生成技能——PPT Master、Banana Slides、Frontend Slides、HTML PPT和Guizang PPT Skill，由Codex从内容质量、设计和功能三个维度综合排名。",
+    category: "AI Tools",
+    tags: ["PPT", "AI Presentation", "Productivity", "Codex Skills", "Comparison", "Tools Review"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent"],
+    date: "2026-07-04",
+  },
+
 ];

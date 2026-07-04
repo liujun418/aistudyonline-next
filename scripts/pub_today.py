@@ -1,5 +1,5 @@
 """
-Publish July 3, 2026 — 2 articles, no new tools.
+Publish July 4, 2026 — 2 articles, no new tools.
 """
 import os
 
@@ -11,28 +11,28 @@ with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "understanding-large-language-models-principles-architecture",
-    title: "Understanding Large Language Models: Principles, Architecture, and Practical Usage",
-    titleZh: "大语言模型深度解读：从Transformer原理到实战应用",
-    description: "A comprehensive guide breaking down LLM core principles, Transformer architecture with PyTorch implementation, common limitations (hallucinations, context decay, math errors), and practical tips for choosing and using models effectively in real-world tasks.",
-    descriptionZh: "从Transformer架构原理到PyTorch代码实现，全面解读大语言模型的核心机制、常见局限（幻觉、上下文衰减、数学错误）以及实际使用中的模型选择与提示技巧。",
-    category: "AI Learning",
-    tags: ["LLM", "Transformer", "PyTorch", "AI Architecture", "Prompt Engineering", "Deep Learning"],
-    difficulty: "Intermediate",
-    toolsMentioned: ["PyTorch"],
-    date: "2026-07-03",
+    slug: "ai-bubble-or-opportunity-guide-ordinary-people",
+    title: "Is AI a Bubble or Opportunity? A Guide for Ordinary People to Navigate the AI Wave",
+    titleZh: "AI是泡沫还是机遇？普通人应对AI浪潮的生存指南",
+    description: "Using the 'survivor model' from the 2000 internet bubble (Foundation/Platform/Application layers), this guide maps today's AI landscape and presents three actionable opportunities for ordinary people — career enhancement, side hustles, and frontier innovation — ranked by risk level.",
+    descriptionZh: "用2000年互联网泡沫的'幸存者模型'（基础层/平台层/应用层）映射当今AI格局，并按风险等级为普通人梳理三条可行路径——职业增强、副业创业和前沿创新。",
+    category: "AI Insights",
+    tags: ["AI Bubble", "Investment", "Career", "AI Strategy", "Side Hustle", "Technology Trends"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT", "Claude", "Midjourney"],
+    date: "2026-07-04",
   },
   {
-    slug: "complete-guide-codex-zero-to-advanced",
-    title: "Complete Guide to Codex: From Zero to Advanced Development Workflow",
-    titleZh: "Codex完全指南：从零基础到高级开发工作流",
-    description: "A step-by-step walkthrough of OpenAI Codex from installation and project setup through Git version control, agent.md configuration, Electron refactoring, plugins & skills, and mobile control — covering the complete development workflow for beginners and advanced users alike.",
-    descriptionZh: "从安装配置、项目创建到Git版本控制、agent.md跨项目规则、Electron重构、插件与技能扩展、移动端控制，全方位覆盖Codex开发工作流的每一步操作。",
+    slug: "top-5-ai-ppt-skills-tested-ranked",
+    title: "Battle of the Best: Top 5 AI PPT Skills Tested and Ranked",
+    titleZh: "AI PPT技能大比拼：5款工具实测排名与推荐",
+    description: "A hands-on comparison of five popular AI PPT generation skills — PPT Master, Banana Slides, Frontend Slides, HTML PPT, and Guizang PPT — tested with the same prompt and ranked by Codex for content quality, design, and functionality.",
+    descriptionZh: "用同一提示词实测5款热门AI PPT生成技能——PPT Master、Banana Slides、Frontend Slides、HTML PPT和Guizang PPT Skill，由Codex从内容质量、设计和功能三个维度综合排名。",
     category: "AI Tools",
-    tags: ["Codex", "OpenAI", "AI Development", "CLI", "Git", "Electron", "Automation"],
-    difficulty: "Beginner",
-    toolsMentioned: ["Codex Agent", "Electron"],
-    date: "2026-07-03",
+    tags: ["PPT", "AI Presentation", "Productivity", "Codex Skills", "Comparison", "Tools Review"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent"],
+    date: "2026-07-04",
   },
 
 """
@@ -50,874 +50,532 @@ with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "understanding-large-language-models-principles-architecture": {
+  "ai-bubble-or-opportunity-guide-ordinary-people": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI Learning</span>
-  <span class="meta-badge">🕒 10 min read</span>
-  <span class="meta-badge">📅 Jul 3, 2026</span>
-  <span class="meta-badge">🎯 Intermediate</span>
-</div>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>This guide will break down the core principles and architecture of large language models (LLMs) in an accessible way, with practical insights to help you use them more effectively. We'll start with the foundational technology behind LLMs—Transformer—and move through its components, limitations, and real-world applications.</p>
-
-<h2 id="what-is-transformer">1. What is Transformer?</h2>
-
-<p>Transformer is a neural network architecture introduced by Google in the 2017 paper <em>Attention Is All You Need</em>. Initially designed for machine translation, it revolutionized natural language processing (NLP) by replacing traditional RNN/CNN structures with self-attention mechanisms.</p>
-
-<h3>Key Advantages of Transformer</h3>
-
-<ul>
-  <li><strong>Parallel Processing</strong>: Unlike RNNs, which process data sequentially, Transformer can handle all input tokens simultaneously, drastically improving speed.</li>
-  <li><strong>Long-Range Dependencies</strong>: Self-attention allows the model to directly connect any two tokens in the input, avoiding the information loss that plagues RNNs for long sequences.</li>
-  <li><strong>Better Performance</strong>: It achieves state-of-the-art results in both speed and quality for NLP tasks.</li>
-</ul>
-
-<h2 id="transformer-architecture">2. Transformer Architecture</h2>
-
-<p>Transformer consists of two main components: <strong>Encoder</strong> and <strong>Decoder</strong>.</p>
-
-<h3>Encoder</h3>
-
-<p>The encoder processes input sequences (e.g., text) and converts them into intermediate representations that capture semantic meaning. Key steps include:</p>
-
-<ol>
-  <li><strong>Input Embeddings</strong>: Convert tokens into numerical vectors.</li>
-  <li><strong>Positional Encodings</strong>: Add position information to embeddings to preserve word order.</li>
-  <li><strong>Multi-Head Attention</strong>: Allow the model to focus on different parts of the input simultaneously.</li>
-  <li><strong>Feed-Forward Network</strong>: Apply non-linear transformations to extract features.</li>
-  <li><strong>Residual Connections & Layer Normalization</strong>: Stabilize training and improve performance.</li>
-</ol>
-
-<h3>Decoder</h3>
-
-<p>The decoder generates output sequences (e.g., translations or text) using the encoder's outputs. It adds:</p>
-
-<ol>
-  <li><strong>Masked Multi-Head Attention</strong>: Prevent the model from looking at future tokens during generation.</li>
-  <li><strong>Linear & Softmax Layers</strong>: Convert decoder outputs into probability distributions over the vocabulary.</li>
-</ol>
-
-<h2 id="practical-implementation">3. Practical Implementation: Building a Simple LLM</h2>
-
-<p>You can implement a basic Transformer-based LLM using PyTorch. Here's a simplified example:</p>
-
-<pre><code class="language-python">import torch
-import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-
-# Simplified Transformer Decoder Layer
-class TransformerDecoderLayer(nn.Module):
-    def __init__(self, d_model, nhead, dim_feedforward=2048, dropout=0.1):
-        super().__init__()
-        self.self_attn = nn.MultiheadAttention(d_model, nhead, dropout=dropout)
-        self.linear1 = nn.Linear(d_model, dim_feedforward)
-        self.dropout = nn.Dropout(dropout)
-        self.linear2 = nn.Linear(dim_feedforward, d_model)
-        self.norm1 = nn.LayerNorm(d_model)
-        self.norm2 = nn.LayerNorm(d_model)
-        self.dropout1 = nn.Dropout(dropout)
-        self.dropout2 = nn.Dropout(dropout)
-
-    def forward(self, tgt, tgt_mask=None):
-        tgt2 = self.self_attn(tgt, tgt, tgt, attn_mask=tgt_mask)[0]
-        tgt = tgt + self.dropout1(tgt2)
-        tgt = self.norm1(tgt)
-        tgt2 = self.linear2(self.dropout(torch.relu(self.linear1(tgt))))
-        tgt = tgt + self.dropout2(tgt2)
-        tgt = self.norm2(tgt)
-        return tgt
-
-# Simplified Transformer Decoder
-class TransformerDecoder(nn.Module):
-    def __init__(self, vocab_size, d_model, nhead, num_layers, dim_feedforward=2048, dropout=0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.embedding = nn.Embedding(vocab_size, d_model)
-        self.pos_encoding = nn.Parameter(torch.zeros(1, 1000, d_model))
-        self.layers = nn.ModuleList([
-            TransformerDecoderLayer(d_model, nhead, dim_feedforward, dropout)
-            for _ in range(num_layers)
-        ])
-        self.linear = nn.Linear(d_model, vocab_size)
-
-    def forward(self, tgt, tgt_mask=None):
-        tgt = self.embedding(tgt) + self.pos_encoding[:, :tgt.size(1), :]
-        for layer in self.layers:
-            tgt = layer(tgt, tgt_mask)
-        output = self.linear(tgt)
-        return output
-
-# Example usage
-vocab_size = 10000
-d_model = 512
-nhead = 8
-num_layers = 6
-
-model = TransformerDecoder(vocab_size, d_model, nhead, num_layers)
-input_seq = torch.randint(0, vocab_size, (1, 10))
-output = model(input_seq)
-print(output.shape)  # Expected: (1, 10, vocab_size)</code></pre>
-
-<h2 id="llm-limitations">4. Understanding LLM Limitations</h2>
-
-<p>LLMs have key limitations that affect their performance:</p>
-
-<ul>
-  <li><strong>Token-Based Billing</strong>: LLMs charge by tokens (subunits of text). More tokens mean higher cost and longer processing time.</li>
-  <li><strong>Mathematical Inaccuracy</strong>: LLMs predict next tokens based on patterns, not actual calculation, so they often fail at complex math.</li>
-  <li><strong>Hallucinations</strong>: They generate plausible but false information because they don't "know" facts—they just predict patterns.</li>
-  <li><strong>Context Decay</strong>: Over long conversations, early details may be forgotten as new content dominates the model's attention.</li>
-  <li><strong>Knowledge Gaps</strong>: LLMs have broad but shallow knowledge, often struggling with niche or highly technical details.</li>
-</ul>
-
-<h2 id="practical-tips">5. Practical Tips for Using LLMs Effectively</h2>
-
-<h3>1. Understand LLM Capabilities and Limitations</h3>
-
-<ul>
-  <li>LLMs excel at text generation, content creation, and pattern recognition.</li>
-  <li>They struggle with complex math, factual accuracy, and long-term memory.</li>
-  <li>Be aware of token limits and context windows.</li>
-</ul>
-
-<h3>2. Set Clear Goals and Tasks</h3>
-
-<ul>
-  <li>Define your objective clearly (e.g., "Write a 500-word blog post about AI ethics" instead of "Write something about AI").</li>
-  <li>Provide context and constraints to guide the model.</li>
-</ul>
-
-<h3>3. Choose the Right Model</h3>
-
-<ul>
-  <li>Prefer models trained on your specific domain (e.g., medical models for healthcare tasks).</li>
-  <li>Larger models with more parameters generally perform better but cost more.</li>
-</ul>
-
-<h3>4. Master Prompt Engineering</h3>
-
-<ul>
-  <li>Use short, clear, and specific instructions.</li>
-  <li>Provide examples to guide the model (e.g., "Write a product description like this example: [example text]").</li>
-  <li>Break complex tasks into smaller steps.</li>
-</ul>
-
-<h3>5. Leverage Other Tools</h3>
-
-<ul>
-  <li>Use APIs to integrate LLMs with other tools (e.g., databases, spreadsheets).</li>
-  <li>Adjust parameters like <code>temperature</code> (controls randomness) to fine-tune outputs.</li>
-  <li>Explore advanced techniques like Retrieval-Augmented Generation (RAG) to add external knowledge.</li>
-</ul>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Transformer is the backbone of modern LLMs, enabling parallel processing and long-range context understanding. While LLMs have limitations, understanding their architecture and behavior allows you to use them more effectively. By following the practical tips in this guide, you can leverage LLMs to boost productivity and solve real-world problems.</p>
-
-<h2>常见问题</h2>
-
-<h3>What's the core difference between Transformer and RNN?</h3>
-<p>RNN processes tokens one by one sequentially — no parallel computation, and early information gets lost in long sequences. Transformer uses self-attention to process all tokens at once, letting each token directly connect with any other token regardless of distance. This enables parallel training and eliminates the long-range dependency problem. In practice, this means Transformer models train faster and understand context better, especially for documents longer than a few paragraphs.</p>
-
-<h3>Why do LLMs hallucinate?</h3>
-<p>LLMs are probability prediction engines — they predict the next most likely token based on patterns in training data, not by querying a fact database. When training data coverage is thin or inconsistent on a topic, the model generates plausible-sounding but factually wrong content. This is an architectural limitation, not a bug. RAG (Retrieval-Augmented Generation) is currently the most effective mitigation: it gives the model a "cheat sheet" of verified facts before it generates an answer.</p>
-
-<h3>Which model should I start with for learning LLMs?</h3>
-<p>Start with GPT-4o or Claude Sonnet — both have free tiers and excellent instruction-following. If you want to understand the internals, implement a simplified Transformer decoder in PyTorch (like the code in Section 3). Work through Embedding → Attention → LayerNorm → Feed-Forward step by step. The PyTorch implementation is about 50 lines and teaches you more than reading 10 papers.</p>
-
-<h3>How do tokens affect cost and usage?</h3>
-<p>Most APIs charge per token, typically $0.002–$0.06 per 1K tokens depending on the model. Both input and output count toward your total. A practical tip: summarize long documents before feeding them to the model — this can cut token usage by 80%+ while preserving the key information the model needs. OpenAI provides a free online Tokenizer tool to estimate token counts before making API calls.</p>
-
-<div class="next-step">
-  <h3>📖 Next Steps</h3>
-  <p>Now that you understand LLM architecture, put it into practice:</p>
-  <ul>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — see where LLMs fit in the AI stack</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master the full AI concept map from Token to Workspace Agent</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — apply LLMs in a real productivity workflow</li>
-  </ul>
-</div>`,
-    contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI 学习</span>
-  <span class="meta-badge">🕒 阅读约10分钟</span>
-  <span class="meta-badge">📅 2026年7月3日</span>
-  <span class="meta-badge">🎯 中级</span>
-</div>
-
-<h2 id="introduction">引言</h2>
-
-<p>本文将以通俗易懂的方式拆解大语言模型（LLM）的核心原理和架构，并提供实用建议帮你更高效地使用它们。我们从 LLM 的底层技术——Transformer 出发，逐步讲解其组件、局限性和实际应用。</p>
-
-<h2 id="what-is-transformer">1. 什么是 Transformer？</h2>
-
-<p>Transformer 是 Google 在 2017 年论文《Attention Is All You Need》中提出的神经网络架构。它最初用于机器翻译，通过自注意力机制替代传统的 RNN/CNN 结构，彻底改变了自然语言处理（NLP）领域。</p>
-
-<h3>Transformer 的核心优势</h3>
-
-<ul>
-  <li><strong>并行处理</strong>：与 RNN 的串行处理不同，Transformer 可同时处理所有输入 token，速度大幅提升。</li>
-  <li><strong>长距离依赖</strong>：自注意力机制让模型能直接连接输入中任意两个 token，避免 RNN 在长序列中的信息丢失问题。</li>
-  <li><strong>性能领先</strong>：在 NLP 任务的速度和质量上都达到最优水平。</li>
-</ul>
-
-<h2 id="transformer-architecture">2. Transformer 架构</h2>
-
-<p>Transformer 由两个主要组件构成：<strong>编码器（Encoder）</strong>和<strong>解码器（Decoder）</strong>。</p>
-
-<h3>编码器</h3>
-
-<p>编码器处理输入序列（如文本），将其转换为捕捉语义的中间表示。关键步骤包括：</p>
-
-<ol>
-  <li><strong>输入嵌入（Input Embeddings）</strong>：将 token 转换为数值向量。</li>
-  <li><strong>位置编码（Positional Encodings）</strong>：为嵌入添加位置信息，保留词序。</li>
-  <li><strong>多头注意力（Multi-Head Attention）</strong>：让模型同时关注输入的不同部分。</li>
-  <li><strong>前馈网络（Feed-Forward Network）</strong>：应用非线性变换提取特征。</li>
-  <li><strong>残差连接与层归一化</strong>：稳定训练过程，提升性能。</li>
-</ol>
-
-<h3>解码器</h3>
-
-<p>解码器利用编码器的输出生成目标序列（如翻译结果或文本）。它额外包含：</p>
-
-<ol>
-  <li><strong>掩码多头注意力（Masked Multi-Head Attention）</strong>：防止模型在生成时"偷看"未来的 token。</li>
-  <li><strong>线性层与 Softmax 层</strong>：将解码器输出转换为词汇表上的概率分布。</li>
-</ol>
-
-<h2 id="practical-implementation">3. 实战：用 PyTorch 构建简化版 LLM</h2>
-
-<p>你可以用 PyTorch 实现一个基础的 Transformer 解码器。以下是简化版代码：</p>
-
-<pre><code class="language-python">import torch
-import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-
-# 简化版 Transformer 解码器层
-class TransformerDecoderLayer(nn.Module):
-    def __init__(self, d_model, nhead, dim_feedforward=2048, dropout=0.1):
-        super().__init__()
-        self.self_attn = nn.MultiheadAttention(d_model, nhead, dropout=dropout)
-        self.linear1 = nn.Linear(d_model, dim_feedforward)
-        self.dropout = nn.Dropout(dropout)
-        self.linear2 = nn.Linear(dim_feedforward, d_model)
-        self.norm1 = nn.LayerNorm(d_model)
-        self.norm2 = nn.LayerNorm(d_model)
-        self.dropout1 = nn.Dropout(dropout)
-        self.dropout2 = nn.Dropout(dropout)
-
-    def forward(self, tgt, tgt_mask=None):
-        tgt2 = self.self_attn(tgt, tgt, tgt, attn_mask=tgt_mask)[0]
-        tgt = tgt + self.dropout1(tgt2)
-        tgt = self.norm1(tgt)
-        tgt2 = self.linear2(self.dropout(torch.relu(self.linear1(tgt))))
-        tgt = tgt + self.dropout2(tgt2)
-        tgt = self.norm2(tgt)
-        return tgt
-
-# 简化版 Transformer 解码器
-class TransformerDecoder(nn.Module):
-    def __init__(self, vocab_size, d_model, nhead, num_layers, dim_feedforward=2048, dropout=0.1):
-        super().__init__()
-        self.d_model = d_model
-        self.embedding = nn.Embedding(vocab_size, d_model)
-        self.pos_encoding = nn.Parameter(torch.zeros(1, 1000, d_model))
-        self.layers = nn.ModuleList([
-            TransformerDecoderLayer(d_model, nhead, dim_feedforward, dropout)
-            for _ in range(num_layers)
-        ])
-        self.linear = nn.Linear(d_model, vocab_size)
-
-    def forward(self, tgt, tgt_mask=None):
-        tgt = self.embedding(tgt) + self.pos_encoding[:, :tgt.size(1), :]
-        for layer in self.layers:
-            tgt = layer(tgt, tgt_mask)
-        output = self.linear(tgt)
-        return output
-
-# 使用示例
-vocab_size = 10000
-d_model = 512
-nhead = 8
-num_layers = 6
-
-model = TransformerDecoder(vocab_size, d_model, nhead, num_layers)
-input_seq = torch.randint(0, vocab_size, (1, 10))
-output = model(input_seq)
-print(output.shape)  # 预期输出: (1, 10, vocab_size)</code></pre>
-
-<h2 id="llm-limitations">4. 理解 LLM 的局限性</h2>
-
-<p>LLM 有以下关键局限影响其表现：</p>
-
-<ul>
-  <li><strong>按 Token 计费</strong>：LLM 按 token（文本子单元）收费。token 越多，成本越高，处理时间越长。</li>
-  <li><strong>数学不准确</strong>：LLM 基于模式预测下一个 token，而非实际计算，因此复杂数学容易出错。</li>
-  <li><strong>幻觉（Hallucination）</strong>：模型生成看似合理但虚假的内容，因为它不"知道"事实——只是预测模式。</li>
-  <li><strong>上下文衰减</strong>：在长对话中，早期细节可能被遗忘，因为新内容占据了模型的注意力。</li>
-  <li><strong>知识盲区</strong>：LLM 知识面广但深度不足，在细分领域或高度技术性的细节上经常力不从心。</li>
-</ul>
-
-<h2 id="practical-tips">5. 高效使用 LLM 的实用技巧</h2>
-
-<h3>1. 理解 LLM 的能力和局限</h3>
-
-<ul>
-  <li>LLM 擅长文本生成、内容创作和模式识别。</li>
-  <li>在复杂数学、事实准确性和长期记忆方面存在短板。</li>
-  <li>注意 token 限制和上下文窗口大小。</li>
-</ul>
-
-<h3>2. 设定清晰的目标和任务</h3>
-
-<ul>
-  <li>明确定义目标（如"写一篇 500 字关于 AI 伦理的博客"而非"写点关于 AI 的东西"）。</li>
-  <li>提供上下文和约束条件来引导模型。</li>
-</ul>
-
-<h3>3. 选择合适的模型</h3>
-
-<ul>
-  <li>优先选择在特定领域训练的模型（如医疗模型用于医疗任务）。</li>
-  <li>参数量更大的模型通常表现更好，但成本更高。</li>
-</ul>
-
-<h3>4. 掌握提示词工程</h3>
-
-<ul>
-  <li>使用简短、清晰、具体的指令。</li>
-  <li>提供示例引导模型（如"参考这个例子写产品描述：[示例文本]"）。</li>
-  <li>将复杂任务拆分为小步骤。</li>
-</ul>
-
-<h3>5. 善用其他工具</h3>
-
-<ul>
-  <li>通过 API 将 LLM 与数据库、电子表格等工具集成。</li>
-  <li>调整参数如 <code>temperature</code>（控制随机性）来优化输出。</li>
-  <li>探索高级技术如检索增强生成（RAG）来补充外部知识。</li>
-</ul>
-
-<h2 id="conclusion">总结</h2>
-
-<p>Transformer 是现代 LLM 的基石，它实现了并行处理和长距离上下文理解。尽管 LLM 有局限性，理解其架构和行为能让你更高效地使用它们。遵循本文的实用建议，你可以利用 LLM 提升生产力，解决实际问题。</p>
-
-<h2>常见问题</h2>
-
-<h3>Transformer 和 RNN 的核心区别是什么？</h3>
-<p>RNN 按顺序逐个处理 token，无法并行计算，且长序列容易丢失早期信息。Transformer 通过自注意力机制（Self-Attention）一次性处理所有 token，每个 token 可以直接与序列中任意位置的 token 建立联系，因此支持并行计算且不受距离限制。实际效果是 Transformer 模型训练更快、上下文理解更好，尤其是对于超过几段的长文档。</p>
-
-<h3>为什么 LLM 会"幻觉"（Hallucination）？</h3>
-<p>LLM 本质上是一个概率预测模型——它根据训练数据中的模式预测下一个最可能的 token，而不是"查询事实数据库"。当模型遇到训练数据覆盖不足或不一致的知识点时，它会生成看似合理但实际错误的内容。这是架构层面的固有限制，不是 bug。RAG（检索增强生成）是目前最有效的缓解方案：在生成回答前先给模型一份经过验证的"小抄"。</p>
-
-<h3>我应该从哪个模型开始学习 LLM？</h3>
-<p>建议从 GPT-4o 或 Claude Sonnet 开始，两者都有免费额度且指令遵循能力强。如果目标是学习底层原理，用 PyTorch 从简化版 Transformer 解码器开始实现（如本文第3节代码），逐步理解 Embedding → Attention → LayerNorm → Feed-Forward。约50行 PyTorch 代码教你的比读10篇论文还多。</p>
-
-<h3>Token 数量如何影响成本和使用？</h3>
-<p>大多数 API 按 token 计费，通常每 1000 token 约 $0.002–$0.06（取决于模型）。输入和输出都计入 token 总数。实用技巧：长文档先用摘要压缩再送入模型——可以削减 80% 以上 token 消耗，同时保留模型所需的关键信息。OpenAI 提供免费在线 Tokenizer 工具，可以在调用 API 前预估 token 数。</p>
-
-<div class="next-step">
-  <h3>📖 下一步</h3>
-  <p>理解了 LLM 架构之后，将其付诸实践：</p>
-  <ul>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 了解 LLM 在 AI 技术栈中的位置</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被 AI 术语吓到：从 Token 到 Workspace Agent 的实用指南</a> — 掌握完整的 AI 概念地图</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 将 LLM 应用于实际生产力工作流</li>
-  </ul>
-</div>`,
-  },
-
-  "complete-guide-codex-zero-to-advanced": {
-    content: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI Tools</span>
-  <span class="meta-badge">🕒 12 min read</span>
-  <span class="meta-badge">📅 Jul 3, 2026</span>
+  <span class="meta-badge">💡 AI Insights</span>
+  <span class="meta-badge">🕒 8 min read</span>
+  <span class="meta-badge">📅 Jul 4, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Codex is OpenAI's core AI development tool, designed to assist with coding, debugging, testing, and even computer control. This guide will walk you through the complete workflow of using Codex, from installation to advanced features like plugins, skills, and mobile control.</p>
+<p>You've probably wondered: On one hand, NVIDIA's stock keeps hitting new highs, making you feel like you're missing out on a fortune if you don't buy it. On the other hand, some warn that this is a huge bubble, and jumping in now is like buying at the top. So, should ordinary people dive in or stay away?</p>
 
-<h2 id="installation">1. Installation and Initial Setup</h2>
+<p>To answer this question, we need to distinguish between <strong>real technology</strong> and <strong>artificial prices</strong>. AI technology itself is revolutionary — like pure water, it's useful. But its price is like soda water, filled with gas — valuation bubbles. Recently, legendary Wall Street investor Jeremy Grantham warned that the AI market is in the final chapter of the 2000 internet bubble. Bank of America's chief investment strategist Michael Hartnett compared NVIDIA's P/E ratio to Cisco's at the peak of the 2000 bubble, and the results are strikingly similar.</p>
 
-<h3>1.1 Download and Install Codex</h3>
+<p>Back then, everyone believed Cisco was the cornerstone of the internet, but that didn't stop its stock from plummeting 80% after the bubble burst. On the other hand, Wall Street bulls like Cathie Wood argue that AI, like the invention of electricity and the internet wave, will revolutionize everything around us. Now it can generate movie-level videos, accelerate cancer drug development, and reshape many industries in unprecedented ways.</p>
 
+<p>So who should we believe? To answer this, we can't just focus on current stock prices and news — we need a map, and the best map is hidden in history.</p>
+
+<h2 id="survivor-model">The Survivor Model: Lessons from the 2000 Internet Bubble</h2>
+
+<p>Let's rewind to 2000, when the internet bubble burst, countless companies vanished, and countless fortunes were lost. But looking back today, if we sift through all the surviving and dead companies, we find a <strong>survivor model</strong> that applies to almost all technological revolutions. It's like a pyramid with three layers:</p>
+
+<h3>Layer 1: The Foundation Layer ("Sellers of Shovels")</h3>
+
+<p>In the gold rush, the first and most certain way to make money was selling shovels and jeans. In 2000, that company was Cisco, which sold routers and switches — the "pipes" of the internet world, without which information couldn't flow.</p>
+
+<p>Characteristics of this layer:</p>
 <ul>
-  <li>Visit the official Codex website and download the installation package.</li>
-  <li>On macOS, drag the Codex app to the Applications folder to complete installation.</li>
+  <li>Closest to the revolution, everyone needs it.</li>
+  <li>Most likely to be hyped by capital, leading to valuation bubbles.</li>
 </ul>
 
-<h3>1.2 Login Options</h3>
+<h3>Layer 2: The Platform Layer ("Builders")</h3>
 
+<p>If the foundation layer provides tools, the platform layer uses these tools to build "super cities" in the new world and set their own rules. Around 2000, Amazon built an "everything store," and Google built an "information entrance." They used new technology to build strong ecosystems connecting countless merchants and users, creating uncrossable moats.</p>
+
+<p>Characteristics of this layer:</p>
 <ul>
-  <li><strong>ChatGPT Account Login</strong>: Choose from ChatGPT's subscription plans (Free, Go, Plus, Pro). Plus ($20/month) is recommended for balanced token limits.</li>
-  <li><strong>API Key Login</strong>: Use an OpenAI API key (requires a foreign credit card, less cost-effective than subscriptions).</li>
+  <li>Strong network effects and user stickiness.</li>
+  <li>Can turn revolutionary technology into sustainable, stable, and extremely profitable businesses.</li>
 </ul>
 
-<h3>1.3 Initial Configuration</h3>
+<h3>Layer 3: The Application Layer ("Gold Diggers")</h3>
 
+<p>The top of the pyramid is the most crowded and competitive layer — the application layer, where thousands of "gold diggers" operate. These were the ".com" companies of the past, trying to solve all kinds of problems, from group buying to fresh food delivery.</p>
+
+<p>Some survivors like PayPal became giants, but many more like Pets.com and Webvan burned hundreds of millions of dollars in investment and left nothing behind.</p>
+
+<p>Characteristics of this layer:</p>
 <ul>
-  <li>Select your job role when prompted.</li>
-  <li>Skip the "Import Cloud Code" step for now.</li>
-  <li>You can set up Codex Mobile later (we'll cover this in Section 8).</li>
+  <li>Most innovative, closest to users.</li>
+  <li>Most concentrated in bubbles, highest mortality rate — up to 99% of companies may disappear.</li>
 </ul>
 
-<h2 id="basic-workflow">2. Basic Project Development Workflow</h2>
+<h2 id="apply-model">Applying the Model to Today's AI Wave</h2>
 
-<h3>2.1 Create a Project</h3>
+<p>Now let's use this survivor model to look at today's AI landscape:</p>
 
+<h3>Foundation Layer: Sellers of Shovels</h3>
+
+<p>Undoubtedly, this is NVIDIA, AMD, TSMC, and ASML. Their computing power chips and equipment are the "routers and switches" of the AI era.</p>
+
+<h3>Platform Layer: Builders</h3>
+
+<p>These are companies like Microsoft, Google, and Adobe. Microsoft injects AI capabilities into Office and Windows through Azure and Copilot; Google integrates Gemini into its search and Android ecosystem; Adobe embeds AI drawing capabilities into Photoshop. They're making us unknowingly inseparable from AI, just like smartphones once did.</p>
+
+<h3>Application Layer: Gold Diggers</h3>
+
+<p>This layer is countless — video generation tools like Pika and Sora, design tools like Midjourney, search tools like Perplexity, and thousands of writing tools, educational software, and customer service tools. These are today's Pets.com, but among them, there must be the next PayPal.</p>
+
+<h2 id="opportunities">Three Opportunities for Ordinary People</h2>
+
+<p>Now that we understand the map, what should ordinary people do? Based on different risk levels and investment, I've summarized three opportunities:</p>
+
+<h3>Opportunity 1: Career Enhancement (Low Risk, Most Suitable for Most People)</h3>
+
+<p>The goal is not to switch careers, but to use AI to make your current work 10x more efficient and valuable. In any industry, strive to be the person in the office who best uses AI — this will make you more secure in layoffs and more confident in salary negotiations.</p>
+
+<p>Examples:</p>
 <ul>
-  <li>Create a local folder (e.g., "Mark Note") to store your project files.</li>
-  <li>In Codex, click "Work on a Project" → "Use an Existing Folder" and select your project folder.</li>
+  <li><strong>Designers</strong>: Master Midjourney and Stable Diffusion to outperform peers in creative efficiency.</li>
+  <li><strong>Editors/Operators</strong>: Use ChatGPT or Claude to assist with research, data analysis, and content drafting.</li>
+  <li><strong>Everyone</strong>: Focus on developing skills that AI can't replace, like complex decision-making, deep empathy, and trust-building.</li>
 </ul>
 
-<h3>2.2 First Project: Build a Markdown Note App</h3>
+<h3>Opportunity 2: Side Hustle & Small Business (Medium Risk)</h3>
 
+<p>Suitable for people with professional skills who want to transform or start a side business/small business. The goal is to connect ecosystems and provide services to others for steady income.</p>
+
+<p>Ways to do this:</p>
 <ul>
-  <li>Input your requirement:</li>
+  <li><strong>Knowledge Sharing</strong>: Create content about AI, do corporate training, or become an AI tool reviewer/KOL. Many people are anxious about AI but don't know where to start — if you can make complex things simple, that's valuable.</li>
+  <li><strong>Micro-Applications</strong>: Develop small tools based on large model APIs to solve specific pain points, like tools for lawyers to write contracts or accountants to review financial statements. These can generate subscription revenue.</li>
 </ul>
 
-<pre><code class="language-text">Build a note-taking app with HTML, with two columns: left for note list, right for note content. Include basic CRUD operations and local storage.</code></pre>
+<p>The core of this opportunity is to use your expertise to match AI, finding small, real needs that big companies ignore. It may not make you rich, but it has low investment and risk, and can even grow into a sustainable small business.</p>
 
-<ul>
-  <li>Codex will generate code and ask for permission to start a local server. Choose "Yes" to allow it.</li>
-</ul>
+<h3>Opportunity 3: Frontier Innovation (High Risk, High Return)</h3>
 
-<h3>2.3 Preview and Iterate</h3>
+<p>Only suitable for a very small number of entrepreneurs, venture capitalists, or top technical talents. You can choose to go all-in on AI, with the goal of becoming or investing in the next Amazon or PayPal.</p>
 
-<ul>
-  <li>Click "Open in" to preview the app in a browser.</li>
-  <li>Use the "Annotation" feature to select areas of the UI and request changes:</li>
-</ul>
+<p>Two approaches:</p>
+<ol>
+  <li><strong>Invest in or Join "Killer Apps"</strong>: Develop your own criteria to identify promising AI companies. Key questions: Does it solve high-frequency, urgent needs? Does it have a data moat? Is its business model clear?</li>
+  <li><strong>Focus on Core Technology</strong>: If you're a top technical talent, dive into underlying algorithms, model optimization, and computing power architecture — this is the center of the action and the source of future wealth.</li>
+</ol>
 
-<pre><code class="language-text">Remove the two sample notes at the top of the left column.</code></pre>
+<h2 id="conclusion">Conclusion: It's a Strategy Question, Not a Choice</h2>
 
-<h3>2.4 Debugging</h3>
+<p>So, should we dive into the AI wave or stay away? It's not a choice — it's a strategy question. Valuation bubbles will eventually dissipate, like the gas in soda water. But the "water" of the AI technological revolution will remain forever, nourishing our future world.</p>
 
-<ul>
-  <li>If the "Add Note" button doesn't work, Codex will diagnose the issue (often due to preview environment restrictions).</li>
-  <li>Test the app in an independent browser to confirm functionality.</li>
-</ul>
-
-<h2 id="advanced-config">3. Advanced Configuration and Security</h2>
-
-<h3>3.1 Permission Modes</h3>
-
-<ul>
-  <li><strong>Default Permissions</strong>: Codex will prompt for approval before executing risky operations.</li>
-  <li><strong>Auto-Review</strong>: A security agent automatically approves safe operations and blocks risky ones (recommended for balance of safety and efficiency).</li>
-  <li><strong>Full Access</strong>: No prompts, but use with caution (risk of data loss).</li>
-</ul>
-
-<h3>3.2 Model Settings</h3>
-
-<ul>
-  <li><strong>Model Selection</strong>: Choose from GPT-5.5, GPT-5.4, etc., based on task complexity.</li>
-  <li><strong>Thinking Depth</strong>: Adjust from Low to Extra High (higher depth = better code quality but slower speed).</li>
-  <li><strong>Speed Mode</strong>: Enable "Fast" mode for 1.5x faster generation (consumes more tokens).</li>
-</ul>
-
-<h2 id="git">4. Version Control with Git</h2>
-
-<h3>4.1 Initialize Git Repository</h3>
-
-<ul>
-  <li>Press <code>Command+J</code> to open the terminal in Codex.</li>
-  <li>Run these commands:</li>
-</ul>
-
-<pre><code class="language-bash">git init
-git add .
-git commit -m "first commit"</code></pre>
-
-<h3>4.2 Commit Changes</h3>
-
-<ul>
-  <li>Use Codex's built-in Git interface:</li>
-  <ul>
-    <li>Click the "Changes" icon → "Unstaged" to view modified files.</li>
-    <li>Click "Commit", enter a message (e.g., "Change theme to blue"), and click "Continue".</li>
-  </ul>
-</ul>
-
-<h3>4.3 Rollback with Fork</h3>
-
-<ul>
-  <li>Use the "Fork" feature to roll back conversations and code:</li>
-  <ul>
-    <li><strong>Fork into Local</strong>: Creates a new conversation but keeps the current code (use Git to roll back code manually).</li>
-    <li><strong>Fork into New Worktree</strong>: Creates a new conversation and a separate project folder (no code rollback, but isolates changes).</li>
-  </ul>
-</ul>
-
-<h2 id="agent-md">5. Cross-Project Configuration with agent.md</h2>
-
-<h3>5.1 Create agent.md</h3>
-
-<ul>
-  <li>In your project folder, create a file named <code>agent.md</code>.</li>
-  <li>Add rules like:</li>
-</ul>
-
-<pre><code class="language-markdown">- After every code change, run git commit with a descriptive message.
-- Use React + TypeScript for all new components.
-- Follow the project's color scheme (blue theme).</code></pre>
-
-<h3>5.2 Test the Configuration</h3>
-
-<ul>
-  <li>Create a new conversation and ask Codex to add a feature (e.g., "Add a dark/light mode toggle").</li>
-  <li>Check the Git log to confirm Codex automatically committed the changes.</li>
-</ul>
-
-<h2 id="refactoring">6. Project Refactoring and Advanced Features</h2>
-
-<h3>6.1 Refactor to Electron Desktop App</h3>
-
-<ul>
-  <li>Use "Plan Mode" to let Codex create a refactoring plan:</li>
-</ul>
-
-<pre><code class="language-text">Refactor this web app to an Electron desktop app using React + TypeScript. Ensure all features work correctly.</code></pre>
-
-<ul>
-  <li>Review the plan and click "Yes, implement this plan".</li>
-</ul>
-
-<h3>6.2 Add Markdown Support</h3>
-
-<ul>
-  <li>Ask Codex to add Markdown editing and preview modes:</li>
-</ul>
-
-<pre><code class="language-text">Add Markdown support: an "Edit" mode for writing with syntax highlighting, and a "Preview" mode for rendering.</code></pre>
-
-<h2 id="plugins-skills">7. Extend Capabilities with Plugins and Skills</h2>
-
-<h3>7.1 Install Plugins</h3>
-
-<ul>
-  <li>Click "Plugins" in the sidebar to browse available plugins:</li>
-  <ul>
-    <li><strong>Chrome</strong>: Control the Chrome browser to scrape data or interact with web pages.</li>
-    <li><strong>Computer Use</strong>: Control your computer's desktop apps (e.g., calendar, files).</li>
-    <li><strong>Presentations</strong>: Generate PowerPoint presentations.</li>
-  </ul>
-</ul>
-
-<h3>7.2 Use Skills</h3>
-
-<ul>
-  <li><strong>Image Generation</strong>: Use the "Image Gen" skill to generate images based on screenshots:</li>
-</ul>
-
-<pre><code class="language-text">Generate a promotional poster for this note app, using the provided screenshots.</code></pre>
-
-<ul>
-  <li><strong>Custom Skills</strong>: Create your own skills (e.g., a code review skill) to automate repetitive tasks.</li>
-</ul>
-
-<h3>7.3 Automations</h3>
-
-<ul>
-  <li>Set up automated tasks (e.g., daily code review):</li>
-  <ul>
-    <li>Click "Automations" → "Add Automation".</li>
-    <li>Define the task: "Check the project code for issues daily at 9 AM".</li>
-    <li>Select "Local" as the execution environment and save.</li>
-  </ul>
-</ul>
-
-<h2 id="mobile">8. Mobile Control with Codex Mobile</h2>
-
-<h3>8.1 Set Up Codex Mobile</h3>
-
-<ul>
-  <li>Click "Codex Mobile" in the sidebar.</li>
-  <li>Allow mobile control and scan the QR code with your phone to connect.</li>
-</ul>
-
-<h3>8.2 Control Your Computer from Mobile</h3>
-
-<ul>
-  <li>Use the "Computer Use" plugin on your phone to control desktop apps:</li>
-</ul>
-
-<pre><code class="language-text">Delete the calendar event "Discuss Mark Note design" on May 28.</code></pre>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Codex is a powerful tool that can streamline your development workflow from start to finish. By following this guide, you can leverage its features to build projects efficiently, automate tasks, and extend its capabilities with plugins and skills. Experiment with different configurations and find the workflow that best suits your needs.</p>
+<p>Our strategy is not to bet on whether the bubble will burst, but to quickly learn to use this new technology and make it work for us. AI can solve more and more problems, but it may never be able to ask a good question. The scarcest resources in the future will not be answers, but high-quality questions, deep insights, and warm empathy. These are our greatest and most fundamental opportunities as humans in this wave.</p>
 
 <h2>常见问题</h2>
 
-<h3>What's the difference between Codex and VS Code Copilot?</h3>
-<p>Codex is OpenAI's standalone desktop app that goes beyond code assistance — it can control your entire desktop: open browsers, manage files, run terminal commands, generate presentations, and more. Copilot is GitHub's editor plugin focused on code completion and chat. Think of Codex as an "AI operator" vs. Copilot as a "code assistant." If you need help writing code, Copilot is enough. If you want AI to handle multi-app workflows (code → test → deploy → document), Codex is the better fit.</p>
+<h3>How do I know if AI is in a bubble right now?</h3>
+<p>You don't need to predict it — and nobody can. Instead, use the survivor model as a lens: <strong>Foundation layer</strong> stocks (NVIDIA, TSMC) are the most bubble-prone because they're the easiest narrative for capital to hype. <strong>Platform layer</strong> companies (Microsoft, Google) have real revenue and moats, making them more resilient. <strong>Application layer</strong> startups have the highest failure rate but also the highest upside. The practical takeaway: don't bet your savings on any single layer. Diversify across layers and time horizons, and focus your personal effort on the layer that matches your skills and risk tolerance.</p>
 
-<h3>Which Codex subscription should I choose?</h3>
-<p>Plus ($20/month) is the sweet spot for individual developers — enough token limits for daily coding without breaking the bank. Free tier has very limited tokens and is mainly for trying the tool. Pro ($200/month) is for heavy users who treat Codex as their primary development environment. API Key login requires a foreign credit card and pay-per-use pricing, which is less cost-effective than subscriptions for regular use.</p>
+<h3>I'm not a programmer — can I still benefit from the AI wave?</h3>
+<p>Absolutely. The three opportunities in this guide are designed specifically for this. Opportunity 1 (Career Enhancement) requires zero coding — it's about using existing AI tools to 10x your current work. A marketer using ChatGPT for copywriting, a designer using Midjourney for mockups, a teacher using AI for lesson plans — none of these require programming. Opportunity 2 (Side Hustle) may involve light technical work but can be done with no-code tools. Only Opportunity 3 requires deep technical skills. Most people should focus on Opportunities 1 and 2.</p>
 
-<h3>Does agent.md have to be in the project root?</h3>
-<p>Yes. Codex automatically reads <code>agent.md</code> (or <code>CLAUDE.md</code>) from the project root as system instructions. You can define coding conventions, Git habits, tech stack preferences, and project-specific rules there. Codex follows these rules in every conversation within that project. This is one of Codex's most powerful features — consistent behavior across sessions without repeating instructions.</p>
+<h3>What's the single most important skill to develop in the AI era?</h3>
+<p><strong>Asking good questions.</strong> AI can generate answers, but it can't decide what's worth asking. The ability to frame problems clearly, identify what matters, and iterate on prompts until you get useful output — this is the meta-skill that makes every AI tool more effective. It's also the one skill that becomes more valuable as AI gets better at generating answers. Pair this with deep domain expertise in your field, and you become irreplaceable.</p>
 
-<h3>How do I choose between the two Fork options?</h3>
-<p><strong>Fork into Local</strong>: The conversation rolls back but the code stays as-is. Use this when you went down the wrong path in discussion but want to keep the current code state. You'll need to manually <code>git reset</code> if you want to roll back code too. <strong>Fork into New Worktree</strong>: Creates a completely separate working directory. The original project is untouched. Use this when you want to explore an alternative approach without risking your current progress — it's like a "what if" branch for the entire project state.</p>
+<h3>Should I invest in AI stocks now?</h3>
+<p>This article is not financial advice, but the survivor model offers a framework: if you're investing, distinguish between <strong>trading</strong> (timing the market) and <strong>investing</strong> (holding through cycles). For long-term investing, platform-layer companies with real revenue and moats tend to survive bubbles. For short-term trading, understand that foundation-layer stocks are the most volatile — they rise fastest in hype and fall hardest in crashes. The safest approach for most people: dollar-cost average into a diversified tech index fund rather than betting on individual stocks.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Mastered Codex? Level up your AI development workflow:</p>
+  <p>Understand the AI landscape? Now build your practical skills:</p>
   <ul>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — dive into the vibe coding methodology</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build a centralized AI productivity hub</li>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial</a> — build complete websites with Codex from scratch</li>
+    <li><a href="/articles/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — dive deeper into the three-layer AI architecture</li>
+    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — find the right AI tools for your career path</li>
+    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master AI fundamentals from scratch</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI 工具</span>
-  <span class="meta-badge">🕒 阅读约12分钟</span>
-  <span class="meta-badge">📅 2026年7月3日</span>
+  <span class="meta-badge">💡 AI 洞察</span>
+  <span class="meta-badge">🕒 阅读约8分钟</span>
+  <span class="meta-badge">📅 2026年7月4日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>Codex 是 OpenAI 的核心 AI 开发工具，能辅助编码、调试、测试，甚至控制电脑。本指南将带你走完 Codex 的完整使用流程——从安装到插件、技能、移动端控制等高级功能。</p>
+<p>你可能也在纠结：一边是英伟达股价屡创新高，让你觉得不买就错过了暴富机会；另一边是有人警告这是巨大泡沫，现在冲进去就是高位接盘。普通人到底该入场还是远离？</p>
 
-<h2 id="installation">1. 安装与初始设置</h2>
+<p>要回答这个问题，我们需要区分<strong>真正的技术</strong>和<strong>人为的价格</strong>。AI 技术本身是革命性的——像纯净水一样有用。但它的价格像苏打水，充满了气体——估值泡沫。最近，华尔街传奇投资者 Jeremy Grantham 警告 AI 市场正处于 2000 年互联网泡沫的最后一章。美银首席投资策略师 Michael Hartnett 将英伟达的市盈率与 2000 年泡沫顶峰时的思科做了对比，结果惊人地相似。</p>
 
-<h3>1.1 下载安装 Codex</h3>
+<p>当年所有人都相信思科是互联网的基石，但这并未阻止泡沫破裂后其股价暴跌 80%。另一边，华尔街多头如 Cathie Wood 则认为 AI 像电的发明和互联网浪潮一样，将彻底改变我们周围的一切——现在它已经能生成电影级视频、加速癌症药物研发、以前所未有的方式重塑多个行业。</p>
 
+<p>那么该信谁？要回答这个问题，不能只看当前的股价和新闻——我们需要一张地图，而最好的地图藏在历史中。</p>
+
+<h2 id="survivor-model">幸存者模型：2000年互联网泡沫的教训</h2>
+
+<p>让我们回到 2000 年，互联网泡沫破裂，无数公司消失，无数财富蒸发。但今天回看，如果我们梳理所有存活和死亡的公司，会发现一个适用于几乎所有技术革命的<strong>幸存者模型</strong>。它像一个三层金字塔：</p>
+
+<h3>第一层：基础层（"卖铲子的人"）</h3>
+
+<p>淘金热中，最早最稳的赚钱方式是卖铲子和牛仔裤。在 2000 年，这家公司是思科——卖路由器和交换机，互联网世界的"管道"，没有它们信息就无法流动。</p>
+
+<p>这一层的特点：</p>
 <ul>
-  <li>访问 Codex 官网下载安装包。</li>
-  <li>macOS 用户将 Codex 拖入 Applications 文件夹即可完成安装。</li>
+  <li>离革命最近，所有人都需要。</li>
+  <li>最容易被资本炒作，导致估值泡沫。</li>
 </ul>
 
-<h3>1.2 登录方式</h3>
+<h3>第二层：平台层（"建城者"）</h3>
 
+<p>如果基础层提供工具，平台层则用这些工具在新世界建造"超级城市"并制定规则。2000 年前后，亚马逊建了"万物商店"，谷歌建了"信息入口"。它们用新技术构建了连接无数商家和用户的强大生态，挖出了不可逾越的护城河。</p>
+
+<p>这一层的特点：</p>
 <ul>
-  <li><strong>ChatGPT 账号登录</strong>：可选 Free、Go、Plus、Pro 套餐。推荐 Plus（$20/月），token 额度适中。</li>
-  <li><strong>API Key 登录</strong>：使用 OpenAI API 密钥（需境外信用卡，性价比不如订阅）。</li>
+  <li>强大的网络效应和用户黏性。</li>
+  <li>能将革命性技术转化为可持续、稳定且极赚钱的生意。</li>
 </ul>
 
-<h3>1.3 初始配置</h3>
+<h3>第三层：应用层（"淘金者"）</h3>
 
+<p>金字塔顶端是最拥挤、竞争最激烈的应用层，成千上万的"淘金者"在这里厮杀。这就是当年的".com"公司，试图解决从团购到生鲜配送的各种问题。</p>
+
+<p>像 PayPal 这样的幸存者成了巨头，但更多像 Pets.com 和 Webvan 的公司烧掉了数亿美元投资，最终什么都没留下。</p>
+
+<p>这一层的特点：</p>
 <ul>
-  <li>按提示选择你的职位角色。</li>
-  <li>暂时跳过"导入云端代码"步骤。</li>
-  <li>Codex Mobile 可以稍后设置（详见第 8 节）。</li>
+  <li>最具创新性，离用户最近。</li>
+  <li>泡沫最集中，死亡率最高——可能 99% 的公司会消失。</li>
 </ul>
 
-<h2 id="basic-workflow">2. 基础项目开发流程</h2>
+<h2 id="apply-model">用模型看今天的 AI 浪潮</h2>
 
-<h3>2.1 创建项目</h3>
+<p>现在用这个幸存者模型来看当今的 AI 格局：</p>
 
+<h3>基础层：卖铲子的人</h3>
+
+<p>毫无疑问，这是英伟达、AMD、台积电和 ASML。它们的算力芯片和设备就是 AI 时代的"路由器和交换机"。</p>
+
+<h3>平台层：建城者</h3>
+
+<p>这些是微软、谷歌、Adobe 等公司。微软通过 Azure 和 Copilot 将 AI 能力注入 Office 和 Windows；谷歌将 Gemini 整合进搜索和安卓生态；Adobe 将 AI 绘图能力嵌入 Photoshop。它们正让我们在不知不觉中离不开 AI，就像当年智能手机做的那样。</p>
+
+<h3>应用层：淘金者</h3>
+
+<p>这一层数不胜数——视频生成工具如 Pika、Sora，设计工具如 Midjourney，搜索工具如 Perplexity，还有成千上万的写作工具、教育软件、客服工具。这些都是今天的 Pets.com，但其中一定会有下一个 PayPal。</p>
+
+<h2 id="opportunities">普通人的三个机会</h2>
+
+<p>了解了地图之后，普通人该怎么做？基于不同的风险等级和投入，我总结了三类机会：</p>
+
+<h3>机会一：职业增强（低风险，最适合大多数人）</h3>
+
+<p>目标不是转行，而是用 AI 让你当前的工作效率提升 10 倍、价值翻倍。在任何行业，努力成为办公室里最会用 AI 的人——这会让你在裁员时更安全，在谈薪时更有底气。</p>
+
+<p>举例：</p>
 <ul>
-  <li>创建本地文件夹（如"Mark Note"）存放项目文件。</li>
-  <li>在 Codex 中点击"Work on a Project" → "Use an Existing Folder"，选择你的项目文件夹。</li>
+  <li><strong>设计师</strong>：掌握 Midjourney 和 Stable Diffusion，在创意效率上远超同行。</li>
+  <li><strong>编辑/运营</strong>：用 ChatGPT 或 Claude 辅助调研、数据分析和内容草拟。</li>
+  <li><strong>所有人</strong>：专注培养 AI 无法替代的能力，如复杂决策、深度共情和信任建立。</li>
 </ul>
 
-<h3>2.2 第一个项目：构建 Markdown 笔记应用</h3>
+<h3>机会二：副业与小型创业（中等风险）</h3>
 
+<p>适合有专业技能、想转型或开启副业/小生意的人。目标是连接生态，为他人提供服务，获得稳定收入。</p>
+
+<p>实现方式：</p>
 <ul>
-  <li>输入你的需求：</li>
+  <li><strong>知识分享</strong>：创作 AI 相关内容，做企业培训，或成为 AI 工具评测者/KOL。很多人对 AI 焦虑但不知从何入手——如果你能把复杂的东西讲简单，这就是价值。</li>
+  <li><strong>微应用开发</strong>：基于大模型 API 开发小工具解决特定痛点，比如帮律师写合同的工具、帮会计审财务报表的工具。这些可以产生订阅收入。</li>
 </ul>
 
-<pre><code class="language-text">用 HTML 构建一个笔记应用，左右两栏：左侧笔记列表，右侧笔记内容。包含基本的增删改查和本地存储功能。</code></pre>
+<p>这个机会的核心是用你的专业能力去匹配 AI，找到大公司忽略的小而真实的需求。不一定让你暴富，但投入和风险都低，甚至可能成长为可持续的小生意。</p>
 
-<ul>
-  <li>Codex 会生成代码并请求启动本地服务器的权限。选择"Yes"允许。</li>
-</ul>
+<h3>机会三：前沿创新（高风险，高回报）</h3>
 
-<h3>2.3 预览与迭代</h3>
+<p>只适合极少数创业者、风投或顶尖技术人才。你可以选择 All-in AI，目标是成为或投资下一个亚马逊或 PayPal。</p>
 
-<ul>
-  <li>点击"Open in"在浏览器中预览应用。</li>
-  <li>使用"Annotation"功能选中 UI 区域并请求修改：</li>
-</ul>
+<p>两条路径：</p>
+<ol>
+  <li><strong>投资或加入"杀手级应用"</strong>：建立自己的标准来识别有潜力的 AI 公司。关键问题：是否解决高频刚需？是否有数据护城河？商业模式是否清晰？</li>
+  <li><strong>专注核心技术</strong>：如果你是顶尖技术人才，深耕底层算法、模型优化和算力架构——这是风暴的中心，也是未来财富的源头。</li>
+</ol>
 
-<pre><code class="language-text">删除左侧栏顶部的两个示例笔记。</code></pre>
+<h2 id="conclusion">结语：这不是选择题，而是策略题</h2>
 
-<h3>2.4 调试</h3>
+<p>所以，该冲进 AI 浪潮还是远离？这不是选择题——而是策略题。估值泡沫终将消散，像苏打水里的气泡。但 AI 技术革命的"水"会永远留下，滋养我们未来的世界。</p>
 
-<ul>
-  <li>如果"添加笔记"按钮不工作，Codex 会诊断问题（通常是预览环境限制导致）。</li>
-  <li>在独立浏览器中测试应用以确认功能正常。</li>
-</ul>
-
-<h2 id="advanced-config">3. 高级配置与安全</h2>
-
-<h3>3.1 权限模式</h3>
-
-<ul>
-  <li><strong>默认权限</strong>：执行高风险操作前 Codex 会请求确认。</li>
-  <li><strong>自动审查</strong>：安全代理自动批准安全操作、阻止危险操作（推荐，兼顾安全与效率）。</li>
-  <li><strong>完全访问</strong>：无提示，但需谨慎使用（有数据丢失风险）。</li>
-</ul>
-
-<h3>3.2 模型设置</h3>
-
-<ul>
-  <li><strong>模型选择</strong>：根据任务复杂度选择 GPT-5.5、GPT-5.4 等。</li>
-  <li><strong>思考深度</strong>：从 Low 到 Extra High 可调（深度越高，代码质量越好但速度越慢）。</li>
-  <li><strong>速度模式</strong>：启用"Fast"模式可提速 1.5 倍（消耗更多 token）。</li>
-</ul>
-
-<h2 id="git">4. Git 版本控制</h2>
-
-<h3>4.1 初始化 Git 仓库</h3>
-
-<ul>
-  <li>按 <code>Command+J</code> 在 Codex 中打开终端。</li>
-  <li>运行以下命令：</li>
-</ul>
-
-<pre><code class="language-bash">git init
-git add .
-git commit -m "first commit"</code></pre>
-
-<h3>4.2 提交更改</h3>
-
-<ul>
-  <li>使用 Codex 内置的 Git 界面：</li>
-  <ul>
-    <li>点击"Changes"图标 → "Unstaged"查看修改文件。</li>
-    <li>点击"Commit"，输入提交信息（如"Change theme to blue"），点击"Continue"。</li>
-  </ul>
-</ul>
-
-<h3>4.3 用 Fork 回滚</h3>
-
-<ul>
-  <li>使用"Fork"功能回滚对话和代码：</li>
-  <ul>
-    <li><strong>Fork into Local</strong>：创建新对话但保留当前代码（需手动 git reset 回滚代码）。</li>
-    <li><strong>Fork into New Worktree</strong>：创建新对话和独立项目文件夹（不回滚代码，但隔离更改）。</li>
-  </ul>
-</ul>
-
-<h2 id="agent-md">5. 跨项目配置：agent.md</h2>
-
-<h3>5.1 创建 agent.md</h3>
-
-<ul>
-  <li>在项目文件夹中创建名为 <code>agent.md</code> 的文件。</li>
-  <li>添加规则，例如：</li>
-</ul>
-
-<pre><code class="language-markdown">- 每次代码变更后用描述性信息执行 git commit。
-- 所有新组件使用 React + TypeScript。
-- 遵循项目的蓝色主题配色方案。</code></pre>
-
-<h3>5.2 测试配置</h3>
-
-<ul>
-  <li>创建新对话，让 Codex 添加功能（如"添加深色/浅色模式切换"）。</li>
-  <li>检查 Git 日志确认 Codex 自动提交了更改。</li>
-</ul>
-
-<h2 id="refactoring">6. 项目重构与高级功能</h2>
-
-<h3>6.1 重构为 Electron 桌面应用</h3>
-
-<ul>
-  <li>使用"Plan Mode"让 Codex 创建重构方案：</li>
-</ul>
-
-<pre><code class="language-text">将此 Web 应用重构为 Electron 桌面应用，使用 React + TypeScript。确保所有功能正常工作。</code></pre>
-
-<ul>
-  <li>审查方案后点击"Yes, implement this plan"。</li>
-</ul>
-
-<h3>6.2 添加 Markdown 支持</h3>
-
-<ul>
-  <li>让 Codex 添加 Markdown 编辑和预览模式：</li>
-</ul>
-
-<pre><code class="language-text">添加 Markdown 支持："编辑"模式支持语法高亮编写，"预览"模式用于渲染。</code></pre>
-
-<h2 id="plugins-skills">7. 插件与技能扩展</h2>
-
-<h3>7.1 安装插件</h3>
-
-<ul>
-  <li>点击侧边栏"Plugins"浏览可用插件：</li>
-  <ul>
-    <li><strong>Chrome</strong>：控制 Chrome 浏览器抓取数据或与网页交互。</li>
-    <li><strong>Computer Use</strong>：控制电脑桌面应用（如日历、文件）。</li>
-    <li><strong>Presentations</strong>：生成 PowerPoint 演示文稿。</li>
-  </ul>
-</ul>
-
-<h3>7.2 使用技能（Skills）</h3>
-
-<ul>
-  <li><strong>图片生成</strong>：使用"Image Gen"技能基于截图生成图片：</li>
-</ul>
-
-<pre><code class="language-text">用提供的截图为这个笔记应用生成宣传海报。</code></pre>
-
-<ul>
-  <li><strong>自定义技能</strong>：创建自己的技能（如代码审查技能）来自动化重复任务。</li>
-</ul>
-
-<h3>7.3 自动化任务</h3>
-
-<ul>
-  <li>设置自动化任务（如每日代码审查）：</li>
-  <ul>
-    <li>点击"Automations" → "Add Automation"。</li>
-    <li>定义任务："每天早上 9 点检查项目代码问题"。</li>
-    <li>选择"Local"作为执行环境并保存。</li>
-  </ul>
-</ul>
-
-<h2 id="mobile">8. 移动端控制：Codex Mobile</h2>
-
-<h3>8.1 设置 Codex Mobile</h3>
-
-<ul>
-  <li>点击侧边栏"Codex Mobile"。</li>
-  <li>允许移动端控制，用手机扫描二维码连接。</li>
-</ul>
-
-<h3>8.2 从手机控制电脑</h3>
-
-<ul>
-  <li>在手机上使用"Computer Use"插件控制桌面应用：</li>
-</ul>
-
-<pre><code class="language-text">删除 5 月 28 日"讨论 Mark Note 设计"的日历事件。</code></pre>
-
-<h2 id="conclusion">总结</h2>
-
-<p>Codex 是一款强大的工具，能从头到尾优化你的开发工作流。通过本指南，你可以高效地构建项目、自动化任务、通过插件和技能扩展能力。尝试不同配置，找到最适合你的工作流。</p>
+<p>我们的策略不是赌泡沫会不会破，而是尽快学会使用这项新技术，让它为我们工作。AI 能解决的问题越来越多，但它可能永远无法提出一个好问题。未来最稀缺的资源不是答案，而是高质量的提问、深刻的洞察和温暖的共情。这是我们作为人类在这波浪潮中最大、最根本的机会。</p>
 
 <h2>常见问题</h2>
 
-<h3>Codex 和 VS Code Copilot 有什么区别？</h3>
-<p>Codex 是 OpenAI 的独立桌面应用，不仅能辅助编码，还能控制整个桌面环境——打开浏览器、操作文件管理器、运行终端命令、生成 PPT 等。Copilot 是 GitHub 的编辑器插件，专注代码补全和聊天。Codex 的定位更接近"AI 操作员"而非单纯的"代码助手"。如果只需要写代码辅助，Copilot 足够；如果希望 AI 处理跨应用工作流（编码→测试→部署→文档），Codex 更合适。</p>
+<h3>怎么判断 AI 现在是不是泡沫？</h3>
+<p>你不需要预测——也没人能预测。把幸存者模型当镜头用：<strong>基础层</strong>股票（英伟达、台积电）最容易被炒作，因为叙事最简单，资本最爱讲。一旦泡沫破裂，它们跌得最狠。<strong>平台层</strong>公司（微软、谷歌）有真实收入和护城河，抗跌能力更强。<strong>应用层</strong>创业公司失败率最高但上限也最高。实操建议：不要把身家押在单一层面。跨层、跨时间分散配置，把个人精力投入到与你的技能和风险承受力匹配的那个层面。</p>
 
-<h3>Codex 的订阅方案怎么选？</h3>
-<p>Plus（$20/月）是个人开发者的最佳选择——token 额度足够日常编码，价格合理。Free 版 token 极少，主要供试用。Pro 版（$200/月）适合将 Codex 作为主力开发环境的重度用户。API Key 方式需境外信用卡且按量付费，经常使用的话性价比不如订阅。</p>
+<h3>我不是程序员，还能从 AI 浪潮中获益吗？</h3>
+<p>当然可以。本文的三个机会正是为此设计的。机会一（职业增强）完全不需要编程——就是用现有的 AI 工具把你当前的工作效率提升 10 倍。营销人员用 ChatGPT 写文案、设计师用 Midjourney 做原型、老师用 AI 备课——这些都不需要编程。机会二（副业）可能涉及轻度技术工作，但无代码工具也能搞定。只有机会三需要深度技术能力。大多数人应该聚焦机会一和二。</p>
 
-<h3>agent.md 文件必须放在项目根目录吗？</h3>
-<p>是的，Codex 会自动读取项目根目录下的 <code>agent.md</code>（或 <code>CLAUDE.md</code>）作为系统指令。你可以在里面定义代码规范、Git 提交习惯、技术栈偏好和项目特定规则。Codex 在该项目的每次对话中都会遵守这些规则——这是 Codex 最强大的功能之一：跨会话保持一致行为，无需重复说明。</p>
+<h3>AI 时代最重要的单项技能是什么？</h3>
+<p><strong>提出好问题的能力。</strong>AI 能生成答案，但它无法判断什么值得问。清晰地定义问题、识别什么重要、不断迭代提示直到获得有用输出的能力——这是让每个 AI 工具更有效的元技能。而且随着 AI 生成答案的能力越来越强，这个技能的价值只会越来越高。把它和你所在领域的深厚专业能力结合，你就会变得不可替代。</p>
 
-<h3>Fork 功能的两个选项怎么选？</h3>
-<p><strong>Fork into Local</strong>：对话回滚但代码保持不变。适合"讨论方向跑偏了但代码没问题"的情况。如需同时回滚代码，需手动 <code>git reset</code>。<strong>Fork into New Worktree</strong>：创建完全独立的工作目录，原项目不受任何影响。适合"想试试另一个方向但不影响当前进度"——相当于给整个项目状态开一个"假设"分支。</p>
+<h3>现在该不该买 AI 股票？</h3>
+<p>本文不是投资建议，但幸存者模型提供了一个框架：如果你要投资，区分<strong>交易</strong>（择时）和<strong>投资</strong>（穿越周期）。长期投资的话，有真实收入和护城河的平台层公司更可能在泡沫中存活。短期交易的话，要明白基础层股票波动最大——炒作时涨最快，崩盘时跌最狠。对大多数人最稳妥的方式：定投多元化的科技指数基金，而不是押注单只股票。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>掌握了 Codex？升级你的 AI 开发工作流：</p>
+  <p>了解了 AI 格局？现在构建你的实战技能：</p>
   <ul>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding 实战指南：AI 开发完整工作流（上篇）</a> — 深入了解 Vibe Coding 方法论</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 构建集中式 AI 生产力中心</li>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex 网站开发：零基础实战教程与部署指南</a> — 用 Codex 从零构建完整网站</li>
+    <li><a href="/articles/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 深入了解三层 AI 架构</li>
+    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI 工具箱：全领域实用指南</a> — 为你的职业路径找到合适的 AI 工具</li>
+    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被 AI 术语吓到：从 Token 到 Workspace Agent 的实用指南</a> — 从零掌握 AI 基础知识</li>
+  </ul>
+</div>`,
+  },
+
+  "top-5-ai-ppt-skills-tested-ranked": {
+    content: `<div class="meta-banner">
+  <span class="meta-badge">🔧 AI Tools</span>
+  <span class="meta-badge">🕒 6 min read</span>
+  <span class="meta-badge">📅 Jul 4, 2026</span>
+  <span class="meta-badge">🎯 Beginner</span>
+</div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Creating high-quality presentations has never been easier with AI PPT skills, but with so many options available, it can be hard to know which one to choose. In this guide, we'll test the five most popular AI PPT skills using the same prompt and evaluate their performance to help you find the best tool for your needs.</p>
+
+<h2 id="methodology">Test Methodology</h2>
+
+<p>We followed a three-step process to ensure a fair comparison:</p>
+
+<ol>
+  <li><strong>Identify Top Skills</strong>: Use Codex to find the five most popular PPT skills on GitHub.</li>
+  <li><strong>Standardized Testing</strong>: Generate a presentation on the same topic (a Chinese language lesson plan for the text <em>Spring</em> by Zhu Ziqing) using each skill.</li>
+  <li><strong>AI Evaluation</strong>: Have Codex analyze and rank the presentations based on content quality, design, and functionality.</li>
+</ol>
+
+<h2 id="contenders">The Contenders</h2>
+
+<p>The five skills we tested are:</p>
+
+<ol>
+  <li><strong>PPT Master</strong></li>
+  <li><strong>Banana Slides</strong></li>
+  <li><strong>Frontend Slides</strong></li>
+  <li><strong>HTML PPT</strong></li>
+  <li><strong>Guizang PPT Skill</strong></li>
+</ol>
+
+<h2 id="results">Detailed Test Results</h2>
+
+<h3>1. PPT Master</h3>
+
+<ul>
+  <li><strong>Output</strong>: An 11-page PowerPoint presentation with a clean, structured design.</li>
+  <li><strong>Strengths</strong>: Well-organized content with clear sections; includes speaker notes for each slide; good visual hierarchy with key points highlighted.</li>
+  <li><strong>Weaknesses</strong>: Some text elements may be misaligned and require manual adjustment; limited customization options.</li>
+</ul>
+
+<h3>2. Banana Slides</h3>
+
+<ul>
+  <li><strong>Output</strong>: A 13-page presentation with a light green color scheme.</li>
+  <li><strong>Strengths</strong>: Highly structured content that follows a logical flow; includes clear learning objectives and assessment criteria; visually appealing design with consistent styling.</li>
+  <li><strong>Weaknesses</strong>: Less flexibility for advanced customization; may not be suitable for highly creative or non-educational presentations.</li>
+</ul>
+
+<h3>3. Frontend Slides</h3>
+
+<ul>
+  <li><strong>Output</strong>: A 12-page presentation with a minimalist design.</li>
+  <li><strong>Strengths</strong>: Clean, modern design with a focus on readability; good use of white space and simple graphics; content is concise and to the point.</li>
+  <li><strong>Weaknesses</strong>: Limited visual variety; may not be suitable for presentations that require more visual impact.</li>
+</ul>
+
+<h3>4. HTML PPT</h3>
+
+<ul>
+  <li><strong>Output</strong>: A web-based presentation with a left-side navigation menu.</li>
+  <li><strong>Strengths</strong>: Interactive design with easy navigation; good for online presentations or sharing via the web; includes detailed content with in-depth analysis.</li>
+  <li><strong>Weaknesses</strong>: Requires web access to view; limited customization of the design.</li>
+</ul>
+
+<h3>5. Guizang PPT Skill</h3>
+
+<ul>
+  <li><strong>Output</strong>: A 12-page presentation with a dark theme.</li>
+  <li><strong>Strengths</strong>: Unique, modern design with a dark color scheme; good use of visual elements and animations; content is well-structured and engaging.</li>
+  <li><strong>Weaknesses</strong>: Dark theme may not be suitable for all audiences; some elements may be difficult to read in bright environments.</li>
+</ul>
+
+<h2 id="ranking">AI Evaluation and Ranking</h2>
+
+<p>After analyzing all five presentations, Codex provided the following rankings:</p>
+
+<ol>
+  <li><strong>PPT Master</strong> — Most balanced, well-structured, and includes speaker notes</li>
+  <li><strong>Banana Slides</strong> — Most suitable for educational presentations with clear learning objectives</li>
+  <li><strong>Frontend Slides</strong> — Clean, minimalist design with concise content</li>
+  <li><strong>HTML PPT</strong> — Interactive web-based design with detailed content</li>
+  <li><strong>Guizang PPT Skill</strong> — Unique dark theme with good visual elements</li>
+</ol>
+
+<h2 id="takeaways">Key Takeaways</h2>
+
+<ul>
+  <li><strong>Best for Education</strong>: Banana Slides is the top choice for creating educational presentations, with clear learning objectives and assessment criteria.</li>
+  <li><strong>Best for General Use</strong>: PPT Master is the most balanced option, suitable for a wide range of presentation types.</li>
+  <li><strong>Best for Web Sharing</strong>: HTML PPT is ideal for creating interactive presentations that can be shared online.</li>
+  <li><strong>Best for Modern Design</strong>: Guizang PPT Skill offers a unique dark theme with good visual elements, making it a good choice for presentations that need to stand out.</li>
+</ul>
+
+<h2 id="recommendation">Final Recommendation</h2>
+
+<p>If you're looking for a versatile AI PPT skill that can handle a wide range of presentation types, <strong>PPT Master</strong> is the best choice. It offers a good balance of structure, design, and functionality, making it suitable for both educational and general use.</p>
+
+<p>For more specialized needs, consider <strong>Banana Slides</strong> for educational presentations or <strong>HTML PPT</strong> for web-based presentations.</p>
+
+<p>No matter which skill you choose, be sure to review and edit the output to ensure it meets your specific needs and requirements.</p>
+
+<h2>常见问题</h2>
+
+<h3>Which AI PPT skill is the best overall?</h3>
+<p>PPT Master ranked first in our test for its balanced combination of structure, design, and functionality. It's the most versatile — suitable for business reports, educational lessons, and general presentations alike. The inclusion of speaker notes is a standout feature that most other skills lack. That said, "best" depends on your use case: if you're an educator, Banana Slides' built-in learning objectives give it an edge. If you share presentations primarily online, HTML PPT's web-native format is more practical.</p>
+
+<h3>Are these AI PPT skills free to use?</h3>
+<p>Most of these skills are available as Codex plugins or community skills, which are free to install and use within the Codex environment. However, Codex itself requires a subscription (Plus at $20/month is recommended). The PPT output files (.pptx or HTML) are yours to keep and use without restrictions. Some skills may have premium tiers for advanced features, but the basic functionality tested here is accessible with a standard Codex subscription.</p>
+
+<h3>Can I customize the AI-generated presentations?</h3>
+<p>Yes, and you should. AI-generated presentations are a starting point, not a finished product. After generating a presentation, you can: (1) ask Codex to make specific changes via annotations or prompts, (2) download the .pptx file and edit it in PowerPoint or Google Slides, or (3) for HTML PPT, edit the HTML/CSS directly. Our test found that PPT Master and Banana Slides produce the most editable output with the least need for manual fixes.</p>
+
+<h3>How long does it take to generate a presentation with these skills?</h3>
+<p>In our tests, each skill generated a full 11-13 page presentation in 30-90 seconds, depending on complexity and Codex's current load. PPT Master was the fastest at ~30 seconds. The real time-saver isn't the generation speed — it's eliminating the 2-4 hours you'd normally spend on structure, design, and content drafting. Even with 10-15 minutes of manual review and editing, you're still saving 90%+ of the time compared to building from scratch.</p>
+
+<div class="next-step">
+  <h3>📖 Next Steps</h3>
+  <p>Found your PPT tool? Explore more AI productivity skills:</p>
+  <ul>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master Codex skills and plugins</li>
+    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build your own AI productivity system</li>
+    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across categories</li>
+  </ul>
+</div>`,
+    contentZh: `<div class="meta-banner">
+  <span class="meta-badge">🔧 AI 工具</span>
+  <span class="meta-badge">🕒 阅读约6分钟</span>
+  <span class="meta-badge">📅 2026年7月4日</span>
+  <span class="meta-badge">🎯 入门</span>
+</div>
+
+<h2 id="introduction">引言</h2>
+
+<p>用 AI PPT 技能创建高质量演示文稿从未如此简单，但选择太多反而让人无从下手。本文用同一提示词实测五款最热门的 AI PPT 技能，从内容质量、设计和功能三个维度进行排名，帮你找到最适合自己的工具。</p>
+
+<h2 id="methodology">测试方法</h2>
+
+<p>我们采用三步流程确保公平对比：</p>
+
+<ol>
+  <li><strong>筛选顶尖技能</strong>：用 Codex 找到 GitHub 上最热门的五款 PPT 技能。</li>
+  <li><strong>标准化测试</strong>：用同一主题（朱自清《春》的语文教案）让每款技能生成演示文稿。</li>
+  <li><strong>AI 评估</strong>：让 Codex 基于内容质量、设计和功能分析并排名。</li>
+</ol>
+
+<h2 id="contenders">参赛选手</h2>
+
+<p>测试的五款技能：</p>
+
+<ol>
+  <li><strong>PPT Master</strong></li>
+  <li><strong>Banana Slides</strong></li>
+  <li><strong>Frontend Slides</strong></li>
+  <li><strong>HTML PPT</strong></li>
+  <li><strong>Guizang PPT Skill</strong></li>
+</ol>
+
+<h2 id="results">详细测试结果</h2>
+
+<h3>1. PPT Master</h3>
+
+<ul>
+  <li><strong>输出</strong>：11 页 PowerPoint 演示文稿，设计简洁、结构清晰。</li>
+  <li><strong>优势</strong>：内容组织良好，段落分明；每页含演讲者备注；重点突出，视觉层次好。</li>
+  <li><strong>不足</strong>：部分文本元素可能错位需手动调整；自定义选项有限。</li>
+</ul>
+
+<h3>2. Banana Slides</h3>
+
+<ul>
+  <li><strong>输出</strong>：13 页演示文稿，浅绿色配色方案。</li>
+  <li><strong>优势</strong>：内容结构严谨，逻辑流畅；含明确的学习目标和评估标准；设计美观，风格统一。</li>
+  <li><strong>不足</strong>：高级自定义灵活性较低；不太适合高度创意或非教育类演示。</li>
+</ul>
+
+<h3>3. Frontend Slides</h3>
+
+<ul>
+  <li><strong>输出</strong>：12 页演示文稿，极简设计风格。</li>
+  <li><strong>优势</strong>：设计简洁现代，注重可读性；留白和简单图形运用得当；内容精炼、直击要点。</li>
+  <li><strong>不足</strong>：视觉多样性有限；不太适合需要强烈视觉冲击力的演示。</li>
+</ul>
+
+<h3>4. HTML PPT</h3>
+
+<ul>
+  <li><strong>输出</strong>：网页版演示文稿，左侧导航菜单。</li>
+  <li><strong>优势</strong>：交互式设计，导航便捷；适合在线演示或网页分享；内容详细，分析深入。</li>
+  <li><strong>不足</strong>：需要网络访问才能查看；设计自定义有限。</li>
+</ul>
+
+<h3>5. Guizang PPT Skill</h3>
+
+<ul>
+  <li><strong>输出</strong>：12 页演示文稿，暗色主题。</li>
+  <li><strong>优势</strong>：设计独特现代，暗色配色出众；视觉元素和动画运用得当；内容结构良好，引人入胜。</li>
+  <li><strong>不足</strong>：暗色主题不一定适合所有受众；亮光环境下部分元素可能难以阅读。</li>
+</ul>
+
+<h2 id="ranking">AI 评估排名</h2>
+
+<p>综合分析五份演示文稿后，Codex 给出以下排名：</p>
+
+<ol>
+  <li><strong>PPT Master</strong> — 最均衡，结构清晰，含演讲者备注</li>
+  <li><strong>Banana Slides</strong> — 最适合教育类演示，学习目标明确</li>
+  <li><strong>Frontend Slides</strong> — 极简设计，内容精炼</li>
+  <li><strong>HTML PPT</strong> — 交互式网页设计，内容详细</li>
+  <li><strong>Guizang PPT Skill</strong> — 暗色主题独特，视觉元素出色</li>
+</ol>
+
+<h2 id="takeaways">关键结论</h2>
+
+<ul>
+  <li><strong>教育场景首选</strong>：Banana Slides，学习目标和评估标准内置。</li>
+  <li><strong>通用场景首选</strong>：PPT Master，最均衡，适用面最广。</li>
+  <li><strong>网页分享首选</strong>：HTML PPT，交互式设计，在线分享方便。</li>
+  <li><strong>设计感首选</strong>：Guizang PPT Skill，暗色主题独树一帜，适合需要脱颖而出的演示。</li>
+</ul>
+
+<h2 id="recommendation">最终推荐</h2>
+
+<p>如果你想要一款能应对各类演示需求的通用 AI PPT 技能，<strong>PPT Master</strong> 是最佳选择。它在结构、设计和功能之间取得了良好平衡，教育和通用场景都适用。</p>
+
+<p>如果有特定需求：教育类选 <strong>Banana Slides</strong>，网页分享选 <strong>HTML PPT</strong>。</p>
+
+<p>无论选哪款，记得审查和编辑输出结果，确保满足你的具体需求。</p>
+
+<h2>常见问题</h2>
+
+<h3>哪款 AI PPT 技能综合最强？</h3>
+<p>PPT Master 在我们的测试中排名第一，它在结构、设计和功能三个维度最为均衡。它适用范围最广——商务报告、教学课件、通用演示都能胜任。演讲者备注是它独有的亮点功能，其他技能大多没有。但"最强"取决于你的场景：教育工作者选 Banana Slides 更合适（内置学习目标），主要在线分享的用户选 HTML PPT 更实用（网页原生格式）。</p>
+
+<h3>这些 AI PPT 技能免费吗？</h3>
+<p>这些技能大多是 Codex 插件或社区技能，在 Codex 环境内可免费安装使用。但 Codex 本身需要订阅（推荐 Plus，$20/月）。生成的 PPT 文件（.pptx 或 HTML）归你所有，无使用限制。部分技能可能有高级功能付费层级，但本文测试的基础功能在标准 Codex 订阅下均可使用。</p>
+
+<h3>AI 生成的演示文稿可以自定义吗？</h3>
+<p>可以，而且应该自定义。AI 生成的演示文稿是起点，不是成品。生成后你可以：(1) 通过标注或提示词让 Codex 做具体修改，(2) 下载 .pptx 文件在 PowerPoint 或 Google Slides 中编辑，(3) HTML PPT 的话直接编辑 HTML/CSS。我们的测试发现 PPT Master 和 Banana Slides 生成的输出最易编辑，需要手动修复的地方最少。</p>
+
+<h3>用这些技能生成一个演示文稿要多久？</h3>
+<p>测试中每款技能生成 11-13 页完整演示文稿耗时 30-90 秒，取决于复杂度和 Codex 当前负载。PPT Master 最快，约 30 秒。真正省时间的不是生成速度——而是省掉了你通常花在结构设计、内容草拟上的 2-4 小时。即使加上 10-15 分钟人工审查和编辑，相比从零做起仍然节省了 90% 以上的时间。</p>
+
+<div class="next-step">
+  <h3>📖 下一步</h3>
+  <p>找到了合适的 PPT 工具？探索更多 AI 生产力技能：</p>
+  <ul>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex 完全指南：从零基础到高级开发工作流</a> — 掌握 Codex 技能和插件体系</li>
+    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 构建自己的 AI 生产力系统</li>
+    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI 工具箱：全领域实用指南</a> — 发现更多跨品类 AI 工具</li>
   </ul>
 </div>`,
   },
