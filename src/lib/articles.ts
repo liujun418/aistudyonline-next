@@ -2446,4 +2446,29 @@ export const articles: Article[] = [
     date: "2026-07-04",
   },
 
+  {
+    slug: "2026-ai-agent-guide-choose-right-tool-beginners",
+    title: "2026 AI Agent Guide: How to Choose the Right Tool for Beginners",
+    titleZh: "2026 AI Agent选型指南：新手如何选择最适合的工具",
+    description: "A ranked comparison of five mainstream AI Agent tools — Codex, Claude Code, OpenClaw, Hermes Agent, and TRAE — with pros, cons, and best-use recommendations to help beginners pick the right tool for their workflow.",
+    descriptionZh: "五款主流AI Agent工具横向排名对比——Codex、Claude Code、OpenClaw、Hermes Agent和TRAE——含优缺点和最佳场景推荐，帮新手选出最适合自己工作流的工具。",
+    category: "AI Tools",
+    tags: ["AI Agent", "Codex", "Claude Code", "OpenClaw", "Tools Comparison", "Beginner Guide"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent", "Claude Code", "OpenClaw", "Hermes Agent", "TRAE Framework"],
+    date: "2026-07-05",
+  },
+  {
+    slug: "tencent-workbuddy-ai-office-workbench",
+    title: "Tencent WorkBuddy: The Ultimate AI Office Workbench for Everyday Work",
+    titleZh: "腾讯WorkBuddy：日常办公的终极AI工作台深度评测",
+    description: "A comprehensive review of Tencent WorkBuddy — a full-scenario AI office workbench featuring three working modes, multi-agent parallel execution, 20+ built-in skills, pre-configured expert teams, and mobile control via WeChat/QQ/Feishu.",
+    descriptionZh: "腾讯WorkBuddy全面评测——全场景AI办公工作台，三种工作模式、多Agent并行执行、20+内置技能、预配置专家团队、微信/QQ/飞书移动端控制。",
+    category: "AI Tools",
+    tags: ["Tencent", "WorkBuddy", "AI Office", "Productivity", "AI Agent", "China"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy"],
+    date: "2026-07-05",
+  },
+
 ];
