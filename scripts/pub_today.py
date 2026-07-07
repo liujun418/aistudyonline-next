@@ -1,88 +1,38 @@
 """
-Publish July 5, 2026 — 2 articles + 1 new tool (Tencent WorkBuddy).
+Publish July 7, 2026 — 2 articles, no new tools.
 """
 import os
 
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-# ===== Part 1: Add 1 new tool to tools.ts =====
-with open('src/lib/tools.ts', 'r', encoding='utf-8') as f:
-    tools_src = f.read()
-
-new_tools = r"""
-  {
-    id: "tencent-workbuddy",
-    name: "Tencent WorkBuddy",
-    nameZh: "腾讯WorkBuddy",
-    description: "Tencent's full-scenario AI office workbench that directly operates local files, supports multi-agent parallel execution, expert teams, and mobile control via WeChat/QQ/Feishu.",
-    descriptionZh: "腾讯全场景AI办公工作台，直接操作本地文件，支持多Agent并行执行、专家团队和微信/QQ/飞书移动端控制。",
-    category: "ai-agent",
-    tags: ["ai-agent", "office", "productivity", "tencent", "automation", "china"],
-    difficulty: "beginner",
-    url: "https://workbuddy.tencent.com",
-    rating: 4.3,
-    pricing: "Free",
-    useCase: "AI-powered office automation — generate reports, analyze data, create PPTs, manage files, and control tasks from mobile",
-    icon: "💼",
-    company: "Tencent",
-    companyZh: "腾讯",
-    founded: 1998,
-    headquarters: "Shenzhen, China",
-    descriptionLong: "Tencent WorkBuddy is a full-scenario AI office workbench that transforms AI from a chat tool into an autonomous task executor. Unlike cloud-based AI assistants, WorkBuddy operates directly on your local files — it can read, edit, and organize documents, spreadsheets, and presentations without uploading them to external servers. It offers three working modes: Craft Mode (autonomous execution for batch tasks like file sorting), Plan Mode (generates an execution plan for user approval before proceeding — ideal for high-risk tasks), and Ask Mode (text-only responses for consultation). For complex tasks, WorkBuddy dynamically decomposes the work and assigns sub-tasks to multiple AI agents running in parallel, dramatically reducing completion time. It ships with over 20 pre-built skills covering daily office work, code development, and design. Its standout feature is Expert Teams — pre-configured multi-agent squads for specific scenarios (Content Creation Team with creative director + copywriter + designer roles, Development Team with frontend/backend/testing roles). Mobile control via WeChat, QQ, Feishu, or DingTalk lets you assign tasks from your phone and receive results back. WorkBuddy supports multiple AI models (DeepSeek, Kimi, GPT, Claude) so you're not locked into a single provider. For Chinese professionals seeking an all-in-one AI office solution with local file security and mobile flexibility, WorkBuddy is the most comprehensive domestic option.",
-    descriptionLongZh: "腾讯WorkBuddy是一款全场景AI办公工作台，将AI从聊天工具转变为能自主执行任务的办公助手。与云端AI助手不同，WorkBuddy直接操作本地文件——读取、编辑、整理文档、表格和演示文稿，无需上传到外部服务器。提供三种工作模式：Craft模式（自主执行标准化批量任务，如文件整理）、Plan模式（先生成执行方案待用户确认后执行，适合合同审查等高危任务）、Ask模式（纯文本回答，适合咨询）。复杂任务会自动分解并分配给多个AI Agent并行执行。内置20+预置技能，覆盖日常办公、代码开发和设计创意。亮点功能是专家团队——为不同场景预配置的多Agent协作组（内容创作团队含创意总监+文案+设计师，开发团队含前后端+测试）。支持通过微信、QQ、飞书、钉钉进行移动端控制，手机发任务、电脑执行、结果回传。支持多种AI模型（DeepSeek、Kimi、GPT、Claude），不绑定单一模型。对于追求本地文件安全和移动灵活性的中国职场人士，WorkBuddy是目前最全面的国产AI办公解决方案。",
-    advantages: ["Local file operation ensures data privacy", "Three working modes for different risk levels", "Multi-agent parallel execution for complex tasks", "Pre-built expert teams for specific scenarios", "Mobile control via WeChat/QQ/Feishu/DingTalk", "Multi-model support (DeepSeek, Kimi, GPT, Claude)"],
-    advantagesZh: ["本地文件操作保障数据隐私", "三种工作模式适配不同风险等级", "多Agent并行执行复杂任务", "预配置专家团队覆盖各类场景", "微信/QQ/飞书/钉钉移动端控制", "多模型支持不锁定单一供应商"],
-    useCases: ["Automated weekly/monthly report generation", "Batch file sorting and data processing", "PPT creation from document outlines", "Multi-agent content creation (brand strategy, marketing campaigns)", "Remote task delegation via mobile during meetings or commute"],
-    useCasesZh: ["自动生成周报/月报", "批量文件整理和数据处理", "从文档大纲生成PPT", "多Agent内容创作（品牌策略、营销方案）", "会议或通勤途中通过手机远程派发任务"],
-    targetAudience: "Chinese office professionals, content creators, developers, and anyone who handles repetitive document/data/PPT tasks daily",
-    targetAudienceZh: "中国职场人士、内容创作者、开发者，以及每天处理重复性文档/数据/PPT任务的人",
-    pricingTiers: ["Free (basic features)", "Pro (advanced skills and priority queue, pricing TBD)"],
-    pros: ["Operates on local files — no data leaves your machine", "Three modes cover everything from safe Q&A to full autonomy", "Expert Teams are genuinely useful for multi-role projects", "Mobile control via apps you already use daily", "Free tier is generous for individual users"],
-    prosZh: ["本地文件操作——数据不离开电脑", "三种模式覆盖从安全问答到完全自主", "专家团队对多角色项目真正实用", "通过日常使用的App进行移动端控制", "个人用户免费额度充足"],
-    cons: ["Only available in China currently", "Requires Tencent account login", "Pro tier pricing not yet announced", "English UI support limited"],
-    consZh: ["目前仅限中国地区使用", "需腾讯账号登录", "Pro版定价尚未公布", "英文界面支持有限"],
-    extensions: [],
-    skills: ["Document generation", "Data analysis", "PPT creation", "Batch file processing", "Code development", "UI/UX design", "Poster design"],
-    scene: "office",
-  },
-"""
-
-last_tool = tools_src.rfind('] as Tool[];')
-tools_new = tools_src[:last_tool] + new_tools + '] as Tool[];'
-
-with open('src/lib/tools.ts', 'w', encoding='utf-8') as f:
-    f.write(tools_new)
-
-print('Part 1: 1 new tool added to tools.ts (Tencent WorkBuddy)')
-
-# ===== Part 2: Add 2 article metadata to articles.ts =====
+# ===== Part 1: Add 2 article metadata to articles.ts =====
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "2026-ai-agent-guide-choose-right-tool-beginners",
-    title: "2026 AI Agent Guide: How to Choose the Right Tool for Beginners",
-    titleZh: "2026 AI Agent选型指南：新手如何选择最适合的工具",
-    description: "A ranked comparison of five mainstream AI Agent tools — Codex, Claude Code, OpenClaw, Hermes Agent, and TRAE — with pros, cons, and best-use recommendations to help beginners pick the right tool for their workflow.",
-    descriptionZh: "五款主流AI Agent工具横向排名对比——Codex、Claude Code、OpenClaw、Hermes Agent和TRAE——含优缺点和最佳场景推荐，帮新手选出最适合自己工作流的工具。",
-    category: "AI Tools",
-    tags: ["AI Agent", "Codex", "Claude Code", "OpenClaw", "Tools Comparison", "Beginner Guide"],
-    difficulty: "beginner",
-    toolsMentioned: ["Codex Agent", "Claude Code", "OpenClaw", "Hermes Agent", "TRAE Framework"],
-    date: "2026-07-05",
+    slug: "complete-practical-tutorial-claude-code-core-operations",
+    title: "Complete Practical Tutorial: Master All Core Operations Inside Claude Code",
+    titleZh: "Claude Code完全实战教程：掌握所有核心操作",
+    description: "A hands-on tutorial covering every core Claude Code operation — from CLI installation and project import to file analysis, batch refactoring, automatic debugging, claude.md rules, Git integration, Plan Mode, and permission controls — with executable commands for every step.",
+    descriptionZh: "从CLI安装、项目导入到文件分析、批量重构、自动调试、claude.md规则、Git联动、Plan模式和权限控制，每一步都有可执行命令，覆盖Claude Code全部核心操作。",
+    category: "AI Tutorials",
+    tags: ["Claude Code", "CLI", "Tutorial", "Coding", "Debugging", "Refactoring", "Git"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Claude Code"],
+    date: "2026-07-07",
   },
   {
-    slug: "tencent-workbuddy-ai-office-workbench",
-    title: "Tencent WorkBuddy: The Ultimate AI Office Workbench for Everyday Work",
-    titleZh: "腾讯WorkBuddy：日常办公的终极AI工作台深度评测",
-    description: "A comprehensive review of Tencent WorkBuddy — a full-scenario AI office workbench featuring three working modes, multi-agent parallel execution, 20+ built-in skills, pre-configured expert teams, and mobile control via WeChat/QQ/Feishu.",
-    descriptionZh: "腾讯WorkBuddy全面评测——全场景AI办公工作台，三种工作模式、多Agent并行执行、20+内置技能、预配置专家团队、微信/QQ/飞书移动端控制。",
-    category: "AI Tools",
-    tags: ["Tencent", "WorkBuddy", "AI Office", "Productivity", "AI Agent", "China"],
-    difficulty: "beginner",
-    toolsMentioned: ["Tencent WorkBuddy"],
-    date: "2026-07-05",
+    slug: "7-mainstream-agent-architectures-beginner-enterprise-guide",
+    title: "7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade Guide",
+    titleZh: "7大主流Agent架构：从入门到企业级完整指南",
+    description: "A systematic breakdown of 7 Agent architectures — Single Agent, ReAct, Plan & Execute, Multi-Agent, Router+Skill, Blackboard, and Graph/Workflow — with pros, cons, best-use cases, and a recommended evolution path from beginner to enterprise.",
+    descriptionZh: "系统拆解7种Agent架构——单Agent、ReAct、Plan & Execute、多Agent、Router+Skill、黑板架构和Graph/Workflow——含优缺点、最佳场景和从入门到企业级的推荐演进路径。",
+    category: "AI Learning",
+    tags: ["AI Agent", "Architecture", "ReAct", "Multi-Agent", "Workflow", "LangGraph", "Enterprise"],
+    difficulty: "intermediate",
+    toolsMentioned: ["LangGraph", "n8n"],
+    date: "2026-07-07",
   },
 
 """
@@ -93,533 +43,915 @@ articles_new = articles_src[:last_bracket] + new_articles + '];'
 with open('src/lib/articles.ts', 'w', encoding='utf-8') as f:
     f.write(articles_new)
 
-print('Part 2: 2 new articles added to articles.ts')
+print('Part 1: 2 new articles added to articles.ts')
 
-# ===== Part 3: Add article content to article-content.ts =====
+# ===== Part 2: Add article content to article-content.ts =====
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "2026-ai-agent-guide-choose-right-tool-beginners": {
+  "complete-practical-tutorial-claude-code-core-operations": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI Tools</span>
-  <span class="meta-badge">🕒 7 min read</span>
-  <span class="meta-badge">📅 Jul 5, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
+  <span class="meta-badge">📚 AI Tutorials</span>
+  <span class="meta-badge">🕒 10 min read</span>
+  <span class="meta-badge">📅 Jul 7, 2026</span>
+  <span class="meta-badge">🎯 Intermediate</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>The AI industry's competitive focus has shifted from "which model is more powerful" to "which Agent can get more work done." This guide ranks mainstream Agent tools based on real-world usage and community feedback to help beginners make an informed choice.</p>
+<p>Claude Code has become the top AI coding assistant favored by most developers for its powerful file reading, project refactoring, debugging and autonomous running capabilities. This full practical tutorial covers every core operation step by step, helping beginners get started quickly and helping senior developers maximize its productivity. All operations are matched with executable code snippets and command lines for direct replication.</p>
 
-<h2 id="5th-trae">5th Place: TRAE</h2>
+<h2 id="setup">1. Basic Environment Preparation & Project Import</h2>
 
-<p>TRAE is ByteDance's long-standing Agent tool, often mentioned in discussions about domestic AI tools but rarely the first choice. It evolved from a Cursor-like intelligent IDE into TRAE SOLO, a general-purpose desktop Agent with cross-platform sync across mobile, web, and desktop.</p>
+<h3>1.1 Install and Launch Claude Code CLI</h3>
 
-<p><strong>Pros:</strong></p>
-<ul>
-  <li>Beginner-friendly, no complex configuration required</li>
-  <li>Three-platform sync (mobile, web, desktop)</li>
-  <li>Free for personal use with no usage limits (though peak hours may require waiting)</li>
-</ul>
+<p>Open your local terminal and run the installation command:</p>
 
-<p><strong>Cons:</strong></p>
-<ul>
-  <li>Harness engineering capabilities are weaker than mainstream competitors</li>
-  <li>Struggles with long multi-step tasks, cross-file edits, and repeated debugging, leading to detours and high rework costs</li>
-</ul>
+<pre><code class="language-bash">npm install -g @anthropic-ai/claude-code</code></pre>
 
-<p><strong>Best For:</strong> Beginners who want to try AI Agents or have strong mobile office needs. Not recommended for heavy-duty work.</p>
+<p>After installation, verify successful installation with this command:</p>
 
-<h2 id="4th-hermes">4th Place: Hermes Agent</h2>
+<pre><code class="language-bash">claude-code --version</code></pre>
 
-<p>A surprise hit after the OpenClaw craze, Hermes Agent gained attention for its long-term memory and self-evolution capabilities, sparking debates between "raising shrimp (OpenClaw)" and "raising horses (Hermes)."</p>
+<h3>1.2 Import Local Project Folder</h3>
 
-<p><strong>Pros:</strong></p>
-<ul>
-  <li>Long-term memory that allows the Agent to learn from past experiences</li>
-  <li>Self-evolution through autonomous skill creation</li>
-</ul>
+<p>Switch to your project root directory in terminal first:</p>
 
-<p><strong>Cons:</strong></p>
-<ul>
-  <li>Over-reliance on skills can lead to outdated or incorrect workflows</li>
-  <li>Skill selection errors can derail tasks</li>
-  <li>Less competitive in terms of ease of use, security, and localization compared to domestic alternatives</li>
-</ul>
+<pre><code class="language-bash">cd /Users/yourname/Desktop/my-project</code></pre>
 
-<p><strong>Best For:</strong> Use as a daily assistant. Not recommended for heavy coding, PPT creation, data analysis, or complex content production.</p>
+<p>Start Claude Code workspace binding:</p>
 
-<h2 id="3rd-openclaw">3rd Place: OpenClaw and Its Domestic Variants</h2>
+<pre><code class="language-bash">claude-code init</code></pre>
 
-<p>OpenClaw and its domestic derivatives (often called "domestic shrimp") are ideal for beginners due to their strong ecosystem and extensive optimizations.</p>
+<p>This command generates a hidden <code>.claude/</code> configuration folder, which stores project rules, conversation records and permission settings automatically.</p>
 
-<p><strong>Pros:</strong></p>
-<ul>
-  <li>Best domestic optimization for Chinese users</li>
-  <li>Rich ecosystem with free usage quotas</li>
-  <li>Easy to get started: no environment setup required, install and use immediately</li>
-</ul>
+<h3>1.3 Configure API Key</h3>
 
-<p><strong>Cons:</strong></p>
-<ul>
-  <li>Relies heavily on plugins and skills</li>
-  <li>Harness capabilities are relatively weak, so performance in heavy tasks depends on plugin/skill selection</li>
-</ul>
+<p>Run the login command to bind your Anthropic API key:</p>
 
-<p><strong>Best For:</strong> Beginners to get started with AI Agents. Domestic variants allow quick onboarding to experience Agent value, while advanced users can explore plugins, skills, and workflow configurations.</p>
+<pre><code class="language-bash">claude-code login</code></pre>
 
-<h2 id="2nd-claude-code">2nd Place: Claude Code</h2>
+<p>Paste your API key when prompted, and the tool will automatically save credentials locally without repeated input.</p>
 
-<p>Claude Code is a staple in the Agent space, known for its exceptional harness engineering capabilities. It was the default recommendation for AI bloggers before Codex rose to prominence.</p>
+<h2 id="file-reading">2. Core File Reading & Batch Analysis Functions</h2>
 
-<p><strong>Pros:</strong></p>
-<ul>
-  <li>Strongest harness engineering in the industry</li>
-  <li>Excellent adaptation to domestic models via CC Switch</li>
-  <li>Best coding Agent capabilities</li>
-</ul>
+<p>Claude Code can scan the entire project instead of single files like ordinary chatbots.</p>
 
-<p><strong>Cons:</strong></p>
-<ul>
-  <li>High usage barriers: CLI version requires terminal operations, which is not beginner-friendly</li>
-  <li>Desktop version lacks Chinese language support and has complex model integration</li>
-</ul>
+<h3>2.1 Read Entire Project Codebase</h3>
 
-<p><strong>Best For:</strong> Professional developers. For non-developers needing PPT creation, document writing, or general workflow integration, Claude Code may not be the most comfortable option.</p>
+<p>Input this natural language instruction inside Claude Code dialogue box:</p>
 
-<h2 id="1st-codex">1st Place: Codex</h2>
+<pre><code class="language-text">Scan all .js and .ts files under src folder, sort out all unused functions and output a formatted list</code></pre>
 
-<p>Codex is the new favorite in the AI space, often called the "iPhone of Agents." While its raw capabilities may not surpass Claude Code, its user experience is unparalleled.</p>
+<h3>2.2 Targeted Single File Deep Analysis</h3>
 
-<p><strong>Pros:</strong></p>
-<ul>
-  <li>Seamless integration with GPT-5.5, the most powerful general reasoning model</li>
-  <li>Excellent plugin ecosystem with a curated marketplace (similar to the App Store)</li>
-  <li>Best user experience with "approve for me" mode for smooth, secure operation</li>
-</ul>
+<p>Command for analyzing specific files via terminal:</p>
 
-<p><strong>Cons:</strong></p>
-<ul>
-  <li>Limited usage quotas for Plus tier</li>
-  <li>Poor adaptation to third-party models</li>
-</ul>
+<pre><code class="language-bash">claude-code analyze ./src/utils/request.ts</code></pre>
 
-<p><strong>Best For:</strong> Users with the right conditions who want a one-stop solution. Codex's strength lies in the seamless collaboration between model and execution system, making it ideal for users who prioritize experience over raw power.</p>
+<p>The output will include code logic explanations, potential bugs, optimization suggestions and redundant code extraction.</p>
 
-<h2 id="recommendations">Final Recommendations</h2>
+<h2 id="refactoring">3. One-Click Code Refactoring Operation</h2>
 
-<ul>
-  <li><strong>Beginners on a budget</strong>: Start with domestic OpenClaw variants. Begin with simple tasks and gradually build your AI workflow.</li>
-  <li><strong>Professional developers</strong>: Choose Claude Code. Even with domestic model integration, it remains excellent for development work.</li>
-  <li><strong>Users with the right conditions</strong>: Opt for Codex for a one-stop, seamless experience.</li>
-</ul>
+<h3>3.1 Batch Refactor Old Syntax</h3>
 
-<p><strong>Final Note:</strong> Don't treat any tool as a religion. The best tool is the one that helps you get work done reliably. Focus on building the workflow that works best for you, not on chasing the most famous tool.</p>
+<p>Enter the prompt inside Claude Code panel:</p>
 
-<h2>常见问题</h2>
+<pre><code class="language-text">Refactor all var declarations in this project to const/let, add standardized JSDoc comments for all exported functions, and run format after modification</code></pre>
 
-<h3>I'm a total beginner — which Agent should I start with?</h3>
-<p>Start with domestic OpenClaw variants. They require zero setup — install and go. The Chinese-language optimization means you won't fight the UI while learning AI concepts. Begin with simple tasks like "summarize this document" or "help me draft an email." Once comfortable, graduate to more complex workflows. TRAE is another good free option if you need mobile sync. Skip Claude Code for now — its CLI interface will frustrate beginners before they see any value.</p>
+<p>Claude Code will traverse all target files, modify code automatically and format files with ESLint/Prettier.</p>
 
-<h3>Why is Codex ranked #1 over Claude Code when Claude Code has stronger harness engineering?</h3>
-<p>This ranking is for <strong>beginners</strong>, not power users. Codex wins on user experience: it's a polished desktop app with a plugin marketplace, "approve for me" mode, and seamless GPT-5.5 integration. Claude Code's harness engineering is technically superior, but that advantage only matters when you're building complex multi-agent workflows — which beginners aren't doing. Think of it like cameras: a professional DSLR (Claude Code) takes better photos in expert hands, but most people get better results from an iPhone (Codex) because it handles the complexity for you.</p>
-
-<h3>Are all these tools free?</h3>
-<p>TRAE and domestic OpenClaw variants are free for personal use. Claude Code has a free tier with API key usage (you pay for the model's API calls). Codex requires a subscription (Plus at $20/month recommended). Hermes Agent pricing varies by region. For beginners, start with the free options (OpenClaw variants or TRAE) to learn the Agent paradigm. Only pay for Codex or Claude Code when you've outgrown what the free tools can do.</p>
+<h3>3.2 Component Structure Optimization (Frontend Demo)</h3>
 
-<h3>Can I use multiple Agents together?</h3>
-<p>Yes, and many professionals do. A common pattern: use Claude Code for heavy coding tasks, Codex for general productivity and PPT creation, and an OpenClaw variant for quick daily tasks. The tools don't compete — they complement each other. The key is building a workflow where each tool handles what it does best, rather than trying to make one tool do everything.</p>
+<p>Sample refactor task prompt for React projects:</p>
 
-<div class="next-step">
-  <h3>📖 Next Steps</h3>
-  <p>Picked your Agent? Master it with these guides:</p>
-  <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — step-by-step Codex mastery</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate multiple tools into one system</li>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand the bigger picture before diving deep</li>
-  </ul>
-</div>`,
-    contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI 工具</span>
-  <span class="meta-badge">🕒 阅读约7分钟</span>
-  <span class="meta-badge">📅 2026年7月5日</span>
-  <span class="meta-badge">🎯 入门</span>
-</div>
+<pre><code class="language-text">Split the monolithic Home page component into PageHeader, ContentList and Footer sub-components, extract repeated styles into separate css module files</code></pre>
 
-<h2 id="introduction">引言</h2>
+<h2 id="debugging">4. Automatic Debugging & Error Repair</h2>
 
-<p>AI行业的竞争焦点已从"哪个模型更强"转向"哪个Agent能完成更多实际工作"。本文基于真实使用体验和社区反馈，对主流Agent工具进行排名，帮新手做出明智选择。</p>
+<h3>4.1 Upload Error Logs for Intelligent Fixing</h3>
 
-<h2 id="5th-trae">第5名：TRAE</h2>
+<p>Copy your project crash log and send it with this fixed prompt template:</p>
 
-<p>TRAE是字节跳动旗下的老牌Agent工具，在国内AI工具讨论中常被提及但很少成为首选。它从类似Cursor的智能IDE演化为TRAE SOLO——一款支持手机、网页、桌面三端同步的通用桌面Agent。</p>
+<pre><code class="language-text">Check the following error log, locate the root cause in project files, write the complete modified code and explain the repair logic:
+[Paste your error log here]</code></pre>
 
-<p><strong>优势：</strong></p>
-<ul>
-  <li>新手友好，无需复杂配置</li>
-  <li>手机、网页、桌面三端同步</li>
-  <li>个人免费使用，无限量（高峰期可能需要排队）</li>
-</ul>
+<h3>4.2 Run Test Script Automatically to Verify Fixes</h3>
 
-<p><strong>不足：</strong></p>
-<ul>
-  <li>Harness工程能力弱于主流竞品</li>
-  <li>长链路多步骤任务、跨文件编辑和反复调试容易走弯路，返工成本高</li>
-</ul>
+<p>After code modification, execute test commands directly inside Claude Code dialogue:</p>
 
-<p><strong>最适合：</strong>想尝试AI Agent的新手或有强移动办公需求的人。不建议用于重型工作任务。</p>
+<pre><code class="language-text">Run npm test and check if all unit tests pass, fix failed test cases automatically</code></pre>
 
-<h2 id="4th-hermes">第4名：Hermes Agent</h2>
+<p>Terminal execution command shortcut:</p>
 
-<p>OpenClaw热潮之后的一匹黑马，Hermes Agent因长期记忆和自我进化能力引发关注，社区出现了"养虾（OpenClaw）"还是"养马（Hermes）"的讨论。</p>
+<pre><code class="language-bash">claude-code run-test</code></pre>
 
-<p><strong>优势：</strong></p>
-<ul>
-  <li>长期记忆，Agent能从过往经验中学习</li>
-  <li>通过自主创建Skill实现自我进化</li>
-</ul>
+<h2 id="claude-md">5. Custom Project Rules via claude.md</h2>
 
-<p><strong>不足：</strong></p>
-<ul>
-  <li>过度依赖Skill可能导致使用过时或错误的流程</li>
-  <li>Skill选择错误可能让任务偏离方向</li>
-  <li>在易用性、安全性和本土化方面不如国产替代方案</li>
-</ul>
+<p>Create a <code>claude.md</code> file under project root to lock uniform development standards, sample content:</p>
 
-<p><strong>最适合：</strong>作为日常助手使用。不推荐用于重度编码、PPT制作、数据分析或复杂内容生产。</p>
-
-<h2 id="3rd-openclaw">第3名：OpenClaw及其国产变体</h2>
+<pre><code class="language-markdown"># Global Code Rules for This Project
+1. All new functions must carry type annotations
+2. Do not use any deprecated npm packages
+3. Every code change needs corresponding unit test writing
+4. Automatically generate git commit message after each modification</code></pre>
 
-<p>OpenClaw及其国产衍生版（常被称为"国产虾"）因强大生态和深度优化成为新手的理想选择。</p>
+<p>After saving, every subsequent dialogue task will strictly follow rules in this file without repeated manual reminder.</p>
 
-<p><strong>优势：</strong></p>
-<ul>
-  <li>国产优化最佳，中文用户体验最好</li>
-  <li>生态丰富，免费使用额度充足</li>
-  <li>上手极简：无需环境配置，安装即用</li>
-</ul>
+<h2 id="git">6. Git Linkage & Automated Commit Workflow</h2>
 
-<p><strong>不足：</strong></p>
-<ul>
-  <li>高度依赖插件和Skill</li>
-  <li>Harness能力相对较弱，重型任务表现取决于插件/Skill选择</li>
-</ul>
+<h3>6.1 Auto Generate Standard Commit Information</h3>
 
-<p><strong>最适合：</strong>新手入门AI Agent。国产变体可快速上手体验Agent价值，进阶用户可探索插件、Skill和Workflow配置。</p>
+<p>After Claude Code finishes modifying code, input this instruction:</p>
 
-<h2 id="2nd-claude-code">第2名：Claude Code</h2>
+<pre><code class="language-text">Check all changed files, generate concise standardized commit message, execute git add and git commit automatically</code></pre>
 
-<p>Claude Code是Agent领域的中坚力量，以卓越的Harness工程能力著称。在Codex崛起之前，它是AI博主们的默认推荐。</p>
+<h3>6.2 Terminal Git Operation Command Set</h3>
 
-<p><strong>优势：</strong></p>
-<ul>
-  <li>业界最强的Harness工程能力</li>
-  <li>通过CC Switch对国产模型的适配优秀</li>
-  <li>最强的编码Agent能力</li>
-</ul>
+<pre><code class="language-bash"># View all modified files scanned by Claude Code
+claude-code git-diff
+# Auto commit changes with AI-generated message
+claude-code git-commit</code></pre>
 
-<p><strong>不足：</strong></p>
-<ul>
-  <li>使用门槛高：CLI版本需要终端操作，对新手不友好</li>
-  <li>桌面版缺乏中文支持，模型集成复杂</li>
-</ul>
+<h2 id="plan-mode">7. Multi-Step Complex Task Planning Mode</h2>
 
-<p><strong>最适合：</strong>专业开发者。对于需要PPT制作、文档撰写或通用工作流集成的非开发者，Claude Code可能不是最舒适的选择。</p>
+<p>For large-scale cross-file reconstruction, enable Plan Mode first to avoid chaotic modification:</p>
 
-<h2 id="1st-codex">第1名：Codex</h2>
+<pre><code class="language-text">Enable plan mode, split the task "transform vanilla js project to Vue3 + Vite project" into detailed executable steps, confirm the plan with me before executing any code changes</code></pre>
 
-<p>Codex是AI圈的新宠，常被称为"Agent界的iPhone"。虽然原始能力未必超越Claude Code，但用户体验无与伦比。</p>
+<p>Claude Code will output a complete step-by-step plan list, waiting for your manual approval before operating project files.</p>
 
-<p><strong>优势：</strong></p>
-<ul>
-  <li>与GPT-5.5（最强通用推理模型）无缝集成</li>
-  <li>精选插件市场（类似App Store），生态优秀</li>
-  <li>最佳用户体验，"approve for me"模式实现流畅安全操作</li>
-</ul>
+<h2 id="permissions">8. Permission Control & Safety Settings</h2>
 
-<p><strong>不足：</strong></p>
-<ul>
-  <li>Plus套餐使用配额有限</li>
-  <li>对第三方模型适配较差</li>
-</ul>
+<h3>8.1 Adjust File Operation Permission</h3>
 
-<p><strong>最适合：</strong>有条件、想要一站式解决方案的用户。Codex的强项在于模型与执行系统的无缝协作，适合重视体验胜过原始能力的用户。</p>
+<p>Enter settings command in terminal:</p>
 
-<h2 id="recommendations">最终推荐</h2>
+<pre><code class="language-bash">claude-code config permission</code></pre>
 
-<ul>
-  <li><strong>预算有限的新手</strong>：从国产OpenClaw变体开始。先做简单任务，逐步搭建AI工作流。</li>
-  <li><strong>专业开发者</strong>：选Claude Code。即使搭配国产模型，开发能力依然出色。</li>
-  <li><strong>有条件的用户</strong>：选Codex，享受一站式无缝体验。</li>
-</ul>
+<p>Three optional permission modes:</p>
+<ol>
+  <li>Prompt before every file write operation (recommended for beginners)</li>
+  <li>Auto approve safe read/write operations only</li>
+  <li>Full access mode (only for trusted local private projects)</li>
+</ol>
 
-<p><strong>最后忠告：</strong>别把任何工具当信仰。最好的工具是能帮你稳定完成工作的那个。专注于构建最适合自己的工作流，而不是追逐最有名的工具。</p>
+<h3>8.2 Block Sensitive File Access</h3>
 
-<h2>常见问题</h2>
+<p>Add paths to blacklist in <code>.claude/config.json</code> to prevent accidental modification of configuration files:</p>
 
-<h3>我是纯小白——该从哪个Agent开始？</h3>
-<p>从国产OpenClaw变体开始。零配置，安装即用。中文优化意味着你在学习AI概念时不用和界面较劲。从简单任务开始，如"总结这篇文档"或"帮我起草邮件"。熟练后再进阶到更复杂的工作流。TRAE是另一个不错的免费选择（如果你需要手机同步）。暂时别碰Claude Code——它的CLI界面会在新手看到任何价值之前就让人崩溃。</p>
+<pre><code class="language-json">{
+  "fileBlacklist": [".env", "package-lock.json", "database/config.js"]
+}</code></pre>
 
-<h3>为什么Codex排名第一？Claude Code的Harness工程不是更强吗？</h3>
-<p>这个排名是针对<strong>新手</strong>的，不是针对专业用户。Codex赢在用户体验：它是精致的桌面应用，有插件市场、"approve for me"模式、GPT-5.5无缝集成。Claude Code的Harness工程技术上更强，但这个优势只在构建复杂多Agent工作流时才体现——新手不会做这些。类比相机：专业单反（Claude Code）在专家手里拍得更好，但大多数人用iPhone（Codex）能拍出更好的照片，因为它帮你处理了复杂性。</p>
-
-<h3>这些工具都免费吗？</h3>
-<p>TRAE和国产OpenClaw变体个人免费。Claude Code有免费层级，通过API Key使用（需支付模型API调用费）。Codex需要订阅（推荐Plus $20/月）。Hermes Agent定价因地区而异。新手建议从免费选项（OpenClaw变体或TRAE）开始学习Agent范式。只有当免费工具无法满足需求时，再为Codex或Claude Code付费。</p>
-
-<h3>可以同时使用多个Agent吗？</h3>
-<p>可以，很多专业人士都这样做。常见模式：Claude Code处理重型编码任务，Codex处理通用办公和PPT制作，OpenClaw变体处理日常快速任务。这些工具不互斥——它们互补。关键是构建一个工作流，让每个工具做它最擅长的事，而不是试图让一个工具包揽一切。</p>
-
-<div class="next-step">
-  <h3>📖 下一步</h3>
-  <p>选好了Agent？用这些指南深入掌握：</p>
-  <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 一步步掌握Codex</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将多个工具集成到一个系统</li>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 深入之前先看清全局</li>
-  </ul>
-</div>`,
-  },
-
-  "tencent-workbuddy-ai-office-workbench": {
-    content: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI Tools</span>
-  <span class="meta-badge">🕒 6 min read</span>
-  <span class="meta-badge">📅 Jul 5, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
-</div>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>Tencent WorkBuddy is a full-scenario AI office workbench designed to help professionals streamline daily tasks like work reports, data organization, PPT creation, and weekly report writing. Unlike traditional AI chat tools that only provide text responses, WorkBuddy can directly operate local files, execute tasks autonomously, and deliver actionable results.</p>
-
-<h2 id="core-features">Core Features</h2>
-
-<h3>1. Three Working Modes</h3>
-
-<p>WorkBuddy offers three flexible modes to suit different task types:</p>
-
-<ul>
-  <li><strong>Craft Mode</strong>: Directly operates local files and executes tasks automatically (ideal for standardized batch work like file sorting and data processing).</li>
-  <li><strong>Plan Mode</strong>: First generates an execution plan for user confirmation before proceeding (suitable for high-risk tasks like contract review and project planning).</li>
-  <li><strong>Ask Mode</strong>: Only provides text answers without accessing local files (perfect for consultation and initial draft writing).</li>
-</ul>
-
-<h3>2. Multi-Agent Parallel Execution</h3>
-
-<p>For complex tasks, WorkBuddy dynamically decomposes tasks and assigns them to multiple AI agents for parallel execution. This ensures efficient task completion and reduces waiting time.</p>
-
-<h3>3. Rich Skill Library</h3>
-
-<p>WorkBuddy integrates over 20 pre-built skills, covering:</p>
-
-<ul>
-  <li><strong>Daily Office</strong>: Document generation, data analysis, PPT creation, email editing, and batch file processing.</li>
-  <li><strong>Code Development</strong>: Coding assistance, project understanding, and website application development.</li>
-  <li><strong>Design & Creativity</strong>: Product design, PPT design, interactive prototype design, and poster design.</li>
-</ul>
-
-<h3>4. Expert Teams</h3>
-
-<p>WorkBuddy provides pre-configured expert teams for different scenarios, such as:</p>
-
-<ul>
-  <li><strong>Content Creation Team</strong>: Includes roles like creative director, copywriter, video generator, and graphic designer.</li>
-  <li><strong>Development Team</strong>: Covers front-end, back-end, and testing roles.</li>
-  <li><strong>Design Team</strong>: Includes UI/UX designers, brand designers, and illustrators.</li>
-</ul>
-
-<h3>5. Mobile Control</h3>
-
-<p>WorkBuddy supports mobile control via WeChat, QQ, Feishu, and DingTalk. Users can send tasks from their phones, and WorkBuddy will execute them on the computer, delivering results back to the mobile device.</p>
-
-<h2 id="practical-usage">Practical Usage Guide</h2>
-
-<h3>1. Initial Setup</h3>
-
-<ul>
-  <li>Download and install WorkBuddy from the official website.</li>
-  <li>Set up a local working folder for WorkBuddy to access.</li>
-  <li>Log in with your Tencent account and connect to your preferred AI model (supports DeepSeek, Kimi, GPT, Claude, etc.).</li>
-</ul>
-
-<h3>2. Basic Task Execution</h3>
-
-<ul>
-  <li>Open WorkBuddy and enter your task in natural language, e.g., "Generate a weekly report based on the files in the 'Reports' folder."</li>
-  <li>WorkBuddy will automatically decompose the task, execute it, and deliver the result in the specified format.</li>
-</ul>
-
-<h3>3. Using Expert Teams</h3>
-
-<ul>
-  <li>Select the "Content Creation Team" from the expert library.</li>
-  <li>Enter your task, e.g., "Help me determine the brand visual direction for a new tech product."</li>
-  <li>WorkBuddy will ask clarifying questions (e.g., product category, target audience, brand tone) before generating a complete brand strategy.</li>
-</ul>
-
-<h3>4. Mobile Control</h3>
-
-<ul>
-  <li>Bind your WeChat account in WorkBuddy settings.</li>
-  <li>Send tasks from WeChat, e.g., "Collect the latest AI industry news and save it to an Excel file."</li>
-  <li>WorkBuddy will execute the task and send the result back to your WeChat.</li>
-</ul>
-
-<h2 id="why-stands-out">Why WorkBuddy Stands Out</h2>
+<h2 id="tips">9. Common Practical Tips to Boost Efficiency</h2>
 
 <ol>
-  <li><strong>Local File Operation</strong>: Unlike cloud-based AI tools, WorkBuddy operates locally, ensuring data security and privacy.</li>
-  <li><strong>Multi-Model Support</strong>: Users can switch between different AI models based on task requirements, avoiding being locked into a single model.</li>
-  <li><strong>Expert Teams</strong>: Pre-configured expert teams allow users to leverage professional skills without hiring additional staff.</li>
-  <li><strong>Mobile Control</strong>: The ability to control WorkBuddy from mobile devices enables remote work and improves productivity.</li>
+  <li>Shortcut: Use <code>claude-code chat</code> to quickly open dialogue window without opening full desktop client</li>
+  <li>Context cleaning command to avoid context overflow: <code>claude-code clear-context</code></li>
+  <li>Export conversation records for backup: <code>claude-code export-log chat_record.json</code></li>
+  <li>For large projects exceeding token limits: Split tasks by folders, do not scan the whole project at one time</li>
 </ol>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Tencent WorkBuddy is a powerful AI office workbench that transforms AI from a chat tool into a "colleague" that can execute tasks. With its three working modes, rich skill library, expert teams, and mobile control, WorkBuddy can help professionals streamline daily tasks and focus on more creative work. Whether you're a writer, developer, or designer, WorkBuddy has the tools to boost your productivity.</p>
+<p>Claude Code's core advantage lies in its deep local project interaction capability, far exceeding ordinary web AI chat tools. Master the above terminal commands, file operation logic and plan/refactor workflow, you can cut 70% repetitive coding, debugging and sorting work. Beginners are suggested to start from basic file analysis and single-file refactoring, then gradually try multi-step complex transformation tasks after getting familiar with permission and rule configuration.</p>
 
 <h2>常见问题</h2>
 
-<h3>How is WorkBuddy different from Codex or Claude Code?</h3>
-<p>WorkBuddy is an <strong>office workbench</strong>, not a coding Agent. It's optimized for document processing, data organization, PPT creation, and multi-role content production — the daily grind of Chinese office workers. Codex and Claude Code are developer-first tools that excel at coding but are overkill for "generate a weekly report from these Excel files." WorkBuddy also has unique advantages for Chinese users: WeChat mobile control, native Chinese UI, and local file operation that keeps data on your machine. Think of it as the office specialist in your AI toolkit, complementing rather than competing with coding-focused Agents.</p>
+<h3>Claude Code CLI vs desktop app — which should I use?</h3>
+<p>The CLI version is more powerful and flexible — it's the one developers use for serious work. The desktop app has a nicer UI but lacks some CLI features like <code>claude-code git-commit</code> and <code>claude-code analyze</code>. If you're comfortable with a terminal, go CLI. If you're a beginner or prefer visual interfaces, start with the desktop app and gradually learn CLI commands as you need more power. The good news: both share the same project configuration (<code>.claude/</code> folder and <code>claude.md</code> rules), so you can switch between them freely.</p>
 
-<h3>Is my data safe with WorkBuddy since it accesses local files?</h3>
-<p>WorkBuddy operates locally — files are processed on your machine, not uploaded to Tencent's cloud. This is a key differentiator from cloud-based AI office tools that require you to upload documents to their servers. The three working modes give you granular control: use Ask Mode when you only want text responses (no file access), Plan Mode when you want to review the execution plan before WorkBuddy touches your files, and Craft Mode only for trusted batch tasks. For sensitive documents, stick to Ask and Plan modes.</p>
+<h3>How is claude.md different from agent.md (used by Codex)?</h3>
+<p>They serve the same purpose — project-level instructions that the AI follows in every conversation — but use different filenames. Claude Code reads <code>claude.md</code> (or <code>CLAUDE.md</code>) from the project root. Codex reads <code>agent.md</code>. If you work with both tools, you can create both files with the same content, or create a symlink. The format is identical: plain markdown with rules, conventions, and preferences. Neither tool reads the other's file, so dual-tool users need both.</p>
 
-<h3>Which AI model should I connect to WorkBuddy?</h3>
-<p>WorkBuddy supports DeepSeek, Kimi, GPT, Claude, and others. For Chinese-language office tasks, DeepSeek and Kimi offer the best price-performance ratio and native Chinese understanding. For English documents or code-heavy tasks, GPT-4o or Claude Sonnet perform better. The beauty of multi-model support is that you're not locked in — use DeepSeek for daily Chinese reports and switch to GPT-4o when you need higher-quality English output or complex reasoning.</p>
+<h3>What's the difference between Plan Mode and just asking Claude Code to do a task?</h3>
+<p>In normal mode, Claude Code starts executing immediately — it reads files, makes changes, and runs commands as it goes. This works great for small tasks but can go off the rails on complex multi-file refactors. Plan Mode forces Claude Code to <strong>think first, act later</strong>: it outputs a complete step-by-step plan and waits for your approval before touching any files. This is critical for tasks like "migrate from JavaScript to TypeScript" or "restructure the entire component tree" where a wrong first step cascades into hours of cleanup.</p>
 
-<h3>Can WorkBuddy replace my team's designers or copywriters?</h3>
-<p>Not entirely — but it can handle the first 80% of the work. The Expert Teams feature (Content Creation Team with creative director + copywriter + designer roles) produces solid first drafts, brand strategies, and design mockups. What it can't replace is the human judgment to decide if the output actually fits your brand voice, resonates with your audience, or meets unspoken client expectations. Use WorkBuddy to eliminate the blank-page problem and repetitive production work, then apply human creativity to polish and differentiate.</p>
+<h3>Can I use Claude Code with models other than Claude?</h3>
+<p>Yes, via CC Switch (a community tool). It lets you route Claude Code's API calls to alternative models including domestic Chinese models. The experience won't be identical — Claude Code's harness engineering is optimized for Claude models — but for basic coding tasks, the difference is often negligible. Many developers use Claude models for complex refactoring and debugging, then switch to cheaper models for routine tasks like adding comments or formatting. This hybrid approach can cut API costs by 50%+ without sacrificing quality on critical work.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Liking WorkBuddy? Explore more AI office and Agent tools:</p>
+  <p>Mastered Claude Code operations? Level up your development workflow:</p>
   <ul>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — compare WorkBuddy with other Agent options</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate WorkBuddy into your broader productivity system</li>
-    <li><a href="/articles/top-5-ai-ppt-skills-tested-ranked">Battle of the Best: Top 5 AI PPT Skills Tested and Ranked</a> — if PPT creation is your main use case</li>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — compare with the other leading AI dev tool</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see where Claude Code ranks among all Agents</li>
+    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade Guide</a> — understand the architecture behind Claude Code</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI 工具</span>
-  <span class="meta-badge">🕒 阅读约6分钟</span>
-  <span class="meta-badge">📅 2026年7月5日</span>
-  <span class="meta-badge">🎯 入门</span>
+  <span class="meta-badge">📚 AI 教程</span>
+  <span class="meta-badge">🕒 阅读约10分钟</span>
+  <span class="meta-badge">📅 2026年7月7日</span>
+  <span class="meta-badge">🎯 中级</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>腾讯WorkBuddy是一款全场景AI办公工作台，旨在帮助职场人士简化工作汇报、数据整理、PPT制作和周报撰写等日常任务。与传统仅提供文本回复的AI聊天工具不同，WorkBuddy能直接操作本地文件、自主执行任务并交付可落地的成果。</p>
+<p>Claude Code 凭借强大的文件阅读、项目重构、调试和自主运行能力，已成为大多数开发者首选的 AI 编程助手。这篇完整实战教程逐步覆盖每一项核心操作，帮助新手快速上手，也帮助资深开发者最大化其生产力。所有操作都配有可执行的代码片段和命令行，可直接复制使用。</p>
 
-<h2 id="core-features">核心功能</h2>
+<h2 id="setup">1. 基础环境准备与项目导入</h2>
 
-<h3>1. 三种工作模式</h3>
+<h3>1.1 安装并启动 Claude Code CLI</h3>
 
-<p>WorkBuddy提供三种灵活模式适配不同任务类型：</p>
+<p>打开本地终端，运行安装命令：</p>
 
-<ul>
-  <li><strong>Craft模式</strong>：直接操作本地文件，自动执行任务（适合文件整理、数据处理等标准化批量工作）。</li>
-  <li><strong>Plan模式</strong>：先生成执行方案待用户确认后再执行（适合合同审查、项目规划等高风险任务）。</li>
-  <li><strong>Ask模式</strong>：仅提供文本回答，不访问本地文件（适合咨询和初稿撰写）。</li>
-</ul>
+<pre><code class="language-bash">npm install -g @anthropic-ai/claude-code</code></pre>
 
-<h3>2. 多Agent并行执行</h3>
+<p>安装后验证是否成功：</p>
 
-<p>面对复杂任务，WorkBuddy会动态分解并分配给多个AI Agent并行执行，确保高效完成任务，减少等待时间。</p>
+<pre><code class="language-bash">claude-code --version</code></pre>
 
-<h3>3. 丰富的技能库</h3>
+<h3>1.2 导入本地项目文件夹</h3>
 
-<p>WorkBuddy集成20+预置技能，覆盖：</p>
+<p>先在终端中切换到项目根目录：</p>
 
-<ul>
-  <li><strong>日常办公</strong>：文档生成、数据分析、PPT制作、邮件编辑、批量文件处理。</li>
-  <li><strong>代码开发</strong>：编程辅助、项目理解、网站应用开发。</li>
-  <li><strong>设计创意</strong>：产品设计、PPT设计、交互原型设计、海报设计。</li>
-</ul>
+<pre><code class="language-bash">cd /Users/yourname/Desktop/my-project</code></pre>
 
-<h3>4. 专家团队</h3>
+<p>启动 Claude Code 工作区绑定：</p>
 
-<p>WorkBuddy为不同场景提供预配置的专家团队：</p>
+<pre><code class="language-bash">claude-code init</code></pre>
 
-<ul>
-  <li><strong>内容创作团队</strong>：含创意总监、文案、视频生成、平面设计师等角色。</li>
-  <li><strong>开发团队</strong>：覆盖前端、后端、测试角色。</li>
-  <li><strong>设计团队</strong>：含UI/UX设计师、品牌设计师、插画师。</li>
-</ul>
+<p>该命令会生成隐藏的 <code>.claude/</code> 配置文件夹，自动存储项目规则、对话记录和权限设置。</p>
 
-<h3>5. 移动端控制</h3>
+<h3>1.3 配置 API Key</h3>
 
-<p>WorkBuddy支持通过微信、QQ、飞书、钉钉进行移动端控制。用户可从手机发送任务，WorkBuddy在电脑上执行并将结果回传至手机。</p>
+<p>运行登录命令绑定 Anthropic API 密钥：</p>
 
-<h2 id="practical-usage">实战使用指南</h2>
+<pre><code class="language-bash">claude-code login</code></pre>
 
-<h3>1. 初始设置</h3>
+<p>按提示粘贴 API Key，工具会自动在本地保存凭证，无需重复输入。</p>
 
-<ul>
-  <li>从官网下载安装WorkBuddy。</li>
-  <li>设置本地工作文件夹供WorkBuddy访问。</li>
-  <li>用腾讯账号登录，连接你偏好的AI模型（支持DeepSeek、Kimi、GPT、Claude等）。</li>
-</ul>
+<h2 id="file-reading">2. 核心文件阅读与批量分析功能</h2>
 
-<h3>2. 基础任务执行</h3>
+<p>Claude Code 能扫描整个项目，而非像普通聊天机器人那样只能看单个文件。</p>
 
-<ul>
-  <li>打开WorkBuddy，用自然语言输入任务，如"根据'Reports'文件夹中的文件生成周报"。</li>
-  <li>WorkBuddy会自动分解任务、执行并以指定格式交付结果。</li>
-</ul>
+<h3>2.1 阅读整个项目代码库</h3>
 
-<h3>3. 使用专家团队</h3>
+<p>在 Claude Code 对话框中输入自然语言指令：</p>
 
-<ul>
-  <li>从专家库中选择"内容创作团队"。</li>
-  <li>输入任务，如"帮我确定一款新科技产品的品牌视觉方向"。</li>
-  <li>WorkBuddy会先问澄清性问题（产品类别、目标受众、品牌调性），再生成完整品牌策略。</li>
-</ul>
+<pre><code class="language-text">扫描 src 文件夹下所有 .js 和 .ts 文件，梳理出所有未使用的函数并输出格式化列表</code></pre>
 
-<h3>4. 移动端控制</h3>
+<h3>2.2 针对性单文件深度分析</h3>
 
-<ul>
-  <li>在WorkBuddy设置中绑定微信账号。</li>
-  <li>从微信发送任务，如"收集最新AI行业资讯并保存为Excel文件"。</li>
-  <li>WorkBuddy执行任务后将结果发送回微信。</li>
-</ul>
+<p>通过终端分析特定文件的命令：</p>
 
-<h2 id="why-stands-out">WorkBuddy的独特优势</h2>
+<pre><code class="language-bash">claude-code analyze ./src/utils/request.ts</code></pre>
+
+<p>输出将包含代码逻辑解释、潜在 Bug、优化建议和冗余代码提取。</p>
+
+<h2 id="refactoring">3. 一键代码重构操作</h2>
+
+<h3>3.1 批量重构旧语法</h3>
+
+<p>在 Claude Code 面板中输入提示词：</p>
+
+<pre><code class="language-text">将项目中所有 var 声明重构为 const/let，为所有导出函数添加标准化 JSDoc 注释，修改后自动运行格式化</code></pre>
+
+<p>Claude Code 会遍历所有目标文件，自动修改代码并用 ESLint/Prettier 格式化。</p>
+
+<h3>3.2 组件结构优化（前端示例）</h3>
+
+<p>React 项目重构任务提示词示例：</p>
+
+<pre><code class="language-text">将 monolithic 的 Home 页面组件拆分为 PageHeader、ContentList 和 Footer 子组件，将重复样式提取到独立的 css module 文件</code></pre>
+
+<h2 id="debugging">4. 自动调试与报错修复</h2>
+
+<h3>4.1 上传错误日志让 AI 智能修复</h3>
+
+<p>复制项目崩溃日志，搭配这个固定提示词模板发送：</p>
+
+<pre><code class="language-text">检查以下错误日志，在项目文件中定位根本原因，写出完整修改代码并解释修复逻辑：
+[在此粘贴你的错误日志]</code></pre>
+
+<h3>4.2 自动运行测试脚本验证修复</h3>
+
+<p>代码修改后，直接在 Claude Code 对话中执行测试命令：</p>
+
+<pre><code class="language-text">运行 npm test 并检查所有单元测试是否通过，自动修复失败的测试用例</code></pre>
+
+<p>终端快捷执行命令：</p>
+
+<pre><code class="language-bash">claude-code run-test</code></pre>
+
+<h2 id="claude-md">5. 通过 claude.md 自定义项目规则</h2>
+
+<p>在项目根目录创建 <code>claude.md</code> 文件锁定统一开发规范，示例内容：</p>
+
+<pre><code class="language-markdown"># 本项目全局代码规则
+1. 所有新函数必须携带类型注解
+2. 不使用任何已弃用的 npm 包
+3. 每次代码变更需编写对应单元测试
+4. 每次修改后自动生成 git commit 信息</code></pre>
+
+<p>保存后，后续每次对话任务都会严格遵循此文件中的规则，无需手动重复提醒。</p>
+
+<h2 id="git">6. Git 联动与自动化提交工作流</h2>
+
+<h3>6.1 自动生成规范提交信息</h3>
+
+<p>Claude Code 完成代码修改后，输入指令：</p>
+
+<pre><code class="language-text">检查所有变更文件，生成简洁规范的 commit message，自动执行 git add 和 git commit</code></pre>
+
+<h3>6.2 终端 Git 操作命令集</h3>
+
+<pre><code class="language-bash"># 查看 Claude Code 扫描到的所有修改文件
+claude-code git-diff
+# 自动提交变更并生成 AI 提交信息
+claude-code git-commit</code></pre>
+
+<h2 id="plan-mode">7. 多步骤复杂任务规划模式</h2>
+
+<p>对于大规模跨文件重构，先启用 Plan Mode 避免修改混乱：</p>
+
+<pre><code class="language-text">启用 plan mode，将"原生 JS 项目改造为 Vue3 + Vite 项目"任务拆分为详细可执行步骤，先确认方案再执行任何代码变更</code></pre>
+
+<p>Claude Code 会输出完整的分步计划列表，等待你手动批准后再操作项目文件。</p>
+
+<h2 id="permissions">8. 权限控制与安全设置</h2>
+
+<h3>8.1 调整文件操作权限</h3>
+
+<p>在终端输入设置命令：</p>
+
+<pre><code class="language-bash">claude-code config permission</code></pre>
+
+<p>三种可选权限模式：</p>
+<ol>
+  <li>每次文件写入前提示（推荐新手使用）</li>
+  <li>仅自动批准安全的读写操作</li>
+  <li>完全访问模式（仅限可信的本地私有项目）</li>
+</ol>
+
+<h3>8.2 阻止敏感文件访问</h3>
+
+<p>在 <code>.claude/config.json</code> 中添加黑名单路径，防止误改配置文件：</p>
+
+<pre><code class="language-json">{
+  "fileBlacklist": [".env", "package-lock.json", "database/config.js"]
+}</code></pre>
+
+<h2 id="tips">9. 常见提效实用技巧</h2>
 
 <ol>
-  <li><strong>本地文件操作</strong>：与云端AI工具不同，WorkBuddy本地运行，确保数据安全和隐私。</li>
-  <li><strong>多模型支持</strong>：可根据任务需求切换不同AI模型，避免被单一模型锁定。</li>
-  <li><strong>专家团队</strong>：预配置专家团队让你无需额外招聘就能获得专业技能支持。</li>
-  <li><strong>移动端控制</strong>：手机控制电脑执行任务，实现远程办公，提升效率。</li>
+  <li>快捷方式：使用 <code>claude-code chat</code> 快速打开对话窗口，无需启动完整桌面客户端</li>
+  <li>上下文清理命令避免溢出：<code>claude-code clear-context</code></li>
+  <li>导出对话记录备份：<code>claude-code export-log chat_record.json</code></li>
+  <li>大型项目超出 token 限制：按文件夹拆分任务，不要一次性扫描整个项目</li>
 </ol>
 
 <h2 id="conclusion">总结</h2>
 
-<p>腾讯WorkBuddy是一款强大的AI办公工作台，将AI从聊天工具转变为能执行任务的"同事"。三种工作模式、丰富的技能库、专家团队和移动端控制，帮助职场人士简化日常任务，专注于更有创造性的工作。无论你是文案、开发者还是设计师，WorkBuddy都有工具帮你提升效率。</p>
+<p>Claude Code 的核心优势在于深度本地项目交互能力，远超普通网页 AI 聊天工具。掌握以上终端命令、文件操作逻辑和 Plan/Refactor 工作流，你可以砍掉 70% 的重复编码、调试和整理工作。建议新手从基础文件分析和单文件重构开始，熟悉权限和规则配置后再逐步尝试多步骤复杂改造任务。</p>
 
 <h2>常见问题</h2>
 
-<h3>WorkBuddy和Codex、Claude Code有什么不同？</h3>
-<p>WorkBuddy是<strong>办公工作台</strong>，不是编码Agent。它针对文档处理、数据整理、PPT制作和多角色内容生产进行了优化——这些是中国职场人士的日常刚需。Codex和Claude Code是开发者优先的工具，编码能力强，但用它们"根据这些Excel生成周报"属于大材小用。WorkBuddy对中国用户还有独特优势：微信移动端控制、原生中文界面、本地文件操作数据不出电脑。把它看作AI工具箱里的办公专家，与编码型Agent互补而非竞争。</p>
+<h3>Claude Code CLI 和桌面版该选哪个？</h3>
+<p>CLI 版更强大灵活——是开发者做正经工作的首选。桌面版 UI 更好看但缺少一些 CLI 功能，如 <code>claude-code git-commit</code> 和 <code>claude-code analyze</code>。如果你习惯终端，选 CLI。如果你是新手或偏好可视化界面，从桌面版开始，需要更强能力时逐步学 CLI 命令。好消息：两者共享同一套项目配置（<code>.claude/</code> 文件夹和 <code>claude.md</code> 规则），可自由切换。</p>
 
-<h3>WorkBuddy访问本地文件，我的数据安全吗？</h3>
-<p>WorkBuddy在本地运行——文件在你电脑上处理，不会上传到腾讯云端。这是它与需要上传文档到服务器的云端AI办公工具的关键区别。三种工作模式给你精细控制权：只需文本回复时用Ask模式（不访问文件），想先审查执行方案再用Plan模式，只有信任的批量任务才用Craft模式。处理敏感文档时，坚持用Ask和Plan模式。</p>
+<h3>claude.md 和 Codex 的 agent.md 有什么区别？</h3>
+<p>它们功能相同——都是 AI 在每次对话中遵循的项目级指令——但文件名不同。Claude Code 读取项目根目录的 <code>claude.md</code>（或 <code>CLAUDE.md</code>）。Codex 读取 <code>agent.md</code>。如果你同时使用两个工具，可以创建两个文件内容相同，或创建软链接。格式完全一致：纯 Markdown 写规则、约定和偏好。两个工具不会读取对方的文件，所以双工具用户两个都需要。</p>
 
-<h3>WorkBuddy该接哪个AI模型？</h3>
-<p>WorkBuddy支持DeepSeek、Kimi、GPT、Claude等。中文办公任务首选DeepSeek或Kimi，性价比最高且中文理解最自然。英文文档或代码密集型任务用GPT-4o或Claude Sonnet效果更好。多模型支持的好处是不被锁定——日常中文报告用DeepSeek，需要高质量英文输出或复杂推理时切换到GPT-4o。</p>
+<h3>Plan Mode 和直接让 Claude Code 做任务有什么区别？</h3>
+<p>普通模式下，Claude Code 立即开始执行——边读文件、边改代码、边跑命令。小任务没问题，但复杂多文件重构容易跑偏。Plan Mode 强制 Claude Code <strong>先想再做</strong>：输出完整分步计划，等你批准后才会碰任何文件。这对"JS 迁移到 TypeScript"或"重构整个组件树"这类任务至关重要——第一步错了会连锁反应，清理成本数小时。</p>
 
-<h3>WorkBuddy能替代团队里的设计师或文案吗？</h3>
-<p>不完全能——但它能处理前80%的工作。专家团队功能（内容创作团队含创意总监+文案+设计师）产出的初稿、品牌策略和设计原型质量扎实。它无法替代的是人的判断力：输出是否真正符合品牌调性、是否打动目标受众、是否满足客户未言明的期望。用WorkBuddy消除白纸恐惧和重复性生产工作，然后用人的创造力做打磨和差异化。</p>
+<h3>Claude Code 能用 Claude 以外的模型吗？</h3>
+<p>可以，通过 CC Switch（社区工具）。它能将 Claude Code 的 API 调用路由到替代模型，包括国产中文模型。体验不会完全一致——Claude Code 的 Harness 工程为 Claude 模型优化——但基础编码任务差异通常可忽略。很多开发者的策略：复杂重构和调试用 Claude 模型，加注释、格式化等常规任务切换到更便宜的模型。这种混合方案可削减 50%+ 的 API 成本，同时关键工作质量不受影响。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>对WorkBuddy感兴趣？探索更多AI办公和Agent工具：</p>
+  <p>掌握了 Claude Code 操作？升级你的开发工作流：</p>
   <ul>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 对比WorkBuddy与其他Agent选项</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将WorkBuddy集成到更广泛的生产力系统中</li>
-    <li><a href="/articles/top-5-ai-ppt-skills-tested-ranked">AI PPT技能大比拼：5款工具实测排名与推荐</a> — 如果PPT制作是你的主要场景</li>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex 完全指南：从零基础到高级开发工作流</a> — 对比另一款顶级 AI 开发工具</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent 选型指南：新手如何选择最适合的工具</a> — 了解 Claude Code 在所有 Agent 中的排名</li>
+    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流 Agent 架构：从入门到企业级完整指南</a> — 理解 Claude Code 背后的架构原理</li>
+  </ul>
+</div>`,
+  },
+
+  "7-mainstream-agent-architectures-beginner-enterprise-guide": {
+    content: `<div class="meta-banner">
+  <span class="meta-badge">📚 AI Learning</span>
+  <span class="meta-badge">🕒 9 min read</span>
+  <span class="meta-badge">📅 Jul 7, 2026</span>
+  <span class="meta-badge">🎯 Intermediate</span>
+</div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Nowadays, everyone is talking about AI Agents, but do you know how they are actually built? This article will break down the 7 most mainstream Agent architectures, from simple beginner-level ones to enterprise-grade solutions. By the end, you'll know which architecture is best suited for your specific use case.</p>
+
+<h3>Core Takeaways Before Diving In</h3>
+
+<ol>
+  <li>There's no universal standard for Agent architectures — your choice depends entirely on how complex your scenario is and how much control you need.</li>
+  <li>The overall evolution path goes from <strong>single Agent</strong> → <strong>multi-Agent collaboration</strong> → <strong>graph-based workflows</strong>.</li>
+  <li>If you're building AI coding tools or skill-based systems, the <strong>Router + Skill</strong> architecture is currently the best practice.</li>
+</ol>
+
+<h2 id="single-agent">1. Single Agent Architecture</h2>
+
+<p>The simplest architecture, where one large language model (LLM) handles everything.</p>
+
+<h3>How It Works</h3>
+<p>User input → LLM thinks → calls tools → outputs results.</p>
+
+<h3>Pros</h3>
+<ul>
+  <li>Simple and easy to implement</li>
+  <li>Low cost</li>
+  <li>Works for basic tasks (like ChatGPT)</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+  <li>Struggles with complex tasks: The LLM can get overwhelmed ("thinking explosion")</li>
+  <li>Severe context pollution when handling multiple tasks at once</li>
+  <li>Not suitable for multi-step or long-running workflows</li>
+</ul>
+
+<h3>Best For</h3>
+<p>Quick validation of simple tasks, personal assistants, or basic chatbots.</p>
+
+<h2 id="react">2. ReAct Architecture</h2>
+
+<p>Short for <strong>Reason + Act</strong>, this is the classic Agent paradigm.</p>
+
+<h3>How It Works</h3>
+<p>It follows a loop:</p>
+<ol>
+  <li><strong>Think</strong>: Analyze the problem and generate ideas</li>
+  <li><strong>Act</strong>: Select and call appropriate tools</li>
+  <li><strong>Observe</strong>: Get results from tools</li>
+  <li><strong>Repeat</strong>: Adjust thinking based on results until the task is complete</li>
+</ol>
+
+<h3>Pros</h3>
+<ul>
+  <li>Strong chain-of-thought reasoning</li>
+  <li>High explainability (you can see the step-by-step process)</li>
+  <li>Handles multi-step tasks effectively</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+  <li>High token consumption</li>
+  <li>Unstable and prone to going off-track</li>
+  <li>Not suitable for large-scale engineering systems</li>
+</ul>
+
+<h3>Best For</h3>
+<p>Exploratory tasks, complex problem-solving, or research scenarios.</p>
+
+<h2 id="plan-execute">3. Plan & Execute Architecture</h2>
+
+<p>A more engineering-focused architecture that separates planning from execution.</p>
+
+<h3>How It Works</h3>
+<ol>
+  <li><strong>Plan</strong>: A "Planner" generates a complete step-by-step plan</li>
+  <li><strong>Execute</strong>: An "Executor" follows each step one by one</li>
+</ol>
+
+<h3>Pros</h3>
+<ul>
+  <li>High stability</li>
+  <li>Excellent for code generation, project automation, and long-running tasks</li>
+  <li>Predictable workflow</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+  <li>If the initial plan is wrong, the entire task fails</li>
+  <li>Less flexible than ReAct</li>
+</ul>
+
+<h3>Best For</h3>
+<p>Code generation, project automation, and long-running workflows.</p>
+
+<h2 id="multi-agent">4. Multi-Agent Architecture</h2>
+
+<p>Multiple Agents work together, each with a specific role.</p>
+
+<h3>How It Works</h3>
+<p>An <strong>Orchestrator</strong> coordinates tasks and assigns them to specialized Agents:</p>
+<ul>
+  <li><strong>Planner</strong>: Breaks down tasks</li>
+  <li><strong>Coder</strong>: Writes and tests code</li>
+  <li><strong>Reviewer</strong>: Checks and verifies results</li>
+  <li><strong>Tool Agent</strong>: Calls external tools</li>
+</ul>
+
+<h3>Pros</h3>
+<ul>
+  <li>Clear task breakdown</li>
+  <li>Reduced context pollution</li>
+  <li>Highly scalable</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+  <li>High development and maintenance cost</li>
+  <li>Complex coordination between Agents</li>
+</ul>
+
+<h3>Best For</h3>
+<p>Team collaboration, complex projects, and enterprise-level applications.</p>
+
+<h2 id="router-skill">5. Router + Skill Architecture</h2>
+
+<p>My personal recommendation for many use cases. The core idea: <strong>Don't let the model "think" — let it "choose."</strong></p>
+
+<h3>How It Works</h3>
+<ol>
+  <li><strong>Intent Router</strong>: Identifies the user's intent</li>
+  <li><strong>Router</strong>: Directs the request to the corresponding <strong>Skill</strong></li>
+  <li><strong>Skill</strong>: Each Skill is a self-contained capability with its own logic and knowledge</li>
+</ol>
+
+<h3>Pros</h3>
+<ul>
+  <li>Extremely stable</li>
+  <li>Enterprise-grade controllability</li>
+  <li>Cacheable (high performance)</li>
+  <li>Easy to evaluate success rates</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+  <li>High Skill design cost</li>
+  <li>Potential for intent matching conflicts</li>
+</ul>
+
+<h3>Best For</h3>
+<p>AI coding tools, skill-based systems, and scenarios requiring high reliability.</p>
+
+<h2 id="blackboard">6. Blackboard Architecture</h2>
+
+<p>Multiple Agents share a common "blackboard" (shared state) and work together.</p>
+
+<h3>How It Works</h3>
+<ul>
+  <li>All Agents can read and write to the shared blackboard</li>
+  <li>Execution is driven by changes in the shared state</li>
+  <li>Agents collaborate by updating and reacting to the blackboard</li>
+</ul>
+
+<h3>Pros</h3>
+<ul>
+  <li>Excellent for complex collaborative scenarios</li>
+  <li>Enables dynamic task distribution</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+  <li>Complex state management</li>
+  <li>Hard to debug when things go wrong</li>
+</ul>
+
+<h3>Best For</h3>
+<p>Complex collaborative scenarios, workflow engines, and distributed systems.</p>
+
+<h2 id="graph-workflow">7. Graph/Workflow Architecture</h2>
+
+<p>The mainstream enterprise-grade architecture, based on <strong>Directed Acyclic Graphs (DAGs)</strong>.</p>
+
+<h3>How It Works</h3>
+<ul>
+  <li>Workflows are arranged as DAGs</li>
+  <li>Supports conditional branching and parallel execution</li>
+  <li>Tasks can be traced, debugged, and retried</li>
+</ul>
+
+<h3>Popular Tools</h3>
+<ul>
+  <li>LangGraph</li>
+  <li>Temporal</li>
+  <li>Airflow</li>
+  <li>n8n</li>
+  <li>Prefect</li>
+</ul>
+
+<h3>Pros</h3>
+<ul>
+  <li>Enterprise-grade stability</li>
+  <li>Debug-friendly</li>
+  <li>Supports long-running workflows</li>
+  <li>Ideal for production environments</li>
+</ul>
+
+<h3>Cons</h3>
+<ul>
+  <li>Steeper learning curve</li>
+  <li>More complex to set up and maintain</li>
+</ul>
+
+<h3>Best For</h3>
+<p>Enterprise-level process automation and production environments.</p>
+
+<h2 id="evolution-path">Recommended Evolution Path</h2>
+
+<p>You don't need to jump to the most complex architecture immediately. Follow this path based on your needs:</p>
+
+<ol>
+  <li><strong>Single Agent</strong>: Quick validation of simple tasks</li>
+  <li><strong>ReAct</strong>: Multi-step exploration</li>
+  <li><strong>Plan & Execute</strong>: Engineering implementation</li>
+  <li><strong>Multi-Agent</strong>: Collaborative execution</li>
+  <li><strong>Router + Skill</strong>: Precision skill systems</li>
+  <li><strong>Blackboard</strong>: Shared state management</li>
+  <li><strong>Graph/Workflow</strong>: Enterprise-grade production</li>
+</ol>
+
+<h2 id="final-note">Final Note</h2>
+
+<p>There's no "best" architecture — only the <strong>most suitable</strong> one for your scenario. Choose based on the complexity of your task, your need for control, and your long-term goals.</p>
+
+<h2>常见问题</h2>
+
+<h3>Which architecture should a beginner start with?</h3>
+<p>Start with <strong>Single Agent</strong> to understand the basic loop (input → think → tool → output). Once comfortable, move to <strong>ReAct</strong> to experience multi-step reasoning. Most beginners never need to go beyond ReAct + Plan & Execute for personal projects. The jump to Multi-Agent and Graph/Workflow is an engineering decision, not a learning milestone — you only need those when a single Agent can't handle the task complexity or when you need production-grade reliability and traceability.</p>
+
+<h3>Why is Router + Skill recommended as the current best practice for coding tools?</h3>
+<p>Because it solves the biggest problem with Agent-based coding: <strong>unpredictability</strong>. In a ReAct or Plan & Execute architecture, the model decides what to do at each step — which means it can make creative but wrong decisions. Router + Skill flips this: instead of the model thinking "how do I solve this?", it thinks "which pre-built Skill solves this?" Each Skill is a tested, deterministic workflow. The model's job becomes classification (matching intent to Skill), not generation (inventing a solution on the fly). This is dramatically more reliable for production coding tools where correctness matters more than creativity.</p>
+
+<h3>What's the difference between Multi-Agent and Graph/Workflow architectures?</h3>
+<p>Multi-Agent is about <strong>who</strong> does the work — multiple specialized Agents collaborating. Graph/Workflow is about <strong>how</strong> the work flows — tasks arranged in a DAG with conditional branching, parallel execution, and retry logic. They're not mutually exclusive: you can have a Graph/Workflow that orchestrates multiple Agents. Think of Multi-Agent as the team structure and Graph/Workflow as the project management methodology. Enterprise systems typically use both: Graph/Workflow for the overall process, with specialized Agents handling individual nodes in the graph.</p>
+
+<h3>When should I NOT use an Agent architecture at all?</h3>
+<p>When a simple API call or script does the job. Agent architectures add latency, cost, and complexity. If your task is deterministic (e.g., "resize this image to 800px" or "translate this text to French"), a direct function call is faster, cheaper, and more reliable. The Agent sweet spot is tasks with ambiguity: "review this pull request and suggest improvements" or "research this topic and write a summary." A good rule of thumb: if you can write the logic as a flowchart with no "it depends" branches, you probably don't need an Agent.</p>
+
+<div class="next-step">
+  <h3>📖 Next Steps</h3>
+  <p>Understand the architectures? See them in action:</p>
+  <ul>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — see Plan & Execute and Multi-Agent in a real tool</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — match architectures to specific tools</li>
+    <li><a href="/articles/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — understand where Agents fit in the broader AI stack</li>
+  </ul>
+</div>`,
+    contentZh: `<div class="meta-banner">
+  <span class="meta-badge">📚 AI 学习</span>
+  <span class="meta-badge">🕒 阅读约9分钟</span>
+  <span class="meta-badge">📅 2026年7月7日</span>
+  <span class="meta-badge">🎯 中级</span>
+</div>
+
+<h2 id="introduction">引言</h2>
+
+<p>如今人人都在谈论 AI Agent，但你知道它们到底是怎么构建的吗？本文将拆解 7 种最主流的 Agent 架构，从简单入门级到企业级方案。读完你会知道哪种架构最适合你的具体场景。</p>
+
+<h3>开篇核心要点</h3>
+
+<ol>
+  <li>Agent 架构没有通用标准——选择完全取决于你的场景有多复杂、你需要多少控制力。</li>
+  <li>整体演进路径：<strong>单 Agent</strong> → <strong>多 Agent 协作</strong> → <strong>图驱动工作流</strong>。</li>
+  <li>如果你在构建 AI 编码工具或技能系统，<strong>Router + Skill</strong> 架构是当前最佳实践。</li>
+</ol>
+
+<h2 id="single-agent">1. 单 Agent 架构</h2>
+
+<p>最简单的架构，一个大语言模型（LLM）包揽一切。</p>
+
+<h3>工作原理</h3>
+<p>用户输入 → LLM 思考 → 调用工具 → 输出结果。</p>
+
+<h3>优势</h3>
+<ul>
+  <li>简单易实现</li>
+  <li>成本低</li>
+  <li>适用于基础任务（如 ChatGPT）</li>
+</ul>
+
+<h3>不足</h3>
+<ul>
+  <li>复杂任务力不从心：LLM 容易"思考爆炸"</li>
+  <li>同时处理多个任务时上下文污染严重</li>
+  <li>不适合多步骤或长时间运行的工作流</li>
+</ul>
+
+<h3>最适合</h3>
+<p>简单任务快速验证、个人助手、基础聊天机器人。</p>
+
+<h2 id="react">2. ReAct 架构</h2>
+
+<p><strong>推理 + 行动</strong>（Reason + Act）的缩写，经典的 Agent 范式。</p>
+
+<h3>工作原理</h3>
+<p>遵循一个循环：</p>
+<ol>
+  <li><strong>思考</strong>：分析问题，产生想法</li>
+  <li><strong>行动</strong>：选择并调用合适的工具</li>
+  <li><strong>观察</strong>：获取工具返回结果</li>
+  <li><strong>重复</strong>：根据结果调整思考，直到任务完成</li>
+</ol>
+
+<h3>优势</h3>
+<ul>
+  <li>思维链推理能力强</li>
+  <li>可解释性高（能看清每一步过程）</li>
+  <li>有效处理多步骤任务</li>
+</ul>
+
+<h3>不足</h3>
+<ul>
+  <li>Token 消耗高</li>
+  <li>不稳定，容易跑偏</li>
+  <li>不适合大规模工程系统</li>
+</ul>
+
+<h3>最适合</h3>
+<p>探索性任务、复杂问题求解、研究场景。</p>
+
+<h2 id="plan-execute">3. Plan & Execute 架构</h2>
+
+<p>更偏工程的架构，将规划与执行分离。</p>
+
+<h3>工作原理</h3>
+<ol>
+  <li><strong>规划</strong>："规划器"生成完整的分步计划</li>
+  <li><strong>执行</strong>："执行器"按步骤逐一执行</li>
+</ol>
+
+<h3>优势</h3>
+<ul>
+  <li>稳定性高</li>
+  <li>代码生成、项目自动化和长任务表现出色</li>
+  <li>工作流可预测</li>
+</ul>
+
+<h3>不足</h3>
+<ul>
+  <li>初始计划如果出错，整个任务失败</li>
+  <li>灵活性不如 ReAct</li>
+</ul>
+
+<h3>最适合</h3>
+<p>代码生成、项目自动化、长时间运行的工作流。</p>
+
+<h2 id="multi-agent">4. 多 Agent 架构</h2>
+
+<p>多个 Agent 协作，每个有特定角色。</p>
+
+<h3>工作原理</h3>
+<p><strong>编排器</strong>协调任务并分配给专业化 Agent：</p>
+<ul>
+  <li><strong>规划器</strong>：拆解任务</li>
+  <li><strong>编码器</strong>：编写和测试代码</li>
+  <li><strong>审查器</strong>：检查和验证结果</li>
+  <li><strong>工具 Agent</strong>：调用外部工具</li>
+</ul>
+
+<h3>优势</h3>
+<ul>
+  <li>任务分工清晰</li>
+  <li>减少上下文污染</li>
+  <li>高度可扩展</li>
+</ul>
+
+<h3>不足</h3>
+<ul>
+  <li>开发和维护成本高</li>
+  <li>Agent 间协调复杂</li>
+</ul>
+
+<h3>最适合</h3>
+<p>团队协作、复杂项目、企业级应用。</p>
+
+<h2 id="router-skill">5. Router + Skill 架构</h2>
+
+<p>个人推荐。核心理念：<strong>不要让模型"思考"——让它"选择"。</strong></p>
+
+<h3>工作原理</h3>
+<ol>
+  <li><strong>意图路由器</strong>：识别用户意图</li>
+  <li><strong>路由器</strong>：将请求导向对应的 <strong>Skill</strong></li>
+  <li><strong>Skill</strong>：每个 Skill 是自包含的能力单元，有自己的逻辑和知识</li>
+</ol>
+
+<h3>优势</h3>
+<ul>
+  <li>极其稳定</li>
+  <li>企业级可控性</li>
+  <li>可缓存（高性能）</li>
+  <li>易于评估成功率</li>
+</ul>
+
+<h3>不足</h3>
+<ul>
+  <li>Skill 设计成本高</li>
+  <li>可能存在意图匹配冲突</li>
+</ul>
+
+<h3>最适合</h3>
+<p>AI 编码工具、技能系统、需要高可靠性的场景。</p>
+
+<h2 id="blackboard">6. 黑板架构</h2>
+
+<p>多个 Agent 共享一块"黑板"（共享状态）协同工作。</p>
+
+<h3>工作原理</h3>
+<ul>
+  <li>所有 Agent 可读写共享黑板</li>
+  <li>执行由共享状态的变化驱动</li>
+  <li>Agent 通过更新和响应黑板来协作</li>
+</ul>
+
+<h3>优势</h3>
+<ul>
+  <li>复杂协作场景表现出色</li>
+  <li>支持动态任务分配</li>
+</ul>
+
+<h3>不足</h3>
+<ul>
+  <li>状态管理复杂</li>
+  <li>出问题时难以调试</li>
+</ul>
+
+<h3>最适合</h3>
+<p>复杂协作场景、工作流引擎、分布式系统。</p>
+
+<h2 id="graph-workflow">7. Graph/Workflow 架构</h2>
+
+<p>主流企业级架构，基于<strong>有向无环图（DAG）</strong>。</p>
+
+<h3>工作原理</h3>
+<ul>
+  <li>工作流以 DAG 形式编排</li>
+  <li>支持条件分支和并行执行</li>
+  <li>任务可追踪、调试和重试</li>
+</ul>
+
+<h3>常用工具</h3>
+<ul>
+  <li>LangGraph</li>
+  <li>Temporal</li>
+  <li>Airflow</li>
+  <li>n8n</li>
+  <li>Prefect</li>
+</ul>
+
+<h3>优势</h3>
+<ul>
+  <li>企业级稳定性</li>
+  <li>调试友好</li>
+  <li>支持长时间运行的工作流</li>
+  <li>适合生产环境</li>
+</ul>
+
+<h3>不足</h3>
+<ul>
+  <li>学习曲线较陡</li>
+  <li>搭建和维护更复杂</li>
+</ul>
+
+<h3>最适合</h3>
+<p>企业级流程自动化、生产环境。</p>
+
+<h2 id="evolution-path">推荐演进路径</h2>
+
+<p>你不需要一步跳到最复杂的架构。根据需求按以下路径演进：</p>
+
+<ol>
+  <li><strong>单 Agent</strong>：简单任务快速验证</li>
+  <li><strong>ReAct</strong>：多步骤探索</li>
+  <li><strong>Plan & Execute</strong>：工程化落地</li>
+  <li><strong>多 Agent</strong>：协作执行</li>
+  <li><strong>Router + Skill</strong>：精准技能系统</li>
+  <li><strong>黑板架构</strong>：共享状态管理</li>
+  <li><strong>Graph/Workflow</strong>：企业级生产</li>
+</ol>
+
+<h2 id="final-note">最后的话</h2>
+
+<p>没有"最好"的架构——只有<strong>最适合</strong>你场景的架构。根据任务复杂度、对控制力的需求以及长期目标来选择。</p>
+
+<h2>常见问题</h2>
+
+<h3>新手应该从哪个架构开始？</h3>
+<p>从<strong>单 Agent</strong>开始理解基本循环（输入→思考→工具→输出）。熟练后过渡到<strong>ReAct</strong>体验多步骤推理。大多数新手在个人项目上永远不需要超越 ReAct + Plan & Execute。跳到多 Agent 和 Graph/Workflow 是工程决策，不是学习里程碑——只有当单个 Agent 无法处理任务复杂度或需要生产级可靠性和可追溯性时才需要。</p>
+
+<h3>为什么 Router + Skill 是当前编码工具的最佳实践？</h3>
+<p>因为它解决了 Agent 编码最大的问题：<strong>不可预测性</strong>。在 ReAct 或 Plan & Execute 架构中，模型在每一步决定做什么——这意味着它可能做出有创意但错误的决定。Router + Skill 翻转了这一点：模型不再思考"我怎么解决这个问题？"，而是思考"哪个预置 Skill 能解决这个问题？"每个 Skill 是经过测试的确定性工作流。模型的角色变成了分类（匹配意图到 Skill），而非生成（临时发明方案）。对于正确性比创意更重要的生产级编码工具，这大大提高了可靠性。</p>
+
+<h3>多 Agent 和 Graph/Workflow 架构有什么区别？</h3>
+<p>多 Agent 关注<strong>谁</strong>来做——多个专业化 Agent 协作。Graph/Workflow 关注<strong>怎么做</strong>——任务以 DAG 形式编排，支持条件分支、并行执行和重试逻辑。它们不互斥：你可以有一个 Graph/Workflow 来编排多个 Agent。把多 Agent 理解为团队结构，Graph/Workflow 理解为项目管理方法论。企业系统通常两者都用：Graph/Workflow 管整体流程，专业化 Agent 处理图中各个节点。</p>
+
+<h3>什么时候不该用 Agent 架构？</h3>
+<p>当一个简单的 API 调用或脚本就能搞定的时候。Agent 架构会增加延迟、成本和复杂度。如果你的任务是确定性的（如"把这张图片缩放到 800px"或"把这段文字翻译成法语"），直接函数调用更快、更便宜、更可靠。Agent 的甜蜜点是带模糊性的任务："审查这个 PR 并建议改进"或"研究这个主题并写一份摘要"。一个实用判断标准：如果你能把逻辑画成流程图上没有任何"看情况"分支，那你大概率不需要 Agent。</p>
+
+<div class="next-step">
+  <h3>📖 下一步</h3>
+  <p>理解了架构？看看它们在实际中如何运作：</p>
+  <ul>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code 完全实战教程：掌握所有核心操作</a> — 在真实工具中看 Plan & Execute 和多 Agent 架构</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent 选型指南：新手如何选择最适合的工具</a> — 将架构匹配到具体工具</li>
+    <li><a href="/articles/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 理解 Agent 在更广泛 AI 技术栈中的位置</li>
   </ul>
 </div>`,
   },
@@ -632,6 +964,6 @@ content_new = content_src[:last_brace] + new_contents + '};'
 with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f:
     f.write(content_new)
 
-print('Part 3: 2 article contents added to article-content.ts')
+print('Part 2: 2 article contents added to article-content.ts')
 
 print('\n=== All done! Run build to verify ===')

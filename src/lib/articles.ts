@@ -2471,4 +2471,29 @@ export const articles: Article[] = [
     date: "2026-07-05",
   },
 
+  {
+    slug: "complete-practical-tutorial-claude-code-core-operations",
+    title: "Complete Practical Tutorial: Master All Core Operations Inside Claude Code",
+    titleZh: "Claude Code完全实战教程：掌握所有核心操作",
+    description: "A hands-on tutorial covering every core Claude Code operation — from CLI installation and project import to file analysis, batch refactoring, automatic debugging, claude.md rules, Git integration, Plan Mode, and permission controls — with executable commands for every step.",
+    descriptionZh: "从CLI安装、项目导入到文件分析、批量重构、自动调试、claude.md规则、Git联动、Plan模式和权限控制，每一步都有可执行命令，覆盖Claude Code全部核心操作。",
+    category: "AI Tutorials",
+    tags: ["Claude Code", "CLI", "Tutorial", "Coding", "Debugging", "Refactoring", "Git"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Claude Code"],
+    date: "2026-07-07",
+  },
+  {
+    slug: "7-mainstream-agent-architectures-beginner-enterprise-guide",
+    title: "7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade Guide",
+    titleZh: "7大主流Agent架构：从入门到企业级完整指南",
+    description: "A systematic breakdown of 7 Agent architectures — Single Agent, ReAct, Plan & Execute, Multi-Agent, Router+Skill, Blackboard, and Graph/Workflow — with pros, cons, best-use cases, and a recommended evolution path from beginner to enterprise.",
+    descriptionZh: "系统拆解7种Agent架构——单Agent、ReAct、Plan & Execute、多Agent、Router+Skill、黑板架构和Graph/Workflow——含优缺点、最佳场景和从入门到企业级的推荐演进路径。",
+    category: "AI Learning",
+    tags: ["AI Agent", "Architecture", "ReAct", "Multi-Agent", "Workflow", "LangGraph", "Enterprise"],
+    difficulty: "intermediate",
+    toolsMentioned: ["LangGraph", "n8n"],
+    date: "2026-07-07",
+  },
+
 ];
