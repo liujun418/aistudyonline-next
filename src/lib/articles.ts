@@ -2496,4 +2496,17 @@ export const articles: Article[] = [
     date: "2026-07-07",
   },
 
+  {
+    slug: "practical-guide-tencent-workbuddy-ai-office-assistant",
+    title: "A Practical Guide to Tencent WorkBuddy: Your All-in-One AI Office Assistant",
+    titleZh: "腾讯WorkBuddy实操指南：一站式AI办公助手完全上手",
+    description: "A hands-on guide to Tencent WorkBuddy covering installation, interface overview, and 6 practical use cases with specific prompt examples — document generation, data analysis, PPT creation, weekly reports, code development, and design — plus Expert Teams and Skill Library.",
+    descriptionZh: "腾讯WorkBuddy上手实操指南，覆盖安装配置、界面概览和6大实战场景（文档生成、数据分析、PPT制作、周报、代码开发、设计创意），每个场景含具体提示词示例，附专家团队和技能库使用说明。",
+    category: "AI Tools",
+    tags: ["Tencent", "WorkBuddy", "AI Office", "Productivity", "Practical Guide", "China"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy"],
+    date: "2026-07-08",
+  },
+
 ];
