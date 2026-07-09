@@ -2509,4 +2509,29 @@ export const articles: Article[] = [
     date: "2026-07-08",
   },
 
+  {
+    slug: "seedream-5-pro-ai-image-generation-guide",
+    title: "Seedream 5.0 Pro: A Comprehensive Practical Guide to China's Leading AI Image Generation Model",
+    titleZh: "Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南",
+    description: "Hands-on testing of ByteDance's Seedream 5.0 Pro across five scenarios — artistic eye close-ups, Chinese text rendering, bookmark design, character turnaround sheets, and steampunk UI — comparing against GPT Image 2 and Nano Banana Pro.",
+    descriptionZh: "字节跳动Seedream 5.0 Pro五大场景实战评测——艺术眼部特写、中文文字渲染、书签设计、角色三视图和蒸汽朋克UI——与GPT Image 2和Nano Banana Pro横向对比。",
+    category: "AI Tools",
+    tags: ["Seedream", "ByteDance", "Image Generation", "China", "AI Art", "Design", "Review"],
+    difficulty: "beginner",
+    toolsMentioned: ["Seedream 5.0 Pro", "GPT Image 2", "Nano Banana Pro"],
+    date: "2026-07-09",
+  },
+  {
+    slug: "official-tutorial-three-ways-codex-control-computer",
+    title: "Official Tutorial: Three Ways Codex Can Control Your Computer for You",
+    titleZh: "官方教程：Codex控制电脑的三种方式详解",
+    description: "OpenAI's Jason Liu breaks down Codex's three computer control modes — Computer Use (desktop automation), Chrome Extension (browser tasks), and In-App Browser (web dev debugging) — with real-world examples and a decision framework for choosing the right mode.",
+    descriptionZh: "OpenAI Jason Liu详解Codex三种电脑控制方式——Computer Use（桌面自动化）、Chrome扩展（浏览器任务）和内置浏览器（网页开发调试）——含真实案例和选型决策框架。",
+    category: "AI Tools",
+    tags: ["Codex", "OpenAI", "Computer Use", "Automation", "Chrome Extension", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent"],
+    date: "2026-07-09",
+  },
+
 ];
