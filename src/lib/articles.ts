@@ -2534,4 +2534,29 @@ export const articles: Article[] = [
     date: "2026-07-09",
   },
 
+  {
+    slug: "workbuddy-3-layer-memory-system-make-ai-understand-you",
+    title: "WorkBuddy L05: Master the 3-Layer Memory System – Make AI Understand You Better",
+    titleZh: "WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你",
+    description: "A deep dive into WorkBuddy's 3-layer memory architecture — Cloud Memory (auto profile + cross-conversation search), User-level Local Memory (MEMORY.md), and Workspace Memory (auto daily logs) — plus how Memory integrates with Skills and Automation to create a self-improving AI assistant.",
+    descriptionZh: "深度解析WorkBuddy三层记忆架构——云端记忆（自动画像+跨对话搜索）、用户级本地记忆（MEMORY.md）和工作区记忆（自动日志）——以及记忆如何与技能和自动化系统联动，打造越用越聪明的AI助手。",
+    category: "AI Tutorials",
+    tags: ["WorkBuddy", "Memory", "Automation", "Skills", "Productivity", "AI Assistant"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy"],
+    date: "2026-07-10",
+  },
+  {
+    slug: "codex-zero-basics-tutorial-part-2-hands-on-guide",
+    title: "Codex Zero-Basics Tutorial Part 2: Hands-On Guide to Using Codex for AI Beginners",
+    titleZh: "Codex零基础教程（下）：AI新手实操完全指南",
+    description: "A beginner-friendly Codex hands-on tutorial covering installation (Windows/Mac), project setup, file organization with real café example, Plan Mode for complex tasks, Pet feature, and dashboard creation — zero technical knowledge required.",
+    descriptionZh: "Codex新手实操教程，覆盖安装（Windows/Mac）、项目设置、咖啡馆文件整理实战案例、Plan Mode复杂任务模式、Pet宠物功能和Dashboard创建——完全零技术门槛。",
+    category: "AI Tutorials",
+    tags: ["Codex", "OpenAI", "Tutorial", "Beginner", "Hands-on", "Plan Mode", "Automation"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent"],
+    date: "2026-07-10",
+  },
+
 ];
