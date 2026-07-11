@@ -2559,4 +2559,29 @@ export const articles: Article[] = [
     date: "2026-07-10",
   },
 
+  {
+    slug: "chatgpt-codex-10-core-features-beginners-work-efficiency",
+    title: "ChatGPT Codex: 10 Core Features for Beginners to Boost Work Efficiency",
+    titleZh: "ChatGPT Codex：新手必学的10个核心提效功能",
+    description: "A practical guide to ChatGPT Codex's 10 most useful features — batch file renaming, data analysis with charts, doc-to-web conversion, local file memory, scheduled automation, plugin ecosystem, PPT creation, system cleanup, hand-drawn flowcharts, and article formatting — each with example commands.",
+    descriptionZh: "ChatGPT Codex十大实用功能实操指南——批量文件重命名、数据图表分析、文档转网页、本地文件记忆、定时自动化、插件生态、PPT制作、系统清理、手绘流程图和文章格式化，每个功能含示例指令。",
+    category: "AI Tools",
+    tags: ["ChatGPT", "Codex", "Productivity", "Automation", "Beginner", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT", "Codex Agent"],
+    date: "2026-07-11",
+  },
+  {
+    slug: "lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm",
+    title: "Lightweight AI Transformation for Traditional Business Systems: WorkBuddy + Cordys CRM Skills",
+    titleZh: "传统业务系统轻量级AI改造方案：WorkBuddy + Cordys CRM技能实战",
+    description: "A practical enterprise AI transformation blueprint using a three-layer architecture — WorkBuddy (AI entry), Business Skills (capability encapsulation), and Existing Systems (Cordys CRM) — with detailed Skill file anatomy, import process, and web/mobile demonstrations.",
+    descriptionZh: "企业AI改造实战方案：三层架构——WorkBuddy（AI入口）+ 业务技能（能力封装）+ 现有系统（Cordys CRM），含Skill文件逐项拆解、导入流程和网页/移动端实操演示。",
+    category: "AI Use Cases",
+    tags: ["WorkBuddy", "Enterprise", "CRM", "Skills", "Digital Transformation", "Business"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Tencent WorkBuddy"],
+    date: "2026-07-11",
+  },
+
 ];
