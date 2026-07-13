@@ -1,5 +1,5 @@
 """
-Publish July 11, 2026 — 2 articles, no new tools.
+Publish July 13, 2026 — 2 articles, no new tools.
 """
 import os
 
@@ -11,28 +11,28 @@ with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "chatgpt-codex-10-core-features-beginners-work-efficiency",
-    title: "ChatGPT Codex: 10 Core Features for Beginners to Boost Work Efficiency",
-    titleZh: "ChatGPT Codex：新手必学的10个核心提效功能",
-    description: "A practical guide to ChatGPT Codex's 10 most useful features — batch file renaming, data analysis with charts, doc-to-web conversion, local file memory, scheduled automation, plugin ecosystem, PPT creation, system cleanup, hand-drawn flowcharts, and article formatting — each with example commands.",
-    descriptionZh: "ChatGPT Codex十大实用功能实操指南——批量文件重命名、数据图表分析、文档转网页、本地文件记忆、定时自动化、插件生态、PPT制作、系统清理、手绘流程图和文章格式化，每个功能含示例指令。",
-    category: "AI Tools",
-    tags: ["ChatGPT", "Codex", "Productivity", "Automation", "Beginner", "Tutorial"],
-    difficulty: "beginner",
-    toolsMentioned: ["ChatGPT", "Codex Agent"],
-    date: "2026-07-11",
+    slug: "vibecoding-contest-guide-game-animations-ai-tools",
+    title: "VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools",
+    titleZh: "VibeCoding大赛指南：用AI工具高效制作游戏动画",
+    description: "A complete AI game animation workflow — from sprite sheet generation with structured prompts, to animation control code for Godot (GDScript) and Unity (C#), motion fine-tuning, easing functions, and advanced cutscene sequencing — zero art or coding foundation required.",
+    descriptionZh: "AI游戏动画完整工作流——从精灵表生成的结构化提示词，到Godot（GDScript）和Unity（C#）的动画控制代码，动作微调、缓动函数和高级过场动画编排——零美术和编程基础也能上手。",
+    category: "AI Tutorials",
+    tags: ["VibeCoding", "Game Development", "Animation", "Godot", "Unity", "Sprite Sheet", "Tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Claude Code", "Godot", "Unity"],
+    date: "2026-07-13",
   },
   {
-    slug: "lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm",
-    title: "Lightweight AI Transformation for Traditional Business Systems: WorkBuddy + Cordys CRM Skills",
-    titleZh: "传统业务系统轻量级AI改造方案：WorkBuddy + Cordys CRM技能实战",
-    description: "A practical enterprise AI transformation blueprint using a three-layer architecture — WorkBuddy (AI entry), Business Skills (capability encapsulation), and Existing Systems (Cordys CRM) — with detailed Skill file anatomy, import process, and web/mobile demonstrations.",
-    descriptionZh: "企业AI改造实战方案：三层架构——WorkBuddy（AI入口）+ 业务技能（能力封装）+ 现有系统（Cordys CRM），含Skill文件逐项拆解、导入流程和网页/移动端实操演示。",
-    category: "AI Use Cases",
-    tags: ["WorkBuddy", "Enterprise", "CRM", "Skills", "Digital Transformation", "Business"],
-    difficulty: "intermediate",
-    toolsMentioned: ["Tencent WorkBuddy"],
-    date: "2026-07-11",
+    slug: "claude-code-game-studios-game-development-easier",
+    title: "Make Game Development Easier with Claude Code Game Studios",
+    titleZh: "Claude Code Game Studios：让独立游戏开发从未如此简单",
+    description: "An introduction to Claude Code Game Studios — an open-source project that transforms a single Claude Code session into a complete game studio with 49 AI agents, 73 skills, 12 hooks, and a hierarchical studio structure (Directors → Department Heads → Experts) for solo game development.",
+    descriptionZh: "Claude Code Game Studios开源项目介绍——将单个Claude Code会话转变为完整游戏工作室，含49个AI Agent、73个技能、12个钩子和层级化工作室架构（总监→部门主管→专家），实现单人全流程游戏开发。",
+    category: "AI Tools",
+    tags: ["Claude Code", "Game Development", "Open Source", "AI Agent", "Studio", "Indie Dev"],
+    difficulty: "beginner",
+    toolsMentioned: ["Claude Code"],
+    date: "2026-07-13",
   },
 
 """
@@ -50,728 +50,474 @@ with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "chatgpt-codex-10-core-features-beginners-work-efficiency": {
+  "vibecoding-contest-guide-game-animations-ai-tools": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI Tools</span>
-  <span class="meta-badge">🕒 7 min read</span>
-  <span class="meta-badge">📅 Jul 11, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
-</div>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>ChatGPT Codex is now integrated with GPT, creating a powerful AI tool that simplifies daily tasks. This guide will walk you through its new interface and 10 practical features that can help you work smarter, not harder.</p>
-
-<h2 id="interface">New Interface Overview</h2>
-
-<p>The updated ChatGPT desktop app features a clean, intuitive layout:</p>
-
-<ul>
-  <li><strong>Top Left Corner</strong>: Toggle between <strong>Work</strong> and <strong>Codex</strong> modes</li>
-  <li><strong>Bottom Right Corner</strong>: Monitor your remaining TOKEN usage</li>
-  <li><strong>Left Sidebar</strong>: Access your past conversations and projects</li>
-</ul>
-
-<p>This design makes it easy to switch between different work modes and track your usage.</p>
-
-<h2 id="features">10 Core Features for Daily Use</h2>
-
-<h3>1. Automate Repetitive Office Tasks</h3>
-
-<p>Codex can handle tedious tasks like:</p>
-<ul>
-  <li><strong>Batch file renaming</strong>: Organize files with consistent naming conventions</li>
-  <li><strong>Table organization</strong>: Clean up messy spreadsheets</li>
-  <li><strong>Data categorization</strong>: Sort information into logical groups</li>
-  <li><strong>Script writing</strong>: Automate tasks like network latency checks</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Rename all files in the "Q3 Reports" folder using the format: [Date] - [Report Type] - [Department]</code></pre>
-
-<h3>2. Data and Chart Analysis</h3>
-
-<p>Transform raw data into actionable insights:</p>
-<ul>
-  <li>Upload dozens of receipts or complex Excel spreadsheets</li>
-  <li>Let Codex analyze for anomalies and trends</li>
-  <li>Generate professional reports with visualizations</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Analyze the Q3 sales spreadsheet, identify anomalies, and create a trend report with charts</code></pre>
-
-<h3>3. One-Click Document to Website Conversion</h3>
-
-<p>Turn written documents into interactive web pages:</p>
-<ul>
-  <li>Convert proposals, reports, or presentations into shareable web pages</li>
-  <li>Preview applications before deployment</li>
-  <li>Easily share with colleagues or clients</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Convert the "Project Proposal.docx" into an interactive web page with a modern design</code></pre>
-
-<h3>4. Local File Access and Persistent Memory</h3>
-
-<p>Codex works with your local files and remembers your preferences:</p>
-<ul>
-  <li>Files stay on your computer (no cloud uploads)</li>
-  <li>AI learns your preferences over time</li>
-  <li>Remembers corrections and adapts to your workflow</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Remember my preference for using "YYYY-MM-DD - [Project Name]" format for file naming</code></pre>
-
-<h3>5. Scheduled Automation Tasks</h3>
-
-<p>Set up tasks to run automatically:</p>
-<ul>
-  <li>Schedule daily reports to be generated and updated</li>
-  <li>Let Codex work while you sleep</li>
-  <li>No need to manually trigger tasks</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Every weekday at 8 AM, analyze the sales data and update the dashboard</code></pre>
-
-<h3>6. Plugin Ecosystem Integration</h3>
-
-<p>Connect Codex with your favorite tools: Chrome, GitHub, Figma, Notion, Gmail, and many more.</p>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Connect to my GitHub account and automatically create a PR when I push changes</code></pre>
-
-<h3>7. Create Professional Presentations</h3>
-
-<p>Generate beautiful presentations from documents:</p>
-<ul>
-  <li>Input a document and get a polished PPT</li>
-  <li>Choose from different color schemes and styles</li>
-  <li>Download and edit easily</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Create a presentation from the "Q3 Business Review.docx" using a professional blue color scheme</code></pre>
-
-<h3>8. Automatic System Cleanup</h3>
-
-<p>Free up disk space safely:</p>
-<ul>
-  <li>Scan for leftover files and cache</li>
-  <li>Identify unnecessary files</li>
-  <li>Release several gigabytes of storage</li>
-  <li>Always remember to back up before cleaning</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Scan my system for unnecessary files and cache, then safely clean them up</code></pre>
-
-<h3>9. Hand-Drawn Style Flowcharts</h3>
-
-<p>Create visual diagrams from text:</p>
-<ul>
-  <li>Input your ideas and Codex breaks them into nodes</li>
-  <li>Generate editable hand-drawn style flowcharts</li>
-  <li>Perfect for process documentation</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Create a hand-drawn style flowchart showing the customer onboarding process</code></pre>
-
-<h3>10. Automatic Article Formatting and Image Suggestions</h3>
-
-<p>Great for content creators:</p>
-<ul>
-  <li>Input long articles and get formatted HTML</li>
-  <li>AI suggests relevant images</li>
-  <li>Easily adjust formatting without regenerating</li>
-</ul>
-
-<p><strong>Example Command</strong>:</p>
-<pre><code class="language-text">Format the "Product Launch Article.docx" into HTML and suggest 5 relevant images</code></pre>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>With Codex, you don't need to learn multiple AI tools. Just tell Codex what you want to accomplish, and it will handle the execution. The future of AI is becoming simpler — you just need to speak your mind, and AI will do the work. Stay tuned for more AI tutorials and tips to help you work smarter!</p>
-
-<h2>常见问题</h2>
-
-<h3>Which of these 10 features should I learn first?</h3>
-<p>Start with the three that give you the fastest ROI: <strong>Batch file renaming</strong> (saves 10-30 minutes every time you organize a messy folder), <strong>Data and chart analysis</strong> (turns hours of spreadsheet work into a 30-second prompt), and <strong>PPT creation</strong> (eliminates the most universally dreaded office task). These three alone can save 3-5 hours per week for most office workers. Once those feel natural, add scheduled automation to handle recurring tasks while you sleep.</p>
-
-<h3>How is ChatGPT Codex different from the standalone Codex app?</h3>
-<p>ChatGPT Codex is the integration of Codex capabilities directly into the ChatGPT desktop app — you can toggle between "Work" mode (standard ChatGPT) and "Codex" mode (agent capabilities) in the top-left corner. The standalone Codex app is a separate download focused purely on agent tasks. For beginners, the integrated version is easier: one app, one subscription, and you can switch modes depending on whether you need a chatbot or an agent. The standalone app is preferred by developers who want Codex as their primary workspace.</p>
-
-<h3>Are my files safe when Codex accesses them locally?</h3>
-<p>Yes. Codex's local file access means files stay on your computer — they are not uploaded to OpenAI's cloud. This is different from ChatGPT's web interface where you upload files to the server. Codex reads and processes files locally, similar to how a desktop app like Excel or Photoshop works. For sensitive business documents, this is a significant privacy advantage. The persistent memory feature also stores preferences locally, not in the cloud.</p>
-
-<h3>Can I combine multiple features in one task?</h3>
-<p>Yes, and that's where Codex really shines. A typical workflow might be: (1) analyze the Q3 sales spreadsheet (feature 2), (2) create a presentation from the analysis (feature 7), (3) convert the presentation to a web page for sharing (feature 3), and (4) schedule this entire workflow to run every Monday morning (feature 5). You can chain these in a single conversation or set up an automation that runs them sequentially. The plugin ecosystem (feature 6) lets you extend this further — for example, auto-emailing the final web page to your team via Gmail.</p>
-
-<div class="next-step">
-  <h3>📖 Next Steps</h3>
-  <p>Mastered the 10 core features? Deepen your Codex skills:</p>
-  <ul>
-    <li><a href="/articles/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex Zero-Basics Tutorial Part 2: Hands-On Guide for AI Beginners</a> — more hands-on Codex projects</li>
-    <li><a href="/articles/official-tutorial-three-ways-codex-control-computer">Official Tutorial: Three Ways Codex Can Control Your Computer</a> — master Computer Use, Chrome Extension, and In-App Browser</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced</a> — the full developer-oriented Codex path</li>
-  </ul>
-</div>`,
-    contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI 工具</span>
-  <span class="meta-badge">🕒 阅读约7分钟</span>
-  <span class="meta-badge">📅 2026年7月11日</span>
-  <span class="meta-badge">🎯 入门</span>
-</div>
-
-<h2 id="introduction">引言</h2>
-
-<p>ChatGPT Codex现已与GPT集成，打造了一个能简化日常任务的强大AI工具。本指南将带你了解新界面和10个实用功能，帮你更聪明地工作。</p>
-
-<h2 id="interface">新界面概览</h2>
-
-<p>更新后的ChatGPT桌面应用拥有简洁直观的布局：</p>
-
-<ul>
-  <li><strong>左上角</strong>：在<strong>Work</strong>和<strong>Codex</strong>模式间切换</li>
-  <li><strong>右下角</strong>：监控剩余TOKEN用量</li>
-  <li><strong>左侧边栏</strong>：访问历史对话和项目</li>
-</ul>
-
-<p>这个设计让你能轻松切换工作模式并追踪用量。</p>
-
-<h2 id="features">10个日常核心功能</h2>
-
-<h3>1. 自动化重复办公任务</h3>
-
-<p>Codex能处理繁琐任务：</p>
-<ul>
-  <li><strong>批量文件重命名</strong>：用统一命名规范整理文件</li>
-  <li><strong>表格整理</strong>：清理混乱的电子表格</li>
-  <li><strong>数据分类</strong>：将信息归类到逻辑分组</li>
-  <li><strong>脚本编写</strong>：自动化网络延迟检查等任务</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">将"Q3报告"文件夹中的所有文件重命名，格式为：[日期] - [报告类型] - [部门]</code></pre>
-
-<h3>2. 数据与图表分析</h3>
-
-<p>将原始数据转化为可操作洞察：</p>
-<ul>
-  <li>上传数十张收据或复杂Excel表格</li>
-  <li>让Codex分析异常和趋势</li>
-  <li>生成带可视化图表的专业报告</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">分析Q3销售表格，识别异常，创建带图表的趋势报告</code></pre>
-
-<h3>3. 一键文档转网页</h3>
-
-<p>将书面文档转化为交互式网页：</p>
-<ul>
-  <li>将提案、报告或演示转为可分享的网页</li>
-  <li>部署前预览应用</li>
-  <li>轻松分享给同事或客户</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">将"项目方案.docx"转化为现代设计风格的交互式网页</code></pre>
-
-<h3>4. 本地文件访问与持久记忆</h3>
-
-<p>Codex处理本地文件并记住你的偏好：</p>
-<ul>
-  <li>文件留在电脑上（无需上传云端）</li>
-  <li>AI随时间学习你的偏好</li>
-  <li>记住纠正内容并适应你的工作流</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">记住我的文件命名偏好：使用"YYYY-MM-DD - [项目名称]"格式</code></pre>
-
-<h3>5. 定时自动化任务</h3>
-
-<p>设置任务自动运行：</p>
-<ul>
-  <li>安排每日报告自动生成和更新</li>
-  <li>让Codex在你睡觉时工作</li>
-  <li>无需手动触发任务</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">每个工作日上午8点，分析销售数据并更新仪表盘</code></pre>
-
-<h3>6. 插件生态集成</h3>
-
-<p>将Codex连接到你喜欢的工具：Chrome、GitHub、Figma、Notion、Gmail等。</p>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">连接我的GitHub账号，当我推送更改时自动创建PR</code></pre>
-
-<h3>7. 创建专业演示文稿</h3>
-
-<p>从文档生成精美PPT：</p>
-<ul>
-  <li>输入文档，获得精良PPT</li>
-  <li>选择不同配色方案和风格</li>
-  <li>轻松下载和编辑</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">用"Q3业务回顾.docx"创建演示文稿，使用专业蓝色配色方案</code></pre>
-
-<h3>8. 自动系统清理</h3>
-
-<p>安全释放磁盘空间：</p>
-<ul>
-  <li>扫描残留文件和缓存</li>
-  <li>识别不必要的文件</li>
-  <li>释放数GB存储空间</li>
-  <li>清理前务必先备份</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">扫描系统中的不必要文件和缓存，然后安全清理</code></pre>
-
-<h3>9. 手绘风格流程图</h3>
-
-<p>从文本创建可视化图表：</p>
-<ul>
-  <li>输入你的想法，Codex拆解为节点</li>
-  <li>生成可编辑的手绘风格流程图</li>
-  <li>非常适合流程文档</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">创建一张手绘风格流程图，展示客户入职流程</code></pre>
-
-<h3>10. 自动文章格式化与图片建议</h3>
-
-<p>内容创作者的福音：</p>
-<ul>
-  <li>输入长文，获得格式化HTML</li>
-  <li>AI推荐相关图片</li>
-  <li>轻松调整格式无需重新生成</li>
-</ul>
-
-<p><strong>示例指令</strong>：</p>
-<pre><code class="language-text">将"产品发布文章.docx"格式化为HTML，并推荐5张相关图片</code></pre>
-
-<h2 id="conclusion">总结</h2>
-
-<p>有了Codex，你不需要学习多个AI工具。只需告诉Codex你想完成什么，它会处理执行。AI的未来正变得越来越简单——你只需说出想法，AI会完成工作。敬请期待更多AI教程和技巧，帮你更聪明地工作！</p>
-
-<h2>常见问题</h2>
-
-<h3>这10个功能应该先学哪个？</h3>
-<p>从回报最快的三个开始：<strong>批量文件重命名</strong>（每次整理混乱文件夹节省10-30分钟）、<strong>数据图表分析</strong>（将数小时表格工作变成30秒提示词）和<strong>PPT制作</strong>（消除最普遍令人头疼的办公任务）。仅这三项就能为大多数职场人士每周节省3-5小时。熟练后，加上定时自动化在你睡觉时处理重复任务。</p>
-
-<h3>ChatGPT Codex和独立Codex App有什么区别？</h3>
-<p>ChatGPT Codex是将Codex能力直接集成到ChatGPT桌面应用中——你可以在左上角切换"Work"模式（标准ChatGPT）和"Codex"模式（Agent能力）。独立Codex App是专注于Agent任务的单独下载。对新手来说，集成版更简单：一个应用、一个订阅，根据是需要聊天机器人还是Agent来切换模式。独立App更受将Codex作为主力工作区的开发者青睐。</p>
-
-<h3>Codex访问本地文件时我的数据安全吗？</h3>
-<p>安全。Codex的本地文件访问意味着文件留在你的电脑上——不会上传到OpenAI云端。这不同于ChatGPT网页版需要上传文件到服务器。Codex在本地读取和处理文件，类似Excel或Photoshop等桌面应用的工作方式。对于敏感商业文档，这是显著的隐私优势。持久记忆功能同样在本地存储偏好，而非云端。</p>
-
-<h3>能在一个任务中组合多个功能吗？</h3>
-<p>可以，而且这是Codex真正出彩的地方。一个典型工作流可能是：(1) 分析Q3销售表格（功能2），(2) 基于分析创建演示文稿（功能7），(3) 将演示转为网页分享（功能3），(4) 设定整个流程每周一早上自动运行（功能5）。你可以在单次对话中串联这些步骤，或设置自动化顺序执行。插件生态（功能6）让你进一步扩展——比如自动将最终网页通过Gmail发送给团队。</p>
-
-<div class="next-step">
-  <h3>📖 下一步</h3>
-  <p>掌握了10个核心功能？深化你的Codex技能：</p>
-  <ul>
-    <li><a href="/articles/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex零基础教程（下）：AI新手实操完全指南</a> — 更多Codex实战项目</li>
-    <li><a href="/articles/official-tutorial-three-ways-codex-control-computer">官方教程：Codex控制电脑的三种方式详解</a> — 掌握Computer Use、Chrome扩展和内置浏览器</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 面向开发者的完整Codex路径</li>
-  </ul>
-</div>`,
-  },
-
-  "lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm": {
-    content: `<div class="meta-banner">
-  <span class="meta-badge">💼 AI Use Cases</span>
-  <span class="meta-badge">🕒 9 min read</span>
-  <span class="meta-badge">📅 Jul 11, 2026</span>
+  <span class="meta-badge">📚 AI Tutorials</span>
+  <span class="meta-badge">🕒 8 min read</span>
+  <span class="meta-badge">📅 Jul 13, 2026</span>
   <span class="meta-badge">🎯 Intermediate</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>With the rapid development of large language models and AI agent technologies, more and more enterprises are starting to ask: How can AI truly integrate into business operations, rather than just being a chatbot? In this guide, we will use Cordys CRM as an example to introduce a practical lightweight AI transformation solution: <strong>WorkBuddy + Business Skills</strong>.</p>
+<p>VibeCoding competition focuses on lightweight AI game animation production. Even creators with zero art foundation can finish complete character animations, scene motion effects and cutscene sequences by combining AI drawing models, code generation assistants and animation editing tools. This article sorts out the full practical workflow, covering tool matching, prompt writing, motion code generation and preview debugging steps.</p>
 
-<p>This solution allows enterprises to avoid rebuilding existing systems from scratch. Instead, you can gradually encapsulate business capabilities into Skills, enabling AI to participate in business processes quickly and efficiently.</p>
+<h2 id="tool-stack">Core Tool Stack For AI Game Animation</h2>
 
-<h2 id="architecture">The Three-Layer Architecture</h2>
-
-<p>The solution can be broken down into three core layers:</p>
+<p>The complete workflow relies on three core modules, which can be used independently or combined:</p>
 
 <ol>
-  <li><strong>Top Layer: WorkBuddy</strong> — Responsible for understanding user queries, interacts with large language models, acts as the unified AI entry point for the entire system.</li>
-  <li><strong>Middle Layer: Business Skills</strong> — Encapsulates the enterprise's existing business capabilities, enables AI to understand which business interfaces to call, defines which business operations to perform.</li>
-  <li><strong>Bottom Layer: Existing Business Systems</strong> — For example, the Cordys CRM system. Retains all original business logic and data.</li>
+  <li>AI image generation model: Output sprite sheets, character keyframe frames</li>
+  <li>Code AI assistant: Generate animation control logic for Unity / Godot</li>
+  <li>Lightweight animation editor: Adjust frame rate, motion easing and collision sync</li>
 </ol>
 
-<p>This architecture means enterprises do not need to rebuild their existing systems. Instead, they can gradually encapsulate business capabilities into Skills, allowing AI to participate in business quickly.</p>
+<h2 id="step-1">Step 1: Generate Game Animation Sprite Sheets With Image AI</h2>
 
-<h2 id="workbuddy-functions">WorkBuddy Core Functions</h2>
+<p>Sprite sheets are the foundation of 2D game animations. Use structured prompts to get unified style keyframes.</p>
 
-<p>WorkBuddy is an AI-native desktop intelligent agent workspace designed to help users complete tasks through natural language interaction. Here are its core functions:</p>
+<h3>Practical Prompt Template</h3>
 
-<h3>1. New Task Creation</h3>
+<pre><code class="language-text">2D pixel game character sprite sheet, 8 frames walk cycle, consistent character proportion, transparent background, single horizontal row layout, clean pixel lines, no extra decorative elements, game asset standard, 32x32 pixel per frame</code></pre>
+
+<h3>Operation Tips</h3>
+
 <ul>
-  <li>Core dialogue area for publishing and processing tasks</li>
-  <li>Supports multiple tasks running simultaneously</li>
+  <li>Lock character color palette in prompt to avoid inconsistent tones between frames</li>
+  <li>Add "no text, no watermark" to eliminate invalid elements</li>
+  <li>Export output as PNG with alpha channel for engine direct import</li>
 </ul>
 
-<h3>2. Assistant Function</h3>
-<ul>
-  <li>Enables remote control capabilities</li>
-  <li>Integrates with common chat software: WeChat, QQ, Feishu, DingTalk</li>
-  <li>Allows mobile remote control of PC-side WorkBuddy tasks</li>
-</ul>
+<h2 id="step-2">Step 2: Generate Animation Control Code Via VibeCoding</h2>
 
-<h3>3. Project Function</h3>
-<ul>
-  <li>Focuses on team collaboration</li>
-  <li>Two-layer architecture: Projects and Tasks</li>
-  <li>Teams can share materials, standards, and professional content</li>
-</ul>
+<p>After obtaining sprite resources, send asset information to AI coding assistant to generate reusable animation scripts, compatible with mainstream game engines.</p>
 
-<h3>4. Expert Module</h3>
-<ul>
-  <li>Divided into Expert Center and My Experts</li>
-  <li>Expert Center allows filtering experts by industry</li>
-  <li>My Experts allows users to create their own exclusive experts</li>
-</ul>
+<h3>Sample Request Command For Godot Engine</h3>
 
-<h3>5. Skill Function</h3>
-<ul>
-  <li>The most important function in this solution</li>
-  <li>Skills continuously expand WorkBuddy's capabilities</li>
-  <li>Integrates scripts, workflows, and third-party APIs</li>
-  <li>Not only answers questions but also performs actual business operations</li>
-  <li>Achieves the upgrade from "can chat" to "can work"</li>
-</ul>
+<pre><code class="language-text">Write a 2D sprite animation script for Godot 4. Read the walk cycle sprite sheet with 8 frames, frame duration 0.12s, add idle transition logic, add flip horizontal function for left-right movement, comment all core logic for modification.</code></pre>
 
-<h3>6. Automation Function</h3>
-<ul>
-  <li>Set rules for automatic processing of repetitive tasks</li>
-  <li>Examples: daily AI news push, weekly work reports, regular data organization</li>
-  <li>Automatically saves output files to specified folders</li>
-</ul>
+<h3>Generated Standard Code Block (Godot GDScript)</h3>
 
-<h2 id="cordys-crm">Cordys CRM System Overview</h2>
+<pre><code class="language-gdscript">extends Sprite2D
 
-<p>Cordys CRM is a customer relationship management system designed for enterprise customer management. It covers the entire sales process from lead acquisition, customer management, opportunity tracking, to contracts and orders, helping enterprises achieve digital management of sales operations.</p>
+@export var sprite_sheet: Texture2D
+@export var frame_count: int = 8
+@export var frame_duration: float = 0.12
 
-<p>Beyond traditional CRM functions, Cordys CRM deeply integrates AI capabilities: AI-assisted customer creation, opportunity management, follow-up record generation, integrated BI data analysis, visual dashboards, and data-driven business decision support.</p>
+var current_frame: int = 0
+var animation_timer: float = 0.0
 
-<h2 id="skill-anatomy">Anatomy of a Skill File</h2>
+func _process(delta: float) -> void:
+    animation_timer += delta
+    if animation_timer >= frame_duration:
+        current_frame = (current_frame + 1) % frame_count
+        animation_timer = 0.0
+        update_sprite_frame()
 
-<p>Many users find Skill files intimidating at first glance, but they only need to focus on a few key parts:</p>
+func update_sprite_frame() -> void:
+    var frame_width = sprite_sheet.get_width() / frame_count
+    region_rect = Rect2(current_frame * frame_width, 0, frame_width, sprite_sheet.get_height())
 
-<h3>1. Basic Information</h3>
-<p>Defines the Skill's name, function description, and runtime environment. The <code>description</code> field is particularly important, as it tells AI what tasks to perform.</p>
+func flip_sprite(is_left: bool) -> void:
+    flip_h = is_left</code></pre>
 
-<h3>2. Role Setting</h3>
-<p>Clearly defines the AI's role (e.g., "Cordys CRM business assistant"). Determines how AI responds to questions and ensures AI provides analysis and suggestions rather than just raw data.</p>
+<h3>Sample Request Command For Unity C#</h3>
 
-<h3>3. Execution Flow</h3>
-<p>When a user sends a message, AI: (1) determines the user's intent, (2) selects the appropriate processing logic based on the business scenario, (3) generates the final result. Skills function as complete business workflows, not just simple prompts.</p>
+<pre><code class="language-text">Create C# animation script for Unity 2D SpriteRenderer, implement 6-frame jump animation, control animation playback state via boolean variables, separate idle and jump motion branches.</code></pre>
 
-<h3>4. On-Demand Loading</h3>
-<p>Enterprise-level Skills do not load all functions at once. Dynamically loads modules based on current tasks. Example: Load query engine for data queries, statistical engine for analysis. Improves response speed and resource efficiency.</p>
+<h2 id="step-3">Step 3: Motion Fine-Tuning & Real-Time Preview</h2>
 
-<h3>5. Query Rules</h3>
-<p>Defines how AI constructs CRM query commands — which fields to query, time ranges, and role-based data access. Acts as the communication rules between AI and CRM systems.</p>
-
-<h3>6. Output Specifications</h3>
-<p>AI cannot directly return raw API data. Must summarize key points first, then display core data. Provides exception alerts and processing suggestions. Ensures professional, business-appropriate responses.</p>
-
-<h3>7. Execution Capabilities</h3>
-<p>Skills can perform actual business operations: create customers, update opportunities, fill in follow-up records, approve workflows. AI is not just a question-answering tool but a business execution assistant.</p>
-
-<h3>8. Security Mechanisms</h3>
-<p>Strict security rules for enterprise data protection. Prohibits output of sensitive information like API keys. Masks sensitive information in error messages.</p>
-
-<h2 id="skill-import">Skill Import Process</h2>
-
-<h3>Method 1: Direct Import</h3>
 <ol>
-  <li>Click "Skills" → "Import Skills"</li>
-  <li>Upload the Skill installation package</li>
-  <li>You can obtain source files from GitHub repositories</li>
+  <li>Import sprite sheet and script into game engine</li>
+  <li>Adjust frame duration to modify motion smoothness: fast attack uses 0.06s per frame, slow walk uses 0.15s per frame</li>
+  <li>Add easing logic via AI secondary code generation if motion looks stiff</li>
 </ol>
 
-<h3>Method 2: Expert Function Import</h3>
+<h3>Easing Function Request Example</h3>
+
+<pre><code class="language-text">Add ease-out slowdown logic to the walk animation script, decelerate frame switching when character stops moving</code></pre>
+
+<h2 id="step-4">Step 4: Advanced Cutscene Animation Workflow</h2>
+
+<p>For story cutscenes with multi-character linkage:</p>
+
 <ol>
-  <li>Click "Expert" → "Skills"</li>
-  <li>Search for "Cordys CRM" in the search box</li>
-  <li>Click "SkillHub" → "Add"</li>
-  <li>Return to "New Task" and select the relevant Skill</li>
-  <li>Perform initialization tasks</li>
+  <li>Generate independent sprite sheets for each actor</li>
+  <li>Let AI generate timeline scheduling code to sync multiple animation layers</li>
+  <li>Add camera shake, fade-in/fade-out auxiliary animation effects via one-line prompt</li>
 </ol>
 
-<h3>Initialization Process</h3>
+<pre><code class="language-text">Add camera shake animation code triggered when character takes damage, shake intensity fades out in 0.3 seconds</code></pre>
+
+<h2 id="pitfalls">Common Pitfalls & Fix Solutions</h2>
+
 <ol>
-  <li>Complete initialization tasks in WorkBuddy</li>
-  <li>Return to Cordys CRM system → "Personal Center" → "Personal Information" → "API Keys"</li>
-  <li>Create new API Keys if needed</li>
-  <li>Copy the relevant information back to WorkBuddy</li>
-  <li>Configure role-based access through API Keys</li>
-</ol>
-
-<h2 id="demo">Practical Demonstration</h2>
-
-<h3>Web-Based Operation</h3>
-<ol>
-  <li>In WorkBuddy's core dialogue area, input commands like:</li>
-</ol>
-<pre><code class="language-text">Show me my leads and perform relevant desensitization processing</code></pre>
-<ol start="2">
-  <li>WorkBuddy automatically connects to the Cordys CRM backend</li>
-  <li>Pulls business data and quickly returns lead information</li>
-  <li>Input second command:</li>
-</ol>
-<pre><code class="language-text">Pull data, complete relevant summary, and mark customer information for follow-up</code></pre>
-
-<h3>Mobile Operation</h3>
-<ol>
-  <li>Complete assistant configuration in WorkBuddy</li>
-  <li>Demonstrate WeChat assistant integration</li>
-  <li>Scan the QR code to connect mobile devices</li>
-  <li>Input tasks on the mobile terminal</li>
-  <li>The system calls Cordys CRM backend information</li>
-  <li>Perfectly adapts to field work requirements</li>
+  <li><strong>Frame style inconsistency</strong>: Append "unified light source, fixed color palette" to generation prompt</li>
+  <li><strong>Animation jitter</strong>: Increase frame count or lower frame duration value in script</li>
+  <li><strong>Sprite display offset</strong>: Add coordinate correction code block through AI supplementary generation</li>
+  <li><strong>Large file lag</strong>: Add prompt limit "max canvas size 512*128, compressed pixel assets"</li>
 </ol>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>This guide uses Cordys CRM as an example to demonstrate how traditional business systems can quickly achieve AI transformation. The key takeaway is not the CRM case itself, but the methodology:</p>
-
-<ul>
-  <li>Use WorkBuddy as the unified AI entry point</li>
-  <li>Connect enterprise business capabilities through Business Skills</li>
-  <li>Enable AI to participate in business processes without rebuilding existing systems</li>
-</ul>
-
-<p>This model is not limited to CRM systems. It can be extended to ERP, OA, MES, and other business systems, helping enterprises accelerate AI transformation with lower costs and faster implementation. The core idea is simple: let AI not just chat, but truly participate in business operations.</p>
+<p>VibeCoding's AI game animation workflow greatly lowers the threshold for independent game developers. You do not need professional animation drawing skills or solid coding foundation. By standardizing prompt templates and one-click code generation commands, you can rapidly produce usable game motion assets and control scripts. This set of processes fits both small indie pixel games and lightweight casual game projects, greatly shortening animation development cycles.</p>
 
 <h2>常见问题</h2>
 
-<h3>Does this approach work for non-CRM systems like ERP or OA?</h3>
-<p>Yes. The three-layer architecture (WorkBuddy + Business Skills + Existing System) is system-agnostic. Cordys CRM is just the example used here. For ERP, you'd create Skills that encapsulate inventory queries, order processing, and financial report generation. For OA, Skills would handle leave approvals, document workflows, and meeting scheduling. The methodology is identical: (1) identify the business capabilities you want AI to access, (2) encapsulate them as Skills with proper role definitions, query rules, and output specifications, (3) connect via WorkBuddy. The Skill file anatomy section (8 components) is a template you can reuse for any business system.</p>
+<h3>Do I really need zero art skills to create game animations with this workflow?</h3>
+<p>Yes — for 2D pixel art and simple sprite animations. The AI image generator handles the actual drawing. Your job is writing good prompts (the article provides templates) and making judgment calls on the output. You do need an <strong>eye for consistency</strong> — checking that frames match in style, proportions, and color palette. The article's "locked color palette" and "no text, no watermark" tips are specifically designed to catch AI generation quirks before they become problems. For complex 3D animations or highly stylized art, you'll still benefit from art direction experience, but the asset generation itself requires no drawing.</p>
 
-<h3>How much technical knowledge is needed to create a Business Skill?</h3>
-<p>Basic Skills (like "query my leads" or "generate a sales report") can be created by business analysts who understand the API endpoints. The Skill file is mostly configuration — defining roles, query rules, and output formats in plain language. Complex Skills (involving multi-step workflows, conditional logic, or custom API integrations) benefit from a developer's input. The good news: once a Skill is created, it's reusable by everyone in the organization. A common pattern is: developers create the initial Skill library, and business users customize them through WorkBuddy's interface without touching code.</p>
+<h3>Which game engine should I use — Godot or Unity — for this workflow?</h3>
+<p>Both work, but <strong>Godot</strong> has a slight edge for this specific AI-assisted workflow. Godot's GDScript is simpler and more readable than C#, which means AI-generated code is more likely to work correctly on the first try. Godot is also free, open-source, and has a lighter footprint — ideal for indie and solo developers. Unity has a larger asset store and more tutorials, but the C# boilerplate can trip up AI code generation. If you're new to both, start with Godot. If you're already comfortable with Unity, the article includes C# prompt templates that work fine.</p>
 
-<h3>What about data security — can Skills access data they shouldn't?</h3>
-<p>The security mechanisms covered in the Skill anatomy section (part 8) are designed specifically for this. Skills enforce: (1) role-based data access via API Keys — a sales rep's Skill can only see their own leads, not the entire CRM; (2) output filtering — sensitive fields like API keys are automatically masked; (3) query rules — Skills can only query predefined fields and time ranges. Additionally, WorkBuddy's local file operation means business data processed through Skills stays on your machine or your company's servers, not on a third-party cloud. For regulated industries, this local-first architecture is often a compliance requirement.</p>
+<h3>How do I handle animations that need to respond to player input (like attack combos)?</h3>
+<p>Extend the script with state machine logic. The base walk cycle script in the article uses a simple frame loop. For input-driven animations, ask the AI to add: (1) an animation state enum (Idle, Walk, Attack, Jump), (2) input detection that switches states, (3) transition rules between states. Example prompt: "Add a state machine to the animation script with Idle, Walk, Attack, and Jump states. Attack triggers on key press and returns to Idle after animation completes. Jump transitions to Fall when velocity becomes negative." The AI can generate the full state machine — you just describe the behavior.</p>
 
-<h3>How long does it take to implement this for a typical business system?</h3>
-<p>A basic integration (one Skill for simple queries, like "show my leads") takes 1-2 hours end-to-end, including API key setup and initialization. A production-ready Skill library covering the main business workflows (create/read/update operations, reporting, approvals) typically takes 1-2 weeks for the initial version, with ongoing refinement based on usage. The lightweight approach means you don't need a months-long IT project — you can start with one Skill, prove value, and expand incrementally. Most enterprises begin with a read-only reporting Skill (low risk, high visibility) and expand to write operations once stakeholders are comfortable.</p>
+<h3>What's the biggest time-saver in this workflow?</h3>
+<p>The <strong>sprite sheet prompt template</strong>. Without it, you'd spend hours iterating on prompts to get consistent frames. With it, the first generation is usually usable. The second biggest is the code generation — writing animation scripts manually for Godot or Unity typically takes 30-60 minutes per character. The AI generates working code in under a minute. Combined, these two steps turn what used to be a day of work per character into about 15 minutes of prompting and 15 minutes of fine-tuning.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Interested in enterprise AI? Explore more business transformation content:</p>
+  <p>Ready to build your game? Continue your game dev journey:</p>
   <ul>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05: Master the 3-Layer Memory System</a> — understand how WorkBuddy remembers and adapts</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the full WorkBuddy feature overview</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the architecture patterns behind this approach</li>
+    <li><a href="/articles/claude-code-game-studios-game-development-easier">Make Game Development Easier with Claude Code Game Studios</a> — turn Claude Code into a full game studio with 49 agents</li>
+    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — the methodology behind AI-assisted development</li>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — the AI coding tool that powers this workflow</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">💼 AI 应用</span>
-  <span class="meta-badge">🕒 阅读约9分钟</span>
-  <span class="meta-badge">📅 2026年7月11日</span>
+  <span class="meta-badge">📚 AI 教程</span>
+  <span class="meta-badge">🕒 阅读约8分钟</span>
+  <span class="meta-badge">📅 2026年7月13日</span>
   <span class="meta-badge">🎯 中级</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>随着大语言模型和AI Agent技术的快速发展，越来越多的企业开始问：AI如何真正融入业务运营，而不只是聊天机器人？本指南以Cordys CRM为例，介绍一套实用的轻量级AI改造方案：<strong>WorkBuddy + 业务技能</strong>。</p>
+<p>VibeCoding大赛聚焦轻量级AI游戏动画制作。即使零美术基础的创作者，通过组合AI绘图模型、代码生成助手和动画编辑工具，也能完成完整的角色动画、场景动效和过场动画序列。本文梳理了完整实战流程，涵盖工具搭配、提示词编写、动作代码生成和预览调试步骤。</p>
 
-<p>这个方案让企业无需从零重建现有系统，而是逐步将业务能力封装为Skills，让AI快速高效地参与业务流程。</p>
+<h2 id="tool-stack">AI游戏动画核心工具栈</h2>
 
-<h2 id="architecture">三层架构</h2>
-
-<p>方案分为三个核心层：</p>
+<p>完整工作流依赖三个核心模块，可独立使用也可组合：</p>
 
 <ol>
-  <li><strong>顶层：WorkBuddy</strong> — 负责理解用户查询，与大语言模型交互，作为整个系统的统一AI入口。</li>
-  <li><strong>中间层：业务技能</strong> — 封装企业现有业务能力，让AI理解该调用哪些业务接口，定义执行哪些业务操作。</li>
-  <li><strong>底层：现有业务系统</strong> — 例如Cordys CRM系统。保留所有原有业务逻辑和数据。</li>
+  <li>AI图像生成模型：输出精灵表、角色关键帧帧</li>
+  <li>代码AI助手：生成Unity/Godot动画控制逻辑</li>
+  <li>轻量动画编辑器：调整帧率、运动缓动和碰撞同步</li>
 </ol>
 
-<p>这个架构意味着企业无需重建现有系统，而是逐步将业务能力封装为Skills，让AI快速参与业务。</p>
+<h2 id="step-1">第一步：用图像AI生成游戏动画精灵表</h2>
 
-<h2 id="workbuddy-functions">WorkBuddy核心功能</h2>
+<p>精灵表是2D游戏动画的基础。使用结构化提示词获取风格统一的关键帧。</p>
 
-<h3>1. 新建任务</h3>
+<h3>实战提示词模板</h3>
+
+<pre><code class="language-text">2D像素游戏角色精灵表，8帧行走循环，角色比例一致，透明背景，单行水平排列，干净像素线条，无额外装饰元素，游戏素材标准，每帧32x32像素</code></pre>
+
+<h3>操作技巧</h3>
+
 <ul>
-  <li>核心对话区，用于发布和处理任务</li>
-  <li>支持多任务同时运行</li>
+  <li>在提示词中锁定角色色板，避免帧间色调不一致</li>
+  <li>添加"无文字、无水印"消除无效元素</li>
+  <li>导出含Alpha通道的PNG格式供引擎直接导入</li>
 </ul>
 
-<h3>2. 助手功能</h3>
-<ul>
-  <li>启用远程控制能力</li>
-  <li>集成常用聊天软件：微信、QQ、飞书、钉钉</li>
-  <li>支持手机远程控制PC端WorkBuddy任务</li>
-</ul>
+<h2 id="step-2">第二步：通过VibeCoding生成动画控制代码</h2>
 
-<h3>3. 项目功能</h3>
-<ul>
-  <li>专注团队协作</li>
-  <li>两层架构：项目和任务</li>
-  <li>团队可共享素材、标准和专业内容</li>
-</ul>
+<p>获取精灵资源后，将素材信息发送给AI编程助手，生成可复用的动画脚本，兼容主流游戏引擎。</p>
 
-<h3>4. 专家模块</h3>
-<ul>
-  <li>分为专家中心和我的专家</li>
-  <li>专家中心可按行业筛选专家</li>
-  <li>我的专家允许用户创建专属专家</li>
-</ul>
+<h3>Godot引擎请求示例</h3>
 
-<h3>5. 技能功能</h3>
-<ul>
-  <li>本方案中最重要的功能</li>
-  <li>Skills持续扩展WorkBuddy的能力边界</li>
-  <li>集成了脚本、工作流和第三方API</li>
-  <li>不仅回答问题，还能执行实际业务操作</li>
-  <li>实现从"会聊天"到"会干活"的升级</li>
-</ul>
+<pre><code class="language-text">为Godot 4编写2D精灵动画脚本。读取8帧行走循环精灵表，帧持续时间0.12秒，添加空闲过渡逻辑，添加左右移动的水平翻转功能，为核心逻辑添加注释以便修改。</code></pre>
 
-<h3>6. 自动化功能</h3>
-<ul>
-  <li>设定规则自动处理重复任务</li>
-  <li>示例：每日AI新闻推送、每周工作报告、定期数据整理</li>
-  <li>自动将输出文件保存到指定文件夹</li>
-</ul>
+<h3>生成的标准代码块（Godot GDScript）</h3>
 
-<h2 id="cordys-crm">Cordys CRM系统概览</h2>
+<pre><code class="language-gdscript">extends Sprite2D
 
-<p>Cordys CRM是面向企业客户管理的客户关系管理系统，覆盖从线索获取、客户管理、商机跟踪到合同订单的完整销售流程，帮助企业实现销售运营的数字化管理。</p>
+@export var sprite_sheet: Texture2D
+@export var frame_count: int = 8
+@export var frame_duration: float = 0.12
 
-<p>除传统CRM功能外，Cordys CRM深度集成AI能力：AI辅助客户创建、商机管理、跟进记录生成、集成BI数据分析、可视化仪表盘和数据驱动的业务决策支持。</p>
+var current_frame: int = 0
+var animation_timer: float = 0.0
 
-<h2 id="skill-anatomy">Skill文件逐项拆解</h2>
+func _process(delta: float) -> void:
+    animation_timer += delta
+    if animation_timer >= frame_duration:
+        current_frame = (current_frame + 1) % frame_count
+        animation_timer = 0.0
+        update_sprite_frame()
 
-<p>很多用户第一眼看到Skill文件觉得复杂，但只需关注几个关键部分：</p>
+func update_sprite_frame() -> void:
+    var frame_width = sprite_sheet.get_width() / frame_count
+    region_rect = Rect2(current_frame * frame_width, 0, frame_width, sprite_sheet.get_height())
 
-<h3>1. 基本信息</h3>
-<p>定义Skill的名称、功能描述和运行环境。<code>description</code>字段尤其重要，它告诉AI该执行什么任务。</p>
+func flip_sprite(is_left: bool) -> void:
+    flip_h = is_left</code></pre>
 
-<h3>2. 角色设定</h3>
-<p>明确定义AI的角色（如"Cordys CRM业务助手"）。决定AI如何回答问题，确保AI提供分析和建议而非仅返回原始数据。</p>
+<h3>Unity C#请求示例</h3>
 
-<h3>3. 执行流程</h3>
-<p>用户发送消息时，AI按以下流程：(1) 判断用户意图，(2) 根据业务场景选择合适处理逻辑，(3) 生成最终结果。Skills是完整的业务工作流，而非简单提示词。</p>
+<pre><code class="language-text">为Unity 2D SpriteRenderer创建C#动画脚本，实现6帧跳跃动画，通过布尔变量控制动画播放状态，分离空闲和跳跃动作分支。</code></pre>
 
-<h3>4. 按需加载</h3>
-<p>企业级Skill不会一次性加载所有功能。根据当前任务动态加载模块。示例：数据查询加载查询引擎，统计分析加载统计引擎。提高响应速度和资源效率。</p>
+<h2 id="step-3">第三步：动作微调与实时预览</h2>
 
-<h3>5. 查询规则</h3>
-<p>定义AI如何构建CRM查询命令——查询哪些字段、时间范围、基于角色的数据访问权限。是AI与CRM系统之间的通信规则。</p>
-
-<h3>6. 输出规范</h3>
-<p>AI不能直接返回原始API数据。必须先总结要点，再展示核心数据。提供异常告警和处理建议。确保专业、符合业务场景的回复。</p>
-
-<h3>7. 执行能力</h3>
-<p>Skills可执行实际业务操作：创建客户、更新商机、填写跟进记录、审批工作流。AI不仅是问答工具，更是业务执行助手。</p>
-
-<h3>8. 安全机制</h3>
-<p>企业数据保护的严格安全规则。禁止输出API密钥等敏感信息。在错误信息中遮盖敏感内容。</p>
-
-<h2 id="skill-import">Skill导入流程</h2>
-
-<h3>方式一：直接导入</h3>
 <ol>
-  <li>点击"Skills" → "导入技能"</li>
-  <li>上传Skill安装包</li>
-  <li>可从GitHub仓库获取源文件</li>
+  <li>将精灵表和脚本导入游戏引擎</li>
+  <li>调整帧持续时间修改动作流畅度：快速攻击用0.06秒/帧，慢速行走用0.15秒/帧</li>
+  <li>动作僵硬时通过AI二次代码生成添加缓动逻辑</li>
 </ol>
 
-<h3>方式二：专家功能导入</h3>
+<h3>缓动函数请求示例</h3>
+
+<pre><code class="language-text">为行走动画脚本添加缓出减速逻辑，角色停止移动时帧切换逐渐减速</code></pre>
+
+<h2 id="step-4">第四步：高级过场动画工作流</h2>
+
+<p>多角色联动的剧情过场动画：</p>
+
 <ol>
-  <li>点击"Expert" → "Skills"</li>
-  <li>搜索框搜索"Cordys CRM"</li>
-  <li>点击"SkillHub" → "添加"</li>
-  <li>返回"新建任务"选择相关Skill</li>
-  <li>执行初始化任务</li>
+  <li>为每个角色生成独立的精灵表</li>
+  <li>让AI生成时间轴调度代码同步多个动画层</li>
+  <li>通过一行提示词添加镜头抖动、淡入淡出等辅助动画效果</li>
 </ol>
 
-<h3>初始化流程</h3>
+<pre><code class="language-text">添加角色受伤时触发的镜头抖动动画代码，抖动强度在0.3秒内衰减</code></pre>
+
+<h2 id="pitfalls">常见坑与修复方案</h2>
+
 <ol>
-  <li>在WorkBuddy中完成初始化任务</li>
-  <li>返回Cordys CRM系统 → "个人中心" → "个人信息" → "API Keys"</li>
-  <li>如需新建API Keys</li>
-  <li>将相关信息复制回WorkBuddy</li>
-  <li>通过API Keys配置基于角色的访问权限</li>
-</ol>
-
-<h2 id="demo">实操演示</h2>
-
-<h3>网页端操作</h3>
-<ol>
-  <li>在WorkBuddy核心对话区输入指令：</li>
-</ol>
-<pre><code class="language-text">展示我的线索，并进行相关脱敏处理</code></pre>
-<ol start="2">
-  <li>WorkBuddy自动连接Cordys CRM后台</li>
-  <li>拉取业务数据，快速返回线索信息</li>
-  <li>输入第二条指令：</li>
-</ol>
-<pre><code class="language-text">拉取数据，完成相关汇总，并标记客户信息进行跟进</code></pre>
-
-<h3>移动端操作</h3>
-<ol>
-  <li>在WorkBuddy中完成助手配置</li>
-  <li>演示微信助手集成</li>
-  <li>扫描二维码连接移动设备</li>
-  <li>在移动端输入任务</li>
-  <li>系统调用Cordys CRM后台信息</li>
-  <li>完美适配外勤工作需求</li>
+  <li><strong>帧风格不一致</strong>：在生成提示词后追加"统一光源、固定色板"</li>
+  <li><strong>动画抖动</strong>：增加帧数或降低脚本中帧持续时间值</li>
+  <li><strong>精灵显示偏移</strong>：通过AI补充生成坐标修正代码块</li>
+  <li><strong>大文件卡顿</strong>：添加提示词限制"画布最大512*128，压缩像素素材"</li>
 </ol>
 
 <h2 id="conclusion">总结</h2>
 
-<p>本指南以Cordys CRM为例，演示了传统业务系统如何快速实现AI改造。关键的收获不是CRM案例本身，而是方法论：</p>
-
-<ul>
-  <li>用WorkBuddy作为统一的AI入口</li>
-  <li>通过业务Skills连接企业业务能力</li>
-  <li>无需重建现有系统，让AI参与业务流程</li>
-</ul>
-
-<p>这个模式不限于CRM系统，可扩展到ERP、OA、MES等业务系统，帮助企业以更低成本、更快速度加速AI转型。核心理念很简单：让AI不只是聊天，而是真正参与业务运营。</p>
+<p>VibeCoding的AI游戏动画工作流大大降低了独立游戏开发者的门槛。你不需要专业动画绘制技能或扎实编程基础。通过标准化提示词模板和一键代码生成命令，可以快速产出可用的游戏动作素材和控制脚本。这套流程既适合小型独立像素游戏，也适合轻量休闲游戏项目，大幅缩短动画开发周期。</p>
 
 <h2>常见问题</h2>
 
-<h3>这个方案适用于ERP或OA等非CRM系统吗？</h3>
-<p>适用。三层架构（WorkBuddy + 业务技能 + 现有系统）与具体系统无关。Cordys CRM只是本文使用的示例。对ERP，创建封装库存查询、订单处理和财务报表生成的Skills。对OA，Skills处理请假审批、文档流程和会议安排。方法论完全一致：(1) 确定想让AI访问的业务能力，(2) 封装为Skills，含角色定义、查询规则和输出规范，(3) 通过WorkBuddy连接。Skill文件拆解部分（8个组件）是可复用于任何业务系统的模板。</p>
+<h3>真的零美术基础就能用这个工作流做游戏动画？</h3>
+<p>是的——对2D像素艺术和简单精灵动画来说。AI图像生成器处理实际绘画。你的工作是写好提示词（文章提供了模板）并对输出做出判断。你确实需要<strong>对一致性有眼光</strong>——检查帧之间风格、比例和色板是否匹配。文章中的"锁定色板"和"无文字无水印"技巧正是为了在AI生成问题成为麻烦之前抓住它们。对于复杂3D动画或高度风格化艺术，有美术指导经验仍然有益，但素材生成本身不需要绘画。</p>
 
-<h3>创建业务Skill需要多少技术知识？</h3>
-<p>基础Skill（如"查询我的线索"或"生成销售报告"）可由了解API端点的业务分析师创建。Skill文件主要是配置——用自然语言定义角色、查询规则和输出格式。复杂Skill（涉及多步工作流、条件逻辑或自定义API集成）需要开发人员参与。好消息：Skill一旦创建，整个组织都可复用。常见模式：开发人员创建初始Skill库，业务用户通过WorkBuddy界面自定义，无需接触代码。</p>
+<h3>该用哪个游戏引擎——Godot还是Unity？</h3>
+<p>两者都行，但<strong>Godot</strong>在这个特定AI辅助工作流中略占优势。Godot的GDScript比C#更简单、更易读，这意味着AI生成的代码更可能一次就正确运行。Godot还免费、开源、轻量——非常适合独立和单人开发者。Unity有更大的资源商店和更多教程，但C#的样板代码可能让AI代码生成出错。如果你两个都没用过，从Godot开始。如果已经熟悉Unity，文章包含了效果不错的C#提示词模板。</p>
 
-<h3>数据安全方面——Skills会访问不该访问的数据吗？</h3>
-<p>Skill拆解部分（第8项）的安全机制正是为此设计。Skills强制实施：(1) 通过API Keys实现基于角色的数据访问——销售代表的Skill只能看到自己的线索，不是整个CRM；(2) 输出过滤——API密钥等敏感字段自动遮盖；(3) 查询规则——Skills只能查询预定义字段和时间范围。此外，WorkBuddy的本地文件操作意味着通过Skills处理的业务数据留在你的电脑或公司服务器上，不在第三方云端。对受监管行业，这种本地优先架构通常是合规要求。</p>
+<h3>如何处理需要响应玩家输入的动画（如连击）？</h3>
+<p>用状态机逻辑扩展脚本。文章中的基础行走循环脚本使用简单的帧循环。对于输入驱动的动画，让AI添加：(1) 动画状态枚举（Idle、Walk、Attack、Jump），(2) 切换状态的输入检测，(3) 状态间的过渡规则。示例提示词："为动画脚本添加状态机，包含Idle、Walk、Attack、Jump状态。按键触发Attack，动画完成后返回Idle。速度为负时Jump过渡到Fall。"AI可以生成完整状态机——你只需描述行为。</p>
 
-<h3>典型业务系统实施这个方案需要多长时间？</h3>
-<p>基础集成（一个查询Skill，如"展示我的线索"）端到端需要1-2小时，包括API密钥设置和初始化。覆盖主要业务工作流（增删改查操作、报表、审批）的生产级Skill库初始版本通常需要1-2周，后续根据使用情况持续优化。轻量级方案意味着不需要数月IT项目——可以从一个Skill开始，证明价值，逐步扩展。大多数企业从只读报表Skill起步（低风险、高可见度），利益相关方认可后再扩展到写操作。</p>
+<h3>这个工作流最大的省时点是什么？</h3>
+<p><strong>精灵表提示词模板</strong>。没有它，你可能要花数小时迭代提示词才能获得一致帧。有了它，第一次生成通常就能用。第二大省时点是代码生成——手动为Godot或Unity编写动画脚本通常每个角色需要30-60分钟。AI在不到一分钟内生成可运行代码。两者结合，以前每个角色一天的工作量变成约15分钟提示词+15分钟微调。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>对企业AI感兴趣？探索更多业务转型内容：</p>
+  <p>准备好做游戏了？继续你的游戏开发之旅：</p>
   <ul>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你</a> — 了解WorkBuddy如何记忆和适应</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 完整WorkBuddy功能概览</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解本方案背后的架构模式</li>
+    <li><a href="/articles/claude-code-game-studios-game-development-easier">Claude Code Game Studios：让独立游戏开发从未如此简单</a> — 将Claude Code变成49个Agent的完整游戏工作室</li>
+    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding实战指南：AI开发完整工作流（上篇）</a> — AI辅助开发背后的方法论</li>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 驱动这个工作流的AI编码工具</li>
+  </ul>
+</div>`,
+  },
+
+  "claude-code-game-studios-game-development-easier": {
+    content: `<div class="meta-banner">
+  <span class="meta-badge">🔧 AI Tools</span>
+  <span class="meta-badge">🕒 5 min read</span>
+  <span class="meta-badge">📅 Jul 13, 2026</span>
+  <span class="meta-badge">🎯 Beginner</span>
+</div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Developing games alone has never been simpler. The <strong>Claude Code Game Studios</strong> project transforms a single Claude Code session into a complete game development studio. It features 49 intelligent agents, 73 skills, and a collaborative AI team to support your entire game creation workflow.</p>
+
+<h2 id="what-is">What is Claude Code Game Studios?</h2>
+
+<p>This open-source project turns Claude Code into a full game development studio, with:</p>
+
+<ul>
+  <li>49 AI agents</li>
+  <li>72 workflow skills</li>
+  <li>A complete coordination system that mirrors the hierarchical structure of a real studio</li>
+</ul>
+
+<h3>Core Components</h3>
+
+<table>
+  <tr><th>Category</th><th>Count</th><th>Description</th></tr>
+  <tr><td><strong>Agents</strong></td><td>49</td><td>Professional intelligent agents covering design, programming, art, audio, narrative, quality assurance, and production.</td></tr>
+  <tr><td><strong>Skills</strong></td><td>73</td><td>Slash commands for each workflow stage, including: /start, /design-system, /create-epics, /create-stories, /dev-story, /story-done</td></tr>
+  <tr><td><strong>Hooks</strong></td><td>12</td><td>Automated validation for commits, pushes, asset changes, session lifecycle, agent audit tracking, and gap detection.</td></tr>
+  <tr><td><strong>Rules</strong></td><td>11</td><td>Enforce domain coding standards when editing gameplay, engines, AI, UI, or network code.</td></tr>
+  <tr><td><strong>Templates</strong></td><td>41</td><td>Document templates for GDD, UX specifications, ADR, iteration plans, HUD design, and accessibility design.</td></tr>
+</table>
+
+<h2 id="why-it-matters">Why It Matters</h2>
+
+<p>While AI-powered game development is powerful, a single chat session lacks structure. Without a framework, you might hardcode magic numbers, skip design documentation, write messy code, or miss design reviews. No one will ask if your work aligns with the game's vision.</p>
+
+<p>Claude Code Game Studios solves this by giving your AI session a real studio structure. Instead of a generic assistant, you get 49 professional agents organized in a studio hierarchy:</p>
+
+<ul>
+  <li><strong>Directors</strong> safeguard the vision</li>
+  <li><strong>Department heads</strong> manage their domains</li>
+  <li><strong>Experts</strong> execute specific tasks</li>
+</ul>
+
+<p>Each agent has clear responsibilities, promotion paths, and quality control points. You still make every decision, but you have a team that asks the right questions, catches errors early, and keeps your project organized from brainstorming to release.</p>
+
+<h2 id="how-it-works">How It Works</h2>
+
+<h3>Intelligent Agent Coordination</h3>
+
+<p>Agents follow a structured delegation model:</p>
+
+<ol>
+  <li><strong>Vertical Delegation</strong>: Directors assign tasks to department heads, who then assign tasks to expert agents.</li>
+  <li><strong>Horizontal Negotiation</strong>: Agents at the same level can negotiate with each other, but cannot make binding cross-domain decisions.</li>
+  <li><strong>Conflict Resolution</strong>: Disagreements are escalated to a shared leader (e.g., creative-director for design, technical-director for technical issues).</li>
+  <li><strong>Change Propagation</strong>: Cross-department changes are coordinated by the producer.</li>
+  <li><strong>Domain Boundaries</strong>: Agents will not modify files outside their explicitly authorized domain.</li>
+</ol>
+
+<h3>Collaboration, Not Autonomy</h3>
+
+<p>Every agent follows a strict collaboration protocol:</p>
+
+<ol>
+  <li><strong>Ask</strong>: Agents will ask questions before proposing solutions.</li>
+  <li><strong>Present Options</strong>: Agents will present 2-4 options with pros and cons.</li>
+  <li><strong>You Decide</strong>: Final decision-making authority always remains with you.</li>
+  <li><strong>Draft</strong>: Agents will draft solutions for your review.</li>
+  <li><strong>Approval</strong>: No files will be written without your explicit approval.</li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In the past, game development required a full team of planners, programmers, artists, musicians, and testers. Now, you only need to share your game idea with Claude Code, and it will help you build your game step by step. Claude Code Game Studios makes solo game development more accessible than ever, with the structure and support of a professional studio at your fingertips.</p>
+
+<h2>常见问题</h2>
+
+<h3>How is this different from just asking Claude Code to help me make a game?</h3>
+<p>Without Game Studios, Claude Code is a general-purpose assistant — it can write code, but it won't proactively ask about your game design document, remind you to update the HUD spec when you change the UI, or flag that your new mechanic conflicts with the established art style. Game Studios adds <strong>process</strong>. The 49 agents act as built-in quality gates: the Creative Director ensures consistency with the vision, the Technical Director catches architectural issues, and the Producer tracks progress. It's the difference between having one smart assistant and having an entire studio's institutional knowledge embedded in your workflow.</p>
+
+<h3>Do I need to configure all 49 agents manually?</h3>
+<p>No. The project is designed to work out of the box. The 49 agents, 73 skills, 12 hooks, 11 rules, and 41 templates are pre-configured. You clone the repository, open it in Claude Code, and the studio structure is ready. The slash commands (/start, /design-system, /create-epics, etc.) are the primary interface — you trigger workflows, and the appropriate agents activate automatically. Over time, you can customize agents, add your own skills, and adjust rules to match your project's specific needs, but zero configuration is required to get started.</p>
+
+<h3>Is this only for 2D games or does it support 3D?</h3>
+<p>Claude Code Game Studios is engine-agnostic and dimension-agnostic. The agents, skills, and templates are designed around game development <strong>processes</strong> — design documentation, task breakdown, code review, asset management, testing — not specific technologies. Whether you're building a 2D pixel platformer in Godot, a 3D RPG in Unity, or a text-based narrative game, the studio structure works the same way. The domain-specific rules (gameplay, engines, AI, UI, network) apply regardless of your tech stack.</p>
+
+<h3>Can I use this for a team project, or is it solo-only?</h3>
+<p>It's designed for solo developers but works for small teams too. In a team setting, the agents serve as a shared process layer — everyone on the team interacts with the same studio structure, ensuring consistent documentation, code standards, and review workflows. The producer agent becomes particularly valuable for teams, tracking cross-member dependencies and flagging integration risks. The caveat: Claude Code sessions are per-user, so each team member runs their own instance. For larger teams, you'd want to supplement with a shared project management tool for the human coordination layer.</p>
+
+<div class="next-step">
+  <h3>📖 Next Steps</h3>
+  <p>Excited about AI game development? Dive deeper:</p>
+  <ul>
+    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — the hands-on animation workflow companion</li>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master the foundation this project builds on</li>
+    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the Multi-Agent architecture behind Game Studios</li>
+  </ul>
+</div>`,
+    contentZh: `<div class="meta-banner">
+  <span class="meta-badge">🔧 AI 工具</span>
+  <span class="meta-badge">🕒 阅读约5分钟</span>
+  <span class="meta-badge">📅 2026年7月13日</span>
+  <span class="meta-badge">🎯 入门</span>
+</div>
+
+<h2 id="introduction">引言</h2>
+
+<p>独自开发游戏从未如此简单。<strong>Claude Code Game Studios</strong>项目将单个Claude Code会话转变为一个完整的游戏开发工作室。它拥有49个智能Agent、73个技能和一个协作AI团队，支持你的整个游戏创作工作流。</p>
+
+<h2 id="what-is">什么是Claude Code Game Studios？</h2>
+
+<p>这个开源项目将Claude Code变成完整的游戏开发工作室：</p>
+
+<ul>
+  <li>49个AI Agent</li>
+  <li>72个工作流技能</li>
+  <li>镜像真实工作室层级结构的完整协调系统</li>
+</ul>
+
+<h3>核心组件</h3>
+
+<table>
+  <tr><th>类别</th><th>数量</th><th>描述</th></tr>
+  <tr><td><strong>Agent</strong></td><td>49</td><td>覆盖设计、编程、美术、音频、叙事、质量保证和制作的专业智能Agent。</td></tr>
+  <tr><td><strong>技能</strong></td><td>73</td><td>每个工作流阶段的斜杠命令，包括：/start、/design-system、/create-epics、/create-stories、/dev-story、/story-done</td></tr>
+  <tr><td><strong>钩子</strong></td><td>12</td><td>提交、推送、资源变更、会话生命周期、Agent审计追踪和缺口检测的自动验证。</td></tr>
+  <tr><td><strong>规则</strong></td><td>11</td><td>编辑玩法、引擎、AI、UI或网络代码时强制执行领域编码标准。</td></tr>
+  <tr><td><strong>模板</strong></td><td>41</td><td>GDD、UX规范、ADR、迭代计划、HUD设计和无障碍设计的文档模板。</td></tr>
+</table>
+
+<h2 id="why-it-matters">为什么重要</h2>
+
+<p>虽然AI驱动的游戏开发很强大，但单个聊天会话缺乏结构。没有框架，你可能硬编码魔法数字、跳过设计文档、写出混乱代码或遗漏设计评审。没有人会问你的工作是否符合游戏愿景。</p>
+
+<p>Claude Code Game Studios通过为你的AI会话赋予真实工作室结构来解决这个问题。你得到的不是一个通用助手，而是按工作室层级组织的49个专业Agent：</p>
+
+<ul>
+  <li><strong>总监</strong>守护愿景</li>
+  <li><strong>部门主管</strong>管理各自领域</li>
+  <li><strong>专家</strong>执行具体任务</li>
+</ul>
+
+<p>每个Agent有清晰的职责、晋升路径和质量控制点。你仍然做每个决策，但你有一个团队会问正确的问题、及早发现错误、从头脑风暴到发布始终保持项目有序。</p>
+
+<h2 id="how-it-works">工作原理</h2>
+
+<h3>智能Agent协调</h3>
+
+<p>Agent遵循结构化的委托模型：</p>
+
+<ol>
+  <li><strong>垂直委托</strong>：总监分配任务给部门主管，部门主管再分配给专家Agent。</li>
+  <li><strong>水平协商</strong>：同级Agent可互相协商，但不能做出有约束力的跨领域决策。</li>
+  <li><strong>冲突解决</strong>：分歧升级到共同领导（设计问题由创意总监，技术问题由技术总监）。</li>
+  <li><strong>变更传播</strong>：跨部门变更由制作人协调。</li>
+  <li><strong>领域边界</strong>：Agent不会修改其明确授权范围之外的文件。</li>
+</ol>
+
+<h3>协作而非自主</h3>
+
+<p>每个Agent遵循严格的协作协议：</p>
+
+<ol>
+  <li><strong>提问</strong>：Agent在提出方案前会先提问。</li>
+  <li><strong>提供选项</strong>：Agent会提供2-4个选项及优缺点。</li>
+  <li><strong>你决定</strong>：最终决策权始终在你手中。</li>
+  <li><strong>起草</strong>：Agent起草方案供你审阅。</li>
+  <li><strong>批准</strong>：未经你明确批准，不会写入任何文件。</li>
+</ol>
+
+<h2 id="conclusion">总结</h2>
+
+<p>过去，游戏开发需要策划、程序员、美术、音乐和测试组成的完整团队。现在，你只需将游戏想法告诉Claude Code，它会一步步帮你构建游戏。Claude Code Game Studios让单人游戏开发比以往任何时候都更容易，专业工作室的结构和支持触手可及。</p>
+
+<h2>常见问题</h2>
+
+<h3>这和直接让Claude Code帮我做游戏有什么不同？</h3>
+<p>没有Game Studios，Claude Code是通用助手——它能写代码，但不会主动询问你的游戏设计文档、在你修改UI时提醒更新HUD规范、或标记你的新机制与既定美术风格冲突。Game Studios添加了<strong>流程</strong>。49个Agent充当内置质量关卡：创意总监确保与愿景一致，技术总监捕捉架构问题，制作人追踪进度。这就像拥有一个聪明助手和拥有整个工作室的制度化知识嵌入工作流之间的区别。</p>
+
+<h3>需要手动配置全部49个Agent吗？</h3>
+<p>不需要。项目设计为开箱即用。49个Agent、73个技能、12个钩子、11条规则和41个模板已预配置。克隆仓库，在Claude Code中打开，工作室结构就绪。斜杠命令（/start、/design-system、/create-epics等）是主要接口——你触发工作流，相应的Agent自动激活。随时间推移，你可以自定义Agent、添加自己的技能、调整规则以匹配项目特定需求，但上手零配置。</p>
+
+<h3>只支持2D游戏还是也支持3D？</h3>
+<p>Claude Code Game Studios与引擎无关，与维度无关。Agent、技能和模板围绕游戏开发<strong>流程</strong>设计——设计文档、任务拆解、代码审查、资产管理、测试——而非特定技术。无论你在Godot做2D像素平台游戏、在Unity做3D RPG，还是做文字叙事游戏，工作室结构都同样适用。领域特定规则（玩法、引擎、AI、UI、网络）无论技术栈如何都适用。</p>
+
+<h3>能给团队项目用吗，还是只能单人？</h3>
+<p>为单人开发者设计，但也适用于小团队。在团队环境中，Agent充当共享流程层——团队中每个人都与同一工作室结构交互，确保一致的文档、代码标准和评审流程。制作人Agent对团队特别有价值，追踪跨成员依赖和标记集成风险。注意事项：Claude Code会话是每用户独立的，所以每个团队成员运行自己的实例。对于更大团队，需要补充共享项目管理工具来管理人协调层。</p>
+
+<div class="next-step">
+  <h3>📖 下一步</h3>
+  <p>对AI游戏开发感兴趣？深入探索：</p>
+  <ul>
+    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding大赛指南：用AI工具高效制作游戏动画</a> — 实战动画工作流配套篇</li>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 掌握本项目构建的基础</li>
+    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解Game Studios背后的多Agent架构</li>
   </ul>
 </div>`,
   },

@@ -2584,4 +2584,29 @@ export const articles: Article[] = [
     date: "2026-07-11",
   },
 
+  {
+    slug: "vibecoding-contest-guide-game-animations-ai-tools",
+    title: "VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools",
+    titleZh: "VibeCoding大赛指南：用AI工具高效制作游戏动画",
+    description: "A complete AI game animation workflow — from sprite sheet generation with structured prompts, to animation control code for Godot (GDScript) and Unity (C#), motion fine-tuning, easing functions, and advanced cutscene sequencing — zero art or coding foundation required.",
+    descriptionZh: "AI游戏动画完整工作流——从精灵表生成的结构化提示词，到Godot（GDScript）和Unity（C#）的动画控制代码，动作微调、缓动函数和高级过场动画编排——零美术和编程基础也能上手。",
+    category: "AI Tutorials",
+    tags: ["VibeCoding", "Game Development", "Animation", "Godot", "Unity", "Sprite Sheet", "Tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Claude Code", "Godot", "Unity"],
+    date: "2026-07-13",
+  },
+  {
+    slug: "claude-code-game-studios-game-development-easier",
+    title: "Make Game Development Easier with Claude Code Game Studios",
+    titleZh: "Claude Code Game Studios：让独立游戏开发从未如此简单",
+    description: "An introduction to Claude Code Game Studios — an open-source project that transforms a single Claude Code session into a complete game studio with 49 AI agents, 73 skills, 12 hooks, and a hierarchical studio structure (Directors → Department Heads → Experts) for solo game development.",
+    descriptionZh: "Claude Code Game Studios开源项目介绍——将单个Claude Code会话转变为完整游戏工作室，含49个AI Agent、73个技能、12个钩子和层级化工作室架构（总监→部门主管→专家），实现单人全流程游戏开发。",
+    category: "AI Tools",
+    tags: ["Claude Code", "Game Development", "Open Source", "AI Agent", "Studio", "Indie Dev"],
+    difficulty: "beginner",
+    toolsMentioned: ["Claude Code"],
+    date: "2026-07-13",
+  },
+
 ];
