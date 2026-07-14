@@ -2609,4 +2609,29 @@ export const articles: Article[] = [
     date: "2026-07-13",
   },
 
+  {
+    slug: "gpt-5-6-full-launch-sol-terra-luna-family",
+    title: "GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna",
+    titleZh: "GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测",
+    description: "Hands-on testing of OpenAI's GPT-5.6 model family — Sol building a 3D FPS game with Three.js in 1.5 hours, Terra generating a 3D voxel rocket in 35 minutes, and Luna producing a 47-page annual report from 26K records — with model selection guidance for different task types.",
+    descriptionZh: "OpenAI GPT-5.6三款模型完整实测——Sol用Three.js 1.5小时构建3D FPS游戏、Terra 35分钟生成3D体素火箭、Luna从2.6万条记录生成47页年报——含不同任务类型的模型选择指南。",
+    category: "AI News",
+    tags: ["GPT-5.6", "OpenAI", "Sol", "Terra", "Luna", "Model Comparison", "Benchmark"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT", "Codex Agent"],
+    date: "2026-07-14",
+  },
+  {
+    slug: "gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era",
+    title: "GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex, Ending the Pure Chat Era",
+    titleZh: "GPT-5.6全面发布：OpenAI合并ChatGPT与Codex，纯聊天时代终结",
+    description: "OpenAI's landmark GPT-5.6 launch merges ChatGPT and Codex into 'ChatGPT Work', featuring Sol (flagship), Terra (balanced), and Luna (lightweight) — with coding benchmarks beating Claude Fable 5, cybersecurity testing, and UX improvements for 1 billion weekly users.",
+    descriptionZh: "OpenAI里程碑式发布：ChatGPT与Codex合并为'ChatGPT Work'，推出Sol（旗舰）、Terra（均衡）、Luna（轻量）三款模型——编码基准超越Claude Fable 5、网络安全实测、面向10亿周活用户的UX升级。",
+    category: "AI News",
+    tags: ["GPT-5.6", "OpenAI", "ChatGPT", "Codex", "Sol", "AI News", "Merger"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT", "Codex Agent", "Claude Fable 5"],
+    date: "2026-07-14",
+  },
+
 ];

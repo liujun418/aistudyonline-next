@@ -1,5 +1,5 @@
 """
-Publish July 13, 2026 — 2 articles, no new tools.
+Publish July 14, 2026 — 2 articles, no new tools.
 """
 import os
 
@@ -11,28 +11,28 @@ with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "vibecoding-contest-guide-game-animations-ai-tools",
-    title: "VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools",
-    titleZh: "VibeCoding大赛指南：用AI工具高效制作游戏动画",
-    description: "A complete AI game animation workflow — from sprite sheet generation with structured prompts, to animation control code for Godot (GDScript) and Unity (C#), motion fine-tuning, easing functions, and advanced cutscene sequencing — zero art or coding foundation required.",
-    descriptionZh: "AI游戏动画完整工作流——从精灵表生成的结构化提示词，到Godot（GDScript）和Unity（C#）的动画控制代码，动作微调、缓动函数和高级过场动画编排——零美术和编程基础也能上手。",
-    category: "AI Tutorials",
-    tags: ["VibeCoding", "Game Development", "Animation", "Godot", "Unity", "Sprite Sheet", "Tutorial"],
-    difficulty: "intermediate",
-    toolsMentioned: ["Claude Code", "Godot", "Unity"],
-    date: "2026-07-13",
+    slug: "gpt-5-6-full-launch-sol-terra-luna-family",
+    title: "GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna",
+    titleZh: "GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测",
+    description: "Hands-on testing of OpenAI's GPT-5.6 model family — Sol building a 3D FPS game with Three.js in 1.5 hours, Terra generating a 3D voxel rocket in 35 minutes, and Luna producing a 47-page annual report from 26K records — with model selection guidance for different task types.",
+    descriptionZh: "OpenAI GPT-5.6三款模型完整实测——Sol用Three.js 1.5小时构建3D FPS游戏、Terra 35分钟生成3D体素火箭、Luna从2.6万条记录生成47页年报——含不同任务类型的模型选择指南。",
+    category: "AI News",
+    tags: ["GPT-5.6", "OpenAI", "Sol", "Terra", "Luna", "Model Comparison", "Benchmark"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT", "Codex Agent"],
+    date: "2026-07-14",
   },
   {
-    slug: "claude-code-game-studios-game-development-easier",
-    title: "Make Game Development Easier with Claude Code Game Studios",
-    titleZh: "Claude Code Game Studios：让独立游戏开发从未如此简单",
-    description: "An introduction to Claude Code Game Studios — an open-source project that transforms a single Claude Code session into a complete game studio with 49 AI agents, 73 skills, 12 hooks, and a hierarchical studio structure (Directors → Department Heads → Experts) for solo game development.",
-    descriptionZh: "Claude Code Game Studios开源项目介绍——将单个Claude Code会话转变为完整游戏工作室，含49个AI Agent、73个技能、12个钩子和层级化工作室架构（总监→部门主管→专家），实现单人全流程游戏开发。",
-    category: "AI Tools",
-    tags: ["Claude Code", "Game Development", "Open Source", "AI Agent", "Studio", "Indie Dev"],
+    slug: "gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era",
+    title: "GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex, Ending the Pure Chat Era",
+    titleZh: "GPT-5.6全面发布：OpenAI合并ChatGPT与Codex，纯聊天时代终结",
+    description: "OpenAI's landmark GPT-5.6 launch merges ChatGPT and Codex into 'ChatGPT Work', featuring Sol (flagship), Terra (balanced), and Luna (lightweight) — with coding benchmarks beating Claude Fable 5, cybersecurity testing, and UX improvements for 1 billion weekly users.",
+    descriptionZh: "OpenAI里程碑式发布：ChatGPT与Codex合并为'ChatGPT Work'，推出Sol（旗舰）、Terra（均衡）、Luna（轻量）三款模型——编码基准超越Claude Fable 5、网络安全实测、面向10亿周活用户的UX升级。",
+    category: "AI News",
+    tags: ["GPT-5.6", "OpenAI", "ChatGPT", "Codex", "Sol", "AI News", "Merger"],
     difficulty: "beginner",
-    toolsMentioned: ["Claude Code"],
-    date: "2026-07-13",
+    toolsMentioned: ["ChatGPT", "Codex Agent", "Claude Fable 5"],
+    date: "2026-07-14",
   },
 
 """
@@ -50,474 +50,348 @@ with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "vibecoding-contest-guide-game-animations-ai-tools": {
+  "gpt-5-6-full-launch-sol-terra-luna-family": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI Tutorials</span>
-  <span class="meta-badge">🕒 8 min read</span>
-  <span class="meta-badge">📅 Jul 13, 2026</span>
-  <span class="meta-badge">🎯 Intermediate</span>
-</div>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>VibeCoding competition focuses on lightweight AI game animation production. Even creators with zero art foundation can finish complete character animations, scene motion effects and cutscene sequences by combining AI drawing models, code generation assistants and animation editing tools. This article sorts out the full practical workflow, covering tool matching, prompt writing, motion code generation and preview debugging steps.</p>
-
-<h2 id="tool-stack">Core Tool Stack For AI Game Animation</h2>
-
-<p>The complete workflow relies on three core modules, which can be used independently or combined:</p>
-
-<ol>
-  <li>AI image generation model: Output sprite sheets, character keyframe frames</li>
-  <li>Code AI assistant: Generate animation control logic for Unity / Godot</li>
-  <li>Lightweight animation editor: Adjust frame rate, motion easing and collision sync</li>
-</ol>
-
-<h2 id="step-1">Step 1: Generate Game Animation Sprite Sheets With Image AI</h2>
-
-<p>Sprite sheets are the foundation of 2D game animations. Use structured prompts to get unified style keyframes.</p>
-
-<h3>Practical Prompt Template</h3>
-
-<pre><code class="language-text">2D pixel game character sprite sheet, 8 frames walk cycle, consistent character proportion, transparent background, single horizontal row layout, clean pixel lines, no extra decorative elements, game asset standard, 32x32 pixel per frame</code></pre>
-
-<h3>Operation Tips</h3>
-
-<ul>
-  <li>Lock character color palette in prompt to avoid inconsistent tones between frames</li>
-  <li>Add "no text, no watermark" to eliminate invalid elements</li>
-  <li>Export output as PNG with alpha channel for engine direct import</li>
-</ul>
-
-<h2 id="step-2">Step 2: Generate Animation Control Code Via VibeCoding</h2>
-
-<p>After obtaining sprite resources, send asset information to AI coding assistant to generate reusable animation scripts, compatible with mainstream game engines.</p>
-
-<h3>Sample Request Command For Godot Engine</h3>
-
-<pre><code class="language-text">Write a 2D sprite animation script for Godot 4. Read the walk cycle sprite sheet with 8 frames, frame duration 0.12s, add idle transition logic, add flip horizontal function for left-right movement, comment all core logic for modification.</code></pre>
-
-<h3>Generated Standard Code Block (Godot GDScript)</h3>
-
-<pre><code class="language-gdscript">extends Sprite2D
-
-@export var sprite_sheet: Texture2D
-@export var frame_count: int = 8
-@export var frame_duration: float = 0.12
-
-var current_frame: int = 0
-var animation_timer: float = 0.0
-
-func _process(delta: float) -> void:
-    animation_timer += delta
-    if animation_timer >= frame_duration:
-        current_frame = (current_frame + 1) % frame_count
-        animation_timer = 0.0
-        update_sprite_frame()
-
-func update_sprite_frame() -> void:
-    var frame_width = sprite_sheet.get_width() / frame_count
-    region_rect = Rect2(current_frame * frame_width, 0, frame_width, sprite_sheet.get_height())
-
-func flip_sprite(is_left: bool) -> void:
-    flip_h = is_left</code></pre>
-
-<h3>Sample Request Command For Unity C#</h3>
-
-<pre><code class="language-text">Create C# animation script for Unity 2D SpriteRenderer, implement 6-frame jump animation, control animation playback state via boolean variables, separate idle and jump motion branches.</code></pre>
-
-<h2 id="step-3">Step 3: Motion Fine-Tuning & Real-Time Preview</h2>
-
-<ol>
-  <li>Import sprite sheet and script into game engine</li>
-  <li>Adjust frame duration to modify motion smoothness: fast attack uses 0.06s per frame, slow walk uses 0.15s per frame</li>
-  <li>Add easing logic via AI secondary code generation if motion looks stiff</li>
-</ol>
-
-<h3>Easing Function Request Example</h3>
-
-<pre><code class="language-text">Add ease-out slowdown logic to the walk animation script, decelerate frame switching when character stops moving</code></pre>
-
-<h2 id="step-4">Step 4: Advanced Cutscene Animation Workflow</h2>
-
-<p>For story cutscenes with multi-character linkage:</p>
-
-<ol>
-  <li>Generate independent sprite sheets for each actor</li>
-  <li>Let AI generate timeline scheduling code to sync multiple animation layers</li>
-  <li>Add camera shake, fade-in/fade-out auxiliary animation effects via one-line prompt</li>
-</ol>
-
-<pre><code class="language-text">Add camera shake animation code triggered when character takes damage, shake intensity fades out in 0.3 seconds</code></pre>
-
-<h2 id="pitfalls">Common Pitfalls & Fix Solutions</h2>
-
-<ol>
-  <li><strong>Frame style inconsistency</strong>: Append "unified light source, fixed color palette" to generation prompt</li>
-  <li><strong>Animation jitter</strong>: Increase frame count or lower frame duration value in script</li>
-  <li><strong>Sprite display offset</strong>: Add coordinate correction code block through AI supplementary generation</li>
-  <li><strong>Large file lag</strong>: Add prompt limit "max canvas size 512*128, compressed pixel assets"</li>
-</ol>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>VibeCoding's AI game animation workflow greatly lowers the threshold for independent game developers. You do not need professional animation drawing skills or solid coding foundation. By standardizing prompt templates and one-click code generation commands, you can rapidly produce usable game motion assets and control scripts. This set of processes fits both small indie pixel games and lightweight casual game projects, greatly shortening animation development cycles.</p>
-
-<h2>常见问题</h2>
-
-<h3>Do I really need zero art skills to create game animations with this workflow?</h3>
-<p>Yes — for 2D pixel art and simple sprite animations. The AI image generator handles the actual drawing. Your job is writing good prompts (the article provides templates) and making judgment calls on the output. You do need an <strong>eye for consistency</strong> — checking that frames match in style, proportions, and color palette. The article's "locked color palette" and "no text, no watermark" tips are specifically designed to catch AI generation quirks before they become problems. For complex 3D animations or highly stylized art, you'll still benefit from art direction experience, but the asset generation itself requires no drawing.</p>
-
-<h3>Which game engine should I use — Godot or Unity — for this workflow?</h3>
-<p>Both work, but <strong>Godot</strong> has a slight edge for this specific AI-assisted workflow. Godot's GDScript is simpler and more readable than C#, which means AI-generated code is more likely to work correctly on the first try. Godot is also free, open-source, and has a lighter footprint — ideal for indie and solo developers. Unity has a larger asset store and more tutorials, but the C# boilerplate can trip up AI code generation. If you're new to both, start with Godot. If you're already comfortable with Unity, the article includes C# prompt templates that work fine.</p>
-
-<h3>How do I handle animations that need to respond to player input (like attack combos)?</h3>
-<p>Extend the script with state machine logic. The base walk cycle script in the article uses a simple frame loop. For input-driven animations, ask the AI to add: (1) an animation state enum (Idle, Walk, Attack, Jump), (2) input detection that switches states, (3) transition rules between states. Example prompt: "Add a state machine to the animation script with Idle, Walk, Attack, and Jump states. Attack triggers on key press and returns to Idle after animation completes. Jump transitions to Fall when velocity becomes negative." The AI can generate the full state machine — you just describe the behavior.</p>
-
-<h3>What's the biggest time-saver in this workflow?</h3>
-<p>The <strong>sprite sheet prompt template</strong>. Without it, you'd spend hours iterating on prompts to get consistent frames. With it, the first generation is usually usable. The second biggest is the code generation — writing animation scripts manually for Godot or Unity typically takes 30-60 minutes per character. The AI generates working code in under a minute. Combined, these two steps turn what used to be a day of work per character into about 15 minutes of prompting and 15 minutes of fine-tuning.</p>
-
-<div class="next-step">
-  <h3>📖 Next Steps</h3>
-  <p>Ready to build your game? Continue your game dev journey:</p>
-  <ul>
-    <li><a href="/articles/claude-code-game-studios-game-development-easier">Make Game Development Easier with Claude Code Game Studios</a> — turn Claude Code into a full game studio with 49 agents</li>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — the methodology behind AI-assisted development</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — the AI coding tool that powers this workflow</li>
-  </ul>
-</div>`,
-    contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI 教程</span>
-  <span class="meta-badge">🕒 阅读约8分钟</span>
-  <span class="meta-badge">📅 2026年7月13日</span>
-  <span class="meta-badge">🎯 中级</span>
-</div>
-
-<h2 id="introduction">引言</h2>
-
-<p>VibeCoding大赛聚焦轻量级AI游戏动画制作。即使零美术基础的创作者，通过组合AI绘图模型、代码生成助手和动画编辑工具，也能完成完整的角色动画、场景动效和过场动画序列。本文梳理了完整实战流程，涵盖工具搭配、提示词编写、动作代码生成和预览调试步骤。</p>
-
-<h2 id="tool-stack">AI游戏动画核心工具栈</h2>
-
-<p>完整工作流依赖三个核心模块，可独立使用也可组合：</p>
-
-<ol>
-  <li>AI图像生成模型：输出精灵表、角色关键帧帧</li>
-  <li>代码AI助手：生成Unity/Godot动画控制逻辑</li>
-  <li>轻量动画编辑器：调整帧率、运动缓动和碰撞同步</li>
-</ol>
-
-<h2 id="step-1">第一步：用图像AI生成游戏动画精灵表</h2>
-
-<p>精灵表是2D游戏动画的基础。使用结构化提示词获取风格统一的关键帧。</p>
-
-<h3>实战提示词模板</h3>
-
-<pre><code class="language-text">2D像素游戏角色精灵表，8帧行走循环，角色比例一致，透明背景，单行水平排列，干净像素线条，无额外装饰元素，游戏素材标准，每帧32x32像素</code></pre>
-
-<h3>操作技巧</h3>
-
-<ul>
-  <li>在提示词中锁定角色色板，避免帧间色调不一致</li>
-  <li>添加"无文字、无水印"消除无效元素</li>
-  <li>导出含Alpha通道的PNG格式供引擎直接导入</li>
-</ul>
-
-<h2 id="step-2">第二步：通过VibeCoding生成动画控制代码</h2>
-
-<p>获取精灵资源后，将素材信息发送给AI编程助手，生成可复用的动画脚本，兼容主流游戏引擎。</p>
-
-<h3>Godot引擎请求示例</h3>
-
-<pre><code class="language-text">为Godot 4编写2D精灵动画脚本。读取8帧行走循环精灵表，帧持续时间0.12秒，添加空闲过渡逻辑，添加左右移动的水平翻转功能，为核心逻辑添加注释以便修改。</code></pre>
-
-<h3>生成的标准代码块（Godot GDScript）</h3>
-
-<pre><code class="language-gdscript">extends Sprite2D
-
-@export var sprite_sheet: Texture2D
-@export var frame_count: int = 8
-@export var frame_duration: float = 0.12
-
-var current_frame: int = 0
-var animation_timer: float = 0.0
-
-func _process(delta: float) -> void:
-    animation_timer += delta
-    if animation_timer >= frame_duration:
-        current_frame = (current_frame + 1) % frame_count
-        animation_timer = 0.0
-        update_sprite_frame()
-
-func update_sprite_frame() -> void:
-    var frame_width = sprite_sheet.get_width() / frame_count
-    region_rect = Rect2(current_frame * frame_width, 0, frame_width, sprite_sheet.get_height())
-
-func flip_sprite(is_left: bool) -> void:
-    flip_h = is_left</code></pre>
-
-<h3>Unity C#请求示例</h3>
-
-<pre><code class="language-text">为Unity 2D SpriteRenderer创建C#动画脚本，实现6帧跳跃动画，通过布尔变量控制动画播放状态，分离空闲和跳跃动作分支。</code></pre>
-
-<h2 id="step-3">第三步：动作微调与实时预览</h2>
-
-<ol>
-  <li>将精灵表和脚本导入游戏引擎</li>
-  <li>调整帧持续时间修改动作流畅度：快速攻击用0.06秒/帧，慢速行走用0.15秒/帧</li>
-  <li>动作僵硬时通过AI二次代码生成添加缓动逻辑</li>
-</ol>
-
-<h3>缓动函数请求示例</h3>
-
-<pre><code class="language-text">为行走动画脚本添加缓出减速逻辑，角色停止移动时帧切换逐渐减速</code></pre>
-
-<h2 id="step-4">第四步：高级过场动画工作流</h2>
-
-<p>多角色联动的剧情过场动画：</p>
-
-<ol>
-  <li>为每个角色生成独立的精灵表</li>
-  <li>让AI生成时间轴调度代码同步多个动画层</li>
-  <li>通过一行提示词添加镜头抖动、淡入淡出等辅助动画效果</li>
-</ol>
-
-<pre><code class="language-text">添加角色受伤时触发的镜头抖动动画代码，抖动强度在0.3秒内衰减</code></pre>
-
-<h2 id="pitfalls">常见坑与修复方案</h2>
-
-<ol>
-  <li><strong>帧风格不一致</strong>：在生成提示词后追加"统一光源、固定色板"</li>
-  <li><strong>动画抖动</strong>：增加帧数或降低脚本中帧持续时间值</li>
-  <li><strong>精灵显示偏移</strong>：通过AI补充生成坐标修正代码块</li>
-  <li><strong>大文件卡顿</strong>：添加提示词限制"画布最大512*128，压缩像素素材"</li>
-</ol>
-
-<h2 id="conclusion">总结</h2>
-
-<p>VibeCoding的AI游戏动画工作流大大降低了独立游戏开发者的门槛。你不需要专业动画绘制技能或扎实编程基础。通过标准化提示词模板和一键代码生成命令，可以快速产出可用的游戏动作素材和控制脚本。这套流程既适合小型独立像素游戏，也适合轻量休闲游戏项目，大幅缩短动画开发周期。</p>
-
-<h2>常见问题</h2>
-
-<h3>真的零美术基础就能用这个工作流做游戏动画？</h3>
-<p>是的——对2D像素艺术和简单精灵动画来说。AI图像生成器处理实际绘画。你的工作是写好提示词（文章提供了模板）并对输出做出判断。你确实需要<strong>对一致性有眼光</strong>——检查帧之间风格、比例和色板是否匹配。文章中的"锁定色板"和"无文字无水印"技巧正是为了在AI生成问题成为麻烦之前抓住它们。对于复杂3D动画或高度风格化艺术，有美术指导经验仍然有益，但素材生成本身不需要绘画。</p>
-
-<h3>该用哪个游戏引擎——Godot还是Unity？</h3>
-<p>两者都行，但<strong>Godot</strong>在这个特定AI辅助工作流中略占优势。Godot的GDScript比C#更简单、更易读，这意味着AI生成的代码更可能一次就正确运行。Godot还免费、开源、轻量——非常适合独立和单人开发者。Unity有更大的资源商店和更多教程，但C#的样板代码可能让AI代码生成出错。如果你两个都没用过，从Godot开始。如果已经熟悉Unity，文章包含了效果不错的C#提示词模板。</p>
-
-<h3>如何处理需要响应玩家输入的动画（如连击）？</h3>
-<p>用状态机逻辑扩展脚本。文章中的基础行走循环脚本使用简单的帧循环。对于输入驱动的动画，让AI添加：(1) 动画状态枚举（Idle、Walk、Attack、Jump），(2) 切换状态的输入检测，(3) 状态间的过渡规则。示例提示词："为动画脚本添加状态机，包含Idle、Walk、Attack、Jump状态。按键触发Attack，动画完成后返回Idle。速度为负时Jump过渡到Fall。"AI可以生成完整状态机——你只需描述行为。</p>
-
-<h3>这个工作流最大的省时点是什么？</h3>
-<p><strong>精灵表提示词模板</strong>。没有它，你可能要花数小时迭代提示词才能获得一致帧。有了它，第一次生成通常就能用。第二大省时点是代码生成——手动为Godot或Unity编写动画脚本通常每个角色需要30-60分钟。AI在不到一分钟内生成可运行代码。两者结合，以前每个角色一天的工作量变成约15分钟提示词+15分钟微调。</p>
-
-<div class="next-step">
-  <h3>📖 下一步</h3>
-  <p>准备好做游戏了？继续你的游戏开发之旅：</p>
-  <ul>
-    <li><a href="/articles/claude-code-game-studios-game-development-easier">Claude Code Game Studios：让独立游戏开发从未如此简单</a> — 将Claude Code变成49个Agent的完整游戏工作室</li>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding实战指南：AI开发完整工作流（上篇）</a> — AI辅助开发背后的方法论</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 驱动这个工作流的AI编码工具</li>
-  </ul>
-</div>`,
-  },
-
-  "claude-code-game-studios-game-development-easier": {
-    content: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI Tools</span>
-  <span class="meta-badge">🕒 5 min read</span>
-  <span class="meta-badge">📅 Jul 13, 2026</span>
+  <span class="meta-badge">📰 AI News</span>
+  <span class="meta-badge">🕒 6 min read</span>
+  <span class="meta-badge">📅 Jul 14, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Developing games alone has never been simpler. The <strong>Claude Code Game Studios</strong> project transforms a single Claude Code session into a complete game development studio. It features 49 intelligent agents, 73 skills, and a collaborative AI team to support your entire game creation workflow.</p>
+<p>OpenAI has officially released the full GPT-5.6 family: Sol, Terra, and Luna, putting the entire model lineup directly on the desktop. Users can now choose models based on task complexity, cost, and speed, similar to selecting coffee cup sizes. Sol is designed for heavy-duty tasks, Terra for balanced daily work, and Luna for lightweight, cost-effective operations.</p>
 
-<h2 id="what-is">What is Claude Code Game Studios?</h2>
+<h2 id="sol">Sol: The Flagship Model</h2>
 
-<p>This open-source project turns Claude Code into a full game development studio, with:</p>
+<p>Sol is the most powerful model in the lineup, prompting competitors to activate emergency response measures. Anthropic even delayed Fable 5's experience by a week and reset all user quotas, highlighting the intense competition in the AI space.</p>
 
+<h3>Practical Testing: Building a 3D FPS Game</h3>
+
+<p>We tested Sol's capabilities by creating a fully functional first-person shooter game using Three.js. The task required complete game mechanics, including movement, ammunition, health, enemy AI, and real GLB 3D models for assets.</p>
+
+<h4>Prompt Example</h4>
+
+<pre><code class="language-text">Use Next.js + TypeScript + react-three-fiber + Three.js to create a playable first-person FPS game demo. The game should feature complete movement, ammunition, health, enemy AI, and real GLB 3D models for core assets.</code></pre>
+
+<h4>Results</h4>
+
+<p>Sol successfully generated the entire game in 1.5 hours, including:</p>
 <ul>
-  <li>49 AI agents</li>
-  <li>72 workflow skills</li>
-  <li>A complete coordination system that mirrors the hierarchical structure of a real studio</li>
+  <li>Three game concept designs</li>
+  <li>Free 3D asset sourcing from open-source communities</li>
+  <li>Code generation for missing assets</li>
+  <li>Full integration of all components</li>
 </ul>
 
-<h3>Core Components</h3>
+<p>The game features smooth movement, shooting mechanics, enemy AI, and terminal destruction objectives, with only minor bugs that do not affect gameplay.</p>
 
-<table>
-  <tr><th>Category</th><th>Count</th><th>Description</th></tr>
-  <tr><td><strong>Agents</strong></td><td>49</td><td>Professional intelligent agents covering design, programming, art, audio, narrative, quality assurance, and production.</td></tr>
-  <tr><td><strong>Skills</strong></td><td>73</td><td>Slash commands for each workflow stage, including: /start, /design-system, /create-epics, /create-stories, /dev-story, /story-done</td></tr>
-  <tr><td><strong>Hooks</strong></td><td>12</td><td>Automated validation for commits, pushes, asset changes, session lifecycle, agent audit tracking, and gap detection.</td></tr>
-  <tr><td><strong>Rules</strong></td><td>11</td><td>Enforce domain coding standards when editing gameplay, engines, AI, UI, or network code.</td></tr>
-  <tr><td><strong>Templates</strong></td><td>41</td><td>Document templates for GDD, UX specifications, ADR, iteration plans, HUD design, and accessibility design.</td></tr>
-</table>
+<h2 id="terra">Terra: The Balanced Model</h2>
 
-<h2 id="why-it-matters">Why It Matters</h2>
+<p>Terra is priced at half the cost of GPT-5.5 and offers balanced performance for daily tasks.</p>
 
-<p>While AI-powered game development is powerful, a single chat session lacks structure. Without a framework, you might hardcode magic numbers, skip design documentation, write messy code, or miss design reviews. No one will ask if your work aligns with the game's vision.</p>
+<h3>Practical Testing: 3D Voxel Rocket</h3>
 
-<p>Claude Code Game Studios solves this by giving your AI session a real studio structure. Instead of a generic assistant, you get 49 professional agents organized in a studio hierarchy:</p>
+<p>We tested Terra by generating a 3D voxel rocket. The model completed the task in 35 minutes, with improved rocket design and UI compared to GPT-5.5. However, the physics engine still needs improvement, as the rocket tilts immediately after launch.</p>
+
+<h2 id="luna">Luna: The Lightweight Model</h2>
+
+<p>Luna is the most cost-effective model, designed for lightweight tasks.</p>
+
+<h3>Practical Testing: Annual Report Generation</h3>
+
+<p>We tested Luna by generating an annual report from a large Excel dataset. The model completed the task in 49 minutes, producing a 47-page report with comprehensive data analysis, including:</p>
 
 <ul>
-  <li><strong>Directors</strong> safeguard the vision</li>
-  <li><strong>Department heads</strong> manage their domains</li>
-  <li><strong>Experts</strong> execute specific tasks</li>
+  <li>13 worksheets and 26,712 transaction records</li>
+  <li>Year-over-year and month-over-month comparisons</li>
+  <li>Half-year and full-year summaries</li>
+  <li>Second-half predictions</li>
+  <li>Data integrity checks</li>
 </ul>
 
-<p>Each agent has clear responsibilities, promotion paths, and quality control points. You still make every decision, but you have a team that asks the right questions, catches errors early, and keeps your project organized from brainstorming to release.</p>
-
-<h2 id="how-it-works">How It Works</h2>
-
-<h3>Intelligent Agent Coordination</h3>
-
-<p>Agents follow a structured delegation model:</p>
-
-<ol>
-  <li><strong>Vertical Delegation</strong>: Directors assign tasks to department heads, who then assign tasks to expert agents.</li>
-  <li><strong>Horizontal Negotiation</strong>: Agents at the same level can negotiate with each other, but cannot make binding cross-domain decisions.</li>
-  <li><strong>Conflict Resolution</strong>: Disagreements are escalated to a shared leader (e.g., creative-director for design, technical-director for technical issues).</li>
-  <li><strong>Change Propagation</strong>: Cross-department changes are coordinated by the producer.</li>
-  <li><strong>Domain Boundaries</strong>: Agents will not modify files outside their explicitly authorized domain.</li>
-</ol>
-
-<h3>Collaboration, Not Autonomy</h3>
-
-<p>Every agent follows a strict collaboration protocol:</p>
-
-<ol>
-  <li><strong>Ask</strong>: Agents will ask questions before proposing solutions.</li>
-  <li><strong>Present Options</strong>: Agents will present 2-4 options with pros and cons.</li>
-  <li><strong>You Decide</strong>: Final decision-making authority always remains with you.</li>
-  <li><strong>Draft</strong>: Agents will draft solutions for your review.</li>
-  <li><strong>Approval</strong>: No files will be written without your explicit approval.</li>
-</ol>
+<p>The report had only minor issues, such as a Chinese garble, but overall was faster and more detailed than manual creation.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>In the past, game development required a full team of planners, programmers, artists, musicians, and testers. Now, you only need to share your game idea with Claude Code, and it will help you build your game step by step. Claude Code Game Studios makes solo game development more accessible than ever, with the structure and support of a professional studio at your fingertips.</p>
+<p>GPT-5.6 offers a model for every need:</p>
+
+<ul>
+  <li><strong>Sol</strong>: Best for heavy tasks, but high cost</li>
+  <li><strong>Terra</strong>: Balanced performance for daily use</li>
+  <li><strong>Luna</strong>: Cost-effective for lightweight tasks</li>
+</ul>
+
+<p>Users can now choose the model that best fits their requirements, making GPT-5.6 a versatile solution for a wide range of applications.</p>
 
 <h2>常见问题</h2>
 
-<h3>How is this different from just asking Claude Code to help me make a game?</h3>
-<p>Without Game Studios, Claude Code is a general-purpose assistant — it can write code, but it won't proactively ask about your game design document, remind you to update the HUD spec when you change the UI, or flag that your new mechanic conflicts with the established art style. Game Studios adds <strong>process</strong>. The 49 agents act as built-in quality gates: the Creative Director ensures consistency with the vision, the Technical Director catches architectural issues, and the Producer tracks progress. It's the difference between having one smart assistant and having an entire studio's institutional knowledge embedded in your workflow.</p>
+<h3>Which GPT-5.6 model should I use for my daily work?</h3>
+<p>For most daily tasks, <strong>Terra</strong> is the sweet spot. It matches GPT-5.5's performance at half the cost, which means you get the same quality you're used to while spending less. Use Sol when you need maximum capability: complex coding projects, multi-file refactors, research requiring deep reasoning, or agentic workflows that span many steps. Use Luna for high-volume, simple tasks: summarizing documents, formatting data, drafting emails, or generating basic reports. The cost difference is significant — Luna can handle 5-10x more tasks than Sol for the same token budget.</p>
 
-<h3>Do I need to configure all 49 agents manually?</h3>
-<p>No. The project is designed to work out of the box. The 49 agents, 73 skills, 12 hooks, 11 rules, and 41 templates are pre-configured. You clone the repository, open it in Claude Code, and the studio structure is ready. The slash commands (/start, /design-system, /create-epics, etc.) are the primary interface — you trigger workflows, and the appropriate agents activate automatically. Over time, you can customize agents, add your own skills, and adjust rules to match your project's specific needs, but zero configuration is required to get started.</p>
+<h3>How does Sol's 1.5-hour FPS game build compare to what a human developer could do?</h3>
+<p>A human developer building the same FPS game from scratch — with movement, shooting, enemy AI, 3D asset sourcing, and full integration — would typically take 3-5 days. Sol's 1.5 hours includes generating three concept designs, sourcing free 3D assets, writing all the code, and integrating everything. The result had minor bugs but was fully playable. This represents roughly a 16-27x speedup. The caveat: the game is a demo, not a polished product. A human would spend additional time on polish, balance, and edge cases. But for prototyping and proof-of-concept, Sol's speed is transformative.</p>
 
-<h3>Is this only for 2D games or does it support 3D?</h3>
-<p>Claude Code Game Studios is engine-agnostic and dimension-agnostic. The agents, skills, and templates are designed around game development <strong>processes</strong> — design documentation, task breakdown, code review, asset management, testing — not specific technologies. Whether you're building a 2D pixel platformer in Godot, a 3D RPG in Unity, or a text-based narrative game, the studio structure works the same way. The domain-specific rules (gameplay, engines, AI, UI, network) apply regardless of your tech stack.</p>
+<h3>Is Luna actually useful, or is it too weak for real work?</h3>
+<p>Luna's 47-page annual report from 26,712 records proves it's not just a toy. The key is using Luna for the right tasks. It excels at data processing, report generation, summarization, and formatting — tasks where the bottleneck is volume, not reasoning depth. For creative writing, complex coding, or strategic analysis, use Terra or Sol. For routine tasks that would take you hours of manual work, Luna is surprisingly capable and dramatically cheaper. The Chinese garble issue in the test is a minor concern for Chinese-language users, but it's the kind of edge case that improves with each model iteration.</p>
 
-<h3>Can I use this for a team project, or is it solo-only?</h3>
-<p>It's designed for solo developers but works for small teams too. In a team setting, the agents serve as a shared process layer — everyone on the team interacts with the same studio structure, ensuring consistent documentation, code standards, and review workflows. The producer agent becomes particularly valuable for teams, tracking cross-member dependencies and flagging integration risks. The caveat: Claude Code sessions are per-user, so each team member runs their own instance. For larger teams, you'd want to supplement with a shared project management tool for the human coordination layer.</p>
+<h3>Will Terra eventually replace GPT-5.5 entirely?</h3>
+<p>OpenAI hasn't announced deprecation plans, but Terra's positioning — same performance at half the cost — makes GPT-5.5's continued relevance questionable. In practice, there's no reason to use GPT-5.5 over Terra for new projects. The only reason to keep using GPT-5.5 is if you have existing prompts or workflows that are finely tuned to it and haven't been tested on Terra yet. Given the cost savings, it's worth migrating those workflows sooner rather than later.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Excited about AI game development? Dive deeper:</p>
+  <p>Understand the GPT-5.6 family? See the bigger picture:</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — the hands-on animation workflow companion</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master the foundation this project builds on</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the Multi-Agent architecture behind Game Studios</li>
+    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex</a> — the merger story and coding benchmarks</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how GPT-5.6's models fit into the Agent landscape</li>
+    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the technology behind models like Sol</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI 工具</span>
-  <span class="meta-badge">🕒 阅读约5分钟</span>
-  <span class="meta-badge">📅 2026年7月13日</span>
+  <span class="meta-badge">📰 AI 新闻</span>
+  <span class="meta-badge">🕒 阅读约6分钟</span>
+  <span class="meta-badge">📅 2026年7月14日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>独自开发游戏从未如此简单。<strong>Claude Code Game Studios</strong>项目将单个Claude Code会话转变为一个完整的游戏开发工作室。它拥有49个智能Agent、73个技能和一个协作AI团队，支持你的整个游戏创作工作流。</p>
+<p>OpenAI正式发布了完整的GPT-5.6家族：Sol、Terra和Luna，将整个模型阵容直接带到桌面端。用户现在可以根据任务复杂度、成本和速度选择模型，就像选择咖啡杯大小。Sol专为重型任务设计，Terra适合均衡的日常工作，Luna用于轻量、高性价比操作。</p>
 
-<h2 id="what-is">什么是Claude Code Game Studios？</h2>
+<h2 id="sol">Sol：旗舰模型</h2>
 
-<p>这个开源项目将Claude Code变成完整的游戏开发工作室：</p>
+<p>Sol是系列中最强大的模型，促使竞争对手启动紧急响应措施。Anthropic甚至将Fable 5的体验推迟了一周并重置了所有用户配额，凸显了AI领域的激烈竞争。</p>
 
+<h3>实战测试：构建3D FPS游戏</h3>
+
+<p>我们通过使用Three.js创建完整的第一人称射击游戏来测试Sol的能力。任务要求包含完整的游戏机制：移动、弹药、生命值、敌人AI和真实GLB 3D模型素材。</p>
+
+<h4>提示词示例</h4>
+
+<pre><code class="language-text">使用Next.js + TypeScript + react-three-fiber + Three.js创建一个可玩的第一人称FPS游戏Demo。游戏应包含完整的移动、弹药、生命值、敌人AI系统，核心素材使用真实GLB 3D模型。</code></pre>
+
+<h4>结果</h4>
+
+<p>Sol在1.5小时内成功生成了整个游戏，包括：</p>
 <ul>
-  <li>49个AI Agent</li>
-  <li>72个工作流技能</li>
-  <li>镜像真实工作室层级结构的完整协调系统</li>
+  <li>三套游戏概念设计</li>
+  <li>从开源社区获取免费3D素材</li>
+  <li>为缺失素材生成代码</li>
+  <li>所有组件的完整集成</li>
 </ul>
 
-<h3>核心组件</h3>
+<p>游戏具有流畅的移动、射击机制、敌人AI和终端摧毁目标，仅有不影响游戏性的小Bug。</p>
 
-<table>
-  <tr><th>类别</th><th>数量</th><th>描述</th></tr>
-  <tr><td><strong>Agent</strong></td><td>49</td><td>覆盖设计、编程、美术、音频、叙事、质量保证和制作的专业智能Agent。</td></tr>
-  <tr><td><strong>技能</strong></td><td>73</td><td>每个工作流阶段的斜杠命令，包括：/start、/design-system、/create-epics、/create-stories、/dev-story、/story-done</td></tr>
-  <tr><td><strong>钩子</strong></td><td>12</td><td>提交、推送、资源变更、会话生命周期、Agent审计追踪和缺口检测的自动验证。</td></tr>
-  <tr><td><strong>规则</strong></td><td>11</td><td>编辑玩法、引擎、AI、UI或网络代码时强制执行领域编码标准。</td></tr>
-  <tr><td><strong>模板</strong></td><td>41</td><td>GDD、UX规范、ADR、迭代计划、HUD设计和无障碍设计的文档模板。</td></tr>
-</table>
+<h2 id="terra">Terra：均衡模型</h2>
 
-<h2 id="why-it-matters">为什么重要</h2>
+<p>Terra的价格是GPT-5.5的一半，为日常任务提供均衡性能。</p>
 
-<p>虽然AI驱动的游戏开发很强大，但单个聊天会话缺乏结构。没有框架，你可能硬编码魔法数字、跳过设计文档、写出混乱代码或遗漏设计评审。没有人会问你的工作是否符合游戏愿景。</p>
+<h3>实战测试：3D体素火箭</h3>
 
-<p>Claude Code Game Studios通过为你的AI会话赋予真实工作室结构来解决这个问题。你得到的不是一个通用助手，而是按工作室层级组织的49个专业Agent：</p>
+<p>我们通过生成3D体素火箭来测试Terra。模型在35分钟内完成任务，火箭设计和UI相比GPT-5.5有所改进。但物理引擎仍需改进，火箭发射后立即倾斜。</p>
+
+<h2 id="luna">Luna：轻量模型</h2>
+
+<p>Luna是性价比最高的模型，为轻量任务设计。</p>
+
+<h3>实战测试：年报生成</h3>
+
+<p>我们通过从大型Excel数据集生成年报来测试Luna。模型在49分钟内完成任务，生成了一份47页的报告，包含全面数据分析：</p>
 
 <ul>
-  <li><strong>总监</strong>守护愿景</li>
-  <li><strong>部门主管</strong>管理各自领域</li>
-  <li><strong>专家</strong>执行具体任务</li>
+  <li>13个工作表和26,712条交易记录</li>
+  <li>同比和环比对比</li>
+  <li>半年和全年汇总</li>
+  <li>下半年预测</li>
+  <li>数据完整性检查</li>
 </ul>
 
-<p>每个Agent有清晰的职责、晋升路径和质量控制点。你仍然做每个决策，但你有一个团队会问正确的问题、及早发现错误、从头脑风暴到发布始终保持项目有序。</p>
-
-<h2 id="how-it-works">工作原理</h2>
-
-<h3>智能Agent协调</h3>
-
-<p>Agent遵循结构化的委托模型：</p>
-
-<ol>
-  <li><strong>垂直委托</strong>：总监分配任务给部门主管，部门主管再分配给专家Agent。</li>
-  <li><strong>水平协商</strong>：同级Agent可互相协商，但不能做出有约束力的跨领域决策。</li>
-  <li><strong>冲突解决</strong>：分歧升级到共同领导（设计问题由创意总监，技术问题由技术总监）。</li>
-  <li><strong>变更传播</strong>：跨部门变更由制作人协调。</li>
-  <li><strong>领域边界</strong>：Agent不会修改其明确授权范围之外的文件。</li>
-</ol>
-
-<h3>协作而非自主</h3>
-
-<p>每个Agent遵循严格的协作协议：</p>
-
-<ol>
-  <li><strong>提问</strong>：Agent在提出方案前会先提问。</li>
-  <li><strong>提供选项</strong>：Agent会提供2-4个选项及优缺点。</li>
-  <li><strong>你决定</strong>：最终决策权始终在你手中。</li>
-  <li><strong>起草</strong>：Agent起草方案供你审阅。</li>
-  <li><strong>批准</strong>：未经你明确批准，不会写入任何文件。</li>
-</ol>
+<p>报告仅有小问题，如一处中文乱码，但整体比手动创建更快、更详细。</p>
 
 <h2 id="conclusion">总结</h2>
 
-<p>过去，游戏开发需要策划、程序员、美术、音乐和测试组成的完整团队。现在，你只需将游戏想法告诉Claude Code，它会一步步帮你构建游戏。Claude Code Game Studios让单人游戏开发比以往任何时候都更容易，专业工作室的结构和支持触手可及。</p>
+<p>GPT-5.6为每种需求提供了模型：</p>
+
+<ul>
+  <li><strong>Sol</strong>：最适合重型任务，但成本较高</li>
+  <li><strong>Terra</strong>：日常使用的均衡性能</li>
+  <li><strong>Luna</strong>：轻量任务的高性价比之选</li>
+</ul>
+
+<p>用户现在可以选择最适合自己需求的模型，使GPT-5.6成为覆盖广泛应用的通用解决方案。</p>
 
 <h2>常见问题</h2>
 
-<h3>这和直接让Claude Code帮我做游戏有什么不同？</h3>
-<p>没有Game Studios，Claude Code是通用助手——它能写代码，但不会主动询问你的游戏设计文档、在你修改UI时提醒更新HUD规范、或标记你的新机制与既定美术风格冲突。Game Studios添加了<strong>流程</strong>。49个Agent充当内置质量关卡：创意总监确保与愿景一致，技术总监捕捉架构问题，制作人追踪进度。这就像拥有一个聪明助手和拥有整个工作室的制度化知识嵌入工作流之间的区别。</p>
+<h3>日常办公该选哪个GPT-5.6模型？</h3>
+<p>对大多数日常任务，<strong>Terra</strong>是最佳选择。它以一半的价格匹配GPT-5.5的性能，意味着你获得同样质量的同时花更少。需要最强能力时用Sol：复杂编码项目、多文件重构、需要深度推理的研究、或跨多步骤的Agent工作流。高容量简单任务用Luna：文档摘要、数据格式化、邮件起草、基础报告生成。成本差异显著——同样token预算下Luna能处理5-10倍于Sol的任务量。</p>
 
-<h3>需要手动配置全部49个Agent吗？</h3>
-<p>不需要。项目设计为开箱即用。49个Agent、73个技能、12个钩子、11条规则和41个模板已预配置。克隆仓库，在Claude Code中打开，工作室结构就绪。斜杠命令（/start、/design-system、/create-epics等）是主要接口——你触发工作流，相应的Agent自动激活。随时间推移，你可以自定义Agent、添加自己的技能、调整规则以匹配项目特定需求，但上手零配置。</p>
+<h3>Sol 1.5小时构建FPS游戏和人类开发者比如何？</h3>
+<p>人类开发者从零构建同样的FPS游戏——包含移动、射击、敌人AI、3D素材获取和完整集成——通常需要3-5天。Sol的1.5小时包括生成三套概念设计、获取免费3D素材、编写所有代码和集成所有内容。结果有小Bug但完全可玩。这大约代表了16-27倍的加速。注意事项：游戏是Demo，不是成品。人类会花额外时间打磨、平衡和边缘情况处理。但对原型验证和概念证明，Sol的速度是革命性的。</p>
 
-<h3>只支持2D游戏还是也支持3D？</h3>
-<p>Claude Code Game Studios与引擎无关，与维度无关。Agent、技能和模板围绕游戏开发<strong>流程</strong>设计——设计文档、任务拆解、代码审查、资产管理、测试——而非特定技术。无论你在Godot做2D像素平台游戏、在Unity做3D RPG，还是做文字叙事游戏，工作室结构都同样适用。领域特定规则（玩法、引擎、AI、UI、网络）无论技术栈如何都适用。</p>
+<h3>Luna真的有用吗，还是太弱了做不了实际工作？</h3>
+<p>Luna从26,712条记录生成47页年报证明了它不只是玩具。关键是用Luna做正确的任务。它擅长数据处理、报告生成、摘要和格式化——这些任务的瓶颈是量而非推理深度。创意写作、复杂编码或战略分析用Terra或Sol。对于需要你数小时手动工作的常规任务，Luna的能力出人意料且成本极低。测试中的中文乱码问题对中文用户是小困扰，但这是每次模型迭代都会改善的边缘情况。</p>
 
-<h3>能给团队项目用吗，还是只能单人？</h3>
-<p>为单人开发者设计，但也适用于小团队。在团队环境中，Agent充当共享流程层——团队中每个人都与同一工作室结构交互，确保一致的文档、代码标准和评审流程。制作人Agent对团队特别有价值，追踪跨成员依赖和标记集成风险。注意事项：Claude Code会话是每用户独立的，所以每个团队成员运行自己的实例。对于更大团队，需要补充共享项目管理工具来管理人协调层。</p>
+<h3>Terra最终会完全取代GPT-5.5吗？</h3>
+<p>OpenAI未公布淘汰计划，但Terra的定位——同样性能、一半价格——让GPT-5.5的持续存在变得可疑。实际使用中，新项目没有理由用GPT-5.5而非Terra。继续使用GPT-5.5的唯一理由是已有针对它精细调优且未在Terra上测试过的提示词或工作流。考虑到成本节省，尽早迁移这些工作流是明智的。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>对AI游戏开发感兴趣？深入探索：</p>
+  <p>了解了GPT-5.6家族？看清全局：</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding大赛指南：用AI工具高效制作游戏动画</a> — 实战动画工作流配套篇</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 掌握本项目构建的基础</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解Game Studios背后的多Agent架构</li>
+    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6全面发布：OpenAI合并ChatGPT与Codex</a> — 合并故事与编码基准测试</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解GPT-5.6模型在Agent格局中的位置</li>
+    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解Sol等模型背后的技术</li>
+  </ul>
+</div>`,
+  },
+
+  "gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era": {
+    content: `<div class="meta-banner">
+  <span class="meta-badge">📰 AI News</span>
+  <span class="meta-badge">🕒 5 min read</span>
+  <span class="meta-badge">📅 Jul 14, 2026</span>
+  <span class="meta-badge">🎯 Beginner</span>
+</div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>OpenAI has officially merged ChatGPT and Codex, and the highly anticipated GPT-5.6 series is now live. The once-central chat box in ChatGPT has been replaced by a Codex-style workspace, marking the end of the pure chat era and the beginning of a new AI age.</p>
+
+<h2 id="three-models">The Three Models of GPT-5.6</h2>
+
+<p>The GPT-5.6 series includes three models:</p>
+
+<ul>
+  <li><strong>Sol</strong>: The new flagship model, designed for complex reasoning, coding, research, and long-horizon agentic work.</li>
+  <li><strong>Terra</strong>: A balanced model for efficient everyday work, with performance comparable to GPT-5.5 at a lower cost.</li>
+  <li><strong>Luna</strong>: The fastest and most cost-efficient model, ideal for high-volume tasks.</li>
+</ul>
+
+<p>All three models are available to all ChatGPT subscription plans, making advanced AI capabilities accessible to every member.</p>
+
+<h2 id="sol-details">GPT-5.6 Sol: The All-Rounder Model</h2>
+
+<p>After five hours of intensive use, GPT-5.6 Sol stands out as the most well-rounded model available today. It offers low pricing, strong planning capabilities, exceptional code execution, extremely low hallucination rates, and high accuracy. While its front-end aesthetics and content creation still have room for improvement, it outperforms previous models in these areas.</p>
+
+<h3>Key Performance Highlights</h3>
+
+<ul>
+  <li><strong>Coding</strong>: GPT-5.6 Sol scores 80 on the Artificial Analysis Coding Agent Index, surpassing Claude Fable 5's 77.2 by 2.8 points.</li>
+  <li><strong>Efficiency</strong>: It reduces output token latency by more than half and lowers costs by one-third compared to other leading models.</li>
+  <li><strong>Cybersecurity</strong>: GPT-5.6 Sol achieves results comparable to Claude Fable 5 on the ExploitBench cybersecurity evaluation at a fraction of the cost.</li>
+</ul>
+
+<h2 id="cybersecurity">Real-World Application: Cybersecurity</h2>
+
+<p>For an AI news website under frequent DDoS attacks, GPT-5.6 Sol proved invaluable. When using Claude Fable 5 for security tasks, it was often restricted due to security keywords. GPT-5.6 Sol, however, identified and fixed multiple security vulnerabilities in just 21 minutes using its Ultra Fast mode, with minimal token consumption.</p>
+
+<h2 id="ux-improvements">User Experience Improvements</h2>
+
+<p>GPT-5.6 Sol also shows significant improvements in front-end aesthetics. For example, visualizing data for Typhoon Bavi produced results far better than what GPT-5.5 could produce, though still not quite at the level of Claude's best outputs.</p>
+
+<h2 id="merger">The ChatGPT and Codex Merge</h2>
+
+<p>OpenAI has transformed ChatGPT into ChatGPT Work, making it easier for the 1 billion weekly active ChatGPT users to transition to Codex's capabilities. Users can now switch between Work and Codex modes in the top-left corner, with the original chat mode now located in the sidebar.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>GPT-5.6 represents a significant leap forward in AI capabilities, offering powerful, cost-effective solutions for coding, cybersecurity, and everyday work. The merge of ChatGPT and Codex, along with the new model lineup, marks the beginning of the agentic AI era, providing users with more powerful and versatile tools to tackle complex tasks.</p>
+
+<h2>常见问题</h2>
+
+<h3>What does the ChatGPT-Codex merger mean for existing ChatGPT users?</h3>
+<p>ChatGPT is now called "ChatGPT Work" — the familiar chat interface still exists in the sidebar, but the default view is now a Codex-style workspace. This means every ChatGPT user now has access to agent capabilities (file operations, code execution, browser control) without installing a separate app. The transition is designed to be gradual: you can still use pure chat mode for simple questions, but the workspace is there when you need the AI to actually do things rather than just talk about them. For 1 billion weekly active users, this is the biggest interface change since ChatGPT launched.</p>
+
+<h3>How significant is Sol beating Claude Fable 5 on coding benchmarks?</h3>
+<p>Very. Claude Fable 5 was the undisputed coding champion, and Sol's 80 vs. 77.2 on the Coding Agent Index is a meaningful gap — not just a statistical tie. More importantly, Sol achieves this while reducing latency by 50%+ and cost by one-third. This combination — better quality, faster speed, lower cost — is rare in AI benchmarks. The cybersecurity results are equally notable: matching Claude's security analysis quality at a fraction of the cost makes Sol the practical choice for security-sensitive development work. The one area where Claude still leads is front-end aesthetics and creative output quality.</p>
+
+<h3>Should I switch from Claude to GPT-5.6 Sol?</h3>
+<p>It depends on your primary use case. For <strong>coding and agentic workflows</strong>, Sol is now the stronger choice — better benchmarks, lower cost, faster output. For <strong>front-end design and creative content</strong>, Claude still produces more polished results. For <strong>security-sensitive work</strong>, Sol's ability to handle security tasks without triggering keyword restrictions (unlike Claude) is a practical advantage. The smart approach: use both. Sol for heavy coding, agent tasks, and security work. Claude for design, creative writing, and when you need the most polished final output. The cost difference means you can use Sol for 80% of tasks and Claude for the 20% where it excels.</p>
+
+<h3>Is Luna worth using, or is it just a stripped-down model?</h3>
+<p>Luna is purpose-built for high-volume, low-complexity tasks. It's not "stripped down" — it's optimized for a different workload. For tasks like summarizing 100 customer emails, formatting a dataset, or generating routine reports, Luna is actually the better choice than Sol or Terra because it's faster and cheaper while being perfectly adequate for the task. The companion article (GPT-5.6 Family practical testing) shows Luna generating a 47-page report from 26K records — that's real work, not a toy. The key is task matching: don't use Luna for complex reasoning, don't use Sol for simple data processing.</p>
+
+<div class="next-step">
+  <h3>📖 Next Steps</h3>
+  <p>Understand the GPT-5.6 launch? See the models in action:</p>
+  <ul>
+    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — hands-on testing of all three models</li>
+    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners to Boost Work Efficiency</a> — put the new ChatGPT Work to use</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how GPT-5.6 changes the Agent landscape</li>
+  </ul>
+</div>`,
+    contentZh: `<div class="meta-banner">
+  <span class="meta-badge">📰 AI 新闻</span>
+  <span class="meta-badge">🕒 阅读约5分钟</span>
+  <span class="meta-badge">📅 2026年7月14日</span>
+  <span class="meta-badge">🎯 入门</span>
+</div>
+
+<h2 id="introduction">引言</h2>
+
+<p>OpenAI正式合并了ChatGPT和Codex，备受期待的GPT-5.6系列现已上线。ChatGPT中原先居中的聊天框被Codex风格的工作区取代，标志着纯聊天时代的终结和新AI时代的开启。</p>
+
+<h2 id="three-models">GPT-5.6的三款模型</h2>
+
+<p>GPT-5.6系列包含三款模型：</p>
+
+<ul>
+  <li><strong>Sol</strong>：新旗舰模型，专为复杂推理、编码、研究和长周期Agent工作设计。</li>
+  <li><strong>Terra</strong>：均衡模型，高效处理日常工作，性能媲美GPT-5.5但成本更低。</li>
+  <li><strong>Luna</strong>：最快、最高效的模型，适合高容量任务。</li>
+</ul>
+
+<p>三款模型面向所有ChatGPT订阅方案开放，让每位会员都能使用先进的AI能力。</p>
+
+<h2 id="sol-details">GPT-5.6 Sol：全能模型</h2>
+
+<p>经过五小时高强度使用，GPT-5.6 Sol是当今最全面的模型。它提供低价格、强规划能力、卓越的代码执行、极低的幻觉率和高准确率。虽然前端美学和内容创作仍有提升空间，但在这些方面已超越前代模型。</p>
+
+<h3>关键性能亮点</h3>
+
+<ul>
+  <li><strong>编码</strong>：GPT-5.6 Sol在Artificial Analysis编码Agent指数上得分80，超越Claude Fable 5的77.2分，领先2.8分。</li>
+  <li><strong>效率</strong>：输出token延迟降低过半，成本相比其他领先模型降低三分之一。</li>
+  <li><strong>网络安全</strong>：GPT-5.6 Sol在ExploitBench网络安全评估中取得与Claude Fable 5相当的成绩，成本仅为零头。</li>
+</ul>
+
+<h2 id="cybersecurity">实战应用：网络安全</h2>
+
+<p>对于一家频繁遭受DDoS攻击的AI新闻网站，GPT-5.6 Sol证明了其价值。使用Claude Fable 5处理安全任务时，常因安全关键词被限制。而GPT-5.6 Sol使用Ultra Fast模式，仅用21分钟就识别并修复了多个安全漏洞，token消耗极少。</p>
+
+<h2 id="ux-improvements">用户体验改进</h2>
+
+<p>GPT-5.6 Sol在前端美学方面也有显著提升。例如，可视化台风巴威数据的结果远超GPT-5.5的水平，虽然仍不及Claude的最佳输出。</p>
+
+<h2 id="merger">ChatGPT与Codex合并</h2>
+
+<p>OpenAI将ChatGPT转型为ChatGPT Work，让10亿周活跃ChatGPT用户更容易过渡到Codex的能力。用户现在可以在左上角切换Work和Codex模式，原聊天模式位于侧边栏中。</p>
+
+<h2 id="conclusion">总结</h2>
+
+<p>GPT-5.6代表了AI能力的重大飞跃，为编码、网络安全和日常工作提供了强大且高性价比的解决方案。ChatGPT与Codex的合并以及新模型阵容，标志着Agent AI时代的开启，为用户提供了更强大、更多元的工具来应对复杂任务。</p>
+
+<h2>常见问题</h2>
+
+<h3>ChatGPT-Codex合并对现有ChatGPT用户意味着什么？</h3>
+<p>ChatGPT现在叫"ChatGPT Work"——熟悉的聊天界面仍在侧边栏中，但默认视图变为Codex风格的工作区。这意味着每个ChatGPT用户现在都能使用Agent能力（文件操作、代码执行、浏览器控制），无需安装单独应用。过渡设计为渐进式：简单问题仍可用纯聊天模式，但需要AI真正做事而不只是谈论时，工作区就在那里。对10亿周活跃用户来说，这是ChatGPT上线以来最大的界面变革。</p>
+
+<h3>Sol在编码基准上击败Claude Fable 5有多重要？</h3>
+<p>非常重要。Claude Fable 5曾是无可争议的编码冠军，Sol的80 vs. 77.2分差距有意义——不是统计平局。更重要的是，Sol在实现这一点的同时将延迟降低50%+、成本降低三分之一。这种组合——更好质量、更快速度、更低成本——在AI基准测试中很少见。网络安全结果同样值得关注：以零头成本匹配Claude的安全分析质量，使Sol成为安全敏感开发工作的务实选择。Claude仍领先的领域是前端美学和创意输出质量。</p>
+
+<h3>该从Claude切换到GPT-5.6 Sol吗？</h3>
+<p>取决于你的主要使用场景。<strong>编码和Agent工作流</strong>方面，Sol现在是更强选择——更好的基准、更低的成本、更快的输出。<strong>前端设计和创意内容</strong>方面，Claude仍产出更精致的结果。<strong>安全敏感工作</strong>方面，Sol能在不触发关键词限制的情况下处理安全任务（与Claude不同）是实际优势。聪明做法：两者都用。Sol处理重型编码、Agent任务和安全工作。Claude处理设计、创意写作和需要最精致最终输出的场景。成本差异意味着你可以用Sol处理80%的任务，Claude处理它擅长的20%。</p>
+
+<h3>Luna值得用吗，还是只是一个阉割版模型？</h3>
+<p>Luna专为高容量低复杂度任务设计。它不是"阉割版"——它是为不同工作负载优化的。对于总结100封客户邮件、格式化数据集或生成常规报告等任务，Luna实际上比Sol或Terra更合适，因为它更快更便宜，同时完全胜任这些任务。配套文章（GPT-5.6家族实测）展示了Luna从2.6万条记录生成47页报告——这是真正的工作，不是玩具。关键是任务匹配：不要用Luna做复杂推理，也不要用Sol做简单数据处理。</p>
+
+<div class="next-step">
+  <h3>📖 下一步</h3>
+  <p>了解了GPT-5.6发布？看模型实战表现：</p>
+  <ul>
+    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 三款模型实战测试</li>
+    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 把新的ChatGPT Work用起来</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解GPT-5.6如何改变Agent格局</li>
   </ul>
 </div>`,
   },
