@@ -2634,4 +2634,29 @@ export const articles: Article[] = [
     date: "2026-07-14",
   },
 
+  {
+    slug: "build-personal-ai-knowledge-base-workbuddy-ima-guide",
+    title: "Build Your Personal AI Knowledge Base with WorkBuddy + IMA: A Step-by-Step Guide",
+    titleZh: "WorkBuddy + IMA：搭建个人AI知识库的完整指南",
+    description: "A step-by-step guide to building a personal AI knowledge base using WorkBuddy (AI agent) + IMA Knowledge Base (storage) — tailored for Chinese users as an alternative to Codex+Obsidian, covering installation, connection, content management, and advanced prompts.",
+    descriptionZh: "用WorkBuddy（AI Agent）+ IMA知识库（存储）搭建个人AI知识库的完整步骤指南——面向国内用户的Codex+Obsidian替代方案，覆盖安装、连接、内容管理和高级提示词。",
+    category: "AI Tutorials",
+    tags: ["WorkBuddy", "IMA", "Knowledge Base", "Productivity", "Tencent", "Tutorial", "China"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy"],
+    date: "2026-07-15",
+  },
+  {
+    slug: "workbuddy-10-core-skills-beginner-to-advanced",
+    title: "WorkBuddy: 10 Core Skills to Master from Beginner to Advanced",
+    titleZh: "WorkBuddy十大核心技能：从入门到精通",
+    description: "Ten essential WorkBuddy skills organized into five stages — Communication Foundation, Methodology for Speed, Safety & Risk Management, Amplification Techniques, and Automation & Smart Workflow — with concrete prompt examples and a mastery roadmap.",
+    descriptionZh: "WorkBuddy十大必备技能，分五个阶段——沟通基础、提速方法、安全风险管理、放大技巧和自动化智能工作流——含具体提示词示例和掌握路线图。",
+    category: "AI Tutorials",
+    tags: ["WorkBuddy", "Skills", "Productivity", "Prompt Engineering", "Automation", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy"],
+    date: "2026-07-15",
+  },
+
 ];
