@@ -2659,4 +2659,17 @@ export const articles: Article[] = [
     date: "2026-07-15",
   },
 
+  {
+    slug: "ai-powered-quantitative-trading-quantdinger-guide",
+    title: "AI-Powered Quantitative Trading Made Accessible: A Practical Guide to QuantDinger",
+    titleZh: "AI量化交易入门：QuantDinger实战指南",
+    description: "A practical guide to QuantDinger — an open-source AI-powered quantitative trading platform featuring automatic strategy optimization, multi-market coverage (A-shares, US stocks, crypto, futures, forex), deterministic backtesting, self-hosted Docker deployment, and MCP integration with AI coding tools.",
+    descriptionZh: "QuantDinger开源AI量化交易平台实战指南——自动策略优化、多市场覆盖（A股/美股/加密货币/期货/外汇）、确定性回测、Docker自托管部署和MCP集成AI编码工具。",
+    category: "AI Tools",
+    tags: ["QuantDinger", "Quantitative Trading", "Finance", "Open Source", "Docker", "Python", "AI"],
+    difficulty: "advanced",
+    toolsMentioned: ["QuantDinger", "Claude Code", "Cursor"],
+    date: "2026-07-16",
+  },
+
 ];
