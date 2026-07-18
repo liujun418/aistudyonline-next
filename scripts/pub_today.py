@@ -1,84 +1,39 @@
 """
-Publish July 16, 2026 — 1 article + 1 new tool (QuantDinger).
+Publish July 18, 2026 — 2 articles, no new tools.
+(Skipped July 17 — no articles in wenzhang with that date.)
 """
 import os
 
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-# ===== Part 1: Add 1 new tool to tools.ts =====
-with open('src/lib/tools.ts', 'r', encoding='utf-8') as f:
-    tools_src = f.read()
-
-new_tools = r"""
-  {
-    id: "quantdinger",
-    name: "QuantDinger",
-    nameZh: "QuantDinger",
-    description: "Open-source AI-powered quantitative trading platform with automatic strategy optimization, multi-market coverage (A-shares, US stocks, crypto, futures, forex), deterministic backtesting, and self-hosted Docker deployment.",
-    descriptionZh: "开源AI量化交易平台，支持自动策略优化、多市场覆盖（A股、美股、加密货币、期货、外汇）、确定性回测和Docker自托管部署。",
-    category: "industry",
-    tags: ["quantitative-trading", "finance", "open-source", "ai", "docker", "python", "trading-bot"],
-    difficulty: "advanced",
-    url: "https://github.com/brokermr810/QuantDinger",
-    rating: 4.4,
-    pricing: "Free",
-    useCase: "AI-powered quantitative trading — automatic strategy generation, backtesting, and live trading across multiple markets with self-hosted data security",
-    icon: "📈",
-    company: "Open Source",
-    companyZh: "开源项目",
-    founded: 2025,
-    headquarters: "Open Source",
-    descriptionLong: "QuantDinger is an open-source AI-powered quantitative trading platform that democratizes algorithmic trading by making advanced strategies accessible to everyone. It supports trading across multiple asset classes including A-shares, US stocks, futures, cryptocurrencies, and forex, with 24/7 market scanning and real-time push notifications. The platform's standout feature is its AI-driven strategy development pipeline: it can automatically generate trading strategy code, run backtests, analyze equity curves and risk metrics, and call large language models to iteratively refine strategy parameters. Users can write Python-native strategies using DataFrame-based IndicatorStrategy or event-driven ScriptStrategy patterns, with AI assisting in code drafting while users retain full ownership. The deterministic backtesting engine models commissions and slippage, generates trade-by-trade analytics and equity curves, and pins every backtest run to a code hash and configuration snapshot for perfect reproducibility. Pre-built trading bots (Grid, Martingale, Trend Following, DCA) are execution-aware and restart-resilient. The entire platform is self-hosted via a one-line Docker Compose command that brings up Flask API, PostgreSQL 16, Redis, and Nginx — all data stays on your infrastructure. An optional MCP package enables integration with AI coding tools like Cursor and Claude Code. For anyone looking to combine AI with quantitative trading while maintaining complete data sovereignty, QuantDinger is the most accessible open-source option.",
-    descriptionLongZh: "QuantDinger是一个开源AI量化交易平台，通过让高级策略人人可用，实现了算法交易的民主化。它支持A股、美股、期货、加密货币和外汇等多资产类别的交易，具备24/7市场扫描和实时推送通知。平台的核心亮点是AI驱动的策略开发流程：自动生成交易策略代码、运行回测、分析权益曲线和风险指标，并调用大语言模型迭代优化策略参数。用户可使用基于DataFrame的IndicatorStrategy或事件驱动的ScriptStrategy模式编写Python原生策略，AI辅助起草代码，用户保留完整所有权。确定性回测引擎建模佣金和滑点，生成逐笔交易分析和权益曲线，每次回测运行都绑定到代码哈希和配置快照，确保完美可复现。预置交易机器人（网格、马丁格尔、趋势跟踪、定投）具备执行感知和重启恢复能力。整个平台通过一行Docker Compose命令自托管部署，启动Flask API、PostgreSQL 16、Redis和Nginx——所有数据留在你的基础设施上。可选MCP包支持与Cursor和Claude Code等AI编码工具集成。对于想在保持数据主权的同时将AI与量化交易结合的人，QuantDinger是最易用的开源选择。",
-    advantages: ["AI auto-generates and optimizes trading strategies", "Multi-market: A-shares, US stocks, crypto, futures, forex", "Deterministic backtesting with perfect reproducibility", "Self-hosted Docker deployment — data never leaves your machine", "Pre-built trading bots (Grid, Martingale, Trend Following, DCA)", "MCP integration with Cursor and Claude Code"],
-    advantagesZh: ["AI自动生成和优化交易策略", "多市场覆盖：A股、美股、加密货币、期货、外汇", "确定性回测，完美可复现", "Docker自托管部署——数据不离开电脑", "预置交易机器人（网格、马丁格尔、趋势跟踪、定投）", "MCP集成Cursor和Claude Code"],
-    useCases: ["Automated multi-market quantitative trading", "AI-assisted strategy backtesting and optimization", "Self-hosted algorithmic trading with data sovereignty", "Learning quantitative trading with AI guidance", "Integrating trading bots with AI coding assistants via MCP"],
-    useCasesZh: ["自动化多市场量化交易", "AI辅助策略回测和优化", "自托管算法交易保障数据主权", "在AI指导下学习量化交易", "通过MCP将交易机器人与AI编码助手集成"],
-    targetAudience: "Quantitative traders, finance professionals, algo-trading enthusiasts, and developers interested in combining AI with financial markets",
-    targetAudienceZh: "量化交易者、金融专业人士、算法交易爱好者，以及对AI与金融市场结合感兴趣的开发者",
-    pricingTiers: [
-      {
-        tier: "Free",
-        tierZh: "免费",
-        price: "Free",
-        features: ["Full platform access", "All trading bots", "AI strategy optimization", "Self-hosted deployment", "Multi-market support"],
-        featuresZh: ["完整平台访问", "全部交易机器人", "AI策略优化", "自托管部署", "多市场支持"],
-      },
-    ],
-    pros: ["Completely free and open-source", "AI strategy generation saves hours of manual coding", "Self-hosted — no third-party access to your trading data", "One-line Docker deployment", "Pre-built bots work out of the box", "MCP integration with AI coding tools"],
-    prosZh: ["完全免费开源", "AI策略生成节省数小时手动编码", "自托管——第三方无法访问交易数据", "一行Docker命令部署", "预置机器人开箱即用", "MCP集成AI编码工具"],
-    cons: ["Requires Docker and basic command-line comfort", "Advanced strategies still need Python knowledge", "Self-hosted means you manage infrastructure", "Community support rather than enterprise SLA"],
-    consZh: ["需要Docker和基本命令行操作", "高级策略仍需Python知识", "自托管意味着自己管理基础设施", "社区支持而非企业SLA"],
-    extensions: [],
-    skills: ["Strategy backtesting", "AI strategy optimization", "Live trading bot deployment", "Multi-market scanning", "Equity curve analysis"],
-    scene: "development",
-  },
-"""
-
-last_tool = tools_src.rfind('] as Tool[];')
-tools_new = tools_src[:last_tool] + new_tools + '] as Tool[];'
-
-with open('src/lib/tools.ts', 'w', encoding='utf-8') as f:
-    f.write(tools_new)
-
-print('Part 1: 1 new tool added to tools.ts (QuantDinger)')
-
-# ===== Part 2: Add 1 article metadata to articles.ts =====
+# ===== Part 1: Add 2 article metadata to articles.ts =====
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "ai-powered-quantitative-trading-quantdinger-guide",
-    title: "AI-Powered Quantitative Trading Made Accessible: A Practical Guide to QuantDinger",
-    titleZh: "AI量化交易入门：QuantDinger实战指南",
-    description: "A practical guide to QuantDinger — an open-source AI-powered quantitative trading platform featuring automatic strategy optimization, multi-market coverage (A-shares, US stocks, crypto, futures, forex), deterministic backtesting, self-hosted Docker deployment, and MCP integration with AI coding tools.",
-    descriptionZh: "QuantDinger开源AI量化交易平台实战指南——自动策略优化、多市场覆盖（A股/美股/加密货币/期货/外汇）、确定性回测、Docker自托管部署和MCP集成AI编码工具。",
-    category: "AI Tools",
-    tags: ["QuantDinger", "Quantitative Trading", "Finance", "Open Source", "Docker", "Python", "AI"],
+    slug: "how-to-use-codex-quantitative-strategy-research-backtesting",
+    title: "How to Use Codex for Quantitative Strategy Research and Backtesting",
+    titleZh: "用Codex做量化策略研究与回测：完整教程",
+    description: "A step-by-step tutorial on using Codex with khQuant CLI for quantitative strategy research — covering installation, configuration testing, data download, batch golden-cross strategy optimization, and backtest report generation.",
+    descriptionZh: "用Codex配合khQuant命令行工具进行量化策略研究的完整教程——覆盖安装、配置测试、数据下载、批量金叉策略优化和回测报告生成。",
+    category: "AI Tutorials",
+    tags: ["Codex", "Quantitative Trading", "khQuant", "Backtesting", "Strategy Research", "Finance"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Codex Agent"],
+    date: "2026-07-18",
+  },
+  {
+    slug: "how-to-build-personal-ai-quant-trading-system-2026",
+    title: "How to Build a Personal AI Quant Trading System in 2026",
+    titleZh: "2026个人AI量化交易系统搭建全指南",
+    description: "A comprehensive guide to building a personal AI quant trading system — from understanding how large quant firms profit versus individual trader advantages, to choosing holaOS as the agent framework, training AI with 6 core skills, implementing event-driven strategies with multi-model validation (Claude + GLM-5), and cost breakdown (~$400/month).",
+    descriptionZh: "搭建个人AI量化交易系统的完整指南——从理解大机构盈利模式与个人优势，到选择holaOS作为Agent框架、训练AI六大核心能力、实施事件驱动策略+多模型验证（Claude+GLM-5），含成本分析（约$400/月）。",
+    category: "AI Tutorials",
+    tags: ["Quantitative Trading", "AI Agent", "holaOS", "Event-Driven", "Finance", "Claude", "GLM-5"],
     difficulty: "advanced",
-    toolsMentioned: ["QuantDinger", "Claude Code", "Cursor"],
-    date: "2026-07-16",
+    toolsMentioned: ["Claude Code", "GLM-5"],
+    date: "2026-07-18",
   },
 
 """
@@ -89,274 +44,499 @@ articles_new = articles_src[:last_bracket] + new_articles + '];'
 with open('src/lib/articles.ts', 'w', encoding='utf-8') as f:
     f.write(articles_new)
 
-print('Part 2: 1 new article added to articles.ts')
+print('Part 1: 2 new articles added to articles.ts')
 
-# ===== Part 3: Add article content to article-content.ts =====
+# ===== Part 2: Add article content to article-content.ts =====
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "ai-powered-quantitative-trading-quantdinger-guide": {
+  "how-to-use-codex-quantitative-strategy-research-backtesting": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI Tools</span>
-  <span class="meta-badge">🕒 7 min read</span>
-  <span class="meta-badge">📅 Jul 16, 2026</span>
+  <span class="meta-badge">📚 AI Tutorials</span>
+  <span class="meta-badge">🕒 5 min read</span>
+  <span class="meta-badge">📅 Jul 18, 2026</span>
+  <span class="meta-badge">🎯 Intermediate</span>
+</div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This guide demonstrates how to use Codex to conduct quantitative strategy research and backtesting, covering the complete process from installation to validation. We will use Codex as the primary tool, with khQuant as the underlying command-line quantitative research tool.</p>
+
+<h2 id="install">1. Install Codex</h2>
+
+<p>First, complete the installation of Codex. There are multiple installation methods available online, including official subscription and mirror sites. It is recommended to use the official subscription if possible.</p>
+
+<h2 id="verify">2. Verify khQuant Installation</h2>
+
+<p>Before proceeding, confirm that you have installed the V3 version of khQuant on your local machine.</p>
+
+<h2 id="test">3. Test Configuration with Codex</h2>
+
+<p>Ask Codex to check your configuration and run built-in test cases:</p>
+
+<pre><code class="language-text">On this computer, I have installed the khQuant CLI command set and corresponding skills. Please help me check if the configuration is complete, run the built-in examples using the CLI, and generate a backtest report for me.</code></pre>
+
+<p>After the execution is complete, you will see the backtest report, which includes key metrics such as:</p>
+
+<ul>
+  <li>Profit and Loss (PnL)</li>
+  <li>Drawdown (DD)</li>
+  <li>Transaction statistics (TRD)</li>
+</ul>
+
+<h2 id="download">4. Download Data via Codex</h2>
+
+<p>You can also use Codex to command khQuant to download and manage data. For example, to download the daily data of the Shanghai 50 Index for the past 5 years, including unadjusted, forward-adjusted, and backward-adjusted versions:</p>
+
+<pre><code class="language-text">Help me download the daily data of the Shanghai 50 Index for the past 5 years, including unadjusted, forward-adjusted, and backward-adjusted data.</code></pre>
+
+<p>After the download is complete, you can ask Codex to summarize the downloaded data:</p>
+
+<pre><code class="language-text">Please summarize the data I just downloaded.</code></pre>
+
+<h2 id="gui">5. Check Data in khQuant GUI</h2>
+
+<p>You can also open the graphical interface of khQuant and find the database management module to view the downloaded data.</p>
+
+<h2 id="batch">6. Batch Strategy Research</h2>
+
+<p>You can use Codex to conduct batch research on strategy parameters. For example, to study the golden cross and death cross strategy for a specific stock, and find the optimal long-term and short-term moving average parameters:</p>
+
+<pre><code class="language-text">I want to study the golden cross and death cross strategy for a specific stock, but I need to find the optimal long-term and short-term moving average parameters. Please help me call the khQuant skill to generate batch golden cross and death cross strategies, conduct batch backtests, and find the optimal parameters for the past year.</code></pre>
+
+<p>After the automatic strategy writing and backtesting are completed, you will obtain the results of the batch strategy research.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The above is an introductory tutorial on how to use Codex to call khQuant for configuration and strategy research. Once you master this process, you can submit any strategy ideas to the large model for implementation and validation. Note: This tutorial uses Codex as the demonstration example. If you are using Claude Code or other powerful agents, you can also use similar methods to call the toolchain to complete the research.</p>
+
+<h2>常见问题</h2>
+
+<h3>Can I use Claude Code instead of Codex for this workflow?</h3>
+<p>Yes. The article notes this explicitly. The key is the toolchain (khQuant CLI + Skills), not the specific agent. Claude Code's harness engineering is arguably better suited for this type of multi-step research workflow — it handles long-running tasks, state recovery, and batch operations more robustly. The prompts in this guide work with any agent that can execute CLI commands. If you're using Claude Code, the workflow is identical: install khQuant, configure the skills, and use the same prompts. The batch strategy research section (golden cross optimization) benefits most from Claude Code's stronger planning and multi-step execution.</p>
+
+<h3>What is khQuant and where do I get it?</h3>
+<p>khQuant is a command-line quantitative research tool that provides data download, backtesting, and strategy analysis capabilities. It's the "engine" that Codex controls — Codex handles the natural language interface and orchestration, while khQuant does the actual financial computation. The article assumes you have khQuant V3 installed. Check the original video by Mr. Kanhai (credited at the end of the article) for khQuant installation and setup instructions. The toolchain pattern (AI agent + CLI quant tool) is more important than the specific tools — you can substitute khQuant with any CLI-compatible quant library.</p>
+
+<h3>What's a golden cross strategy and why batch-test it?</h3>
+<p>A golden cross occurs when a short-term moving average (e.g., 50-day) crosses above a long-term moving average (e.g., 200-day) — traditionally a bullish signal. A death cross is the opposite (bearish). The problem: which moving average periods work best? 50/200 is the classic pair, but for a specific stock, 20/100 or 30/150 might perform better. Batch testing means the AI generates and backtests dozens of parameter combinations (short MA from 5 to 60, long MA from 20 to 250) to find the optimal pair for your specific stock and timeframe. This is exactly the kind of tedious optimization work that AI agents excel at — what would take a human days of manual testing takes Codex minutes.</p>
+
+<h3>Do I need to know quantitative finance to use this workflow?</h3>
+<p>You need to understand the <strong>concepts</strong> (moving averages, golden/death crosses, backtesting, PnL, drawdown) but not the implementation details. The AI handles the coding and parameter optimization. Think of it like driving a car: you need to know where you're going and the basic rules of the road, but you don't need to be a mechanic. Start with simple strategies (single indicator, single stock) to build intuition, then gradually increase complexity. The biggest risk is not understanding what the backtest results actually mean — a 90% win rate with 1 trade is meaningless, while a 55% win rate with 1,000 trades is statistically significant. Learn to read backtest reports critically before deploying real money.</p>
+
+<div class="next-step">
+  <h3>📖 Next Steps</h3>
+  <p>Mastered Codex quant workflow? Go deeper into AI+finance:</p>
+  <ul>
+    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI-Powered Quantitative Trading Made Accessible: A Practical Guide to QuantDinger</a> — another AI quant platform for comparison</li>
+    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">How to Build a Personal AI Quant Trading System in 2026</a> — the full system architecture guide</li>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master the AI agent used in this tutorial</li>
+  </ul>
+</div>`,
+    contentZh: `<div class="meta-banner">
+  <span class="meta-badge">📚 AI 教程</span>
+  <span class="meta-badge">🕒 阅读约5分钟</span>
+  <span class="meta-badge">📅 2026年7月18日</span>
+  <span class="meta-badge">🎯 中级</span>
+</div>
+
+<h2 id="introduction">引言</h2>
+
+<p>本指南演示如何使用Codex进行量化策略研究和回测，覆盖从安装到验证的完整流程。我们将使用Codex作为主要工具，khQuant作为底层命令行量化研究工具。</p>
+
+<h2 id="install">1. 安装Codex</h2>
+
+<p>首先完成Codex的安装。网上有多种安装方式，包括官方订阅和镜像站点。建议尽量使用官方订阅。</p>
+
+<h2 id="verify">2. 验证khQuant安装</h2>
+
+<p>继续之前，确认你已在本地安装了V3版本的khQuant。</p>
+
+<h2 id="test">3. 用Codex测试配置</h2>
+
+<p>让Codex检查配置并运行内置测试用例：</p>
+
+<pre><code class="language-text">这台电脑上我已经安装了khQuant的CLI命令集和相应技能。请帮我检查配置是否完整，使用CLI运行内置示例，并为我生成回测报告。</code></pre>
+
+<p>执行完成后，你将看到回测报告，包含关键指标：</p>
+
+<ul>
+  <li>盈亏（PnL）</li>
+  <li>回撤（DD）</li>
+  <li>交易统计（TRD）</li>
+</ul>
+
+<h2 id="download">4. 通过Codex下载数据</h2>
+
+<p>你也可以用Codex命令khQuant下载和管理数据。例如，下载上证50指数近5年的日线数据，包含未复权、前复权和后复权版本：</p>
+
+<pre><code class="language-text">帮我下载上证50指数近5年的日线数据，包含未复权、前复权和后复权数据。</code></pre>
+
+<p>下载完成后，可以让Codex汇总下载的数据：</p>
+
+<pre><code class="language-text">请汇总我刚下载的数据。</code></pre>
+
+<h2 id="gui">5. 在khQuant GUI中查看数据</h2>
+
+<p>你也可以打开khQuant的图形界面，找到数据库管理模块查看下载的数据。</p>
+
+<h2 id="batch">6. 批量策略研究</h2>
+
+<p>你可以用Codex对策略参数进行批量研究。例如，研究某只股票的金叉死叉策略，找出最优的长期和短期均线参数：</p>
+
+<pre><code class="language-text">我想研究某只股票的金叉死叉策略，但需要找到最优的长短期均线参数。请帮我调用khQuant技能生成批量金叉死叉策略，进行批量回测，找出近一年的最优参数。</code></pre>
+
+<p>自动策略编写和回测完成后，你将获得批量策略研究的结果。</p>
+
+<h2 id="conclusion">总结</h2>
+
+<p>以上是用Codex调用khQuant进行配置和策略研究的入门教程。掌握这个流程后，你可以将任何策略想法提交给大模型来实现和验证。注意：本教程以Codex为演示示例。如果你使用Claude Code或其他强大的Agent，也可以用类似方法调用工具链完成研究。</p>
+
+<h2>常见问题</h2>
+
+<h3>能用Claude Code替代Codex做这个工作流吗？</h3>
+<p>可以。文章明确提到这一点。关键是工具链（khQuant CLI + Skills），不是特定Agent。Claude Code的Harness工程能力可能更适合这类多步骤研究工作流——它更稳健地处理长时间运行任务、状态恢复和批量操作。本指南中的提示词适用于任何能执行CLI命令的Agent。如果使用Claude Code，流程完全相同：安装khQuant、配置技能、使用相同的提示词。批量策略研究部分（金叉优化）最能受益于Claude Code更强的规划和多步执行能力。</p>
+
+<h3>khQuant是什么？在哪获取？</h3>
+<p>khQuant是一个命令行量化研究工具，提供数据下载、回测和策略分析功能。它是Codex控制的"引擎"——Codex处理自然语言界面和编排，khQuant做实际的金融计算。文章假设你已安装khQuant V3。查看文章末尾注明的原作者Kanhai先生的视频获取安装和设置说明。工具链模式（AI Agent + CLI量化工具）比具体工具更重要——你可以用任何CLI兼容的量化库替换khQuant。</p>
+
+<h3>什么是金叉策略，为什么要批量测试？</h3>
+<p>金叉指短期均线（如50日）上穿长期均线（如200日）——传统上被视为看涨信号。死叉则相反（看跌）。问题在于：哪些均线周期效果最好？50/200是经典配对，但对特定股票，20/100或30/150可能表现更好。批量测试意味着AI生成并回测几十种参数组合（短期MA从5到60，长期MA从20到250），找到你特定股票和时间框架的最优配对。这正是AI Agent擅长的繁琐优化工作——人类需要数天手动测试的工作，Codex在几分钟内完成。</h3>
+
+<h3>使用这个工作流需要懂量化金融吗？</h3>
+<p>你需要理解<strong>概念</strong>（均线、金叉/死叉、回测、盈亏、回撤），但不需要懂实现细节。AI处理编码和参数优化。就像开车：你需要知道去哪和基本交通规则，但不需要是机械师。从简单策略开始（单一指标、单只股票）建立直觉，然后逐步增加复杂度。最大风险是不理解回测结果的实际含义——1笔交易90%胜率毫无意义，1000笔交易55%胜率在统计上显著。实盘之前学会批判性地阅读回测报告。</p>
+
+<div class="next-step">
+  <h3>📖 下一步</h3>
+  <p>掌握了Codex量化工作流？深入了解AI+金融：</p>
+  <ul>
+    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI量化交易入门：QuantDinger实战指南</a> — 另一个AI量化平台对比</li>
+    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">2026个人AI量化交易系统搭建全指南</a> — 完整系统架构指南</li>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握本教程使用的AI Agent</li>
+  </ul>
+</div>`,
+  },
+
+  "how-to-build-personal-ai-quant-trading-system-2026": {
+    content: `<div class="meta-banner">
+  <span class="meta-badge">📚 AI Tutorials</span>
+  <span class="meta-badge">🕒 10 min read</span>
+  <span class="meta-badge">📅 Jul 18, 2026</span>
   <span class="meta-badge">🎯 Advanced</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Quantitative trading has long been seen as a complex, high-barrier field reserved for financial professionals. But the open-source project <strong>QuantDinger</strong> is changing that, bringing AI-driven quantitative trading within reach of everyone. This tool not only supports automatic strategy optimization and one-click deployment but also runs entirely on your local machine, ensuring data security while delivering powerful features for both beginners and experienced traders.</p>
+<p>If you have your own quantitative trading system and still lose money, there's no excuse — you're simply not good enough. As a college sophomore, I aim to be the first to deliver real results and teach you how to build AI-driven quantitative strategies. In this guide, I'll break down quantitative trading in 10 minutes, focusing on practical implementation for beginners.</p>
 
-<h2 id="core-features">Core Features of QuantDinger</h2>
+<p><strong>Important Disclaimer</strong>: This guide does not constitute investment advice. The trading ideas are for demonstrating technical paths only. Anyone reaching out to you unsolicited is a scammer — please stay vigilant.</p>
 
-<h3>1. Universal Market Coverage</h3>
+<h2 id="big-quant">1. How Large Quant Firms Profit</h2>
 
-<p>QuantDinger supports trading across multiple asset classes, including A-shares, US stocks, futures, cryptocurrencies, and forex. It continuously scans markets 24/7 to capture opportunities, with real-time key signal push notifications to your mobile device, ensuring you never miss a market movement.</p>
+<h3>1.1 The Core Strategy of Big Quant Firms</h3>
 
-<h3>2. AI-Driven Strategy Development</h3>
-
-<p>One of QuantDinger's most impressive capabilities is its AI-powered strategy workflow:</p>
-
+<p><strong>Example: High-Frequency Trading (HFT)</strong></p>
 <ul>
-  <li><strong>Automatic Strategy Generation</strong>: It can automatically write strategy code and run backtests</li>
-  <li><strong>Intelligent Optimization</strong>: The system analyzes equity curves and risk metrics, calls large language models to refine parameters, and continuously improves strategy stability</li>
-  <li><strong>Python-Native Strategies</strong>: Write DataFrame-based <code>IndicatorStrategy</code> or event-driven <code>ScriptStrategy</code>, with AI assisting in drafting code while you retain full ownership of your strategies</li>
+  <li>Firms like HF Quant use AI-powered hedge fund strategies.</li>
+  <li>They process massive data with neural networks and analyze financial/economic behavior using NLP.</li>
+  <li>Instead of predicting single stock movements, they rank thousands of stocks simultaneously.</li>
+  <li>If a model predicts Stock A has a higher probability of outperforming and Stock B a lower probability, the portfolio increases A's weight and decreases B's weight.</li>
+  <li>Over thousands of trades, statistical advantage ensures profitability — flipping a coin 10,000 times approaches 50%; quant firms profit by identifying which side has 51%.</li>
 </ul>
 
-<h3>3. Deterministic Backtesting Engine</h3>
+<h3>1.2 The Formula</h3>
+<p><strong>Strategy</strong>: Minimal probability advantage × Extremely high trading frequency. Example: 51% win rate, 100,000 trades per day.</p>
 
-<p>The platform supports commission and slippage modeling, trade-by-trade analytics, and equity curve generation. Every backtest run is pinned to a code hash and configuration snapshot, ensuring perfect reproducibility of results.</p>
+<h3>1.3 Barriers to Entry</h3>
+<ol>
+  <li>Capital volume + Computational power</li>
+  <li>Model speed + Execution system</li>
+  <li>Data access + Scale</li>
+</ol>
 
-<h3>4. Autonomous Trading Bots</h3>
+<h2 id="individual">2. Opportunities for Individual Traders</h2>
 
-<p>QuantDinger comes with pre-built strategies like Grid, Martingale, Trend Following, and DCA out of the box. These bots are execution-aware, restart-resilient, and support both signal and fully live execution modes.</p>
+<p>You can't beat big firms on speed, computing power, or data — but you can win on <strong>information understanding</strong> and <strong>flexibility</strong>.</p>
 
-<h3>5. Self-Hosted Architecture</h3>
-
-<p>All components run locally on your computer, with a one-line Docker Compose command that brings up the entire stack including Flask API, PostgreSQL 16, Redis, and Nginx. Your API keys, strategies, AI history, and trade data never leave your infrastructure, ensuring complete data security.</p>
-
-<h2 id="deployment">Practical Deployment Guide</h2>
-
-<h3>Prerequisites</h3>
+<h3>Your Competitive Advantage</h3>
 <ul>
-  <li>Docker Desktop installed on your computer</li>
-  <li>Stable internet connection to access GitHub and Docker Hub</li>
+  <li><strong>Big Quant</strong>: Industrial money-making machine (small advantage × high frequency)</li>
+  <li><strong>You + AI</strong>: Flexible small hunter (big advantage × low frequency)</li>
+  <li><strong>Key Insight</strong>: Big quant firms are slow and clumsy — you can target opportunities they miss.</li>
 </ul>
 
-<h3>Step 1: Install QuantDinger</h3>
+<h3>The Common Mistake to Avoid</h3>
+<ul>
+  <li><strong>Myth</strong>: "Low-frequency trading + certainty"</li>
+  <li><strong>Reality</strong>: There is no certainty in quantitative trading — only probability advantage. If AI predicts a 70% probability of a positive event, a single trade may still fail. The goal is to increase the win rate, not guarantee success.</li>
+</ul>
 
-<p>Run the following command in your terminal to install QuantDinger:</p>
+<h2 id="2026">3. 2026: The Year of Personal AI Quant Trading</h2>
 
-<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash</code></pre>
+<p>In 2026, personal quantitative trading has advanced significantly. You can now achieve what was once only possible for institutions: news monitoring, announcement interpretation, sentiment analysis, order book structure analysis, and technical analysis.</p>
 
-<h3>Step 2: Configure Environment Variables</h3>
+<h2 id="framework">4. Choosing the Right AI Agent Framework</h2>
 
-<p>Navigate to the QuantDinger directory and set up your environment variables:</p>
+<p>For financial quantitative trading, you need a system with 24/7 stability, concurrency processing, state recovery, and black-box monitoring.</p>
 
-<pre><code class="language-bash">cd ~/quantdinger/backend_api_python
-cp env.example .env
-./scripts/generate-secret-key.sh</code></pre>
+<h3>4.1 The Best Framework: holaOS</h3>
 
-<p>Paste the generated <code>SECRET_KEY</code> into the <code>.env</code> file, and add your exchange API keys and broker credentials as needed.</p>
+<ul>
+  <li>System-level sandbox designed for long-term work</li>
+  <li>Harness mechanism for state persistence and breakpoint resumption</li>
+  <li>Multi-app concurrency and full desktop view</li>
+  <li>Native advanced routing for task distribution and model allocation</li>
+</ul>
 
-<h3>Step 3: Start the Platform</h3>
+<p><strong>Installation</strong>:</p>
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/holaboss-ai/holaOS/refs/heads/main/scripts/install.sh | bash -s -- --launch</code></pre>
 
-<p>Launch all services with Docker Compose:</p>
+<h3>4.2 Framework Comparison</h3>
 
-<pre><code class="language-bash">cd ~/quantdinger
-docker compose up -d</code></pre>
+<table>
+  <tr><th>Feature</th><th>holaOS</th><th>OpenClaw</th><th>Hermes Agent</th></tr>
+  <tr><td>24/7 Stability</td><td>Excellent</td><td>Poor (prone to crashes)</td><td>Moderate</td></tr>
+  <tr><td>Concurrency</td><td>Multi-app sandbox</td><td>Chaotic execution</td><td>Dialogue-oriented</td></tr>
+  <tr><td>State Recovery</td><td>Native support</td><td>No mechanism</td><td>Memory-based (fragile)</td></tr>
+  <tr><td>Visualization</td><td>Holaboss dashboard</td><td>No unified view</td><td>No unified view</td></tr>
+</table>
 
-<p>The web UI will be available at <code>http://localhost:8888</code> within about 60 seconds.</p>
+<h2 id="training">5. Training Your AI Quant Trader</h2>
 
-<h3>Step 4: Install MCP Package (Optional)</h3>
+<p>A competent AI quant trader needs 6 core skills:</p>
 
-<p>If you want to integrate QuantDinger with AI clients like Cursor or Claude Code, install the MCP package:</p>
-
-<pre><code class="language-bash">pip install quantdinger-mcp</code></pre>
-
-<h2 id="first-strategy">Getting Started with Your First Strategy</h2>
-
-<h3>Creating a Strategy</h3>
 <ol>
-  <li>Open the QuantDinger web interface at <code>http://localhost:8888</code></li>
-  <li>Navigate to the Strategy Development section</li>
-  <li>Choose between <code>IndicatorStrategy</code> (for technical indicator-based strategies) or <code>ScriptStrategy</code> (for event-driven logic)</li>
-  <li>Use the AI assistant to help draft your strategy code, or write it manually</li>
+  <li><strong>Data Layer</strong>: Access K-line data — fetching historical price data</li>
+  <li><strong>Backtesting Layer</strong>: Test strategies against historical data</li>
+  <li><strong>News Monitoring Layer</strong>: Track news, key figure dynamics, and macro data</li>
+  <li><strong>Decision Layer</strong>: Generate structured trading recommendations</li>
+  <li><strong>Risk Control Layer</strong>: Multi-model validation, information verification, and position control</li>
+  <li><strong>Execution Layer</strong>: Connect to trading APIs for order execution</li>
 </ol>
 
-<h3>Running a Backtest</h3>
-<ol>
-  <li>Select your strategy and choose a historical data range</li>
-  <li>Configure backtest parameters including initial capital, commission rates, and slippage</li>
-  <li>Run the backtest to see performance metrics including equity curve, win rate, and risk-adjusted returns</li>
-</ol>
+<h2 id="implementation">6. Practical Implementation: Event-Driven Strategy</h2>
 
-<h3>Deploying to Live Trading</h3>
-<ol>
-  <li>After validating your strategy with backtesting, navigate to the Trading Bots section</li>
-  <li>Select your strategy and configure live trading parameters</li>
-  <li>Enable the bot to start automated trading, with real-time monitoring available through the web interface or mobile app</li>
-</ol>
+<h3>6.1 Setup</h3>
+<ul>
+  <li><strong>Initial Capital</strong>: $500</li>
+  <li><strong>Strategy</strong>: Spot trading (lowest risk)</li>
+  <li><strong>Timeframe</strong>: 1+ month</li>
+  <li><strong>Asset</strong>: 24/7 tradable (e.g., cryptocurrency)</li>
+</ul>
+
+<h3>6.2 Event-Driven Logic</h3>
+<ul>
+  <li>Check US-Iran dynamics every 5 minutes</li>
+  <li>If Iran threatens to close Strait of Hormuz → Sell</li>
+  <li>If US-Iran peace talks announced → Buy</li>
+  <li>If talks stall → Adjust positions automatically</li>
+</ul>
+
+<h3>6.3 Multi-Model Validation</h3>
+<ul>
+  <li>GLM-5 handles daily tasks</li>
+  <li>Claude performs full analysis when GLM-5 confirms a trade</li>
+  <li>Only execute when both models agree</li>
+</ul>
+
+<h2 id="cost">7. Cost of Personal AI Quant Trading</h2>
+
+<ul>
+  <li>GLM-5: $40/month</li>
+  <li>Claude API: ~$100/month</li>
+  <li>24/7 MacBook: ~$30/month in electricity</li>
+  <li>API Interfaces: ~$200/month</li>
+  <li><strong>Total</strong>: ~$400/month (varies with strategy complexity)</li>
+</ul>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>QuantDinger democratizes quantitative trading by making advanced AI-driven strategies accessible to everyone. With its self-hosted architecture, automatic strategy optimization, and support for multiple markets, it's an excellent tool for anyone looking to get started with quantitative trading or enhance their existing trading workflow. The platform's one-click deployment and user-friendly interface mean you can be up and running with your first strategy in minutes, not days.</p>
+<p>In 2026, personal AI quantitative trading is no longer a dream — it's a practical reality. By leveraging holaOS, event-driven strategies, and multi-model validation, you can compete with big quant firms on flexibility and information understanding. The goal isn't to get rich quick — it's to build a sustainable, profitable system that works for you.</p>
 
-<p>Whether you're a complete beginner or an experienced trader, QuantDinger provides the tools you need to develop, test, and deploy quantitative strategies with confidence.</p>
+<p><strong>Key Takeaways</strong>: Big Quant = small advantage × high frequency. You + AI = big advantage × low frequency. Success factor = clearer information understanding, not faster AI. Start small, focus on quality signals, validate rigorously with multi-model backtesting, and never risk more than you can afford to lose.</p>
 
 <h2>常见问题</h2>
 
-<h3>Do I need to know Python to use QuantDinger?</h3>
-<p>For basic usage — running pre-built bots (Grid, Martingale, Trend Following, DCA) — no Python knowledge is needed. You configure them through the web UI. For custom strategies, yes, you'll need basic Python. However, QuantDinger's AI assistant significantly lowers the barrier: you describe your strategy in plain language, and the AI drafts the Python code. You review and approve it. This means you can create custom strategies with minimal Python knowledge as long as you understand the trading logic. The learning curve is: pre-built bots (zero code) → AI-assisted custom strategies (basic Python reading ability) → fully manual strategies (Python proficiency).</p>
+<h3>Is $400/month really the minimum cost for personal AI quant trading?</h3>
+<p>No — $400/month is the cost for the specific setup described in this guide (Claude + GLM-5 + paid APIs + 24/7 MacBook). You can start much cheaper. A minimal setup: use a single model (GLM-5 at $40/month or Claude at $20/month for the API tier), run it on your existing computer during hours you're not using it (no extra electricity cost), use free data sources (Yahoo Finance, Alpha Vantage free tier), and trade manually based on AI signals instead of full API automation. That brings the cost to $20-40/month. The $400 figure represents a fully automated, always-on, multi-model system — it's the target, not the starting point.</p>
 
-<h3>Is it safe to run trading bots on my own machine?</h3>
-<p>Self-hosting is actually more secure than cloud-based alternatives for one reason: your API keys and trading data never leave your computer. With cloud quant platforms, you're trusting a third party with access to your brokerage accounts. QuantDinger's architecture means everything runs locally — the Docker containers are isolated, and no data is sent to external servers. The trade-off is that you're responsible for uptime. If your computer goes offline, your bots stop. For serious traders, running QuantDinger on a dedicated machine or low-cost VPS (which still counts as self-hosted) solves this. Never share your <code>.env</code> file or <code>SECRET_KEY</code> with anyone.</p>
+<h3>Why holaOS instead of just using Claude Code or Codex directly?</h3>
+<p>Claude Code and Codex are designed for interactive development work — they excel when you're actively collaborating with them. Quantitative trading needs the opposite: unattended 24/7 operation, automatic crash recovery, and concurrent multi-task execution. holaOS is purpose-built for this "set and forget" agent workload. Its harness mechanism means if your bot crashes at 3am due to a network blip, it restarts and resumes from where it left off. Claude Code would just stop and wait for you to wake up. For research and strategy development, use Claude Code or Codex. For live trading deployment, use holaOS (or similar long-running agent frameworks).</p>
 
-<h3>How does AI strategy optimization actually work?</h3>
-<p>QuantDinger's AI optimization follows a loop: (1) you define a strategy with initial parameters (e.g., "buy when RSI < 30, sell when RSI > 70"), (2) the backtesting engine runs it against historical data and generates an equity curve, win rate, Sharpe ratio, and max drawdown, (3) the AI analyzes these metrics and suggests parameter adjustments (e.g., "RSI < 30 gives too few signals — try RSI < 35 and add a volume filter"), (4) the modified strategy is backtested again, (5) the loop continues until the AI converges on optimal parameters or you stop it. This is what used to take human quants days of manual tuning — the AI does it in minutes. The key insight: the AI isn't inventing strategies from scratch; it's optimizing parameters within a strategy framework you define.</p>
+<h3>How reliable is multi-model validation for trading decisions?</h3>
+<p>Multi-model validation (Claude + GLM-5 in this guide) reduces but doesn't eliminate bad trades. Think of it as requiring two independent analysts to agree before executing. It catches cases where one model hallucinates a signal or misinterprets news. The trade-off: you'll miss some profitable trades (when one model correctly identifies an opportunity but the other disagrees) but avoid more bad ones. The guide's results — "barely passing" returns — reflect this conservative approach. For higher returns, you'd loosen the agreement threshold (execute if either model says yes) but accept more risk. There's no free lunch.</p>
 
-<h3>Can I use QuantDinger with my existing brokerage account?</h3>
-<p>QuantDinger connects to exchanges and brokers via API keys. It supports major crypto exchanges (Binance, OKX, etc.) and Chinese brokers for A-shares. For US stocks and futures, you'll need a broker that provides API access (Interactive Brokers, Alpaca, etc.). The setup process is: register for API access on your broker's platform → copy the API key and secret → paste them into QuantDinger's <code>.env</code> file → restart the platform. Always use read-only API keys for testing and enable trading permissions only after you've validated your strategy with paper trading. Most brokers let you create separate API keys with different permission levels.</p>
+<h3>Can I apply this event-driven strategy to traditional stocks instead of crypto?</h3>
+<p>Yes, but with modifications. The event-driven logic (monitor news → trigger trades) works for any asset class. For A-shares: monitor policy announcements, earnings reports, and industry regulations instead of geopolitical events. For US stocks: monitor Fed decisions, earnings calls, and SEC filings. The main difference is market hours — stocks trade 6.5 hours/day, 5 days/week, so you don't need true 24/7 monitoring. This actually makes stocks easier for beginners: you can run the AI during market hours only, reducing complexity and cost. The multi-model validation pattern (GLM-5 for daily screening, Claude for final decision) transfers directly.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Interested in AI + finance? Explore related content:</p>
+  <p>Ready to build your quant system? Start with these foundations:</p>
   <ul>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand the financial side of the AI revolution</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — use Claude Code with QuantDinger's MCP integration</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across industries</li>
+    <li><a href="/articles/how-to-use-codex-quantitative-strategy-research-backtesting">How to Use Codex for Quantitative Strategy Research and Backtesting</a> — hands-on strategy research workflow</li>
+    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI-Powered Quantitative Trading Made Accessible: QuantDinger Guide</a> — another AI quant platform for your toolkit</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — compare agent frameworks for your quant system</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🔧 AI 工具</span>
-  <span class="meta-badge">🕒 阅读约7分钟</span>
-  <span class="meta-badge">📅 2026年7月16日</span>
+  <span class="meta-badge">📚 AI 教程</span>
+  <span class="meta-badge">🕒 阅读约10分钟</span>
+  <span class="meta-badge">📅 2026年7月18日</span>
   <span class="meta-badge">🎯 高级</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>量化交易长期以来被视为金融专业人士专属的高门槛领域。但开源项目<strong>QuantDinger</strong>正在改变这一局面，让AI驱动的量化交易触手可及。这个工具不仅支持自动策略优化和一键部署，还完全在本地运行，保障数据安全的同时为新手和资深交易者提供强大功能。</p>
+<p>如果你有自己的量化交易系统还在亏钱，没有借口——就是水平不够。作为一个大二学生，我的目标是最先交付真实成果，教你如何构建AI驱动的量化策略。本指南10分钟拆解量化交易，聚焦初学者的实战落地。</p>
 
-<h2 id="core-features">QuantDinger核心功能</h2>
+<p><strong>重要声明</strong>：本指南不构成投资建议。交易思路仅用于演示技术路径。任何主动联系你的人都是骗子——请保持警惕。</p>
 
-<h3>1. 全市场覆盖</h3>
+<h2 id="big-quant">1. 大机构如何盈利</h2>
 
-<p>QuantDinger支持跨多资产类别的交易，包括A股、美股、期货、加密货币和外汇。24/7持续扫描市场捕捉机会，实时关键信号推送通知到手机，确保你不会错过任何市场动向。</p>
+<h3>1.1 大机构的核心策略</h3>
 
-<h3>2. AI驱动策略开发</h3>
-
-<p>QuantDinger最令人印象深刻的能力是其AI策略工作流：</p>
-
+<p><strong>示例：高频交易（HFT）</strong></p>
 <ul>
-  <li><strong>自动策略生成</strong>：自动编写策略代码并运行回测</li>
-  <li><strong>智能优化</strong>：系统分析权益曲线和风险指标，调用大语言模型优化参数，持续提升策略稳定性</li>
-  <li><strong>Python原生策略</strong>：编写基于DataFrame的<code>IndicatorStrategy</code>或事件驱动的<code>ScriptStrategy</code>，AI辅助起草代码，你保留策略完整所有权</li>
+  <li>HF Quant等公司使用AI驱动的对冲基金策略。</li>
+  <li>用神经网络处理海量数据，用NLP分析金融/经济行为。</li>
+  <li>不预测单只股票走势，而是同时对数千只股票排序。</li>
+  <li>模型预测A股跑赢概率高、B股概率低，组合就加A减B。</li>
+  <li>数千次交易后，统计优势确保盈利——抛硬币10000次趋近50%；量化机构靠识别哪面有51%的概率盈利。</li>
 </ul>
 
-<h3>3. 确定性回测引擎</h3>
+<h3>1.2 公式</h3>
+<p><strong>策略</strong>：极小概率优势 × 极高交易频率。示例：51%胜率，每天10万笔交易。</p>
 
-<p>平台支持佣金和滑点建模、逐笔交易分析和权益曲线生成。每次回测运行都绑定到代码哈希和配置快照，确保结果的完美可复现性。</p>
+<h3>1.3 进入壁垒</h3>
+<ol>
+  <li>资金量 + 算力</li>
+  <li>模型速度 + 执行系统</li>
+  <li>数据获取 + 规模</li>
+</ol>
 
-<h3>4. 自主交易机器人</h3>
+<h2 id="individual">2. 个人交易者的机会</h2>
 
-<p>QuantDinger开箱即用预置网格、马丁格尔、趋势跟踪和定投等策略。这些机器人具备执行感知和重启恢复能力，支持信号和完全实盘两种执行模式。</p>
+<p>你在速度、算力和数据上打不过大机构——但你可以在<strong>信息理解</strong>和<strong>灵活性</strong>上取胜。</p>
 
-<h3>5. 自托管架构</h3>
-
-<p>所有组件在本地运行，一行Docker Compose命令启动完整技术栈，包括Flask API、PostgreSQL 16、Redis和Nginx。你的API密钥、策略、AI历史和交易数据绝不离开你的基础设施，确保数据完整安全。</p>
-
-<h2 id="deployment">实战部署指南</h2>
-
-<h3>前置条件</h3>
+<h3>你的竞争优势</h3>
 <ul>
-  <li>电脑上安装Docker Desktop</li>
-  <li>稳定的网络连接访问GitHub和Docker Hub</li>
+  <li><strong>大机构</strong>：工业级赚钱机器（小优势 × 高频）</li>
+  <li><strong>你 + AI</strong>：灵活的小猎手（大优势 × 低频）</li>
+  <li><strong>核心洞察</strong>：大机构又慢又笨——你可以瞄准它们错过的机会。</li>
 </ul>
 
-<h3>第一步：安装QuantDinger</h3>
+<h3>需要避免的常见错误</h3>
+<ul>
+  <li><strong>迷思</strong>："低频交易 + 确定性"</li>
+  <li><strong>现实</strong>：量化交易中没有确定性——只有概率优势。AI预测70%概率的利好事件，单笔交易仍可能失败。目标是提高胜率，而非保证成功。</li>
+</ul>
 
-<p>在终端运行以下命令安装QuantDinger：</p>
+<h2 id="2026">3. 2026：个人AI量化交易元年</h2>
 
-<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/brokermr810/QuantDinger/main/install.sh | bash</code></pre>
+<p>2026年，个人量化交易已大幅进步。你现在可以实现过去只有机构才能做到的事：新闻监控、公告解读、情绪分析、订单簿结构分析和技术分析。</p>
 
-<h3>第二步：配置环境变量</h3>
+<h2 id="framework">4. 选择合适的AI Agent框架</h2>
 
-<p>导航到QuantDinger目录并设置环境变量：</p>
+<p>金融量化交易需要具备：24/7稳定性、并发处理、状态恢复和黑盒监控的系统。</p>
 
-<pre><code class="language-bash">cd ~/quantdinger/backend_api_python
-cp env.example .env
-./scripts/generate-secret-key.sh</code></pre>
+<h3>4.1 最佳框架：holaOS</h3>
 
-<p>将生成的<code>SECRET_KEY</code>粘贴到<code>.env</code>文件中，按需添加交易所API密钥和券商凭证。</p>
+<ul>
+  <li>为长期工作设计的系统级沙箱</li>
+  <li>Harness机制支持状态持久化和断点续传</li>
+  <li>多应用并发和全桌面视图</li>
+  <li>原生高级路由支持任务分发和模型分配</li>
+</ul>
 
-<h3>第三步：启动平台</h3>
+<p><strong>安装</strong>：</p>
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/holaboss-ai/holaOS/refs/heads/main/scripts/install.sh | bash -s -- --launch</code></pre>
 
-<p>用Docker Compose启动所有服务：</p>
+<h3>4.2 框架对比</h3>
 
-<pre><code class="language-bash">cd ~/quantdinger
-docker compose up -d</code></pre>
+<table>
+  <tr><th>特性</th><th>holaOS</th><th>OpenClaw</th><th>Hermes Agent</th></tr>
+  <tr><td>24/7稳定性</td><td>优秀</td><td>差（容易崩溃）</td><td>中等</td></tr>
+  <tr><td>并发处理</td><td>多应用沙箱</td><td>混乱执行</td><td>对话导向</td></tr>
+  <tr><td>状态恢复</td><td>原生支持</td><td>无机制</td><td>基于记忆（脆弱）</td></tr>
+  <tr><td>可视化</td><td>Holaboss仪表盘</td><td>无统一视图</td><td>无统一视图</td></tr>
+</table>
 
-<p>约60秒后Web界面在<code>http://localhost:8888</code>可用。</p>
+<h2 id="training">5. 训练你的AI量化交易员</h2>
 
-<h3>第四步：安装MCP包（可选）</h3>
+<p>一个合格的AI量化交易员需要6项核心能力：</p>
 
-<p>如需将QuantDinger与Cursor或Claude Code等AI客户端集成，安装MCP包：</p>
-
-<pre><code class="language-bash">pip install quantdinger-mcp</code></pre>
-
-<h2 id="first-strategy">首个策略快速上手</h2>
-
-<h3>创建策略</h3>
 <ol>
-  <li>打开QuantDinger Web界面<code>http://localhost:8888</code></li>
-  <li>导航到策略开发部分</li>
-  <li>选择<code>IndicatorStrategy</code>（基于技术指标）或<code>ScriptStrategy</code>（事件驱动逻辑）</li>
-  <li>使用AI助手起草策略代码，或手动编写</li>
+  <li><strong>数据层</strong>：获取K线数据</li>
+  <li><strong>回测层</strong>：对历史数据测试策略</li>
+  <li><strong>新闻监控层</strong>：追踪新闻、关键人物动态和宏观数据</li>
+  <li><strong>决策层</strong>：生成结构化交易建议</li>
+  <li><strong>风控层</strong>：多模型验证、信息核实和仓位控制</li>
+  <li><strong>执行层</strong>：连接交易API下单</li>
 </ol>
 
-<h3>运行回测</h3>
-<ol>
-  <li>选择策略和历史数据范围</li>
-  <li>配置回测参数：初始资金、佣金率、滑点</li>
-  <li>运行回测查看性能指标：权益曲线、胜率、风险调整收益</li>
-</ol>
+<h2 id="implementation">6. 实战落地：事件驱动策略</h2>
 
-<h3>部署实盘交易</h3>
-<ol>
-  <li>回测验证策略后，导航到交易机器人部分</li>
-  <li>选择策略并配置实盘交易参数</li>
-  <li>启动机器人开始自动交易，通过Web界面或手机App实时监控</li>
-</ol>
+<h3>6.1 设置</h3>
+<ul>
+  <li><strong>初始资金</strong>：$500</li>
+  <li><strong>策略</strong>：现货交易（风险最低）</li>
+  <li><strong>时间框架</strong>：1个月以上</li>
+  <li><strong>资产</strong>：24/7可交易（如加密货币）</li>
+</ul>
+
+<h3>6.2 事件驱动逻辑</h3>
+<ul>
+  <li>每5分钟检查美伊动态</li>
+  <li>伊朗威胁关闭霍尔木兹海峡 → 卖出</li>
+  <li>美伊和谈公布 → 买入</li>
+  <li>谈判停滞 → 自动调整仓位</li>
+</ul>
+
+<h3>6.3 多模型验证</h3>
+<ul>
+  <li>GLM-5处理日常任务</li>
+  <li>GLM-5确认交易后Claude进行完整分析</li>
+  <li>两模型一致才执行</li>
+</ul>
+
+<h2 id="cost">7. 个人AI量化交易成本</h2>
+
+<ul>
+  <li>GLM-5：$40/月</li>
+  <li>Claude API：约$100/月</li>
+  <li>24/7 MacBook：约$30/月电费</li>
+  <li>API接口：约$200/月</li>
+  <li><strong>合计</strong>：约$400/月（随策略复杂度变化）</li>
+</ul>
 
 <h2 id="conclusion">总结</h2>
 
-<p>QuantDinger通过让高级AI驱动策略人人可用，实现了量化交易的民主化。自托管架构、自动策略优化和多市场支持，使其成为任何想入门量化交易或增强现有交易工作流的人的绝佳工具。平台的一键部署和用户友好界面意味着你可以在几分钟内启动首个策略，而非数天。</p>
+<p>2026年，个人AI量化交易不再是梦想——而是切实可行的现实。通过holaOS、事件驱动策略和多模型验证，你可以在灵活性和信息理解上与大机构竞争。目标不是一夜暴富——而是构建一个可持续盈利的系统为你工作。</p>
 
-<p>无论你是完全的新手还是经验丰富的交易者，QuantDinger都提供了你自信开发、测试和部署量化策略所需的工具。</p>
+<p><strong>核心要点</strong>：大机构 = 小优势 × 高频。你 + AI = 大优势 × 低频。成功要素 = 更清晰的信息理解，而非更快的AI。从小开始，聚焦高质量信号，用多模型回测严格验证，永远不要冒超过你能承受的损失。</p>
 
 <h2>常见问题</h2>
 
-<h3>使用QuantDinger需要懂Python吗？</h3>
-<p>基础使用——运行预置机器人（网格、马丁格尔、趋势跟踪、定投）——不需要Python知识。通过Web界面配置即可。自定义策略需要基础Python。但QuantDinger的AI助手显著降低了门槛：你用自然语言描述策略，AI起草Python代码。你审查并批准。这意味着只要理解交易逻辑，用最少的Python知识就能创建自定义策略。学习曲线：预置机器人（零代码）→ AI辅助自定义策略（基础Python阅读能力）→ 完全手动策略（Python熟练）。</p>
+<h3>$400/月真的是个人AI量化交易的最低成本吗？</h3>
+<p>不是——$400/月是本指南描述特定配置的成本（Claude + GLM-5 + 付费API + 24/7 MacBook）。你可以起步便宜得多。最小配置：使用单一模型（GLM-5 $40/月或Claude API层$20/月），在你不用电脑的时间段运行（无额外电费），使用免费数据源（Yahoo Finance、Alpha Venture免费层），基于AI信号手动交易而非全API自动化。这样成本降到$20-40/月。$400是代表全自动、始终在线、多模型系统的目标配置，不是起点。</p>
 
-<h3>在自己电脑上运行交易机器人安全吗？</h3>
-<p>自托管实际上比云端方案更安全，原因只有一个：你的API密钥和交易数据绝不离开电脑。云端量化平台需要你信任第三方访问你的券商账户。QuantDinger的架构意味着一切在本地运行——Docker容器隔离，没有数据发送到外部服务器。代价是你需要负责正常运行时间。如果电脑离线，机器人停止。对严肃交易者，在专用机器或低成本VPS上运行QuantDinger（仍算自托管）可以解决这个问题。永远不要与任何人分享你的<code>.env</code>文件或<code>SECRET_KEY</code>。</p>
+<h3>为什么选holaOS而不是直接用Claude Code或Codex？</h3>
+<p>Claude Code和Codex为互动开发工作设计——在主动协作时表现出色。量化交易需要相反的：无人值守24/7运行、自动崩溃恢复和并发多任务执行。holaOS专为这种"设置后不管"的Agent工作负载设计。它的Harness机制意味着如果机器人在凌晨3点因网络波动崩溃，它会自动重启并从断点继续。Claude Code只会停下来等你起床。研究和策略开发用Claude Code或Codex。实盘交易部署用holaOS（或类似的长期运行Agent框架）。</p>
 
-<h3>AI策略优化具体是怎么工作的？</h3>
-<p>QuantDinger的AI优化遵循一个循环：(1) 你定义策略及初始参数（如"RSI<30买入，RSI>70卖出"），(2) 回测引擎对历史数据运行并生成权益曲线、胜率、夏普比率和最大回撤，(3) AI分析这些指标并建议参数调整（如"RSI<30信号太少——试试RSI<35并加成交量过滤器"），(4) 修改后的策略再次回测，(5) 循环持续直到AI收敛到最优参数或你停止。这以前是人类量化分析师需要数天手动调参的工作——AI在几分钟内完成。关键洞察：AI不是从零发明策略；它是在你定义的策略框架内优化参数。</p>
+<h3>多模型验证对交易决策有多可靠？</h3>
+<p>多模型验证（本指南中的Claude + GLM-5）能减少但不能消除坏交易。把它理解为需要两个独立分析师在交易前达成一致。它能捕捉一个模型幻觉信号或误读新闻的情况。代价：你会错过一些盈利交易（一个模型正确识别机会但另一个不同意），但能避免更多坏交易。指南的结果——"勉强及格"的收益率——反映了这种保守策略。要更高收益，可以放宽一致性门槛（任一模型说Yes就执行），但接受更大风险。没有免费午餐。</p>
 
-<h3>能用QuantDinger连接我现有的券商账户吗？</h3>
-<p>QuantDinger通过API密钥连接交易所和券商。支持主流加密货币交易所（Binance、OKX等）和A股国内券商。美股和期货需要提供API访问的券商（Interactive Brokers、Alpaca等）。设置流程：在券商平台注册API访问→复制API密钥和密钥→粘贴到QuantDinger的<code>.env</code>文件→重启平台。测试时始终使用只读API密钥，仅在纸交易验证策略后再启用交易权限。大多数券商允许创建不同权限级别的独立API密钥。</p>
+<h3>这个事件驱动策略能用于传统股票而非加密货币吗？</h3>
+<p>可以，但需调整。事件驱动逻辑（监控新闻→触发交易）适用于任何资产类别。A股：监控政策公告、财报和行业监管而非地缘事件。美股：监控美联储决策、财报电话和SEC文件。主要区别是交易时间——股票每天交易6.5小时、每周5天，所以不需要真正的24/7监控。这实际上让股票对新手更友好：只在交易时段运行AI，降低复杂度和成本。多模型验证模式（GLM-5日常筛选、Claude最终决策）直接适用。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>对AI+金融感兴趣？探索相关内容：</p>
+  <p>准备好搭建你的量化系统？从这些基础开始：</p>
   <ul>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 理解AI革命的金融面</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 用Claude Code配合QuantDinger的MCP集成</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现更多跨行业AI工具</li>
+    <li><a href="/articles/how-to-use-codex-quantitative-strategy-research-backtesting">用Codex做量化策略研究与回测：完整教程</a> — 实战策略研究工作流</li>
+    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI量化交易入门：QuantDinger实战指南</a> — 工具箱中的另一个AI量化平台</li>
+    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 为你的量化系统对比Agent框架</li>
   </ul>
 </div>`,
   },
@@ -369,6 +549,6 @@ content_new = content_src[:last_brace] + new_contents + '};'
 with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f:
     f.write(content_new)
 
-print('Part 3: 1 article content added to article-content.ts')
+print('Part 2: 2 article contents added to article-content.ts')
 
 print('\n=== All done! Run build to verify ===')

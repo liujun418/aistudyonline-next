@@ -2672,4 +2672,29 @@ export const articles: Article[] = [
     date: "2026-07-16",
   },
 
+  {
+    slug: "how-to-use-codex-quantitative-strategy-research-backtesting",
+    title: "How to Use Codex for Quantitative Strategy Research and Backtesting",
+    titleZh: "用Codex做量化策略研究与回测：完整教程",
+    description: "A step-by-step tutorial on using Codex with khQuant CLI for quantitative strategy research — covering installation, configuration testing, data download, batch golden-cross strategy optimization, and backtest report generation.",
+    descriptionZh: "用Codex配合khQuant命令行工具进行量化策略研究的完整教程——覆盖安装、配置测试、数据下载、批量金叉策略优化和回测报告生成。",
+    category: "AI Tutorials",
+    tags: ["Codex", "Quantitative Trading", "khQuant", "Backtesting", "Strategy Research", "Finance"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Codex Agent"],
+    date: "2026-07-18",
+  },
+  {
+    slug: "how-to-build-personal-ai-quant-trading-system-2026",
+    title: "How to Build a Personal AI Quant Trading System in 2026",
+    titleZh: "2026个人AI量化交易系统搭建全指南",
+    description: "A comprehensive guide to building a personal AI quant trading system — from understanding how large quant firms profit versus individual trader advantages, to choosing holaOS as the agent framework, training AI with 6 core skills, implementing event-driven strategies with multi-model validation (Claude + GLM-5), and cost breakdown (~$400/month).",
+    descriptionZh: "搭建个人AI量化交易系统的完整指南——从理解大机构盈利模式与个人优势，到选择holaOS作为Agent框架、训练AI六大核心能力、实施事件驱动策略+多模型验证（Claude+GLM-5），含成本分析（约$400/月）。",
+    category: "AI Tutorials",
+    tags: ["Quantitative Trading", "AI Agent", "holaOS", "Event-Driven", "Finance", "Claude", "GLM-5"],
+    difficulty: "advanced",
+    toolsMentioned: ["Claude Code", "GLM-5"],
+    date: "2026-07-18",
+  },
+
 ];
