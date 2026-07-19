@@ -2697,4 +2697,17 @@ export const articles: Article[] = [
     date: "2026-07-18",
   },
 
+  {
+    slug: "build-ai-team-coze-3-one-person-company",
+    title: "8-Minute Guide: Build an AI Team with Coze 3.0 – Complete a Project from Idea to Launch as a One-Person Company",
+    titleZh: "8分钟学会用Coze 3.0搭建AI团队：一人公司从创意到上线全流程",
+    description: "A step-by-step tutorial on building a multi-agent AI team in Coze 3.0 — Product Manager, Designer, Development Planner (Claude Code), Development Executor (Codex CLI), and Video Producer (Seedance) — to build an anti-procrastination app from scratch, including PRD, UI design, coding, and promotional video generation.",
+    descriptionZh: "在Coze 3.0中搭建多Agent AI团队的完整教程——产品经理、设计师、开发规划（Claude Code）、开发执行（Codex CLI）和视频制作（Seedance）——从零构建反拖延App，含PRD、UI设计、编码和宣传视频全流程。",
+    category: "AI Tutorials",
+    tags: ["Coze", "AI Agent", "Multi-Agent", "No-Code", "Productivity", "Tutorial", "One-Person Company"],
+    difficulty: "beginner",
+    toolsMentioned: ["Coze", "Claude Code", "Codex Agent"],
+    date: "2026-07-19",
+  },
+
 ];
