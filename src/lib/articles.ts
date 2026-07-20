@@ -2710,4 +2710,29 @@ export const articles: Article[] = [
     date: "2026-07-19",
   },
 
+  {
+    slug: "ai-manhua-production-full-workflow-script-to-monetization",
+    title: "AI Manhua Production Full Workflow: From Script to Monetization",
+    titleZh: "AI漫剧制作全流程：从剧本到变现的完整指南",
+    description: "A complete AI manhua (short anime) production workflow using only a smartphone — from scene description and text-to-image through image-to-video and post-editing, plus 3 script creation methods, prompt optimization for camera control, model selection (Seedance, Xiaoyunque, Wan, LTX), and monetization basics.",
+    descriptionZh: "仅用手机完成AI漫剧制作的完整流程——从场景描述、文生图到图生视频和后期剪辑，含3种剧本创作方法、镜头控制提示词优化、模型选择（Seedance、Xiaoyunque、Wan、LTX）和变现基础。",
+    category: "AI Tutorials",
+    tags: ["AI Manhua", "Video Generation", "Content Creation", "Seedance", "Monetization", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Seedance 2.0", "Xiaoyunque", "CapCut"],
+    date: "2026-07-20",
+  },
+  {
+    slug: "kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark",
+    title: "Kimi K3 Takes Global Top Spot: Week 29 LLM Front-End Coding Benchmark Report",
+    titleZh: "Kimi K3登顶全球第一：第29周LLM前端编码基准测试报告",
+    description: "Week 29 front-end coding benchmark results: Kimi K3 debuts at #1 globally (1679 score), surpassing Claude Fable-5 and GPT-5.6 Sol — 9 Chinese models in top 25, with GLM 5.2 at #4 — plus a Python test script and model selection guide for developers.",
+    descriptionZh: "第29周前端编码基准测试：Kimi K3首秀全球第一（1679分），超越Claude Fable-5和GPT-5.6 Sol——9款国产模型进入前25，GLM 5.2第4——含Python测试脚本和开发者选型指南。",
+    category: "AI News",
+    tags: ["Kimi K3", "Benchmark", "Front-End", "Coding", "LLM", "China", "Claude", "GPT"],
+    difficulty: "beginner",
+    toolsMentioned: ["Kimi", "Claude Fable 5", "GPT-5.6", "GLM-5"],
+    date: "2026-07-20",
+  },
+
 ];
