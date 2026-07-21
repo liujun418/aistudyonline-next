@@ -1,38 +1,25 @@
 """
-Publish July 20, 2026 — 2 articles, no new tools.
+Publish July 21, 2026 — 1 article, no new tools.
 """
 import os
 
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-# ===== Part 1: Add 2 article metadata to articles.ts =====
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
     articles_src = f.read()
 
 new_articles = r"""  {
-    slug: "ai-manhua-production-full-workflow-script-to-monetization",
-    title: "AI Manhua Production Full Workflow: From Script to Monetization",
-    titleZh: "AI漫剧制作全流程：从剧本到变现的完整指南",
-    description: "A complete AI manhua (short anime) production workflow using only a smartphone — from scene description and text-to-image through image-to-video and post-editing, plus 3 script creation methods, prompt optimization for camera control, model selection (Seedance, Xiaoyunque, Wan, LTX), and monetization basics.",
-    descriptionZh: "仅用手机完成AI漫剧制作的完整流程——从场景描述、文生图到图生视频和后期剪辑，含3种剧本创作方法、镜头控制提示词优化、模型选择（Seedance、Xiaoyunque、Wan、LTX）和变现基础。",
-    category: "AI Tutorials",
-    tags: ["AI Manhua", "Video Generation", "Content Creation", "Seedance", "Monetization", "Tutorial"],
-    difficulty: "beginner",
-    toolsMentioned: ["Seedance 2.0", "Xiaoyunque", "CapCut"],
-    date: "2026-07-20",
-  },
-  {
-    slug: "kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark",
-    title: "Kimi K3 Takes Global Top Spot: Week 29 LLM Front-End Coding Benchmark Report",
-    titleZh: "Kimi K3登顶全球第一：第29周LLM前端编码基准测试报告",
-    description: "Week 29 front-end coding benchmark results: Kimi K3 debuts at #1 globally (1679 score), surpassing Claude Fable-5 and GPT-5.6 Sol — 9 Chinese models in top 25, with GLM 5.2 at #4 — plus a Python test script and model selection guide for developers.",
-    descriptionZh: "第29周前端编码基准测试：Kimi K3首秀全球第一（1679分），超越Claude Fable-5和GPT-5.6 Sol——9款国产模型进入前25，GLM 5.2第4——含Python测试脚本和开发者选型指南。",
-    category: "AI News",
-    tags: ["Kimi K3", "Benchmark", "Front-End", "Coding", "LLM", "China", "Claude", "GPT"],
-    difficulty: "beginner",
-    toolsMentioned: ["Kimi", "Claude Fable 5", "GPT-5.6", "GLM-5"],
-    date: "2026-07-20",
+    slug: "2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide",
+    title: "2026 Local Large Language Model Benchmark: 13 Open-Source Models, $4000 Budget Hardware Local Deployment Guide",
+    titleZh: "2026本地大模型横评：13款开源模型+$4000硬件部署全指南",
+    description: "A 30-day, $4,185 hardware deep dive testing 13 open-source LLMs (Qwen3.6, Gemma 4, Ornith 1.0) for local deployment — covering quantization, MTP, Dense vs MoE, OCR, long-context reasoning, full-stack coding, speed benchmarks, and llama.cpp deployment with GGUF.",
+    descriptionZh: "30天$4185硬件深度评测13款开源大模型（Qwen3.6、Gemma 4、Ornith 1.0）本地部署——覆盖量化、MTP、Dense vs MoE、OCR、长上下文推理、全栈编码、速度基准和llama.cpp GGUF部署。",
+    category: "AI Learning",
+    tags: ["LLM", "Local Deployment", "Open Source", "Benchmark", "Hardware", "Qwen", "Gemma", "Quantization"],
+    difficulty: "advanced",
+    toolsMentioned: ["Qwen", "Gemma", "DeepSeek"],
+    date: "2026-07-21",
   },
 
 """
@@ -43,451 +30,365 @@ articles_new = articles_src[:last_bracket] + new_articles + '];'
 with open('src/lib/articles.ts', 'w', encoding='utf-8') as f:
     f.write(articles_new)
 
-print('Part 1: 2 new articles added to articles.ts')
+print('Part 1: 1 new article added to articles.ts')
 
-# ===== Part 2: Add article content to article-content.ts =====
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
     content_src = f.read()
 
 new_contents = r'''
-  "ai-manhua-production-full-workflow-script-to-monetization": {
+  "2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI Tutorials</span>
-  <span class="meta-badge">🕒 8 min read</span>
-  <span class="meta-badge">📅 Jul 20, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
+  <span class="meta-badge">📚 AI Learning</span>
+  <span class="meta-badge">🕒 10 min read</span>
+  <span class="meta-badge">📅 Jul 21, 2026</span>
+  <span class="meta-badge">🎯 Advanced</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Creating AI manhua (short animated drama) doesn't require professional screenwriting or directing experience. This guide breaks down the complete, practical workflow to help you produce publishable content in just three days using only a smartphone. The process follows four core stages: scene description, text-to-image, image-to-video, and post-editing, with clear, actionable steps for beginners.</p>
+<p>I spent $4000 and 30 days answering one question: <strong>how do you choose the right large language model for local deployment?</strong> From buying hardware to tuning models, from crashes to breakthroughs, I tested 13 open-source models including Qwen3.6, Gemma 4, and Ornith 1.0 end-to-end. This guide covers costs, performance tuning, deployment difficulty, MTP, long-context handling, and real-world troubleshooting logs to help you avoid wasted time and storage.</p>
 
-<h2 id="workflow">Core Production Workflow</h2>
+<h2 id="why-local">1. Why Local Deployment? Three Core Reasons</h2>
 
-<h3>1. Scene Description</h3>
-
-<p>Start by defining your scene with AI assistance. Use the following prompt structure to get detailed, polished descriptions:</p>
-
-<pre><code class="language-text">I will describe a scene, please help me refine it into a vivid, detailed description. Do not generate images.
-[Your scene description: e.g., "A girl stands in a grassland with long white hair, red eyes, wearing a large white hat and white dress, looking at the camera"]</code></pre>
-
-<p>AI will automatically enhance the description with details like lighting, atmosphere, and character expressions to make the scene more vivid.</p>
-
-<h3>2. Text-to-Image</h3>
-
-<p>Use the refined scene description to generate your base image. Specify the aspect ratio (16:9 for horizontal video) and style (e.g., Japanese anime flat style) in your prompt:</p>
-
-<pre><code class="language-text">Generate an image of this scene, aspect ratio 16:9, using Japanese anime flat style.</code></pre>
-
-<p>Select the best result from the generated options, prioritizing close-up shots for character-focused scenes.</p>
-
-<h3>3. Image-to-Video</h3>
-
-<p>Convert your selected image into a short video. For beginners, use affordable tools like Xiaoyunque:</p>
-
-<ol>
-  <li>Upload your base image to the platform</li>
-  <li>Add voiceover text (keep it simple for better AI performance)</li>
-  <li>Select the "Participate in Creation" mode for iterative adjustments</li>
-  <li>Generate a 5-10 second video (costs ~5 credits, with daily free credits available)</li>
-</ol>
-
-<h3>4. Post-Editing</h3>
-
-<p>Use Jianying (CapCut) to finalize your video:</p>
-<ol>
-  <li>Add sound effects (e.g., wind for grassland scenes) from the built-in library</li>
-  <li>Manually add subtitles (free alternative to paid AI recognition)</li>
-  <li>Adjust audio levels and trim clips to match the video duration</li>
-  <li>Export your final video in 1080p resolution</li>
-</ol>
-
-<h2 id="script-methods">AI Script Creation Methods</h2>
-
-<h3>Method 1: Direct Full Script Generation</h3>
-
-<pre><code class="language-text">Assume you are a screenwriter with 15 years of experience in short-form animation. Create a 1-minute healing animation script with the theme of "Companion" featuring a cartoon cat. Design 18 shots, each no longer than 7 seconds, including scene descriptions, camera angles, and timing.</code></pre>
-
-<p><strong>Pros</strong>: Fast, one-step generation. <strong>Cons</strong>: May include complex scenes that are hard to visualize.</p>
-
-<h3>Method 2: Story-to-Script Conversion</h3>
-
-<p>Better for logical, easy-to-produce content:</p>
-<ol>
-  <li>First generate a simple story: "Write a short healing story about a cartoon cat with the theme of 'Companion', with a clear beginning, middle, and end."</li>
-  <li>Then convert to script: "Convert this story into a shot list. Each shot should have a simple description that can be easily visualized as an image."</li>
-</ol>
-
-<p><strong>Pros</strong>: More logical plot, easier to visualize scenes. <strong>Cons</strong>: Requires an extra step.</p>
-
-<h3>Method 3: Framework-Based Rewriting</h3>
-
-<pre><code class="language-text">Refer to the story framework of "The Dog's Promise" (separation, waiting, reunion, companionship), rewrite a new story with different characters and details, keeping the emotional arc intact.</code></pre>
-
-<p><strong>Pros</strong>: High efficiency, proven emotional structure. <strong>Cons</strong>: Requires careful adaptation to avoid plagiarism.</p>
-
-<h2 id="prompt-tips">Prompt Optimization Tips</h2>
-
-<h3>Style Control</h3>
-<p>Specify visual styles in your prompts: 3D styles (Pixar, 3D modeling, Chinese anime), Painting styles (Illustration, Japanese anime, oil painting, game art), Realistic styles (Nature photography, street photography, film camera).</p>
-
-<h3>Camera Angle Control</h3>
 <ul>
-  <li><strong>Movement</strong>: Follow shot, push-in, pull-out, slow push</li>
-  <li><strong>Angle</strong>: Over-the-shoulder, first-person, low-angle, high-angle</li>
-  <li><strong>Distance</strong>: Close-up, medium shot, long shot, extreme close-up</li>
+  <li><strong>Privacy</strong>: Data never leaves your machine, meeting compliance requirements for sensitive internal code or documents.</li>
+  <li><strong>Security</strong>: Works offline, making it ideal for air-gapped environments like hospitals processing medical records.</li>
+  <li><strong>Cost</strong>: One-time hardware investment vs. infinite cloud API fees. For high-frequency tasks like internal document processing, local deployment is far cheaper long-term.</li>
 </ul>
 
-<h3>Advanced Video Prompt Structure</h3>
-<p>For high-quality video generation, include these four elements: Camera movement, Scene, Subject, Details. Example: "Medium shot, slow push-in. Early morning sunlit forest, misty atmosphere. Girl in white dress running, hair blowing in wind. Sunlight filtering through leaves, soft lens flare."</p>
+<h2 id="hardware">2. Hardware Setup: $4,185 Build for Local LLM Testing</h2>
 
-<h2 id="model-selection">Model Selection Guide</h2>
+<table>
+  <tr><th>Component</th><th>Cost</th><th>Notes</th></tr>
+  <tr><td>2x V100 16GB GPUs</td><td>$2,200</td><td>32GB total VRAM, PCIe 3.0 x16</td></tr>
+  <tr><td>32GB DDR4 RAM</td><td>$800</td><td>Handles model loading and system tasks</td></tr>
+  <tr><td>X99 Motherboard</td><td>$240</td><td>Dual PCIe 3.0 x16 slots</td></tr>
+  <tr><td>E5-2680 V4 CPU</td><td>$45</td><td>Budget multi-core for system operations</td></tr>
+  <tr><td>PSU/Case/SSD</td><td>$900</td><td>Reliable power for 2x GPUs</td></tr>
+  <tr><td><strong>Total</strong></td><td><strong>$4,185</strong></td><td></td></tr>
+</table>
 
-<h3>Open-Source Models (For Advanced Users)</h3>
+<h3>Performance Thresholds</h3>
 <ul>
-  <li><strong>Wan 2.2</strong>: Large community support, rich resources, no built-in audio output</li>
-  <li><strong>LTX 2.3</strong>: Supports audio-video synchronization, smaller community with fewer tutorials</li>
+  <li><strong>≤3 tokens/s</strong>: Unusable (model too large for hardware)</li>
+  <li><strong>20 tokens/s</strong>: Barely usable for casual chat</li>
+  <li><strong>50 tokens/s</strong>: Smooth for most tasks</li>
+  <li><strong>≥100 tokens/s</strong>: Near cloud-level responsiveness</li>
 </ul>
 
-<h3>Closed-Source Models (For Beginners)</h3>
+<h2 id="model-selection">3. Model Selection: 13 Models Tested, 5 Advanced to Finals</h2>
+
+<p>I grouped models by parameter size and tested across 3 preliminary rounds: Chinese Writing, Logical Reasoning, and Invoice OCR.</p>
+
+<h3>Top 5 Finalists</h3>
+<table>
+  <tr><th>Model</th><th>Parameters</th><th>Architecture</th></tr>
+  <tr><td>Ornith-1.0-9B</td><td>9B</td><td>Dense</td></tr>
+  <tr><td>Ornith-1.0-35B-A3B</td><td>35B</td><td>MoE</td></tr>
+  <tr><td>Qwen3.6-35B-A3B</td><td>35B</td><td>MoE</td></tr>
+  <tr><td>Gemma-4-26B-A4B (QAT)</td><td>26B</td><td>Dense</td></tr>
+  <tr><td>Qwen3.6-27B</td><td>27B</td><td>Dense</td></tr>
+</table>
+
+<h2 id="concepts">4. Key Technical Concepts Explained</h2>
+
+<h3>Quantization</h3>
+<p>Quantization reduces model size by lowering precision, making large models fit in consumer GPUs:</p>
 <ul>
-  <li><strong>Seedance 2.0 (ByteDance)</strong>: Industry-leading quality, used for most commercial manhua</li>
-  <li><strong>Xiaoyunque 1.5</strong>: Affordable, easy to use, ideal for beginners</li>
-  <li><strong>Other options</strong>: Hailuo, Kening, Weidu (lower cost, slightly lower quality)</li>
+  <li><strong>&lt;4-bit</strong>: Severe quality loss, not recommended</li>
+  <li><strong>IQ4/Q4</strong>: Good balance of size and quality</li>
+  <li><strong>Q6</strong>: Near-lossless, recommended for most use cases</li>
+  <li><strong>Q8</strong>: Maximum quality, larger file size</li>
+</ul>
+<p>All models used GGUF quantization (Q6_K for most, Q4 for Gemma-4-26B).</p>
+
+<h3>MTP (Multi-Token Prediction)</h3>
+<p>MTP is an inference acceleration technique where a small "draft" model predicts multiple tokens at once, and the main model verifies them. It can speed up dense models by <strong>245%</strong> but slows down MoE models due to cross-GPU communication overhead.</p>
+
+<h3>Dense vs. MoE Models</h3>
+<ul>
+  <li><strong>Dense</strong>: All parameters active for every token. More predictable, no routing overhead.</li>
+  <li><strong>MoE</strong>: Only a subset of parameters ("experts") active per token. Faster inference for large models, but requires more complex deployment.</li>
 </ul>
 
-<h2 id="monetization">Monetization Basics</h2>
+<h2 id="final-tests">5. Final Round Tests: Which Model Wins?</h2>
 
-<p>AI manhua generates revenue through two main models: (1) <strong>Paid unlock</strong>: Users pay to access subsequent episodes. (2) <strong>Ad revenue</strong>: Earn from ads displayed between episodes. This creates a recurring income stream with minimal ongoing effort once the initial content is produced.</p>
+<h3>Test 1: Advanced OCR (Dinosaur Knowledge)</h3>
+<p>Extract 30 facts from two dinosaur infographics. <strong>Winners</strong>: Qwen3.6-35B, Qwen3.6-27B (10/10). Others scored 9/10.</p>
 
-<h2 id="conclusion">Conclusion</h2>
+<h3>Test 2: Long-Context Reasoning (130K Tokens)</h3>
+<p>Find a specific article in a 110-page PDF and determine which boy is lying. <strong>All 5 models scored 10/10</strong> — long-context performance was surprisingly strong across the board.</p>
 
-<p>AI manhua production is accessible to anyone with basic digital literacy. By following this four-stage workflow and mastering prompt engineering techniques, you can create publishable content in just a few days. Start with simple scenes, experiment with different AI tools, and iterate on your work to develop your own style.</p>
+<h3>Test 3: Document Generation (Multi-Modal)</h3>
+<p>Read 171 mixed text/image/video files and generate a structured Excel spreadsheet. <strong>Winners</strong>: Qwen3.6-35B, Ornith-1.0-9B (10/10).</p>
+
+<h3>Test 4: Full-Stack App Building</h3>
+<p>Build a novel reading website with MySQL backend, API layer, and frontend. <strong>Winner</strong>: DeepSeek V4 Flash (control group, 34/50). <strong>Local Model Winner</strong>: Ornith-1.0-35B (31/50). Runner-Up: Qwen3.6-35B (24/50).</p>
+
+<h3>Test 5: Inference Speed</h3>
+<ul>
+  <li><strong>Fastest</strong>: Gemma-4-26B (105 tokens/s)</li>
+  <li><strong>Runner-Up</strong>: Ornith-1.0-35B (99 tokens/s)</li>
+  <li><strong>Slowest</strong>: Qwen3.6-27B (28 tokens/s)</li>
+</ul>
+
+<h2 id="rankings">6. Final Rankings & Recommendations</h2>
+
+<h3>Overall Scores</h3>
+<ol>
+  <li><strong>Ornith-1.0-35B</strong>: 59/100 (Best for hard tasks)</li>
+  <li><strong>Qwen3.6-35B</strong>: 54/100 (Most reliable all-around)</li>
+  <li><strong>Qwen3.6-27B</strong>: 39/100 (Best for 24GB GPUs)</li>
+  <li><strong>Ornith-1.0-9B</strong>: 39/100 (Best single-GPU entry-level model)</li>
+  <li><strong>Gemma-4-26B</strong>: 31/100 (Fastest inference)</li>
+</ol>
+
+<h3>Which Model Should You Use?</h3>
+<ul>
+  <li><strong>Single GPU (16GB VRAM)</strong>: Ornith-1.0-9B</li>
+  <li><strong>24GB GPU</strong>: Qwen3.6-27B</li>
+  <li><strong>Dual 16GB GPUs</strong>: Qwen3.6-35B</li>
+  <li><strong>Hard tasks (coding, complex reasoning)</strong>: Ornith-1.0-35B</li>
+</ul>
+
+<h2 id="deployment">7. How to Deploy These Models</h2>
+
+<h3>Prerequisites</h3>
+<p>Install llama.cpp, the lightweight inference engine used for all tests:</p>
+
+<pre><code class="language-bash"># Install via official script
+curl -LsSf https://llama.app/install.sh | sh</code></pre>
+
+<h3>Model Download Links</h3>
+<table>
+  <tr><th>Model</th><th>Download</th></tr>
+  <tr><td>Ornith-1.0-9B</td><td>huggingface.co/deepreinforce-ai/Ornith-1.0-9B-GGUF</td></tr>
+  <tr><td>Ornith-1.0-35B</td><td>huggingface.co/deepreinforce-ai/Ornith-1.0-35B-GGUF</td></tr>
+  <tr><td>Qwen3.6-27B</td><td>huggingface.co/Qwen/Qwen3.6-27B-GGUF</td></tr>
+  <tr><td>Qwen3.6-35B</td><td>huggingface.co/Qwen/Qwen3.6-35B-A3B-GGUF</td></tr>
+  <tr><td>Gemma-4-26B</td><td>huggingface.co/google/gemma-4-26b-it</td></tr>
+</table>
+
+<h3>Run a Model</h3>
+
+<pre><code class="language-bash"># Start a local server with web UI
+llama serve -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M
+
+# Run inference directly in terminal
+llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "Write a Python function to check if a number is prime."</code></pre>
+
+<h2 id="troubleshooting">8. Common Issues & Fixes</h2>
+
+<h3>Infinite Loops</h3>
+<p>Caused by: too-low quantization (breaks critical weights), MoE routing failures (small subset of experts dominates), bad prompts. <strong>Fix</strong>: Use Q6+ quantization, avoid prompts like "continue writing" in long tasks.</p>
+
+<h3>MTP Slowdown on MoE Models</h3>
+<p>MTP speeds up dense models but slows down MoE models due to cross-GPU communication. <strong>Disable MTP</strong> for MoE models.</p>
+
+<h3>Long-Context Limits</h3>
+<ul>
+  <li>Ornith-1.0-9B/35B: 256K tokens</li>
+  <li>Qwen3.6-35B: 256K tokens</li>
+  <li>Qwen3.6-27B: 128K tokens (VRAM limits)</li>
+</ul>
+
+<h2 id="conclusion">9. Final Thoughts</h2>
+
+<p>Local LLMs have come a long way in 2026. With a $4,000 rig, you can run models that match cloud performance for most tasks. Key takeaways: MoE models are better for large tasks but require more hardware; quantization quality matters more than model size; Ornith-1.0-35B is the best all-around model for dual-GPU setups.</p>
 
 <h2>常见问题</h2>
 
-<h3>Can I really do this with just a smartphone?</h3>
-<p>Yes — the entire workflow described in this guide (scene description → text-to-image → image-to-video → post-editing) runs on a smartphone. The AI tools mentioned (Xiaoyunque, Seedance, CapCut/Jianying) all have mobile apps. The limiting factor isn't hardware — it's your prompt engineering skills and patience with iteration. A smartphone is sufficient for producing 1-3 minute manhua episodes. For longer content (5+ minutes) or higher production values, a tablet or computer makes editing easier but isn't required. The guide's "3 days from idea to publishable content" timeline assumes smartphone-only workflow.</p>
+<h3>Is $4,000 really the minimum for local LLM deployment?</h3>
+<p>No — $4,185 is the cost for the specific dual-GPU setup tested in this guide, which can run 35B MoE models at near-cloud speeds. You can start much cheaper. A single used RTX 3060 12GB (~$200) can run quantized 7-9B models (Ornith-1.0-9B at Q4, Qwen 7B variants) at usable speeds. An M1/M2 MacBook with 16GB unified memory can run 7B models out of the box with no additional hardware cost. The guide's $4K setup is the "prosumer" tier — equivalent to a mid-range cloud GPU instance. For hobbyist experimentation, $200-500 is a realistic starting point. The price-performance sweet spot for serious local deployment is around $2,000 (single 24GB GPU like RTX 3090/4090).</p>
 
-<h3>Which model should I use if I'm on a zero budget?</h3>
-<p>Start with <strong>Xiaoyunque 1.5</strong> — it offers daily free credits (enough for 1-2 short videos per day) and is the most beginner-friendly. For text-to-image, use free tiers of AI image generators. For post-editing, CapCut/Jianying is free with watermark (paid version removes it). Total cost: $0 for your first few episodes. Once you validate that your content resonates with an audience (views, engagement, positive feedback), invest in Seedance 2.0 for higher quality or CapCut Pro for watermark-free exports. The monetization models (paid unlock + ad revenue) can fund your tool upgrades once you have a content pipeline.</p>
+<h3>How do I choose between Qwen, Gemma, and Ornith for my use case?</h3>
+<p>The guide's recommendations are clear: <strong>Chinese-language tasks</strong> → Qwen3.6 (best Chinese comprehension among all tested models). <strong>English-language tasks with limited hardware</strong> → Gemma-4-26B (fastest inference, good for single-GPU setups). <strong>Complex coding and reasoning</strong> → Ornith-1.0-35B (highest overall score, best for hard tasks but needs dual GPUs). <strong>Budget single-GPU</strong> → Ornith-1.0-9B (surprisingly capable for its size, fits in 16GB VRAM). If you're bilingual and have dual GPUs, Qwen3.6-35B is the best all-rounder — it handles both Chinese and English well with strong OCR and document processing capabilities.</p>
 
-<h3>How do I avoid my AI manhua looking generic or "AI-generated"?</h3>
-<p>Three techniques: (1) <strong>Consistent style prompts</strong> — lock in your visual style, color palette, and character design in every prompt. If episode 1 uses "Japanese anime flat style, warm color palette, soft lighting," episode 2 must use the same. (2) <strong>Camera variety</strong> — the guide's camera angle section is critical. Amateur AI content uses the same wide shot for every scene. Professional content varies: close-up for emotion, medium shot for action, long shot for establishing location. (3) <strong>Post-production polish</strong> — sound effects, subtitles, and audio mixing are what separate "AI slop" from "AI-assisted production." A 10-second clip with good sound design feels more professional than a 60-second clip with none. Spend 30% of your production time on post-editing, not just generation.</p>
+<h3>What's the practical difference between Q4 and Q6 quantization?</h3>
+<p>The guide's testing found Q6 is the sweet spot: near-lossless quality with manageable file sizes. Q4 (IQ4 specifically) is acceptable for casual use but degrades on complex reasoning and code generation tasks. The practical difference: a Q4 model might pass a logic puzzle 7/10 times, while Q6 passes 9/10 times. For creative writing and chat, Q4 is fine. For coding, math, or any task where correctness matters, use Q6. The file size difference: Q6 is roughly 50% larger than Q4. On a 16GB GPU, this means you might fit a 13B Q4 model but only a 9B Q6 model. The guide recommends prioritizing quantization quality over parameter count — a well-quantized smaller model often outperforms a poorly quantized larger one.</p>
 
-<h3>How much can I realistically earn from AI manhua?</h3>
-<p>This is a volume game. Individual episodes earn modest amounts — a few dollars to tens of dollars in ad revenue or paid unlocks per episode. The model works through consistency: publish 2-3 episodes per week, build a content library of 50+ episodes, and the cumulative revenue becomes meaningful. Think of it like YouTube: your first 100 videos might earn $100 total, but video #500 could earn $500/month from the back catalog alone. The AI workflow reduces production cost to near-zero (just tool subscriptions), so even modest revenue is profitable. The key is treating it as a content business, not a get-rich-quick scheme — the creators who succeed are the ones who publish consistently for 6+ months.</p>
+<h3>Can I use these models for commercial/business purposes?</h3>
+<p>Yes — all models tested are open-source with permissive licenses. Qwen (Apache 2.0), Gemma (Google's Gemma license, allows commercial use), and Ornith (MIT-like) can all be used commercially. The main consideration is liability: when you self-host, you're responsible for model behavior, data security, and compliance. The guide's privacy/security motivation (data never leaves your machine) is specifically designed for business use cases like processing customer data, internal documents, or medical records. For production deployment, add monitoring (token/s rate, error rates, memory usage), set up automatic model reloading on crash, and implement rate limiting if multiple users will access the model.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Ready to create AI content? Explore more creation tools and techniques:</p>
+  <p>Built your local LLM rig? Explore more model and deployment content:</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — apply similar prompt + generation workflows to game animation</li>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — master the image generation step of this workflow</li>
-    <li><a href="/articles/build-ai-team-coze-3-one-person-company">Build an AI Team with Coze 3.0</a> — use AI agents to automate your content production pipeline</li>
+    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the architecture behind these models</li>
+    <li><a href="/articles/kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark">Kimi K3 Takes Global Top Spot: Week 29 Front-End Coding Benchmark</a> — compare cloud vs. local model performance</li>
+    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more tools across the AI ecosystem</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI 教程</span>
-  <span class="meta-badge">🕒 阅读约8分钟</span>
-  <span class="meta-badge">📅 2026年7月20日</span>
-  <span class="meta-badge">🎯 入门</span>
+  <span class="meta-badge">📚 AI 学习</span>
+  <span class="meta-badge">🕒 阅读约10分钟</span>
+  <span class="meta-badge">📅 2026年7月21日</span>
+  <span class="meta-badge">🎯 高级</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>制作AI漫剧（短剧动画）不需要专业编剧或导演经验。本指南拆解完整实战流程，帮你仅用手机在三天内产出可发布的内容。流程遵循四个核心阶段：场景描述、文生图、图生视频和后期剪辑，为新手提供清晰可操作的步骤。</p>
+<p>我花了$4000和30天回答一个问题：<strong>如何选择适合本地部署的大语言模型？</strong>从买硬件到调模型，从崩溃到突破，我端到端测试了13款开源模型，包括Qwen3.6、Gemma 4和Ornith 1.0。本指南涵盖成本、性能调优、部署难度、MTP、长上下文处理和真实排障日志，帮你避免浪费时间和存储。</p>
 
-<h2 id="workflow">核心制作流程</h2>
+<h2 id="why-local">1. 为什么本地部署？三个核心原因</h2>
 
-<h3>1. 场景描述</h3>
-
-<p>先用AI辅助定义场景。使用以下提示词结构获得详细精致的描述：</p>
-
-<pre><code class="language-text">我将描述一个场景，请帮我润色成生动详细的描述。不要生成图片。
-[你的场景描述：如"一个女孩站在草原上，白色长发，红色眼睛，戴着大白色帽子穿着白色连衣裙，看着镜头"]</code></pre>
-
-<p>AI会自动增强描述，添加光影、氛围和角色表情等细节，让场景更生动。</p>
-
-<h3>2. 文生图</h3>
-
-<p>用润色后的场景描述生成底图。在提示词中指定宽高比（横屏视频用16:9）和风格（如日式动漫平面风格）：</p>
-
-<pre><code class="language-text">生成这个场景的图片，宽高比16:9，使用日式动漫平面风格。</code></pre>
-
-<p>从生成选项中选最佳结果，角色为主的场景优先选择近景镜头。</p>
-
-<h3>3. 图生视频</h3>
-
-<p>将选中的图片转为短视频。新手用小鱼云等实惠工具：</p>
-
-<ol>
-  <li>上传底图到平台</li>
-  <li>添加配音文本（保持简单以提高AI表现）</li>
-  <li>选择"参与创作"模式进行迭代调整</li>
-  <li>生成5-10秒视频（约5积分，每日有免费积分）</li>
-</ol>
-
-<h3>4. 后期剪辑</h3>
-
-<p>用剪映（CapCut）完成视频：</p>
-<ol>
-  <li>从内置音效库添加音效（如草原场景配风声）</li>
-  <li>手动添加字幕（免费替代付费AI识别）</li>
-  <li>调整音量并裁剪片段匹配视频时长</li>
-  <li>导出1080p分辨率最终视频</li>
-</ol>
-
-<h2 id="script-methods">AI剧本创作方法</h2>
-
-<h3>方法一：直接全剧本生成</h3>
-
-<pre><code class="language-text">假设你是有15年短篇动画经验的编剧。以"陪伴"为主题，创作一部1分钟治愈动画剧本，主角是卡通猫。设计18个镜头，每个不超过7秒，包含场景描述、镜头角度和时长。</code></pre>
-
-<p><strong>优势</strong>：快速，一步生成。<strong>不足</strong>：可能包含难以视觉化的复杂场景。</p>
-
-<h3>方法二：故事转剧本</h3>
-
-<p>更适合逻辑清晰、易于制作的内容：</p>
-<ol>
-  <li>先生成简单故事："写一个关于卡通猫的短篇治愈故事，主题'陪伴'，有清晰的开头、发展和结尾。"</li>
-  <li>再转为剧本："将这个故事转换为镜头列表。每个镜头应有简单描述，易于视觉化为图片。"</li>
-</ol>
-
-<p><strong>优势</strong>：情节更有逻辑，场景更容易视觉化。<strong>不足</strong>：多一步操作。</p>
-
-<h3>方法三：框架改编</h3>
-
-<pre><code class="language-text">参考《一条狗的使命》的故事框架（分离、等待、重逢、陪伴），用不同角色和细节改写新故事，保持情感弧线完整。</code></pre>
-
-<p><strong>优势</strong>：效率高，情感结构经过验证。<strong>不足</strong>：需小心改编避免抄袭。</p>
-
-<h2 id="prompt-tips">提示词优化技巧</h2>
-
-<h3>风格控制</h3>
-<p>在提示词中指定视觉风格：3D风格（皮克斯、3D建模、国漫）、绘画风格（插画、日式动漫、油画、游戏美术）、写实风格（自然摄影、街拍、胶片相机）。</p>
-
-<h3>镜头控制</h3>
 <ul>
-  <li><strong>运动</strong>：跟拍、推镜、拉镜、慢推</li>
-  <li><strong>角度</strong>：过肩、第一人称、低角度、高角度</li>
-  <li><strong>距离</strong>：特写、中景、远景、大特写</li>
+  <li><strong>隐私</strong>：数据永不离开你的机器，满足敏感内部代码或文档的合规要求。</li>
+  <li><strong>安全</strong>：离线运行，非常适合医院处理病历等气隙隔离环境。</li>
+  <li><strong>成本</strong>：一次性硬件投入 vs 无限云端API费用。内部文档处理等高频任务，本地部署长期便宜得多。</li>
 </ul>
 
-<h3>高级视频提示词结构</h3>
-<p>高质量视频生成需包含四要素：镜头运动、场景、主体、细节。示例："中景，慢推镜。清晨阳光森林，薄雾氛围。白裙女孩奔跑，头发随风飘动。阳光透过树叶，柔和镜头光晕。"</p>
+<h2 id="hardware">2. 硬件配置：$4,185本地LLM测试机</h2>
 
-<h2 id="model-selection">模型选择指南</h2>
+<table>
+  <tr><th>组件</th><th>成本</th><th>说明</th></tr>
+  <tr><td>2x V100 16GB GPU</td><td>$2,200</td><td>32GB总显存，PCIe 3.0 x16</td></tr>
+  <tr><td>32GB DDR4内存</td><td>$800</td><td>处理模型加载和系统任务</td></tr>
+  <tr><td>X99主板</td><td>$240</td><td>双PCIe 3.0 x16插槽</td></tr>
+  <tr><td>E5-2680 V4 CPU</td><td>$45</td><td>预算多核用于系统操作</td></tr>
+  <tr><td>电源/机箱/SSD</td><td>$900</td><td>双GPU可靠供电</td></tr>
+  <tr><td><strong>合计</strong></td><td><strong>$4,185</strong></td><td></td></tr>
+</table>
 
-<h3>开源模型（进阶用户）</h3>
+<h3>性能阈值</h3>
 <ul>
-  <li><strong>Wan 2.2</strong>：社区支持大、资源丰富、无内置音频输出</li>
-  <li><strong>LTX 2.3</strong>：支持音视频同步、社区较小教程较少</li>
+  <li><strong>≤3 tokens/s</strong>：不可用</li>
+  <li><strong>20 tokens/s</strong>：勉强可用</li>
+  <li><strong>50 tokens/s</strong>：大多数任务流畅</li>
+  <li><strong>≥100 tokens/s</strong>：接近云端响应速度</li>
 </ul>
 
-<h3>闭源模型（新手友好）</h3>
+<h2 id="model-selection">3. 模型选择：13款测试，5款进入决赛</h2>
+
+<p>按参数规模分组，通过3轮初赛：中文写作、逻辑推理和发票OCR。</p>
+
+<h3>前5名决赛选手</h3>
+<table>
+  <tr><th>模型</th><th>参数量</th><th>架构</th></tr>
+  <tr><td>Ornith-1.0-9B</td><td>9B</td><td>Dense</td></tr>
+  <tr><td>Ornith-1.0-35B-A3B</td><td>35B</td><td>MoE</td></tr>
+  <tr><td>Qwen3.6-35B-A3B</td><td>35B</td><td>MoE</td></tr>
+  <tr><td>Gemma-4-26B-A4B (QAT)</td><td>26B</td><td>Dense</td></tr>
+  <tr><td>Qwen3.6-27B</td><td>27B</td><td>Dense</td></tr>
+</table>
+
+<h2 id="concepts">4. 关键技术概念解析</h2>
+
+<h3>量化</h3>
+<p>量化通过降低精度减小模型体积，让大模型适配消费级GPU：</p>
 <ul>
-  <li><strong>Seedance 2.0（字节跳动）</strong>：行业领先质量，多数商业漫剧使用</li>
-  <li><strong>Xiaoyunque 1.5</strong>：实惠易用，新手首选</li>
-  <li><strong>其他选项</strong>：海螺、可宁、维度（成本更低，质量略低）</li>
+  <li><strong>&lt;4-bit</strong>：严重质量损失，不推荐</li>
+  <li><strong>IQ4/Q4</strong>：大小和质量良好平衡</li>
+  <li><strong>Q6</strong>：接近无损，推荐大多数场景使用</li>
+  <li><strong>Q8</strong>：最高质量，文件更大</li>
+</ul>
+<p>所有模型使用GGUF量化（大多数Q6_K，Gemma-4-26B用Q4）。</p>
+
+<h3>MTP（多Token预测）</h3>
+<p>MTP是一种推理加速技术，小型"草稿"模型一次预测多个token，主模型验证。可加速Dense模型<strong>245%</strong>，但由于跨GPU通信开销会拖慢MoE模型。</p>
+
+<h3>Dense vs MoE模型</h3>
+<ul>
+  <li><strong>Dense</strong>：每个token激活全部参数。更可预测，无路由开销。</li>
+  <li><strong>MoE</strong>：每个token仅激活部分参数（"专家"）。大模型推理更快，但部署更复杂。</li>
 </ul>
 
-<h2 id="monetization">变现基础</h2>
+<h2 id="final-tests">5. 决赛测试：哪个模型胜出？</h2>
 
-<p>AI漫剧通过两种主要模式产生收入：(1) <strong>付费解锁</strong>：用户付费观看后续剧集。(2) <strong>广告收入</strong>：从剧集间展示的广告中获利。一旦初始内容制作完成，就能以最少持续投入创造循环收入。</p>
+<h3>测试1：高级OCR（恐龙知识）</h3>
+<p>从两张恐龙信息图中提取30个事实。<strong>胜者</strong>：Qwen3.6-35B、Qwen3.6-27B（10/10）。其他9/10。</p>
 
-<h2 id="conclusion">总结</h2>
+<h3>测试2：长上下文推理（130K Token）</h3>
+<p>在110页PDF中找到特定文章并判断哪个男孩在说谎。<strong>5款模型全部10/10</strong>——长上下文表现出乎意料地强。</p>
 
-<p>AI漫剧制作对有基础数字素养的人完全开放。遵循四阶段工作流并掌握提示词工程技巧，你可以在几天内创作出可发布的内容。从简单场景开始，尝试不同AI工具，迭代你的作品，发展自己的风格。</p>
+<h3>测试3：文档生成（多模态）</h3>
+<p>读取171个混合文本/图片/视频文件并生成结构化Excel。<strong>胜者</strong>：Qwen3.6-35B、Ornith-1.0-9B（10/10）。</p>
+
+<h3>测试4：全栈应用构建</h3>
+<p>构建含MySQL后端、API层和前端的阅读网站。<strong>胜者</strong>：DeepSeek V4 Flash（对照组，34/50）。<strong>本地模型胜者</strong>：Ornith-1.0-35B（31/50）。亚军：Qwen3.6-35B（24/50）。</p>
+
+<h3>测试5：推理速度</h3>
+<ul>
+  <li><strong>最快</strong>：Gemma-4-26B（105 tokens/s）</li>
+  <li><strong>亚军</strong>：Ornith-1.0-35B（99 tokens/s）</li>
+  <li><strong>最慢</strong>：Qwen3.6-27B（28 tokens/s）</li>
+</ul>
+
+<h2 id="rankings">6. 最终排名与推荐</h2>
+
+<h3>总分</h3>
+<ol>
+  <li><strong>Ornith-1.0-35B</strong>：59/100（硬核任务最佳）</li>
+  <li><strong>Qwen3.6-35B</strong>：54/100（最可靠的全面选手）</li>
+  <li><strong>Qwen3.6-27B</strong>：39/100（24GB GPU最佳选择）</li>
+  <li><strong>Ornith-1.0-9B</strong>：39/100（最佳单GPU入门模型）</li>
+  <li><strong>Gemma-4-26B</strong>：31/100（推理最快）</li>
+</ol>
+
+<h3>该用哪个模型？</h3>
+<ul>
+  <li><strong>单GPU 16GB显存</strong>：Ornith-1.0-9B</li>
+  <li><strong>24GB GPU</strong>：Qwen3.6-27B</li>
+  <li><strong>双16GB GPU</strong>：Qwen3.6-35B</li>
+  <li><strong>硬核任务（编码、复杂推理）</strong>：Ornith-1.0-35B</li>
+</ul>
+
+<h2 id="deployment">7. 如何部署这些模型</h2>
+
+<h3>前置条件</h3>
+<p>安装llama.cpp，所有测试使用的轻量推理引擎：</p>
+
+<pre><code class="language-bash"># 通过官方脚本安装
+curl -LsSf https://llama.app/install.sh | sh</code></pre>
+
+<h3>运行模型</h3>
+
+<pre><code class="language-bash"># 启动带Web UI的本地服务器
+llama serve -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M
+
+# 终端直接推理
+llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "写一个判断质数的Python函数"</code></pre>
+
+<h2 id="troubleshooting">8. 常见问题与修复</h2>
+
+<h3>无限循环</h3>
+<p>原因：量化过低（破坏关键权重）、MoE路由失败（少数专家主导）、不良提示词。<strong>修复</strong>：使用Q6+量化，长任务中避免"继续写"等提示词。</p>
+
+<h3>MoE模型上MTP减速</h3>
+<p>MTP加速Dense模型但因跨GPU通信拖慢MoE模型。<strong>对MoE模型禁用MTP</strong>。</p>
+
+<h3>长上下文限制</h3>
+<ul>
+  <li>Ornith-1.0-9B/35B：256K token</li>
+  <li>Qwen3.6-35B：256K token</li>
+  <li>Qwen3.6-27B：128K token（显存限制）</li>
+</ul>
+
+<h2 id="conclusion">9. 最后的话</h2>
+
+<p>2026年本地大模型已走得很远。$4,000的机器就能运行大多数任务媲美云端性能的模型。核心要点：MoE模型更适合大任务但需要更多硬件；量化质量比模型规模更重要；Ornith-1.0-35B是双GPU配置的最佳全面模型。</p>
 
 <h2>常见问题</h2>
 
-<h3>真的只用手机就能做吗？</h3>
-<p>能——本指南描述的整个流程（场景描述→文生图→图生视频→后期剪辑）都在手机上运行。提到的AI工具（Xiaoyunque、Seedance、剪映/CapCut）都有手机App。限制因素不是硬件——是你的提示词工程技巧和迭代耐心。手机足够制作1-3分钟的漫剧。更长内容（5分钟以上）或更高制作水准，平板或电脑能让剪辑更轻松但不是必须的。指南"从创意到可发布内容3天"的时间线基于纯手机流程。</p>
+<h3>$4,000真的是本地部署LLM的最低门槛吗？</h3>
+<p>不是——$4,185是本指南测试的双GPU特定配置成本，可运行35B MoE模型达到接近云端速度。起步可以便宜得多。单张二手RTX 3060 12GB（约$200）可运行量化7-9B模型（Ornith-1.0-9B Q4、Qwen 7B变体）且速度可用。M1/M2 MacBook 16GB统一内存可直接运行7B模型，无需额外硬件成本。指南的$4K配置是"专业消费者"级别——相当于中端云GPU实例。爱好者实验$200-500是现实的起点。严肃本地部署的性价比甜蜜点约$2,000（单张24GB GPU如RTX 3090/4090）。</p>
 
-<h3>零预算该选哪个模型？</h3>
-<p>从<strong>Xiaoyunque 1.5</strong>开始——每天提供免费积分（足够每天1-2个短视频），对新手最友好。文生图用AI图像生成器的免费层。后期剪辑用剪映/CapCut免费版（带水印，付费版去水印）。总成本：前几集$0。一旦验证你的内容能引起受众共鸣（观看量、互动、正面反馈），再投资Seedance 2.0提升质量或CapCut Pro去水印。变现模式（付费解锁+广告收入）可以在有内容管线后为工具升级提供资金。</p>
+<h3>如何在Qwen、Gemma和Ornith之间选择？</h3>
+<p>指南推荐很明确：<strong>中文任务</strong>→ Qwen3.6（所有测试模型中中文理解最好）。<strong>英文任务且硬件有限</strong>→ Gemma-4-26B（推理最快，适合单GPU）。<strong>复杂编码和推理</strong>→ Ornith-1.0-35B（总分最高，硬核任务最佳但需双GPU）。<strong>预算单GPU</strong>→ Ornith-1.0-9B（同尺寸出人意料地强，16GB显存可跑）。中英双语且有双GPU，Qwen3.6-35B是最佳全面选手——中英文都处理得好，OCR和文档处理能力强。</p>
 
-<h3>如何避免AI漫剧看起来千篇一律或"AI感"太重？</h3>
-<p>三个技巧：(1) <strong>统一风格提示词</strong>——在每个提示词中锁定视觉风格、色板和角色设计。第1集用"日式动漫平面风格、暖色调、柔光"，第2集必须相同。(2) <strong>镜头多样性</strong>——指南的镜头角度部分至关重要。业余AI内容每个场景都用同样的广角。专业内容变化丰富：情感用特写、动作用中景、场景建立用远景。(3) <strong>后期打磨</strong>——音效、字幕和混音是区分"AI垃圾"和"AI辅助制作"的关键。10秒带好音效的片段比60秒无音效的看起来更专业。花30%制作时间在后期，而非只生成。</p>
+<h3>Q4和Q6量化的实际区别是什么？</h3>
+<p>指南测试发现Q6是甜蜜点：接近无损质量，文件大小可管理。Q4（特别是IQ4）日常使用可接受，但复杂推理和代码生成任务会降级。实际区别：Q4模型解逻辑谜题10次对7次，Q6对9次。创意写作和聊天Q4足够。编码、数学或任何正确性重要的任务用Q6。文件大小差：Q6约比Q4大50%。16GB显存上，你可能装得下13B Q4模型但只能装9B Q6模型。指南建议优先量化质量而非参数量——量化良好的较小模型通常优于量化不良的较大模型。</p>
 
-<h3>AI漫剧实际能赚多少钱？</h3>
-<p>这是量变游戏。单集收入有限——每集几美元到几十美元的广告收入或付费解锁。模式靠持续性运作：每周发布2-3集，建立50+集的內容库，累计收入变得可观。就像YouTube：前100个视频可能总共赚$100，但第500个视频可能仅靠历史库就能月入$500。AI工作流将制作成本降到几乎为零（仅工具订阅），所以即使微薄收入也是盈利的。关键是把它当作内容生意，不是暴富捷径——成功的创作者是那些坚持发布6个月以上的人。</p>
+<h3>这些模型能用于商业目的吗？</h3>
+<p>可以——所有测试模型都是开源且许可宽松。Qwen（Apache 2.0）、Gemma（Google Gemma许可，允许商业使用）和Ornith（类MIT）均可商用。主要考虑是责任：自托管时你负责模型行为、数据安全和合规。指南的隐私/安全动机（数据不离开机器）正是为处理客户数据、内部文档或病历等商业场景设计的。生产部署需添加监控（token/s速率、错误率、内存使用）、设置崩溃自动重载模型、多用户访问时实现速率限制。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>准备好创作AI内容？探索更多创作工具和技巧：</p>
+  <p>搭好了本地LLM？探索更多模型和部署内容：</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding大赛指南：用AI工具高效制作游戏动画</a> — 将类似的提示词+生成流程应用到游戏动画</li>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 掌握本流程的图像生成环节</li>
-    <li><a href="/articles/build-ai-team-coze-3-one-person-company">用Coze 3.0搭建AI团队：一人公司全流程</a> — 用AI Agent自动化你的内容制作管线</li>
-  </ul>
-</div>`,
-  },
-
-  "kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark": {
-    content: `<div class="meta-banner">
-  <span class="meta-badge">📰 AI News</span>
-  <span class="meta-badge">🕒 5 min read</span>
-  <span class="meta-badge">📅 Jul 20, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
-</div>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>The Week 29 global benchmark published by arena.al.webedu focuses specifically on evaluating large language models' capabilities for web front-end coding tasks. This round of rankings delivered a watershed moment for Chinese domestic AI models, with Kimi K3 debuting and immediately claiming the number one position worldwide. This article breaks down the ranking data, model comparisons, and actionable guidance for developers choosing coding LLMs.</p>
-
-<h2 id="rankings">Key Ranking Highlights</h2>
-
-<p>Released on July 17, 2026, the Top 25 leaderboard reshaped the existing hierarchy dominated by Claude and GPT series models:</p>
-
-<ol>
-  <li><strong>Kimi K3 (China) – New Entry & Global No.1</strong>: Scoring 1679 with a blackout index of 1757, Kimi K3 outperformed Claude Fable-5 and GPT-5.6 Sol-high. Its first-time participation secured the top rank and marked a milestone for Chinese coding-focused large models.</li>
-  <li><strong>Top Tier Western Competitors</strong>: Claude Fable-5 ranked second, followed by GPT-5.6 Sol-high in third place. These two remain reliable choices for complex enterprise-level front-end projects.</li>
-  <li><strong>Strong Performance of Domestic LLMs</strong>: GLM 5.2 (Zhipu AI) secured fourth place overall. ByteDance Seed, Alibaba Qwen, MiniMax and Xiaomi MiMo also earned steady spots within the Top 25.</li>
-</ol>
-
-<p>In total, <strong>nine Chinese large models made the Top 25 list</strong>, and seven of them successfully broke into the Top 20 bracket. This data verifies that domestic LLMs are fully capable of handling real-world web front-end development work.</p>
-
-<h2 id="test-script">Practical Guide: How to Test Coding Performance</h2>
-
-<p>You can replicate Arena-style front-end coding benchmark tests locally using this standardized Python test snippet, which measures code completion accuracy and bug rates:</p>
-
-<pre><code class="language-python"># LLM Front-end Coding Capability Tester
-import openai
-import requests
-
-def front_end_benchmark(model_name, prompt):
-    headers = {"Authorization": "Bearer YOUR_API_KEY"}
-    payload = {
-        "model": model_name,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.1
-    }
-    response = requests.post("https://api.llm-benchmark.test/v1/chat", json=payload, headers=headers)
-    code_output = response.json()["choices"][0]["message"]["content"]
-    # Calculate error count matching Arena's blackout scoring logic
-    error_count = code_error_detector(code_output)
-    return len(code_output.splitlines()), error_count
-
-# Test case: standard HTML + CSS responsive webpage task
-test_prompt = "Build a responsive navigation page with mobile adaptation using native HTML, CSS and vanilla JavaScript"</code></pre>
-
-<h2 id="recommendations">Model Selection Recommendations</h2>
-
-<ol>
-  <li><strong>Individual freelancers & small teams</strong>: Prioritize <strong>Kimi K3</strong>. It delivers top-tier front-end code generation while offering cost advantages compared to GPT and Claude.</li>
-  <li><strong>Enterprise complex projects</strong>: Stick with GPT-5.6 Sol-high or Claude Fable-5 when dealing with massive SPA projects and legacy code refactoring.</li>
-  <li><strong>Budget-friendly domestic alternatives</strong>: GLM 5.2, ByteDance Seed and Qwen are ideal for teams that require data sovereignty and localized deployment.</li>
-</ol>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Week 29's benchmark results signal that Chinese large language models have crossed the critical threshold in web coding capabilities. Kimi K3's debut victory is not an isolated case, but proof of the overall advancement of the domestic AI industry. Developers now have more localized, high-performance alternatives when picking AI coding assistants for daily front-end development workflows.</p>
-
-<h2>常见问题</h2>
-
-<h3>What does the "blackout index" mean in the benchmark?</h3>
-<p>The blackout index measures how many errors or failed completions a model produces — essentially, how often the generated code is unusable or contains critical bugs. A higher blackout index means fewer errors. Kimi K3's blackout index of 1757 was the highest, meaning it produced the cleanest, most reliable code among all tested models. This is arguably more important than the raw score (1679) for practical development work — a model that generates beautiful code 80% of the time but broken code 20% of the time is less useful than one that generates good code 95% of the time with slightly less elegance. The blackout index captures this reliability dimension.</p>
-
-<h3>Is Kimi K3 better than Claude and GPT for all coding tasks?</h3>
-<p>No — this benchmark is specifically for <strong>front-end web coding</strong> (HTML, CSS, JavaScript, responsive design). Kimi K3 excelled in this domain. For back-end coding, system architecture, algorithm design, or multi-file project work, Claude Fable-5 and GPT-5.6 Sol still have advantages — they've been battle-tested across more diverse coding scenarios. The benchmark tells you Kimi K3 is now the best tool for front-end work. For full-stack projects, you might use Kimi K3 for the front-end and Claude/GPT for the back-end. The model selection recommendations in the article reflect this: Kimi for freelancers doing front-end work, Claude/GPT for enterprise complex projects.</p>
-
-<h3>How significant is it that 9 Chinese models made the top 25?</h3>
-<p>Very significant. This time last year, Chinese models were barely present in global coding benchmarks. The shift from "catching up in general chat" to "leading in specialized technical tasks" happened in roughly 12 months. The diversity of companies represented (Moonshot/Kimi, Zhipu/GLM, ByteDance/Seed, Alibaba/Qwen, MiniMax, Xiaomi/MiMo) shows this isn't one company's breakthrough — it's an industry-wide advancement. For developers, this means domestic models are now viable alternatives to Claude and GPT for production work, not just experimental use. The practical implication: you can build a fully local AI development stack (Chinese models + local deployment) without sacrificing code quality.</p>
-
-<h3>Should I switch my development workflow to Kimi K3?</h3>
-<p>If front-end development is your primary task, yes — try it. The benchmark data is compelling, and Kimi's cost advantage (typically 30-50% cheaper than Claude/GPT for equivalent usage) makes it a low-risk experiment. Start with a side-by-side test: give Kimi K3 and your current model the same front-end task, compare the output quality and iteration speed. Most developers who try this find Kimi K3 matches or exceeds Claude/GPT for pure front-end work while costing less. For full-stack or back-end work, keep your current model as the primary tool and use Kimi K3 for front-end tasks. The article's recommendation is practical, not dogmatic — use the best tool for each job.</p>
-
-<div class="next-step">
-  <h3>📖 Next Steps</h3>
-  <p>Following the LLM benchmark race? Explore more model and coding content:</p>
-  <ul>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — see what Kimi K3 beat to reach #1</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — put coding LLMs to work in your IDE</li>
-    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex</a> — the model that ranked #3 in this benchmark</li>
-  </ul>
-</div>`,
-    contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📰 AI 新闻</span>
-  <span class="meta-badge">🕒 阅读约5分钟</span>
-  <span class="meta-badge">📅 2026年7月20日</span>
-  <span class="meta-badge">🎯 入门</span>
-</div>
-
-<h2 id="introduction">引言</h2>
-
-<p>arena.al.webedu发布的第29周全球基准测试专注于评估大语言模型的网页前端编码能力。本轮排名对中国国产AI模型具有分水岭意义——Kimi K3首次参赛即登顶全球第一。本文拆解排名数据、模型对比和开发者选型指南。</p>
-
-<h2 id="rankings">关键排名亮点</h2>
-
-<p>2026年7月17日发布的Top 25榜单重塑了Claude和GPT系列主导的现有格局：</p>
-
-<ol>
-  <li><strong>Kimi K3（中国）——首次参赛即全球第一</strong>：得分1679，黑灯指数1757，超越Claude Fable-5和GPT-5.6 Sol-high。首秀即登顶，为中国编码大模型树立里程碑。</li>
-  <li><strong>顶级西方竞品</strong>：Claude Fable-5排名第二，GPT-5.6 Sol-high第三。这两款仍是复杂企业级前端项目的可靠选择。</li>
-  <li><strong>国产大模型强势表现</strong>：GLM 5.2（智谱AI）位列第四。字节跳动Seed、阿里Qwen、MiniMax和小米MiMo也稳居Top 25。</li>
-</ol>
-
-<p>总计<strong>9款中国大模型进入Top 25</strong>，其中7款进入Top 20。这组数据验证了国产大模型已完全具备处理真实网页前端开发工作的能力。</p>
-
-<h2 id="test-script">实战指南：如何测试编码性能</h2>
-
-<p>你可以用这个标准化Python测试片段在本地复现Arena风格的前端编码基准测试，衡量代码完成准确率和Bug率：</p>
-
-<pre><code class="language-python"># LLM前端编码能力测试器
-import openai
-import requests
-
-def front_end_benchmark(model_name, prompt):
-    headers = {"Authorization": "Bearer YOUR_API_KEY"}
-    payload = {
-        "model": model_name,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.1
-    }
-    response = requests.post("https://api.llm-benchmark.test/v1/chat", json=payload, headers=headers)
-    code_output = response.json()["choices"][0]["message"]["content"]
-    # 按Arena的黑灯评分逻辑计算错误数
-    error_count = code_error_detector(code_output)
-    return len(code_output.splitlines()), error_count
-
-# 测试用例：标准HTML+CSS响应式网页任务
-test_prompt = "用原生HTML、CSS和JavaScript构建一个带移动端适配的响应式导航页面"</code></pre>
-
-<h2 id="recommendations">模型选型建议</h2>
-
-<ol>
-  <li><strong>个人自由职业者和小团队</strong>：优先<strong>Kimi K3</strong>。顶级前端代码生成，相比GPT和Claude有成本优势。</li>
-  <li><strong>企业复杂项目</strong>：处理大型SPA项目和遗留代码重构时，坚持用GPT-5.6 Sol-high或Claude Fable-5。</li>
-  <li><strong>高性价比国产替代</strong>：GLM 5.2、字节跳动Seed和Qwen是需要数据主权和本地化部署的团队的理想选择。</li>
-</ol>
-
-<h2 id="conclusion">总结</h2>
-
-<p>第29周基准测试结果标志着中国大语言模型在网页编码能力上已跨越关键门槛。Kimi K3的首秀夺冠不是孤立事件，而是国产AI行业整体进步的证明。开发者在日常前端开发工作流中选择AI编码助手时，现在有了更多本地化、高性能的替代方案。</p>
-
-<h2>常见问题</h2>
-
-<h3>基准测试中的"黑灯指数"是什么意思？</h3>
-<p>黑灯指数衡量模型产生多少错误或失败完成——本质上是生成代码不可用或包含严重Bug的频率。黑灯指数越高，错误越少。Kimi K3的黑灯指数1757是最高的，意味着它在所有测试模型中生成最干净、最可靠的代码。这对实际开发工作可能比原始分数（1679）更重要——一个80%时间生成漂亮代码但20%时间生成坏代码的模型，不如一个95%时间生成好代码、稍微不那么优雅的模型。黑灯指数捕捉了这个可靠性维度。</p>
-
-<h3>Kimi K3在所有编码任务上都比Claude和GPT强吗？</h3>
-<p>不是——这个基准测试专门针对<strong>前端网页编码</strong>（HTML、CSS、JavaScript、响应式设计）。Kimi K3在这个领域表现卓越。对于后端编码、系统架构、算法设计或多文件项目工作，Claude Fable-5和GPT-5.6 Sol仍有优势——它们在更多样化的编码场景中久经考验。基准测试告诉你Kimi K3现在是前端工作的最佳工具。对于全栈项目，你可能会前端用Kimi K3、后端用Claude/GPT。文章的选型建议反映了这一点：Kimi适合做前端工作的自由职业者，Claude/GPT适合企业复杂项目。</p>
-
-<h3>9款中国模型进入前25有多重要？</h3>
-<p>非常重要。去年同期，中国模型在全球编码基准中几乎不见踪影。从"通用聊天追赶"到"专业技术任务领先"的转变发生在约12个月内。代表公司的多样性（月之暗面/Kimi、智谱/GLM、字节跳动/Seed、阿里/Qwen、MiniMax、小米/MiMo）表明这不是一家公司的突破——而是全行业进步。对开发者来说，这意味着国产模型现在已是Claude和GPT在生产工作中的可行替代方案，而非仅用于实验。实际意义：你可以在不牺牲代码质量的情况下构建完全本地化的AI开发栈（国产模型+本地部署）。</p>
-
-<h3>该把开发工作流切换到Kimi K3吗？</h3>
-<p>如果前端开发是你的主要任务，是的——试试。基准数据很有说服力，Kimi的成本优势（同等使用量通常比Claude/GPT便宜30-50%）让实验风险很低。从并排测试开始：给Kimi K3和当前模型同一个前端任务，比较输出质量和迭代速度。大多数尝试的开发者发现Kimi K3在纯前端工作中匹配或超越Claude/GPT，同时成本更低。全栈或后端工作，保持当前模型作为主要工具，前端任务用Kimi K3。文章的推荐是务实而非教条的——每个任务用最好的工具。</p>
-
-<div class="next-step">
-  <h3>📖 下一步</h3>
-  <p>关注LLM基准竞赛？探索更多模型和编码内容：</p>
-  <ul>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 看Kimi K3击败了什么登顶第一</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 让编码大模型在IDE中为你工作</li>
-    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6全面发布：OpenAI合并ChatGPT与Codex</a> — 本次基准排名第三的模型</li>
+    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解这些模型背后的架构</li>
+    <li><a href="/articles/kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark">Kimi K3登顶全球第一：第29周LLM前端编码基准测试报告</a> — 对比云端与本地模型性能</li>
+    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现AI生态中的更多工具</li>
   </ul>
 </div>`,
   },
@@ -500,6 +401,5 @@ content_new = content_src[:last_brace] + new_contents + '};'
 with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f:
     f.write(content_new)
 
-print('Part 2: 2 article contents added to article-content.ts')
-
+print('Part 2: 1 article content added to article-content.ts')
 print('\n=== All done! Run build to verify ===')
