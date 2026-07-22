@@ -2748,4 +2748,17 @@ export const articles: Article[] = [
     date: "2026-07-21",
   },
 
+  {
+    slug: "ai-powered-excel-workflow-4-practical-skills-beginners",
+    title: "AI-Powered Excel Workflow: 4 Practical Skills for Beginners",
+    titleZh: "AI加持Excel工作流：新手必学的4个实用技能",
+    description: "Four essential AI+Excel skills for beginners — defining clear requirements to auto-generate tables, identifying and fixing data quality issues, setting business rules for tiered calculations with VBA macros, and asking the right questions to generate interactive HTML dashboards.",
+    descriptionZh: "新手必学的四个AI+Excel核心技能——用清晰需求自动生成表格、识别修复数据质量问题、设定业务规则实现阶梯计算+VBA宏、提出正确问题生成交互式HTML仪表盘。",
+    category: "AI Tutorials",
+    tags: ["Excel", "AI", "Productivity", "Data Analysis", "Beginner", "Tutorial", "Dashboard"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT"],
+    date: "2026-07-22",
+  },
+
 ];
