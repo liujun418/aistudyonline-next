@@ -2761,4 +2761,17 @@ export const articles: Article[] = [
     date: "2026-07-22",
   },
 
+  {
+    slug: "why-99-percent-ai-knowledge-bases-fail-in-practice",
+    title: "Why 99% of AI Knowledge Bases Fail in Practice",
+    titleZh: "为什么99%的AI知识库在实践中失败：RAG深度解析",
+    description: "A deep dive into why most AI knowledge bases fail — covering RAG fundamentals, ingestion pipeline (cleaning, semantic chunking, vectorization), QA pipeline (question understanding, reranking, context assembly), four-layer implementation, hybrid retrieval, and practical lessons from real enterprise projects.",
+    descriptionZh: "深度解析AI知识库失败的根源——RAG核心原理、摄入管线（清洗、语义分块、向量化）、问答管线（问题理解、重排序、上下文组装）、四层实施方法、混合检索和企业实战经验。",
+    category: "AI Learning",
+    tags: ["RAG", "Knowledge Base", "Vector Database", "Enterprise AI", "Chunking", "Embedding", "Engineering"],
+    difficulty: "advanced",
+    toolsMentioned: [],
+    date: "2026-07-23",
+  },
+
 ];
