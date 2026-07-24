@@ -2774,4 +2774,29 @@ export const articles: Article[] = [
     date: "2026-07-23",
   },
 
+  {
+    slug: "6-popular-ai-agent-tools-reviewed-chinese-beginners-2026",
+    title: "6 Popular AI‑Agent Tools Reviewed: Which One Should Chinese Beginners Pick in 2026",
+    titleZh: "2026年6款主流AI Agent工具横评：中国新手该选哪个？",
+    description: "A practical ranking of 6 AI Agent tools for Chinese beginners — Codex (5/5), WorkBuddy (4/5), Trae & Z-Code (3.5/5), Claude Code (2.5/5), OpenClaw/Hermes (2/5) — with setup steps, pros/cons, and a decision guide based on network/payment accessibility.",
+    descriptionZh: "面向中国新手的6款AI Agent工具实用排名——Codex(5/5)、WorkBuddy(4/5)、Trae和Z-Code(3.5/5)、Claude Code(2.5/5)、OpenClaw/Hermes(2/5)——含安装步骤、优缺点和基于网络/支付条件的选型决策指南。",
+    category: "AI Tools",
+    tags: ["AI Agent", "Tools Comparison", "Codex", "WorkBuddy", "Claude Code", "China", "Beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent", "Tencent WorkBuddy", "Claude Code", "TRAE Framework", "Z-Code"],
+    date: "2026-07-24",
+  },
+  {
+    slug: "master-ai-driven-development-openspec-practical-guide-beginners",
+    title: "Master AI-Driven Development with OpenSpec: A Practical Guide for Beginners",
+    titleZh: "用OpenSpec掌握AI驱动开发：新手实操指南",
+    description: "A beginner-friendly guide to OpenSpec — a lightweight specification-driven development (SDD) framework that structures AI coding projects through a 4-step workflow (Explore → Generate Docs → Develop → Archive), comparing it with Spec-Kit and Superpowers for different project scales.",
+    descriptionZh: "OpenSpec新手实操指南——轻量级规格驱动开发（SDD）框架，通过4步工作流（需求探索→文档生成→开发→归档）结构化AI编码项目，与Spec-Kit和Superpowers的横向对比。",
+    category: "AI Tools",
+    tags: ["OpenSpec", "SDD", "Specification-Driven Development", "AI Coding", "Framework", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["OpenSpec"],
+    date: "2026-07-24",
+  },
+
 ];
