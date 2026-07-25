@@ -2799,4 +2799,17 @@ export const articles: Article[] = [
     date: "2026-07-24",
   },
 
+  {
+    slug: "mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures",
+    title: "Mastering AI Image Generation: How to Fix Prompt Issues and Avoid 'Draw Failures'",
+    titleZh: "掌握AI图像生成：修复提示词问题，避免'翻车'",
+    description: "A deep dive into common AI image generation failures — 'prompt pollution' (keyword association traps), the 'visual compensation' bug, and camera control workarounds — with practical fixes like word substitution, reverse-trap techniques, and direct visual element description.",
+    descriptionZh: "深度解析AI图像生成常见失败——'提示词污染'（关键词关联陷阱）、'视觉补偿'Bug和相机控制技巧——含词汇替换、反向陷阱利用和直接视觉元素描述等实用修复方法。",
+    category: "AI Tutorials",
+    tags: ["AI Image Generation", "Prompt Engineering", "Midjourney", "DALL-E", "Tutorial", "Tips"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Midjourney", "DALL-E"],
+    date: "2026-07-25",
+  },
+
 ];
