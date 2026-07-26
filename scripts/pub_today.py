@@ -1,231 +1,205 @@
 """
-Publish July 25, 2026 — 1 article, no new tools.
+Publish July 26, 2026 — 1 article, no new tools.
 """
-import os
+import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
-BASE = r"C:\Users\jun\aistudyonline-next"
-os.chdir(BASE)
-
-with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
-    articles_src = f.read()
-
+with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: articles_src = f.read()
 new_articles = r"""  {
-    slug: "mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures",
-    title: "Mastering AI Image Generation: How to Fix Prompt Issues and Avoid 'Draw Failures'",
-    titleZh: "掌握AI图像生成：修复提示词问题，避免'翻车'",
-    description: "A deep dive into common AI image generation failures — 'prompt pollution' (keyword association traps), the 'visual compensation' bug, and camera control workarounds — with practical fixes like word substitution, reverse-trap techniques, and direct visual element description.",
-    descriptionZh: "深度解析AI图像生成常见失败——'提示词污染'（关键词关联陷阱）、'视觉补偿'Bug和相机控制技巧——含词汇替换、反向陷阱利用和直接视觉元素描述等实用修复方法。",
-    category: "AI Tutorials",
-    tags: ["AI Image Generation", "Prompt Engineering", "Midjourney", "DALL-E", "Tutorial", "Tips"],
-    difficulty: "intermediate",
-    toolsMentioned: ["Midjourney", "DALL-E"],
-    date: "2026-07-25",
+    slug: "ai-powered-spreadsheet-creation-future-office-productivity",
+    title: "AI-Powered Spreadsheet Creation: The Future of Office Productivity",
+    titleZh: "AI驱动电子表格创建：未来办公生产力的革命",
+    description: "A practical guide to AI-powered spreadsheet creation — from choosing AI tools and providing profession-specific requirements, to advanced use cases like e-commerce operation tables, expense report processing, and data visualization with interactive charts.",
+    descriptionZh: "AI驱动电子表格创建实操指南——从选择AI工具、按职业提供需求，到电商运营表、费用报销处理和数据可视化等进阶场景。",
+    category: "AI Use Cases",
+    tags: ["AI", "Spreadsheet", "Excel", "Productivity", "Office", "Automation", "Beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["Doubao"],
+    date: "2026-07-26",
   },
 
 """
-
 last_bracket = articles_src.rfind('];')
-articles_new = articles_src[:last_bracket] + new_articles + '];'
-
-with open('src/lib/articles.ts', 'w', encoding='utf-8') as f:
-    f.write(articles_new)
-
+with open('src/lib/articles.ts', 'w', encoding='utf-8') as f: f.write(articles_src[:last_bracket] + new_articles + '];')
 print('Part 1: 1 article added')
 
-with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
-    content_src = f.read()
-
+with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: content_src = f.read()
 new_contents = r'''
-  "mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures": {
+  "ai-powered-spreadsheet-creation-future-office-productivity": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI Tutorials</span>
-  <span class="meta-badge">🕒 5 min read</span>
-  <span class="meta-badge">📅 Jul 25, 2026</span>
-  <span class="meta-badge">🎯 Intermediate</span>
+  <span class="meta-badge">💼 AI Use Cases</span>
+  <span class="meta-badge">🕒 4 min read</span>
+  <span class="meta-badge">📅 Jul 26, 2026</span>
+  <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>When you use AI to generate images like "a boy playing games on a phone", you might get strange results — like the boy holding the phone backward, just so the game screen is visible. Even though AI can create sci-fi blockbusters, it struggles with simple scenes like this. This article will break down why this happens and give you practical tips to fix it.</p>
+<p>Creating spreadsheets is a tedious task that often requires hours of manual work, formula memorization, and data verification. However, AI is transforming this process, making it faster, more accurate, and accessible to everyone.</p>
 
-<h2 id="prompt-pollution">Why Does This Happen? The "Prompt Pollution" Problem</h2>
+<h2 id="struggle">The Traditional Spreadsheet Struggle</h2>
 
-<p>The real issue lies in your prompt. AI has a "keyword association trap" (or "prompt pollution"): when you mention a word, even a negated one, AI automatically fills in related stereotypes.</p>
+<p>Traditionally, spreadsheet creation involves hours of copying and pasting data, memorizing complex formulas, manually verifying data entry, and spending excessive time on data organization. These tasks are time-consuming and prone to human error, especially for beginners.</p>
 
-<p>For example:</p>
+<h2 id="ai-solution">The AI Solution</h2>
+
+<p>AI tools can now handle all these spreadsheet tasks automatically. With just a few simple steps, you can create professional-looking spreadsheets in minutes.</p>
+
+<h3>Step 1: Choose Your AI Tool</h3>
+<p>Select an AI assistant with spreadsheet capabilities, such as Doubao.</p>
+
+<h3>Step 2: Access the AI Spreadsheet Feature</h3>
+<p>In the chat interface, select the "AI Spreadsheet" option.</p>
+
+<h3>Step 3: Provide Your Requirements</h3>
+<p>Enter your profession and the type of spreadsheet you need. For example:</p>
+<pre><code class="language-text">I am a company manager, please create an employee roster with data anonymization</code></pre>
+
+<h3>Step 4: Receive Your Spreadsheet</h3>
+<p>The AI will generate a complete spreadsheet with all information neatly organized.</p>
+
+<h3>Step 5: Customize with Simple Commands</h3>
+<p>If you need to modify the spreadsheet, simply describe your request:</p>
+<pre><code class="language-text">Sort the hire date column from oldest to newest</code></pre>
+
+<h2 id="advanced">Advanced Use Cases</h2>
+
+<h3>1. Complex E-commerce Operation Tables</h3>
+<p>AI can create detailed operation tables with clear task modules, priority sorting, progress tracking, status indicators, additional team member information sheets, and data dashboards.</p>
+
+<h3>2. Expense Report Processing</h3>
+<p>For messy files like company receipts:</p>
+<ol>
+  <li>Upload all receipt files to the AI</li>
+  <li>Provide the command:</li>
+</ol>
+<pre><code class="language-text">Extract key information from these receipts and create a professional expense report spreadsheet with data classification</code></pre>
+<ol start="3">
+  <li>The AI will generate an expense summary table, a detailed travel itinerary table, and all data properly organized and anonymized.</li>
+</ol>
+
+<h3>3. Data Visualization</h3>
+<p>AI can also transform spreadsheet data into interactive charts:</p>
+<pre><code class="language-text">Create interactive charts to highlight key data trends</code></pre>
+
+<h2 id="benefits">Benefits of AI Spreadsheet Creation</h2>
 <ul>
-  <li>If you say "generate a person wearing a nurse cap", AI will not only add the cap but also a nurse uniform and a hospital background.</li>
-  <li>Even if you say "generate a person not wearing a nurse cap", AI still puts them in a hospital.</li>
-  <li>"Not wearing a safety helmet" → AI places the person at a construction site.</li>
-  <li>"Not wearing a Christmas hat" → AI creates a Christmas scene.</li>
-  <li>"Not wearing a chef hat" → AI shows a kitchen scene.</li>
+  <li><strong>Speed</strong>: Create spreadsheets in minutes instead of hours</li>
+  <li><strong>Accuracy</strong>: Eliminate human error in data entry</li>
+  <li><strong>Accessibility</strong>: No need to memorize complex formulas</li>
+  <li><strong>Professional Quality</strong>: Generate polished, well-organized spreadsheets</li>
+  <li><strong>Customization</strong>: Easily modify with simple commands</li>
 </ul>
 
-<p>The word "game" in your prompt becomes a "pollutant". AI prioritizes showing the game scene, even making the boy hold the phone backward to display the screen.</p>
-
-<h2 id="fix-pollution">How to Fix It: Avoid the "Pollutant" Word</h2>
-
-<p>The solution is simple: play a word game. Instead of "a boy playing games on the subway", rephrase it to "a boy sitting on the subway, holding the phone horizontally with both hands". By removing the "game" pollutant, the problem is solved.</p>
-
-<h2 id="reverse-trap">Advanced Tip: Reverse the Trap</h2>
-
-<p>You can even use this trap to your advantage. For example, when generating "a boy editing photos on a computer":</p>
-<ul>
-  <li>If you say "a boy looking at the front of the monitor", AI flips the screen so you (not the boy) can see it.</li>
-  <li>Instead, say "a boy looking at the back of the monitor". This "ungrammatical" sentence for humans makes AI generate the correct image.</li>
-</ul>
-
-<p>Another example: Instead of "a man with eight-pack abs", use "a man with broad shoulders and narrow waist". This avoids the "abs" pollutant and still creates a fit look.</p>
-
-<h2 id="visual-compensation">The "Visual Compensation" Bug</h2>
-
-<p>Another issue is the "visual compensation" bug. AI lacks a perfect world model and can't understand abstract actions like "facing away" or "looking at". It compensates by drawing concrete visual elements:</p>
-<ul>
-  <li>"Facing away" → AI draws the back, backpack, and helmet.</li>
-  <li>"Looking at" → AI draws the eyes, visor, and front face.</li>
-</ul>
-
-<p>When both "facing away" and "looking at" are in the prompt, AI compromises by showing a side view.</p>
-
-<h2 id="fix-visual">How to Fix It: Describe Visual Elements Directly</h2>
-
-<p>To generate an astronaut facing away from the camera and looking at Earth, avoid ambiguous words. Instead of "an astronaut standing on the moon, facing away from the camera, looking at Earth", use "an astronaut standing on the moon, facing away from the camera, with a planet Earth floating in the distant space". This describes the visual elements (the astronaut's back and Earth) instead of abstract actions.</p>
-
-<h2 id="camera-control">Advanced: Control the Camera</h2>
-
-<p>You can use visual compensation to control the camera:</p>
-<ul>
-  <li>To <strong>zoom in</strong> on an astronaut floating in space, describe details like "worn metal buckles, flashing indicator lights on the chest control panel, clear nylon woven texture on the arms". AI will focus on these details, effectively zooming in.</li>
-  <li>For a <strong>close-up</strong>, describe the astronaut's face: "clear eyes through the visor, complex iris texture in the pupils, fine hairs on both sides of the nose".</li>
-  <li>To change the <strong>shooting angle</strong>, describe elements from that angle. For a top-down view, say "the round top of the helmet, the shoulder contour visible from above, the top connector of the oxygen cylinder".</li>
-</ul>
-
-<h2 id="final-tips">Final Tips</h2>
-
-<p>When generating images, avoid the mistake of first building the entire space and then placing the camera. Instead, describe what you can see in the scene. This will greatly reduce your chance of "drawing failures".</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>AI is revolutionizing spreadsheet creation, making it accessible to everyone regardless of their Excel skills. Whether you're a beginner or an experienced professional, AI tools can help you save time, reduce errors, and create better spreadsheets.</p>
 
 <h2>常见问题</h2>
 
-<h3>Why does AI add things I explicitly told it NOT to include?</h3>
-<p>This is the "negation paradox" in prompt engineering. AI models don't process negation the way humans do — when you say "no hat", the model activates the concept of "hat" first, then tries to suppress it. The activation is stronger than the suppression, so hat-related elements (hairstyles, head accessories, sometimes even the hat itself) leak through. The fix: never use negation in image prompts. Instead of "a person without glasses", say "a person with clear, unobstructed eyes". Instead of "no background clutter", say "minimalist white background, empty space". This is the single most impactful habit change for better AI image generation.</p>
+<h3>Which AI tool is best for spreadsheet creation?</h3>
+<p>For Chinese users, <strong>Doubao</strong> (mentioned in this guide) has a built-in AI Spreadsheet feature that's the most accessible — it's free, requires no setup, and the Chinese-language interface is intuitive. <strong>WorkBuddy</strong> has stronger Excel file operation capabilities (direct local file access, batch processing, VBA macro generation). <strong>ChatGPT/Codex</strong> can generate Excel formulas, VBA macros, and HTML dashboards from natural language. For simple table creation, Doubao is fastest. For complex data processing and integration with existing Excel workflows, WorkBuddy or Codex are better choices. The guide's principles (profession + requirements → AI generates) work across all tools.</p>
 
-<h3>Does this advice apply to all AI image generators (Midjourney, DALL-E, Stable Diffusion)?</h3>
-<p>Yes — the prompt pollution and visual compensation behaviors are universal across all major image generation models. They stem from how these models are trained (text-image pairs), not from any specific model's architecture. Midjourney is slightly more resilient to pollution because of its stronger aesthetic training, but it still exhibits the same patterns. DALL-E 3 is more literal and benefits most from the "describe visual elements directly" technique. Stable Diffusion is the most sensitive to prompt pollution and benefits most from the "avoid pollutant words" technique. The camera control trick (describing details to force zoom) works across all three.</p>
+<h3>How is this different from the July 22 AI Excel Skills article?</h3>
+<p>The July 22 article focused on <strong>skills</strong> — specific prompt patterns for data quality analysis, business rule calculations, and dashboard generation. This article focuses on the <strong>workflow</strong> — the end-to-end process of going from a vague need ("I need a spreadsheet") to a finished product. It also covers use cases the previous article didn't: e-commerce operation tables, expense report processing from receipts, and the profession-specific approach (telling AI your role for better context). The two articles are complementary: read this one for the 5-step process, then read the July 22 article for advanced prompt techniques.</p>
 
-<h3>How do I know if my prompt has a "pollutant" word?</h3>
-<p>Ask yourself: "If I remove this word, do I still convey the same visual?" If yes, the word is likely a pollutant. "A boy playing games" → "A boy holding a phone horizontally with both hands" — the visual is the same, but the pollutant "game" is gone. The test: generate both versions and compare. If the second version is more accurate, you found a pollutant. Common pollutants to watch for: action verbs (playing, eating, working), abstract roles (doctor, teacher, gamer), and emotional states (happy, sad, angry). Replace them with visual descriptions: what the person is physically doing, what they're wearing, what their expression looks like, what's in the environment.</p>
+<h3>Can AI handle sensitive data in spreadsheets (like employee information)?</h3>
+<p>Yes, with caveats. The guide explicitly mentions "data anonymization" in the employee roster example. AI tools can mask or replace sensitive fields (names → Employee IDs, phone numbers → masked digits, salaries → ranges). However, the security of this depends on your tool: <strong>cloud-based tools</strong> (Doubao, ChatGPT) process data on their servers — avoid uploading truly sensitive data. <strong>Local tools</strong> (WorkBuddy, Claude Code, Codex with local mode) process data on your machine — safer for internal documents. For any sensitive data, use the anonymization prompt pattern: "Create a spreadsheet with [purpose] and anonymize all personal information (replace names with IDs, mask contact details, use salary ranges instead of exact figures)."</p>
 
-<h3>Can I use these techniques for video generation too?</h3>
-<p>Yes — the same principles apply to AI video generation (Sora, Seedance, Runway, etc.) with one additional consideration: motion. For video prompts, you need to describe both the visual elements (using the techniques in this article) AND the motion. Example: instead of "a person walking happily", use "a person walking forward at a steady pace, arms swinging gently, hair bouncing with each step, slight smile on the face, bright sunlight casting moving shadows". The motion description replaces the abstract "happily" without introducing a pollutant word. The camera control trick (describing details to control framing) works for video too, but you'll also want to specify camera movement explicitly: "slow push-in, handheld style, slight vertical bounce".</p>
+<h3>What if the AI generates incorrect formulas or data?</h3>
+<p>Always verify. The guide's "customize with simple commands" step (Step 5) is designed for quick corrections — if a formula is wrong, describe the expected behavior and the AI will fix it. For complex spreadsheets, use these verification prompts: "Check all formulas in this spreadsheet for errors" and "Verify that the totals in column X match the sum of individual entries." The AI can self-audit if you ask it to. For critical business spreadsheets, always do a manual spot-check of 5-10 data points before sharing. AI-generated spreadsheets are a starting point, not a finished product — the human review step is essential.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Mastered prompt fixes? Level up your AI image generation skills:</p>
+  <p>Mastered AI spreadsheets? Explore more office productivity:</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — apply these prompt techniques to a specific model</li>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — use these skills in a complete production pipeline</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master prompt engineering fundamentals</li>
+    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI-Powered Excel Workflow: 4 Practical Skills for Beginners</a> — advanced prompt techniques for Excel</li>
+    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners</a> — more AI office productivity features</li>
+    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy</a> — use WorkBuddy for local spreadsheet automation</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI 教程</span>
-  <span class="meta-badge">🕒 阅读约5分钟</span>
-  <span class="meta-badge">📅 2026年7月25日</span>
-  <span class="meta-badge">🎯 中级</span>
+  <span class="meta-badge">💼 AI 应用</span>
+  <span class="meta-badge">🕒 阅读约4分钟</span>
+  <span class="meta-badge">📅 2026年7月26日</span>
+  <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>用AI生成"男孩在手机上玩游戏"时，你可能得到奇怪的结果——比如男孩把手机拿反了，只为了让游戏画面可见。即使AI能创作科幻大片，却在简单场景上翻车。本文拆解为什么发生这种情况，并给出实用修复技巧。</p>
+<p>创建电子表格是一项繁琐的任务，通常需要数小时的手动工作、公式记忆和数据验证。然而，AI正在改变这一过程，使其更快、更准确、人人可用。</p>
 
-<h2 id="prompt-pollution">为什么会这样？"提示词污染"问题</h2>
+<h2 id="struggle">传统电子表格的困境</h2>
+<p>传统电子表格创建涉及数小时的复制粘贴数据、记忆复杂公式、手动验证数据输入和大量时间花在数据整理上。这些任务耗时且容易出错，对新手尤甚。</p>
 
-<p>真正的问题在于你的提示词。AI有一个"关键词关联陷阱"（或称"提示词污染"）：当你提到一个词，即使是否定的，AI也会自动填充相关的刻板印象。</p>
+<h2 id="ai-solution">AI解决方案</h2>
+<p>AI工具现在可以自动处理所有这些电子表格任务。只需几个简单步骤，几分钟内就能创建专业外观的电子表格。</p>
 
-<p>例如：</p>
+<h3>步骤1：选择AI工具</h3>
+<p>选择有电子表格能力的AI助手，如豆包。</p>
+
+<h3>步骤2：访问AI电子表格功能</h3>
+<p>在聊天界面中选择"AI电子表格"选项。</p>
+
+<h3>步骤3：提供需求</h3>
+<p>输入你的职业和需要的电子表格类型。例如：</p>
+<pre><code class="language-text">我是一名公司管理者，请创建一份员工花名册并进行数据脱敏</code></pre>
+
+<h3>步骤4：接收电子表格</h3>
+<p>AI将生成一份完整电子表格，所有信息排列整齐。</p>
+
+<h3>步骤5：用简单指令自定义</h3>
+<p>需要修改时，直接描述需求：</p>
+<pre><code class="language-text">将入职日期列从早到晚排序</code></pre>
+
+<h2 id="advanced">进阶场景</h2>
+
+<h3>1. 复杂电商运营表</h3>
+<p>AI可创建详细运营表，包含清晰的任务模块、优先级排序、进度跟踪、状态指示器、团队信息附表和数据分析仪表盘。</p>
+
+<h3>2. 费用报销处理</h3>
+<p>处理公司收据等杂乱文件：上传所有收据文件→输入指令"从这些收据中提取关键信息，创建专业费用报销电子表格并进行数据分类"→AI生成费用汇总表、详细行程表和所有数据妥善整理并脱敏。</p>
+
+<h3>3. 数据可视化</h3>
+<p>AI可将电子表格数据转化为交互式图表："创建交互式图表以突出关键数据趋势"。</p>
+
+<h2 id="benefits">AI电子表格的优势</h2>
 <ul>
-  <li>说"生成一个戴护士帽的人"，AI不仅加帽子，还会加护士服和医院背景。</li>
-  <li>即使说"生成一个不戴护士帽的人"，AI仍把人放在医院里。</li>
-  <li>"不戴安全帽"→AI把人放在建筑工地。</li>
-  <li>"不戴圣诞帽"→AI创造圣诞场景。</li>
-  <li>"不戴厨师帽"→AI展示厨房场景。</li>
+  <li><strong>速度</strong>：几分钟而非数小时创建电子表格</li>
+  <li><strong>准确性</strong>：消除数据录入中的人为错误</li>
+  <li><strong>可访问性</strong>：无需记忆复杂公式</li>
+  <li><strong>专业质量</strong>：生成精良、组织良好的电子表格</li>
+  <li><strong>可定制</strong>：简单指令轻松修改</li>
 </ul>
 
-<p>提示词中的"游戏"一词成为"污染物"。AI优先展示游戏画面，甚至让男孩反拿手机来显示屏幕。</p>
-
-<h2 id="fix-pollution">如何修复：避开"污染物"词汇</h2>
-
-<p>解决方案很简单：玩弄文字游戏。不写"男孩在地铁上玩游戏"，改写为"男孩坐在地铁上，双手横握手机"。去除"游戏"这个污染物，问题解决。</p>
-
-<h2 id="reverse-trap">进阶技巧：反向利用陷阱</h2>
-
-<p>你甚至可以利用这个陷阱。例如生成"男孩在电脑上编辑照片"：</p>
-<ul>
-  <li>说"男孩看着显示器正面"，AI翻转屏幕让你（而非男孩）能看到。</li>
-  <li>改为"男孩看着显示器背面"。对人类来说这句话"不合语法"，却让AI生成正确的画面。</li>
-</ul>
-
-<p>另一个例子：不写"有八块腹肌的男人"，写"宽肩窄腰的男人"。避开"腹肌"污染物，仍创造健美的外观。</p>
-
-<h2 id="visual-compensation">"视觉补偿"Bug</h2>
-
-<p>另一个问题是"视觉补偿"Bug。AI缺乏完美的世界模型，无法理解"背对"或"看着"等抽象动作。它通过绘制具体视觉元素来补偿：</p>
-<ul>
-  <li>"背对"→AI画出背部、背包和头盔。</li>
-  <li>"看着"→AI画出眼睛、面罩和正面脸部。</li>
-</ul>
-
-<p>当提示词中同时有"背对"和"看着"，AI妥协展示侧面视图。</p>
-
-<h2 id="fix-visual">如何修复：直接描述视觉元素</h2>
-
-<p>生成背对镜头看着地球的宇航员，避免模糊词汇。不写"宇航员站在月球上，背对镜头，看着地球"，写"宇航员站在月球上，背对镜头，远处太空飘浮着一颗蓝色星球"。这描述的是视觉元素（宇航员背影和地球）而非抽象动作。</p>
-
-<h2 id="camera-control">进阶：控制镜头</h2>
-
-<p>可以用视觉补偿来控制镜头：</p>
-<ul>
-  <li><strong>拉近</strong>太空漂浮宇航员：描述细节如"磨损的金属扣环、胸前控制面板闪烁的指示灯、手臂上清晰的尼龙编织纹理"。AI聚焦这些细节，相当于拉近镜头。</li>
-  <li><strong>特写</strong>：描述宇航员面部"透过面罩清晰可见的眼睛，瞳孔中复杂的虹膜纹理，鼻梁两侧的细密绒毛"。</li>
-  <li><strong>改变拍摄角度</strong>：从目标角度描述元素。俯视视角说"头盔圆顶、俯视可见的肩部轮廓、氧气瓶顶部连接器"。</li>
-</ul>
-
-<h2 id="final-tips">最后建议</h2>
-
-<p>生成图片时，避免先构建整个空间再放置镜头的错误。改为描述场景中你能看到什么。这将大大降低"翻车"概率。</p>
+<h2 id="conclusion">总结</h2>
+<p>AI正在革新电子表格创建，让每个人——无论Excel水平如何——都能使用。无论你是新手还是资深专业人士，AI工具都能帮你节省时间、减少错误、创建更好的电子表格。</p>
 
 <h2>常见问题</h2>
 
-<h3>为什么AI会添加我明确说不要的东西？</h3>
-<p>这是提示词工程中的"否定悖论"。AI模型不按人类方式处理否定——当你说"不要帽子"，模型先激活"帽子"概念，然后试图抑制它。激活强于抑制，所以帽子相关元素（发型、头饰，有时甚至是帽子本身）会泄露出来。修复方法：永远不在图像提示词中使用否定。不写"不戴眼镜的人"，写"眼睛清晰无遮挡的人"。不写"不要背景杂乱"，写"极简白色背景，空旷空间"。这是提升AI图像生成质量最具影响力的习惯改变。</p>
+<h3>创建电子表格用哪个AI工具最好？</h3>
+<p>对中国用户，<strong>豆包</strong>（本指南提及）内置AI电子表格功能最易用——免费、无需配置、中文界面直观。<strong>WorkBuddy</strong>有更强的Excel文件操作能力（直接本地文件访问、批量处理、VBA宏生成）。<strong>ChatGPT/Codex</strong>可从自然语言生成Excel公式、VBA宏和HTML仪表盘。简单表格创建豆包最快。复杂数据处理和与现有Excel工作流集成，WorkBuddy或Codex更好。本指南的原则（职业+需求→AI生成）适用于所有工具。</p>
 
-<h3>这些建议适用于所有AI图像生成器吗（Midjourney、DALL-E、Stable Diffusion）？</h3>
-<p>适用——提示词污染和视觉补偿行为在所有主流图像生成模型中都存在。它们源于这些模型的训练方式（文本-图像对），而非任何特定模型架构。Midjourney因更强的美学训练对污染略有抵抗力，但仍表现出相同模式。DALL-E 3更字面化，从"直接描述视觉元素"技巧中获益最多。Stable Diffusion对提示词污染最敏感，从"避开污染物词汇"技巧中获益最多。镜头控制技巧（描述细节强制拉近）三者通用。</p>
+<h3>这和7月22日的AI Excel技能文章有什么区别？</h3>
+<p>7月22日文章聚焦<strong>技能</strong>——数据质量分析、业务规则计算和仪表盘生成的具体提示词模式。本文聚焦<strong>工作流</strong>——从模糊需求（"我需要一个电子表格"）到成品端到端的过程。本文还涵盖前文未涉及的场景：电商运营表、从收据处理费用报销、以及基于职业的方法（告诉AI你的角色以获得更好上下文）。两篇文章互补：先读这篇掌握5步流程，再读7月22日文章学习高级提示词技巧。</p>
 
-<h3>怎么判断提示词中是否有"污染物"词汇？</h3>
-<p>问自己："如果去掉这个词，我还能传达同样的视觉吗？"如果能，这个词很可能就是污染物。"男孩玩游戏"→"男孩双手横握手机"——视觉相同，但污染物"游戏"消失了。测试方法：两个版本都生成并对比。如果第二版更准确，你找到了污染物。常见的污染物包括：动作动词（玩、吃、工作）、抽象角色（医生、老师、游戏玩家）和情绪状态（开心、悲伤、愤怒）。用视觉描述替换它们：人在具体做什么、穿什么、表情是什么样、环境中有什么。</p>
+<h3>AI能处理电子表格中的敏感数据吗（如员工信息）？</h3>
+<p>可以，但有条件。指南在员工花名册示例中明确提到"数据脱敏"。AI工具可以遮盖或替换敏感字段（姓名→员工编号、电话号码→打码数字、薪资→区间）。但安全性取决于工具：<strong>云端工具</strong>（豆包、ChatGPT）在服务器上处理数据——避免上传真正敏感数据。<strong>本地工具</strong>（WorkBuddy、Claude Code、Codex本地模式）在电脑上处理数据——内部文档更安全。处理任何敏感数据，使用脱敏提示词模式："创建一份[用途]电子表格，并对所有个人信息进行脱敏处理（将姓名替换为编号、联系方式打码、薪资使用区间而非精确数字）。"</p>
 
-<h3>这些技巧也能用于视频生成吗？</h3>
-<p>可以——相同原则适用于AI视频生成（Sora、Seedance、Runway等），只需额外考虑运动。视频提示词需要同时描述视觉元素（使用本文技巧）和运动。示例：不写"一个人开心地走路"，写"一个人稳步向前走，手臂轻轻摆动，头发随步伐弹跳，脸上带着浅浅微笑，明亮阳光投下移动的阴影"。运动描述替换了抽象的"开心"，没有引入污染物词汇。镜头控制技巧（描述细节控制构图）对视频同样有效，但还需明确指定镜头运动："慢推镜，手持风格，轻微垂直晃动"。</p>
+<h3>AI生成了错误公式或数据怎么办？</h3>
+<p>始终验证。指南的"用简单指令自定义"步骤（第5步）专为快速纠正设计——如果公式错误，描述预期行为，AI会修复。复杂电子表格用这些验证提示词："检查此电子表格中所有公式是否有错误"和"验证X列的总计是否与单个条目之和匹配"。AI可以自我审计，只要你要求。关键业务电子表格，分享前始终手动抽查5-10个数据点。AI生成的电子表格是起点而非成品——人类审查步骤必不可少。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>掌握了提示词修复？提升AI图像生成技能：</p>
+  <p>掌握了AI电子表格？探索更多办公生产力：</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 将提示词技巧应用到具体模型</li>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 在完整制作管线中使用这些技能</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 掌握提示词工程基础</li>
+    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI加持Excel工作流：新手必学的4个实用技能</a> — Excel高级提示词技巧</li>
+    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 更多AI办公生产力功能</li>
+    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 用WorkBuddy进行本地电子表格自动化</li>
   </ul>
 </div>`,
   },
 
 '''
-
 last_brace = content_src.rfind('};')
-content_new = content_src[:last_brace] + new_contents + '};'
-
-with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f:
-    f.write(content_new)
-
+with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f: f.write(content_src[:last_brace] + new_contents + '};')
 print('Part 2: 1 article content added')
 print('\n=== Done ===')

@@ -2812,4 +2812,17 @@ export const articles: Article[] = [
     date: "2026-07-25",
   },
 
+  {
+    slug: "ai-powered-spreadsheet-creation-future-office-productivity",
+    title: "AI-Powered Spreadsheet Creation: The Future of Office Productivity",
+    titleZh: "AI驱动电子表格创建：未来办公生产力的革命",
+    description: "A practical guide to AI-powered spreadsheet creation — from choosing AI tools and providing profession-specific requirements, to advanced use cases like e-commerce operation tables, expense report processing, and data visualization with interactive charts.",
+    descriptionZh: "AI驱动电子表格创建实操指南——从选择AI工具、按职业提供需求，到电商运营表、费用报销处理和数据可视化等进阶场景。",
+    category: "AI Use Cases",
+    tags: ["AI", "Spreadsheet", "Excel", "Productivity", "Office", "Automation", "Beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["Doubao"],
+    date: "2026-07-26",
+  },
+
 ];
