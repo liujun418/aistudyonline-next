@@ -2825,4 +2825,17 @@ export const articles: Article[] = [
     date: "2026-07-26",
   },
 
+  {
+    slug: "how-to-use-douyin-ai-creation-agent-generate-images-videos",
+    title: "How to Use Douyin's AI Creation Agent to Generate Images and Videos Without Complex Prompts",
+    titleZh: "抖音AI创作助手：无需复杂提示词也能生成图片和视频",
+    description: "A beginner-friendly guide to Douyin's AI Creation Agent powered by Seedream 5.0 Pro and Seedance 2.0 — conversational image and video generation without complex prompts, featuring reference photo upload, iterative refinement, trend-based creation, and one-click remixing of existing AI videos.",
+    descriptionZh: "抖音AI创作助手新手指南——搭载Seedream 5.0 Pro和Seedance 2.0，对话式图片和视频生成无需复杂提示词，支持参考照片上传、迭代优化、趋势创作和AI视频一键再创作。",
+    category: "AI Tools",
+    tags: ["Douyin", "AI Creation", "Seedream", "Seedance", "Image Generation", "Video Generation", "Beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["Seedream 5.0 Pro", "Seedance 2.0"],
+    date: "2026-07-27",
+  },
+
 ];
