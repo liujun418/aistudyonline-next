@@ -2838,4 +2838,17 @@ export const articles: Article[] = [
     date: "2026-07-27",
   },
 
+  {
+    slug: "full-practical-guide-ai-comic-drama-production-zero-to-published",
+    title: "Full Practical Guide to AI Comic Drama Production: From Zero to Published Video",
+    titleZh: "AI漫剧制作完全实战指南：从零到发布视频",
+    description: "A complete 4-step AI comic drama production workflow — scene description with AI refinement, text-to-image with style/aspect ratio control, image-to-video with dialogue and voice direction, and post-production editing with sound effects, subtitles, and trimming — plus AI script creation techniques.",
+    descriptionZh: "AI漫剧四步完整制作流程——AI润色场景描述、文生图（风格/比例控制）、图生视频（对话/声音指导）和后期剪辑（音效/字幕/裁剪）——含AI剧本创作技巧。",
+    category: "AI Tutorials",
+    tags: ["AI Comic Drama", "Video Generation", "Content Creation", "Seedance", "Xiaoyunque", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Seedance 2.0", "Xiaoyunque", "CapCut"],
+    date: "2026-07-28",
+  },
+
 ];
