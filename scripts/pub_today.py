@@ -1,18 +1,18 @@
-"""Publish July 28, 2026 — 1 article, no new tools."""
+"""Publish July 29, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "full-practical-guide-ai-comic-drama-production-zero-to-published",
-    title: "Full Practical Guide to AI Comic Drama Production: From Zero to Published Video",
-    titleZh: "AI漫剧制作完全实战指南：从零到发布视频",
-    description: "A complete 4-step AI comic drama production workflow — scene description with AI refinement, text-to-image with style/aspect ratio control, image-to-video with dialogue and voice direction, and post-production editing with sound effects, subtitles, and trimming — plus AI script creation techniques.",
-    descriptionZh: "AI漫剧四步完整制作流程——AI润色场景描述、文生图（风格/比例控制）、图生视频（对话/声音指导）和后期剪辑（音效/字幕/裁剪）——含AI剧本创作技巧。",
-    category: "AI Tutorials",
-    tags: ["AI Comic Drama", "Video Generation", "Content Creation", "Seedance", "Xiaoyunque", "Tutorial"],
+    slug: "correct-way-to-collaborate-with-ai-practical-guide",
+    title: "The Correct Way to Collaborate with AI: A Practical Guide",
+    titleZh: "与AI正确协作的方式：一份实用指南",
+    description: "A practical guide to effective AI collaboration using a 3-step framework — Put It Forward (start with real tasks, not tutorials), Explain It Clearly (break vague feelings into specific parameters), and Keep Asking (build a two-way question loop) — embracing 'learning by doing' over 'learn first, use later.'",
+    descriptionZh: "高效AI协作三步框架实操指南——提出来（从真实任务开始而非教程）、说清楚（将模糊感觉拆解为具体参数）、持续追问（构建双向问答循环）——拥抱'做中学'而非'先学后用'。",
+    category: "AI Learning",
+    tags: ["AI Collaboration", "Prompt Engineering", "Learning by Doing", "Productivity", "Beginner", "Guide"],
     difficulty: "beginner",
-    toolsMentioned: ["Seedance 2.0", "Xiaoyunque", "CapCut"],
-    date: "2026-07-28",
+    toolsMentioned: [],
+    date: "2026-07-29",
   },
 
 """
@@ -22,139 +22,160 @@ print('Part 1 done')
 
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "full-practical-guide-ai-comic-drama-production-zero-to-published": {
+  "correct-way-to-collaborate-with-ai-practical-guide": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI Tutorials</span>
-  <span class="meta-badge">🕒 6 min read</span>
-  <span class="meta-badge">📅 Jul 28, 2026</span>
+  <span class="meta-badge">📚 AI Learning</span>
+  <span class="meta-badge">🕒 5 min read</span>
+  <span class="meta-badge">📅 Jul 29, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>AI comic drama is a highly profitable form of animated short drama that allows audiences to unlock episodes by either paying or watching ads. In this guide, we will walk you through the complete process of creating an AI comic drama, from initial scene description to final post-production, using free AI tools.</p>
 
-<h2 id="workflow">Core Production Workflow</h2>
-<p>The AI video production process consists of four key steps: Scene Description → Text-to-Image Generation → Image-to-Video Generation → Post-Production Editing.</p>
+<p>Many people have taken dozens of AI courses but still struggle to use AI effectively. The problem is not with the courses or the tools themselves. The real issue is that they treat AI as a skill to be fully learned before being applied. In reality, AI is more like swimming, writing, or driving — you can't learn all the theory on land before jumping into the water.</p>
 
-<h2 id="step-1">Step 1: Scene Description</h2>
-<p>Use an AI assistant to help refine your scene description:</p>
-<pre><code class="language-text">I will provide you with a scene, please help me refine it into a detailed scene description, do not generate images: a girl standing by a grassland, with long white hair, red eyes, wearing a large white hat and a white dress, looking at the camera.</code></pre>
-<p><strong>Key Tips</strong>: Be clear about what you'll provide, specify what you want AI to do, and clearly state what you don't want.</p>
+<p>This guide will explain three key questions: Why can't you learn AI first and then use it? What is the truly effective way to collaborate with AI? And a learning path you might never have considered.</p>
 
-<h2 id="step-2">Step 2: Text-to-Image Generation</h2>
-<p>Once you have a refined scene description, generate images:</p>
-<pre><code class="language-text">Generate an image for this scene, with a 16:9 aspect ratio, using a flat Japanese anime style.</code></pre>
-<p><strong>Key Tips</strong>: Always specify aspect ratio (16:9 for horizontal videos), specify art style, generate multiple and select the best.</p>
+<h2 id="step-1">Step 1: Put It Forward</h2>
 
-<h2 id="step-3">Step 3: Image-to-Video Generation</h2>
-<p>After selecting the best image, generate a video:</p>
-<pre><code class="language-text">Generate a video from this image, with a 16:9 aspect ratio. The girl says: "I have forgotten my original name, just call me Bai. Do you remember your name?" Her voice is soft, and the wind gently blows her hair.</code></pre>
-<p><strong>Key Tips</strong>: Use tools like Xiaoyunque for cost-effective generation, 10 seconds recommended for beginners, let AI freely add details.</p>
+<p>Let's take an e-commerce scenario as an example. If you run an e-commerce business, you need to calculate the actual profit of a product every day. The profit is determined by four types of variables: exchange rate, shipping cost, platform commission, and return rate.</p>
 
-<h2 id="step-4">Step 4: Post-Production Editing</h2>
-<p>Use Jianying (CapCut) for final editing:</p>
+<p>The traditional way is to open a spreadsheet, fill in the data one by one, and check it repeatedly, which takes at least half an hour. But with AI, you only need to clearly explain your calculation logic, and it can directly turn this process into a usable tool.</p>
+
+<pre><code class="language-python"># Example of profit calculation logic
+def calculate_profit(cost, price, exchange_rate, shipping_cost, platform_commission, return_rate):
+    revenue = price * exchange_rate
+    total_cost = cost + shipping_cost + (revenue * platform_commission)
+    profit = revenue - total_cost
+    adjusted_profit = profit * (1 - return_rate)
+    return adjusted_profit</code></pre>
+
+<p>The first thing to learn about AI is not to learn tools or memorize prompts, but to put forward a real task you encounter.</p>
+
+<h2 id="step-2">Step 2: Explain It Clearly</h2>
+
+<p>Simply throwing out a task is usually not enough. You will find that the first version of the answer from AI is often not deep or accurate enough. Let's take a common scenario: you ask AI to make a poster, but the result always feels a bit off.</p>
+
+<p>You might say "it's not high-end enough", but "high-end" is not an effective instruction for AI. It is a vague feeling, not a set of executable parameters. "High-end" can be broken down into font selection, white space ratio, information density, rhythm control, and color relationship. Each of these is a direction that can be further broken down.</p>
+
+<pre><code class="language-text">Poster design requirements:
+- Font selection: Traditional style, bold weight, high contrast
+- White space ratio: 24px left and right, 32px top and bottom, 1.5x module spacing
+- Information density: 4 information blocks per screen, 3 information levels
+- Rhythm control: 6s animation duration, slow movement curve
+- Color relationship: Cool main color, strong contrast intensity</code></pre>
+
+<p>The more detailed you break it down, the closer the result from AI will be to what you want. When you are not satisfied with the answer from AI, don't think "why didn't AI answer correctly", but think "where didn't I explain clearly". This process is essentially not asking AI, but using AI to calibrate your own thinking.</p>
+
+<h2 id="step-3">Step 3: Keep Asking</h2>
+
+<p>In life, we are often trapped by emotions and can't find an exit. Many problems are not because you don't understand, but because there is no one who can accompany you to deduce slowly without interrupting or judging you. AI can just play this role.</p>
+
+<p>You can talk to AI about things like: "I always feel something is wrong with this matter", "I have a friend, and I'm not sure if he is using me", "I'm not sure if this life choice is correct".</p>
+
+<p>AI won't interrupt you halfway, and won't end the discussion with "you're thinking too much". You ask, it answers; it asks, you answer; you continue to ask, it continues to supplement. This two-way question-and-answer process is to establish a collaboration loop between you and AI.</p>
+
+<pre><code class="language-text">User: I'm in a very tangled mood, and I don't know whether to find a job first or prepare for the postgraduate entrance examination.
+AI: In fact, this is a crossroads that most people will encounter. There is no absolute right or wrong in choosing which path. The key is what you value more. If you want to be financially independent as soon as possible and accumulate work experience, it is more practical to find a job first; if you really want to improve your academic qualifications and change the track, taking the postgraduate entrance examination will give you more choices in the long run.</code></pre>
+
+<h2 id="learning-path">The Learning Path</h2>
+
+<p>The collaboration loop between you and AI is:</p>
 <ol>
-  <li><strong>Add Sound Effects</strong>: Match the scene (e.g., wind blowing through grass)</li>
-  <li><strong>Adjust Audio Levels</strong>: Balance sound effects with video</li>
-  <li><strong>Add Subtitles</strong>: Add dialogue text</li>
-  <li><strong>Trim the Video</strong>: Cut to desired length</li>
+  <li>Put forward a task</li>
+  <li>Get the result</li>
+  <li>Find the problem</li>
+  <li>Keep asking</li>
+  <li>Revise the result</li>
 </ol>
 
-<h2 id="script">Script Creation with AI</h2>
-<p>The core of AI script creation is precise prompting — Who, What, How:</p>
-<pre><code class="language-text">You are a skilled animation screenwriter specializing in one-minute healing animation series. Please write a one-minute animation core plot around the theme of "companionship", with the protagonist being a cartoon cat.</code></pre>
-
-<h2 id="conclusion">Conclusion</h2>
-<p>By following these four steps, you can create a high-quality AI comic drama from scratch. Remember to refine your prompts, experiment with different tools, and iterate on your work to achieve the best results.</p>
+<p>You don't gain the ability first and then start using it. You gain the ability gradually in the process of using it. This is "learning by doing". Just like you can only learn to swim in the water, you can only learn to use AI effectively in the process of using it.</p>
 
 <h2>常见问题</h2>
 
-<h3>How is this guide different from the July 20 AI Manhua guide?</h3>
-<p>The July 20 guide covered the <strong>production workflow</strong> plus script creation methods, monetization, and model selection. This guide is a <strong>streamlined production-only walkthrough</strong> — it focuses on the exact prompts and steps to go from idea to published video as fast as possible. It adds dialogue/voice direction in the image-to-video step (the July 20 guide didn't cover adding character dialogue to videos) and a simpler script creation template. Read the July 20 guide for the full ecosystem (monetization, model comparison, prompt optimization). Read this one for a quick-start production recipe you can follow today.</h3>
+<h3>How is this approach different from traditional prompt engineering courses?</h3>
+<p>Traditional prompt engineering courses teach you <strong>techniques first, then application</strong> — memorize frameworks (Role-Task-Context-Format), study examples, practice with exercises. This guide flips that: <strong>start with a real task, learn techniques as you need them</strong>. The profit calculation example in Step 1 came from a real e-commerce problem, not a textbook exercise. The poster design breakdown in Step 2 teaches parameterization because you encountered a "not high-end enough" problem, not because the curriculum said it was time to learn about design parameters. This approach has two advantages: (1) you're motivated because it's your real problem, and (2) you remember the technique because you discovered you needed it, not because you were told to learn it.</p>
 
-<h3>Which free tools should I use for each step?</h3>
-<p>Step 1 (Scene Description): Any free AI chat — Doubao, Kimi, ChatGPT free tier.<br>Step 2 (Text-to-Image): Seedream free tier or Xiaoyunque free daily credits.<br>Step 3 (Image-to-Video): Xiaoyunque (free daily credits, ~5 credits per 10s video).<br>Step 4 (Post-Production): Jianying/CapCut free version (watermark on export, paid version removes it). Total cost for your first episode: $0. The tools mentioned (Xiaoyunque, Jianying) were chosen specifically for their free tiers — you can produce a complete episode without spending anything.</p>
+<h3>Can AI really help with emotional and life decisions (Step 3)?</h3>
+<p>AI is not a therapist and should not replace one. But for <strong>structured thinking</strong> — untangling confused thoughts, exploring options systematically, playing devil's advocate — AI is surprisingly effective. The key mechanism in Step 3 is the <strong>uninterrupted questioning loop</strong>: humans interrupt, judge, offer unsolicited advice, or change the subject. AI doesn't. This creates a space where you can think out loud without social friction. The guide's example (job vs. grad school) is exactly the kind of structured decision where AI adds value: it can list pros/cons you haven't considered, ask clarifying questions about your priorities, and help you separate emotional reactions from factual constraints. For clinical mental health issues, seek professional help. For everyday tangled thinking, AI is an excellent sounding board.</p>
 
-<h3>How long does it take to produce one episode?</h3>
-<p>For a beginner following this guide: 2-3 hours for the first episode (includes learning curve). After 3-5 episodes: 30-60 minutes per episode. The bottleneck is usually image generation (waiting for results, selecting the best one) and post-production (sound effects and subtitle timing). The AI generation steps themselves take only 1-2 minutes each. The time goes into creative decisions: which image looks best, what sound effect fits, how to pace the subtitles.</p>
+<h3>What if I don't have a "real task" to start with?</h3>
+<p>Everyone has real tasks — they just might not recognize them as AI-solvable. The guide's e-commerce example is a spreadsheet task the person was already doing manually for 30 minutes daily. Look for: anything you do repeatedly (weekly reports, email drafts, data entry), anything you've been putting off ("I should organize these files someday"), anything where you feel the output isn't good enough (presentations, designs, writing). If you genuinely can't find a task, steal one: find a work email you need to reply to, a document you need to summarize, a schedule you need to plan. The bar for "real task" is low — it just needs to be something you actually need done, not a practice exercise.</p>
 
-<h3>Can I make money from AI comic dramas?</h3>
-<p>Yes, through platforms that support paid unlock or ad revenue models for short dramas. The July 20 AI Manhua guide covers monetization in detail (paid unlock + ad revenue). The key success factors: publish consistently (2-3 episodes/week), build a content library (50+ episodes), and focus on engaging story hooks in the first 3 seconds. Individual episodes earn modest amounts, but cumulative revenue from a large content library can become meaningful. The AI workflow reduces production cost to near-zero, so even modest revenue is profitable.</p>
+<h3>How long does it take to get good at this collaboration approach?</h3>
+<p>The first task takes the longest because you're learning both the tool and the collaboration mindset. Expect 1-2 hours for your first meaningful task (like the profit calculator in Step 1). The second and third tasks go faster — 30-45 minutes each — because you've internalized the loop: put forward → get result → find problem → keep asking → revise. After about 10 real tasks, the loop becomes automatic and each task takes 10-20 minutes. The transition point is when you stop thinking "let me use AI for this" and start thinking "let me describe this problem clearly" — at that point, AI collaboration is no longer a separate skill, it's just how you work.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Created your first episode? Level up your AI content production:</p>
+  <p>Ready to apply the collaboration loop? Put it into practice:</p>
   <ul>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — the complete ecosystem guide</li>
-    <li><a href="/articles/how-to-use-douyin-ai-creation-agent-generate-images-videos">How to Use Douyin's AI Creation Agent</a> — another conversational creation tool</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: Fix Prompt Issues</a> — improve your image outputs</li>
+    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master the fundamentals while doing</li>
+    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — apply the collaboration loop to WorkBuddy</li>
+    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI-Powered Excel Workflow: 4 Practical Skills for Beginners</a> — real tasks you can start with today</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI 教程</span>
-  <span class="meta-badge">🕒 阅读约6分钟</span>
-  <span class="meta-badge">📅 2026年7月28日</span>
+  <span class="meta-badge">📚 AI 学习</span>
+  <span class="meta-badge">🕒 阅读约5分钟</span>
+  <span class="meta-badge">📅 2026年7月29日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>AI漫剧是一种高收益的动画短剧形式，观众可通过付费或观看广告解锁剧集。本指南将带你走完AI漫剧创作的完整流程——从初始场景描述到最终后期制作，全部使用免费AI工具。</p>
+<p>很多人上了几十门AI课，但仍无法有效使用AI。问题不在课程或工具本身。真正的问题是：他们把AI当作一门需要完全学会才能应用的技能。事实上，AI更像游泳、写作或开车——你不可能在岸上学完所有理论再下水。</p>
+<p>本指南解答三个关键问题：为什么不能先学AI再用？真正有效的AI协作方式是什么？以及一条你可能从未想过的学习路径。</p>
 
-<h2 id="workflow">核心制作流程</h2>
-<p>AI视频制作四步走：场景描述 → 文生图 → 图生视频 → 后期剪辑。</p>
+<h2 id="step-1">第一步：提出来</h2>
+<p>以电商场景为例。如果你经营电商业务，每天需要计算产品实际利润。利润由四类变量决定：汇率、运费、平台佣金和退货率。传统方式是打开表格逐项填写反复核对，至少半小时。但用AI，只需清晰说明计算逻辑，它就能直接把流程变成可用工具。</p>
+<pre><code class="language-python"># 利润计算逻辑示例
+def calculate_profit(cost, price, exchange_rate, shipping_cost, platform_commission, return_rate):
+    revenue = price * exchange_rate
+    total_cost = cost + shipping_cost + (revenue * platform_commission)
+    profit = revenue - total_cost
+    adjusted_profit = profit * (1 - return_rate)
+    return adjusted_profit</code></pre>
+<p>学AI第一件事不是学工具或背提示词，而是提出你遇到的真实任务。</p>
 
-<h2 id="step-1">第一步：场景描述</h2>
-<p>用AI助手润色场景描述：</p>
-<pre><code class="language-text">我会给你一个场景，请帮我润色成详细的场景描述，不要生成图片：一个女孩站在草原旁，白色长发，红色眼眸，戴着白色大帽子穿着白色连衣裙，看着镜头。</code></pre>
-<p><strong>关键技巧</strong>：明确提供什么、让AI做什么、不让AI做什么。</p>
+<h2 id="step-2">第二步：说清楚</h2>
+<p>仅仅抛出任务通常不够。你会发现AI的第一版答案往往不够深入或精准。拿常见场景举例：让AI做海报，结果总感觉差一点。你可能会说"不够高级"，但"高级"对AI不是有效指令——它是模糊感觉而非可执行参数。"高级"可以拆解为字体选择、留白比例、信息密度、节奏控制和色彩关系，每一项都是可进一步拆解的方向。</p>
+<pre><code class="language-text">海报设计要求：
+- 字体选择：传统风格、粗体字重、强对比
+- 留白比例：左右24px、上下32px、模块间距1.5倍
+- 信息密度：每屏4个信息块、3个信息层级
+- 节奏控制：6s动画时长、慢速运动曲线
+- 色彩关系：冷色主色、强对比强度</code></pre>
+<p>拆解得越细，AI给你的结果就越接近你想要的。对AI答案不满意时，不要想"AI为什么答不对"，而是想"我哪里没说清楚"。这个过程本质上不是在问AI，而是用AI来校准自己的思考。</p>
 
-<h2 id="step-2">第二步：文生图</h2>
-<p>润色后的场景生成图片：</p>
-<pre><code class="language-text">为这个场景生成一张图片，16:9比例，使用日式动漫平面风格。</code></pre>
-<p><strong>关键技巧</strong>：始终指定比例（横屏视频用16:9）、指定美术风格、生成多张选最优。</p>
+<h2 id="step-3">第三步：持续追问</h2>
+<p>生活中我们常被情绪困住找不到出口。很多问题不是你不懂，而是没有一个能不打断你、不评判你、陪你慢慢推演的人。AI正好可以扮演这个角色。你可以跟AI聊："我总觉得这件事有点不对劲""我有个朋友，不确定他是不是在利用我""我不确定这个人生选择是否正确"。</p>
+<p>AI不会半途打断你，也不会用"你想太多了"结束讨论。你问它答，它问你答，你继续问它继续补充。这个双向问答过程就是建立你和AI之间的协作循环。</p>
+<pre><code class="language-text">用户：我现在心情特别纠结，不知道是先找工作还是先准备考研。
+AI：其实这是大多数人都会遇到的一个十字路口。选择哪条路都没有绝对的对错，关键是你更看重什么。如果你希望尽快经济独立、积累工作经验，那先找工作是更务实的选择；如果你确实想提升学历、换个赛道，考研在长远来看会给你更多选择。</code></pre>
 
-<h2 id="step-3">第三步：图生视频</h2>
-<p>选好图后生成视频：</p>
-<pre><code class="language-text">基于这张图生成16:9比例的视频。女孩说："我忘了自己原来的名字，叫我白就好。你还记得你的名字吗？"声音轻柔，微风轻轻吹动头发。</code></pre>
-<p><strong>关键技巧</strong>：用Xiaoyunque等实惠工具、新手推荐10秒、让AI自由添加细节。</p>
-
-<h2 id="step-4">第四步：后期剪辑</h2>
-<p>用剪映完成：</p>
-<ol>
-  <li><strong>添加音效</strong>：匹配场景（如草地配风声）</li>
-  <li><strong>调整音量</strong>：平衡音效与视频</li>
-  <li><strong>添加字幕</strong>：加入对白文本</li>
-  <li><strong>裁剪视频</strong>：切成需要时长</li>
-</ol>
-
-<h2 id="script">AI剧本创作</h2>
-<p>AI剧本核心是精准提示词——Who/What/How：</p>
-<pre><code class="language-text">你是一位擅长一分钟治愈动画系列的动画编剧。请围绕"陪伴"主题创作一分钟动画核心剧情，主角是一只卡通猫。</code></pre>
-
-<h2 id="conclusion">总结</h2>
-<p>遵循这四步，你可以从零开始创作高质量AI漫剧。记住不断优化提示词、尝试不同工具、持续迭代，取得最佳效果。</p>
+<h2 id="learning-path">学习路径</h2>
+<p>你与AI的协作循环：提出任务→得到结果→发现问题→持续追问→修正结果。你不是先获得能力再开始使用，而是在使用的过程中逐渐获得能力。这就是"做中学"。就像只能在水中学会游泳，你只能在使用过程中学会有效使用AI。</p>
 
 <h2>常见问题</h2>
 
-<h3>本指南和7月20日的AI漫剧指南有什么不同？</h3>
-<p>7月20日指南涵盖<strong>制作流程</strong>+剧本创作方法+变现+模型选择。本指南是<strong>精简纯制作指南</strong>——聚焦最快从创意到发布视频的具体提示词和步骤。它在图生视频步骤中增加了对话/声音指导（7月20日指南未涵盖添加角色对话）和更简单的剧本创作模板。读7月20日指南了解完整生态（变现、模型对比、提示词优化）。读本指南获取今天就能用的快速制作配方。</p>
+<h3>这种方法与传统提示词工程课程有什么不同？</h3>
+<p>传统提示词工程课教你<strong>先学技巧再应用</strong>——背诵框架（角色-任务-背景-格式）、学习案例、做练习。本指南翻转了这一点：<strong>从真实任务开始，需要时再学技巧</strong>。第一步的利润计算示例来自真实电商问题而非教科书练习。第二步的海报设计拆解在你遇到"不够高级"问题时才教参数化，而非因为课程表说该学设计参数了。这种方法有两个优势：(1) 因为是你的真实问题所以有动力，(2) 因为你发现需要这个技巧所以会记住，而非被告知要学。</p>
 
-<h3>每步该用哪个免费工具？</h3>
-<p>第一步（场景描述）：任何免费AI聊天——豆包、Kimi、ChatGPT免费层。<br>第二步（文生图）：Seedream免费层或Xiaoyunque每日免费积分。<br>第三步（图生视频）：Xiaoyunque（每日免费积分，约5积分/10秒视频）。<br>第四步（后期）：剪映/CapCut免费版（导出带水印，付费版去水印）。第一集总成本：$0。提到的工具（Xiaoyunque、剪映）专为其免费层选择——可以零成本产出完整一集。</p>
+<h3>AI真能帮助处理情感和人生决策吗（第三步）？</h3>
+<p>AI不是心理咨询师，不应替代专业帮助。但对于<strong>结构化思考</strong>——理清混乱思绪、系统探索选项、扮演魔鬼代言人——AI出奇地有效。第三步的关键机制是<strong>不被打断的追问循环</strong>：人会打断、评判、给出不请自来的建议或转移话题。AI不会。这创造了一个你可以无社交摩擦地大声思考的空间。指南示例（工作vs考研）正是AI能增加价值的结构化决策类型：列出你未考虑的利弊、追问你的优先级、帮你区分情绪反应和事实约束。临床心理健康问题请寻求专业帮助。日常纠结思考，AI是出色的共鸣板。</p>
 
-<h3>一集制作需要多长时间？</h3>
-<p>新手按本指南操作：首集约2-3小时（含学习曲线）。3-5集后：每集30-60分钟。瓶颈通常是文生图（等待结果、选最优）和后期（音效和字幕时机）。AI生成步骤本身每次仅需1-2分钟。时间花在创意决策上：哪张图最好、什么音效合适、字幕如何把握节奏。</p>
+<h3>没有"真实任务"该怎么开始？</h3>
+<p>每个人都有真实任务——只是可能没意识到它们可以用AI解决。指南的电商示例是该人每天手动做30分钟的表格任务。寻找：你重复做的任何事（周报、邮件草稿、数据录入）、你一直拖延的事（"总有一天该整理这些文件了"）、你觉得输出不够好的事（演示、设计、写作）。如果真找不到任务，借用：找一封需要回复的工作邮件、一份需要总结的文档、一个需要计划的日程。"真实任务"门槛很低——只需是你真正需要完成的事，而非练习作业。</p>
 
-<h3>AI漫剧能赚钱吗？</h3>
-<p>能，通过支持付费解锁或广告收益模式的短剧平台。7月20日AI漫剧指南详细介绍了变现方式（付费解锁+广告收入）。关键成功要素：持续发布（每周2-3集）、建立内容库（50+集）、聚焦前3秒吸引人的故事钩子。单集收入有限，但大量内容库的累计收益可以变得可观。AI工作流将制作成本降到几乎为零，即使微薄收入也能盈利。</p>
+<h3>掌握这种协作方式需要多长时间？</h3>
+<p>第一个任务耗时最长，因为你要同时学习工具和协作心态。第一个有意义的任务（如第一步的利润计算器）预计1-2小时。第二第三个任务更快——各30-45分钟——因为你已内化了循环：提出→得结果→找问题→追问→修正。大约10个真实任务后，循环变得自动，每个任务10-20分钟。转折点是当你不再想"让我用AI做这个"，而是开始想"让我把这个问题描述清楚"——到那时AI协作不再是独立技能，它就是你的工作方式。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>创作了第一集？升级你的AI内容制作：</p>
+  <p>准备好应用协作循环？付诸实践：</p>
   <ul>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 完整生态指南</li>
-    <li><a href="/articles/how-to-use-douyin-ai-creation-agent-generate-images-videos">抖音AI创作助手：无需复杂提示词也能生成图片和视频</a> — 另一款对话式创作工具</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：修复提示词问题，避免'翻车'</a> — 优化你的图像输出</li>
+    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 边做边掌握基础</li>
+    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 将协作循环应用于WorkBuddy</li>
+    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI加持Excel工作流：新手必学的4个实用技能</a> — 今天就能开始的真实任务</li>
   </ul>
 </div>`,
   },

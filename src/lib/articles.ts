@@ -2851,4 +2851,17 @@ export const articles: Article[] = [
     date: "2026-07-28",
   },
 
+  {
+    slug: "correct-way-to-collaborate-with-ai-practical-guide",
+    title: "The Correct Way to Collaborate with AI: A Practical Guide",
+    titleZh: "与AI正确协作的方式：一份实用指南",
+    description: "A practical guide to effective AI collaboration using a 3-step framework — Put It Forward (start with real tasks, not tutorials), Explain It Clearly (break vague feelings into specific parameters), and Keep Asking (build a two-way question loop) — embracing 'learning by doing' over 'learn first, use later.'",
+    descriptionZh: "高效AI协作三步框架实操指南——提出来（从真实任务开始而非教程）、说清楚（将模糊感觉拆解为具体参数）、持续追问（构建双向问答循环）——拥抱'做中学'而非'先学后用'。",
+    category: "AI Learning",
+    tags: ["AI Collaboration", "Prompt Engineering", "Learning by Doing", "Productivity", "Beginner", "Guide"],
+    difficulty: "beginner",
+    toolsMentioned: [],
+    date: "2026-07-29",
+  },
+
 ];
