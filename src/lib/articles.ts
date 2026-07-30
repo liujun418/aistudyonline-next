@@ -2864,4 +2864,17 @@ export const articles: Article[] = [
     date: "2026-07-29",
   },
 
+  {
+    slug: "ai-beginners-quick-guide-common-jargon-explained",
+    title: "AI Beginner's Quick Guide: Common Jargon Explained",
+    titleZh: "AI新手速成指南：常见术语一读就懂",
+    description: "A jargon-free introduction to 8 core AI concepts — LLM (brain), Prompt (command), Agent (employee), Codex (coding specialist), Skill (SOP), Workflow (step sequence), API (connector), and Knowledge Base (filter) — explained through everyday analogies a beginner can grasp in one sitting.",
+    descriptionZh: "用生活类比轻松理解8个核心AI概念——LLM（大脑）、Prompt（指令）、Agent（员工）、Codex（编程专家）、Skill（标准操作流程）、Workflow（步骤序列）、API（连接器）和知识库（信息过滤器）——新手一次读完就能理解。",
+    category: "ai-basics",
+    tags: ["AI Basics", "LLM", "Agent", "Prompt", "Skill", "Workflow", "Beginner", "Jargon"],
+    difficulty: "beginner",
+    toolsMentioned: ["ChatGPT", "Claude", "Codex Agent"],
+    date: "2026-07-30",
+  },
+
 ];

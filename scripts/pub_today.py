@@ -1,18 +1,18 @@
-"""Publish July 29, 2026 — 1 article, no new tools."""
+"""Publish July 30, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "correct-way-to-collaborate-with-ai-practical-guide",
-    title: "The Correct Way to Collaborate with AI: A Practical Guide",
-    titleZh: "与AI正确协作的方式：一份实用指南",
-    description: "A practical guide to effective AI collaboration using a 3-step framework — Put It Forward (start with real tasks, not tutorials), Explain It Clearly (break vague feelings into specific parameters), and Keep Asking (build a two-way question loop) — embracing 'learning by doing' over 'learn first, use later.'",
-    descriptionZh: "高效AI协作三步框架实操指南——提出来（从真实任务开始而非教程）、说清楚（将模糊感觉拆解为具体参数）、持续追问（构建双向问答循环）——拥抱'做中学'而非'先学后用'。",
-    category: "AI Learning",
-    tags: ["AI Collaboration", "Prompt Engineering", "Learning by Doing", "Productivity", "Beginner", "Guide"],
+    slug: "ai-beginners-quick-guide-common-jargon-explained",
+    title: "AI Beginner's Quick Guide: Common Jargon Explained",
+    titleZh: "AI新手速成指南：常见术语一读就懂",
+    description: "A jargon-free introduction to 8 core AI concepts — LLM (brain), Prompt (command), Agent (employee), Codex (coding specialist), Skill (SOP), Workflow (step sequence), API (connector), and Knowledge Base (filter) — explained through everyday analogies a beginner can grasp in one sitting.",
+    descriptionZh: "用生活类比轻松理解8个核心AI概念——LLM（大脑）、Prompt（指令）、Agent（员工）、Codex（编程专家）、Skill（标准操作流程）、Workflow（步骤序列）、API（连接器）和知识库（信息过滤器）——新手一次读完就能理解。",
+    category: "ai-basics",
+    tags: ["AI Basics", "LLM", "Agent", "Prompt", "Skill", "Workflow", "Beginner", "Jargon"],
     difficulty: "beginner",
-    toolsMentioned: [],
-    date: "2026-07-29",
+    toolsMentioned: ["ChatGPT", "Claude", "Codex Agent"],
+    date: "2026-07-30",
   },
 
 """
@@ -22,160 +22,195 @@ print('Part 1 done')
 
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "correct-way-to-collaborate-with-ai-practical-guide": {
+  "ai-beginners-quick-guide-common-jargon-explained": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI Learning</span>
+  <span class="meta-badge">🧠 AI Basics</span>
   <span class="meta-badge">🕒 5 min read</span>
-  <span class="meta-badge">📅 Jul 29, 2026</span>
+  <span class="meta-badge">📅 Jul 30, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Many people have taken dozens of AI courses but still struggle to use AI effectively. The problem is not with the courses or the tools themselves. The real issue is that they treat AI as a skill to be fully learned before being applied. In reality, AI is more like swimming, writing, or driving — you can't learn all the theory on land before jumping into the water.</p>
+<p>If you've ever tried to learn AI, you've probably felt overwhelmed by terms like "large model," "Codex," "Skill," and "Prompt" floating around online. This guide breaks down these key concepts using real-life examples, so you can understand them clearly and apply them right away.</p>
 
-<p>This guide will explain three key questions: Why can't you learn AI first and then use it? What is the truly effective way to collaborate with AI? And a learning path you might never have considered.</p>
+<h2 id="llm">1. Large Language Model (LLM)</h2>
 
-<h2 id="step-1">Step 1: Put It Forward</h2>
+<p>A large language model is like the <strong>brain</strong> of an AI system. Different models have different capabilities — some are better at reasoning, others at coding, and some at creative writing.</p>
 
-<p>Let's take an e-commerce scenario as an example. If you run an e-commerce business, you need to calculate the actual profit of a product every day. The profit is determined by four types of variables: exchange rate, shipping cost, platform commission, and return rate.</p>
+<h3>Example</h3>
+<ul>
+  <li><strong>Model A</strong>: When told "the table is dirty," it only writes a note saying "the table is dirty" instead of cleaning it.</li>
+  <li><strong>Model B</strong>: When told "the table is dirty," it immediately grabs a cloth and cleans the table.</li>
+</ul>
+<p>This shows that the model you choose directly determines how "smart" your AI will be. Common LLMs: GPT-4o, Claude 3, Gemini, Doubao, DeepSeek.</p>
 
-<p>The traditional way is to open a spreadsheet, fill in the data one by one, and check it repeatedly, which takes at least half an hour. But with AI, you only need to clearly explain your calculation logic, and it can directly turn this process into a usable tool.</p>
+<h2 id="prompt">2. Prompt</h2>
 
-<pre><code class="language-python"># Example of profit calculation logic
-def calculate_profit(cost, price, exchange_rate, shipping_cost, platform_commission, return_rate):
-    revenue = price * exchange_rate
-    total_cost = cost + shipping_cost + (revenue * platform_commission)
-    profit = revenue - total_cost
-    adjusted_profit = profit * (1 - return_rate)
-    return adjusted_profit</code></pre>
+<p>A prompt is the <strong>command</strong> you give to an AI. The more specific your prompt is, the more accurate the AI's response will be.</p>
 
-<p>The first thing to learn about AI is not to learn tools or memorize prompts, but to put forward a real task you encounter.</p>
+<h3>Bad Prompt Example</h3>
+<pre><code class="language-text">Give me something to drink.</code></pre>
+<p>This vague prompt might result in the AI giving you a watering can instead of a beverage.</p>
 
-<h2 id="step-2">Step 2: Explain It Clearly</h2>
+<h3>Good Prompt Example</h3>
+<pre><code class="language-text">I am a human. It's very hot today, and I want to drink something cold, sweet, tasty, and cheap.</code></pre>
+<p>This clear prompt will likely result in the AI giving you a suitable cold drink.</p>
 
-<p>Simply throwing out a task is usually not enough. You will find that the first version of the answer from AI is often not deep or accurate enough. Let's take a common scenario: you ask AI to make a poster, but the result always feels a bit off.</p>
+<h2 id="agent">3. Agent</h2>
 
-<p>You might say "it's not high-end enough", but "high-end" is not an effective instruction for AI. It is a vague feeling, not a set of executable parameters. "High-end" can be broken down into font selection, white space ratio, information density, rhythm control, and color relationship. Each of these is a direction that can be further broken down.</p>
+<p>An Agent is an <strong>AI employee</strong> that can understand tasks, use tools, and work independently to complete them.</p>
 
-<pre><code class="language-text">Poster design requirements:
-- Font selection: Traditional style, bold weight, high contrast
-- White space ratio: 24px left and right, 32px top and bottom, 1.5x module spacing
-- Information density: 4 information blocks per screen, 3 information levels
-- Rhythm control: 6s animation duration, slow movement curve
-- Color relationship: Cool main color, strong contrast intensity</code></pre>
+<h3>Example</h3>
+<p>When you ask an Agent to find a book: it first checks the fridge (no books there), then searches its internal knowledge base (no books there), and finally checks the external library and finds the book you want. This shows that an Agent can take initiative to solve problems without constant guidance.</p>
 
-<p>The more detailed you break it down, the closer the result from AI will be to what you want. When you are not satisfied with the answer from AI, don't think "why didn't AI answer correctly", but think "where didn't I explain clearly". This process is essentially not asking AI, but using AI to calibrate your own thinking.</p>
+<h2 id="codex">4. Codex</h2>
 
-<h2 id="step-3">Step 3: Keep Asking</h2>
+<p>Codex is a <strong>programming-savvy AI employee</strong> that specializes in writing and understanding code.</p>
 
-<p>In life, we are often trapped by emotions and can't find an exit. Many problems are not because you don't understand, but because there is no one who can accompany you to deduce slowly without interrupting or judging you. AI can just play this role.</p>
+<h3>Example</h3>
+<p>If you ask an Agent to find a book, it will search for books. If you ask Codex to find a book, it might write a Python script to search for books automatically:</p>
 
-<p>You can talk to AI about things like: "I always feel something is wrong with this matter", "I have a friend, and I'm not sure if he is using me", "I'm not sure if this life choice is correct".</p>
+<pre><code class="language-python">def find_book(book_title):
+    library = ["The Great Gatsby", "1984", "To Kill a Mockingbird"]
+    for book in library:
+        if book_title.lower() in book.lower():
+            return f"Found: {book}"
+    return "Book not found"
 
-<p>AI won't interrupt you halfway, and won't end the discussion with "you're thinking too much". You ask, it answers; it asks, you answer; you continue to ask, it continues to supplement. This two-way question-and-answer process is to establish a collaboration loop between you and AI.</p>
+print(find_book("1984"))</code></pre>
 
-<pre><code class="language-text">User: I'm in a very tangled mood, and I don't know whether to find a job first or prepare for the postgraduate entrance examination.
-AI: In fact, this is a crossroads that most people will encounter. There is no absolute right or wrong in choosing which path. The key is what you value more. If you want to be financially independent as soon as possible and accumulate work experience, it is more practical to find a job first; if you really want to improve your academic qualifications and change the track, taking the postgraduate entrance examination will give you more choices in the long run.</code></pre>
+<h2 id="skill">5. Skill</h2>
 
-<h2 id="learning-path">The Learning Path</h2>
+<p>A Skill is a <strong>standard operating procedure (SOP)</strong> for an Agent. It tells the Agent how to perform a specific task consistently.</p>
 
-<p>The collaboration loop between you and AI is:</p>
-<ol>
-  <li>Put forward a task</li>
-  <li>Get the result</li>
-  <li>Find the problem</li>
-  <li>Keep asking</li>
-  <li>Revise the result</li>
-</ol>
+<h3>Example</h3>
+<p>If an Agent keeps finding the wrong books, you can give it a Skill document that says: "Book Search Skill: 1. Only search the bookshelf in the living room. 2. Look for books with red covers. 3. Check the first page to confirm it's the right book." Now, every time the Agent searches for a book, it will follow these steps and find the right one.</p>
 
-<p>You don't gain the ability first and then start using it. You gain the ability gradually in the process of using it. This is "learning by doing". Just like you can only learn to swim in the water, you can only learn to use AI effectively in the process of using it.</p>
+<h2 id="workflow">6. Workflow</h2>
+
+<p>A Workflow is a <strong>sequence of steps</strong> that an Agent follows to complete a task. A workflow for finding and returning a book might be: Find the book → Clean the book → Return the book to the shelf.</p>
+
+<h2 id="api">7. API</h2>
+
+<p>An API is a <strong>plug</strong> that connects an AI to other tools or software. If you want your AI to send emails, you can use an email API to connect your AI to an email service. This way, the AI can send emails without having its own built-in email functionality.</p>
+
+<h2 id="knowledge-base">8. Knowledge Base</h2>
+
+<p>A Knowledge Base is a <strong>database</strong> that limits the information an AI can use. If you want your AI to only answer questions about your company's products, you can set up a knowledge base that only contains information about your products. This way, the AI won't use information from the internet or other sources.</p>
+
+<h2 id="summary">Summary</h2>
+<ul>
+  <li><strong>LLM</strong>: The brain of the AI</li>
+  <li><strong>Prompt</strong>: The command you give to the AI</li>
+  <li><strong>Agent</strong>: An AI employee that can work independently</li>
+  <li><strong>Codex</strong>: An AI employee that specializes in coding</li>
+  <li><strong>Skill</strong>: A standard operating procedure for an Agent</li>
+  <li><strong>Workflow</strong>: A sequence of steps for completing a task</li>
+  <li><strong>API</strong>: A plug that connects an AI to other tools</li>
+  <li><strong>Knowledge Base</strong>: A database that limits the AI's information sources</li>
+</ul>
 
 <h2>常见问题</h2>
 
-<h3>How is this approach different from traditional prompt engineering courses?</h3>
-<p>Traditional prompt engineering courses teach you <strong>techniques first, then application</strong> — memorize frameworks (Role-Task-Context-Format), study examples, practice with exercises. This guide flips that: <strong>start with a real task, learn techniques as you need them</strong>. The profit calculation example in Step 1 came from a real e-commerce problem, not a textbook exercise. The poster design breakdown in Step 2 teaches parameterization because you encountered a "not high-end enough" problem, not because the curriculum said it was time to learn about design parameters. This approach has two advantages: (1) you're motivated because it's your real problem, and (2) you remember the technique because you discovered you needed it, not because you were told to learn it.</p>
+<h3>How is this different from the July 2 "Don't Be Intimidated by AI Jargon" article?</h3>
+<p>The July 2 article covers <strong>12 advanced concepts</strong> (Token, RAG, MCP, Context Engineering, Harness Engineering, Workspace Agent, etc.) with code examples — it's designed for intermediate readers who want to understand the full AI stack. This article covers <strong>8 foundational concepts</strong> (LLM, Prompt, Agent, Codex, Skill, Workflow, API, Knowledge Base) using everyday analogies — it's designed for absolute beginners who just want to understand what these terms mean. Read this one first if you're brand new. Read the July 2 article when you're ready to go deeper into AI architecture and implementation.</p>
 
-<h3>Can AI really help with emotional and life decisions (Step 3)?</h3>
-<p>AI is not a therapist and should not replace one. But for <strong>structured thinking</strong> — untangling confused thoughts, exploring options systematically, playing devil's advocate — AI is surprisingly effective. The key mechanism in Step 3 is the <strong>uninterrupted questioning loop</strong>: humans interrupt, judge, offer unsolicited advice, or change the subject. AI doesn't. This creates a space where you can think out loud without social friction. The guide's example (job vs. grad school) is exactly the kind of structured decision where AI adds value: it can list pros/cons you haven't considered, ask clarifying questions about your priorities, and help you separate emotional reactions from factual constraints. For clinical mental health issues, seek professional help. For everyday tangled thinking, AI is an excellent sounding board.</p>
+<h3>Why do these 8 concepts matter for someone who just wants to use AI tools?</h3>
+<p>Because every AI tool you'll encounter — whether it's ChatGPT, WorkBuddy, Codex, or Doubao — uses these concepts. <strong>LLM</strong> determines how smart your tool is. <strong>Prompt</strong> determines whether you get useful output or garbage. <strong>Agent</strong> is what separates modern AI tools from simple chatbots. <strong>Skill/Workflow</strong> is how you automate your work. <strong>Knowledge Base</strong> is how you make AI answer from your company's documents instead of making things up. Understanding these 8 concepts isn't academic — it directly impacts how effectively you use whatever AI tool you've chosen.</p>
 
-<h3>What if I don't have a "real task" to start with?</h3>
-<p>Everyone has real tasks — they just might not recognize them as AI-solvable. The guide's e-commerce example is a spreadsheet task the person was already doing manually for 30 minutes daily. Look for: anything you do repeatedly (weekly reports, email drafts, data entry), anything you've been putting off ("I should organize these files someday"), anything where you feel the output isn't good enough (presentations, designs, writing). If you genuinely can't find a task, steal one: find a work email you need to reply to, a document you need to summarize, a schedule you need to plan. The bar for "real task" is low — it just needs to be something you actually need done, not a practice exercise.</p>
+<h3>Do I need to remember all the technical details in this guide?</h3>
+<p>No. Focus on the <strong>analogies</strong>, not the technical details. LLM = brain. Prompt = command. Agent = employee. Skill = SOP. Workflow = step sequence. API = plug. Knowledge Base = filter. If you remember these one-to-one mappings, you'll have the mental model you need to navigate any AI tool. The technical details in this guide are there so you can recognize the terms when you see them, not because you need to memorize them.</p>
 
-<h3>How long does it take to get good at this collaboration approach?</h3>
-<p>The first task takes the longest because you're learning both the tool and the collaboration mindset. Expect 1-2 hours for your first meaningful task (like the profit calculator in Step 1). The second and third tasks go faster — 30-45 minutes each — because you've internalized the loop: put forward → get result → find problem → keep asking → revise. After about 10 real tasks, the loop becomes automatic and each task takes 10-20 minutes. The transition point is when you stop thinking "let me use AI for this" and start thinking "let me describe this problem clearly" — at that point, AI collaboration is no longer a separate skill, it's just how you work.</p>
+<h3>What should I learn after mastering these 8 concepts?</h3>
+<p>Move on to <strong>Practicing with real tasks</strong>. Each tool does these 8 things differently. Don't try to memorize — just be aware of these concepts and experience them firsthand.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Ready to apply the collaboration loop? Put it into practice:</p>
+  <p>Understood the basics? Put them into practice:</p>
   <ul>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master the fundamentals while doing</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — apply the collaboration loop to WorkBuddy</li>
-    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI-Powered Excel Workflow: 4 Practical Skills for Beginners</a> — real tasks you can start with today</li>
+    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — apply these concepts to real tasks</li>
+    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — go deeper into 12 advanced concepts</li>
+    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">How to Build a Personal AI Quant Trading System in 2026</a> — see Agents, Skills and Workflows in a real system</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI 学习</span>
+  <span class="meta-badge">🧠 AI 基础</span>
   <span class="meta-badge">🕒 阅读约5分钟</span>
-  <span class="meta-badge">📅 2026年7月29日</span>
+  <span class="meta-badge">📅 2026年7月30日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>很多人上了几十门AI课，但仍无法有效使用AI。问题不在课程或工具本身。真正的问题是：他们把AI当作一门需要完全学会才能应用的技能。事实上，AI更像游泳、写作或开车——你不可能在岸上学完所有理论再下水。</p>
-<p>本指南解答三个关键问题：为什么不能先学AI再用？真正有效的AI协作方式是什么？以及一条你可能从未想过的学习路径。</p>
+<p>如果你曾尝试学习AI，大概被网上飘着的"大模型""Codex""Skill""Prompt"等术语搞得一头雾水。本指南用生活实例拆解这些核心概念，让你一次读懂、即刻能用。</p>
 
-<h2 id="step-1">第一步：提出来</h2>
-<p>以电商场景为例。如果你经营电商业务，每天需要计算产品实际利润。利润由四类变量决定：汇率、运费、平台佣金和退货率。传统方式是打开表格逐项填写反复核对，至少半小时。但用AI，只需清晰说明计算逻辑，它就能直接把流程变成可用工具。</p>
-<pre><code class="language-python"># 利润计算逻辑示例
-def calculate_profit(cost, price, exchange_rate, shipping_cost, platform_commission, return_rate):
-    revenue = price * exchange_rate
-    total_cost = cost + shipping_cost + (revenue * platform_commission)
-    profit = revenue - total_cost
-    adjusted_profit = profit * (1 - return_rate)
-    return adjusted_profit</code></pre>
-<p>学AI第一件事不是学工具或背提示词，而是提出你遇到的真实任务。</p>
+<h2 id="llm">1. 大语言模型（LLM）</h2>
+<p>大语言模型就像AI系统的<strong>大脑</strong>。不同模型有不同能力——有的擅长推理，有的擅长编码，有的擅长创意写作。</p>
+<h3>示例</h3>
+<ul>
+  <li><strong>模型A</strong>：被告知"桌子脏了"，它只写了张"桌子脏了"的便条而非清理。</li>
+  <li><strong>模型B</strong>：被告知"桌子脏了"，立刻拿起抹布擦干净。</li>
+</ul>
+<p>这说明你选的模型直接决定AI有多"聪明"。常见LLM：GPT-4o、Claude 3、Gemini、豆包、DeepSeek。</p>
 
-<h2 id="step-2">第二步：说清楚</h2>
-<p>仅仅抛出任务通常不够。你会发现AI的第一版答案往往不够深入或精准。拿常见场景举例：让AI做海报，结果总感觉差一点。你可能会说"不够高级"，但"高级"对AI不是有效指令——它是模糊感觉而非可执行参数。"高级"可以拆解为字体选择、留白比例、信息密度、节奏控制和色彩关系，每一项都是可进一步拆解的方向。</p>
-<pre><code class="language-text">海报设计要求：
-- 字体选择：传统风格、粗体字重、强对比
-- 留白比例：左右24px、上下32px、模块间距1.5倍
-- 信息密度：每屏4个信息块、3个信息层级
-- 节奏控制：6s动画时长、慢速运动曲线
-- 色彩关系：冷色主色、强对比强度</code></pre>
-<p>拆解得越细，AI给你的结果就越接近你想要的。对AI答案不满意时，不要想"AI为什么答不对"，而是想"我哪里没说清楚"。这个过程本质上不是在问AI，而是用AI来校准自己的思考。</p>
+<h2 id="prompt">2. Prompt（提示词）</h2>
+<p>Prompt是你给AI的<strong>指令</strong>。越具体，AI回复越精准。</p>
+<h3>坏提示词</h3>
+<pre><code class="language-text">给我喝的。</code></pre>
+<h3>好提示词</h3>
+<pre><code class="language-text">我是人类。今天很热，我想喝冷的、甜的、好喝的、便宜的东西。</code></pre>
 
-<h2 id="step-3">第三步：持续追问</h2>
-<p>生活中我们常被情绪困住找不到出口。很多问题不是你不懂，而是没有一个能不打断你、不评判你、陪你慢慢推演的人。AI正好可以扮演这个角色。你可以跟AI聊："我总觉得这件事有点不对劲""我有个朋友，不确定他是不是在利用我""我不确定这个人生选择是否正确"。</p>
-<p>AI不会半途打断你，也不会用"你想太多了"结束讨论。你问它答，它问你答，你继续问它继续补充。这个双向问答过程就是建立你和AI之间的协作循环。</p>
-<pre><code class="language-text">用户：我现在心情特别纠结，不知道是先找工作还是先准备考研。
-AI：其实这是大多数人都会遇到的一个十字路口。选择哪条路都没有绝对的对错，关键是你更看重什么。如果你希望尽快经济独立、积累工作经验，那先找工作是更务实的选择；如果你确实想提升学历、换个赛道，考研在长远来看会给你更多选择。</code></pre>
+<h2 id="agent">3. Agent（智能体）</h2>
+<p>Agent是能理解任务、使用工具、独立完成工作的<strong>AI员工</strong>。如让Agent找书：先查冰箱（没书）→搜内部知识库（没书）→查外部图书馆→找到目标书籍。无需持续指导就能主动解决问题。</p>
 
-<h2 id="learning-path">学习路径</h2>
-<p>你与AI的协作循环：提出任务→得到结果→发现问题→持续追问→修正结果。你不是先获得能力再开始使用，而是在使用的过程中逐渐获得能力。这就是"做中学"。就像只能在水中学会游泳，你只能在使用过程中学会有效使用AI。</p>
+<h2 id="codex">4. Codex</h2>
+<p>Codex是<strong>精通编程的AI员工</strong>，专长编写和理解代码。让普通Agent找书它会直接搜索；让Codex找书它可能写一段Python自动搜索。</p>
+
+<h2 id="skill">5. Skill（技能）</h2>
+<p>Skill是Agent的<strong>标准操作流程（SOP）</strong>，告诉Agent如何始终如一完成特定任务。如"书籍搜索技能：1.只搜索客厅书架 2.找红色封面 3.检查首页确认正确"。之后每次搜书都按此执行。</p>
+
+<h2 id="workflow">6. Workflow（工作流）</h2>
+<p>Workflow是Agent完成任务的<strong>步骤序列</strong>。如找书还书流程：找到书→清洁书→放回书架。</p>
+
+<h2 id="api">7. API</h2>
+<p>API是连接AI到其他工具软件的<strong>插头</strong>。想让AI发送邮件，用邮件API连接AI到邮件服务，AI无需内置邮件功能就能发邮件。</p>
+
+<h2 id="knowledge-base">8. 知识库</h2>
+<p>知识库是限制AI可用信息的<strong>数据库</strong>。想让AI只回答公司产品相关问题，设置只含产品信息的知识库，AI就不会使用互联网或其他来源的信息。</p>
+
+<h2 id="summary">总结</h2>
+<ul>
+  <li><strong>LLM</strong>：AI的大脑</li>
+  <li><strong>Prompt</strong>：给AI的指令</li>
+  <li><strong>Agent</strong>：能独立工作的AI员工</li>
+  <li><strong>Codex</strong>：专精编程的AI员工</li>
+  <li><strong>Skill</strong>：Agent的标准操作流程</li>
+  <li><strong>Workflow</strong>：完成任务的步骤序列</li>
+  <li><strong>API</strong>：连接AI到其他工具的插头</li>
+  <li><strong>知识库</strong>：限制AI信息来源的数据库</li>
+</ul>
 
 <h2>常见问题</h2>
 
-<h3>这种方法与传统提示词工程课程有什么不同？</h3>
-<p>传统提示词工程课教你<strong>先学技巧再应用</strong>——背诵框架（角色-任务-背景-格式）、学习案例、做练习。本指南翻转了这一点：<strong>从真实任务开始，需要时再学技巧</strong>。第一步的利润计算示例来自真实电商问题而非教科书练习。第二步的海报设计拆解在你遇到"不够高级"问题时才教参数化，而非因为课程表说该学设计参数了。这种方法有两个优势：(1) 因为是你的真实问题所以有动力，(2) 因为你发现需要这个技巧所以会记住，而非被告知要学。</p>
+<h3>这和7月2日"别被AI术语吓倒"那篇文章有什么不同？</h3>
+<p>7月2日文章涵盖<strong>12个进阶概念</strong>（Token、RAG、MCP、上下文工程、Harness工程、Workspace Agent等），含代码示例——为想理解完整AI技术栈的中级读者设计。本文涵盖<strong>8个基础概念</strong>（LLM、Prompt、Agent、Codex、Skill、Workflow、API、知识库），用生活类比——为只想理解这些术语含义的纯新手设计。如果你完全零基础，先读这篇。准备好深入AI架构和实现时再读7月2日那篇。</p>
 
-<h3>AI真能帮助处理情感和人生决策吗（第三步）？</h3>
-<p>AI不是心理咨询师，不应替代专业帮助。但对于<strong>结构化思考</strong>——理清混乱思绪、系统探索选项、扮演魔鬼代言人——AI出奇地有效。第三步的关键机制是<strong>不被打断的追问循环</strong>：人会打断、评判、给出不请自来的建议或转移话题。AI不会。这创造了一个你可以无社交摩擦地大声思考的空间。指南示例（工作vs考研）正是AI能增加价值的结构化决策类型：列出你未考虑的利弊、追问你的优先级、帮你区分情绪反应和事实约束。临床心理健康问题请寻求专业帮助。日常纠结思考，AI是出色的共鸣板。</p>
+<h3>对只想用AI工具的人来说，这8个概念为什么重要？</h3>
+<p>因为你遇到的每个AI工具——ChatGPT、WorkBuddy、Codex或豆包——都用这些概念。<strong>LLM</strong>决定工具有多聪明。<strong>Prompt</strong>决定你得到有用输出还是垃圾。<strong>Agent</strong>是现代AI工具和简单聊天机器人的分界线。<strong>Skill/Workflow</strong>是你自动化工作的方式。<strong>知识库</strong>是让AI从公司文档而非凭空编造来回答的方式。理解这8个概念不是学术——它直接影响你使用任何AI工具的效能。</p>
 
-<h3>没有"真实任务"该怎么开始？</h3>
-<p>每个人都有真实任务——只是可能没意识到它们可以用AI解决。指南的电商示例是该人每天手动做30分钟的表格任务。寻找：你重复做的任何事（周报、邮件草稿、数据录入）、你一直拖延的事（"总有一天该整理这些文件了"）、你觉得输出不够好的事（演示、设计、写作）。如果真找不到任务，借用：找一封需要回复的工作邮件、一份需要总结的文档、一个需要计划的日程。"真实任务"门槛很低——只需是你真正需要完成的事，而非练习作业。</p>
+<h3>需要记住指南中所有技术细节吗？</h3>
+<p>不需要。聚焦<strong>类比</strong>而非技术细节。LLM=大脑。Prompt=指令。Agent=员工。Skill=SOP。Workflow=步骤序列。API=插头。知识库=过滤器。记住这些一一对应关系，你就有了驾驭任何AI工具的心智模型。技术细节只是让你看到术语时能认出它们，而非需要背诵。</p>
 
-<h3>掌握这种协作方式需要多长时间？</h3>
-<p>第一个任务耗时最长，因为你要同时学习工具和协作心态。第一个有意义的任务（如第一步的利润计算器）预计1-2小时。第二第三个任务更快——各30-45分钟——因为你已内化了循环：提出→得结果→找问题→追问→修正。大约10个真实任务后，循环变得自动，每个任务10-20分钟。转折点是当你不再想"让我用AI做这个"，而是开始想"让我把这个问题描述清楚"——到那时AI协作不再是独立技能，它就是你的工作方式。</p>
+<h3>掌握8个概念后该学什么？</h3>
+<p>转向<strong>真实任务练习</strong>。每个工具对这8件事的实现方式不同。不要死记硬背——只需知晓这些概念并亲身体验。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>准备好应用协作循环？付诸实践：</p>
+  <p>理解了基础？付诸实践：</p>
   <ul>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 边做边掌握基础</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 将协作循环应用于WorkBuddy</li>
-    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI加持Excel工作流：新手必学的4个实用技能</a> — 今天就能开始的真实任务</li>
+    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将这些概念应用到真实任务</li>
+    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 深入12个进阶概念</li>
+    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">2026个人AI量化交易系统搭建全指南</a> — 看Agent、Skill和Workflow在真实系统中的运作</li>
   </ul>
 </div>`,
   },
