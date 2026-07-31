@@ -2877,4 +2877,17 @@ export const articles: Article[] = [
     date: "2026-07-30",
   },
 
+  {
+    slug: "how-to-learn-anything-10x-faster-with-claude-practical-guide",
+    title: "How to Learn Anything 10x Faster with Claude: A Practical Guide",
+    titleZh: "用Claude实现10倍速学习：一份实用指南",
+    description: "Six AI-powered learning methods using Claude — build a learning ladder (5 levels), identify the 20% core content (Pareto), get quizzed until stuck (active recall), create one-page cheat sheets, filter signals from noise (resource curation), and use the Feynman Technique to expose fake understanding.",
+    descriptionZh: "用Claude实现六种AI加速学习法——搭建学习阶梯（5级）、识别20%核心内容（帕累托）、答题直到卡壳（主动回忆）、创建一页知识卡、从噪音中过滤信号（资源筛选）、用费曼技巧暴露伪理解。",
+    category: "ai-tutorials",
+    tags: ["Claude", "Learning", "Productivity", "Prompt Engineering", "Feynman Technique", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Claude"],
+    date: "2026-07-31",
+  },
+
 ];

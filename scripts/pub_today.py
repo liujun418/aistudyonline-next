@@ -1,18 +1,18 @@
-"""Publish July 30, 2026 — 1 article, no new tools."""
+"""Publish July 31, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "ai-beginners-quick-guide-common-jargon-explained",
-    title: "AI Beginner's Quick Guide: Common Jargon Explained",
-    titleZh: "AI新手速成指南：常见术语一读就懂",
-    description: "A jargon-free introduction to 8 core AI concepts — LLM (brain), Prompt (command), Agent (employee), Codex (coding specialist), Skill (SOP), Workflow (step sequence), API (connector), and Knowledge Base (filter) — explained through everyday analogies a beginner can grasp in one sitting.",
-    descriptionZh: "用生活类比轻松理解8个核心AI概念——LLM（大脑）、Prompt（指令）、Agent（员工）、Codex（编程专家）、Skill（标准操作流程）、Workflow（步骤序列）、API（连接器）和知识库（信息过滤器）——新手一次读完就能理解。",
-    category: "ai-basics",
-    tags: ["AI Basics", "LLM", "Agent", "Prompt", "Skill", "Workflow", "Beginner", "Jargon"],
+    slug: "how-to-learn-anything-10x-faster-with-claude-practical-guide",
+    title: "How to Learn Anything 10x Faster with Claude: A Practical Guide",
+    titleZh: "用Claude实现10倍速学习：一份实用指南",
+    description: "Six AI-powered learning methods using Claude — build a learning ladder (5 levels), identify the 20% core content (Pareto), get quizzed until stuck (active recall), create one-page cheat sheets, filter signals from noise (resource curation), and use the Feynman Technique to expose fake understanding.",
+    descriptionZh: "用Claude实现六种AI加速学习法——搭建学习阶梯（5级）、识别20%核心内容（帕累托）、答题直到卡壳（主动回忆）、创建一页知识卡、从噪音中过滤信号（资源筛选）、用费曼技巧暴露伪理解。",
+    category: "ai-tutorials",
+    tags: ["Claude", "Learning", "Productivity", "Prompt Engineering", "Feynman Technique", "Tutorial"],
     difficulty: "beginner",
-    toolsMentioned: ["ChatGPT", "Claude", "Codex Agent"],
-    date: "2026-07-30",
+    toolsMentioned: ["Claude"],
+    date: "2026-07-31",
   },
 
 """
@@ -22,195 +22,187 @@ print('Part 1 done')
 
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "ai-beginners-quick-guide-common-jargon-explained": {
+  "how-to-learn-anything-10x-faster-with-claude-practical-guide": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">🧠 AI Basics</span>
-  <span class="meta-badge">🕒 5 min read</span>
-  <span class="meta-badge">📅 Jul 30, 2026</span>
+  <span class="meta-badge">📖 AI Tutorials</span>
+  <span class="meta-badge">🕒 6 min read</span>
+  <span class="meta-badge">📅 Jul 31, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
+<p>If you want to learn a new skill quickly, Claude can help you achieve 10x faster learning — if you use it the right way. Don't just treat it as a search box. This guide shares six practical methods to turn Claude into your personal learning coach.</p>
 
-<p>If you've ever tried to learn AI, you've probably felt overwhelmed by terms like "large model," "Codex," "Skill," and "Prompt" floating around online. This guide breaks down these key concepts using real-life examples, so you can understand them clearly and apply them right away.</p>
+<h2 id="method-1">Method 1: Let AI Build Your Learning Ladder</h2>
+<p>Most people struggle to learn not because they lack effort, but because they jump to the wrong level too early. Instead of asking "Help me learn Python", use this prompt:</p>
+<pre><code class="language-text">Break Python into 5 learning levels, from a complete beginner to someone who can build independent projects. For each level, tell me:
+1. What I should master
+2. Common mistakes to avoid
+3. The standards I need to meet to move to the next level</code></pre>
+<p>Claude will give you a structured learning map, so you know exactly where you are, what to learn next, and when you're ready to advance.</p>
 
-<h2 id="llm">1. Large Language Model (LLM)</h2>
+<h2 id="method-2">Method 2: Let AI Identify the Most Important 20%</h2>
+<p>Not all content in a skill is equally important. You don't need to learn every plugin when studying video editing — focus on the 20% of core content that delivers 80% of results.</p>
+<pre><code class="language-text">I want to learn this topic in 20 hours. Find the most important 20% of content, and design a 10-session learning plan (2 hours per session). Each session should include:
+1. Practice resources
+2. Review questions
+3. Clear learning objectives</code></pre>
+<p>This breaks down a large skill into manageable daily tasks, so you only need to focus on 2 hours of learning each day.</p>
 
-<p>A large language model is like the <strong>brain</strong> of an AI system. Different models have different capabilities — some are better at reasoning, others at coding, and some at creative writing.</p>
+<h2 id="method-3">Method 3: Let AI Quiz You Until You Get Stuck</h2>
+<p>Many learners only consume content passively — they watch videos or read articles and think they understand, but can't explain concepts when asked. The solution is active recall.</p>
+<pre><code class="language-text">I just learned this topic. Ask me one question at a time, starting from easy to hard. After I answer:
+1. Grade my answer (correct/incorrect)
+2. Point out what I got right, wrong, or incomplete
+3. Only re-explain the parts I didn't master</code></pre>
+<p>The key is to ask one question at a time. This helps you identify knowledge gaps immediately, like a trainer correcting your form during a workout — faster than practicing alone.</p>
 
-<h3>Example</h3>
-<ul>
-  <li><strong>Model A</strong>: When told "the table is dirty," it only writes a note saying "the table is dirty" instead of cleaning it.</li>
-  <li><strong>Model B</strong>: When told "the table is dirty," it immediately grabs a cloth and cleans the table.</li>
-</ul>
-<p>This shows that the model you choose directly determines how "smart" your AI will be. Common LLMs: GPT-4o, Claude 3, Gemini, Doubao, DeepSeek.</p>
+<h2 id="method-4">Method 4: Let AI Create a One-Page Cheat Sheet</h2>
+<p>Human brains are better at remembering structures than long texts. Instead of saving long chat logs, ask Claude to condense the knowledge:</p>
+<pre><code class="language-text">Condense this topic into a one-page cheat sheet that includes:
+1. A one-sentence definition
+2. Key concepts
+3. Real-world examples
+4. Common mistakes
+5. A pre-use checklist
+6. 5 quick self-test questions</code></pre>
+<p>Perfect for quick reviews before exams, interviews, meetings, or projects — refresh in 5 minutes without re-learning everything.</p>
 
-<h2 id="prompt">2. Prompt</h2>
+<h2 id="method-5">Method 5: Let AI Filter Signals from Noise</h2>
+<p>The biggest learning trap today is too many resources — books, courses, videos can overwhelm you. Most people end up collecting resources instead of learning from them.</p>
+<pre><code class="language-text">Find the 5 most valuable resources for learning this topic. For each resource, explain:
+1. Who it's for
+2. Its difficulty level
+3. How to use it
+4. What parts to skip to save time
+Then design a 7-day learning path using these resources</code></pre>
+<p>This eliminates irrelevant options and focuses you on high-quality, actionable resources.</p>
 
-<p>A prompt is the <strong>command</strong> you give to an AI. The more specific your prompt is, the more accurate the AI's response will be.</p>
+<h2 id="method-6">Method 6: Use the Feynman Technique to Force Understanding</h2>
+<p>If you can't explain a concept in simple terms, you don't truly understand it. Use Claude to practice the Feynman Technique:</p>
+<pre><code class="language-text">First, explain this concept in language a 12-year-old can understand. Then, I will explain it back in my own words. After I finish:
+1. Point out what I explained correctly
+2. Point out what I missed
+3. Point out where I was confused
+4. Highlight any advanced terms I used without understanding
+Then ask me to explain again until I can do it clearly</code></pre>
+<p>This cycle exposes "fake understanding" — you might think you get it when reading, but explaining it reveals your true knowledge.</p>
 
-<h3>Bad Prompt Example</h3>
-<pre><code class="language-text">Give me something to drink.</code></pre>
-<p>This vague prompt might result in the AI giving you a watering can instead of a beverage.</p>
-
-<h3>Good Prompt Example</h3>
-<pre><code class="language-text">I am a human. It's very hot today, and I want to drink something cold, sweet, tasty, and cheap.</code></pre>
-<p>This clear prompt will likely result in the AI giving you a suitable cold drink.</p>
-
-<h2 id="agent">3. Agent</h2>
-
-<p>An Agent is an <strong>AI employee</strong> that can understand tasks, use tools, and work independently to complete them.</p>
-
-<h3>Example</h3>
-<p>When you ask an Agent to find a book: it first checks the fridge (no books there), then searches its internal knowledge base (no books there), and finally checks the external library and finds the book you want. This shows that an Agent can take initiative to solve problems without constant guidance.</p>
-
-<h2 id="codex">4. Codex</h2>
-
-<p>Codex is a <strong>programming-savvy AI employee</strong> that specializes in writing and understanding code.</p>
-
-<h3>Example</h3>
-<p>If you ask an Agent to find a book, it will search for books. If you ask Codex to find a book, it might write a Python script to search for books automatically:</p>
-
-<pre><code class="language-python">def find_book(book_title):
-    library = ["The Great Gatsby", "1984", "To Kill a Mockingbird"]
-    for book in library:
-        if book_title.lower() in book.lower():
-            return f"Found: {book}"
-    return "Book not found"
-
-print(find_book("1984"))</code></pre>
-
-<h2 id="skill">5. Skill</h2>
-
-<p>A Skill is a <strong>standard operating procedure (SOP)</strong> for an Agent. It tells the Agent how to perform a specific task consistently.</p>
-
-<h3>Example</h3>
-<p>If an Agent keeps finding the wrong books, you can give it a Skill document that says: "Book Search Skill: 1. Only search the bookshelf in the living room. 2. Look for books with red covers. 3. Check the first page to confirm it's the right book." Now, every time the Agent searches for a book, it will follow these steps and find the right one.</p>
-
-<h2 id="workflow">6. Workflow</h2>
-
-<p>A Workflow is a <strong>sequence of steps</strong> that an Agent follows to complete a task. A workflow for finding and returning a book might be: Find the book → Clean the book → Return the book to the shelf.</p>
-
-<h2 id="api">7. API</h2>
-
-<p>An API is a <strong>plug</strong> that connects an AI to other tools or software. If you want your AI to send emails, you can use an email API to connect your AI to an email service. This way, the AI can send emails without having its own built-in email functionality.</p>
-
-<h2 id="knowledge-base">8. Knowledge Base</h2>
-
-<p>A Knowledge Base is a <strong>database</strong> that limits the information an AI can use. If you want your AI to only answer questions about your company's products, you can set up a knowledge base that only contains information about your products. This way, the AI won't use information from the internet or other sources.</p>
-
-<h2 id="summary">Summary</h2>
-<ul>
-  <li><strong>LLM</strong>: The brain of the AI</li>
-  <li><strong>Prompt</strong>: The command you give to the AI</li>
-  <li><strong>Agent</strong>: An AI employee that can work independently</li>
-  <li><strong>Codex</strong>: An AI employee that specializes in coding</li>
-  <li><strong>Skill</strong>: A standard operating procedure for an Agent</li>
-  <li><strong>Workflow</strong>: A sequence of steps for completing a task</li>
-  <li><strong>API</strong>: A plug that connects an AI to other tools</li>
-  <li><strong>Knowledge Base</strong>: A database that limits the AI's information sources</li>
-</ul>
+<h2 id="system">The Complete AI-Powered Learning System</h2>
+<p>These six methods form a complete system: (1) learning ladder = full map, (2) 20-hour method = core content, (3) AI examiner = true level, (4) cheat sheet = compress knowledge, (5) filter = eliminate noise, (6) Feynman cycle = clarify confusion.</p>
 
 <h2>常见问题</h2>
 
-<h3>How is this different from the July 2 "Don't Be Intimidated by AI Jargon" article?</h3>
-<p>The July 2 article covers <strong>12 advanced concepts</strong> (Token, RAG, MCP, Context Engineering, Harness Engineering, Workspace Agent, etc.) with code examples — it's designed for intermediate readers who want to understand the full AI stack. This article covers <strong>8 foundational concepts</strong> (LLM, Prompt, Agent, Codex, Skill, Workflow, API, Knowledge Base) using everyday analogies — it's designed for absolute beginners who just want to understand what these terms mean. Read this one first if you're brand new. Read the July 2 article when you're ready to go deeper into AI architecture and implementation.</p>
+<h3>Do all six methods work with any AI tool, or just Claude?</h3>
+<p>All six methods work with any capable AI (ChatGPT, DeepSeek, Kimi, Doubao, etc.). The guide uses Claude as the example, but the prompt templates are tool-agnostic. That said, Claude has two advantages for learning: (1) its explanations tend to be more structured and pedagogical — it naturally breaks concepts into levels and steps without being asked, and (2) its lower hallucination rate means fewer incorrect "facts" slipping into your learning materials. For Methods 1-5, any tool works. For Method 6 (Feynman Technique), Claude's conversational style and willingness to play the student/teacher role makes the back-and-forth feel more natural.</p>
 
-<h3>Why do these 8 concepts matter for someone who just wants to use AI tools?</h3>
-<p>Because every AI tool you'll encounter — whether it's ChatGPT, WorkBuddy, Codex, or Doubao — uses these concepts. <strong>LLM</strong> determines how smart your tool is. <strong>Prompt</strong> determines whether you get useful output or garbage. <strong>Agent</strong> is what separates modern AI tools from simple chatbots. <strong>Skill/Workflow</strong> is how you automate your work. <strong>Knowledge Base</strong> is how you make AI answer from your company's documents instead of making things up. Understanding these 8 concepts isn't academic — it directly impacts how effectively you use whatever AI tool you've chosen.</p>
+<h3>How do I combine this with the "learning by doing" approach from the July 29 article?</h3>
+<p>The July 29 article argues that real tasks beat passive learning. These six methods are <strong>complementary, not contradictory</strong>. Use Methods 1-2 to quickly map out what you need to learn for a real task (not to learn everything theoretically). Use Methods 3 and 6 while working on the task — quiz yourself on the parts you're implementing. Use Methods 4-5 to compress and filter what you've discovered through doing. The ideal workflow: pick a real task (July 29 approach) → use the learning ladder (Method 1) to identify which level you need → learn only the 20% relevant to your task (Method 2) → quiz yourself as you build (Method 3) → create a cheat sheet of what you learned (Method 4).</p>
 
-<h3>Do I need to remember all the technical details in this guide?</h3>
-<p>No. Focus on the <strong>analogies</strong>, not the technical details. LLM = brain. Prompt = command. Agent = employee. Skill = SOP. Workflow = step sequence. API = plug. Knowledge Base = filter. If you remember these one-to-one mappings, you'll have the mental model you need to navigate any AI tool. The technical details in this guide are there so you can recognize the terms when you see them, not because you need to memorize them.</p>
+<h3>How long does a full learning cycle take with these methods?</h3>
+<p>For a brand-new skill: initial mapping (Method 1) takes 30 minutes, 20% identification (Method 2) takes 20 minutes, resource curation (Method 5) takes 15 minutes. That's about 1 hour of setup before you start the actual 20-hour learning plan. During the 20 hours of practice, use Methods 3-4-6 at the end of each session (10-15 minutes each) to reinforce. Total: ~1 hour setup + 20 hours practice + ~5 hours of review/quizzing = about one week of focused part-time effort to reach functional competence in most topics. This is the "10x" claim — traditional methods (courses, books, unstructured practice) typically take 100+ hours for the same result.</p>
 
-<h3>What should I learn after mastering these 8 concepts?</h3>
-<p>Move on to <strong>Practicing with real tasks</strong>. Each tool does these 8 things differently. Don't try to memorize — just be aware of these concepts and experience them firsthand.</p>
+<h3>What if Claude says something wrong during learning?</h3>
+<p>Claude's hallucination rate is low but not zero. For learning, the risk areas are: specific dates/historical facts, API documentation details (version-specific), and highly niche technical details. Mitigate by: (1) using Claude for <strong>learning structures and explanations</strong> (where it excels), not as a primary source for facts; (2) cross-checking critical facts with a quick web search; (3) using Method 3 (quizzing) — Claude catching its own errors during Q&A is surprisingly effective; (4) for code/technical topics, running the code to verify. The guide's methods are designed to minimize the impact of errors — they focus on Claude as a learning <strong>coach and structure builder</strong>, not as an encyclopedia.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Understood the basics? Put them into practice:</p>
+  <p>Ready to learn faster? Combine with these guides:</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — apply these concepts to real tasks</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — go deeper into 12 advanced concepts</li>
-    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">How to Build a Personal AI Quant Trading System in 2026</a> — see Agents, Skills and Workflows in a real system</li>
+    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — pair learning methods with real tasks</li>
+    <li><a href="/articles/ai-beginners-quick-guide-common-jargon-explained">AI Beginner's Quick Guide: Common Jargon Explained</a> — understand the AI concepts behind these methods</li>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master Claude as a learning tool</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🧠 AI 基础</span>
-  <span class="meta-badge">🕒 阅读约5分钟</span>
-  <span class="meta-badge">📅 2026年7月30日</span>
+  <span class="meta-badge">📖 AI 教程</span>
+  <span class="meta-badge">🕒 阅读约6分钟</span>
+  <span class="meta-badge">📅 2026年7月31日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>如果你曾尝试学习AI，大概被网上飘着的"大模型""Codex""Skill""Prompt"等术语搞得一头雾水。本指南用生活实例拆解这些核心概念，让你一次读懂、即刻能用。</p>
+<p>想快速学习新技能，Claude能帮你实现10倍速学习——只要用对方法。别只把它当搜索框。本指南分享六种将Claude变成个人学习教练的实用方法。</p>
 
-<h2 id="llm">1. 大语言模型（LLM）</h2>
-<p>大语言模型就像AI系统的<strong>大脑</strong>。不同模型有不同能力——有的擅长推理，有的擅长编码，有的擅长创意写作。</p>
-<h3>示例</h3>
-<ul>
-  <li><strong>模型A</strong>：被告知"桌子脏了"，它只写了张"桌子脏了"的便条而非清理。</li>
-  <li><strong>模型B</strong>：被告知"桌子脏了"，立刻拿起抹布擦干净。</li>
-</ul>
-<p>这说明你选的模型直接决定AI有多"聪明"。常见LLM：GPT-4o、Claude 3、Gemini、豆包、DeepSeek。</p>
+<h2 id="method-1">方法1：让AI搭建学习阶梯</h2>
+<p>大多数人学不好不是因为不努力，而是过早跳到了错误的难度。不要问"帮我学Python"，用这个提示词：</p>
+<pre><code class="language-text">把Python拆分为5个学习级别，从零基础到能独立构建项目。每个级别说明：
+1. 应掌握的内容
+2. 常见错误
+3. 进入下一级需达到的标准</code></pre>
+<p>Claude给你结构化学习地图，让你清楚知道自己在哪、下一步学什么、何时准备好晋级。</p>
 
-<h2 id="prompt">2. Prompt（提示词）</h2>
-<p>Prompt是你给AI的<strong>指令</strong>。越具体，AI回复越精准。</p>
-<h3>坏提示词</h3>
-<pre><code class="language-text">给我喝的。</code></pre>
-<h3>好提示词</h3>
-<pre><code class="language-text">我是人类。今天很热，我想喝冷的、甜的、好喝的、便宜的东西。</code></pre>
+<h2 id="method-2">方法2：让AI识别最重要的20%</h2>
+<p>技能中并非所有内容同等重要。学视频剪辑不需要学每个插件——聚焦带来80%效果的20%核心内容。</p>
+<pre><code class="language-text">我想在20小时内学习这个主题。找出最重要的20%内容，设计10节课的学习计划（每节2小时）。每节包含：
+1. 练习资源
+2. 复习问题
+3. 清晰的学习目标</code></pre>
+<p>将大技能拆解为可管理的日常任务，每天只需专注2小时。</p>
 
-<h2 id="agent">3. Agent（智能体）</h2>
-<p>Agent是能理解任务、使用工具、独立完成工作的<strong>AI员工</strong>。如让Agent找书：先查冰箱（没书）→搜内部知识库（没书）→查外部图书馆→找到目标书籍。无需持续指导就能主动解决问题。</p>
+<h2 id="method-3">方法3：让AI考你直到卡壳</h2>
+<p>多数学习者只是被动消费内容——看视频读文章自以为懂了，被问到时却说不出。解决方案是主动回忆。</p>
+<pre><code class="language-text">我刚学了这个主题。每次问我一个问题，从易到难。我回答后：
+1. 打分（正确/错误）
+2. 指出对在哪、错在哪、漏了什么
+3. 只重新讲解我没掌握的部分</code></pre>
+<p>关键是一次一个问题。这帮你立即识别知识盲区，像教练在你锻炼时纠正姿势——比独自练习更快。</p>
 
-<h2 id="codex">4. Codex</h2>
-<p>Codex是<strong>精通编程的AI员工</strong>，专长编写和理解代码。让普通Agent找书它会直接搜索；让Codex找书它可能写一段Python自动搜索。</p>
+<h2 id="method-4">方法4：让AI创建一页知识卡</h2>
+<p>人脑更容易记住结构而非长文本。别保存冗长聊天记录，让Claude浓缩知识：</p>
+<pre><code class="language-text">把这个主题浓缩成一页知识卡，包含：
+1. 一句话定义
+2. 核心概念
+3. 真实案例
+4. 常见错误
+5. 使用前检查清单
+6. 5道快速自测题</code></pre>
+<p>考前、面试前、会议前或项目前5分钟快速复习——无需重新学习全部内容。</p>
 
-<h2 id="skill">5. Skill（技能）</h2>
-<p>Skill是Agent的<strong>标准操作流程（SOP）</strong>，告诉Agent如何始终如一完成特定任务。如"书籍搜索技能：1.只搜索客厅书架 2.找红色封面 3.检查首页确认正确"。之后每次搜书都按此执行。</p>
+<h2 id="method-5">方法5：让AI从噪音中过滤信号</h2>
+<p>当今学习最大陷阱是资源太多——书籍、课程、视频能压垮你。大多数人最后是收集资源而非学习资源。</p>
+<pre><code class="language-text">找出学习这个主题最有价值的5个资源。每个资源说明：
+1. 适合谁
+2. 难度级别
+3. 如何使用
+4. 哪些部分可跳过以节省时间
+然后用这些资源设计7天学习路径</code></pre>
+<p>消除无关选项，聚焦高质量、可操作的资源。</p>
 
-<h2 id="workflow">6. Workflow（工作流）</h2>
-<p>Workflow是Agent完成任务的<strong>步骤序列</strong>。如找书还书流程：找到书→清洁书→放回书架。</p>
+<h2 id="method-6">方法6：用费曼技巧强迫理解</h2>
+<p>不能用简单语言解释概念，就是没有真正理解。用Claude练习费曼技巧：</p>
+<pre><code class="language-text">先用12岁孩子能懂的语言解释这个概念。然后我用自己话复述。我讲完后：
+1. 指出我解释正确的部分
+2. 指出我遗漏的部分
+3. 指出我混淆的地方
+4. 标出我使用了但不理解的进阶术语
+然后让我重新解释直到讲清楚</code></pre>
+<p>这个循环暴露"伪理解"——阅读时以为懂了，但讲出来才暴露真实知识水平。</p>
 
-<h2 id="api">7. API</h2>
-<p>API是连接AI到其他工具软件的<strong>插头</strong>。想让AI发送邮件，用邮件API连接AI到邮件服务，AI无需内置邮件功能就能发邮件。</p>
-
-<h2 id="knowledge-base">8. 知识库</h2>
-<p>知识库是限制AI可用信息的<strong>数据库</strong>。想让AI只回答公司产品相关问题，设置只含产品信息的知识库，AI就不会使用互联网或其他来源的信息。</p>
-
-<h2 id="summary">总结</h2>
-<ul>
-  <li><strong>LLM</strong>：AI的大脑</li>
-  <li><strong>Prompt</strong>：给AI的指令</li>
-  <li><strong>Agent</strong>：能独立工作的AI员工</li>
-  <li><strong>Codex</strong>：专精编程的AI员工</li>
-  <li><strong>Skill</strong>：Agent的标准操作流程</li>
-  <li><strong>Workflow</strong>：完成任务的步骤序列</li>
-  <li><strong>API</strong>：连接AI到其他工具的插头</li>
-  <li><strong>知识库</strong>：限制AI信息来源的数据库</li>
-</ul>
+<h2 id="system">完整AI驱动学习系统</h2>
+<p>六种方法组成完整系统：(1)学习阶梯=全貌地图 (2)20小时法=核心内容 (3)AI考官=真实水平 (4)知识卡=压缩知识 (5)过滤=消除噪音 (6)费曼循环=澄清混淆。</p>
 
 <h2>常见问题</h2>
 
-<h3>这和7月2日"别被AI术语吓倒"那篇文章有什么不同？</h3>
-<p>7月2日文章涵盖<strong>12个进阶概念</strong>（Token、RAG、MCP、上下文工程、Harness工程、Workspace Agent等），含代码示例——为想理解完整AI技术栈的中级读者设计。本文涵盖<strong>8个基础概念</strong>（LLM、Prompt、Agent、Codex、Skill、Workflow、API、知识库），用生活类比——为只想理解这些术语含义的纯新手设计。如果你完全零基础，先读这篇。准备好深入AI架构和实现时再读7月2日那篇。</p>
+<h3>六种方法只能用于Claude，还是所有AI工具都行？</h3>
+<p>六种方法适用于任何有能力的AI（ChatGPT、DeepSeek、Kimi、豆包等）。指南以Claude为例，但提示词模板与工具无关。不过Claude在学习方面有两个优势：(1)解释往往更有结构性和教学性——自然将概念分为层级和步骤，无需你额外要求；(2)更低的幻觉率意味着更少的错误"事实"混入学习材料。方法1-5任何工具都行。方法6（费曼技巧），Claude的对话风格和愿意扮演学生/教师角色让来回互动更自然。</p>
 
-<h3>对只想用AI工具的人来说，这8个概念为什么重要？</h3>
-<p>因为你遇到的每个AI工具——ChatGPT、WorkBuddy、Codex或豆包——都用这些概念。<strong>LLM</strong>决定工具有多聪明。<strong>Prompt</strong>决定你得到有用输出还是垃圾。<strong>Agent</strong>是现代AI工具和简单聊天机器人的分界线。<strong>Skill/Workflow</strong>是你自动化工作的方式。<strong>知识库</strong>是让AI从公司文档而非凭空编造来回答的方式。理解这8个概念不是学术——它直接影响你使用任何AI工具的效能。</p>
+<h3>怎么和7月29日"做中学"那篇文章结合？</h3>
+<p>7月29日文章强调真实任务胜过被动学习。六种方法是<strong>互补而非矛盾</strong>。用方法1-2快速梳理真实任务需要学什么（而非理论学全部）。用方法3和6在执行任务时——对正在实现的部分自我测试。用方法4-5压缩和过滤通过实践中发现的知识。理想工作流：选真实任务（7月29日方法）→用学习阶梯（方法1）确定需要哪个级别→只学与任务相关的20%（方法2）→边构建边自测（方法3）→创建所学知识卡（方法4）。</p>
 
-<h3>需要记住指南中所有技术细节吗？</h3>
-<p>不需要。聚焦<strong>类比</strong>而非技术细节。LLM=大脑。Prompt=指令。Agent=员工。Skill=SOP。Workflow=步骤序列。API=插头。知识库=过滤器。记住这些一一对应关系，你就有了驾驭任何AI工具的心智模型。技术细节只是让你看到术语时能认出它们，而非需要背诵。</p>
+<h3>完整学习周期需要多长时间？</h3>
+<p>全新技能：初始地图（方法1）30分钟，20%识别（方法2）20分钟，资源筛选（方法5）15分钟。大约1小时完成设置后开始实际的20小时学习计划。20小时练习中，每节结束时用方法3-4-6（各10-15分钟）巩固。总计：~1小时设置+20小时练习+~5小时复习/测试=大约一周集中业余时间达到大多数主题的功能性胜任。"10倍"的含义——传统方法（课程、书籍、无结构练习）达到同样效果通常需要100+小时。</p>
 
-<h3>掌握8个概念后该学什么？</h3>
-<p>转向<strong>真实任务练习</strong>。每个工具对这8件事的实现方式不同。不要死记硬背——只需知晓这些概念并亲身体验。</p>
+<h3>如果学习过程中Claude说错了怎么办？</h3>
+<p>Claude的幻觉率低但非零。学习中的风险领域：具体日期/历史事实、API文档细节（版本特定）、高度细分的技术细节。缓解方法：(1)用Claude做<strong>学习结构和解释</strong>（它擅长之处），而非事实主要来源；(2)快速网页搜索交叉验证关键事实；(3)用方法3（问答测试）——Claude在问答中自我纠错出奇有效；(4)代码/技术主题亲自运行代码验证。指南的方法设计为最小化错误影响——聚焦Claude作为学习<strong>教练和结构构建者</strong>，而非百科全书。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>理解了基础？付诸实践：</p>
+  <p>准备好加速学习？结合这些指南：</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将这些概念应用到真实任务</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 深入12个进阶概念</li>
-    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">2026个人AI量化交易系统搭建全指南</a> — 看Agent、Skill和Workflow在真实系统中的运作</li>
+    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将学习方法与真实任务结合</li>
+    <li><a href="/articles/ai-beginners-quick-guide-common-jargon-explained">AI新手速成指南：常见术语一读就懂</a> — 理解这些方法背后的AI概念</li>
+    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 将Claude命令为学习工具</li>
   </ul>
 </div>`,
   },
