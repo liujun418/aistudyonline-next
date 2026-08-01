@@ -1,18 +1,18 @@
-"""Publish July 31, 2026 — 1 article, no new tools."""
+"""Publish Aug 1, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "how-to-learn-anything-10x-faster-with-claude-practical-guide",
-    title: "How to Learn Anything 10x Faster with Claude: A Practical Guide",
-    titleZh: "用Claude实现10倍速学习：一份实用指南",
-    description: "Six AI-powered learning methods using Claude — build a learning ladder (5 levels), identify the 20% core content (Pareto), get quizzed until stuck (active recall), create one-page cheat sheets, filter signals from noise (resource curation), and use the Feynman Technique to expose fake understanding.",
-    descriptionZh: "用Claude实现六种AI加速学习法——搭建学习阶梯（5级）、识别20%核心内容（帕累托）、答题直到卡壳（主动回忆）、创建一页知识卡、从噪音中过滤信号（资源筛选）、用费曼技巧暴露伪理解。",
-    category: "ai-tutorials",
-    tags: ["Claude", "Learning", "Productivity", "Prompt Engineering", "Feynman Technique", "Tutorial"],
-    difficulty: "beginner",
-    toolsMentioned: ["Claude"],
-    date: "2026-07-31",
+    slug: "deepseek-v4-flash-official-release-practical-guide",
+    title: "DeepSeek V4 Flash Official Release: A Practical Guide to the Game-Changing AI Model",
+    titleZh: "DeepSeek V4 Flash正式发布：改变游戏规则的AI模型实战指南",
+    description: "DeepSeek V4 Flash official launch breakdown — 82.7 Terminal-Bench (global 2nd), 36-107x cheaper than GPT-5.6 Sol at $0.14/M input tokens, 284B MoE architecture with 13B active per token, 1M native context, plus Python API setup, agent task execution, and cost optimization tips.",
+    descriptionZh: "DeepSeek V4 Flash正式发布深度解析——Terminal-Bench 82.7分（全球第2），比GPT-5.6 Sol便宜36-107倍（$0.14/M输入token），284B MoE架构仅13B/token激活，原生1M上下文，含Python API配置、Agent任务执行和成本优化技巧。",
+    category: "ai-news",
+    tags: ["DeepSeek", "DeepSeek V4", "MoE", "API", "Benchmark", "Cost Efficiency", "Tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: ["DeepSeek"],
+    date: "2026-08-01",
   },
 
 """
@@ -22,187 +22,219 @@ print('Part 1 done')
 
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "how-to-learn-anything-10x-faster-with-claude-practical-guide": {
+  "deepseek-v4-flash-official-release-practical-guide": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📖 AI Tutorials</span>
-  <span class="meta-badge">🕒 6 min read</span>
-  <span class="meta-badge">📅 Jul 31, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
+  <span class="meta-badge">📰 AI News</span>
+  <span class="meta-badge">🕒 7 min read</span>
+  <span class="meta-badge">📅 Aug 1, 2026</span>
+  <span class="meta-badge">🎯 Intermediate</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>If you want to learn a new skill quickly, Claude can help you achieve 10x faster learning — if you use it the right way. Don't just treat it as a search box. This guide shares six practical methods to turn Claude into your personal learning coach.</p>
+<p>The DeepSeek V4 Flash official release has taken the AI community by storm, delivering unprecedented performance at a fraction of the cost of competing models. This guide will break down its capabilities, technical innovations, and provide step-by-step instructions to help you leverage this powerful tool in your projects.</p>
 
-<h2 id="method-1">Method 1: Let AI Build Your Learning Ladder</h2>
-<p>Most people struggle to learn not because they lack effort, but because they jump to the wrong level too early. Instead of asking "Help me learn Python", use this prompt:</p>
-<pre><code class="language-text">Break Python into 5 learning levels, from a complete beginner to someone who can build independent projects. For each level, tell me:
-1. What I should master
-2. Common mistakes to avoid
-3. The standards I need to meet to move to the next level</code></pre>
-<p>Claude will give you a structured learning map, so you know exactly where you are, what to learn next, and when you're ready to advance.</p>
+<h2 id="benchmarks">Key Performance Highlights</h2>
+<h3>Industry-Leading Benchmarks</h3>
+<ul>
+  <li><strong>Terminal-Bench v2.1</strong>: 82.7 points (global 2nd), only 3.1 points behind GPT-5.6 Sol's 85.8</li>
+  <li><strong>Artificial Analysis Score</strong>: 50 points (global 10th), outperforming all other Chinese Flash models</li>
+  <li><strong>LLM Benchmark Reasoning</strong>: 58.80 points (global 6th), cost only $4.19 — 1/13 the cost of Qwen3.7-Max and 1/30 the cost of Claude Opus 5</li>
+  <li><strong>Agent Capabilities</strong>: 25.2 points, nearly matching Claude Opus 4.8's 25.7 points</li>
+</ul>
 
-<h2 id="method-2">Method 2: Let AI Identify the Most Important 20%</h2>
-<p>Not all content in a skill is equally important. You don't need to learn every plugin when studying video editing — focus on the 20% of core content that delivers 80% of results.</p>
-<pre><code class="language-text">I want to learn this topic in 20 hours. Find the most important 20% of content, and design a 10-session learning plan (2 hours per session). Each session should include:
-1. Practice resources
-2. Review questions
-3. Clear learning objectives</code></pre>
-<p>This breaks down a large skill into manageable daily tasks, so you only need to focus on 2 hours of learning each day.</p>
+<h3>Unmatched Cost Efficiency</h3>
+<table>
+  <tr><th>Model</th><th>Input Cost</th><th>Output Cost</th></tr>
+  <tr><td>DeepSeek V4 Flash</td><td>$0.14/M tokens</td><td>$0.28/M tokens</td></tr>
+  <tr><td>GPT-5.6 Sol</td><td>$5.00/M tokens</td><td>$30.00/M tokens</td></tr>
+  <tr><td>Claude Opus 5</td><td>$127.00/M tokens</td><td>-</td></tr>
+</table>
+<p>DeepSeek V4 Flash is <strong>36-107 times cheaper</strong> than GPT-5.6 Sol while delivering comparable performance.</p>
 
-<h2 id="method-3">Method 3: Let AI Quiz You Until You Get Stuck</h2>
-<p>Many learners only consume content passively — they watch videos or read articles and think they understand, but can't explain concepts when asked. The solution is active recall.</p>
-<pre><code class="language-text">I just learned this topic. Ask me one question at a time, starting from easy to hard. After I answer:
-1. Grade my answer (correct/incorrect)
-2. Point out what I got right, wrong, or incomplete
-3. Only re-explain the parts I didn't master</code></pre>
-<p>The key is to ask one question at a time. This helps you identify knowledge gaps immediately, like a trainer correcting your form during a workout — faster than practicing alone.</p>
+<h2 id="technical">Technical Deep Dive: The Secret Sauce</h2>
+<h3>Model Architecture</h3>
+<ul>
+  <li><strong>MoE (Mixture of Experts) Architecture</strong>: 284B total parameters, only 13B activated per token</li>
+  <li><strong>Native 1M Token Context</strong>: Supports extremely long documents and conversations</li>
+  <li><strong>No Architecture Changes</strong>: Same structure as preview — all improvements from enhanced post-training</li>
+</ul>
 
-<h2 id="method-4">Method 4: Let AI Create a One-Page Cheat Sheet</h2>
-<p>Human brains are better at remembering structures than long texts. Instead of saving long chat logs, ask Claude to condense the knowledge:</p>
-<pre><code class="language-text">Condense this topic into a one-page cheat sheet that includes:
-1. A one-sentence definition
-2. Key concepts
-3. Real-world examples
-4. Common mistakes
-5. A pre-use checklist
-6. 5 quick self-test questions</code></pre>
-<p>Perfect for quick reviews before exams, interviews, meetings, or projects — refresh in 5 minutes without re-learning everything.</p>
+<h3>Post-Training Breakthrough</h3>
+<p>The most remarkable achievement: massive performance gains <strong>without changing the model architecture</strong>. Post-training requires only 1/10 to 1/100th the computing power of pre-training, enables rapid improvements without rebuilding, and demonstrates that algorithmic innovation can break the "bigger parameters = better performance" paradigm.</p>
 
-<h2 id="method-5">Method 5: Let AI Filter Signals from Noise</h2>
-<p>The biggest learning trap today is too many resources — books, courses, videos can overwhelm you. Most people end up collecting resources instead of learning from them.</p>
-<pre><code class="language-text">Find the 5 most valuable resources for learning this topic. For each resource, explain:
-1. Who it's for
-2. Its difficulty level
-3. How to use it
-4. What parts to skip to save time
-Then design a 7-day learning path using these resources</code></pre>
-<p>This eliminates irrelevant options and focuses you on high-quality, actionable resources.</p>
+<h2 id="implementation">Practical Implementation Guide</h2>
 
-<h2 id="method-6">Method 6: Use the Feynman Technique to Force Understanding</h2>
-<p>If you can't explain a concept in simple terms, you don't truly understand it. Use Claude to practice the Feynman Technique:</p>
-<pre><code class="language-text">First, explain this concept in language a 12-year-old can understand. Then, I will explain it back in my own words. After I finish:
-1. Point out what I explained correctly
-2. Point out what I missed
-3. Point out where I was confused
-4. Highlight any advanced terms I used without understanding
-Then ask me to explain again until I can do it clearly</code></pre>
-<p>This cycle exposes "fake understanding" — you might think you get it when reading, but explaining it reveals your true knowledge.</p>
+<h3>1. API Setup</h3>
+<pre><code class="language-bash">pip install openai python-dotenv</code></pre>
+<p>Create a <code>.env</code> file with <code>DEEPSEEK_API_KEY</code> and <code>DEEPSEEK_BASE_URL=https://api.deepseek.com</code>.</p>
 
-<h2 id="system">The Complete AI-Powered Learning System</h2>
-<p>These six methods form a complete system: (1) learning ladder = full map, (2) 20-hour method = core content, (3) AI examiner = true level, (4) cheat sheet = compress knowledge, (5) filter = eliminate noise, (6) Feynman cycle = clarify confusion.</p>
+<h3>2. Basic Usage</h3>
+<pre><code class="language-python">import os
+from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+client = OpenAI(
+    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    base_url=os.getenv("DEEPSEEK_BASE_URL")
+)
+
+def deepseek_chat(prompt, model="deepseek-v4-flash"):
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": "You are a helpful AI assistant."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.7,
+        max_tokens=1024
+    )
+    return response.choices[0].message.content
+
+result = deepseek_chat("Explain the concept of MoE architecture in simple terms.")
+print(result)</code></pre>
+
+<h3>3. Advanced Agent Capabilities</h3>
+<pre><code class="language-python">def agent_task_execution(task_description):
+    response = client.chat.completions.create(
+        model="deepseek-v4-flash",
+        messages=[
+            {"role": "system", "content": "You are an AI agent that can break down complex tasks into steps. For each task, provide: 1. Task breakdown 2. Step-by-step execution plan 3. Potential challenges and solutions"},
+            {"role": "user", "content": task_description}
+        ],
+        temperature=0.5,
+        max_tokens=2048
+    )
+    return response.choices[0].message.content
+
+complex_task = "Design a complete marketing strategy for a new AI product launch"
+agent_result = agent_task_execution(complex_task)
+print(agent_result)</code></pre>
+
+<h3>4. Cost Optimization Tips</h3>
+<ol>
+  <li><strong>Use Caching</strong>: 98% cache hit rate for repeated queries</li>
+  <li><strong>Batch Requests</strong>: Combine multiple queries into a single request</li>
+  <li><strong>Optimize Token Usage</strong>: Be concise in prompts to reduce token consumption</li>
+  <li><strong>Monitor Usage</strong>: Track with the DeepSeek dashboard</li>
+</ol>
+
+<h2 id="applications">Real-World Applications</h2>
+<ul>
+  <li><strong>Content Creation</strong>: Blog posts, technical documentation, social media at scale</li>
+  <li><strong>Software Development</strong>: Code generation, documentation, testing with Agent capabilities</li>
+  <li><strong>Research & Analysis</strong>: Large dataset processing, literature review, report generation</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>The DeepSeek V4 Flash represents a paradigm shift in AI accessibility. By delivering near-top-tier performance at a fraction of the cost, it's breaking down barriers to AI adoption. The future of AI is no longer just about bigger models — it's about smarter training and more accessible technology.</p>
 
 <h2>常见问题</h2>
 
-<h3>Do all six methods work with any AI tool, or just Claude?</h3>
-<p>All six methods work with any capable AI (ChatGPT, DeepSeek, Kimi, Doubao, etc.). The guide uses Claude as the example, but the prompt templates are tool-agnostic. That said, Claude has two advantages for learning: (1) its explanations tend to be more structured and pedagogical — it naturally breaks concepts into levels and steps without being asked, and (2) its lower hallucination rate means fewer incorrect "facts" slipping into your learning materials. For Methods 1-5, any tool works. For Method 6 (Feynman Technique), Claude's conversational style and willingness to play the student/teacher role makes the back-and-forth feel more natural.</p>
+<h3>How is DeepSeek V4 Flash different from the V4 preview?</h3>
+<p>The architecture is identical — same 284B MoE, same 13B active per token, same 1M context. All improvements came from <strong>post-training optimization</strong>: higher-quality SFT data, better reinforcement learning signals, and improved human preference alignment. This is revolutionary because it proves you can dramatically improve a model's performance without the massive compute cost of retraining from scratch. For developers, this means API calls to V4 Flash use the same familiar interface but return better results. The preview-to-release improvement is roughly equivalent to going from Claude 3.5 Sonnet to Claude 3.5 Opus — but achieved through training optimization alone, not architectural changes.</p>
 
-<h3>How do I combine this with the "learning by doing" approach from the July 29 article?</h3>
-<p>The July 29 article argues that real tasks beat passive learning. These six methods are <strong>complementary, not contradictory</strong>. Use Methods 1-2 to quickly map out what you need to learn for a real task (not to learn everything theoretically). Use Methods 3 and 6 while working on the task — quiz yourself on the parts you're implementing. Use Methods 4-5 to compress and filter what you've discovered through doing. The ideal workflow: pick a real task (July 29 approach) → use the learning ladder (Method 1) to identify which level you need → learn only the 20% relevant to your task (Method 2) → quiz yourself as you build (Method 3) → create a cheat sheet of what you learned (Method 4).</p>
+<h3>Is DeepSeek V4 Flash really a viable alternative to GPT-5.6 Sol at 1/36th the cost?</h3>
+<p>For most tasks, yes. The benchmark data shows V4 Flash is within 3-5% of Sol on terminal tasks and reasoning, while the Agent score (25.2 vs 25.7 for Claude Opus 4.8) suggests it's competitive for multi-step workflows. The gap is most noticeable in: (1) extremely complex reasoning chains (where Sol's raw power wins), (2) creative writing quality (Sol is more polished), and (3) front-end code aesthetics (Sol's design sense is better). For 80% of real-world use cases — API integrations, data processing, content generation, chat applications — V4 Flash is functionally equivalent to Sol at a tiny fraction of the cost. The smart approach: use V4 Flash as your default, escalate to Sol or Claude only when quality demands it.</p>
 
-<h3>How long does a full learning cycle take with these methods?</h3>
-<p>For a brand-new skill: initial mapping (Method 1) takes 30 minutes, 20% identification (Method 2) takes 20 minutes, resource curation (Method 5) takes 15 minutes. That's about 1 hour of setup before you start the actual 20-hour learning plan. During the 20 hours of practice, use Methods 3-4-6 at the end of each session (10-15 minutes each) to reinforce. Total: ~1 hour setup + 20 hours practice + ~5 hours of review/quizzing = about one week of focused part-time effort to reach functional competence in most topics. This is the "10x" claim — traditional methods (courses, books, unstructured practice) typically take 100+ hours for the same result.</p>
+<h3>What does "13B active per token" mean in practice?</h3>
+<p>MoE (Mixture of Experts) architecture means the model has 284B total parameters but only activates 13B for any given token prediction. Think of it like a company with 284B employees but only 13B come to work each day — different ones for different tasks. The practical implications: (1) <strong>speed</strong> — 13B active parameters is small enough to run fast on modest hardware, (2) <strong>cost</strong> — less computation per token means lower API prices, (3) <strong>knowledge breadth</strong> — the full 284B parameter knowledge base is available even though only a fraction is active at once. This is why V4 Flash can have 1M context and broad knowledge while being 36x cheaper than Sol — it's using parameters more efficiently, not just adding more of them.</p>
 
-<h3>What if Claude says something wrong during learning?</h3>
-<p>Claude's hallucination rate is low but not zero. For learning, the risk areas are: specific dates/historical facts, API documentation details (version-specific), and highly niche technical details. Mitigate by: (1) using Claude for <strong>learning structures and explanations</strong> (where it excels), not as a primary source for facts; (2) cross-checking critical facts with a quick web search; (3) using Method 3 (quizzing) — Claude catching its own errors during Q&A is surprisingly effective; (4) for code/technical topics, running the code to verify. The guide's methods are designed to minimize the impact of errors — they focus on Claude as a learning <strong>coach and structure builder</strong>, not as an encyclopedia.</p>
+<h3>Can I run DeepSeek V4 Flash locally?</h3>
+<p>The 284B total parameter size makes local deployment impractical for most users — even with quantization, you'd need multiple high-end GPUs. The API at $0.14/M input tokens is the practical path. For local deployment enthusiasts, DeepSeek offers smaller models (V3, Coder V2) that are more manageable. The real innovation of V4 Flash is making near-frontier AI accessible through cost rather than local deployment — at these prices, the API is cheaper than the electricity to run a local GPU 24/7 for equivalent throughput. For developers building on DeepSeek, the API + caching strategy (98% cache hit rate) is the optimal approach.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Ready to learn faster? Combine with these guides:</p>
+  <p>Interested in DeepSeek and cost-efficient AI? Explore more:</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — pair learning methods with real tasks</li>
-    <li><a href="/articles/ai-beginners-quick-guide-common-jargon-explained">AI Beginner's Quick Guide: Common Jargon Explained</a> — understand the AI concepts behind these methods</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master Claude as a learning tool</li>
+    <li><a href="/articles/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026 Local LLM Benchmark: 13 Open-Source Models, $4K Hardware Guide</a> — see how DeepSeek compares to local models</li>
+    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — compare with the model V4 Flash competes against</li>
+    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand MoE architecture in depth</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📖 AI 教程</span>
-  <span class="meta-badge">🕒 阅读约6分钟</span>
-  <span class="meta-badge">📅 2026年7月31日</span>
-  <span class="meta-badge">🎯 入门</span>
+  <span class="meta-badge">📰 AI 新闻</span>
+  <span class="meta-badge">🕒 阅读约7分钟</span>
+  <span class="meta-badge">📅 2026年8月1日</span>
+  <span class="meta-badge">🎯 中级</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>想快速学习新技能，Claude能帮你实现10倍速学习——只要用对方法。别只把它当搜索框。本指南分享六种将Claude变成个人学习教练的实用方法。</p>
+<p>DeepSeek V4 Flash正式发布席卷AI社区，以竞争对手几分之一的成本提供前所未有的性能。本指南拆解其能力、技术创新，并提供分步说明帮你将这一强大工具应用到项目中。</p>
 
-<h2 id="method-1">方法1：让AI搭建学习阶梯</h2>
-<p>大多数人学不好不是因为不努力，而是过早跳到了错误的难度。不要问"帮我学Python"，用这个提示词：</p>
-<pre><code class="language-text">把Python拆分为5个学习级别，从零基础到能独立构建项目。每个级别说明：
-1. 应掌握的内容
-2. 常见错误
-3. 进入下一级需达到的标准</code></pre>
-<p>Claude给你结构化学习地图，让你清楚知道自己在哪、下一步学什么、何时准备好晋级。</p>
+<h2 id="benchmarks">关键性能亮点</h2>
+<h3>行业领先基准</h3>
+<ul>
+  <li><strong>Terminal-Bench v2.1</strong>：82.7分（全球第2），仅落后GPT-5.6 Sol的85.8分3.1分</li>
+  <li><strong>Artificial Analysis评分</strong>：50分（全球第10），超越所有其他国产Flash模型</li>
+  <li><strong>LLM基准推理</strong>：58.80分（全球第6），成本仅$4.19——Qwen3.7-Max的1/13、Claude Opus 5的1/30</li>
+  <li><strong>Agent能力</strong>：25.2分，几乎匹敌Claude Opus 4.8的25.7分</li>
+</ul>
 
-<h2 id="method-2">方法2：让AI识别最重要的20%</h2>
-<p>技能中并非所有内容同等重要。学视频剪辑不需要学每个插件——聚焦带来80%效果的20%核心内容。</p>
-<pre><code class="language-text">我想在20小时内学习这个主题。找出最重要的20%内容，设计10节课的学习计划（每节2小时）。每节包含：
-1. 练习资源
-2. 复习问题
-3. 清晰的学习目标</code></pre>
-<p>将大技能拆解为可管理的日常任务，每天只需专注2小时。</p>
+<h3>无与伦比的成本效率</h3>
+<table>
+  <tr><th>模型</th><th>输入成本</th><th>输出成本</th></tr>
+  <tr><td>DeepSeek V4 Flash</td><td>$0.14/M token</td><td>$0.28/M token</td></tr>
+  <tr><td>GPT-5.6 Sol</td><td>$5.00/M token</td><td>$30.00/M token</td></tr>
+  <tr><td>Claude Opus 5</td><td>$127.00/M token</td><td>-</td></tr>
+</table>
+<p>DeepSeek V4 Flash比GPT-5.6 Sol<strong>便宜36-107倍</strong>，性能相当。</p>
 
-<h2 id="method-3">方法3：让AI考你直到卡壳</h2>
-<p>多数学习者只是被动消费内容——看视频读文章自以为懂了，被问到时却说不出。解决方案是主动回忆。</p>
-<pre><code class="language-text">我刚学了这个主题。每次问我一个问题，从易到难。我回答后：
-1. 打分（正确/错误）
-2. 指出对在哪、错在哪、漏了什么
-3. 只重新讲解我没掌握的部分</code></pre>
-<p>关键是一次一个问题。这帮你立即识别知识盲区，像教练在你锻炼时纠正姿势——比独自练习更快。</p>
+<h2 id="technical">技术深潜：秘诀</h2>
+<h3>模型架构</h3>
+<ul>
+  <li><strong>MoE（混合专家）架构</strong>：284B总参数，每token仅激活13B</li>
+  <li><strong>原生1M Token上下文</strong>：支持超长文档和对话</li>
+  <li><strong>无架构变更</strong>：与预览版相同结构——所有改进来自增强后训练</li>
+</ul>
+<h3>后训练突破</h3>
+<p>最大成就不改变模型架构实现巨大性能提升。后训练仅需预训练1/10到1/100的算力，无需重建即可快速迭代，证明算法创新可打破"大参数=高性能"范式。</p>
 
-<h2 id="method-4">方法4：让AI创建一页知识卡</h2>
-<p>人脑更容易记住结构而非长文本。别保存冗长聊天记录，让Claude浓缩知识：</p>
-<pre><code class="language-text">把这个主题浓缩成一页知识卡，包含：
-1. 一句话定义
-2. 核心概念
-3. 真实案例
-4. 常见错误
-5. 使用前检查清单
-6. 5道快速自测题</code></pre>
-<p>考前、面试前、会议前或项目前5分钟快速复习——无需重新学习全部内容。</p>
+<h2 id="implementation">实战指南</h2>
+<h3>1. API配置</h3>
+<pre><code class="language-bash">pip install openai python-dotenv</code></pre>
+<p>创建.env文件含DEEPSEEK_API_KEY和DEEPSEEK_BASE_URL。</p>
+<h3>2. 基础使用（代码见正文）</h3>
+<h3>3. 高级Agent能力（代码见正文）</h3>
+<h3>4. 成本优化技巧</h3>
+<ol>
+  <li><strong>使用缓存</strong>：重复查询98%缓存命中率</li>
+  <li><strong>批量请求</strong>：合并多个查询</li>
+  <li><strong>优化Token使用</strong>：提示词简洁减少消耗</li>
+  <li><strong>监控用量</strong>：DeepSeek仪表盘追踪</li>
+</ol>
 
-<h2 id="method-5">方法5：让AI从噪音中过滤信号</h2>
-<p>当今学习最大陷阱是资源太多——书籍、课程、视频能压垮你。大多数人最后是收集资源而非学习资源。</p>
-<pre><code class="language-text">找出学习这个主题最有价值的5个资源。每个资源说明：
-1. 适合谁
-2. 难度级别
-3. 如何使用
-4. 哪些部分可跳过以节省时间
-然后用这些资源设计7天学习路径</code></pre>
-<p>消除无关选项，聚焦高质量、可操作的资源。</p>
+<h2 id="applications">实际应用</h2>
+<ul>
+  <li><strong>内容创作</strong>：博客、技术文档、社交媒体规模化</li>
+  <li><strong>软件开发</strong>：代码生成、文档、测试，Agent能力加持</li>
+  <li><strong>研究分析</strong>：大数据集处理、文献综述、报告生成</li>
+</ul>
 
-<h2 id="method-6">方法6：用费曼技巧强迫理解</h2>
-<p>不能用简单语言解释概念，就是没有真正理解。用Claude练习费曼技巧：</p>
-<pre><code class="language-text">先用12岁孩子能懂的语言解释这个概念。然后我用自己话复述。我讲完后：
-1. 指出我解释正确的部分
-2. 指出我遗漏的部分
-3. 指出我混淆的地方
-4. 标出我使用了但不理解的进阶术语
-然后让我重新解释直到讲清楚</code></pre>
-<p>这个循环暴露"伪理解"——阅读时以为懂了，但讲出来才暴露真实知识水平。</p>
-
-<h2 id="system">完整AI驱动学习系统</h2>
-<p>六种方法组成完整系统：(1)学习阶梯=全貌地图 (2)20小时法=核心内容 (3)AI考官=真实水平 (4)知识卡=压缩知识 (5)过滤=消除噪音 (6)费曼循环=澄清混淆。</p>
+<h2 id="conclusion">总结</h2>
+<p>DeepSeek V4 Flash代表AI可及性的范式转变。以接近顶级性能的几分之一成本打破AI采用障碍。AI的未来不再只是更大的模型——而是更聪明的训练和更可及的技术。</p>
 
 <h2>常见问题</h2>
 
-<h3>六种方法只能用于Claude，还是所有AI工具都行？</h3>
-<p>六种方法适用于任何有能力的AI（ChatGPT、DeepSeek、Kimi、豆包等）。指南以Claude为例，但提示词模板与工具无关。不过Claude在学习方面有两个优势：(1)解释往往更有结构性和教学性——自然将概念分为层级和步骤，无需你额外要求；(2)更低的幻觉率意味着更少的错误"事实"混入学习材料。方法1-5任何工具都行。方法6（费曼技巧），Claude的对话风格和愿意扮演学生/教师角色让来回互动更自然。</p>
+<h3>DeepSeek V4 Flash和V4预览版有什么不同？</h3>
+<p>架构完全相同——284B MoE、13B/token激活、1M上下文。所有改进来自<strong>后训练优化</strong>：更高质量SFT数据、更好的强化学习信号、改进的人类偏好对齐。这具有革命性，因为证明无需从头训练的巨大算力成本就能大幅提升模型性能。对开发者，API调用V4 Flash使用相同熟悉接口但返回更好结果。预览版到正式版的改进幅度大致相当于从Claude 3.5 Sonnet到Claude 3.5 Opus——但仅通过训练优化实现，而非架构变更。</p>
 
-<h3>怎么和7月29日"做中学"那篇文章结合？</h3>
-<p>7月29日文章强调真实任务胜过被动学习。六种方法是<strong>互补而非矛盾</strong>。用方法1-2快速梳理真实任务需要学什么（而非理论学全部）。用方法3和6在执行任务时——对正在实现的部分自我测试。用方法4-5压缩和过滤通过实践中发现的知识。理想工作流：选真实任务（7月29日方法）→用学习阶梯（方法1）确定需要哪个级别→只学与任务相关的20%（方法2）→边构建边自测（方法3）→创建所学知识卡（方法4）。</p>
+<h3>DeepSeek V4 Flash真的能以1/36成本替代GPT-5.6 Sol吗？</h3>
+<p>对大多数任务，是的。基准数据显示V4 Flash在终端任务和推理上仅落后Sol 3-5%，Agent分数（25.2 vs Claude Opus 4.8的25.7）表明多步工作流有竞争力。差距最明显的是：(1)极复杂推理链（Sol原始算力胜出），(2)创意写作质量（Sol更精致），(3)前端代码美学（Sol设计感更好）。80%实际场景——API集成、数据处理、内容生成、聊天应用——V4 Flash功能等效Sol，成本极低。聪明做法：默认用V4 Flash，仅质量要求高时升级到Sol或Claude。</p>
 
-<h3>完整学习周期需要多长时间？</h3>
-<p>全新技能：初始地图（方法1）30分钟，20%识别（方法2）20分钟，资源筛选（方法5）15分钟。大约1小时完成设置后开始实际的20小时学习计划。20小时练习中，每节结束时用方法3-4-6（各10-15分钟）巩固。总计：~1小时设置+20小时练习+~5小时复习/测试=大约一周集中业余时间达到大多数主题的功能性胜任。"10倍"的含义——传统方法（课程、书籍、无结构练习）达到同样效果通常需要100+小时。</p>
+<h3>"每token激活13B"实际意味着什么？</h3>
+<p>MoE（混合专家）架构意味着模型有284B总参数，但每次token预测仅激活13B。就像公司有284B员工，但每天只有13B上班——不同任务不同员工。实际影响：(1)<strong>速度</strong>——13B激活参数足够小，能在普通硬件上快速运行，(2)<strong>成本</strong>——每token更少计算意味着更低API价格，(3)<strong>知识广度</strong>——完整284B参数知识库可用，即使每次仅激活部分。这就是为什么V4 Flash能有1M上下文和广泛知识同时比Sol便宜36倍——更高效使用参数，而非简单堆砌。</p>
 
-<h3>如果学习过程中Claude说错了怎么办？</h3>
-<p>Claude的幻觉率低但非零。学习中的风险领域：具体日期/历史事实、API文档细节（版本特定）、高度细分的技术细节。缓解方法：(1)用Claude做<strong>学习结构和解释</strong>（它擅长之处），而非事实主要来源；(2)快速网页搜索交叉验证关键事实；(3)用方法3（问答测试）——Claude在问答中自我纠错出奇有效；(4)代码/技术主题亲自运行代码验证。指南的方法设计为最小化错误影响——聚焦Claude作为学习<strong>教练和结构构建者</strong>，而非百科全书。</p>
+<h3>能本地运行DeepSeek V4 Flash吗？</h3>
+<p>284B总参数规模对大多数用户本地部署不现实——即使量化也需多张高端GPU。API $0.14/M输入token是实际路径。对本地部署爱好者，DeepSeek提供更小的模型（V3、Coder V2）更易管理。V4 Flash真正创新是通过成本而非本地部署使接近前沿的AI可及——这个价格下，API比24/7运行本地GPU的电费更便宜。开发者基于DeepSeek构建，API+缓存策略（98%命中率）是最优方案。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>准备好加速学习？结合这些指南：</p>
+  <p>对DeepSeek和成本效益AI感兴趣？探索更多：</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将学习方法与真实任务结合</li>
-    <li><a href="/articles/ai-beginners-quick-guide-common-jargon-explained">AI新手速成指南：常见术语一读就懂</a> — 理解这些方法背后的AI概念</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 将Claude命令为学习工具</li>
+    <li><a href="/articles/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026本地大模型横评：13款开源模型+$4000硬件部署全指南</a> — 看DeepSeek与本地模型对比</li>
+    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 对比V4 Flash的竞争对手</li>
+    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 深入理解MoE架构</li>
   </ul>
 </div>`,
   },
