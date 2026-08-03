@@ -2903,4 +2903,17 @@ export const articles: Article[] = [
     date: "2026-08-01",
   },
 
+  {
+    slug: "how-to-build-high-end-ai-personal-workbench-zero-code-workbuddy",
+    title: "How to Build a High-End AI Personal Workbench with Zero Code",
+    titleZh: "零代码搭建高端AI个人工作台：WorkBuddy完整教程",
+    description: "A step-by-step guide to building a custom AI personal workbench in WorkBuddy with zero code — using /finesse-brief (requirement organization) and /finesse-ui (high-end UI generation) Skills, covering pet daily record workbench, AI workbench, and life management workbench examples.",
+    descriptionZh: "用WorkBuddy零代码搭建自定义AI个人工作台——使用/finesse-brief（需求整理）和/finesse-ui（高端UI生成）两个技能，含宠物日常记录、AI工作台、生活管理三个实战案例。",
+    category: "ai-tutorials",
+    tags: ["WorkBuddy", "No-Code", "Workbench", "Personal Dashboard", "Productivity", "UI Design"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy"],
+    date: "2026-08-03",
+  },
+
 ];
