@@ -2916,4 +2916,17 @@ export const articles: Article[] = [
     date: "2026-08-03",
   },
 
+  {
+    slug: "how-feishu-redefined-ai-work-100-to-20000-system-in-minutes",
+    title: "How Feishu Redefined AI Work: $100 → $20,000 System in Minutes",
+    titleZh: "飞书重新定义AI工作：100元→2万元系统几分钟搞定",
+    description: "Feishu's three groundbreaking AI features — one-click personal AI Agent (Little Lobster), Feishu Miaoda generating $20K business systems for $100 in natural language, and Multidimensional Table Agent with auto table/dashboard/permission generation — plus the OpenClaw open-source plugin for multi-model integration.",
+    descriptionZh: "飞书三大AI突破——一键创建个人AI Agent（小龙虾）、飞书妙搭用自然语言100元生成2万元业务系统、多维表格AI Agent自动生成表格/仪表盘/权限——含OpenClaw开源插件多模型集成。",
+    category: "ai-news",
+    tags: ["Feishu", "Lark", "AI Agent", "Miaoda", "OpenClaw", "Productivity", "China"],
+    difficulty: "beginner",
+    toolsMentioned: ["OpenClaw"],
+    date: "2026-08-04",
+  },
+
 ];
