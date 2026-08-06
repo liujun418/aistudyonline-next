@@ -2929,4 +2929,17 @@ export const articles: Article[] = [
     date: "2026-08-04",
   },
 
+  {
+    slug: "complete-guide-ai-industry-chain-from-energy-to-robots",
+    title: "A Complete Guide to the AI Industry Chain: From Energy to Smart Robots",
+    titleZh: "AI产业链完整指南：从能源到智能机器人",
+    description: "A bottom-up overview of the AI industry chain — energy (solar/wind/nuclear), chips (ASML lithography, semiconductor manufacturing), PCB & MLCC, large models (training pipeline), and smart robots — plus investment, career, and skill-building opportunities in each layer.",
+    descriptionZh: "从底层到顶层的AI产业链全景——能源（光伏/风电/核电）、芯片（ASML光刻、半导体制造）、PCB和MLCC、大模型（训练流程）、智能机器人——每层的投资、职业和技能机会。",
+    category: "ai-learning",
+    tags: ["AI Industry", "Chips", "Semiconductor", "Energy", "Robots", "Large Models", "Career"],
+    difficulty: "beginner",
+    toolsMentioned: ["DeepSeek", "TensorFlow"],
+    date: "2026-08-05",
+  },
+
 ];
