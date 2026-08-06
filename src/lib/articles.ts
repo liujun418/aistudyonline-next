@@ -2942,4 +2942,17 @@ export const articles: Article[] = [
     date: "2026-08-05",
   },
 
+  {
+    slug: "build-your-first-personal-app-with-ai-even-without-coding-experience",
+    title: "Build Your First Personal App with AI Even Without Coding Experience",
+    titleZh: "零代码经验也能用AI搭建你的第一个个人应用",
+    description: "A complete hands-on tutorial for building a personal work-and-life management app with AI — from prompt writing, PRD drafting, and Git archiving to secondary development and interface beautification. Zero programming experience required.",
+    descriptionZh: "从零开始用AI搭建个人工作生活管理应用的完整教程——涵盖提示词编写、PRD文档、Git归档、二次开发和界面美化。无需编程经验。",
+    category: "ai-tutorials",
+    tags: ["AI App Development", "No Code", "Personal App", "AI Agent", "Prompt Engineering", "Git", "Beginner"],
+    difficulty: "beginner",
+    toolsMentioned: ["Doubao", "Trae", "Kimi", "Tongyi", "Cursor", "Claude", "Codex"],
+    date: "2026-08-06",
+  },
+
 ];
