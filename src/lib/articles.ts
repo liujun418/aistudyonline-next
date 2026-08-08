@@ -2968,4 +2968,17 @@ export const articles: Article[] = [
     date: "2026-08-07",
   },
 
+  {
+    slug: "deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark",
+    title: "DeepSeek V4 Flash vs GPT-5.6 Luna: Full Codex Integration Guide & 10-Round Capability Benchmark",
+    titleZh: "DeepSeek V4 Flash vs GPT-5.6 Luna：Codex完整接入指南与10轮能力实测",
+    description: "Step-by-step guide to integrating DeepSeek V4 Flash into Codex — with one-click setup scripts for macOS and Windows, pitfall fixes, and a 10-round head-to-head benchmark vs GPT-5.6 Luna covering writing, coding, visualization, and data analysis.",
+    descriptionZh: "DeepSeek V4 Flash接入Codex的完整指南——含macOS和Windows一键配置脚本、兼容性坑修复，以及与GPT-5.6 Luna的10轮实战对决，覆盖写作、编程、可视化和数据分析。",
+    category: "ai-tutorials",
+    tags: ["DeepSeek", "GPT-5.6", "Codex", "Benchmark", "Model Comparison", "Integration", "Coding"],
+    difficulty: "intermediate",
+    toolsMentioned: ["DeepSeek V4 Flash", "Codex Agent", "GPT-5.6 Luna"],
+    date: "2026-08-08",
+  },
+
 ];
