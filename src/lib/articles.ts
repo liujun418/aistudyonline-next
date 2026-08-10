@@ -2981,4 +2981,17 @@ export const articles: Article[] = [
     date: "2026-08-08",
   },
 
+  {
+    slug: "codex-skill-bundle-4-skills-professional-websites-one-prompt",
+    title: "Codex Skill Bundle: 4 Skills to Build Professional Websites in One Prompt",
+    titleZh: "Codex技能包：4个技能让一条提示词生成专业网站",
+    description: "Install four skills into Codex to generate professional websites in a single prompt — Taste Skill for design aesthetics, GSAP for smooth animations, Ponytail for clean minimal code, and Playwright MCP for automated testing.",
+    descriptionZh: "为Codex安装四个技能，一条提示词生成专业网站——Taste Skill解决设计美学、GSAP实现流畅动画、Ponytail保证代码极简、Playwright MCP自动测试。",
+    category: "ai-tutorials",
+    tags: ["Codex", "Skills", "Web Development", "Frontend", "GSAP", "Playwright", "Testing"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent", "Playwright"],
+    date: "2026-08-10",
+  },
+
 ];

@@ -1,18 +1,18 @@
-"""Publish Aug 8, 2026 — 1 article, no new tools."""
+"""Publish Aug 10, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark",
-    title: "DeepSeek V4 Flash vs GPT-5.6 Luna: Full Codex Integration Guide & 10-Round Capability Benchmark",
-    titleZh: "DeepSeek V4 Flash vs GPT-5.6 Luna：Codex完整接入指南与10轮能力实测",
-    description: "Step-by-step guide to integrating DeepSeek V4 Flash into Codex — with one-click setup scripts for macOS and Windows, pitfall fixes, and a 10-round head-to-head benchmark vs GPT-5.6 Luna covering writing, coding, visualization, and data analysis.",
-    descriptionZh: "DeepSeek V4 Flash接入Codex的完整指南——含macOS和Windows一键配置脚本、兼容性坑修复，以及与GPT-5.6 Luna的10轮实战对决，覆盖写作、编程、可视化和数据分析。",
+    slug: "codex-skill-bundle-4-skills-professional-websites-one-prompt",
+    title: "Codex Skill Bundle: 4 Skills to Build Professional Websites in One Prompt",
+    titleZh: "Codex技能包：4个技能让一条提示词生成专业网站",
+    description: "Install four skills into Codex to generate professional websites in a single prompt — Taste Skill for design aesthetics, GSAP for smooth animations, Ponytail for clean minimal code, and Playwright MCP for automated testing.",
+    descriptionZh: "为Codex安装四个技能，一条提示词生成专业网站——Taste Skill解决设计美学、GSAP实现流畅动画、Ponytail保证代码极简、Playwright MCP自动测试。",
     category: "ai-tutorials",
-    tags: ["DeepSeek", "GPT-5.6", "Codex", "Benchmark", "Model Comparison", "Integration", "Coding"],
-    difficulty: "intermediate",
-    toolsMentioned: ["DeepSeek V4 Flash", "Codex Agent", "GPT-5.6 Luna"],
-    date: "2026-08-08",
+    tags: ["Codex", "Skills", "Web Development", "Frontend", "GSAP", "Playwright", "Testing"],
+    difficulty: "beginner",
+    toolsMentioned: ["Codex Agent", "Playwright"],
+    date: "2026-08-10",
   },
 
 """
@@ -22,279 +22,325 @@ print('Part 1 done')
 
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark": {
+  "codex-skill-bundle-4-skills-professional-websites-one-prompt": {
     content: `<div class="meta-banner">
   <span class="meta-badge">📖 AI Tutorials</span>
-  <span class="meta-badge">🕒 9 min read</span>
-  <span class="meta-badge">📅 Aug 8, 2026</span>
-  <span class="meta-badge">🎯 Intermediate</span>
+  <span class="meta-badge">🕒 7 min read</span>
+  <span class="meta-badge">📅 Aug 10, 2026</span>
+  <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>This tutorial walks you through the complete workflow of integrating DeepSeek into Codex, followed by a head-to-head 10-item benchmark comparison between <strong>DeepSeek V4 Flash</strong> and <strong>GPT-5.6 Luna</strong>. After DeepSeek V4 Flash launched, independent third-party evaluator Artificial Analysis published benchmark charts showing the model formed an industry "kill line" in cost-performance. Just days before DeepSeek V4 Flash went live, OpenAI cut GPT-5.6 Luna pricing by 80%, an adjustment widely attributed to competitive pressure from DeepSeek.</p>
-<p>In the benchmark chart: the vertical axis represents overall model capability (higher = stronger performance), and the horizontal axis stands for task execution cost (further left = lower operating expense). DeepSeek V4 Flash sits far left on the cost axis while clearing the capability red line; any model positioned below the red line and to DeepSeek's right delivers weaker performance at higher running costs, meaning DeepSeek outperforms rivals on both capability and expenditure metrics.</p>
+<p>If you've ever wondered why some Codex users can generate a polished, professional website with a single prompt — while your AI keeps spitting out generic blue buttons on white backgrounds — the answer is simple: they've pre-installed four critical skills into Codex. These four skills form a complete, end-to-end web development workflow that eliminates common AI frontend flaws, improves animation quality, enforces clean code, and adds automated testing.</p>
 
-<h2 id="part1">Part 1: Practical Guide to Integrating DeepSeek with Codex</h2>
+<h2 id="taste">1. Taste Skill: Fix AI Design Aesthetics</h2>
 
-<h3>Pre-Check Requirements</h3>
-<p>Before running configuration scripts, confirm you have installed either the Codex CLI or the official ChatGPT desktop client, and launched the software at least one valid time to ensure the <code>~/.codex</code> directory exists on your local machine.</p>
+<h3>What it does</h3>
+<p>Taste Skill is an anti-slop frontend framework that trains AI to produce professional design output. It constrains AI's layout decisions, ensuring proper spacing, color harmony, and clear visual hierarchy. This removes the generic "AI-generated" look from your pages.</p>
 
-<h3>One-Click Deployment Commands</h3>
+<h3>How to install</h3>
+<pre><code class="language-bash"># Install the full skill bundle
+npx skills add Leonxlnx/taste-skill -a codex
 
-<h4>macOS / Linux Terminal Execution</h4>
-<pre><code class="language-bash"># One-click DeepSeek integration for Codex (macOS/Linux)
-<(curl -fsSL https://cdn.deepseek.com/api1-docs/codex-deepseek-setup.sh)</code></pre>
+# Or install only the core frontend design skill
+npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"</code></pre>
 
-<h4>Windows PowerShell Execution</h4>
-<pre><code class="language-powershell"># One-click DeepSeek integration for Codex (Windows PowerShell)
-irm https://cdn.deepseek.com/api1-docs/codex-deepseek-setup.ps1 | iex</code></pre>
+<h3>How to use</h3>
+<p>Once installed, Codex will automatically apply Taste Skill guidelines when generating UI. You can also explicitly reference it in your prompt:</p>
+<blockquote>"Use Taste Skill principles to design a SaaS landing page with balanced whitespace and modern typography."</blockquote>
 
-<h3>Script Option Explanation</h3>
-<p>Once the script executes, three interactive options pop up:</p>
-<ol>
-  <li>Configure the <code>deepseek-v4-flash</code> model (fully compatible with Codex);</li>
-  <li>Configure the Pro model: currently incompatible with Codex due to API adaptation gaps;</li>
-  <li>Restore default native Codex configurations for one-click rollback.</li>
-</ol>
-<p>Select option <code>1</code> to proceed with Flash model integration.</p>
-
-<h3>API Key Generation &amp; Binding</h3>
-<ol>
-  <li>Navigate to the DeepSeek open platform and create a new API key with a custom label such as <code>Codex</code>;</li>
-  <li>Copy the generated key and paste it into the terminal prompt when requested; press Enter to confirm.</li>
-</ol>
-
-<h3>Automatic Configuration Items Written by the Script</h3>
+<h3>What you'll get</h3>
 <ul>
-  <li>Primary active model switched to <code>deepseek-v4-flash</code>;</li>
-  <li>Reasoning intensity preset to <code>high</code>;</li>
-  <li>Provider parameter locked to DeepSeek;</li>
-  <li>Official API endpoint pre-filled;</li>
-  <li>Authentication modes and login parameters are preconfigured automatically.</li>
+  <li>Professional layout with intentional spacing</li>
+  <li>Cohesive color palettes</li>
+  <li>Clear visual hierarchy</li>
+  <li>No generic AI-generated look</li>
 </ul>
-<p>You can rerun the script anytime to swap models or revert to default Codex settings. Manual JSON configuration editing is also available for advanced users via the official documentation.</p>
 
-<h3>Post-Deployment Validation</h3>
-<p>Open the Codex desktop client: the bottom-left panel will display <code>deepseek</code> as the active provider with a custom model label. Send the query <em>What model am I currently using?</em> to confirm the session runs on <code>deepseek-v4-flash</code> with high reasoning intensity.</p>
+<h2 id="gsap">2. GSAP Skill: Professional Web Animations</h2>
 
-<h3>Two Common Compatibility Pitfalls &amp; Fixes</h3>
+<h3>What it does</h3>
+<p>GSAP Skill teaches Codex to create smooth, professional animations instead of the stiff, robotic movements typical of AI-generated code. It handles scroll-triggered animations, timeline-based element entrance effects, and complex motion sequences.</p>
 
-<h4>Pitfall 1: DeepSeek Is Not Multimodal (Cannot Process Screenshots)</h4>
-<p>Codex normally captures screenshots to verify task outputs, which blocks workflows for DeepSeek.</p>
-<p><strong>Solution</strong>: Add the rule <code>Do not use screenshot verification</code> to your system prompt inside Codex personalized settings. Retain native checks such as syntax validation, function testing, and console error scanning without screenshot-based audits.</p>
+<h3>How to install</h3>
+<pre><code class="language-bash"># Clone the repository
+git clone https://github.com/Microck/gsap-skills.git ~/gsap-skills
 
-<h4>Pitfall 2: Inline Visualization Compatibility Issues</h4>
-<p>Codex native <code>/Visualize</code> skills generate interactive HTML pages successfully with DeepSeek, yet embedded preview inside the Codex interface does not work.</p>
-<p><strong>Solution</strong>: Open exported HTML visualization files separately in an external web browser for full interactivity.</p>
+# Copy skills to Codex directory
+mkdir -p ~/.config/opencode/skills
+rsync -a --delete ~/gsap-skills/skills/ ~/.config/opencode/skills/
 
-<h2 id="part2">Part 2: 10-Round Practical Benchmark Test Results</h2>
-<p>The 10 test cases cover writing, historical knowledge retrieval, real-time news research, office tool development, mathematical tutoring, periodic table visualization, 3D rendering, artistic font generation, business data analysis and PDF document parsing to replicate real-world developer scenarios.</p>
+# Optional: Copy the gsap command
+mkdir -p ~/.config/opencode/command
+cp ~/gsap-skills/command/gsap.md ~/.config/opencode/command/</code></pre>
 
-<h3>Test 1: AI Monologue Writing</h3>
-<p>DeepSeek adopts literary, lyrical narrative tones with subtle emotional expression; GPT-5.6 Luna writes straightforward, sincere prose. Both deliver comparable Chinese writing proficiency, and selection depends on personal stylistic preference.</p>
+<h3>How to use</h3>
+<p>Ask Codex to use GSAP for animations:</p>
+<blockquote>"Add scroll-triggered animations to this page using GSAP Skill. Make the elements stagger in with smooth easing."</blockquote>
 
-<h3>Test 2: Chinese Dynasty Chronology Explanation</h3>
-<p>Both models accurately list dynastic names, cultural milestones and exact start/end years. GPT-5.6 Luna outperforms in structured formatting, with optimized rendering for headings, bullet points and code blocks to boost reading experience.</p>
+<h3>What you'll get</h3>
+<ul>
+  <li>Smooth scroll-triggered animations</li>
+  <li>Professional timeline sequences</li>
+  <li>Staggered element entrance effects</li>
+  <li>No stiff, robotic animations</li>
+</ul>
 
-<h3>Test 3: Real-Time News Search</h3>
-<p>Search tasks require tight coordination between LLM reasoning and external retrieval tools. DeepSeek returns richer raw reference materials, while GPT-5.6 Luna arranges retrieved content into cleaner final formatting.</p>
+<h2 id="ponytail">3. Ponytail: Enforce Clean, Minimal Code</h2>
 
-<h3>Test 4: Online Excel Mini-Tool Development</h3>
-<p>GPT-5.6 Luna invokes the screenshot verification workflow natively; DeepSeek skips screenshot checks and completes underlying code development directly. Both build functional Excel tools with correct cell formulas and arithmetic logic, and GPT-5.6 Luna delivers more polished UI interaction design.</p>
+<h3>What it does</h3>
+<p>Ponytail makes your AI agent think like the laziest senior developer in the room. It encourages code reuse, minimalism, and engineering best practices — so you get the same functionality with less, cleaner code.</p>
 
-<h3>Test 5: Calculus Explanation via Visualization</h3>
-<p>Both models use graphical demos to split continuous areas into infinitesimal slices and visualize min/max value trends, transforming abstract calculus formulas into intuitive visual learning materials.</p>
+<h3>How to install</h3>
+<pre><code class="language-bash"># Add the marketplace
+codex plugin marketplace add DietrichGebert/ponytail
 
-<h3>Test 6: Interactive Chemical Periodic Table Generation</h3>
-<p>Both call Codex's built-in <code>/Visualize</code> skill. DeepSeek's exported table loads cleanly in an external browser with clear element metadata popups; GPT-5.6 Luna suffers text overlap inside embedded previews and delivers inferior readability.</p>
-
-<h3>Test 7: Animated 3D Rubik's Cube Rendering</h3>
-<p>GPT-5.6 Luna embeds step-by-step written annotations alongside rotation animations for transparent progress tracking. DeepSeek generates fully functional animated rubik's cube assets but omits explanatory text for end users.</p>
-
-<h3>Test 8: One-Stroke Cursive "Hello" Rendering</h3>
-<p>Neither model masters the cross-domain task of cursive English handwriting generation; both outputs are stylistically inconsistent and fail the creative requirement.</p>
-
-<h3>Test 9: Commercial Excel Profit Data Analysis</h3>
-<p>GPT-5.6 Luna renders native line charts and bar charts directly inside the Codex workspace. DeepSeek exports standalone HTML dashboards with weaker native interface visual presentation.</p>
-
-<h3>Test 10: Targeted PDF Content Extraction &amp; Summary</h3>
-<p>Both models call PDF plugin tools smoothly, locate specified paragraphs rapidly and produce structured summaries with equivalent accuracy.</p>
-
-<h2 id="part3">Part 3: Cost, Speed &amp; Global Adoption Analysis</h2>
-
-<h3>Cost Statistics for the Full Test Suite</h3>
-<p>Total API expenditure for the entire DeepSeek benchmark run reached only <strong>¥2.52 CNY</strong>, across 357 API requests and 27,564,088 total tokens. 99% of input tokens hit cache storage, demonstrating extremely efficient caching architecture.</p>
-
-<h3>Cross-Model Comparative Metrics</h3>
+# Install the plugin
+codex</code></pre>
+<p>Then in Codex:</p>
 <ol>
-  <li><strong>Speed</strong>: DeepSeek V4 Flash finished the full 10-round benchmark 10 minutes faster than GPT-5.6 Luna;</li>
-  <li><strong>Pricing</strong>: Even after the official price cut, GPT-5.6 Luna still costs <strong>4×</strong> more per token than DeepSeek V4 Flash.</li>
+  <li>Open <code>/plugins</code></li>
+  <li>Select Ponytail and install</li>
+  <li>Open <code>/hooks</code></li>
+  <li>Trust both lifecycle hooks</li>
+  <li>Restart Codex</li>
 </ol>
 
-<h3>Competitive Edge Summary</h3>
-<p>GPT-5.6 Luna retains advantages in native visual rendering, backend task scheduling, Agent optimization and native Codex ecosystem integration. DeepSeek V4 Flash dominates raw speed, low running cost and caching efficiency, explaining its leading global usage volume among overseas developers. Many overseas users choose DeepSeek V4 Flash even when GPT-5.6 Luna is available at no charge, prioritizing faster iteration and lower long-term operational expenses.</p>
+<h3>How to use</h3>
+<p>Ponytail works automatically once installed. You can also explicitly reference it:</p>
+<blockquote>"Use Ponytail principles to refactor this code. Prioritize reuse and minimalism."</blockquote>
 
-<h2 id="conclusion">Closing Outlook</h2>
-<p>DeepSeek V4 Flash delivers exceptional core reasoning capability, and future official peripheral ecosystem upgrades will further strengthen its synergy with Codex Agent harness tools to achieve optimal matching between model intelligence and workflow orchestration.</p>
+<h3>What you'll get</h3>
+<ul>
+  <li>54% less code (per project benchmarks)</li>
+  <li>Better code reuse</li>
+  <li>More maintainable architecture</li>
+  <li>Same functionality with fewer lines</li>
+</ul>
+
+<h2 id="playwright">4. Playwright MCP: Automated Web Testing</h2>
+
+<h3>What it does</h3>
+<p>Playwright MCP teaches Codex to test the websites it generates. It can automatically open browsers, simulate clicks, take screenshots, check for issues, and fix problems — all without manual intervention.</p>
+
+<h3>How to install</h3>
+<pre><code class="language-bash"># Add to Codex config
+codex mcp add playwright npx -y @playwright/mcp@latest
+
+# Verify installation
+codex mcp list</code></pre>
+<p>Or manually edit <code>~/.codex/config.toml</code>:</p>
+<pre><code class="language-toml">[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@latest"]</code></pre>
+
+<h3>How to use</h3>
+<p>Ask Codex to test your website:</p>
+<blockquote>"Use Playwright MCP to test this website. Check for broken links, responsive design issues, and console errors."</blockquote>
+
+<h3>What you'll get</h3>
+<ul>
+  <li>Automated browser testing</li>
+  <li>Screenshot verification</li>
+  <li>Click simulation</li>
+  <li>Automatic bug fixing</li>
+  <li>Regression testing</li>
+</ul>
+
+<h2 id="workflow">The Complete Workflow</h2>
+<p>When used together, these four skills create a full web development pipeline:</p>
+<ol>
+  <li><strong>Taste Skill</strong> ensures the design looks professional</li>
+  <li><strong>GSAP Skill</strong> adds smooth, polished animations</li>
+  <li><strong>Ponytail</strong> keeps the code clean and minimal</li>
+  <li><strong>Playwright MCP</strong> tests and fixes issues automatically</li>
+</ol>
+<p>This is why some Codex users can generate a complete, high-quality website in one prompt — they've given their AI the right tools to do the job properly.</p>
+
+<h2 id="conclusion">Final Takeaway</h2>
+<p>Install these four skills today and transform your Codex from a basic code generator into a professional web development assistant.</p>
 
 <h2>常见问题</h2>
 
-<h3>Is DeepSeek V4 Flash genuinely better than GPT-5.6 Luna, or just cheaper?</h3>
-<p>It depends on what you measure. On <strong>raw capability</strong> the two models are roughly comparable — the 10-round benchmark showed them trading wins: DeepSeek won on real-time news research depth and visualization output quality (Tests 3 and 6), while GPT-5.6 Luna won on structured formatting, native chart rendering and UI polish (Tests 2, 4 and 9). On <strong>speed</strong> and <strong>cost</strong>, DeepSeek wins decisively — it finished the full suite 10 minutes faster, cost ¥2.52 total, and still runs 4× cheaper per token than GPT-5.6 Luna even after OpenAI's 80% price cut. So the honest answer: choose GPT-5.6 Luna for polished visual deliverables and deep Codex-ecosystem integration; choose DeepSeek V4 Flash when you want comparable reasoning at a fraction of the operating cost — which is why it leads global usage volume among overseas developers.</p>
+<h3>Do I need all four skills, or can I install them individually?</h3>
+<p>You can install any subset depending on your goals. Each skill solves one distinct problem: Taste Skill fixes the generic AI design look, GSAP replaces stiff robotic animations with professional motion, Ponytail cuts code volume by up to 54%, and Playwright MCP adds automated browser testing. If you're building landing pages or client-facing sites, Taste + GSAP gives the biggest visible improvement fastest. If you're maintaining a larger codebase, Ponytail + Playwright MCP matter more for quality and reliability. For the full "one prompt → professional website" experience described in this article, install all four — they complement each other and together cover the complete build → animate → refactor → test pipeline.</p>
 
-<h3>How much does it actually cost to run a full development workflow on DeepSeek V4 Flash?</h3>
-<p>The full 10-round benchmark — covering writing, knowledge retrieval, live news research, Excel tool development, calculus visualization, 3D rendering, data analysis and PDF parsing — cost only <strong>¥2.52 CNY</strong> total across 357 API requests and 27.5 million tokens. Two factors make this possible: (1) the 99% input-token cache hit rate means repeated context is served from cache at a fraction of the normal price, and (2) DeepSeek's per-token pricing is already a fraction of competitors'. For a typical developer working daily in Codex, this translates to operating costs of a few yuan per day — versus GPT-5.6 Luna at roughly 4× that amount, and far below the $20+/month subscription models for comparable usage.</p>
+<h3>Are these skills compatible with other AI coding tools besides Codex?</h3>
+<p>Partially. Taste Skill and GSAP Skill are skill-package based and work with any agent that supports the standard skills format (the install commands show the Codex / OpenCode variants, but the same packages can be adapted to Claude Code, Cursor, and other skill-capable agents). Ponytail is distributed as a Codex-specific plugin marketplace, so it requires Codex or OpenCode's plugin system. Playwright MCP uses the standard MCP protocol — because MCP is an open standard, the same <code>@playwright/mcp</code> server can be wired into Codex, Claude Code, and other MCP-compatible agents via their config files. If you switch agents often, the skill packages and MCP servers are the most portable; the Codex plugin is the most locked-in.</p>
 
-<h3>Can I use DeepSeek V4 Flash with Codex for every task? What are the limitations?</h3>
-<p>Almost every coding task works, but two limitations need workarounds: (1) <strong>No multimodal input</strong> — DeepSeek cannot process screenshots, so the Codex screenshot-verification workflow must be disabled with the rule "Do not use screenshot verification" in your system prompt. You still get syntax validation, function testing and console error scanning. (2) <strong>No inline /Visualize preview</strong> — generated HTML visualizations work, but the embedded preview pane inside Codex doesn't render; open the exported HTML in an external browser instead. The Pro model is currently incompatible with Codex due to API adaptation gaps — only the Flash model is supported today. Apart from these, the integration is stable for daily coding, agent tasks and web development.</p>
+<h3>Will adding these skills slow down my Codex workflow?</h3>
+<p>Negligibly. The skills are lightweight instruction sets and hooks — they add guidance and lifecycle checks, not heavy processing. The main perceived difference is that generated websites look dramatically better and need fewer manual fix rounds, which usually makes the overall workflow <em>faster</em> despite the one-time installation cost of a few minutes. Ponytail's hooks run during code generation to enforce minimalism, and Playwright MCP runs tests on demand (or when you ask), not continuously. The only real overhead is the initial install (about 5-10 minutes for all four) and the occasional test run, which is far cheaper than manually debugging broken layouts or silently shipping buggy code.</p>
 
-<h3>How do I switch back to the default Codex configuration if the integration causes issues?</h3>
-<p>Rerun the same one-click setup script and select <strong>option 3</strong> ("Restore default native Codex configurations") for an instant rollback. This resets the active model, reasoning intensity, provider, API endpoint and authentication settings to Codex's built-in defaults. Because the script writes configuration non-destructively and the original settings are preserved during integration, rollback is always one command away. Advanced users who prefer manual control can edit the JSON config files directly following the official documentation — but the script's option 3 is the recommended, safe path for most users.</p>
+<h3>Do I still need to know web development basics to use these skills effectively?</h3>
+<p>No, and that's the point. The skills are designed for prompt-driven workflows: you describe what you want ("a SaaS landing page with balanced whitespace"), and Codex applies the skill rules. You don't need to write CSS, GSAP timelines, or Playwright scripts yourself. However, knowing a little helps you write better prompts and verify results — for example, understanding the difference between scroll-triggered animations and timeline-based entrances lets you describe motion more precisely, and being able to read console errors lets you confirm Playwright MCP's fixes. As a rule of thumb: zero coding skills to start, basic HTML/CSS familiarity to get consistently great results, and that's it.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Mastered the DeepSeek + Codex integration? Go deeper with these related guides:</p>
+  <p>Equipped Codex for professional sites? Continue building with these guides:</p>
   <ul>
-    <li><a href="/articles/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash Official Release: A Practical Guide to the Game-Changing AI Model</a> — understand the model's architecture, post-training breakthrough, and full API usage patterns</li>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — know exactly where Luna fits in OpenAI's model lineup</li>
-    <li><a href="/articles/connect-deepseek-to-claude-code">Step-by-Step Guide: Connect DeepSeek LLM to Claude Code for Cost-Effective Local &amp; Cloud Development</a> — apply the same cost-saving strategy to another top coding agent</li>
+    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial and Deployment Guide</a> — the full workflow from coding to deploying a site with Codex</li>
+    <li><a href="/articles/master-ai-driven-development-openspec-practical-guide-beginners">Master AI-Driven Development with OpenSpec: A Practical Guide for Beginners</a> — structure complex AI coding projects with spec-driven workflows</li>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master every Codex capability, from basics to advanced workflows</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
   <span class="meta-badge">📖 AI教程</span>
-  <span class="meta-badge">🕒 阅读约9分钟</span>
-  <span class="meta-badge">📅 2026年8月8日</span>
-  <span class="meta-badge">🎯 进阶</span>
+  <span class="meta-badge">🕒 阅读约7分钟</span>
+  <span class="meta-badge">📅 2026年8月10日</span>
+  <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>本教程带你走完将DeepSeek接入Codex的完整流程，随后进行<strong>DeepSeek V4 Flash</strong>与<strong>GPT-5.6 Luna</strong>的10项正面交锋实测对比。DeepSeek V4 Flash发布后，独立第三方评测机构Artificial Analysis公布的基准图表显示，该模型在性价比上形成了行业"击杀线"。就在DeepSeek V4 Flash上线前几天，OpenAI将GPT-5.6 Luna价格下调80%，这一调整被广泛认为是对DeepSeek竞争压力的回应。</p>
-<p>在基准图表中：纵轴代表模型综合能力（越高=性能越强），横轴代表任务执行成本（越靠左=运营成本越低）。DeepSeek V4 Flash在成本轴上位于最左侧，同时越过能力红线；任何位于红线以下且处于DeepSeek右侧的模型，都以更高运行成本提供更弱性能，这意味着DeepSeek在能力和开销两项指标上都优于对手。</p>
+<p>如果你曾疑惑为什么有些Codex用户能用一个提示词就生成精致的专业网站——而你的AI却总是吐出白底蓝按钮的通用页面——答案很简单：他们给Codex预装了四个关键技能。这四个技能构成了完整的端到端网页开发工作流，消除常见的AI前端缺陷、提升动画质量、强制代码整洁，并增加自动化测试。</p>
 
-<h2 id="part1">第一部分：DeepSeek接入Codex实战指南</h2>
+<h2 id="taste">1. Taste Skill：修复AI设计美学</h2>
 
-<h3>前置检查</h3>
-<p>在运行配置脚本前，请确认你已安装Codex CLI或官方ChatGPT桌面客户端，并至少成功启动软件一次，确保本地存在<code>~/.codex</code>目录。</p>
+<h3>它的作用</h3>
+<p>Taste Skill是一个反"劣质模板"前端框架，训练AI产出专业设计输出。它约束AI的布局决策，确保合理的间距、和谐的色彩和清晰的视觉层级。它从你的页面中消除通用的"AI生成"外观。</p>
 
-<h3>一键部署命令</h3>
+<h3>如何安装</h3>
+<pre><code class="language-bash"># 安装完整技能包
+npx skills add Leonxlnx/taste-skill -a codex
 
-<h4>macOS / Linux终端执行</h4>
-<pre><code class="language-bash"># DeepSeek一键接入Codex（macOS/Linux）
-<(curl -fsSL https://cdn.deepseek.com/api1-docs/codex-deepseek-setup.sh)</code></pre>
+# 或只安装核心前端设计技能
+npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"</code></pre>
 
-<h4>Windows PowerShell执行</h4>
-<pre><code class="language-powershell"># DeepSeek一键接入Codex（Windows PowerShell）
-irm https://cdn.deepseek.com/api1-docs/codex-deepseek-setup.ps1 | iex</code></pre>
+<h3>如何使用</h3>
+<p>安装后，Codex生成UI时会自动应用Taste Skill准则。你也可以在提示词中显式引用它：</p>
+<blockquote>"使用Taste Skill原则设计一个SaaS落地页，注重留白平衡和现代排版。"</blockquote>
 
-<h3>脚本选项说明</h3>
-<p>脚本执行后弹出三个交互选项：</p>
-<ol>
-  <li>配置<code>deepseek-v4-flash</code>模型（与Codex完全兼容）；</li>
-  <li>配置Pro模型：目前因API适配缺口与Codex不兼容；</li>
-  <li>恢复Codex默认原生配置，一键回滚。</li>
-</ol>
-<p>选择选项<code>1</code>继续Flash模型集成。</p>
-
-<h3>API密钥生成与绑定</h3>
-<ol>
-  <li>进入DeepSeek开放平台，创建一个自定义标签为<code>Codex</code>的新API密钥；</li>
-  <li>复制生成的密钥，在终端提示时粘贴并回车确认。</li>
-</ol>
-
-<h3>脚本自动写入的配置项</h3>
+<h3>你将获得</h3>
 <ul>
-  <li>主激活模型切换为<code>deepseek-v4-flash</code>；</li>
-  <li>推理强度预设为<code>high</code>；</li>
-  <li>Provider参数锁定为DeepSeek；</li>
-  <li>预填官方API端点；</li>
-  <li>自动预配置认证模式和登录参数。</li>
+  <li>有意识间距的专业布局</li>
+  <li>协调的色彩方案</li>
+  <li>清晰的视觉层级</li>
+  <li>不再有通用AI生成外观</li>
 </ul>
-<p>你可以随时重新运行脚本切换模型或恢复Codex默认设置。高级用户也可通过官方文档手动编辑JSON配置。</p>
 
-<h3>部署后验证</h3>
-<p>打开Codex桌面客户端：左下角面板会显示<code>deepseek</code>为当前Provider并带有自定义模型标签。发送查询<em>What model am I currently using?</em>确认会话运行在<code>deepseek-v4-flash</code>且推理强度为high。</p>
+<h2 id="gsap">2. GSAP Skill：专业Web动画</h2>
 
-<h3>两个常见兼容性坑及修复</h3>
+<h3>它的作用</h3>
+<p>GSAP Skill教Codex创建流畅、专业的动画，而不是AI生成代码中典型的僵硬机械运动。它处理滚动触发动画、基于时间线的元素入场效果和复杂运动序列。</p>
 
-<h4>坑1：DeepSeek不是多模态模型（无法处理截图）</h4>
-<p>Codex通常通过截图验证任务输出，这会阻断DeepSeek的工作流。</p>
-<p><strong>解决方案</strong>：在Codex个性化设置的系统提示词中添加规则<code>Do not use screenshot verification</code>。保留语法校验、函数测试和控制台错误扫描等原生检查，不做基于截图的审计。</p>
+<h3>如何安装</h3>
+<pre><code class="language-bash"># 克隆仓库
+git clone https://github.com/Microck/gsap-skills.git ~/gsap-skills
 
-<h4>坑2：内嵌可视化兼容性问题</h4>
-<p>Codex原生<code>/Visualize</code>技能使用DeepSeek能成功生成交互式HTML页面，但Codex界面内的嵌入式预览无法工作。</p>
-<p><strong>解决方案</strong>：将导出的HTML可视化文件单独在外部浏览器中打开，即可获得完整交互体验。</p>
+# 复制技能到Codex目录
+mkdir -p ~/.config/opencode/skills
+rsync -a --delete ~/gsap-skills/skills/ ~/.config/opencode/skills/
 
-<h2 id="part2">第二部分：10轮实战基准测试结果</h2>
-<p>10个测试用例覆盖写作、历史知识检索、实时新闻搜索、办公工具开发、数学辅导、周期表可视化、3D渲染、艺术字体生成、商业数据分析和PDF文档解析，复刻真实开发者场景。</p>
+# 可选：复制gsap命令
+mkdir -p ~/.config/opencode/command
+cp ~/gsap-skills/command/gsap.md ~/.config/opencode/command/</code></pre>
 
-<h3>测试1：AI独白写作</h3>
-<p>DeepSeek采用文学化、抒情化叙事风格，情感表达细腻；GPT-5.6 Luna文风直白真诚。两者中文写作水平相当，选择取决于个人风格偏好。</p>
+<h3>如何使用</h3>
+<p>让Codex使用GSAP制作动画：</p>
+<blockquote>"使用GSAP Skill给这个页面添加滚动触发动画。让元素以平滑缓动交错入场。"</blockquote>
 
-<h3>测试2：中国朝代年表讲解</h3>
-<p>两个模型都能准确列出朝代名称、文化里程碑和精确起止年份。GPT-5.6 Luna在结构化排版上更胜一筹，标题、列表和代码块的渲染经过优化，阅读体验更好。</p>
+<h3>你将获得</h3>
+<ul>
+  <li>流畅的滚动触发动画</li>
+  <li>专业的时间线序列</li>
+  <li>交错的元素入场效果</li>
+  <li>不再有僵硬机械动画</li>
+</ul>
 
-<h3>测试3：实时新闻搜索</h3>
-<p>搜索任务需要LLM推理与外部检索工具紧密配合。DeepSeek返回更丰富的原始参考资料，GPT-5.6 Luna则将检索内容整理成更干净的最终格式。</p>
+<h2 id="ponytail">3. Ponytail：强制极简整洁代码</h2>
 
-<h3>测试4：在线Excel小工具开发</h3>
-<p>GPT-5.6 Luna原生调用截图验证工作流；DeepSeek跳过截图检查直接完成底层代码开发。两者都构建了功能完整的Excel工具，单元格公式和运算逻辑正确，GPT-5.6 Luna的UI交互设计更精致。</p>
+<h3>它的作用</h3>
+<p>Ponytail让你的AI代理像团队里最懒的资深开发者一样思考。它鼓励代码复用、极简主义和工程最佳实践——让你用更少、更整洁的代码实现同样的功能。</p>
 
-<h3>测试5：微积分可视化讲解</h3>
-<p>两个模型都用图形演示将连续区域分割为无穷小切片并可视化最大/最小值趋势，把抽象的微积分公式转化为直观的可视化学习材料。</p>
+<h3>如何安装</h3>
+<pre><code class="language-bash"># 添加市场
+codex plugin marketplace add DietrichGebert/ponytail
 
-<h3>测试6：交互式化学元素周期表生成</h3>
-<p>两者都调用Codex内置的<code>/Visualize</code>技能。DeepSeek导出的表格在外部浏览器中干净加载，元素元数据弹窗清晰；GPT-5.6 Luna在嵌入式预览中出现文字重叠，可读性较差。</p>
-
-<h3>测试7：3D魔方动画渲染</h3>
-<p>GPT-5.6 Luna在旋转动画旁嵌入逐步文字注释，进度透明可追踪。DeepSeek生成功能完整的魔方动画资源，但缺少面向终端用户的说明文字。</p>
-
-<h3>测试8：一笔连写花体"Hello"渲染</h3>
-<p>两个模型都未能掌握花体英文手写生成这一跨域任务；输出风格不一致，均未满足创意要求。</p>
-
-<h3>测试9：商业Excel利润数据分析</h3>
-<p>GPT-5.6 Luna直接在Codex工作区内渲染原生折线图和柱状图。DeepSeek导出独立HTML仪表盘，原生界面视觉呈现较弱。</p>
-
-<h3>测试10：定向PDF内容提取与摘要</h3>
-<p>两个模型都能流畅调用PDF插件工具，快速定位指定段落并生成结构化摘要，准确度相当。</p>
-
-<h2 id="part3">第三部分：成本、速度与全球采用分析</h2>
-
-<h3>全套测试成本统计</h3>
-<p>整个DeepSeek基准测试运行的总API支出仅为<strong>¥2.52人民币</strong>，共357次API请求、27,564,088个总token。99%的输入token命中缓存存储，展现了极高的缓存架构效率。</p>
-
-<h3>跨模型对比指标</h3>
+# 安装插件
+codex</code></pre>
+<p>然后在Codex中：</p>
 <ol>
-  <li><strong>速度</strong>：DeepSeek V4 Flash完成全部10轮基准测试比GPT-5.6 Luna快10分钟；</li>
-  <li><strong>定价</strong>：即使官方降价后，GPT-5.6 Luna每token价格仍是DeepSeek V4 Flash的<strong>4倍</strong>。</li>
+  <li>打开<code>/plugins</code></li>
+  <li>选择Ponytail并安装</li>
+  <li>打开<code>/hooks</code></li>
+  <li>信任两个生命周期钩子</li>
+  <li>重启Codex</li>
 </ol>
 
-<h3>竞争力总结</h3>
-<p>GPT-5.6 Luna在原生视觉渲染、后端任务调度、Agent优化和Codex生态原生集成方面保持优势。DeepSeek V4 Flash在原始速度、低运行成本和缓存效率上占据主导，这解释了它在海外开发者中的全球领先使用量。许多海外用户即使GPT-5.6 Luna免费可用，也选择DeepSeek V4 Flash，优先考虑更快的迭代速度和更低的长期运营成本。</p>
+<h3>如何使用</h3>
+<p>Ponytail安装后自动生效。你也可以显式引用它：</p>
+<blockquote>"使用Ponytail原则重构这段代码。优先考虑复用和极简。"</blockquote>
 
-<h2 id="conclusion">结语展望</h2>
-<p>DeepSeek V4 Flash具备卓越的核心推理能力，未来官方外围生态的升级将进一步增强其与Codex Agent harness工具的协同，实现模型智能与工作流编排的最佳匹配。</p>
+<h3>你将获得</h3>
+<ul>
+  <li>减少54%的代码量（按项目基准测试）</li>
+  <li>更好的代码复用</li>
+  <li>更易维护的架构</li>
+  <li>更少的行数实现同样的功能</li>
+</ul>
+
+<h2 id="playwright">4. Playwright MCP：自动化Web测试</h2>
+
+<h3>它的作用</h3>
+<p>Playwright MCP教Codex测试它生成的网站。它可以自动打开浏览器、模拟点击、截图、检查问题并修复缺陷——全程无需人工干预。</p>
+
+<h3>如何安装</h3>
+<pre><code class="language-bash"># 添加到Codex配置
+codex mcp add playwright npx -y @playwright/mcp@latest
+
+# 验证安装
+codex mcp list</code></pre>
+<p>或手动编辑<code>~/.codex/config.toml</code>：</p>
+<pre><code class="language-toml">[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@latest"]</code></pre>
+
+<h3>如何使用</h3>
+<p>让Codex测试你的网站：</p>
+<blockquote>"使用Playwright MCP测试这个网站。检查死链、响应式设计问题和控制台错误。"</blockquote>
+
+<h3>你将获得</h3>
+<ul>
+  <li>自动化浏览器测试</li>
+  <li>截图验证</li>
+  <li>点击模拟</li>
+  <li>自动修复Bug</li>
+  <li>回归测试</li>
+</ul>
+
+<h2 id="workflow">完整工作流</h2>
+<p>当这四个技能组合使用时，它们构成了完整的网页开发流水线：</p>
+<ol>
+  <li><strong>Taste Skill</strong>确保设计看起来专业</li>
+  <li><strong>GSAP Skill</strong>添加流畅精致的动画</li>
+  <li><strong>Ponytail</strong>保持代码整洁极简</li>
+  <li><strong>Playwright MCP</strong>自动测试并修复问题</li>
+</ol>
+<p>这就是为什么有些Codex用户能用一个提示词生成完整的高质量网站——他们给了AI正确完成工作的工具。</p>
+
+<h2 id="conclusion">总结</h2>
+<p>今天就安装这四个技能，把你的Codex从基础代码生成器变成专业网页开发助手。</p>
 
 <h2>常见问题</h2>
 
-<h3>DeepSeek V4 Flash是真的比GPT-5.6 Luna强，还是只是便宜？</h3>
-<p>取决于你衡量的维度。在<strong>原始能力</strong>上两者大致相当——10轮基准测试中各有胜负：DeepSeek在实时新闻搜索深度和可视化输出质量上胜出（测试3和6），GPT-5.6 Luna在结构化排版、原生图表渲染和UI精致度上胜出（测试2、4和9）。在<strong>速度和成本</strong>上DeepSeek决定性胜出——它完成全套测试快10分钟，总花费¥2.52，即使OpenAI降价80%后，每token成本仍比GPT-5.6 Luna便宜4倍。诚实的结论：追求精致的视觉交付物和深度Codex生态集成选GPT-5.6 Luna；想要以零头成本获得相当推理能力选DeepSeek V4 Flash——这也是它在海外开发者中全球使用量领先的原因。</p>
+<h3>我需要全部四个技能，还是可以单独安装？</h3>
+<p>你可以根据目标安装任意子集。每个技能解决一个不同的问题：Taste Skill修复通用AI设计外观，GSAP把僵硬机械的动画替换为专业运动效果，Ponytail减少高达54%的代码量，Playwright MCP增加自动化浏览器测试。如果你在构建落地页或面向客户的网站，Taste + GSAP能最快带来最明显的视觉提升。如果你在维护较大代码库，Ponytail + Playwright MCP对质量和可靠性更重要。要获得本文描述的完整"一条提示词→专业网站"体验，请安装全部四个——它们互补，共同覆盖构建→动画→重构→测试的完整流水线。</p>
 
-<h3>在DeepSeek V4 Flash上运行完整的开发工作流实际要花多少钱？</h3>
-<p>完整的10轮基准测试——覆盖写作、知识检索、实时新闻搜索、Excel工具开发、微积分可视化、3D渲染、数据分析和PDF解析——总成本仅<strong>¥2.52人民币</strong>，共357次API请求和2750万token。两个因素使这成为可能：(1)99%的输入token缓存命中率意味着重复上下文以正常价格零头的缓存价格提供，(2)DeepSeek的每token定价本身已是竞品的零头。对于每天在Codex中工作的典型开发者，这相当于每天几元人民币的运营成本——对比GPT-5.6 Luna约4倍于此，远低于同等使用量的$20+/月订阅模式。</p>
+<h3>这些技能除了Codex还能用于其他AI编码工具吗？</h3>
+<p>部分可以。Taste Skill和GSAP Skill基于技能包格式，适用于任何支持标准技能格式的Agent（安装命令显示的是Codex/OpenCode变体，但相同技能包可适配Claude Code、Cursor等其他支持技能的Agent）。Ponytail以Codex专用插件市场分发，需要Codex或OpenCode的插件系统。Playwright MCP使用标准MCP协议——因为MCP是开放标准，同一个<code>@playwright/mcp</code>服务器可以通过配置文件接入Codex、Claude Code和其他兼容MCP的Agent。如果你经常切换Agent，技能包和MCP服务器最便携；Codex插件绑定最深。</p>
 
-<h3>我能用DeepSeek V4 Flash在Codex中完成所有任务吗？有什么限制？</h3>
-<p>几乎所有的编码任务都可以，但有两个限制需要绕过：(1)<strong>不支持多模态输入</strong>——DeepSeek无法处理截图，因此必须在系统提示词中添加"不要使用截图验证"规则来禁用Codex的截图验证工作流。你仍然可以使用语法校验、函数测试和控制台错误扫描。(2)<strong>无内嵌/Visualize预览</strong>——生成的HTML可视化可用，但Codex内部的嵌入式预览面板无法渲染；改为在外部浏览器中打开导出的HTML。Pro模型目前因API适配缺口与Codex不兼容——今天只支持Flash模型。除此之外，该集成对日常编码、Agent任务和网页开发都很稳定。</p>
+<h3>添加这些技能会拖慢我的Codex工作流吗？</h3>
+<p>几乎不会。技能是轻量的指令集和钩子——它们增加的是指导和生命周期检查，不是重型处理。主要感知差异是生成的网站外观明显更好、需要的人工修复轮次更少，这通常让整体工作流<em>更快</em>，尽管一次性安装只需几分钟。Ponytail的钩子在代码生成期间运行以强制极简，Playwright MCP按需（或应你要求）运行测试，不是持续运行。唯一的真实开销是初始安装（四个约5-10分钟）和偶尔的测试运行，远比自己手动调试坏掉的布局或静默上线带Bug的代码便宜。</p>
 
-<h3>如果集成出问题，如何切回默认Codex配置？</h3>
-<p>重新运行同一个一键配置脚本，选择<strong>选项3</strong>（"恢复Codex默认原生配置"）即可即时回滚。这会将会话激活模型、推理强度、Provider、API端点和认证设置重置为Codex内置默认值。因为脚本非破坏性地写入配置，集成期间原始设置被保留，回滚永远只需一条命令。喜欢手动控制的高级用户可按官方文档直接编辑JSON配置文件——但脚本的选项3是大多数用户推荐的安全路径。</p>
+<h3>我仍然需要了解Web开发基础知识才能有效使用这些技能吗？</h3>
+<p>不需要，这正是重点。技能是为提示词驱动的工作流设计的：你描述想要的东西（"一个注重留白平衡的SaaS落地页"），Codex应用技能规则。你不需要自己写CSS、GSAP时间线或Playwright脚本。然而，了解一点有助于你写出更好的提示词并验证结果——例如，理解滚动触发动画和时间线入场之间的区别能让你更精确地描述运动，能够阅读控制台错误可以让你确认Playwright MCP的修复。经验法则：零编码技能即可开始，了解基本HTML/CSS能持续获得出色结果，仅此而已。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>掌握了DeepSeek + Codex集成？通过以下相关指南深入：</p>
+  <p>为专业网站配齐了Codex技能？继续用这些指南构建：</p>
   <ul>
-    <li><a href="/articles/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash正式发布：颠覆性AI模型实战指南</a> — 理解该模型的架构、后训练突破和完整API使用模式</li>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 了解Luna在OpenAI模型阵容中的确切定位</li>
-    <li><a href="/articles/connect-deepseek-to-claude-code">分步指南：连接DeepSeek LLM到Claude Code实现高性价比本地与云端开发</a> — 将同样的省钱策略应用到另一款顶级编码Agent</li>
+    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex网站开发：零基础实战教程与部署指南</a> — 从编码到部署网站的完整工作流</li>
+    <li><a href="/articles/master-ai-driven-development-openspec-practical-guide-beginners">用OpenSpec掌握AI驱动开发：新手实操指南</a> — 用规范驱动的工作流结构化复杂AI编码项目</li>
+    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握Codex每项能力，从基础到高级工作流</li>
   </ul>
 </div>`,
   },
