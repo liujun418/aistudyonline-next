@@ -50664,7 +50664,7 @@ openspec archive</code></pre>
   <p>Created your first episode? Level up your AI content production:</p>
   <ul>
     <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — the complete ecosystem guide</li>
-    <li><a href="/articles/how-to-use-douyin-ai-creation-agent-generate-images-videos">How to Use Douyin's AI Creation Agent</a> — another conversational creation tool</li>
+    <li><a href="/article/how-to-use-douyin-ai-creation-agent-generate-images-videos">How to Use Douyin's AI Creation Agent</a> — another conversational creation tool</li>
     <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: Fix Prompt Issues</a> — improve your image outputs</li>
   </ul>
 </div>`,
@@ -50731,7 +50731,7 @@ openspec archive</code></pre>
   <p>创作了第一集？升级你的AI内容制作：</p>
   <ul>
     <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 完整生态指南</li>
-    <li><a href="/articles/how-to-use-douyin-ai-creation-agent-generate-images-videos">抖音AI创作助手：无需复杂提示词也能生成图片和视频</a> — 另一款对话式创作工具</li>
+    <li><a href="/article/how-to-use-douyin-ai-creation-agent-generate-images-videos">抖音AI创作助手：无需复杂提示词也能生成图片和视频</a> — 另一款对话式创作工具</li>
     <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：修复提示词问题，避免'翻车'</a> — 优化你的图像输出</li>
   </ul>
 </div>`,
@@ -52390,7 +52390,7 @@ git clone https://github.com/HuangBaiAI/seed-2.5-prompt</code></pre>
   <p>Mastered AI video generation? Build on these related skills:</p>
   <ul>
     <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide to China's Leading AI Image Generation Model</a> — pair video with ByteDance's flagship image model for full creative workflows</li>
-    <li><a href="/articles/full-practical-guide-ai-comic-drama-production-zero-to-published">Full Practical Guide to AI Comic Drama Production: From Zero to Published Video</a> — apply AI video workflows to short-drama and comic content production</li>
+    <li><a href="/article/full-practical-guide-ai-comic-drama-production-zero-to-published">Full Practical Guide to AI Comic Drama Production: From Zero to Published Video</a> — apply AI video workflows to short-drama and comic content production</li>
     <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: How to Fix Prompt Issues and Avoid Draw Failures</a> — sharpen prompt skills that transfer directly to video generation</li>
   </ul>
 </div>`,
@@ -52547,7 +52547,7 @@ git clone https://github.com/HuangBaiAI/seed-2.5-prompt</code></pre>
   <p>掌握了AI视频生成？基于这些相关技能继续提升：</p>
   <ul>
     <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 将视频与字节跳动旗舰图像模型配对，打造完整创意工作流</li>
-    <li><a href="/articles/full-practical-guide-ai-comic-drama-production-zero-to-published">AI漫剧制作全流程实战：从零到发布成片</a> — 将AI视频工作流应用于短剧和漫剧内容制作</li>
+    <li><a href="/article/full-practical-guide-ai-comic-drama-production-zero-to-published">AI漫剧制作全流程实战：从零到发布成片</a> — 将AI视频工作流应用于短剧和漫剧内容制作</li>
     <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：如何修复提示词问题避免"画崩"</a> — 打磨可直接迁移到视频生成的提示词技能</li>
   </ul>
 </div>`,
@@ -53307,9 +53307,9 @@ flova generate --model seedance2.5 --prompt "Your video description here"</code>
   <h3>📖 Next Steps</h3>
   <p>Ready to make AI videos like a pro? Continue with these guides:</p>
   <ul>
-    <li><a href="/articles/master-seedance-2-5-zero-basics-guide-commercial-grade-ai-video-creation">Master Seedance 2.5: Zero-Basics Guide to Commercial-Grade AI Video Creation</a> — the full prompt framework and workflow behind Flova's flagship model</li>
-    <li><a href="/articles/full-practical-guide-ai-comic-drama-production-zero-to-published">Full Practical Guide to AI Comic Drama Production: From Zero to Published Video</a> — produce and publish AI-generated short dramas end to end</li>
-    <li><a href="/articles/how-to-use-douyin-ai-creation-agent-generate-images-videos">How to Use Douyin's AI Creation Agent to Generate Images and Videos Without Complex Prompts</a> — another zero-prompt path to AI video for social content</li>
+    <li><a href="/article/master-seedance-2-5-zero-basics-guide-commercial-grade-ai-video-creation">Master Seedance 2.5: Zero-Basics Guide to Commercial-Grade AI Video Creation</a> — the full prompt framework and workflow behind Flova's flagship model</li>
+    <li><a href="/article/full-practical-guide-ai-comic-drama-production-zero-to-published">Full Practical Guide to AI Comic Drama Production: From Zero to Published Video</a> — produce and publish AI-generated short dramas end to end</li>
+    <li><a href="/article/how-to-use-douyin-ai-creation-agent-generate-images-videos">How to Use Douyin's AI Creation Agent to Generate Images and Videos Without Complex Prompts</a> — another zero-prompt path to AI video for social content</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -53462,9 +53462,9 @@ flova generate --model seedance2.5 --prompt "在这里输入你的视频描述"<
   <h3>📖 下一步</h3>
   <p>准备像专业人士一样制作AI视频？继续阅读这些指南：</p>
   <ul>
-    <li><a href="/articles/master-seedance-2-5-zero-basics-guide-commercial-grade-ai-video-creation">精通Seedance 2.5：商业级AI视频零基础指南</a> — Flova旗舰模型背后的完整提示词框架与工作流</li>
-    <li><a href="/articles/full-practical-guide-ai-comic-drama-production-zero-to-published">AI漫画剧制作完整实操指南：从零到发布</a> — 端到端制作并发布AI短剧</li>
-    <li><a href="/articles/how-to-use-douyin-ai-creation-agent-generate-images-videos">抖音AI创作Agent无复杂提示词生成图文视频</a> — 另一条零提示词生成AI视频的路径，适合社交内容</li>
+    <li><a href="/article/master-seedance-2-5-zero-basics-guide-commercial-grade-ai-video-creation">精通Seedance 2.5：商业级AI视频零基础指南</a> — Flova旗舰模型背后的完整提示词框架与工作流</li>
+    <li><a href="/article/full-practical-guide-ai-comic-drama-production-zero-to-published">AI漫画剧制作完整实操指南：从零到发布</a> — 端到端制作并发布AI短剧</li>
+    <li><a href="/article/how-to-use-douyin-ai-creation-agent-generate-images-videos">抖音AI创作Agent无复杂提示词生成图文视频</a> — 另一条零提示词生成AI视频的路径，适合社交内容</li>
   </ul>
 </div>`,
   },
