@@ -2994,4 +2994,17 @@ export const articles: Article[] = [
     date: "2026-08-10",
   },
 
+  {
+    slug: "how-to-create-professional-ai-videos-flova-ai-complete-practical-guide",
+    title: "How to Create Professional AI Videos with Flova.ai: A Complete Practical Guide",
+    titleZh: "用Flova.ai创建专业AI视频：完整实操指南",
+    description: "Learn to create professional AI videos with Flova.ai — the world's first all-in-one 'hexagonal' AI video creation Agent that combines script writing, storyboard, shot lists, generation, and post-production in one workflow, powered by the Seedance 2.5 model.",
+    descriptionZh: "学习用Flova.ai创建专业AI视频——全球首个'六边形'一站式AI视频创作Agent，将脚本写作、分镜板、镜头列表、生成与后期精修整合为一个工作流，由Seedance 2.5模型驱动。",
+    category: "ai-tutorials",
+    tags: ["Flova.ai", "AI Video", "Seedance 2.5", "Video Creation", "Storyboard", "Agent", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Flova.ai", "Seedance 2.5"],
+    date: "2026-08-11",
+  },
+
 ];
