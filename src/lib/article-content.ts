@@ -40877,9 +40877,9 @@ print(output.shape)  # Expected: (1, 10, vocab_size)</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Now that you understand LLM architecture, put it into practice:</p>
   <ul>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — see where LLMs fit in the AI stack</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master the full AI concept map from Token to Workspace Agent</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — apply LLMs in a real productivity workflow</li>
+    <li><a href="/article/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — see where LLMs fit in the AI stack</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master the full AI concept map from Token to Workspace Agent</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — apply LLMs in a real productivity workflow</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -41065,9 +41065,9 @@ print(output.shape)  # 预期输出: (1, 10, vocab_size)</code></pre>
   <h3>📖 下一步</h3>
   <p>理解了 LLM 架构之后，将其付诸实践：</p>
   <ul>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 了解 LLM 在 AI 技术栈中的位置</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被 AI 术语吓到：从 Token 到 Workspace Agent 的实用指南</a> — 掌握完整的 AI 概念地图</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 将 LLM 应用于实际生产力工作流</li>
+    <li><a href="/article/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 了解 LLM 在 AI 技术栈中的位置</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被 AI 术语吓到：从 Token 到 Workspace Agent 的实用指南</a> — 掌握完整的 AI 概念地图</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 将 LLM 应用于实际生产力工作流</li>
   </ul>
 </div>`,
   },
@@ -41313,9 +41313,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered Codex? Level up your AI development workflow:</p>
   <ul>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — dive into the vibe coding methodology</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build a centralized AI productivity hub</li>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial</a> — build complete websites with Codex from scratch</li>
+    <li><a href="/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — dive into the vibe coding methodology</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build a centralized AI productivity hub</li>
+    <li><a href="/article/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial</a> — build complete websites with Codex from scratch</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -41558,9 +41558,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了 Codex？升级你的 AI 开发工作流：</p>
   <ul>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding 实战指南：AI 开发完整工作流（上篇）</a> — 深入了解 Vibe Coding 方法论</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 构建集中式 AI 生产力中心</li>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex 网站开发：零基础实战教程与部署指南</a> — 用 Codex 从零构建完整网站</li>
+    <li><a href="/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding 实战指南：AI 开发完整工作流（上篇）</a> — 深入了解 Vibe Coding 方法论</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 构建集中式 AI 生产力中心</li>
+    <li><a href="/article/codex-website-dev-zero-basis-tutorial">Codex 网站开发：零基础实战教程与部署指南</a> — 用 Codex 从零构建完整网站</li>
   </ul>
 </div>`,
   },
@@ -41697,9 +41697,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Understand the AI landscape? Now build your practical skills:</p>
   <ul>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — dive deeper into the three-layer AI architecture</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — find the right AI tools for your career path</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master AI fundamentals from scratch</li>
+    <li><a href="/article/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — dive deeper into the three-layer AI architecture</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — find the right AI tools for your career path</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master AI fundamentals from scratch</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -41832,9 +41832,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 下一步</h3>
   <p>了解了 AI 格局？现在构建你的实战技能：</p>
   <ul>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 深入了解三层 AI 架构</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI 工具箱：全领域实用指南</a> — 为你的职业路径找到合适的 AI 工具</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被 AI 术语吓到：从 Token 到 Workspace Agent 的实用指南</a> — 从零掌握 AI 基础知识</li>
+    <li><a href="/article/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 深入了解三层 AI 架构</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI 工具箱：全领域实用指南</a> — 为你的职业路径找到合适的 AI 工具</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被 AI 术语吓到：从 Token 到 Workspace Agent 的实用指南</a> — 从零掌握 AI 基础知识</li>
   </ul>
 </div>`,
   },
@@ -41962,9 +41962,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Found your PPT tool? Explore more AI productivity skills:</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master Codex skills and plugins</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build your own AI productivity system</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across categories</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master Codex skills and plugins</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build your own AI productivity system</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across categories</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -42089,9 +42089,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 下一步</h3>
   <p>找到了合适的 PPT 工具？探索更多 AI 生产力技能：</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex 完全指南：从零基础到高级开发工作流</a> — 掌握 Codex 技能和插件体系</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 构建自己的 AI 生产力系统</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI 工具箱：全领域实用指南</a> — 发现更多跨品类 AI 工具</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex 完全指南：从零基础到高级开发工作流</a> — 掌握 Codex 技能和插件体系</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握 AI 工作流：打造你的专属 AI 工作台</a> — 构建自己的 AI 生产力系统</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI 工具箱：全领域实用指南</a> — 发现更多跨品类 AI 工具</li>
   </ul>
 </div>`,
   },
@@ -42232,9 +42232,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Picked your Agent? Master it with these guides:</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — step-by-step Codex mastery</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate multiple tools into one system</li>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand the bigger picture before diving deep</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — step-by-step Codex mastery</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate multiple tools into one system</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand the bigger picture before diving deep</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -42371,9 +42371,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 下一步</h3>
   <p>选好了Agent？用这些指南深入掌握：</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 一步步掌握Codex</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将多个工具集成到一个系统</li>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 深入之前先看清全局</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 一步步掌握Codex</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将多个工具集成到一个系统</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 深入之前先看清全局</li>
   </ul>
 </div>`,
   },
@@ -42494,9 +42494,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Liking WorkBuddy? Explore more AI office and Agent tools:</p>
   <ul>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — compare WorkBuddy with other Agent options</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate WorkBuddy into your broader productivity system</li>
-    <li><a href="/articles/top-5-ai-ppt-skills-tested-ranked">Battle of the Best: Top 5 AI PPT Skills Tested and Ranked</a> — if PPT creation is your main use case</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — compare WorkBuddy with other Agent options</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate WorkBuddy into your broader productivity system</li>
+    <li><a href="/article/top-5-ai-ppt-skills-tested-ranked">Battle of the Best: Top 5 AI PPT Skills Tested and Ranked</a> — if PPT creation is your main use case</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -42614,9 +42614,9 @@ git commit -m "first commit"</code></pre>
   <h3>📖 下一步</h3>
   <p>对WorkBuddy感兴趣？探索更多AI办公和Agent工具：</p>
   <ul>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 对比WorkBuddy与其他Agent选项</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将WorkBuddy集成到更广泛的生产力系统中</li>
-    <li><a href="/articles/top-5-ai-ppt-skills-tested-ranked">AI PPT技能大比拼：5款工具实测排名与推荐</a> — 如果PPT制作是你的主要场景</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 对比WorkBuddy与其他Agent选项</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将WorkBuddy集成到更广泛的生产力系统中</li>
+    <li><a href="/article/top-5-ai-ppt-skills-tested-ranked">AI PPT技能大比拼：5款工具实测排名与推荐</a> — 如果PPT制作是你的主要场景</li>
   </ul>
 </div>`,
   },
@@ -42808,9 +42808,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered Claude Code operations? Level up your development workflow:</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — compare with the other leading AI dev tool</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see where Claude Code ranks among all Agents</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade Guide</a> — understand the architecture behind Claude Code</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — compare with the other leading AI dev tool</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see where Claude Code ranks among all Agents</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade Guide</a> — understand the architecture behind Claude Code</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -42998,9 +42998,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了 Claude Code 操作？升级你的开发工作流：</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex 完全指南：从零基础到高级开发工作流</a> — 对比另一款顶级 AI 开发工具</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent 选型指南：新手如何选择最适合的工具</a> — 了解 Claude Code 在所有 Agent 中的排名</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流 Agent 架构：从入门到企业级完整指南</a> — 理解 Claude Code 背后的架构原理</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex 完全指南：从零基础到高级开发工作流</a> — 对比另一款顶级 AI 开发工具</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent 选型指南：新手如何选择最适合的工具</a> — 了解 Claude Code 在所有 Agent 中的排名</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流 Agent 架构：从入门到企业级完整指南</a> — 理解 Claude Code 背后的架构原理</li>
   </ul>
 </div>`,
   },
@@ -43261,9 +43261,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Understand the architectures? See them in action:</p>
   <ul>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — see Plan & Execute and Multi-Agent in a real tool</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — match architectures to specific tools</li>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — understand where Agents fit in the broader AI stack</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — see Plan & Execute and Multi-Agent in a real tool</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — match architectures to specific tools</li>
+    <li><a href="/article/demystifying-ai-application-layer-3-layers">Demystifying AI Application Layer: From LLMs to Agents in 3 Layers</a> — understand where Agents fit in the broader AI stack</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -43521,9 +43521,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>理解了架构？看看它们在实际中如何运作：</p>
   <ul>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code 完全实战教程：掌握所有核心操作</a> — 在真实工具中看 Plan & Execute 和多 Agent 架构</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent 选型指南：新手如何选择最适合的工具</a> — 将架构匹配到具体工具</li>
-    <li><a href="/articles/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 理解 Agent 在更广泛 AI 技术栈中的位置</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Claude Code 完全实战教程：掌握所有核心操作</a> — 在真实工具中看 Plan & Execute 和多 Agent 架构</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent 选型指南：新手如何选择最适合的工具</a> — 将架构匹配到具体工具</li>
+    <li><a href="/article/demystifying-ai-application-layer-3-layers">拆解 AI 应用层：从大语言模型到智能体的三层体系</a> — 理解 Agent 在更广泛 AI 技术栈中的位置</li>
   </ul>
 </div>`,
   },
@@ -43725,9 +43725,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Ready to put WorkBuddy into action? Explore these related guides:</p>
   <ul>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the feature overview companion to this guide</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate WorkBuddy into a broader productivity system</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how WorkBuddy compares to other AI office tools</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the feature overview companion to this guide</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate WorkBuddy into a broader productivity system</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how WorkBuddy compares to other AI office tools</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -43925,9 +43925,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>准备好让WorkBuddy发挥作用了？探索这些相关指南：</p>
   <ul>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 本指南的功能概览配套篇</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将WorkBuddy集成到更广泛的生产力系统中</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 看WorkBuddy与其他AI办公工具的对比</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 本指南的功能概览配套篇</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将WorkBuddy集成到更广泛的生产力系统中</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 看WorkBuddy与其他AI办公工具的对比</li>
   </ul>
 </div>`,
   },
@@ -44012,9 +44012,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Impressed by Seedream? Explore more AI image and design tools:</p>
   <ul>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across categories</li>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand ByteDance's role in the AI landscape</li>
-    <li><a href="/articles/top-5-ai-ppt-skills-tested-ranked">Battle of the Best: Top 5 AI PPT Skills Tested and Ranked</a> — if design productivity is your focus</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across categories</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand ByteDance's role in the AI landscape</li>
+    <li><a href="/article/top-5-ai-ppt-skills-tested-ranked">Battle of the Best: Top 5 AI PPT Skills Tested and Ranked</a> — if design productivity is your focus</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -44095,9 +44095,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>对Seedream感兴趣？探索更多AI图像和设计工具：</p>
   <ul>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现更多跨品类AI工具</li>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 了解字节跳动在AI格局中的角色</li>
-    <li><a href="/articles/top-5-ai-ppt-skills-tested-ranked">AI PPT技能大比拼：5款工具实测排名与推荐</a> — 如果设计效率是你的关注点</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现更多跨品类AI工具</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 了解字节跳动在AI格局中的角色</li>
+    <li><a href="/article/top-5-ai-ppt-skills-tested-ranked">AI PPT技能大比拼：5款工具实测排名与推荐</a> — 如果设计效率是你的关注点</li>
   </ul>
 </div>`,
   },
@@ -44166,9 +44166,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered Codex's control modes? Level up your Codex workflow:</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — the full Codex mastery path</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see why Codex ranks #1 among Agents</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate Codex into a broader automation system</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — the full Codex mastery path</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see why Codex ranks #1 among Agents</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate Codex into a broader automation system</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -44234,9 +44234,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了Codex的控制模式？升级你的Codex工作流：</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — Codex完整掌握路径</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解Codex为何排名第一</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将Codex集成到更广泛的自动化系统</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — Codex完整掌握路径</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解Codex为何排名第一</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将Codex集成到更广泛的自动化系统</li>
   </ul>
 </div>`,
   },
@@ -44412,9 +44412,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered WorkBuddy's memory system? Explore the full WorkBuddy ecosystem:</p>
   <ul>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the feature overview</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy: Your All-in-One AI Office Assistant</a> — hands-on use cases with prompt examples</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build your own AI productivity system</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the feature overview</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy: Your All-in-One AI Office Assistant</a> — hands-on use cases with prompt examples</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — build your own AI productivity system</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -44586,9 +44586,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了WorkBuddy的记忆系统？探索完整的WorkBuddy生态：</p>
   <ul>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 功能概览</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 含提示词示例的实战场景</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 构建自己的AI生产力系统</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 功能概览</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 含提示词示例的实战场景</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 构建自己的AI生产力系统</li>
   </ul>
 </div>`,
   },
@@ -44745,9 +44745,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Ready to go deeper with Codex? Continue your learning journey:</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — the full developer-oriented guide (Part 1)</li>
-    <li><a href="/articles/official-tutorial-three-ways-codex-control-computer">Official Tutorial: Three Ways Codex Can Control Your Computer for You</a> — master Computer Use, Chrome Extension, and In-App Browser</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see why Codex ranks #1</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — the full developer-oriented guide (Part 1)</li>
+    <li><a href="/article/official-tutorial-three-ways-codex-control-computer">Official Tutorial: Three Ways Codex Can Control Your Computer for You</a> — master Computer Use, Chrome Extension, and In-App Browser</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see why Codex ranks #1</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -44901,9 +44901,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>准备好深入学习Codex？继续你的学习之旅：</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 面向开发者的完整指南（上篇）</li>
-    <li><a href="/articles/official-tutorial-three-ways-codex-control-computer">官方教程：Codex控制电脑的三种方式详解</a> — 掌握Computer Use、Chrome扩展和内置浏览器</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解Codex为何排名第一</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 面向开发者的完整指南（上篇）</li>
+    <li><a href="/article/official-tutorial-three-ways-codex-control-computer">官方教程：Codex控制电脑的三种方式详解</a> — 掌握Computer Use、Chrome扩展和内置浏览器</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解Codex为何排名第一</li>
   </ul>
 </div>`,
   },
@@ -45074,9 +45074,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered the 10 core features? Deepen your Codex skills:</p>
   <ul>
-    <li><a href="/articles/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex Zero-Basics Tutorial Part 2: Hands-On Guide for AI Beginners</a> — more hands-on Codex projects</li>
-    <li><a href="/articles/official-tutorial-three-ways-codex-control-computer">Official Tutorial: Three Ways Codex Can Control Your Computer</a> — master Computer Use, Chrome Extension, and In-App Browser</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced</a> — the full developer-oriented Codex path</li>
+    <li><a href="/article/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex Zero-Basics Tutorial Part 2: Hands-On Guide for AI Beginners</a> — more hands-on Codex projects</li>
+    <li><a href="/article/official-tutorial-three-ways-codex-control-computer">Official Tutorial: Three Ways Codex Can Control Your Computer</a> — master Computer Use, Chrome Extension, and In-App Browser</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced</a> — the full developer-oriented Codex path</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -45243,9 +45243,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了10个核心功能？深化你的Codex技能：</p>
   <ul>
-    <li><a href="/articles/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex零基础教程（下）：AI新手实操完全指南</a> — 更多Codex实战项目</li>
-    <li><a href="/articles/official-tutorial-three-ways-codex-control-computer">官方教程：Codex控制电脑的三种方式详解</a> — 掌握Computer Use、Chrome扩展和内置浏览器</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 面向开发者的完整Codex路径</li>
+    <li><a href="/article/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex零基础教程（下）：AI新手实操完全指南</a> — 更多Codex实战项目</li>
+    <li><a href="/article/official-tutorial-three-ways-codex-control-computer">官方教程：Codex控制电脑的三种方式详解</a> — 掌握Computer Use、Chrome扩展和内置浏览器</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 面向开发者的完整Codex路径</li>
   </ul>
 </div>`,
   },
@@ -45438,9 +45438,9 @@ claude-code git-commit</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Interested in enterprise AI? Explore more business transformation content:</p>
   <ul>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05: Master the 3-Layer Memory System</a> — understand how WorkBuddy remembers and adapts</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the full WorkBuddy feature overview</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the architecture patterns behind this approach</li>
+    <li><a href="/article/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05: Master the 3-Layer Memory System</a> — understand how WorkBuddy remembers and adapts</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the full WorkBuddy feature overview</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the architecture patterns behind this approach</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -45628,9 +45628,9 @@ claude-code git-commit</code></pre>
   <h3>📖 下一步</h3>
   <p>对企业AI感兴趣？探索更多业务转型内容：</p>
   <ul>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你</a> — 了解WorkBuddy如何记忆和适应</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 完整WorkBuddy功能概览</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解本方案背后的架构模式</li>
+    <li><a href="/article/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你</a> — 了解WorkBuddy如何记忆和适应</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 完整WorkBuddy功能概览</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解本方案背后的架构模式</li>
   </ul>
 </div>`,
   },
@@ -45766,9 +45766,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 Next Steps</h3>
   <p>Ready to build your game? Continue your game dev journey:</p>
   <ul>
-    <li><a href="/articles/claude-code-game-studios-game-development-easier">Make Game Development Easier with Claude Code Game Studios</a> — turn Claude Code into a full game studio with 49 agents</li>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — the methodology behind AI-assisted development</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — the AI coding tool that powers this workflow</li>
+    <li><a href="/article/claude-code-game-studios-game-development-easier">Make Game Development Easier with Claude Code Game Studios</a> — turn Claude Code into a full game studio with 49 agents</li>
+    <li><a href="/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — the methodology behind AI-assisted development</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — the AI coding tool that powers this workflow</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -45900,9 +45900,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 下一步</h3>
   <p>准备好做游戏了？继续你的游戏开发之旅：</p>
   <ul>
-    <li><a href="/articles/claude-code-game-studios-game-development-easier">Claude Code Game Studios：让独立游戏开发从未如此简单</a> — 将Claude Code变成49个Agent的完整游戏工作室</li>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding实战指南：AI开发完整工作流（上篇）</a> — AI辅助开发背后的方法论</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 驱动这个工作流的AI编码工具</li>
+    <li><a href="/article/claude-code-game-studios-game-development-easier">Claude Code Game Studios：让独立游戏开发从未如此简单</a> — 将Claude Code变成49个Agent的完整游戏工作室</li>
+    <li><a href="/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding实战指南：AI开发完整工作流（上篇）</a> — AI辅助开发背后的方法论</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 驱动这个工作流的AI编码工具</li>
   </ul>
 </div>`,
   },
@@ -46002,9 +46002,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 Next Steps</h3>
   <p>Excited about AI game development? Dive deeper:</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — the hands-on animation workflow companion</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master the foundation this project builds on</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the Multi-Agent architecture behind Game Studios</li>
+    <li><a href="/article/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — the hands-on animation workflow companion</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master the foundation this project builds on</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the Multi-Agent architecture behind Game Studios</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -46101,9 +46101,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 下一步</h3>
   <p>对AI游戏开发感兴趣？深入探索：</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding大赛指南：用AI工具高效制作游戏动画</a> — 实战动画工作流配套篇</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 掌握本项目构建的基础</li>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解Game Studios背后的多Agent架构</li>
+    <li><a href="/article/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding大赛指南：用AI工具高效制作游戏动画</a> — 实战动画工作流配套篇</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 掌握本项目构建的基础</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解Game Studios背后的多Agent架构</li>
   </ul>
 </div>`,
   },
@@ -46201,9 +46201,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 Next Steps</h3>
   <p>Understand the GPT-5.6 family? See the bigger picture:</p>
   <ul>
-    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex</a> — the merger story and coding benchmarks</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how GPT-5.6's models fit into the Agent landscape</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the technology behind models like Sol</li>
+    <li><a href="/article/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex</a> — the merger story and coding benchmarks</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how GPT-5.6's models fit into the Agent landscape</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the technology behind models like Sol</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -46297,9 +46297,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 下一步</h3>
   <p>了解了GPT-5.6家族？看清全局：</p>
   <ul>
-    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6全面发布：OpenAI合并ChatGPT与Codex</a> — 合并故事与编码基准测试</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解GPT-5.6模型在Agent格局中的位置</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解Sol等模型背后的技术</li>
+    <li><a href="/article/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6全面发布：OpenAI合并ChatGPT与Codex</a> — 合并故事与编码基准测试</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解GPT-5.6模型在Agent格局中的位置</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解Sol等模型背后的技术</li>
   </ul>
 </div>`,
   },
@@ -46374,9 +46374,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 Next Steps</h3>
   <p>Understand the GPT-5.6 launch? See the models in action:</p>
   <ul>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — hands-on testing of all three models</li>
-    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners to Boost Work Efficiency</a> — put the new ChatGPT Work to use</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how GPT-5.6 changes the Agent landscape</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — hands-on testing of all three models</li>
+    <li><a href="/article/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners to Boost Work Efficiency</a> — put the new ChatGPT Work to use</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — see how GPT-5.6 changes the Agent landscape</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -46448,9 +46448,9 @@ func flip_sprite(is_left: bool) -> void:
   <h3>📖 下一步</h3>
   <p>了解了GPT-5.6发布？看模型实战表现：</p>
   <ul>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 三款模型实战测试</li>
-    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 把新的ChatGPT Work用起来</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解GPT-5.6如何改变Agent格局</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 三款模型实战测试</li>
+    <li><a href="/article/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 把新的ChatGPT Work用起来</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 了解GPT-5.6如何改变Agent格局</li>
   </ul>
 </div>`,
   },
@@ -46635,9 +46635,9 @@ Each idea should include a title, target audience, and key points.</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Built your knowledge base? Master WorkBuddy's full capabilities:</p>
   <ul>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — the essential WorkBuddy skill set</li>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05: Master the 3-Layer Memory System</a> — combine memory with your knowledge base</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy</a> — hands-on WorkBuddy use cases</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — the essential WorkBuddy skill set</li>
+    <li><a href="/article/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05: Master the 3-Layer Memory System</a> — combine memory with your knowledge base</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy</a> — hands-on WorkBuddy use cases</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -46818,9 +46818,9 @@ Each idea should include a title, target audience, and key points.</code></pre>
   <h3>📖 下一步</h3>
   <p>建好了知识库？掌握WorkBuddy的完整能力：</p>
   <ul>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — WorkBuddy必备技能集</li>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你</a> — 将记忆与知识库结合</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — WorkBuddy实战场景</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — WorkBuddy必备技能集</li>
+    <li><a href="/article/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你</a> — 将记忆与知识库结合</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — WorkBuddy实战场景</li>
   </ul>
 </div>`,
   },
@@ -46981,9 +46981,9 @@ Each idea should include a title, target audience, and key points.</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered the 10 skills? Put them into practice:</p>
   <ul>
-    <li><a href="/articles/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA</a> — apply Skills 1-3 to build a real system</li>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05: Master the 3-Layer Memory System</a> — Skills 9-10 in action with automation</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the complete WorkBuddy feature reference</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA</a> — apply Skills 1-3 to build a real system</li>
+    <li><a href="/article/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05: Master the 3-Layer Memory System</a> — Skills 9-10 in action with automation</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the complete WorkBuddy feature reference</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -47141,9 +47141,9 @@ Each idea should include a title, target audience, and key points.</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了10项技能？付诸实践：</p>
   <ul>
-    <li><a href="/articles/build-personal-ai-knowledge-base-workbuddy-ima-guide">WorkBuddy + IMA：搭建个人AI知识库的完整指南</a> — 应用技能1-3构建真实系统</li>
-    <li><a href="/articles/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你</a> — 技能9-10在自动化中的实战</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 完整WorkBuddy功能参考</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">WorkBuddy + IMA：搭建个人AI知识库的完整指南</a> — 应用技能1-3构建真实系统</li>
+    <li><a href="/article/workbuddy-3-layer-memory-system-make-ai-understand-you">WorkBuddy L05：掌握三层记忆系统，让AI越来越懂你</a> — 技能9-10在自动化中的实战</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 完整WorkBuddy功能参考</li>
   </ul>
 </div>`,
   },
@@ -47276,9 +47276,9 @@ docker compose up -d</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Interested in AI + finance? Explore related content:</p>
   <ul>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand the financial side of the AI revolution</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — use Claude Code with QuantDinger's MCP integration</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across industries</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — understand the financial side of the AI revolution</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — use Claude Code with QuantDinger's MCP integration</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more AI tools across industries</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -47407,9 +47407,9 @@ docker compose up -d</code></pre>
   <h3>📖 下一步</h3>
   <p>对AI+金融感兴趣？探索相关内容：</p>
   <ul>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 理解AI革命的金融面</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 用Claude Code配合QuantDinger的MCP集成</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现更多跨行业AI工具</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 理解AI革命的金融面</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 用Claude Code配合QuantDinger的MCP集成</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现更多跨行业AI工具</li>
   </ul>
 </div>`,
   },
@@ -47493,9 +47493,9 @@ docker compose up -d</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered Codex quant workflow? Go deeper into AI+finance:</p>
   <ul>
-    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI-Powered Quantitative Trading Made Accessible: A Practical Guide to QuantDinger</a> — another AI quant platform for comparison</li>
-    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">How to Build a Personal AI Quant Trading System in 2026</a> — the full system architecture guide</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master the AI agent used in this tutorial</li>
+    <li><a href="/article/ai-powered-quantitative-trading-quantdinger-guide">AI-Powered Quantitative Trading Made Accessible: A Practical Guide to QuantDinger</a> — another AI quant platform for comparison</li>
+    <li><a href="/article/how-to-build-personal-ai-quant-trading-system-2026">How to Build a Personal AI Quant Trading System in 2026</a> — the full system architecture guide</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master the AI agent used in this tutorial</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -47575,9 +47575,9 @@ docker compose up -d</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了Codex量化工作流？深入了解AI+金融：</p>
   <ul>
-    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI量化交易入门：QuantDinger实战指南</a> — 另一个AI量化平台对比</li>
-    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">2026个人AI量化交易系统搭建全指南</a> — 完整系统架构指南</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握本教程使用的AI Agent</li>
+    <li><a href="/article/ai-powered-quantitative-trading-quantdinger-guide">AI量化交易入门：QuantDinger实战指南</a> — 另一个AI量化平台对比</li>
+    <li><a href="/article/how-to-build-personal-ai-quant-trading-system-2026">2026个人AI量化交易系统搭建全指南</a> — 完整系统架构指南</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握本教程使用的AI Agent</li>
   </ul>
 </div>`,
   },
@@ -47738,9 +47738,9 @@ docker compose up -d</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Ready to build your quant system? Start with these foundations:</p>
   <ul>
-    <li><a href="/articles/how-to-use-codex-quantitative-strategy-research-backtesting">How to Use Codex for Quantitative Strategy Research and Backtesting</a> — hands-on strategy research workflow</li>
-    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI-Powered Quantitative Trading Made Accessible: QuantDinger Guide</a> — another AI quant platform for your toolkit</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — compare agent frameworks for your quant system</li>
+    <li><a href="/article/how-to-use-codex-quantitative-strategy-research-backtesting">How to Use Codex for Quantitative Strategy Research and Backtesting</a> — hands-on strategy research workflow</li>
+    <li><a href="/article/ai-powered-quantitative-trading-quantdinger-guide">AI-Powered Quantitative Trading Made Accessible: QuantDinger Guide</a> — another AI quant platform for your toolkit</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent Guide: How to Choose the Right Tool for Beginners</a> — compare agent frameworks for your quant system</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -47898,9 +47898,9 @@ docker compose up -d</code></pre>
   <h3>📖 下一步</h3>
   <p>准备好搭建你的量化系统？从这些基础开始：</p>
   <ul>
-    <li><a href="/articles/how-to-use-codex-quantitative-strategy-research-backtesting">用Codex做量化策略研究与回测：完整教程</a> — 实战策略研究工作流</li>
-    <li><a href="/articles/ai-powered-quantitative-trading-quantdinger-guide">AI量化交易入门：QuantDinger实战指南</a> — 工具箱中的另一个AI量化平台</li>
-    <li><a href="/articles/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 为你的量化系统对比Agent框架</li>
+    <li><a href="/article/how-to-use-codex-quantitative-strategy-research-backtesting">用Codex做量化策略研究与回测：完整教程</a> — 实战策略研究工作流</li>
+    <li><a href="/article/ai-powered-quantitative-trading-quantdinger-guide">AI量化交易入门：QuantDinger实战指南</a> — 工具箱中的另一个AI量化平台</li>
+    <li><a href="/article/2026-ai-agent-guide-choose-right-tool-beginners">2026 AI Agent选型指南：新手如何选择最适合的工具</a> — 为你的量化系统对比Agent框架</li>
   </ul>
 </div>`,
   },
@@ -48104,9 +48104,9 @@ The time block drag-and-drop functionality is not working correctly. Please fix 
   <h3>📖 Next Steps</h3>
   <p>Built your first AI team? Explore more multi-agent and no-code content:</p>
   <ul>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the architecture behind Coze's multi-agent system</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master the Development Executor's tool</li>
-    <li><a href="/articles/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">Lightweight AI Transformation for Traditional Business Systems</a> — apply the agent team pattern to enterprise systems</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade</a> — understand the architecture behind Coze's multi-agent system</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master the Development Executor's tool</li>
+    <li><a href="/article/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">Lightweight AI Transformation for Traditional Business Systems</a> — apply the agent team pattern to enterprise systems</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -48306,9 +48306,9 @@ The time block drag-and-drop functionality is not working correctly. Please fix 
   <h3>📖 下一步</h3>
   <p>搭建了第一支AI团队？探索更多多Agent和无代码内容：</p>
   <ul>
-    <li><a href="/articles/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解Coze多Agent系统背后的架构</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握开发执行者使用的工具</li>
-    <li><a href="/articles/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">传统业务系统轻量级AI改造方案</a> — 将Agent团队模式应用到企业系统</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解Coze多Agent系统背后的架构</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握开发执行者使用的工具</li>
+    <li><a href="/article/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">传统业务系统轻量级AI改造方案</a> — 将Agent团队模式应用到企业系统</li>
   </ul>
 </div>`,
   },
@@ -48446,9 +48446,9 @@ The time block drag-and-drop functionality is not working correctly. Please fix 
   <h3>📖 Next Steps</h3>
   <p>Ready to create AI content? Explore more creation tools and techniques:</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — apply similar prompt + generation workflows to game animation</li>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — master the image generation step of this workflow</li>
-    <li><a href="/articles/build-ai-team-coze-3-one-person-company">Build an AI Team with Coze 3.0</a> — use AI agents to automate your content production pipeline</li>
+    <li><a href="/article/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — apply similar prompt + generation workflows to game animation</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — master the image generation step of this workflow</li>
+    <li><a href="/article/build-ai-team-coze-3-one-person-company">Build an AI Team with Coze 3.0</a> — use AI agents to automate your content production pipeline</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -48582,9 +48582,9 @@ The time block drag-and-drop functionality is not working correctly. Please fix 
   <h3>📖 下一步</h3>
   <p>准备好创作AI内容？探索更多创作工具和技巧：</p>
   <ul>
-    <li><a href="/articles/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding大赛指南：用AI工具高效制作游戏动画</a> — 将类似的提示词+生成流程应用到游戏动画</li>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 掌握本流程的图像生成环节</li>
-    <li><a href="/articles/build-ai-team-coze-3-one-person-company">用Coze 3.0搭建AI团队：一人公司全流程</a> — 用AI Agent自动化你的内容制作管线</li>
+    <li><a href="/article/vibecoding-contest-guide-game-animations-ai-tools">VibeCoding大赛指南：用AI工具高效制作游戏动画</a> — 将类似的提示词+生成流程应用到游戏动画</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 掌握本流程的图像生成环节</li>
+    <li><a href="/article/build-ai-team-coze-3-one-person-company">用Coze 3.0搭建AI团队：一人公司全流程</a> — 用AI Agent自动化你的内容制作管线</li>
   </ul>
 </div>`,
   },
@@ -48667,9 +48667,9 @@ test_prompt = "Build a responsive navigation page with mobile adaptation using n
   <h3>📖 Next Steps</h3>
   <p>Following the LLM benchmark race? Explore more model and coding content:</p>
   <ul>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — see what Kimi K3 beat to reach #1</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — put coding LLMs to work in your IDE</li>
-    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex</a> — the model that ranked #3 in this benchmark</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — see what Kimi K3 beat to reach #1</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — put coding LLMs to work in your IDE</li>
+    <li><a href="/article/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6 Full Launch: OpenAI Merges ChatGPT and Codex</a> — the model that ranked #3 in this benchmark</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -48749,9 +48749,9 @@ test_prompt = "用原生HTML、CSS和JavaScript构建一个带移动端适配的
   <h3>📖 下一步</h3>
   <p>关注LLM基准竞赛？探索更多模型和编码内容：</p>
   <ul>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 看Kimi K3击败了什么登顶第一</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 让编码大模型在IDE中为你工作</li>
-    <li><a href="/articles/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6全面发布：OpenAI合并ChatGPT与Codex</a> — 本次基准排名第三的模型</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 看Kimi K3击败了什么登顶第一</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 让编码大模型在IDE中为你工作</li>
+    <li><a href="/article/gpt-5-6-openai-merges-chatgpt-codex-end-pure-chat-era">GPT-5.6全面发布：OpenAI合并ChatGPT与Codex</a> — 本次基准排名第三的模型</li>
   </ul>
 </div>`,
   },
@@ -48935,9 +48935,9 @@ llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "Write a Python functio
   <h3>📖 Next Steps</h3>
   <p>Built your local LLM rig? Explore more model and deployment content:</p>
   <ul>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the architecture behind these models</li>
-    <li><a href="/articles/kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark">Kimi K3 Takes Global Top Spot: Week 29 Front-End Coding Benchmark</a> — compare cloud vs. local model performance</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more tools across the AI ecosystem</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the architecture behind these models</li>
+    <li><a href="/article/kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark">Kimi K3 Takes Global Top Spot: Week 29 Front-End Coding Benchmark</a> — compare cloud vs. local model performance</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI Toolkit: A Practical Guide for Every Domain</a> — discover more tools across the AI ecosystem</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -49107,9 +49107,9 @@ llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "写一个判断质数�
   <h3>📖 下一步</h3>
   <p>搭好了本地LLM？探索更多模型和部署内容：</p>
   <ul>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解这些模型背后的架构</li>
-    <li><a href="/articles/kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark">Kimi K3登顶全球第一：第29周LLM前端编码基准测试报告</a> — 对比云端与本地模型性能</li>
-    <li><a href="/articles/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现AI生态中的更多工具</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解这些模型背后的架构</li>
+    <li><a href="/article/kimi-k3-takes-global-top-spot-week-29-frontend-coding-benchmark">Kimi K3登顶全球第一：第29周LLM前端编码基准测试报告</a> — 对比云端与本地模型性能</li>
+    <li><a href="/article/2025-ai-toolkit-practical-guide-every-domain">2025 AI工具箱：全领域实用指南</a> — 发现AI生态中的更多工具</li>
   </ul>
 </div>`,
   },
@@ -49233,9 +49233,9 @@ llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "写一个判断质数�
   <h3>📖 Next Steps</h3>
   <p>Mastered AI+Excel? Explore more productivity workflows:</p>
   <ul>
-    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners to Boost Work Efficiency</a> — more practical AI productivity skills</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy: Your All-in-One AI Office Assistant</a> — apply these Excel skills in WorkBuddy</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — build on your AI productivity foundation</li>
+    <li><a href="/article/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners to Boost Work Efficiency</a> — more practical AI productivity skills</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy: Your All-in-One AI Office Assistant</a> — apply these Excel skills in WorkBuddy</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — build on your AI productivity foundation</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -49355,9 +49355,9 @@ llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "写一个判断质数�
   <h3>📖 下一步</h3>
   <p>掌握了AI+Excel？探索更多生产力工作流：</p>
   <ul>
-    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 更多实用AI生产力技能</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 在WorkBuddy中应用这些Excel技能</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 夯实你的AI生产力基础</li>
+    <li><a href="/article/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 更多实用AI生产力技能</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 在WorkBuddy中应用这些Excel技能</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 夯实你的AI生产力基础</li>
   </ul>
 </div>`,
   },
@@ -49482,9 +49482,9 @@ llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "写一个判断质数�
   <h3>📖 Next Steps</h3>
   <p>Understand RAG theory? Put it into practice:</p>
   <ul>
-    <li><a href="/articles/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA</a> — hands-on knowledge base tutorial</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — RAG explained in the broader AI concept map</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the LLM that powers the "G" in RAG</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA</a> — hands-on knowledge base tutorial</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — RAG explained in the broader AI concept map</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the LLM that powers the "G" in RAG</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -49605,9 +49605,9 @@ llama run -hf deepreinforce-ai/Ornith-1.0-9B-GGUF:Q4_K_M "写一个判断质数�
   <h3>📖 下一步</h3>
   <p>理解了RAG理论？付诸实践：</p>
   <ul>
-    <li><a href="/articles/build-personal-ai-knowledge-base-workbuddy-ima-guide">WorkBuddy + IMA：搭建个人AI知识库的完整指南</a> — 知识库实操教程</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓到：从Token到Workspace Agent的实用指南</a> — 在更广的AI概念地图中理解RAG</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解驱动RAG中"G"的LLM</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">WorkBuddy + IMA：搭建个人AI知识库的完整指南</a> — 知识库实操教程</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓到：从Token到Workspace Agent的实用指南</a> — 在更广的AI概念地图中理解RAG</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解驱动RAG中"G"的LLM</li>
   </ul>
 </div>`,
   },
@@ -49741,9 +49741,9 @@ brew install hermes-desktop</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Picked your Agent tool? Master it with these guides:</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced</a> — master the #1 ranked tool</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master</a> — get started with the best domestic option</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate multiple Agents into one system</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced</a> — master the #1 ranked tool</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master</a> — get started with the best domestic option</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">Mastering AI Workflow: Build Your Custom AI Workbench</a> — integrate multiple Agents into one system</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -49849,9 +49849,9 @@ brew install hermes-desktop</code></pre>
   <h3>📖 下一步</h3>
   <p>选好了Agent工具？用这些指南深入掌握：</p>
   <ul>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握排名第一的工具</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 入门最佳国产选择</li>
-    <li><a href="/articles/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将多个Agent集成到一个系统</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握排名第一的工具</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 入门最佳国产选择</li>
+    <li><a href="/article/mastering-ai-workflow-beginner-custom-workbench">掌握AI工作流：打造你的专属AI工作台</a> — 将多个Agent集成到一个系统</li>
   </ul>
 </div>`,
   },
@@ -49976,9 +49976,9 @@ openspec archive</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered specification-driven development? Build better AI projects:</p>
   <ul>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — use OpenSpec with your AI coding tool</li>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — another structured approach to AI development</li>
-    <li><a href="/articles/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex Zero-Basics Tutorial Part 2: Hands-On Guide</a> — apply SDD principles in Codex projects</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — use OpenSpec with your AI coding tool</li>
+    <li><a href="/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding Practical Guide: AI Development Full Workflow (Part 1)</a> — another structured approach to AI development</li>
+    <li><a href="/article/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex Zero-Basics Tutorial Part 2: Hands-On Guide</a> — apply SDD principles in Codex projects</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -50069,9 +50069,9 @@ openspec archive</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了规格驱动开发？构建更好的AI项目：</p>
   <ul>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 将OpenSpec与AI编码工具配合使用</li>
-    <li><a href="/articles/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding实战指南：AI开发完整工作流（上篇）</a> — 另一种结构化AI开发方法</li>
-    <li><a href="/articles/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex零基础教程（下）：AI新手实操完全指南</a> — 在Codex项目中应用SDD原则</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 将OpenSpec与AI编码工具配合使用</li>
+    <li><a href="/article/vibe-coding-practical-guide-ai-dev-workflow-part1">Vibe Coding实战指南：AI开发完整工作流（上篇）</a> — 另一种结构化AI开发方法</li>
+    <li><a href="/article/codex-zero-basics-tutorial-part-2-hands-on-guide">Codex零基础教程（下）：AI新手实操完全指南</a> — 在Codex项目中应用SDD原则</li>
   </ul>
 </div>`,
   },
@@ -50163,9 +50163,9 @@ openspec archive</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered prompt fixes? Level up your AI image generation skills:</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — apply these prompt techniques to a specific model</li>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — use these skills in a complete production pipeline</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master prompt engineering fundamentals</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — apply these prompt techniques to a specific model</li>
+    <li><a href="/article/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — use these skills in a complete production pipeline</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master prompt engineering fundamentals</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -50253,9 +50253,9 @@ openspec archive</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了提示词修复？提升AI图像生成技能：</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 将提示词技巧应用到具体模型</li>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 在完整制作管线中使用这些技能</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 掌握提示词工程基础</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 将提示词技巧应用到具体模型</li>
+    <li><a href="/article/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 在完整制作管线中使用这些技能</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 掌握提示词工程基础</li>
   </ul>
 </div>`,
   },
@@ -50348,9 +50348,9 @@ openspec archive</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered AI spreadsheets? Explore more office productivity:</p>
   <ul>
-    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI-Powered Excel Workflow: 4 Practical Skills for Beginners</a> — advanced prompt techniques for Excel</li>
-    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners</a> — more AI office productivity features</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy</a> — use WorkBuddy for local spreadsheet automation</li>
+    <li><a href="/article/ai-powered-excel-workflow-4-practical-skills-beginners">AI-Powered Excel Workflow: 4 Practical Skills for Beginners</a> — advanced prompt techniques for Excel</li>
+    <li><a href="/article/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex: 10 Core Features for Beginners</a> — more AI office productivity features</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy</a> — use WorkBuddy for local spreadsheet automation</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -50428,9 +50428,9 @@ openspec archive</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了AI电子表格？探索更多办公生产力：</p>
   <ul>
-    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI加持Excel工作流：新手必学的4个实用技能</a> — Excel高级提示词技巧</li>
-    <li><a href="/articles/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 更多AI办公生产力功能</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 用WorkBuddy进行本地电子表格自动化</li>
+    <li><a href="/article/ai-powered-excel-workflow-4-practical-skills-beginners">AI加持Excel工作流：新手必学的4个实用技能</a> — Excel高级提示词技巧</li>
+    <li><a href="/article/chatgpt-codex-10-core-features-beginners-work-efficiency">ChatGPT Codex：新手必学的10个核心提效功能</a> — 更多AI办公生产力功能</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 用WorkBuddy进行本地电子表格自动化</li>
   </ul>
 </div>`,
   },
@@ -50523,9 +50523,9 @@ openspec archive</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Enjoyed AI creation? Explore the underlying models and more creation workflows:</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — master the model powering this tool</li>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — apply AI creation to video content</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: Fix Prompt Issues</a> — improve your results even further</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide</a> — master the model powering this tool</li>
+    <li><a href="/article/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — apply AI creation to video content</li>
+    <li><a href="/article/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: Fix Prompt Issues</a> — improve your results even further</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -50592,9 +50592,9 @@ openspec archive</code></pre>
   <h3>📖 下一步</h3>
   <p>喜欢AI创作？探索底层模型和更多创作工作流：</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 掌握驱动本工具的模型</li>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 将AI创作应用到视频内容</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：修复提示词问题，避免'翻车'</a> — 进一步优化你的创作结果</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 掌握驱动本工具的模型</li>
+    <li><a href="/article/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 将AI创作应用到视频内容</li>
+    <li><a href="/article/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：修复提示词问题，避免'翻车'</a> — 进一步优化你的创作结果</li>
   </ul>
 </div>`,
   },
@@ -50663,9 +50663,9 @@ openspec archive</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Created your first episode? Level up your AI content production:</p>
   <ul>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — the complete ecosystem guide</li>
+    <li><a href="/article/ai-manhua-production-full-workflow-script-to-monetization">AI Manhua Production Full Workflow: From Script to Monetization</a> — the complete ecosystem guide</li>
     <li><a href="/article/how-to-use-douyin-ai-creation-agent-generate-images-videos">How to Use Douyin's AI Creation Agent</a> — another conversational creation tool</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: Fix Prompt Issues</a> — improve your image outputs</li>
+    <li><a href="/article/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: Fix Prompt Issues</a> — improve your image outputs</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -50730,9 +50730,9 @@ openspec archive</code></pre>
   <h3>📖 下一步</h3>
   <p>创作了第一集？升级你的AI内容制作：</p>
   <ul>
-    <li><a href="/articles/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 完整生态指南</li>
+    <li><a href="/article/ai-manhua-production-full-workflow-script-to-monetization">AI漫剧制作全流程：从剧本到变现的完整指南</a> — 完整生态指南</li>
     <li><a href="/article/how-to-use-douyin-ai-creation-agent-generate-images-videos">抖音AI创作助手：无需复杂提示词也能生成图片和视频</a> — 另一款对话式创作工具</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：修复提示词问题，避免'翻车'</a> — 优化你的图像输出</li>
+    <li><a href="/article/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：修复提示词问题，避免'翻车'</a> — 优化你的图像输出</li>
   </ul>
 </div>`,
   },
@@ -50825,9 +50825,9 @@ AI: In fact, this is a crossroads that most people will encounter. There is no a
   <h3>📖 Next Steps</h3>
   <p>Ready to apply the collaboration loop? Put it into practice:</p>
   <ul>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master the fundamentals while doing</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — apply the collaboration loop to WorkBuddy</li>
-    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI-Powered Excel Workflow: 4 Practical Skills for Beginners</a> — real tasks you can start with today</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — master the fundamentals while doing</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — apply the collaboration loop to WorkBuddy</li>
+    <li><a href="/article/ai-powered-excel-workflow-4-practical-skills-beginners">AI-Powered Excel Workflow: 4 Practical Skills for Beginners</a> — real tasks you can start with today</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -50889,9 +50889,9 @@ AI：其实这是大多数人都会遇到的一个十字路口。选择哪条路
   <h3>📖 下一步</h3>
   <p>准备好应用协作循环？付诸实践：</p>
   <ul>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 边做边掌握基础</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 将协作循环应用于WorkBuddy</li>
-    <li><a href="/articles/ai-powered-excel-workflow-4-practical-skills-beginners">AI加持Excel工作流：新手必学的4个实用技能</a> — 今天就能开始的真实任务</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 边做边掌握基础</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 将协作循环应用于WorkBuddy</li>
+    <li><a href="/article/ai-powered-excel-workflow-4-practical-skills-beginners">AI加持Excel工作流：新手必学的4个实用技能</a> — 今天就能开始的真实任务</li>
   </ul>
 </div>`,
   },
@@ -51004,9 +51004,9 @@ print(find_book("1984"))</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Understood the basics? Put them into practice:</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — apply these concepts to real tasks</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — go deeper into 12 advanced concepts</li>
-    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">How to Build a Personal AI Quant Trading System in 2026</a> — see Agents, Skills and Workflows in a real system</li>
+    <li><a href="/article/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — apply these concepts to real tasks</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — go deeper into 12 advanced concepts</li>
+    <li><a href="/article/how-to-build-personal-ai-quant-trading-system-2026">How to Build a Personal AI Quant Trading System in 2026</a> — see Agents, Skills and Workflows in a real system</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -51083,9 +51083,9 @@ print(find_book("1984"))</code></pre>
   <h3>📖 下一步</h3>
   <p>理解了基础？付诸实践：</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将这些概念应用到真实任务</li>
-    <li><a href="/articles/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 深入12个进阶概念</li>
-    <li><a href="/articles/how-to-build-personal-ai-quant-trading-system-2026">2026个人AI量化交易系统搭建全指南</a> — 看Agent、Skill和Workflow在真实系统中的运作</li>
+    <li><a href="/article/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将这些概念应用到真实任务</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓倒：从ChatGPT到Workspace Agent的AI概念实战指南</a> — 深入12个进阶概念</li>
+    <li><a href="/article/how-to-build-personal-ai-quant-trading-system-2026">2026个人AI量化交易系统搭建全指南</a> — 看Agent、Skill和Workflow在真实系统中的运作</li>
   </ul>
 </div>`,
   },
@@ -51178,9 +51178,9 @@ Then ask me to explain again until I can do it clearly</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Ready to learn faster? Combine with these guides:</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — pair learning methods with real tasks</li>
-    <li><a href="/articles/ai-beginners-quick-guide-common-jargon-explained">AI Beginner's Quick Guide: Common Jargon Explained</a> — understand the AI concepts behind these methods</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master Claude as a learning tool</li>
+    <li><a href="/article/correct-way-to-collaborate-with-ai-practical-guide">The Correct Way to Collaborate with AI: A Practical Guide</a> — pair learning methods with real tasks</li>
+    <li><a href="/article/ai-beginners-quick-guide-common-jargon-explained">AI Beginner's Quick Guide: Common Jargon Explained</a> — understand the AI concepts behind these methods</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Complete Practical Tutorial: Master All Core Operations Inside Claude Code</a> — master Claude as a learning tool</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -51269,9 +51269,9 @@ Then ask me to explain again until I can do it clearly</code></pre>
   <h3>📖 下一步</h3>
   <p>准备好加速学习？结合这些指南：</p>
   <ul>
-    <li><a href="/articles/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将学习方法与真实任务结合</li>
-    <li><a href="/articles/ai-beginners-quick-guide-common-jargon-explained">AI新手速成指南：常见术语一读就懂</a> — 理解这些方法背后的AI概念</li>
-    <li><a href="/articles/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 将Claude命令为学习工具</li>
+    <li><a href="/article/correct-way-to-collaborate-with-ai-practical-guide">与AI正确协作的方式：一份实用指南</a> — 将学习方法与真实任务结合</li>
+    <li><a href="/article/ai-beginners-quick-guide-common-jargon-explained">AI新手速成指南：常见术语一读就懂</a> — 理解这些方法背后的AI概念</li>
+    <li><a href="/article/complete-practical-tutorial-claude-code-core-operations">Claude Code完全实战教程：掌握所有核心操作</a> — 将Claude命令为学习工具</li>
   </ul>
 </div>`,
   },
@@ -51402,9 +51402,9 @@ print(agent_result)</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Interested in DeepSeek and cost-efficient AI? Explore more:</p>
   <ul>
-    <li><a href="/articles/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026 Local LLM Benchmark: 13 Open-Source Models, $4K Hardware Guide</a> — see how DeepSeek compares to local models</li>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — compare with the model V4 Flash competes against</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand MoE architecture in depth</li>
+    <li><a href="/article/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026 Local LLM Benchmark: 13 Open-Source Models, $4K Hardware Guide</a> — see how DeepSeek compares to local models</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — compare with the model V4 Flash competes against</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand MoE architecture in depth</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -51487,9 +51487,9 @@ print(agent_result)</code></pre>
   <h3>📖 下一步</h3>
   <p>对DeepSeek和成本效益AI感兴趣？探索更多：</p>
   <ul>
-    <li><a href="/articles/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026本地大模型横评：13款开源模型+$4000硬件部署全指南</a> — 看DeepSeek与本地模型对比</li>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 对比V4 Flash的竞争对手</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 深入理解MoE架构</li>
+    <li><a href="/article/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026本地大模型横评：13款开源模型+$4000硬件部署全指南</a> — 看DeepSeek与本地模型对比</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 对比V4 Flash的竞争对手</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 深入理解MoE架构</li>
   </ul>
 </div>`,
   },
@@ -51556,9 +51556,9 @@ print(agent_result)</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Built your workbench? Explore more WorkBuddy content:</p>
   <ul>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the feature overview companion</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — master WorkBuddy's full capabilities</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy</a> — hands-on use cases with prompt examples</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the feature overview companion</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy: 10 Core Skills to Master from Beginner to Advanced</a> — master WorkBuddy's full capabilities</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">A Practical Guide to Tencent WorkBuddy</a> — hands-on use cases with prompt examples</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -51621,9 +51621,9 @@ print(agent_result)</code></pre>
   <h3>📖 下一步</h3>
   <p>建好了工作台？探索更多WorkBuddy内容：</p>
   <ul>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 功能概览配套篇</li>
-    <li><a href="/articles/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 掌握WorkBuddy完整能力</li>
-    <li><a href="/articles/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 含提示词示例的实战场景</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 功能概览配套篇</li>
+    <li><a href="/article/workbuddy-10-core-skills-beginner-to-advanced">WorkBuddy十大核心技能：从入门到精通</a> — 掌握WorkBuddy完整能力</li>
+    <li><a href="/article/practical-guide-tencent-workbuddy-ai-office-assistant">腾讯WorkBuddy实操指南：一站式AI办公助手完全上手</a> — 含提示词示例的实战场景</li>
   </ul>
 </div>`,
   },
@@ -51699,9 +51699,9 @@ print(agent_result)</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Interested in AI-powered business platforms? Explore more:</p>
   <ul>
-    <li><a href="/articles/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">Lightweight AI Transformation for Traditional Business Systems</a> — another approach to AI-powered business systems</li>
-    <li><a href="/articles/build-ai-team-coze-3-one-person-company">Build an AI Team with Coze 3.0: One-Person Company Guide</a> — compare Feishu with Coze's multi-agent approach</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the desktop-centric alternative to Feishu's embedded approach</li>
+    <li><a href="/article/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">Lightweight AI Transformation for Traditional Business Systems</a> — another approach to AI-powered business systems</li>
+    <li><a href="/article/build-ai-team-coze-3-one-person-company">Build an AI Team with Coze 3.0: One-Person Company Guide</a> — compare Feishu with Coze's multi-agent approach</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: The Ultimate AI Office Workbench</a> — the desktop-centric alternative to Feishu's embedded approach</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -51771,9 +51771,9 @@ print(agent_result)</code></pre>
   <h3>📖 下一步</h3>
   <p>对AI驱动业务平台感兴趣？探索更多：</p>
   <ul>
-    <li><a href="/articles/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">传统业务系统轻量级AI改造方案</a> — 另一种AI驱动业务系统方案</li>
-    <li><a href="/articles/build-ai-team-coze-3-one-person-company">用Coze 3.0搭建AI团队：一人公司全流程</a> — 对比飞书与扣子的多Agent方案</li>
-    <li><a href="/articles/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 桌面端替代飞书嵌入方式</li>
+    <li><a href="/article/lightweight-ai-transformation-traditional-business-workbuddy-cordys-crm">传统业务系统轻量级AI改造方案</a> — 另一种AI驱动业务系统方案</li>
+    <li><a href="/article/build-ai-team-coze-3-one-person-company">用Coze 3.0搭建AI团队：一人公司全流程</a> — 对比飞书与扣子的多Agent方案</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：日常办公的终极AI工作台</a> — 桌面端替代飞书嵌入方式</li>
   </ul>
 </div>`,
   },
@@ -51856,9 +51856,9 @@ pip install tensorflow pandas</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Understand the big picture? Dive deeper into each layer:</p>
   <ul>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — the survivor model for navigating the AI industry</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the large model layer</li>
-    <li><a href="/articles/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026 Local LLM Benchmark: 13 Open-Source Models, $4K Hardware Guide</a> — dive into the hardware/infrastructure layer</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">Is AI a Bubble or Opportunity? A Guide for Ordinary People</a> — the survivor model for navigating the AI industry</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">Understanding Large Language Models: Principles, Architecture, and Practical Usage</a> — understand the large model layer</li>
+    <li><a href="/article/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026 Local LLM Benchmark: 13 Open-Source Models, $4K Hardware Guide</a> — dive into the hardware/infrastructure layer</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -51930,9 +51930,9 @@ pip install tensorflow pandas</code></pre>
   <h3>📖 下一步</h3>
   <p>理解了全局？深入每一层：</p>
   <ul>
-    <li><a href="/articles/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 驾驭AI产业的幸存者模型</li>
-    <li><a href="/articles/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解大模型层</li>
-    <li><a href="/articles/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026本地大模型横评：13款开源模型+$4000硬件部署全指南</a> — 深入硬件/基础设施层</li>
+    <li><a href="/article/ai-bubble-or-opportunity-guide-ordinary-people">AI是泡沫还是机遇？普通人应对AI浪潮的生存指南</a> — 驾驭AI产业的幸存者模型</li>
+    <li><a href="/article/understanding-large-language-models-principles-architecture">大语言模型深度解读：从Transformer原理到实战应用</a> — 理解大模型层</li>
+    <li><a href="/article/2026-local-llm-benchmark-13-open-source-models-4000-hardware-guide">2026本地大模型横评：13款开源模型+$4000硬件部署全指南</a> — 深入硬件/基础设施层</li>
   </ul>
 </div>`,
   },
@@ -52081,9 +52081,9 @@ pip install tensorflow pandas</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered the basics of AI-assisted app development? Level up your skills:</p>
   <ul>
-    <li><a href="/articles/master-ai-driven-development-with-openspec-practical-guide-beginners">Master AI-Driven Development with OpenSpec: A Practical Guide for Beginners</a> — take AI app development to the next level with structured spec-driven workflows</li>
-    <li><a href="/articles/vibecoding-contest-guide-create-game-animations-efficiently-with-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — learn to build game animations with AI, a natural next step after building your first app</li>
-    <li><a href="/articles/claude-code-zero-to-hero-practical-guide">Claude Code Zero-to-Hero: A 9-Minute Practical Guide for Beginners</a> — dive deeper into the most powerful AI coding assistant for serious projects</li>
+    <li><a href="/article/master-ai-driven-development-with-openspec-practical-guide-beginners">Master AI-Driven Development with OpenSpec: A Practical Guide for Beginners</a> — take AI app development to the next level with structured spec-driven workflows</li>
+    <li><a href="/article/vibecoding-contest-guide-create-game-animations-efficiently-with-ai-tools">VibeCoding Contest Guide: Create Game Animations Efficiently With AI Tools</a> — learn to build game animations with AI, a natural next step after building your first app</li>
+    <li><a href="/article/claude-code-zero-to-hero-practical-guide">Claude Code Zero-to-Hero: A 9-Minute Practical Guide for Beginners</a> — dive deeper into the most powerful AI coding assistant for serious projects</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -52228,9 +52228,9 @@ pip install tensorflow pandas</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了AI辅助应用开发的基础？提升你的技能：</p>
   <ul>
-    <li><a href="/articles/master-ai-driven-development-with-openspec-practical-guide-beginners">掌握OpenSpec驱动开发：初学者实用指南</a> — 通过结构化规范驱动的工作流将AI应用开发提升到新水平</li>
-    <li><a href="/articles/vibecoding-contest-guide-create-game-animations-efficiently-with-ai-tools">VibeCoding比赛指南：用AI工具高效创作游戏动画</a> — 学习用AI构建游戏动画，这是构建第一个应用后的自然下一步</li>
-    <li><a href="/articles/claude-code-zero-to-hero-practical-guide">Claude Code从零到精通：9分钟初学者实用指南</a> — 深入了解最强大的AI编码助手，为严肃项目做准备</li>
+    <li><a href="/article/master-ai-driven-development-with-openspec-practical-guide-beginners">掌握OpenSpec驱动开发：初学者实用指南</a> — 通过结构化规范驱动的工作流将AI应用开发提升到新水平</li>
+    <li><a href="/article/vibecoding-contest-guide-create-game-animations-efficiently-with-ai-tools">VibeCoding比赛指南：用AI工具高效创作游戏动画</a> — 学习用AI构建游戏动画，这是构建第一个应用后的自然下一步</li>
+    <li><a href="/article/claude-code-zero-to-hero-practical-guide">Claude Code从零到精通：9分钟初学者实用指南</a> — 深入了解最强大的AI编码助手，为严肃项目做准备</li>
   </ul>
 </div>`,
   },
@@ -52389,9 +52389,9 @@ git clone https://github.com/HuangBaiAI/seed-2.5-prompt</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Mastered AI video generation? Build on these related skills:</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide to China's Leading AI Image Generation Model</a> — pair video with ByteDance's flagship image model for full creative workflows</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro: A Comprehensive Practical Guide to China's Leading AI Image Generation Model</a> — pair video with ByteDance's flagship image model for full creative workflows</li>
     <li><a href="/article/full-practical-guide-ai-comic-drama-production-zero-to-published">Full Practical Guide to AI Comic Drama Production: From Zero to Published Video</a> — apply AI video workflows to short-drama and comic content production</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: How to Fix Prompt Issues and Avoid Draw Failures</a> — sharpen prompt skills that transfer directly to video generation</li>
+    <li><a href="/article/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">Mastering AI Image Generation: How to Fix Prompt Issues and Avoid Draw Failures</a> — sharpen prompt skills that transfer directly to video generation</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -52546,9 +52546,9 @@ git clone https://github.com/HuangBaiAI/seed-2.5-prompt</code></pre>
   <h3>📖 下一步</h3>
   <p>掌握了AI视频生成？基于这些相关技能继续提升：</p>
   <ul>
-    <li><a href="/articles/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 将视频与字节跳动旗舰图像模型配对，打造完整创意工作流</li>
+    <li><a href="/article/seedream-5-pro-ai-image-generation-guide">Seedream 5.0 Pro实战评测：国产顶流AI图像生成模型全指南</a> — 将视频与字节跳动旗舰图像模型配对，打造完整创意工作流</li>
     <li><a href="/article/full-practical-guide-ai-comic-drama-production-zero-to-published">AI漫剧制作全流程实战：从零到发布成片</a> — 将AI视频工作流应用于短剧和漫剧内容制作</li>
-    <li><a href="/articles/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：如何修复提示词问题避免"画崩"</a> — 打磨可直接迁移到视频生成的提示词技能</li>
+    <li><a href="/article/mastering-ai-image-generation-fix-prompt-issues-avoid-draw-failures">掌握AI图像生成：如何修复提示词问题避免"画崩"</a> — 打磨可直接迁移到视频生成的提示词技能</li>
   </ul>
 </div>`,
   },
@@ -52687,9 +52687,9 @@ irm https://cdn.deepseek.com/api1-docs/codex-deepseek-setup.ps1 | iex</code></pr
   <h3>📖 Next Steps</h3>
   <p>Mastered the DeepSeek + Codex integration? Go deeper with these related guides:</p>
   <ul>
-    <li><a href="/articles/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash Official Release: A Practical Guide to the Game-Changing AI Model</a> — understand the model's architecture, post-training breakthrough, and full API usage patterns</li>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — know exactly where Luna fits in OpenAI's model lineup</li>
-    <li><a href="/articles/connect-deepseek-to-claude-code">Step-by-Step Guide: Connect DeepSeek LLM to Claude Code for Cost-Effective Local &amp; Cloud Development</a> — apply the same cost-saving strategy to another top coding agent</li>
+    <li><a href="/article/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash Official Release: A Practical Guide to the Game-Changing AI Model</a> — understand the model's architecture, post-training breakthrough, and full API usage patterns</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6 Full Launch: The Complete Family of Sol, Terra, and Luna</a> — know exactly where Luna fits in OpenAI's model lineup</li>
+    <li><a href="/article/connect-deepseek-to-claude-code">Step-by-Step Guide: Connect DeepSeek LLM to Claude Code for Cost-Effective Local &amp; Cloud Development</a> — apply the same cost-saving strategy to another top coding agent</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -52824,9 +52824,9 @@ irm https://cdn.deepseek.com/api1-docs/codex-deepseek-setup.ps1 | iex</code></pr
   <h3>📖 下一步</h3>
   <p>掌握了DeepSeek + Codex集成？通过以下相关指南深入：</p>
   <ul>
-    <li><a href="/articles/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash正式发布：颠覆性AI模型实战指南</a> — 理解该模型的架构、后训练突破和完整API使用模式</li>
-    <li><a href="/articles/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 了解Luna在OpenAI模型阵容中的确切定位</li>
-    <li><a href="/articles/connect-deepseek-to-claude-code">分步指南：连接DeepSeek LLM到Claude Code实现高性价比本地与云端开发</a> — 将同样的省钱策略应用到另一款顶级编码Agent</li>
+    <li><a href="/article/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash正式发布：颠覆性AI模型实战指南</a> — 理解该模型的架构、后训练突破和完整API使用模式</li>
+    <li><a href="/article/gpt-5-6-full-launch-sol-terra-luna-family">GPT-5.6全系发布：Sol、Terra、Luna三款模型完整实测</a> — 了解Luna在OpenAI模型阵容中的确切定位</li>
+    <li><a href="/article/connect-deepseek-to-claude-code">分步指南：连接DeepSeek LLM到Claude Code实现高性价比本地与云端开发</a> — 将同样的省钱策略应用到另一款顶级编码Agent</li>
   </ul>
 </div>`,
   },
@@ -52988,9 +52988,9 @@ args = ["-y", "@playwright/mcp@latest"]</code></pre>
   <h3>📖 Next Steps</h3>
   <p>Equipped Codex for professional sites? Continue building with these guides:</p>
   <ul>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial and Deployment Guide</a> — the full workflow from coding to deploying a site with Codex</li>
-    <li><a href="/articles/master-ai-driven-development-openspec-practical-guide-beginners">Master AI-Driven Development with OpenSpec: A Practical Guide for Beginners</a> — structure complex AI coding projects with spec-driven workflows</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master every Codex capability, from basics to advanced workflows</li>
+    <li><a href="/article/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial and Deployment Guide</a> — the full workflow from coding to deploying a site with Codex</li>
+    <li><a href="/article/master-ai-driven-development-openspec-practical-guide-beginners">Master AI-Driven Development with OpenSpec: A Practical Guide for Beginners</a> — structure complex AI coding projects with spec-driven workflows</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master every Codex capability, from basics to advanced workflows</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
@@ -53148,9 +53148,9 @@ args = ["-y", "@playwright/mcp@latest"]</code></pre>
   <h3>📖 下一步</h3>
   <p>为专业网站配齐了Codex技能？继续用这些指南构建：</p>
   <ul>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex网站开发：零基础实战教程与部署指南</a> — 从编码到部署网站的完整工作流</li>
-    <li><a href="/articles/master-ai-driven-development-openspec-practical-guide-beginners">用OpenSpec掌握AI驱动开发：新手实操指南</a> — 用规范驱动的工作流结构化复杂AI编码项目</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握Codex每项能力，从基础到高级工作流</li>
+    <li><a href="/article/codex-website-dev-zero-basis-tutorial">Codex网站开发：零基础实战教程与部署指南</a> — 从编码到部署网站的完整工作流</li>
+    <li><a href="/article/master-ai-driven-development-openspec-practical-guide-beginners">用OpenSpec掌握AI驱动开发：新手实操指南</a> — 用规范驱动的工作流结构化复杂AI编码项目</li>
+    <li><a href="/article/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握Codex每项能力，从基础到高级工作流</li>
   </ul>
 </div>`,
   },
