@@ -3007,4 +3007,17 @@ export const articles: Article[] = [
     date: "2026-08-11",
   },
 
+  {
+    slug: "beginners-guide-learning-ai-my-journey-practical-tips",
+    title: "A Beginner's Guide to Learning AI: My Journey and Practical Tips",
+    titleZh: "初学者AI学习指南：我的经历与实用建议",
+    description: "A practical AI learning guide from a creator who's been through it — start with a specific problem, learn AI terminology like a baby, learn by doing, and find the right resources without information overload.",
+    descriptionZh: "一位过来人创作者分享的实用AI学习指南——从解决具体问题开始、像婴儿一样学AI术语、边做边学、找到合适资源而不被信息淹没。",
+    category: "ai-basics",
+    tags: ["AI Learning", "Beginner", "AI Basics", "Learning Guide", "Study Tips", "Terminology"],
+    difficulty: "beginner",
+    toolsMentioned: ["ElevenLabs", "OpenAI Codex CLI"],
+    date: "2026-08-12",
+  },
+
 ];

@@ -1,18 +1,18 @@
-"""Publish Aug 10, 2026 — 1 article, no new tools."""
+"""Publish Aug 12, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "codex-skill-bundle-4-skills-professional-websites-one-prompt",
-    title: "Codex Skill Bundle: 4 Skills to Build Professional Websites in One Prompt",
-    titleZh: "Codex技能包：4个技能让一条提示词生成专业网站",
-    description: "Install four skills into Codex to generate professional websites in a single prompt — Taste Skill for design aesthetics, GSAP for smooth animations, Ponytail for clean minimal code, and Playwright MCP for automated testing.",
-    descriptionZh: "为Codex安装四个技能，一条提示词生成专业网站——Taste Skill解决设计美学、GSAP实现流畅动画、Ponytail保证代码极简、Playwright MCP自动测试。",
-    category: "ai-tutorials",
-    tags: ["Codex", "Skills", "Web Development", "Frontend", "GSAP", "Playwright", "Testing"],
+    slug: "beginners-guide-learning-ai-my-journey-practical-tips",
+    title: "A Beginner's Guide to Learning AI: My Journey and Practical Tips",
+    titleZh: "初学者AI学习指南：我的经历与实用建议",
+    description: "A practical AI learning guide from a creator who's been through it — start with a specific problem, learn AI terminology like a baby, learn by doing, and find the right resources without information overload.",
+    descriptionZh: "一位过来人创作者分享的实用AI学习指南——从解决具体问题开始、像婴儿一样学AI术语、边做边学、找到合适资源而不被信息淹没。",
+    category: "ai-basics",
+    tags: ["AI Learning", "Beginner", "AI Basics", "Learning Guide", "Study Tips", "Terminology"],
     difficulty: "beginner",
-    toolsMentioned: ["Codex Agent", "Playwright"],
-    date: "2026-08-10",
+    toolsMentioned: ["ElevenLabs", "OpenAI Codex CLI"],
+    date: "2026-08-12",
   },
 
 """
@@ -22,325 +22,221 @@ print('Part 1 done')
 
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "codex-skill-bundle-4-skills-professional-websites-one-prompt": {
+  "beginners-guide-learning-ai-my-journey-practical-tips": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📖 AI Tutorials</span>
-  <span class="meta-badge">🕒 7 min read</span>
-  <span class="meta-badge">📅 Aug 10, 2026</span>
+  <span class="meta-badge">🧠 AI Basics</span>
+  <span class="meta-badge">🕒 5 min read</span>
+  <span class="meta-badge">📅 Aug 12, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>If you've ever wondered why some Codex users can generate a polished, professional website with a single prompt — while your AI keeps spitting out generic blue buttons on white backgrounds — the answer is simple: they've pre-installed four critical skills into Codex. These four skills form a complete, end-to-end web development workflow that eliminates common AI frontend flaws, improves animation quality, enforces clean code, and adds automated testing.</p>
+<p>Over the past year, I've been creating AI-related content and receiving numerous questions from people asking, "How do I start learning AI?" In this guide, I'll share my learning journey, practical tips, and recommended resources to help you start your AI learning journey with confidence.</p>
 
-<h2 id="taste">1. Taste Skill: Fix AI Design Aesthetics</h2>
+<h2 id="problem">1. Start with Solving a Specific Problem</h2>
+<p>The biggest mistake beginners make is starting with "how to learn AI?" This question is too broad and will lead to information overload and confusion. Instead, start with "how can AI help me solve a specific problem?"</p>
 
-<h3>What it does</h3>
-<p>Taste Skill is an anti-slop frontend framework that trains AI to produce professional design output. It constrains AI's layout decisions, ensuring proper spacing, color harmony, and clear visual hierarchy. This removes the generic "AI-generated" look from your pages.</p>
-
-<h3>How to install</h3>
-<pre><code class="language-bash"># Install the full skill bundle
-npx skills add Leonxlnx/taste-skill -a codex
-
-# Or install only the core frontend design skill
-npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"</code></pre>
-
-<h3>How to use</h3>
-<p>Once installed, Codex will automatically apply Taste Skill guidelines when generating UI. You can also explicitly reference it in your prompt:</p>
-<blockquote>"Use Taste Skill principles to design a SaaS landing page with balanced whitespace and modern typography."</blockquote>
-
-<h3>What you'll get</h3>
-<ul>
-  <li>Professional layout with intentional spacing</li>
-  <li>Cohesive color palettes</li>
-  <li>Clear visual hierarchy</li>
-  <li>No generic AI-generated look</li>
-</ul>
-
-<h2 id="gsap">2. GSAP Skill: Professional Web Animations</h2>
-
-<h3>What it does</h3>
-<p>GSAP Skill teaches Codex to create smooth, professional animations instead of the stiff, robotic movements typical of AI-generated code. It handles scroll-triggered animations, timeline-based element entrance effects, and complex motion sequences.</p>
-
-<h3>How to install</h3>
-<pre><code class="language-bash"># Clone the repository
-git clone https://github.com/Microck/gsap-skills.git ~/gsap-skills
-
-# Copy skills to Codex directory
-mkdir -p ~/.config/opencode/skills
-rsync -a --delete ~/gsap-skills/skills/ ~/.config/opencode/skills/
-
-# Optional: Copy the gsap command
-mkdir -p ~/.config/opencode/command
-cp ~/gsap-skills/command/gsap.md ~/.config/opencode/command/</code></pre>
-
-<h3>How to use</h3>
-<p>Ask Codex to use GSAP for animations:</p>
-<blockquote>"Add scroll-triggered animations to this page using GSAP Skill. Make the elements stagger in with smooth easing."</blockquote>
-
-<h3>What you'll get</h3>
-<ul>
-  <li>Smooth scroll-triggered animations</li>
-  <li>Professional timeline sequences</li>
-  <li>Staggered element entrance effects</li>
-  <li>No stiff, robotic animations</li>
-</ul>
-
-<h2 id="ponytail">3. Ponytail: Enforce Clean, Minimal Code</h2>
-
-<h3>What it does</h3>
-<p>Ponytail makes your AI agent think like the laziest senior developer in the room. It encourages code reuse, minimalism, and engineering best practices — so you get the same functionality with less, cleaner code.</p>
-
-<h3>How to install</h3>
-<pre><code class="language-bash"># Add the marketplace
-codex plugin marketplace add DietrichGebert/ponytail
-
-# Install the plugin
-codex</code></pre>
-<p>Then in Codex:</p>
+<h3>My Example: Knowledge Management</h3>
+<p>I started with a specific pain point: managing my reading notes. I read 20-30 minutes every day, but my notes were scattered and hard to review. I wanted AI to help me organize my Obsidian notes.</p>
+<p><strong>Practical Steps:</strong></p>
 <ol>
-  <li>Open <code>/plugins</code></li>
-  <li>Select Ponytail and install</li>
-  <li>Open <code>/hooks</code></li>
-  <li>Trust both lifecycle hooks</li>
-  <li>Restart Codex</li>
+  <li>Import highlights from Apple Books</li>
+  <li>Use AI to summarize and organize notes</li>
+  <li>Create a workflow for continuous note management</li>
 </ol>
 
-<h3>How to use</h3>
-<p>Ponytail works automatically once installed. You can also explicitly reference it:</p>
-<blockquote>"Use Ponytail principles to refactor this code. Prioritize reuse and minimalism."</blockquote>
+<h2 id="terminology">2. Learn AI Terminology Like a Baby</h2>
+<p>When you first enter the AI world, you'll encounter many new terms. Don't get overwhelmed. Learn them like a baby learning a new language.</p>
 
-<h3>What you'll get</h3>
-<ul>
-  <li>54% less code (per project benchmarks)</li>
-  <li>Better code reuse</li>
-  <li>More maintainable architecture</li>
-  <li>Same functionality with fewer lines</li>
-</ul>
-
-<h2 id="playwright">4. Playwright MCP: Automated Web Testing</h2>
-
-<h3>What it does</h3>
-<p>Playwright MCP teaches Codex to test the websites it generates. It can automatically open browsers, simulate clicks, take screenshots, check for issues, and fix problems — all without manual intervention.</p>
-
-<h3>How to install</h3>
-<pre><code class="language-bash"># Add to Codex config
-codex mcp add playwright npx -y @playwright/mcp@latest
-
-# Verify installation
-codex mcp list</code></pre>
-<p>Or manually edit <code>~/.codex/config.toml</code>:</p>
-<pre><code class="language-toml">[mcp_servers.playwright]
-command = "npx"
-args = ["-y", "@playwright/mcp@latest"]</code></pre>
-
-<h3>How to use</h3>
-<p>Ask Codex to test your website:</p>
-<blockquote>"Use Playwright MCP to test this website. Check for broken links, responsive design issues, and console errors."</blockquote>
-
-<h3>What you'll get</h3>
-<ul>
-  <li>Automated browser testing</li>
-  <li>Screenshot verification</li>
-  <li>Click simulation</li>
-  <li>Automatic bug fixing</li>
-  <li>Regression testing</li>
-</ul>
-
-<h2 id="workflow">The Complete Workflow</h2>
-<p>When used together, these four skills create a full web development pipeline:</p>
+<h3>My Experience</h3>
+<p>When I first took a course on AI agents, a 30-minute lesson took me an hour to complete because I had to stop and look up every new term.</p>
+<p><strong>How to Learn New Terms:</strong></p>
 <ol>
-  <li><strong>Taste Skill</strong> ensures the design looks professional</li>
-  <li><strong>GSAP Skill</strong> adds smooth, polished animations</li>
-  <li><strong>Ponytail</strong> keeps the code clean and minimal</li>
-  <li><strong>Playwright MCP</strong> tests and fixes issues automatically</li>
+  <li>Use conversational AI tools to explain terms in simple language</li>
+  <li>Create a personal glossary</li>
+  <li>Review and reinforce your understanding</li>
 </ol>
-<p>This is why some Codex users can generate a complete, high-quality website in one prompt — they've given their AI the right tools to do the job properly.</p>
 
-<h2 id="conclusion">Final Takeaway</h2>
-<p>Install these four skills today and transform your Codex from a basic code generator into a professional web development assistant.</p>
+<h3>Example: Understanding CLI</h3>
+<p>When I first encountered "CLI," I was confused about why there were so many different names like ChatGPT, Codex CLI, and GPT CLI. I used AI to explain the differences in simple terms.</p>
+
+<h2 id="doing">3. Learn by Doing: Solve Problems Step by Step</h2>
+<p>Once you have a basic understanding of AI terms, start solving problems. Don't wait until you know everything — learn by doing.</p>
+
+<h3>My Second Project: Auto-Edit Video Agent</h3>
+<p>I found editing talking head videos very time-consuming, so I wanted to create an AI agent to help me auto-edit videos.</p>
+<p><strong>Practical Steps:</strong></p>
+<ol>
+  <li>Define the problem clearly</li>
+  <li>Ask AI for solutions</li>
+  <li>Implement the solution step by step</li>
+  <li>Iterate and improve</li>
+</ol>
+
+<h2 id="resources">4. Recommended AI Learning Resources</h2>
+
+<h3>Short Videos</h3>
+<ul>
+  <li><strong>@一枚卓子老师</strong>: Explains AI terms in very easy-to-understand language</li>
+  <li><strong>@张咋啦老师</strong>: Provides practical, down-to-earth content that is updated frequently</li>
+</ul>
+
+<h3>Long Videos and Courses</h3>
+<ul>
+  <li><strong>@秋芝 2046's Codex Course</strong>: Great for learning specific tool usage and solving specific problems</li>
+  <li><strong>Folder as an App Course</strong>: Excellent for learning how to build AI agents</li>
+</ul>
+
+<h3>Official Documentation</h3>
+<p>Always check the official documentation of AI tools. No one knows a tool better than its creators.</p>
+<p><strong>Example: ElevenLabs API</strong></p>
+<p>When I was learning the ElevenLabs API, the official documentation helped me understand:</p>
+<ul>
+  <li>What the tool can do</li>
+  <li>What possibilities it offers</li>
+  <li>How to call it specifically</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>AI is developing rapidly, and you can't learn everything. Don't get anxious. Focus on how AI can help you solve specific problems. That's where its real value lies.</p>
+<p>Remember:</p>
+<ul>
+  <li>Start with a specific problem</li>
+  <li>Learn terminology gradually</li>
+  <li>Learn by doing</li>
+  <li>Use a variety of resources</li>
+</ul>
+<p>I hope this guide helps you start your AI learning journey with confidence. I'll continue to share more practical ways to use AI to solve real-world problems.</p>
 
 <h2>常见问题</h2>
 
-<h3>Do I need all four skills, or can I install them individually?</h3>
-<p>You can install any subset depending on your goals. Each skill solves one distinct problem: Taste Skill fixes the generic AI design look, GSAP replaces stiff robotic animations with professional motion, Ponytail cuts code volume by up to 54%, and Playwright MCP adds automated browser testing. If you're building landing pages or client-facing sites, Taste + GSAP gives the biggest visible improvement fastest. If you're maintaining a larger codebase, Ponytail + Playwright MCP matter more for quality and reliability. For the full "one prompt → professional website" experience described in this article, install all four — they complement each other and together cover the complete build → animate → refactor → test pipeline.</p>
+<h3>What's the very first thing I should do to start learning AI?</h3>
+<p>Pick one specific problem you already face and ask how AI can help with it. This is the opposite of starting with "how do I learn AI" — a broad question that leads to information overload. A concrete starting point could be organizing your notes, summarizing long articles, writing better emails, or automating a repetitive task. Once you have a target, you'll naturally discover which tools you need, and every new term you learn will stick because you immediately see how it applies to your problem.</p>
 
-<h3>Are these skills compatible with other AI coding tools besides Codex?</h3>
-<p>Partially. Taste Skill and GSAP Skill are skill-package based and work with any agent that supports the standard skills format (the install commands show the Codex / OpenCode variants, but the same packages can be adapted to Claude Code, Cursor, and other skill-capable agents). Ponytail is distributed as a Codex-specific plugin marketplace, so it requires Codex or OpenCode's plugin system. Playwright MCP uses the standard MCP protocol — because MCP is an open standard, the same <code>@playwright/mcp</code> server can be wired into Codex, Claude Code, and other MCP-compatible agents via their config files. If you switch agents often, the skill packages and MCP servers are the most portable; the Codex plugin is the most locked-in.</p>
+<h3>I get overwhelmed by AI terminology. How should I learn it?</h3>
+<p>Treat it like a baby learning a language: don't try to memorize everything at once. When you hit an unfamiliar term, ask a conversational AI tool to explain it in plain language, add it to your own personal glossary, and review the terms that come up in your actual work. The CLI example in this article is a perfect case — "ChatGPT, Codex CLI, and GPT CLI" sound like three different things but are really one concept with different contexts. Terms you encounter while solving a real problem are the ones you'll remember, so let your projects drive your vocabulary growth.</p>
 
-<h3>Will adding these skills slow down my Codex workflow?</h3>
-<p>Negligibly. The skills are lightweight instruction sets and hooks — they add guidance and lifecycle checks, not heavy processing. The main perceived difference is that generated websites look dramatically better and need fewer manual fix rounds, which usually makes the overall workflow <em>faster</em> despite the one-time installation cost of a few minutes. Ponytail's hooks run during code generation to enforce minimalism, and Playwright MCP runs tests on demand (or when you ask), not continuously. The only real overhead is the initial install (about 5-10 minutes for all four) and the occasional test run, which is far cheaper than manually debugging broken layouts or silently shipping buggy code.</p>
+<h3>Do I need to understand the math or coding behind AI before using it?</h3>
+<p>No. Every project in this guide — organizing notes, auto-editing videos — was built by describing a problem and iterating with AI, not by writing machine learning code from scratch. The value of AI for most people is in applying it to tasks, and the fastest way to get there is by doing, not by studying theory first. You can always go deeper into concepts later if a specific project needs it; starting with hands-on use gets you results immediately and builds the motivation to keep going.</p>
 
-<h3>Do I still need to know web development basics to use these skills effectively?</h3>
-<p>No, and that's the point. The skills are designed for prompt-driven workflows: you describe what you want ("a SaaS landing page with balanced whitespace"), and Codex applies the skill rules. You don't need to write CSS, GSAP timelines, or Playwright scripts yourself. However, knowing a little helps you write better prompts and verify results — for example, understanding the difference between scroll-triggered animations and timeline-based entrances lets you describe motion more precisely, and being able to read console errors lets you confirm Playwright MCP's fixes. As a rule of thumb: zero coding skills to start, basic HTML/CSS familiarity to get consistently great results, and that's it.</p>
+<h3>Which learning resources should I trust most?</h3>
+<p>Combine three layers. First, the official documentation of whatever tool you're learning — no one knows a tool better than its creators, and the ElevenLabs API example shows how official docs clarify what a tool can do, what's possible, and how to call it. Second, short explainer videos for quick wins on terminology. Third, longer courses only when you're committed to a specific tool or skill. The key is matching the resource to your current question: docs for specifics, short videos for concepts, and courses for deep dives — not consuming everything at once.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Equipped Codex for professional sites? Continue building with these guides:</p>
+  <p>Kicking off your AI journey? Continue with these guides:</p>
   <ul>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex Website Development: Zero-Basis Practical Tutorial and Deployment Guide</a> — the full workflow from coding to deploying a site with Codex</li>
-    <li><a href="/articles/master-ai-driven-development-openspec-practical-guide-beginners">Master AI-Driven Development with OpenSpec: A Practical Guide for Beginners</a> — structure complex AI coding projects with spec-driven workflows</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Complete Guide to Codex: From Zero to Advanced Development Workflow</a> — master every Codex capability, from basics to advanced workflows</li>
+    <li><a href="/article/ai-beginners-quick-guide-common-jargon-explained">AI Beginner's Quick Guide: Common Jargon Explained</a> — plain-language definitions of the terms every beginner meets first</li>
+    <li><a href="/article/how-to-learn-anything-10x-faster-with-claude-practical-guide">How to Learn Anything 10x Faster with Claude: A Practical Guide</a> — use conversational AI to accelerate your learning of any subject</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — from ChatGPT to Workspace Agent, decoded step by step</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📖 AI教程</span>
-  <span class="meta-badge">🕒 阅读约7分钟</span>
-  <span class="meta-badge">📅 2026年8月10日</span>
+  <span class="meta-badge">🧠 AI基础</span>
+  <span class="meta-badge">🕒 阅读约5分钟</span>
+  <span class="meta-badge">📅 2026年8月12日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>如果你曾疑惑为什么有些Codex用户能用一个提示词就生成精致的专业网站——而你的AI却总是吐出白底蓝按钮的通用页面——答案很简单：他们给Codex预装了四个关键技能。这四个技能构成了完整的端到端网页开发工作流，消除常见的AI前端缺陷、提升动画质量、强制代码整洁，并增加自动化测试。</p>
+<p>过去一年里，我持续创作AI相关内容，收到无数人问我："我该怎么开始学习AI？"在这篇指南中，我会分享我的学习经历、实用技巧和推荐资源，帮你满怀信心地开启AI学习之旅。</p>
 
-<h2 id="taste">1. Taste Skill：修复AI设计美学</h2>
+<h2 id="problem">1. 从解决一个具体问题开始</h2>
+<p>初学者最大的错误是从"如何学习AI？"这个问题开始。这个问题太宽泛，会带来信息过载和困惑。相反，从"AI能帮我解决哪个具体问题？"开始。</p>
 
-<h3>它的作用</h3>
-<p>Taste Skill是一个反"劣质模板"前端框架，训练AI产出专业设计输出。它约束AI的布局决策，确保合理的间距、和谐的色彩和清晰的视觉层级。它从你的页面中消除通用的"AI生成"外观。</p>
-
-<h3>如何安装</h3>
-<pre><code class="language-bash"># 安装完整技能包
-npx skills add Leonxlnx/taste-skill -a codex
-
-# 或只安装核心前端设计技能
-npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"</code></pre>
-
-<h3>如何使用</h3>
-<p>安装后，Codex生成UI时会自动应用Taste Skill准则。你也可以在提示词中显式引用它：</p>
-<blockquote>"使用Taste Skill原则设计一个SaaS落地页，注重留白平衡和现代排版。"</blockquote>
-
-<h3>你将获得</h3>
-<ul>
-  <li>有意识间距的专业布局</li>
-  <li>协调的色彩方案</li>
-  <li>清晰的视觉层级</li>
-  <li>不再有通用AI生成外观</li>
-</ul>
-
-<h2 id="gsap">2. GSAP Skill：专业Web动画</h2>
-
-<h3>它的作用</h3>
-<p>GSAP Skill教Codex创建流畅、专业的动画，而不是AI生成代码中典型的僵硬机械运动。它处理滚动触发动画、基于时间线的元素入场效果和复杂运动序列。</p>
-
-<h3>如何安装</h3>
-<pre><code class="language-bash"># 克隆仓库
-git clone https://github.com/Microck/gsap-skills.git ~/gsap-skills
-
-# 复制技能到Codex目录
-mkdir -p ~/.config/opencode/skills
-rsync -a --delete ~/gsap-skills/skills/ ~/.config/opencode/skills/
-
-# 可选：复制gsap命令
-mkdir -p ~/.config/opencode/command
-cp ~/gsap-skills/command/gsap.md ~/.config/opencode/command/</code></pre>
-
-<h3>如何使用</h3>
-<p>让Codex使用GSAP制作动画：</p>
-<blockquote>"使用GSAP Skill给这个页面添加滚动触发动画。让元素以平滑缓动交错入场。"</blockquote>
-
-<h3>你将获得</h3>
-<ul>
-  <li>流畅的滚动触发动画</li>
-  <li>专业的时间线序列</li>
-  <li>交错的元素入场效果</li>
-  <li>不再有僵硬机械动画</li>
-</ul>
-
-<h2 id="ponytail">3. Ponytail：强制极简整洁代码</h2>
-
-<h3>它的作用</h3>
-<p>Ponytail让你的AI代理像团队里最懒的资深开发者一样思考。它鼓励代码复用、极简主义和工程最佳实践——让你用更少、更整洁的代码实现同样的功能。</p>
-
-<h3>如何安装</h3>
-<pre><code class="language-bash"># 添加市场
-codex plugin marketplace add DietrichGebert/ponytail
-
-# 安装插件
-codex</code></pre>
-<p>然后在Codex中：</p>
+<h3>我的例子：知识管理</h3>
+<p>我最初是从一个具体的痛点出发的：管理我的读书笔记。我每天阅读20-30分钟，但笔记散落各处、难以回顾。我想让AI帮我整理Obsidian笔记。</p>
+<p><strong>实操步骤：</strong></p>
 <ol>
-  <li>打开<code>/plugins</code></li>
-  <li>选择Ponytail并安装</li>
-  <li>打开<code>/hooks</code></li>
-  <li>信任两个生命周期钩子</li>
-  <li>重启Codex</li>
+  <li>导入Apple Books中的高亮标注</li>
+  <li>用AI总结并整理笔记</li>
+  <li>建立持续笔记管理的工作流</li>
 </ol>
 
-<h3>如何使用</h3>
-<p>Ponytail安装后自动生效。你也可以显式引用它：</p>
-<blockquote>"使用Ponytail原则重构这段代码。优先考虑复用和极简。"</blockquote>
+<h2 id="terminology">2. 像婴儿一样学习AI术语</h2>
+<p>当你初次进入AI世界，会遇到很多新术语。不要被吓倒，像婴儿学新语言一样去学它们。</p>
 
-<h3>你将获得</h3>
-<ul>
-  <li>减少54%的代码量（按项目基准测试）</li>
-  <li>更好的代码复用</li>
-  <li>更易维护的架构</li>
-  <li>更少的行数实现同样的功能</li>
-</ul>
-
-<h2 id="playwright">4. Playwright MCP：自动化Web测试</h2>
-
-<h3>它的作用</h3>
-<p>Playwright MCP教Codex测试它生成的网站。它可以自动打开浏览器、模拟点击、截图、检查问题并修复缺陷——全程无需人工干预。</p>
-
-<h3>如何安装</h3>
-<pre><code class="language-bash"># 添加到Codex配置
-codex mcp add playwright npx -y @playwright/mcp@latest
-
-# 验证安装
-codex mcp list</code></pre>
-<p>或手动编辑<code>~/.codex/config.toml</code>：</p>
-<pre><code class="language-toml">[mcp_servers.playwright]
-command = "npx"
-args = ["-y", "@playwright/mcp@latest"]</code></pre>
-
-<h3>如何使用</h3>
-<p>让Codex测试你的网站：</p>
-<blockquote>"使用Playwright MCP测试这个网站。检查死链、响应式设计问题和控制台错误。"</blockquote>
-
-<h3>你将获得</h3>
-<ul>
-  <li>自动化浏览器测试</li>
-  <li>截图验证</li>
-  <li>点击模拟</li>
-  <li>自动修复Bug</li>
-  <li>回归测试</li>
-</ul>
-
-<h2 id="workflow">完整工作流</h2>
-<p>当这四个技能组合使用时，它们构成了完整的网页开发流水线：</p>
+<h3>我的经历</h3>
+<p>我第一次上AI Agent课程时，一节30分钟的课花了我一个小时才上完，因为我不得不停下来查每一个新术语。</p>
+<p><strong>如何学习新术语：</strong></p>
 <ol>
-  <li><strong>Taste Skill</strong>确保设计看起来专业</li>
-  <li><strong>GSAP Skill</strong>添加流畅精致的动画</li>
-  <li><strong>Ponytail</strong>保持代码整洁极简</li>
-  <li><strong>Playwright MCP</strong>自动测试并修复问题</li>
+  <li>用对话式AI工具用简单语言解释术语</li>
+  <li>建立个人术语表</li>
+  <li>复习并强化你的理解</li>
 </ol>
-<p>这就是为什么有些Codex用户能用一个提示词生成完整的高质量网站——他们给了AI正确完成工作的工具。</p>
 
-<h2 id="conclusion">总结</h2>
-<p>今天就安装这四个技能，把你的Codex从基础代码生成器变成专业网页开发助手。</p>
+<h3>例子：理解CLI</h3>
+<p>当我第一次遇到"CLI"时，我很困惑为什么有这么多不同的名字，比如ChatGPT、Codex CLI和GPT CLI。我用AI以简单的方式解释了它们之间的区别。</p>
+
+<h2 id="doing">3. 边做边学：一步步解决问题</h2>
+<p>当你对AI术语有了基本理解后，开始解决问题。不要等到什么都懂了再动手——边做边学。</p>
+
+<h3>我的第二个项目：自动剪辑视频Agent</h3>
+<p>我觉得剪辑口播视频非常耗时，于是想创建一个AI Agent帮我自动剪辑视频。</p>
+<p><strong>实操步骤：</strong></p>
+<ol>
+  <li>清晰地定义问题</li>
+  <li>向AI询问解决方案</li>
+  <li>一步步实施解决方案</li>
+  <li>迭代改进</li>
+</ol>
+
+<h2 id="resources">4. 推荐的AI学习资源</h2>
+
+<h3>短视频</h3>
+<ul>
+  <li><strong>@一枚卓子老师</strong>：用非常通俗易懂的语言讲解AI术语</li>
+  <li><strong>@张咋啦老师</strong>：提供实用接地气的内容，更新频繁</li>
+</ul>
+
+<h3>长视频和课程</h3>
+<ul>
+  <li><strong>@秋芝 2046的Codex课程</strong>：非常适合学习具体工具用法和解决具体问题</li>
+  <li><strong>"文件夹即应用"课程</strong>：非常擅长教如何构建AI Agent</li>
+</ul>
+
+<h3>官方文档</h3>
+<p>始终查阅AI工具的官方文档。没有人比工具创造者更了解一个工具。</p>
+<p><strong>例子：ElevenLabs API</strong></p>
+<p>当我学习ElevenLabs API时，官方文档帮助我理解了：</p>
+<ul>
+  <li>这个工具能做什么</li>
+  <li>它提供哪些可能性</li>
+  <li>具体如何调用它</li>
+</ul>
+
+<h2 id="conclusion">结语</h2>
+<p>AI发展日新月异，你不可能学会所有东西。不要焦虑，专注于AI能帮你解决哪些具体问题——那才是它真正的价值所在。</p>
+<p>记住：</p>
+<ul>
+  <li>从具体问题开始</li>
+  <li>循序渐进学习术语</li>
+  <li>边做边学</li>
+  <li>善用多种资源</li>
+</ul>
+<p>希望这篇指南帮你满怀信心地开启AI学习之旅。我会继续分享更多用AI解决现实问题的实用方法。</p>
 
 <h2>常见问题</h2>
 
-<h3>我需要全部四个技能，还是可以单独安装？</h3>
-<p>你可以根据目标安装任意子集。每个技能解决一个不同的问题：Taste Skill修复通用AI设计外观，GSAP把僵硬机械的动画替换为专业运动效果，Ponytail减少高达54%的代码量，Playwright MCP增加自动化浏览器测试。如果你在构建落地页或面向客户的网站，Taste + GSAP能最快带来最明显的视觉提升。如果你在维护较大代码库，Ponytail + Playwright MCP对质量和可靠性更重要。要获得本文描述的完整"一条提示词→专业网站"体验，请安装全部四个——它们互补，共同覆盖构建→动画→重构→测试的完整流水线。</p>
+<h3>开始学习AI，我做的第一件事应该是什么？</h3>
+<p>选一个你已经在面对的具体问题，问问AI能如何帮你解决它。这与"我该怎么学AI"这种宽泛问题正好相反——宽泛问题会导致信息过载。一个具体起点可以是整理笔记、总结长文章、写出更好的邮件，或者自动化一个重复任务。一旦有了目标，你自然会发现自己需要哪些工具，而每学一个新术语都会因为立刻看到它如何应用而记得更牢。</p>
 
-<h3>这些技能除了Codex还能用于其他AI编码工具吗？</h3>
-<p>部分可以。Taste Skill和GSAP Skill基于技能包格式，适用于任何支持标准技能格式的Agent（安装命令显示的是Codex/OpenCode变体，但相同技能包可适配Claude Code、Cursor等其他支持技能的Agent）。Ponytail以Codex专用插件市场分发，需要Codex或OpenCode的插件系统。Playwright MCP使用标准MCP协议——因为MCP是开放标准，同一个<code>@playwright/mcp</code>服务器可以通过配置文件接入Codex、Claude Code和其他兼容MCP的Agent。如果你经常切换Agent，技能包和MCP服务器最便携；Codex插件绑定最深。</p>
+<h3>我被AI术语淹没了，该怎么学？</h3>
+<p>把它当成婴儿学语言：不要试图一次记住所有东西。遇到不熟悉的术语时，让对话式AI工具用大白话解释，加入你自己的个人术语表，然后复习那些在你实际工作中出现的术语。本文中的CLI例子就是绝佳案例——"ChatGPT、Codex CLI和GPT CLI"听起来像三个不同的东西，其实是同一个概念的不同语境。在解决真实问题过程中遇到的术语才最容易被记住，所以让你的项目驱动词汇增长。</p>
 
-<h3>添加这些技能会拖慢我的Codex工作流吗？</h3>
-<p>几乎不会。技能是轻量的指令集和钩子——它们增加的是指导和生命周期检查，不是重型处理。主要感知差异是生成的网站外观明显更好、需要的人工修复轮次更少，这通常让整体工作流<em>更快</em>，尽管一次性安装只需几分钟。Ponytail的钩子在代码生成期间运行以强制极简，Playwright MCP按需（或应你要求）运行测试，不是持续运行。唯一的真实开销是初始安装（四个约5-10分钟）和偶尔的测试运行，远比自己手动调试坏掉的布局或静默上线带Bug的代码便宜。</p>
+<h3>在用它之前，我需要理解AI背后的数学或编程吗？</h3>
+<p>不需要。本指南中的每个项目——整理笔记、自动剪辑视频——都是通过描述问题、与AI反复迭代完成的，而不是从零编写机器学习代码。对大多数人来说，AI的价值在于把它应用到任务上，最快的路径是先动手做，而不是先学理论。如果某个具体项目需要，你以后随时可以深入学习概念；从实战上手能立刻看到结果，并建立坚持下去的动力。</p>
 
-<h3>我仍然需要了解Web开发基础知识才能有效使用这些技能吗？</h3>
-<p>不需要，这正是重点。技能是为提示词驱动的工作流设计的：你描述想要的东西（"一个注重留白平衡的SaaS落地页"），Codex应用技能规则。你不需要自己写CSS、GSAP时间线或Playwright脚本。然而，了解一点有助于你写出更好的提示词并验证结果——例如，理解滚动触发动画和时间线入场之间的区别能让你更精确地描述运动，能够阅读控制台错误可以让你确认Playwright MCP的修复。经验法则：零编码技能即可开始，了解基本HTML/CSS能持续获得出色结果，仅此而已。</p>
+<h3>哪些学习资源最值得信赖？</h3>
+<p>把三种资源结合使用。第一层是你要学的工具的官方文档——没人比工具创造者更了解它，ElevenLabs API的例子说明了官方文档如何阐明工具能做什么、有哪些可能、以及如何调用。第二层是短视频，用通俗讲解快速搞定术语。第三层是长课程，只在当你决心学某个具体工具或技能时再投入。关键是把资源和当前问题匹配起来：细节问文档、概念看短视频、深度学习选课程——而不是一股脑全看。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>为专业网站配齐了Codex技能？继续用这些指南构建：</p>
+  <p>开启你的AI之旅？继续阅读这些指南：</p>
   <ul>
-    <li><a href="/articles/codex-website-dev-zero-basis-tutorial">Codex网站开发：零基础实战教程与部署指南</a> — 从编码到部署网站的完整工作流</li>
-    <li><a href="/articles/master-ai-driven-development-openspec-practical-guide-beginners">用OpenSpec掌握AI驱动开发：新手实操指南</a> — 用规范驱动的工作流结构化复杂AI编码项目</li>
-    <li><a href="/articles/complete-guide-codex-zero-to-advanced">Codex完全指南：从零基础到高级开发工作流</a> — 掌握Codex每项能力，从基础到高级工作流</li>
+    <li><a href="/article/ai-beginners-quick-guide-common-jargon-explained">AI初学者快速指南：常见术语详解</a> — 用大白话解释初学者最先遇到的每个术语</li>
+    <li><a href="/article/how-to-learn-anything-10x-faster-with-claude-practical-guide">用Claude让任何学习提速10倍：实用指南</a> — 用对话式AI加速你对任何学科的学习</li>
+    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓到：AI概念实战指南</a> — 从ChatGPT到Workspace Agent，一步步解码</li>
   </ul>
 </div>`,
   },
