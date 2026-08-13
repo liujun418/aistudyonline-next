@@ -3020,4 +3020,17 @@ export const articles: Article[] = [
     date: "2026-08-12",
   },
 
+  {
+    slug: "deepseek-v4-pro-0813-real-world-testing-two-ai-development-projects",
+    title: "DeepSeek V4 Pro 0813 Real-World Testing: Two Practical AI Development Projects",
+    titleZh: "DeepSeek V4 Pro 0813实战测试：两个实用AI开发项目",
+    description: "Hands-on testing of DeepSeek V4 Pro 0813 with two real projects — a 6-style personal blog built in 25 minutes and a runnable 3D racing game in 40 minutes — showing delivery capability beyond benchmark scores.",
+    descriptionZh: "用两个真实项目实测DeepSeek V4 Pro 0813——25分钟搭建6风格个人博客、40分钟生成可运行的3D赛车游戏，展示超越基准分数的真实交付能力。",
+    category: "ai-news",
+    tags: ["DeepSeek", "DeepSeek V4 Pro", "AI Model", "Real-World Testing", "Coding", "Blog", "3D Game"],
+    difficulty: "beginner",
+    toolsMentioned: ["DeepSeek"],
+    date: "2026-08-13",
+  },
+
 ];

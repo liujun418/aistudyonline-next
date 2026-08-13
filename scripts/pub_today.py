@@ -1,18 +1,18 @@
-"""Publish Aug 12, 2026 — 1 article, no new tools."""
+"""Publish Aug 13, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "beginners-guide-learning-ai-my-journey-practical-tips",
-    title: "A Beginner's Guide to Learning AI: My Journey and Practical Tips",
-    titleZh: "初学者AI学习指南：我的经历与实用建议",
-    description: "A practical AI learning guide from a creator who's been through it — start with a specific problem, learn AI terminology like a baby, learn by doing, and find the right resources without information overload.",
-    descriptionZh: "一位过来人创作者分享的实用AI学习指南——从解决具体问题开始、像婴儿一样学AI术语、边做边学、找到合适资源而不被信息淹没。",
-    category: "ai-basics",
-    tags: ["AI Learning", "Beginner", "AI Basics", "Learning Guide", "Study Tips", "Terminology"],
+    slug: "deepseek-v4-pro-0813-real-world-testing-two-ai-development-projects",
+    title: "DeepSeek V4 Pro 0813 Real-World Testing: Two Practical AI Development Projects",
+    titleZh: "DeepSeek V4 Pro 0813实战测试：两个实用AI开发项目",
+    description: "Hands-on testing of DeepSeek V4 Pro 0813 with two real projects — a 6-style personal blog built in 25 minutes and a runnable 3D racing game in 40 minutes — showing delivery capability beyond benchmark scores.",
+    descriptionZh: "用两个真实项目实测DeepSeek V4 Pro 0813——25分钟搭建6风格个人博客、40分钟生成可运行的3D赛车游戏，展示超越基准分数的真实交付能力。",
+    category: "ai-news",
+    tags: ["DeepSeek", "DeepSeek V4 Pro", "AI Model", "Real-World Testing", "Coding", "Blog", "3D Game"],
     difficulty: "beginner",
-    toolsMentioned: ["ElevenLabs", "OpenAI Codex CLI"],
-    date: "2026-08-12",
+    toolsMentioned: ["DeepSeek"],
+    date: "2026-08-13",
   },
 
 """
@@ -22,221 +22,193 @@ print('Part 1 done')
 
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "beginners-guide-learning-ai-my-journey-practical-tips": {
+  "deepseek-v4-pro-0813-real-world-testing-two-ai-development-projects": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">🧠 AI Basics</span>
-  <span class="meta-badge">🕒 5 min read</span>
-  <span class="meta-badge">📅 Aug 12, 2026</span>
+  <span class="meta-badge">📰 AI News</span>
+  <span class="meta-badge">🕒 6 min read</span>
+  <span class="meta-badge">📅 Aug 13, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>Over the past year, I've been creating AI-related content and receiving numerous questions from people asking, "How do I start learning AI?" In this guide, I'll share my learning journey, practical tips, and recommended resources to help you start your AI learning journey with confidence.</p>
+<p>DeepSeek has officially released the V4 Pro 0813 model. Instead of just focusing on parameters and benchmark scores, we will test its real programming capabilities with two practical projects.</p>
 
-<h2 id="problem">1. Start with Solving a Specific Problem</h2>
-<p>The biggest mistake beginners make is starting with "how to learn AI?" This question is too broad and will lead to information overload and confusion. Instead, start with "how can AI help me solve a specific problem?"</p>
-
-<h3>My Example: Knowledge Management</h3>
-<p>I started with a specific pain point: managing my reading notes. I read 20-30 minutes every day, but my notes were scattered and hard to review. I wanted AI to help me organize my Obsidian notes.</p>
-<p><strong>Practical Steps:</strong></p>
-<ol>
-  <li>Import highlights from Apple Books</li>
-  <li>Use AI to summarize and organize notes</li>
-  <li>Create a workflow for continuous note management</li>
-</ol>
-
-<h2 id="terminology">2. Learn AI Terminology Like a Baby</h2>
-<p>When you first enter the AI world, you'll encounter many new terms. Don't get overwhelmed. Learn them like a baby learning a new language.</p>
-
-<h3>My Experience</h3>
-<p>When I first took a course on AI agents, a 30-minute lesson took me an hour to complete because I had to stop and look up every new term.</p>
-<p><strong>How to Learn New Terms:</strong></p>
-<ol>
-  <li>Use conversational AI tools to explain terms in simple language</li>
-  <li>Create a personal glossary</li>
-  <li>Review and reinforce your understanding</li>
-</ol>
-
-<h3>Example: Understanding CLI</h3>
-<p>When I first encountered "CLI," I was confused about why there were so many different names like ChatGPT, Codex CLI, and GPT CLI. I used AI to explain the differences in simple terms.</p>
-
-<h2 id="doing">3. Learn by Doing: Solve Problems Step by Step</h2>
-<p>Once you have a basic understanding of AI terms, start solving problems. Don't wait until you know everything — learn by doing.</p>
-
-<h3>My Second Project: Auto-Edit Video Agent</h3>
-<p>I found editing talking head videos very time-consuming, so I wanted to create an AI agent to help me auto-edit videos.</p>
-<p><strong>Practical Steps:</strong></p>
-<ol>
-  <li>Define the problem clearly</li>
-  <li>Ask AI for solutions</li>
-  <li>Implement the solution step by step</li>
-  <li>Iterate and improve</li>
-</ol>
-
-<h2 id="resources">4. Recommended AI Learning Resources</h2>
-
-<h3>Short Videos</h3>
+<h2 id="core-info">Core Information of the New Model</h2>
 <ul>
-  <li><strong>@一枚卓子老师</strong>: Explains AI terms in very easy-to-understand language</li>
-  <li><strong>@张咋啦老师</strong>: Provides practical, down-to-earth content that is updated frequently</li>
+  <li><strong>Maximum Output</strong>: 384K</li>
+  <li><strong>Thinking Mode</strong>: Supports both thinking and non-thinking modes, with thinking mode enabled by default</li>
+  <li><strong>Pricing</strong>: Approximately 3 times that of V4 Flash</li>
+  <li><strong>Benchmark Scores</strong>: The scores on the left side of the benchmark table are estimated scores, while the scores on the right side are accurate scores. The scores of V4 Pro 0813 are higher than those of V4 Flash 0731, but not exceeding Fable 5.</li>
 </ul>
 
-<h3>Long Videos and Courses</h3>
+<h2 id="project-1">Project 1: Develop a Personal Blog with 6 Styles</h2>
+
+<h3>The Prompt</h3>
+<pre><code class="language-text">Help me design and develop a modern personal blog website, providing 6 switchable visual styles:
+- Minimalist black and white
+- Tech future
+- Warm retro
+- Clear deep color
+- Other styles you think are suitable
+
+The website should include:
+- Home page
+- Article list
+- Article details
+- About us
+- Contact information
+
+Each style should have obvious differences in color, font and layout, and support both computer and mobile terminals. Add style switching buttons, light and dark modes and smooth transition animations.
+Please use real example content and pictures, the interface is simple and designed, and finally deliver a complete project that can run directly.</code></pre>
+
+<h3>The Result</h3>
 <ul>
-  <li><strong>@秋芝 2046's Codex Course</strong>: Great for learning specific tool usage and solving specific problems</li>
-  <li><strong>Folder as an App Course</strong>: Excellent for learning how to build AI agents</li>
+  <li><strong>Completion Time</strong>: 25 minutes</li>
+  <li><strong>Deliverables</strong>: A blog website with 6 visual styles, each supporting light and dark modes, equivalent to 12 display effects</li>
+  <li><strong>Functional Modules</strong>: Home page, article list, article details, about us, contact information and theme switching functions are all implemented</li>
+  <li><strong>Technical Indicators</strong>: No barrier 100, best practice 100, SEO 100, performance 72</li>
 </ul>
 
-<h3>Official Documentation</h3>
-<p>Always check the official documentation of AI tools. No one knows a tool better than its creators.</p>
-<p><strong>Example: ElevenLabs API</strong></p>
-<p>When I was learning the ElevenLabs API, the official documentation helped me understand:</p>
+<h2 id="project-2">Project 2: Generate a Runnable 3D Racing Game</h2>
+
+<h3>The Prompt</h3>
+<pre><code class="language-text">Help me develop a runnable 3D racing game, including:
+- Car control
+- Track
+- Opponent vehicles
+- Timing ranking
+- Collision effect
+- Restart function
+
+The picture should have a sense of speed, support keyboard control and computer browser operation, and finally deliver a complete runnable project.</code></pre>
+
+<h3>The Result</h3>
 <ul>
-  <li>What the tool can do</li>
-  <li>What possibilities it offers</li>
-  <li>How to call it specifically</li>
+  <li><strong>Completion Time</strong>: 40 minutes</li>
+  <li><strong>Deliverables</strong>: A 3D racing game that can be run directly, including README documentation</li>
+  <li><strong>Functional Modules</strong>: Car control, track, opponent vehicles, timing ranking, collision, drift, sound effect and restart functions are all implemented</li>
+  <li><strong>Game Experience</strong>: The game can be run directly, but the visual effects such as the car model, mountains and clouds are not very realistic. The speed display is very real, and the wind effect is simulated when the car is running.</li>
 </ul>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>AI is developing rapidly, and you can't learn everything. Don't get anxious. Focus on how AI can help you solve specific problems. That's where its real value lies.</p>
-<p>Remember:</p>
-<ul>
-  <li>Start with a specific problem</li>
-  <li>Learn terminology gradually</li>
-  <li>Learn by doing</li>
-  <li>Use a variety of resources</li>
-</ul>
-<p>I hope this guide helps you start your AI learning journey with confidence. I'll continue to share more practical ways to use AI to solve real-world problems.</p>
+<p>DeepSeek V4 Pro has a good project completion, but whether the price of nearly 3 times is worth it depends on whether you pay more attention to delivery capability or cost performance.</p>
+<p>We will continue to test new models with the same set of real project acceptance methods in the future, not just looking at benchmarks, but directly seeing if it can deliver the project.</p>
 
 <h2>常见问题</h2>
 
-<h3>What's the very first thing I should do to start learning AI?</h3>
-<p>Pick one specific problem you already face and ask how AI can help with it. This is the opposite of starting with "how do I learn AI" — a broad question that leads to information overload. A concrete starting point could be organizing your notes, summarizing long articles, writing better emails, or automating a repetitive task. Once you have a target, you'll naturally discover which tools you need, and every new term you learn will stick because you immediately see how it applies to your problem.</p>
+<h3>What is DeepSeek V4 Pro 0813, and how is it different from V4 Flash?</h3>
+<p>V4 Pro 0813 is the newest DeepSeek release, positioned above V4 Flash in capability. It supports a 384K maximum output, has thinking mode enabled by default (with a non-thinking option), and costs roughly 3 times as much as V4 Flash. In benchmark scores it lands between V4 Flash 0731 and the top-tier Fable 5 — stronger than Flash but not the absolute ceiling. The real difference shows up in delivery: it handled both projects in this test — a 6-style blog in 25 minutes and a 3D racing game in 40 minutes — with solid functional completeness, which is the practical advantage Pro brings over Flash for full-project tasks.</p>
 
-<h3>I get overwhelmed by AI terminology. How should I learn it?</h3>
-<p>Treat it like a baby learning a language: don't try to memorize everything at once. When you hit an unfamiliar term, ask a conversational AI tool to explain it in plain language, add it to your own personal glossary, and review the terms that come up in your actual work. The CLI example in this article is a perfect case — "ChatGPT, Codex CLI, and GPT CLI" sound like three different things but are really one concept with different contexts. Terms you encounter while solving a real problem are the ones you'll remember, so let your projects drive your vocabulary growth.</p>
+<h3>Are these test projects actually runnable, or just mockups?</h3>
+<p>Both are fully runnable deliverables. The blog is a complete website with 6 switchable visual styles, each supporting light and dark modes for 12 total display effects, covering home, article list, article details, about, and contact pages with theme switching — scoring 100 on accessibility, best practices, and SEO. The 3D racing game runs directly in the browser with keyboard control, car physics, track, opponent vehicles, timing ranking, collisions, drifting, sound effects, and restart, plus README documentation. The visual polish of the game (car model, mountains, clouds) is noted as the weakest point, but everything works as delivered.</p>
 
-<h3>Do I need to understand the math or coding behind AI before using it?</h3>
-<p>No. Every project in this guide — organizing notes, auto-editing videos — was built by describing a problem and iterating with AI, not by writing machine learning code from scratch. The value of AI for most people is in applying it to tasks, and the fastest way to get there is by doing, not by studying theory first. You can always go deeper into concepts later if a specific project needs it; starting with hands-on use gets you results immediately and builds the motivation to keep going.</p>
+<h3>Is the ~3x price of V4 Pro worth paying over V4 Flash?</h3>
+<p>It depends on what you value. If you're optimizing for cost on high-volume or repetitive tasks, V4 Flash remains the better value. If you're building complete projects — a whole website or a full game from a single prompt — V4 Pro 0813 delivered both here without hand-holding, which is where the premium pays off. The practical guidance from this test: match the model to the task. Use Pro when delivery speed and completeness matter; use Flash when cost per token dominates your decision.</p>
 
-<h3>Which learning resources should I trust most?</h3>
-<p>Combine three layers. First, the official documentation of whatever tool you're learning — no one knows a tool better than its creators, and the ElevenLabs API example shows how official docs clarify what a tool can do, what's possible, and how to call it. Second, short explainer videos for quick wins on terminology. Third, longer courses only when you're committed to a specific tool or skill. The key is matching the resource to your current question: docs for specifics, short videos for concepts, and courses for deep dives — not consuming everything at once.</p>
+<h3>Should beginners use V4 Pro 0813?</h3>
+<p>Yes, for the reason this article demonstrates: you can write a plain-language prompt in natural language and get a complete, runnable project back without deep coding knowledge. The blog prompt in this test was a simple feature list, and the game prompt was six bullet points. That's an approachable entry point for beginners who want real output rather than studying theory. The main caveat is cost — at 3x Flash pricing, beginners iterating a lot may want to prototype on Flash first and reserve Pro for final project generation.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Kicking off your AI journey? Continue with these guides:</p>
+  <p>Want to put DeepSeek to work? Continue with these guides:</p>
   <ul>
-    <li><a href="/article/ai-beginners-quick-guide-common-jargon-explained">AI Beginner's Quick Guide: Common Jargon Explained</a> — plain-language definitions of the terms every beginner meets first</li>
-    <li><a href="/article/how-to-learn-anything-10x-faster-with-claude-practical-guide">How to Learn Anything 10x Faster with Claude: A Practical Guide</a> — use conversational AI to accelerate your learning of any subject</li>
-    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">Don't Be Intimidated by AI Jargon: A Practical Guide to AI Concepts</a> — from ChatGPT to Workspace Agent, decoded step by step</li>
+    <li><a href="/article/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash Official Release: A Practical Guide to the Game-Changing AI Model</a> — the full breakdown of DeepSeek's cost-efficient flagship release</li>
+    <li><a href="/article/deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark">DeepSeek V4 Flash vs GPT-5.6 Luna: Codex Integration & 10-Round Benchmark</a> — a head-to-head capability test of DeepSeek against OpenAI's top model</li>
+    <li><a href="/article/deepseek-v4-cost-effective">DeepSeek V4: The Cost-Effective King of AI Models for Developers</a> — why DeepSeek became developers' default choice for cost-effective coding</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">🧠 AI基础</span>
-  <span class="meta-badge">🕒 阅读约5分钟</span>
-  <span class="meta-badge">📅 2026年8月12日</span>
+  <span class="meta-badge">📰 AI新闻</span>
+  <span class="meta-badge">🕒 阅读约6分钟</span>
+  <span class="meta-badge">📅 2026年8月13日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>过去一年里，我持续创作AI相关内容，收到无数人问我："我该怎么开始学习AI？"在这篇指南中，我会分享我的学习经历、实用技巧和推荐资源，帮你满怀信心地开启AI学习之旅。</p>
+<p>DeepSeek已正式发布V4 Pro 0813模型。我们不再只盯着参数和基准分数，而是用两个真实项目测试它的实际编程能力。</p>
 
-<h2 id="problem">1. 从解决一个具体问题开始</h2>
-<p>初学者最大的错误是从"如何学习AI？"这个问题开始。这个问题太宽泛，会带来信息过载和困惑。相反，从"AI能帮我解决哪个具体问题？"开始。</p>
-
-<h3>我的例子：知识管理</h3>
-<p>我最初是从一个具体的痛点出发的：管理我的读书笔记。我每天阅读20-30分钟，但笔记散落各处、难以回顾。我想让AI帮我整理Obsidian笔记。</p>
-<p><strong>实操步骤：</strong></p>
-<ol>
-  <li>导入Apple Books中的高亮标注</li>
-  <li>用AI总结并整理笔记</li>
-  <li>建立持续笔记管理的工作流</li>
-</ol>
-
-<h2 id="terminology">2. 像婴儿一样学习AI术语</h2>
-<p>当你初次进入AI世界，会遇到很多新术语。不要被吓倒，像婴儿学新语言一样去学它们。</p>
-
-<h3>我的经历</h3>
-<p>我第一次上AI Agent课程时，一节30分钟的课花了我一个小时才上完，因为我不得不停下来查每一个新术语。</p>
-<p><strong>如何学习新术语：</strong></p>
-<ol>
-  <li>用对话式AI工具用简单语言解释术语</li>
-  <li>建立个人术语表</li>
-  <li>复习并强化你的理解</li>
-</ol>
-
-<h3>例子：理解CLI</h3>
-<p>当我第一次遇到"CLI"时，我很困惑为什么有这么多不同的名字，比如ChatGPT、Codex CLI和GPT CLI。我用AI以简单的方式解释了它们之间的区别。</p>
-
-<h2 id="doing">3. 边做边学：一步步解决问题</h2>
-<p>当你对AI术语有了基本理解后，开始解决问题。不要等到什么都懂了再动手——边做边学。</p>
-
-<h3>我的第二个项目：自动剪辑视频Agent</h3>
-<p>我觉得剪辑口播视频非常耗时，于是想创建一个AI Agent帮我自动剪辑视频。</p>
-<p><strong>实操步骤：</strong></p>
-<ol>
-  <li>清晰地定义问题</li>
-  <li>向AI询问解决方案</li>
-  <li>一步步实施解决方案</li>
-  <li>迭代改进</li>
-</ol>
-
-<h2 id="resources">4. 推荐的AI学习资源</h2>
-
-<h3>短视频</h3>
+<h2 id="core-info">新模型核心信息</h2>
 <ul>
-  <li><strong>@一枚卓子老师</strong>：用非常通俗易懂的语言讲解AI术语</li>
-  <li><strong>@张咋啦老师</strong>：提供实用接地气的内容，更新频繁</li>
+  <li><strong>最大输出</strong>：384K</li>
+  <li><strong>思考模式</strong>：支持思考与非思考模式，默认启用思考模式</li>
+  <li><strong>定价</strong>：约为V4 Flash的3倍</li>
+  <li><strong>基准分数</strong>：基准表左侧为预估分，右侧为准确分。V4 Pro 0813的分数高于V4 Flash 0731，但未超过Fable 5。</li>
 </ul>
 
-<h3>长视频和课程</h3>
+<h2 id="project-1">项目1：开发一个6种样式的个人博客</h2>
+
+<h3>提示词</h3>
+<pre><code class="language-text">帮我设计并开发一个现代个人博客网站，提供6种可切换的视觉风格：
+- 极简黑白
+- 科技未来
+- 温暖复古
+- 清晰深色
+- 你认为合适的其他风格
+
+网站应包括：
+- 首页
+- 文章列表
+- 文章详情
+- 关于我们
+- 联系方式
+
+每种风格在颜色、字体和布局上应有明显差异，并支持电脑和移动端。添加风格切换按钮、明暗模式和流畅的过渡动画。
+请使用真实的示例内容和图片，界面简洁有设计感，最终交付一个可以直接运行的项目。</code></pre>
+
+<h3>测试结果</h3>
 <ul>
-  <li><strong>@秋芝 2046的Codex课程</strong>：非常适合学习具体工具用法和解决具体问题</li>
-  <li><strong>"文件夹即应用"课程</strong>：非常擅长教如何构建AI Agent</li>
+  <li><strong>完成时间</strong>：25分钟</li>
+  <li><strong>交付物</strong>：一个拥有6种视觉风格的博客网站，每种风格都支持明暗模式，相当于12种显示效果</li>
+  <li><strong>功能模块</strong>：首页、文章列表、文章详情、关于我们、联系方式和主题切换功能全部实现</li>
+  <li><strong>技术指标</strong>：无障碍100、最佳实践100、SEO 100、性能72</li>
 </ul>
 
-<h3>官方文档</h3>
-<p>始终查阅AI工具的官方文档。没有人比工具创造者更了解一个工具。</p>
-<p><strong>例子：ElevenLabs API</strong></p>
-<p>当我学习ElevenLabs API时，官方文档帮助我理解了：</p>
+<h2 id="project-2">项目2：生成一个可运行的3D赛车游戏</h2>
+
+<h3>提示词</h3>
+<pre><code class="language-text">帮我开发一个可运行的3D赛车游戏，包括：
+- 赛车控制
+- 赛道
+- 对手车辆
+- 计时排名
+- 碰撞效果
+- 重新开始功能
+
+画面要有速度感，支持键盘控制和电脑浏览器运行，最终交付一个完整可运行的项目。</code></pre>
+
+<h3>测试结果</h3>
 <ul>
-  <li>这个工具能做什么</li>
-  <li>它提供哪些可能性</li>
-  <li>具体如何调用它</li>
+  <li><strong>完成时间</strong>：40分钟</li>
+  <li><strong>交付物</strong>：一个可直接运行的3D赛车游戏，含README文档</li>
+  <li><strong>功能模块</strong>：赛车控制、赛道、对手车辆、计时排名、碰撞、漂移、音效和重新开始功能全部实现</li>
+  <li><strong>游戏体验</strong>：游戏可直接运行，但赛车模型、山体和云朵等视觉效果不够逼真。速度显示非常真实，赛车行驶时模拟了风声效果。</li>
 </ul>
 
 <h2 id="conclusion">结语</h2>
-<p>AI发展日新月异，你不可能学会所有东西。不要焦虑，专注于AI能帮你解决哪些具体问题——那才是它真正的价值所在。</p>
-<p>记住：</p>
-<ul>
-  <li>从具体问题开始</li>
-  <li>循序渐进学习术语</li>
-  <li>边做边学</li>
-  <li>善用多种资源</li>
-</ul>
-<p>希望这篇指南帮你满怀信心地开启AI学习之旅。我会继续分享更多用AI解决现实问题的实用方法。</p>
+<p>DeepSeek V4 Pro的项目完成度不错，但接近3倍的价格是否值得，取决于你更看重交付能力还是性价比。</p>
+<p>未来我们将继续用同一套真实项目验收方法测试新模型，不只是看基准分数，而是直接看它能否交付项目。</p>
 
 <h2>常见问题</h2>
 
-<h3>开始学习AI，我做的第一件事应该是什么？</h3>
-<p>选一个你已经在面对的具体问题，问问AI能如何帮你解决它。这与"我该怎么学AI"这种宽泛问题正好相反——宽泛问题会导致信息过载。一个具体起点可以是整理笔记、总结长文章、写出更好的邮件，或者自动化一个重复任务。一旦有了目标，你自然会发现自己需要哪些工具，而每学一个新术语都会因为立刻看到它如何应用而记得更牢。</p>
+<h3>什么是DeepSeek V4 Pro 0813？它和V4 Flash有什么不同？</h3>
+<p>V4 Pro 0813是DeepSeek的最新发布，定位在V4 Flash之上。它支持384K最大输出，默认启用思考模式（可切换非思考模式），价格约为V4 Flash的3倍。基准分数介于V4 Flash 0731和顶级模型Fable 5之间——比Flash强，但不是绝对上限。真正的差异体现在交付能力上：它在本次测试中完成了两个项目——25分钟做完6风格博客、40分钟做出3D赛车游戏——功能完整度很高，这正是Pro在整项目任务中相对于Flash的实际优势。</p>
 
-<h3>我被AI术语淹没了，该怎么学？</h3>
-<p>把它当成婴儿学语言：不要试图一次记住所有东西。遇到不熟悉的术语时，让对话式AI工具用大白话解释，加入你自己的个人术语表，然后复习那些在你实际工作中出现的术语。本文中的CLI例子就是绝佳案例——"ChatGPT、Codex CLI和GPT CLI"听起来像三个不同的东西，其实是同一个概念的不同语境。在解决真实问题过程中遇到的术语才最容易被记住，所以让你的项目驱动词汇增长。</p>
+<h3>这些测试项目真的能运行吗，还是只是演示稿？</h3>
+<p>两个都是可运行的完整交付物。博客是完整的网站，拥有6种可切换的视觉风格，每种都支持明暗模式，共12种显示效果，覆盖首页、文章列表、文章详情、关于和联系页面，并带主题切换——无障碍、最佳实践和SEO都拿到100分。3D赛车游戏可直接在浏览器运行，支持键盘控制、赛车物理、赛道、对手车辆、计时排名、碰撞、漂移、音效和重新开始，并附README文档。游戏在视觉精致度上（赛车模型、山体、云朵）被指为最弱环节，但一切功能都按交付可用。</p>
 
-<h3>在用它之前，我需要理解AI背后的数学或编程吗？</h3>
-<p>不需要。本指南中的每个项目——整理笔记、自动剪辑视频——都是通过描述问题、与AI反复迭代完成的，而不是从零编写机器学习代码。对大多数人来说，AI的价值在于把它应用到任务上，最快的路径是先动手做，而不是先学理论。如果某个具体项目需要，你以后随时可以深入学习概念；从实战上手能立刻看到结果，并建立坚持下去的动力。</p>
+<h3>V4 Pro约3倍的价格相对于V4 Flash值得吗？</h3>
+<p>取决于你看重什么。如果你在做高频或重复性任务时追求成本最优，V4 Flash仍然是更好的选择。如果你要构建完整项目——从一个提示词做出整个网站或完整游戏——V4 Pro 0813在本次测试中无需干预就交付了这两者，这正是溢价物有所值之处。本次测试的实用建议：按任务匹配模型。交付速度和完整性重要时用Pro；每Token成本主导决策时用Flash。</p>
 
-<h3>哪些学习资源最值得信赖？</h3>
-<p>把三种资源结合使用。第一层是你要学的工具的官方文档——没人比工具创造者更了解它，ElevenLabs API的例子说明了官方文档如何阐明工具能做什么、有哪些可能、以及如何调用。第二层是短视频，用通俗讲解快速搞定术语。第三层是长课程，只在当你决心学某个具体工具或技能时再投入。关键是把资源和当前问题匹配起来：细节问文档、概念看短视频、深度学习选课程——而不是一股脑全看。</p>
+<h3>初学者应该使用V4 Pro 0813吗？</h3>
+<p>应该，原因正是本文演示的：你可以用自然语言写一个提示词，无需深厚的编程知识就能拿回完整可运行的项目。本次测试中的博客提示词就是一个简单的功能清单，游戏提示词只有六个要点。这对想获得真实产出而非研究理论的初学者来说是很好的切入点。主要的注意事项是成本——在3倍Flash价格下，频繁迭代的初学者可以先用Flash做原型，把Pro留给最终项目生成。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>开启你的AI之旅？继续阅读这些指南：</p>
+  <p>想让DeepSeek帮你干活？继续阅读这些指南：</p>
   <ul>
-    <li><a href="/article/ai-beginners-quick-guide-common-jargon-explained">AI初学者快速指南：常见术语详解</a> — 用大白话解释初学者最先遇到的每个术语</li>
-    <li><a href="/article/how-to-learn-anything-10x-faster-with-claude-practical-guide">用Claude让任何学习提速10倍：实用指南</a> — 用对话式AI加速你对任何学科的学习</li>
-    <li><a href="/article/dont-be-intimidated-ai-jargon-practical-guide-concepts">别被AI术语吓到：AI概念实战指南</a> — 从ChatGPT到Workspace Agent，一步步解码</li>
+    <li><a href="/article/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash正式发布：变革性AI模型实用指南</a> — DeepSeek高性价比旗舰发布的完整解读</li>
+    <li><a href="/article/deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark">DeepSeek V4 Flash vs GPT-5.6 Luna：Codex接入与10轮实测</a> — DeepSeek与OpenAI顶级模型的正面能力对决</li>
+    <li><a href="/article/deepseek-v4-cost-effective">DeepSeek V4：开发者性价比之王AI模型</a> — 为什么DeepSeek成为开发者高性价比编程的默认选择</li>
   </ul>
 </div>`,
   },
