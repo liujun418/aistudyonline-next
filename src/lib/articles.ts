@@ -3033,4 +3033,17 @@ export const articles: Article[] = [
     date: "2026-08-13",
   },
 
+  {
+    slug: "deepseek-harness-comprehensive-guide-installation-architecture-practical-usage",
+    title: "DeepSeek Harness: A Comprehensive Guide to Installation, Architecture, and Practical Usage",
+    titleZh: "DeepSeek Harness：安装、架构与实用操作完全指南",
+    description: "A complete guide to DeepSeek Harness — the MIT-licensed open-source AI agent framework with 34K GitHub stars in 4 hours. Covers the 'Everything is a Plugin' architecture built on Cordis, one-command npm installation, a hands-on portfolio website build, and extending agents with plugins like MOD Lens.",
+    descriptionZh: "DeepSeek Harness完全指南——发布4小时获34K GitHub星标的MIT协议开源AI代理框架。详解基于Cordis的'万物皆插件'架构、一条命令的npm安装、实战搭建作品集网站，以及用MOD Lens等插件扩展代理能力。",
+    category: "ai-tutorials",
+    tags: ["DeepSeek", "DeepSeek Harness", "AI Agent", "Open Source", "Plugin", "Cordis", "Tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: ["DeepSeek Harness"],
+    date: "2026-08-14",
+  },
+
 ];

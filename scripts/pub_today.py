@@ -1,18 +1,19 @@
-"""Publish Aug 13, 2026 — 1 article, no new tools."""
+"""Publish Aug 14, 2026 — 1 article + 1 new tool (DeepSeek Harness)."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
+# ---------- Part 1: articles.ts metadata ----------
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "deepseek-v4-pro-0813-real-world-testing-two-ai-development-projects",
-    title: "DeepSeek V4 Pro 0813 Real-World Testing: Two Practical AI Development Projects",
-    titleZh: "DeepSeek V4 Pro 0813实战测试：两个实用AI开发项目",
-    description: "Hands-on testing of DeepSeek V4 Pro 0813 with two real projects — a 6-style personal blog built in 25 minutes and a runnable 3D racing game in 40 minutes — showing delivery capability beyond benchmark scores.",
-    descriptionZh: "用两个真实项目实测DeepSeek V4 Pro 0813——25分钟搭建6风格个人博客、40分钟生成可运行的3D赛车游戏，展示超越基准分数的真实交付能力。",
-    category: "ai-news",
-    tags: ["DeepSeek", "DeepSeek V4 Pro", "AI Model", "Real-World Testing", "Coding", "Blog", "3D Game"],
-    difficulty: "beginner",
-    toolsMentioned: ["DeepSeek"],
-    date: "2026-08-13",
+    slug: "deepseek-harness-comprehensive-guide-installation-architecture-practical-usage",
+    title: "DeepSeek Harness: A Comprehensive Guide to Installation, Architecture, and Practical Usage",
+    titleZh: "DeepSeek Harness：安装、架构与实用操作完全指南",
+    description: "A complete guide to DeepSeek Harness — the MIT-licensed open-source AI agent framework with 34K GitHub stars in 4 hours. Covers the 'Everything is a Plugin' architecture built on Cordis, one-command npm installation, a hands-on portfolio website build, and extending agents with plugins like MOD Lens.",
+    descriptionZh: "DeepSeek Harness完全指南——发布4小时获34K GitHub星标的MIT协议开源AI代理框架。详解基于Cordis的'万物皆插件'架构、一条命令的npm安装、实战搭建作品集网站，以及用MOD Lens等插件扩展代理能力。",
+    category: "ai-tutorials",
+    tags: ["DeepSeek", "DeepSeek Harness", "AI Agent", "Open Source", "Plugin", "Cordis", "Tutorial"],
+    difficulty: "intermediate",
+    toolsMentioned: ["DeepSeek Harness"],
+    date: "2026-08-14",
   },
 
 """
@@ -20,195 +21,258 @@ last = s.rfind('];')
 with open('src/lib/articles.ts', 'w', encoding='utf-8') as f: f.write(s[:last] + a + '];')
 print('Part 1 done')
 
+# ---------- Part 2: article-content.ts bilingual content ----------
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "deepseek-v4-pro-0813-real-world-testing-two-ai-development-projects": {
+  "deepseek-harness-comprehensive-guide-installation-architecture-practical-usage": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📰 AI News</span>
-  <span class="meta-badge">🕒 6 min read</span>
-  <span class="meta-badge">📅 Aug 13, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
+  <span class="meta-badge">📖 AI Tutorial</span>
+  <span class="meta-badge">🕒 7 min read</span>
+  <span class="meta-badge">📅 Aug 14, 2026</span>
+  <span class="meta-badge">🎯 Intermediate</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>DeepSeek has officially released the V4 Pro 0813 model. Instead of just focusing on parameters and benchmark scores, we will test its real programming capabilities with two practical projects.</p>
+<p>DeepSeek Harness has rapidly become one of the most talked-about AI agent projects, amassing an impressive 34K GitHub stars within just four hours of its release. This open-source framework, released under the MIT license, is not just another coding agent or AI assistant — it's a fully customizable harness base built on the principle of "Everything is a Plugin." This guide will walk you through its architecture, installation, practical applications, and how to leverage its powerful plugin system.</p>
 
-<h2 id="core-info">Core Information of the New Model</h2>
+<h2 id="what-is">What is DeepSeek Harness?</h2>
+<p>DeepSeek Harness represents a paradigm shift in AI agent development. While large language models (LLMs) provide the "intelligence" of an AI, the harness is the runtime environment that enables the model to interact with the real world. Think of it this way: if the model is the engine of a car, the harness is the entire vehicle system that allows the engine to function, including the steering, brakes, and other critical components.</p>
+<p>The official formula for this concept is:</p>
+<pre><code class="language-text">Agent = Model + Harness</code></pre>
+<p>Harness is responsible for:</p>
 <ul>
-  <li><strong>Maximum Output</strong>: 384K</li>
-  <li><strong>Thinking Mode</strong>: Supports both thinking and non-thinking modes, with thinking mode enabled by default</li>
-  <li><strong>Pricing</strong>: Approximately 3 times that of V4 Flash</li>
-  <li><strong>Benchmark Scores</strong>: The scores on the left side of the benchmark table are estimated scores, while the scores on the right side are accurate scores. The scores of V4 Pro 0813 are higher than those of V4 Flash 0731, but not exceeding Fable 5.</li>
+  <li>Managing the model's runtime environment</li>
+  <li>Enabling tool usage and integration</li>
+  <li>Handling long-running tasks and planning</li>
+  <li>Providing context management</li>
+  <li>Ensuring task completion and validation</li>
 </ul>
 
-<h2 id="project-1">Project 1: Develop a Personal Blog with 6 Styles</h2>
-
-<h3>The Prompt</h3>
-<pre><code class="language-text">Help me design and develop a modern personal blog website, providing 6 switchable visual styles:
-- Minimalist black and white
-- Tech future
-- Warm retro
-- Clear deep color
-- Other styles you think are suitable
-
-The website should include:
-- Home page
-- Article list
-- Article details
-- About us
-- Contact information
-
-Each style should have obvious differences in color, font and layout, and support both computer and mobile terminals. Add style switching buttons, light and dark modes and smooth transition animations.
-Please use real example content and pictures, the interface is simple and designed, and finally deliver a complete project that can run directly.</code></pre>
-
-<h3>The Result</h3>
+<h2 id="architecture">Core Architecture</h2>
+<p>DeepSeek Harness is built on the Cordis plugin system, which enables its "Everything is a Plugin" philosophy. This architecture allows every component of the agent to be replaced, extended, or customized through plugins, without modifying the core source code.</p>
+<h3>Key Components</h3>
 <ul>
-  <li><strong>Completion Time</strong>: 25 minutes</li>
-  <li><strong>Deliverables</strong>: A blog website with 6 visual styles, each supporting light and dark modes, equivalent to 12 display effects</li>
-  <li><strong>Functional Modules</strong>: Home page, article list, article details, about us, contact information and theme switching functions are all implemented</li>
-  <li><strong>Technical Indicators</strong>: No barrier 100, best practice 100, SEO 100, performance 72</li>
+  <li><strong>Cordis Kernel</strong>: The meta-framework that manages plugin loading, unloading, and dependencies.</li>
+  <li><strong>Plugin System</strong>: Every capability is implemented as a plugin, including model adapters, tool registries, skills and workflows, session management, sandbox environments, storage systems, agent loops, and user interfaces.</li>
+  <li><strong>Configuration System</strong>: Developers can select, swap, or extend any capability through configuration files.</li>
 </ul>
 
-<h2 id="project-2">Project 2: Generate a Runnable 3D Racing Game</h2>
+<h2 id="installation">Installation and Setup</h2>
+<p>Installing DeepSeek Harness is straightforward using npm:</p>
+<pre><code class="language-bash"># Install and launch the web interface
+npx @deepseek-ai/dsh web</code></pre>
+<p>When the installation completes, you'll see a local URL (typically <code>http://127.0.0.1:3080</code>). Open this address in your browser to access the Harness interface.</p>
+<h3>Initial Configuration</h3>
+<ol>
+  <li><strong>API Key Setup</strong>: You'll need to provide your DeepSeek API key to use the model capabilities.</li>
+  <li><strong>Workspace Selection</strong>: Choose a directory for your project files.</li>
+  <li><strong>Model Configuration</strong>: Select the model you want to use (DeepSeek V4, V4 Flash, etc.).</li>
+</ol>
 
-<h3>The Prompt</h3>
-<pre><code class="language-text">Help me develop a runnable 3D racing game, including:
-- Car control
-- Track
-- Opponent vehicles
-- Timing ranking
-- Collision effect
-- Restart function
+<h2 id="practical-usage">Practical Usage Example</h2>
+<p>Let's walk through a practical example of using DeepSeek Harness to create a personal portfolio website.</p>
+<h3>Step 1: Define the Task</h3>
+<p>Provide a detailed prompt describing your requirements:</p>
+<pre><code class="language-text">Create a personal portfolio website for an AI product designer. The site should include:
+- A hero section with a tagline
+- Product design process showcase
+- About section
+- Project gallery
+- Skills and capabilities section
 
-The picture should have a sense of speed, support keyboard control and computer browser operation, and finally deliver a complete runnable project.</code></pre>
+The design should be clean, modern, and responsive. Use appropriate typography and color schemes that reflect a professional yet creative aesthetic.</code></pre>
+<h3>Step 2: Execute the Task</h3>
+<p>DeepSeek Harness will:</p>
+<ol>
+  <li>Create a project directory structure</li>
+  <li>Generate HTML, CSS, and JavaScript files</li>
+  <li>Implement the design and functionality</li>
+  <li>Provide a local preview of the website</li>
+</ol>
+<h3>Step 3: Review and Refine</h3>
+<p>Once the task is complete, you can view the generated website, make any necessary adjustments, and deploy the final product.</p>
 
-<h3>The Result</h3>
+<h2 id="plugin-system">Plugin System</h2>
+<p>DeepSeek Harness's plugin system is its most powerful feature. With plugins, you can:</p>
 <ul>
-  <li><strong>Completion Time</strong>: 40 minutes</li>
-  <li><strong>Deliverables</strong>: A 3D racing game that can be run directly, including README documentation</li>
-  <li><strong>Functional Modules</strong>: Car control, track, opponent vehicles, timing ranking, collision, drift, sound effect and restart functions are all implemented</li>
-  <li><strong>Game Experience</strong>: The game can be run directly, but the visual effects such as the car model, mountains and clouds are not very realistic. The speed display is very real, and the wind effect is simulated when the car is running.</li>
+  <li><strong>Extend Capabilities</strong>: Add new tools, skills, or workflows</li>
+  <li><strong>Customize Behavior</strong>: Modify how the agent operates</li>
+  <li><strong>Integrate Services</strong>: Connect with external APIs and services</li>
+  <li><strong>Enhance UI</strong>: Customize the user interface</li>
 </ul>
+<h3>Example: Adding Visual Capabilities</h3>
+<p>To add visual capabilities to DeepSeek Harness, you can install a plugin like MOD Lens:</p>
+<pre><code class="language-bash"># Install the plugin
+npx -y @llustack/modlens --profile web add --save-exact @llustack/modlens@3.9.1
+
+# Configure the plugin
+npx -y @llustack/modlens config set provider openai
+npx -y @llustack/modlens config set openai.baseurl "https://your-vision-model-endpoint"
+npx -y @llustack/modlens config set openai.model "qwen3-vl-plus"
+
+# Set your API key
+export DEEPSEEK_API_KEY="your-api-key"
+npx @deepseek-ai/dsh web</code></pre>
+
+<h2 id="performance">Performance and Capabilities</h2>
+<p>In performance tests, DeepSeek Harness has shown impressive results:</p>
+<ul>
+  <li>Comparable to Codex + GPT-5.6 SOI in task completion</li>
+  <li>Faster execution speed</li>
+  <li>Superior front-end design capabilities</li>
+</ul>
+<p>This makes it a strong competitor in the AI agent space, offering a flexible and powerful alternative to existing solutions.</p>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>DeepSeek V4 Pro has a good project completion, but whether the price of nearly 3 times is worth it depends on whether you pay more attention to delivery capability or cost performance.</p>
-<p>We will continue to test new models with the same set of real project acceptance methods in the future, not just looking at benchmarks, but directly seeing if it can deliver the project.</p>
+<p>DeepSeek Harness represents a significant advancement in AI agent development. Its plugin-based architecture, open-source nature, and powerful capabilities make it an excellent choice for developers looking to build customizable and capable AI agents. Whether you're building coding assistants, productivity tools, or complex workflow automation systems, DeepSeek Harness provides the foundation you need to create powerful, adaptable AI solutions.</p>
+<p>With its MIT license and growing community, DeepSeek Harness is poised to become a key player in the future of AI agent development. For more detailed documentation and advanced tutorials, visit the official DeepSeek Harness website or check out the community resources available online.</p>
 
 <h2>常见问题</h2>
 
-<h3>What is DeepSeek V4 Pro 0813, and how is it different from V4 Flash?</h3>
-<p>V4 Pro 0813 is the newest DeepSeek release, positioned above V4 Flash in capability. It supports a 384K maximum output, has thinking mode enabled by default (with a non-thinking option), and costs roughly 3 times as much as V4 Flash. In benchmark scores it lands between V4 Flash 0731 and the top-tier Fable 5 — stronger than Flash but not the absolute ceiling. The real difference shows up in delivery: it handled both projects in this test — a 6-style blog in 25 minutes and a 3D racing game in 40 minutes — with solid functional completeness, which is the practical advantage Pro brings over Flash for full-project tasks.</p>
+<h3>What is DeepSeek Harness, and how is it different from a coding agent?</h3>
+<p>DeepSeek Harness is an open-source AI agent framework, not a single coding agent. It's the runtime "vehicle" that lets any model drive real-world tasks — the model is the engine, the harness is the whole car. This is different from tools like Codex that focus on one workflow: Harness is a foundation you build your own agents on. Every capability, from model adapters to tools to sandboxes, is a replaceable plugin, so you're not locked into a fixed set of behaviors.</p>
 
-<h3>Are these test projects actually runnable, or just mockups?</h3>
-<p>Both are fully runnable deliverables. The blog is a complete website with 6 switchable visual styles, each supporting light and dark modes for 12 total display effects, covering home, article list, article details, about, and contact pages with theme switching — scoring 100 on accessibility, best practices, and SEO. The 3D racing game runs directly in the browser with keyboard control, car physics, track, opponent vehicles, timing ranking, collisions, drifting, sound effects, and restart, plus README documentation. The visual polish of the game (car model, mountains, clouds) is noted as the weakest point, but everything works as delivered.</p>
+<h3>Is DeepSeek Harness free to use?</h3>
+<p>Yes. DeepSeek Harness is released under the MIT license and is completely open source — you can use it, modify it, and build commercial products on top of it without licensing fees. You only pay for the underlying model API calls, like your DeepSeek API usage. The 34K GitHub stars in its first four hours reflect a large and fast-growing community.</p>
 
-<h3>Is the ~3x price of V4 Pro worth paying over V4 Flash?</h3>
-<p>It depends on what you value. If you're optimizing for cost on high-volume or repetitive tasks, V4 Flash remains the better value. If you're building complete projects — a whole website or a full game from a single prompt — V4 Pro 0813 delivered both here without hand-holding, which is where the premium pays off. The practical guidance from this test: match the model to the task. Use Pro when delivery speed and completeness matter; use Flash when cost per token dominates your decision.</p>
+<h3>What is the "Everything is a Plugin" philosophy?</h3>
+<p>It means every part of the agent is a modular plugin that can be swapped without touching core code. Built on the Cordis plugin system, the harness treats model adapters, tool registries, skills, workflows, session management, sandboxes, storage, agent loops, and even the UI as plugins. Want a different sandbox or a new tool? Just add a plugin — no forks, no rewrites. This is what makes it customizable at a level most agent tools don't reach.</p>
 
-<h3>Should beginners use V4 Pro 0813?</h3>
-<p>Yes, for the reason this article demonstrates: you can write a plain-language prompt in natural language and get a complete, runnable project back without deep coding knowledge. The blog prompt in this test was a simple feature list, and the game prompt was six bullet points. That's an approachable entry point for beginners who want real output rather than studying theory. The main caveat is cost — at 3x Flash pricing, beginners iterating a lot may want to prototype on Flash first and reserve Pro for final project generation.</p>
+<h3>What hardware or setup do I need to run DeepSeek Harness?</h3>
+<p>None beyond Node.js and npm. Installation is a single command — <code>npx @deepseek-ai/dsh web</code> — which launches a local web interface at <code>http://127.0.0.1:3080</code>. You configure your DeepSeek API key, pick a workspace directory, and select a model. Because the heavy lifting happens in the model API, it runs on a normal laptop, and you can add plugins like MOD Lens for additional capabilities such as vision.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Want to put DeepSeek to work? Continue with these guides:</p>
+  <p>Ready to build agents? Continue with these guides:</p>
   <ul>
-    <li><a href="/article/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash Official Release: A Practical Guide to the Game-Changing AI Model</a> — the full breakdown of DeepSeek's cost-efficient flagship release</li>
-    <li><a href="/article/deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark">DeepSeek V4 Flash vs GPT-5.6 Luna: Codex Integration & 10-Round Benchmark</a> — a head-to-head capability test of DeepSeek against OpenAI's top model</li>
-    <li><a href="/article/deepseek-v4-cost-effective">DeepSeek V4: The Cost-Effective King of AI Models for Developers</a> — why DeepSeek became developers' default choice for cost-effective coding</li>
+    <li><a href="/article/deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark">DeepSeek V4 Flash vs GPT-5.6 Luna: Codex Integration & 10-Round Benchmark</a> — how to wire DeepSeek into agent workflows and how it stacks up head-to-head</li>
+    <li><a href="/article/codex-skill-bundle-4-skills-professional-websites-one-prompt">Codex Skill Bundle: 4 Skills to Build Professional Websites in One Prompt</a> — a practical agent workflow for building complete sites from a single prompt</li>
+    <li><a href="/article/deepseek-v4-pro-0813-real-world-testing-two-ai-development-projects">DeepSeek V4 Pro 0813 Real-World Testing: Two Practical AI Development Projects</a> — what DeepSeek models deliver on real projects, from blogs to 3D games</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📰 AI新闻</span>
-  <span class="meta-badge">🕒 阅读约6分钟</span>
-  <span class="meta-badge">📅 2026年8月13日</span>
-  <span class="meta-badge">🎯 入门</span>
+  <span class="meta-badge">📖 AI教程</span>
+  <span class="meta-badge">🕒 阅读约7分钟</span>
+  <span class="meta-badge">📅 2026年8月14日</span>
+  <span class="meta-badge">🎯 进阶</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>DeepSeek已正式发布V4 Pro 0813模型。我们不再只盯着参数和基准分数，而是用两个真实项目测试它的实际编程能力。</p>
+<p>DeepSeek Harness在发布后短短四小时内就积累了惊人的34K GitHub星标，迅速成为最受关注的AI代理项目之一。这个基于MIT协议发布的开源框架，不只是又一个编程代理或AI助手——它是以"万物皆插件"为核心理念构建的完全可定制底座。本指南将带你了解它的架构、安装、实际应用，以及如何利用其强大的插件系统。</p>
 
-<h2 id="core-info">新模型核心信息</h2>
+<h2 id="what-is">什么是DeepSeek Harness？</h2>
+<p>DeepSeek Harness代表了AI代理开发范式的转变。大语言模型（LLM）提供AI的"智能"，而harness是让模型与真实世界交互的运行时环境。打个比方：如果模型是汽车的引擎，harness就是让引擎运转的整个车辆系统，包括转向、刹车等关键组件。</p>
+<p>这个概念的标准公式是：</p>
+<pre><code class="language-text">Agent = Model + Harness</code></pre>
+<p>Harness负责：</p>
 <ul>
-  <li><strong>最大输出</strong>：384K</li>
-  <li><strong>思考模式</strong>：支持思考与非思考模式，默认启用思考模式</li>
-  <li><strong>定价</strong>：约为V4 Flash的3倍</li>
-  <li><strong>基准分数</strong>：基准表左侧为预估分，右侧为准确分。V4 Pro 0813的分数高于V4 Flash 0731，但未超过Fable 5。</li>
+  <li>管理模型的运行时环境</li>
+  <li>支持工具使用和集成</li>
+  <li>处理长任务和规划</li>
+  <li>提供上下文管理</li>
+  <li>确保任务完成和验证</li>
 </ul>
 
-<h2 id="project-1">项目1：开发一个6种样式的个人博客</h2>
-
-<h3>提示词</h3>
-<pre><code class="language-text">帮我设计并开发一个现代个人博客网站，提供6种可切换的视觉风格：
-- 极简黑白
-- 科技未来
-- 温暖复古
-- 清晰深色
-- 你认为合适的其他风格
-
-网站应包括：
-- 首页
-- 文章列表
-- 文章详情
-- 关于我们
-- 联系方式
-
-每种风格在颜色、字体和布局上应有明显差异，并支持电脑和移动端。添加风格切换按钮、明暗模式和流畅的过渡动画。
-请使用真实的示例内容和图片，界面简洁有设计感，最终交付一个可以直接运行的项目。</code></pre>
-
-<h3>测试结果</h3>
+<h2 id="architecture">核心架构</h2>
+<p>DeepSeek Harness构建在Cordis插件系统之上，实现了"万物皆插件"的理念。这种架构让代理的每个组件都可以通过插件替换、扩展或定制，而无需修改核心源码。</p>
+<h3>关键组件</h3>
 <ul>
-  <li><strong>完成时间</strong>：25分钟</li>
-  <li><strong>交付物</strong>：一个拥有6种视觉风格的博客网站，每种风格都支持明暗模式，相当于12种显示效果</li>
-  <li><strong>功能模块</strong>：首页、文章列表、文章详情、关于我们、联系方式和主题切换功能全部实现</li>
-  <li><strong>技术指标</strong>：无障碍100、最佳实践100、SEO 100、性能72</li>
+  <li><strong>Cordis内核</strong>：管理插件加载、卸载和依赖关系的元框架。</li>
+  <li><strong>插件系统</strong>：每项能力都实现为插件，包括模型适配器、工具注册表、技能与工作流、会话管理、沙箱环境、存储系统、代理循环和用户界面。</li>
+  <li><strong>配置系统</strong>：开发者可以通过配置文件选择、替换或扩展任何能力。</li>
 </ul>
 
-<h2 id="project-2">项目2：生成一个可运行的3D赛车游戏</h2>
+<h2 id="installation">安装与设置</h2>
+<p>使用npm安装DeepSeek Harness非常简单：</p>
+<pre><code class="language-bash"># 安装并启动Web界面
+npx @deepseek-ai/dsh web</code></pre>
+<p>安装完成后，你会看到一个本地URL（通常是<code>http://127.0.0.1:3080</code>）。在浏览器中打开这个地址即可访问Harness界面。</p>
+<h3>初始配置</h3>
+<ol>
+  <li><strong>API密钥设置</strong>：你需要提供DeepSeek API密钥才能使用模型能力。</li>
+  <li><strong>工作区选择</strong>：为项目文件选择一个目录。</li>
+  <li><strong>模型配置</strong>：选择要使用的模型（DeepSeek V4、V4 Flash等）。</li>
+</ol>
 
-<h3>提示词</h3>
-<pre><code class="language-text">帮我开发一个可运行的3D赛车游戏，包括：
-- 赛车控制
-- 赛道
-- 对手车辆
-- 计时排名
-- 碰撞效果
-- 重新开始功能
+<h2 id="practical-usage">实际使用示例</h2>
+<p>让我们通过一个实际示例，看看如何用DeepSeek Harness创建一个个人作品集网站。</p>
+<h3>第一步：定义任务</h3>
+<p>提供一段描述你需求的详细提示词：</p>
+<pre><code class="language-text">为一个AI产品设计师创建一个个人作品集网站。网站应包括：
+- 带宣传语的Hero区域
+- 产品设计流程展示
+- 关于我板块
+- 项目画廊
+- 技能与能力板块
 
-画面要有速度感，支持键盘控制和电脑浏览器运行，最终交付一个完整可运行的项目。</code></pre>
+设计应简洁、现代且响应式。使用体现专业又富有创意的排版和配色。</code></pre>
+<h3>第二步：执行任务</h3>
+<p>DeepSeek Harness将：</p>
+<ol>
+  <li>创建项目目录结构</li>
+  <li>生成HTML、CSS和JavaScript文件</li>
+  <li>实现设计与功能</li>
+  <li>提供网站的本地预览</li>
+</ol>
+<h3>第三步：审阅与优化</h3>
+<p>任务完成后，你可以查看生成的网站、做必要的调整，并部署最终产品。</p>
 
-<h3>测试结果</h3>
+<h2 id="plugin-system">插件系统</h2>
+<p>DeepSeek Harness的插件系统是它最强大的特性。通过插件，你可以：</p>
 <ul>
-  <li><strong>完成时间</strong>：40分钟</li>
-  <li><strong>交付物</strong>：一个可直接运行的3D赛车游戏，含README文档</li>
-  <li><strong>功能模块</strong>：赛车控制、赛道、对手车辆、计时排名、碰撞、漂移、音效和重新开始功能全部实现</li>
-  <li><strong>游戏体验</strong>：游戏可直接运行，但赛车模型、山体和云朵等视觉效果不够逼真。速度显示非常真实，赛车行驶时模拟了风声效果。</li>
+  <li><strong>扩展能力</strong>：添加新工具、技能或工作流</li>
+  <li><strong>自定义行为</strong>：修改代理的运作方式</li>
+  <li><strong>集成服务</strong>：连接外部API和服务</li>
+  <li><strong>增强UI</strong>：定制用户界面</li>
 </ul>
+<h3>示例：添加视觉能力</h3>
+<p>要给DeepSeek Harness添加视觉能力，可以安装MOD Lens这样的插件：</p>
+<pre><code class="language-bash"># 安装插件
+npx -y @llustack/modlens --profile web add --save-exact @llustack/modlens@3.9.1
+
+# 配置插件
+npx -y @llustack/modlens config set provider openai
+npx -y @llustack/modlens config set openai.baseurl "https://your-vision-model-endpoint"
+npx -y @llustack/modlens config set openai.model "qwen3-vl-plus"
+
+# 设置API密钥
+export DEEPSEEK_API_KEY="your-api-key"
+npx @deepseek-ai/dsh web</code></pre>
+
+<h2 id="performance">性能与能力</h2>
+<p>在性能测试中，DeepSeek Harness表现亮眼：</p>
+<ul>
+  <li>任务完成度可与Codex + GPT-5.6 SOI相媲美</li>
+  <li>执行速度更快</li>
+  <li>前端设计能力更胜一筹</li>
+</ul>
+<p>这使它成为AI代理领域的强劲竞争者，为现有方案提供了灵活而强大的替代选择。</p>
 
 <h2 id="conclusion">结语</h2>
-<p>DeepSeek V4 Pro的项目完成度不错，但接近3倍的价格是否值得，取决于你更看重交付能力还是性价比。</p>
-<p>未来我们将继续用同一套真实项目验收方法测试新模型，不只是看基准分数，而是直接看它能否交付项目。</p>
+<p>DeepSeek Harness代表了AI代理开发的重大进步。它的插件化架构、开源特性和强大能力，使它成为希望构建可定制AI代理的开发者的绝佳选择。无论你在构建编程助手、生产力工具，还是复杂的工作流自动化系统，DeepSeek Harness都能为你提供坚实的基础。</p>
+<p>凭借MIT协议和不断壮大的社区，DeepSeek Harness有望成为AI代理开发未来格局中的关键角色。更多详细文档和进阶教程，请访问DeepSeek Harness官网或查看在线社区资源。</p>
 
 <h2>常见问题</h2>
 
-<h3>什么是DeepSeek V4 Pro 0813？它和V4 Flash有什么不同？</h3>
-<p>V4 Pro 0813是DeepSeek的最新发布，定位在V4 Flash之上。它支持384K最大输出，默认启用思考模式（可切换非思考模式），价格约为V4 Flash的3倍。基准分数介于V4 Flash 0731和顶级模型Fable 5之间——比Flash强，但不是绝对上限。真正的差异体现在交付能力上：它在本次测试中完成了两个项目——25分钟做完6风格博客、40分钟做出3D赛车游戏——功能完整度很高，这正是Pro在整项目任务中相对于Flash的实际优势。</p>
+<h3>什么是DeepSeek Harness？它与编程代理有什么不同？</h3>
+<p>DeepSeek Harness是一个开源AI代理框架，而不是单一的编程代理。它是让任何模型驱动真实世界任务的运行时"载体"——模型是引擎，harness是整辆车。这与Codex等专注单一工作流的工具不同：Harness是让你自己构建代理的基础。从模型适配器到工具再到沙箱，每项能力都是可替换的插件，你不会被锁定在一套固定的行为上。</p>
 
-<h3>这些测试项目真的能运行吗，还是只是演示稿？</h3>
-<p>两个都是可运行的完整交付物。博客是完整的网站，拥有6种可切换的视觉风格，每种都支持明暗模式，共12种显示效果，覆盖首页、文章列表、文章详情、关于和联系页面，并带主题切换——无障碍、最佳实践和SEO都拿到100分。3D赛车游戏可直接在浏览器运行，支持键盘控制、赛车物理、赛道、对手车辆、计时排名、碰撞、漂移、音效和重新开始，并附README文档。游戏在视觉精致度上（赛车模型、山体、云朵）被指为最弱环节，但一切功能都按交付可用。</p>
+<h3>DeepSeek Harness免费吗？</h3>
+<p>免费。DeepSeek Harness以MIT协议发布，完全开源——你可以使用、修改并在其上构建商业产品，无需授权费用。你只需要为底层模型的API调用付费，比如你的DeepSeek API用量。发布四小时内获得34K GitHub星标，反映了它庞大且快速增长的社区。</p>
 
-<h3>V4 Pro约3倍的价格相对于V4 Flash值得吗？</h3>
-<p>取决于你看重什么。如果你在做高频或重复性任务时追求成本最优，V4 Flash仍然是更好的选择。如果你要构建完整项目——从一个提示词做出整个网站或完整游戏——V4 Pro 0813在本次测试中无需干预就交付了这两者，这正是溢价物有所值之处。本次测试的实用建议：按任务匹配模型。交付速度和完整性重要时用Pro；每Token成本主导决策时用Flash。</p>
+<h3>"万物皆插件"理念是什么意思？</h3>
+<p>它的意思是代理的每个部分都是可插拔的模块，无需修改核心代码就能替换。基于Cordis插件系统，harness把模型适配器、工具注册表、技能、工作流、会话管理、沙箱、存储、代理循环甚至UI都视为插件。想要不同的沙箱或新工具？添加一个插件就行——无需fork、无需重写。这让它的可定制程度远超大多数代理工具。</p>
 
-<h3>初学者应该使用V4 Pro 0813吗？</h3>
-<p>应该，原因正是本文演示的：你可以用自然语言写一个提示词，无需深厚的编程知识就能拿回完整可运行的项目。本次测试中的博客提示词就是一个简单的功能清单，游戏提示词只有六个要点。这对想获得真实产出而非研究理论的初学者来说是很好的切入点。主要的注意事项是成本——在3倍Flash价格下，频繁迭代的初学者可以先用Flash做原型，把Pro留给最终项目生成。</p>
+<h3>运行DeepSeek Harness需要什么硬件或环境？</h3>
+<p>只需要Node.js和npm。安装只需一条命令——<code>npx @deepseek-ai/dsh web</code>——它会在<code>http://127.0.0.1:3080</code>启动本地Web界面。配置好DeepSeek API密钥、选择一个工作区目录、选好模型即可。因为繁重计算都在模型API里完成，普通笔记本就能运行，你还可以安装MOD Lens等插件获得视觉等额外能力。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>想让DeepSeek帮你干活？继续阅读这些指南：</p>
+  <p>准备好构建代理了吗？继续阅读这些指南：</p>
   <ul>
-    <li><a href="/article/deepseek-v4-flash-official-release-practical-guide">DeepSeek V4 Flash正式发布：变革性AI模型实用指南</a> — DeepSeek高性价比旗舰发布的完整解读</li>
-    <li><a href="/article/deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark">DeepSeek V4 Flash vs GPT-5.6 Luna：Codex接入与10轮实测</a> — DeepSeek与OpenAI顶级模型的正面能力对决</li>
-    <li><a href="/article/deepseek-v4-cost-effective">DeepSeek V4：开发者性价比之王AI模型</a> — 为什么DeepSeek成为开发者高性价比编程的默认选择</li>
+    <li><a href="/article/deepseek-v4-flash-vs-gpt-5-6-luna-codex-integration-benchmark">DeepSeek V4 Flash vs GPT-5.6 Luna：Codex完整接入与10轮实测</a> — 如何把DeepSeek接入代理工作流以及它的正面实力对比</li>
+    <li><a href="/article/codex-skill-bundle-4-skills-professional-websites-one-prompt">Codex技能包：一个提示词构建专业网站的4个技能</a> — 用单个提示词构建完整网站的实用代理工作流</li>
+    <li><a href="/article/deepseek-v4-pro-0813-real-world-testing-two-ai-development-projects">DeepSeek V4 Pro 0813实战测试：两个实用AI开发项目</a> — DeepSeek模型在真实项目上能交付什么，从博客到3D游戏</li>
   </ul>
 </div>`,
   },
@@ -216,4 +280,55 @@ The picture should have a sense of speed, support keyboard control and computer 
 '''
 last = c.rfind('};')
 with open('src/lib/article-content.ts', 'w', encoding='utf-8') as f: f.write(c[:last] + n + '};')
-print('Part 2 done\n=== Done ===')
+print('Part 2 done')
+
+# ---------- Part 3: tools.ts new tool ----------
+with open('src/lib/tools.ts', 'r', encoding='utf-8') as f: t = f.read()
+tool = r'''  {
+    id: "deepseek-harness",
+    name: "DeepSeek Harness",
+    nameZh: "DeepSeek Harness",
+    description: "An MIT-licensed, open-source AI agent framework built on the 'Everything is a Plugin' philosophy — 34K GitHub stars in 4 hours, powered by the Cordis plugin system for fully customizable agents.",
+    descriptionZh: "基于'万物皆插件'理念的MIT协议开源AI代理框架——发布4小时获34K GitHub星标，由Cordis插件系统驱动，构建完全可定制的AI代理。",
+    category: "ai-agent",
+    tags: ["deepseek", "ai-agent", "harness", "open-source", "plugin", "cordis"],
+    difficulty: "intermediate",
+    url: "https://www.npmjs.com/package/@deepseek-ai/dsh",
+    rating: r(4.6),
+    pricing: "Free (open source, MIT license)",
+    useCase: "Building fully customizable AI agents — coding assistants, productivity tools, and workflow automation with pluggable model adapters, tools, and sandboxes",
+    icon: "\u{1F527}",
+    company: "DeepSeek",
+    companyZh: "深度求索",
+    founded: 2023,
+    headquarters: "Hangzhou, China",
+    descriptionLong: "DeepSeek Harness is an open-source AI agent framework from DeepSeek, released under the MIT license and built on the Cordis plugin system with an 'Everything is a Plugin' philosophy. It treats every capability — model adapters, tool registries, skills and workflows, session management, sandbox environments, storage systems, agent loops, and user interfaces — as a swappable plugin, so developers can build, extend, or customize agents without modifying core code. The core concept is Agent = Model + Harness: the model provides intelligence, while the harness is the runtime that lets it interact with the real world through tools, planning, and validation. Installation is a single command — npx @deepseek-ai/dsh web — which launches a local web interface at http://127.0.0.1:3080 where users configure their DeepSeek API key, workspace, and model. It supports practical builds like a 6-style personal blog or a portfolio website from a single natural-language prompt, and plugins like MOD Lens add vision or other capabilities. In performance tests it ranks comparable to Codex + GPT-5.6 SOI in task completion with faster execution and stronger front-end design. The project reached 34K GitHub stars within four hours of release, signaling a large and fast-growing community.",
+    descriptionLongZh: "DeepSeek Harness是DeepSeek推出的开源AI代理框架，以MIT协议发布，构建在Cordis插件系统之上，秉持'万物皆插件'理念。它把每项能力——模型适配器、工具注册表、技能与工作流、会话管理、沙箱环境、存储系统、代理循环和用户界面——都视为可替换的插件，开发者无需修改核心代码即可构建、扩展或定制代理。核心概念是Agent = Model + Harness：模型提供智能，而harness是让它通过工具、规划和验证与真实世界交互的运行时。安装只需一条命令——npx @deepseek-ai/dsh web——它会在http://127.0.0.1:3080启动本地Web界面，用户在此配置DeepSeek API密钥、工作区和模型。它支持从单个自然语言提示词构建6风格个人博客或作品集网站等实际项目，MOD Lens等插件可添加视觉或其他能力。在性能测试中，任务完成度与Codex + GPT-5.6 SOI相当，执行速度更快、前端设计能力更强。项目发布四小时内即获34K GitHub星标，标志着庞大且快速增长的社区。",
+    advantages: ["MIT-licensed and fully open source", "Everything is a Plugin with the Cordis system", "One-command npm installation with local web UI", "Customizable agents without core code changes", "Comparable to Codex + GPT-5.6 SOI in performance", "Fast-growing community (34K stars in 4 hours)"],
+    advantagesZh: ["MIT协议完全开源", "基于Cordis系统实现万物皆插件", "一条npm命令安装，带本地Web界面", "无需修改核心代码即可定制代理", "性能可与Codex + GPT-5.6 SOI媲美", "社区增长迅猛（4小时34K星标）"],
+    useCases: ["Building custom coding assistants", "Personal portfolio or blog website generation", "Workflow automation with pluggable tools", "Extending agents with vision or other plugins", "Productivity tool development"],
+    useCasesZh: ["构建自定义编程助手", "生成个人作品集或博客网站", "用可插拔工具实现工作流自动化", "通过插件扩展代理的视觉等能力", "生产力工具开发"],
+    targetAudience: "Developers and teams who want to build, extend, or customize AI agents without being locked into a fixed set of behaviors — from solo hackers to production teams",
+    targetAudienceZh: "希望构建、扩展或定制AI代理而不被锁定在固定行为中的开发者和团队——从独立黑客到生产团队",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "Free (open source, MIT license)",
+        features: ["Full plugin system", "Local web interface", "Model adapter support", "Custom tools and skills"],
+        featuresZh: ["完整插件系统", "本地Web界面", "模型适配器支持", "自定义工具和技能"],
+      },
+    ],
+    pros: ["Fully open source with MIT license", "Extreme customizability via plugins", "Simple one-command setup", "Strong real-world task completion", "Rapidly growing community"],
+    prosZh: ["MIT协议完全开源", "通过插件实现极高的可定制性", "一条命令轻松安装", "真实任务完成能力强", "社区增长迅速"],
+    cons: ["Very new project with a short track record", "Advanced customization requires understanding Cordis", "Best experience tied to DeepSeek model API"],
+    consZh: ["项目很新，历史记录较短", "高级定制需要理解Cordis", "最佳体验依赖DeepSeek模型API"],
+    extensions: [],
+    skills: ["Agent development", "Plugin development", "Tool integration", "Workflow automation", "Website generation"],
+    scene: "development",
+  },
+
+'''
+last_tool = t.rfind('] as Tool[];')
+with open('src/lib/tools.ts', 'w', encoding='utf-8') as f: f.write(t[:last_tool] + tool + '] as Tool[];')
+print('Part 3 done\n=== Done ===')
