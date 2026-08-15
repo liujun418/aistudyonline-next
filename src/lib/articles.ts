@@ -3046,4 +3046,17 @@ export const articles: Article[] = [
     date: "2026-08-14",
   },
 
+  {
+    slug: "mastering-ai-powered-content-creation-complete-traework-workflow-tutorial",
+    title: "Mastering AI-Powered Content Creation: A Complete TraeWork Workflow Tutorial",
+    titleZh: "掌握AI内容创作：TraeWork完整工作流教程",
+    description: "A complete step-by-step TraeWork workflow for AI content creation — from research and ranking in Work mode, syncing to Feishu, visual design in Design mode, interactive demos in Code mode, and Seedream AI covers, to weekly automated monitoring.",
+    descriptionZh: "用TraeWork完成AI内容创作的完整分步工作流——从Work模式研究筛选、飞书文档同步、Design模式视觉设计、Code模式交互演示、Seedream AI封面，到每周自动化监控的全流程教程。",
+    category: "ai-tutorials",
+    tags: ["TraeWork", "AI Content Creation", "Workflow", "Feishu", "Seedream", "GitHub", "Automation"],
+    difficulty: "beginner",
+    toolsMentioned: ["TraeWork"],
+    date: "2026-08-15",
+  },
+
 ];
