@@ -3059,4 +3059,17 @@ export const articles: Article[] = [
     date: "2026-08-15",
   },
 
+  {
+    slug: "watch-out-your-ai-is-slacking-off-practical-anti-lazy-tips-vibe-coding",
+    title: "Watch Out! Your AI Is Slacking Off — Practical Anti-Lazy Tips for Vibe-Coding",
+    titleZh: "当心！你的AI在偷懒——Vibe-Coding防偷懒实用技巧",
+    description: "Vibe-coding AI often cuts corners — placeholder comments, empty stubs, mock data, and skipped logic that looks complete but can't run. Practical prompt constraints, a reusable self-check snippet, and a manual validation workflow to catch unfinished code before it wastes your debugging time.",
+    descriptionZh: "Vibe-coding的AI经常偷工减料——占位注释、空函数、假数据、跳过的逻辑，看似完成实则跑不起来。用实用的提示词约束、可复用的自查指令和手动验证工作流，在代码浪费你的调试时间前发现未完成的部分。",
+    category: "ai-learning",
+    tags: ["Vibe-Coding", "AI Coding", "Prompt Engineering", "Code Quality", "Debugging", "AI Agents", "Workflow"],
+    difficulty: "beginner",
+    toolsMentioned: [],
+    date: "2026-08-17",
+  },
+
 ];
