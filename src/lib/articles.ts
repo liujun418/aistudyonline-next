@@ -3072,4 +3072,17 @@ export const articles: Article[] = [
     date: "2026-08-17",
   },
 
+  {
+    slug: "why-agents-need-self-evolution-practical-implementation-guide-ai-agents",
+    title: "Why Agents Need Self-Evolution: Practical Implementation Guide for AI Agents",
+    titleZh: "为什么Agent需要自我进化：AI Agent实用实现指南",
+    description: "Static agents repeat the same mistakes and can't adapt when requirements change. A practical self-evolution guide — execution trace collection, self-reflection module, incremental prompt updates, a Python evolution-memory demo, and the pitfalls to avoid.",
+    descriptionZh: "静态Agent重复犯同样的错误，需求变化时无法适应。一份实用的自我进化指南——执行轨迹收集、自我反思模块、增量提示词更新、Python进化记忆演示，以及需要避开的坑。",
+    category: "ai-tutorials",
+    tags: ["AI Agents", "Self-Evolution", "Prompt Engineering", "Agent Architecture", "Machine Learning", "Python", "Workflow"],
+    difficulty: "intermediate",
+    toolsMentioned: [],
+    date: "2026-08-18",
+  },
+
 ];
