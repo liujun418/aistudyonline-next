@@ -3085,4 +3085,17 @@ export const articles: Article[] = [
     date: "2026-08-18",
   },
 
+  {
+    slug: "10-must-have-plugins-deepseek-harness-complete-installation-usage-guide",
+    title: "10 Must-Have Plugins for DeepSeek Harness: Complete Installation & Usage Guide",
+    titleZh: "DeepSeek Harness必备10大插件：完整安装与使用指南",
+    description: "Unlock DeepSeek Harness's full potential with 10 essential plugins — UI themes and desktop pets, TUI terminal mode, Feishu integration, architecture diagrams, vibe design, prompt optimization, persistent memory, vision, and multi-agent teams. Exact install commands and usage for each.",
+    descriptionZh: "用10个必备插件释放DeepSeek Harness的全部潜力——UI主题与桌面宠物、TUI终端模式、飞书集成、架构图、vibe设计、提示词优化、持久记忆、视觉和多Agent团队。每个插件附精确安装命令与用法。",
+    category: "ai-tutorials",
+    tags: ["DeepSeek Harness", "Plugins", "AI Agents", "TUI", "Feishu", "Multi-Agent", "Vision", "Memory"],
+    difficulty: "intermediate",
+    toolsMentioned: ["DeepSeek Harness"],
+    date: "2026-08-19",
+  },
+
 ];

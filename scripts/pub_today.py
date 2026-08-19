@@ -1,19 +1,19 @@
-"""Publish Aug 18, 2026 — 1 article, no new tools."""
+"""Publish Aug 19, 2026 — 1 article, no new tools."""
 import os; BASE = r"C:\Users\jun\aistudyonline-next"; os.chdir(BASE)
 
 # ---------- Part 1: articles.ts metadata ----------
 with open('src/lib/articles.ts', 'r', encoding='utf-8') as f: s = f.read()
 a = r"""  {
-    slug: "why-agents-need-self-evolution-practical-implementation-guide-ai-agents",
-    title: "Why Agents Need Self-Evolution: Practical Implementation Guide for AI Agents",
-    titleZh: "为什么Agent需要自我进化：AI Agent实用实现指南",
-    description: "Static agents repeat the same mistakes and can't adapt when requirements change. A practical self-evolution guide — execution trace collection, self-reflection module, incremental prompt updates, a Python evolution-memory demo, and the pitfalls to avoid.",
-    descriptionZh: "静态Agent重复犯同样的错误，需求变化时无法适应。一份实用的自我进化指南——执行轨迹收集、自我反思模块、增量提示词更新、Python进化记忆演示，以及需要避开的坑。",
+    slug: "10-must-have-plugins-deepseek-harness-complete-installation-usage-guide",
+    title: "10 Must-Have Plugins for DeepSeek Harness: Complete Installation & Usage Guide",
+    titleZh: "DeepSeek Harness必备10大插件：完整安装与使用指南",
+    description: "Unlock DeepSeek Harness's full potential with 10 essential plugins — UI themes and desktop pets, TUI terminal mode, Feishu integration, architecture diagrams, vibe design, prompt optimization, persistent memory, vision, and multi-agent teams. Exact install commands and usage for each.",
+    descriptionZh: "用10个必备插件释放DeepSeek Harness的全部潜力——UI主题与桌面宠物、TUI终端模式、飞书集成、架构图、vibe设计、提示词优化、持久记忆、视觉和多Agent团队。每个插件附精确安装命令与用法。",
     category: "ai-tutorials",
-    tags: ["AI Agents", "Self-Evolution", "Prompt Engineering", "Agent Architecture", "Machine Learning", "Python", "Workflow"],
+    tags: ["DeepSeek Harness", "Plugins", "AI Agents", "TUI", "Feishu", "Multi-Agent", "Vision", "Memory"],
     difficulty: "intermediate",
-    toolsMentioned: [],
-    date: "2026-08-18",
+    toolsMentioned: ["DeepSeek Harness"],
+    date: "2026-08-19",
   },
 
 """
@@ -24,235 +24,267 @@ print('Part 1 done')
 # ---------- Part 2: article-content.ts bilingual content ----------
 with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f: c = f.read()
 n = r'''
-  "why-agents-need-self-evolution-practical-implementation-guide-ai-agents": {
+  "10-must-have-plugins-deepseek-harness-complete-installation-usage-guide": {
     content: `<div class="meta-banner">
   <span class="meta-badge">📖 AI Tutorial</span>
-  <span class="meta-badge">🕒 7 min read</span>
-  <span class="meta-badge">📅 Aug 18, 2026</span>
+  <span class="meta-badge">🕒 8 min read</span>
+  <span class="meta-badge">📅 Aug 19, 2026</span>
   <span class="meta-badge">🎯 Intermediate</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>Regular AI agents follow fixed prompt rules and preset workflows. Once deployed, they keep repeating the same logic. When facing new tasks, changing business requirements or unseen edge cases, performance drops sharply. This is exactly why self-evolution becomes critical for modern AI agents.</p>
-<p>Self-evolution means the agent can review its own execution records, find failures and weak points, update its prompts, tool usage strategies and workflow logic automatically, without manual modification from human developers every single time. It does not achieve super intelligence; it lets the agent learn from its past mistakes and get better after every task run.</p>
+<p>DeepSeek Harness (DSH) is a powerful AI agent platform, but its full potential is unlocked only when you install the right plugins. This guide covers 10 essential plugins that will transform your DSH experience, from UI customization to multi-agent collaboration. We'll provide exact installation commands and practical usage instructions for each plugin.</p>
 
-<h2 id="core-problems">Core Problems of Non-Evolving Static Agents</h2>
+<h2 id="ui-plugins">UI & Experience Enhancement Plugins</h2>
+
+<h3>1. dsh-web-ui-all (Theme & UI Plugin)</h3>
+<p>This popular plugin completely transforms DSH's appearance with beautiful themes, desktop pets, and advanced UI features.</p>
+<p><strong>Key Features:</strong></p>
 <ul>
-  <li>Repeatedly makes identical mistakes on similar tasks</li>
-  <li>Cannot adapt when task conditions change</li>
-  <li>Tool calling sequences stay rigid, unable to optimize execution paths</li>
-  <li>Human operators have to manually edit system prompts after every failure</li>
-  <li>Scaling up agent workload brings heavy prompt maintenance overhead</li>
+  <li>Custom themes and skins</li>
+  <li>Desktop pets (whale and other characters)</li>
+  <li>Real-time token and TPS statistics</li>
+  <li>Git graph visualization</li>
+  <li>Right-side chat panel</li>
+  <li>Mobile remote chat support</li>
 </ul>
+<p><strong>Installation Command:</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add @linxin66/dsh-web-ui-all</code></pre>
+<p><strong>Usage:</strong> After installation, you'll see the desktop pet in the bottom-right corner. Access theme settings through the settings menu to customize your interface.</p>
 
-<h2 id="three-layers">Three Key Layers of Agent Self-Evolution</h2>
+<h3>2. dsh-tui (Terminal UI Plugin)</h3>
+<p>Enables pure TUI (Text User Interface) environment for command-line lovers. Perfect for Linux servers without graphical interfaces.</p>
+<p><strong>Installation Commands:</strong></p>
+<pre><code class="language-bash">npm install -g @deepseek-ai/dsh @deepseek-harness/tui/
+dsh-tui</code></pre>
+<p><strong>Usage:</strong> Run <code>dsh-tui</code> in your terminal to enter the command-line programming environment, similar to Claude Code or Codex CLI.</p>
+
+<h3>3. dsh-better-sidebar (Sidebar Plugin)</h3>
+<p>Adds a powerful sidebar for real-time project file viewing and navigation.</p>
+<p><strong>Installation Command:</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add dsh-better-sidebar@0.12.2</code></pre>
+<p><strong>Usage:</strong> The sidebar appears on the left, allowing you to browse files, access command-line tools, view browser pages, and monitor project development results.</p>
+
+<h2 id="productivity-plugins">Productivity & Development Plugins</h2>
+
+<h3>4. dsh-lark-channel (Feishu/Lark Integration)</h3>
+<p>Connect DSH with Feishu/Lark for seamless team collaboration.</p>
+<p><strong>Installation Commands:</strong></p>
+<pre><code class="language-bash">npm install --global dsh-lark-channel@0.0.6
+dsh-lark-channel start --profile lark --workspace "SPWD"</code></pre>
+<p><strong>Usage:</strong> Scan the QR code to bind your Feishu account. Once connected, you can control DSH through Feishu messages, use commands to switch directories, call skills, and manage tasks.</p>
+
+<h3>5. dsh-archify (Architecture Diagram Generator)</h3>
+<p>Automatically generates beautiful architecture diagrams from code repositories.</p>
+<p><strong>Installation Command:</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add @tt-all/archify-dsh@0.1.0</code></pre>
+<p><strong>Usage:</strong> Simply prompt the plugin to generate architecture diagrams, workflow charts, or sequence diagrams. It outputs interactive HTML with features like section navigation and multi-format export.</p>
+
+<h2 id="performance-plugins">Agent Performance Boost Plugins</h2>
+
+<h3>6. dsh-design (Vibe Design Plugin)</h3>
+<p>Open-source alternative to Claude Design for AI-powered design work.</p>
+<p><strong>Installation Command:</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add deepseek-design@0.2.2</code></pre>
+<p><strong>Usage:</strong> After installation, restart DSH and find the "Design" tab in the conversation window. You can edit designs directly, modify pages, or export as HTML.</p>
+
+<h3>7. dsh-prompt-enhancer (Prompt Optimization)</h3>
+<p>Automatically enhances and optimizes your prompts for better agent performance.</p>
+<p><strong>Installation Command:</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add github:fsisb/dsh-prompt-enhancer#3.15</code></pre>
+<p><strong>Usage:</strong> Write your prompt, then use the plugin to optimize it. You can perform multiple rounds of optimization until you're satisfied.</p>
+
+<h3>8. dsh-openviking (Memory System)</h3>
+<p>Adds persistent memory management to DSH agents, making them "smarter" over time.</p>
+<p><strong>Installation Commands:</strong></p>
+<pre><code class="language-bash">CMAKE_ARGS="-DGGML_METAL=ON" uv tool install --force --python 3.12 --with xhash<4" openviking[local-embed] =0.4.14"
+dsh plugin --profile web add @github/volcengine/OpenViking/path=/examples/dsh-memory-plugin</code></pre>
+<p><strong>Usage:</strong> The plugin works in the background, remembering your preferences and past interactions. Test it by telling the agent something (e.g., "I like iced American coffee") and then asking it later.</p>
+
+<h3>9. dsh-modlens (Vision Enhancement)</h3>
+<p>Adds visual capabilities to DSH agents, allowing them to analyze images.</p>
+<p><strong>Installation Commands:</strong></p>
+<pre><code class="language-bash">npx -y @deepseek-ai/dsh plugin --profile web add @ilustack/modlens@1.6.6
+npx -y @ilustack/modlens config set provider openai
+npx -y @ilustack/modlens config set openai.baseurl "https://dashscope.aliyuncs.com/compatible-mode/v1"
+npx -y @ilustack/modlens config set openai.model qwen3-vl-plus
+export DASHSCOPE_API_KEY="your-api-key"
+export OPENAI_API_KEY=$DASHSCOPE_API_KEY</code></pre>
+<p><strong>Usage:</strong> Upload images and the agent will analyze them using the visual model.</p>
+
+<h3>10. dsh-agent-teams (Multi-Agent Collaboration)</h3>
+<p>Create and manage teams of agents for complex tasks.</p>
+<p><strong>Installation Command:</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add @nanmicoder/dsh-agent-teams</code></pre>
+<p><strong>Usage:</strong> Describe your task and the plugin will automatically create a team of agents (e.g., product designer, developer, security reviewer) that collaborate to complete the task.</p>
+
+<h2 id="installation">Installation Methods</h2>
+<h3>Method 1: Command Line Installation</h3>
+<p>Use the <code>dsh plugin</code> commands provided for each plugin.</p>
+<h3>Method 2: DSH Studio (Recommended)</h3>
+<p>For easier installation, use the official DeepSeek Harness Studio:</p>
 <ol>
-  <li><strong>Execution Trace Collection</strong>: Save complete logs including task input, tool calls, intermediate outputs, final results and success or failure status.</li>
-  <li><strong>Self-Reflection Module</strong>: The agent analyzes historical logs, summarizes root causes for failed runs, figures out which steps went wrong.</li>
-  <li><strong>Knowledge &amp; Prompt Update</strong>: Based on reflection conclusions, adjust system prompts, add new constraint rules or optimize tool calling sequences for future tasks.</li>
+  <li>Download from GitHub: <a href="https://github.com/deepseek-ai/deepseek-harness-studio">deepseek-harness-studio</a></li>
+  <li>Open the plugin market</li>
+  <li>Search for plugins</li>
+  <li>Click to install with one click</li>
 </ol>
 
-<h2 id="prompt-template">Practical Prompt Template for Agent Self-Reflection Module</h2>
-<p>Embed this prompt into your agent's post-task reflection workflow.</p>
-<pre><code class="language-text">You are the self-reflection unit of this AI agent.
-Review the complete task execution trace below.
-1. Judge whether this task run succeeded or failed.
-2. If failed, list concrete root causes: prompt flaw, improper tool selection, wrong calling order, missing constraints or insufficient background information.
-3. Summarize 2-4 actionable optimization rules for future similar tasks.
-4. Output updated prompt snippets that can fix above problems.
-Do not generate vague descriptions. All conclusions must be supported by execution log facts.</code></pre>
-
-<h2 id="python-demo">Minimal Python Demo for Self-Evolution Agent Log Handling</h2>
-<pre><code class="language-python">class AgentEvolutionMemory:
-    def __init__(self):
-        self.execution_records = []
-        self.optimized_rules = []
-
-    def save_trace(self, task_input, tool_calls, final_output, is_success: bool):
-        record = {
-            "task": task_input,
-            "tool_calls": tool_calls,
-            "output": final_output,
-            "success": is_success
-        }
-        self.execution_records.append(record)
-
-    def add_optimized_rule(self, rule_text: str):
-        self.optimized_rules.append(rule_text)
-
-    def get_evolved_system_prompt(self, base_prompt: str) -> str:
-        rule_block = "\n".join([f"- {r}" for r in self.optimized_rules])
-        evolved_prompt = f"{base_prompt}\n\n=== Accumulated Evolution Rules ===\n{rule_block}"
-        return evolved_prompt
-
-# Usage example
-memory = AgentEvolutionMemory()
-memory.save_trace(
-    task_input="Query sales data for last quarter",
-    tool_calls=["query_database", "format_report"],
-    final_output="Missing regional filter data",
-    is_success=False
-)
-memory.add_optimized_rule("Always add region filter parameter when querying quarterly sales data.")
-final_prompt = memory.get_evolved_system_prompt(base_prompt="You are a data analysis agent.")
-print(final_prompt)</code></pre>
-
-<h2 id="workflow">Real-World Operation Workflow</h2>
-<ol>
-  <li>The agent runs one task and stores the full execution trace into memory storage.</li>
-  <li>Trigger the self-reflection module after task completion, whether success or failure.</li>
-  <li>Reflection outputs actionable optimization rules, append them to the agent memory.</li>
-  <li>Next-round task loads the evolved system prompt with accumulated rules.</li>
-  <li>Periodically clean low-value old rules to prevent prompt bloat.</li>
-</ol>
-
-<h2 id="pitfalls">Common Pitfalls You Should Avoid</h2>
-<ul>
-  <li>Do not let the agent rewrite the whole base prompt, only append incremental optimization rules. Full rewriting may destroy core agent capabilities.</li>
-  <li>Avoid over-fitting to one single failure case. Evaluate multiple similar traces before adding new rules.</li>
-  <li>Set a maximum limit for rule quantity. Too many accumulated rules will cause prompt inflation and slow down inference speed.</li>
-  <li>Keep human oversight. Important business rules still need manual review even with self-evolution enabled.</li>
-</ul>
-
-<h2 id="closing">Closing Thoughts</h2>
-<p>Self-evolution does not make your agent omnipotent. It solves the pain point that static agents cannot improve automatically. With trace logging, self-reflection and incremental prompt update, your agent gets better continuously as it handles more real-world tasks, and greatly cuts down human prompt maintenance work.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>These 10 plugins will transform your DeepSeek Harness experience, making it more powerful, flexible, and enjoyable to use. Whether you're a developer, designer, or AI enthusiast, these tools will help you get the most out of your AI agent platform. For the complete installation commands and project source code, check the video description or visit the official GitHub repository.</p>
 
 <h2>常见问题</h2>
 
-<h3>What exactly does agent self-evolution mean?</h3>
-<p>Self-evolution is the agent's ability to improve its own behavior from its execution history. After each task, the agent saves the full trace, runs a reflection module that analyzes why runs failed, and appends the resulting optimization rules to its system prompt. The next task loads the evolved prompt with those accumulated rules. It's not about becoming "super intelligent" — it's a practical feedback loop that lets the agent stop repeating the same mistakes without a human editing prompts after every failure.</p>
+<h3>Do I need to install all 10 plugins at once?</h3>
+<p>No. The plugins are independent, so you can install only the ones that fit your workflow. If you live in the terminal, start with dsh-tui and dsh-better-sidebar. If you mostly work in the browser, begin with dsh-web-ui-all for the theme and desktop pet experience. The performance plugins (dsh-design, dsh-prompt-enhancer, dsh-openviking, dsh-modlens, dsh-agent-teams) each add a distinct capability, so install them as you need that capability rather than all upfront.</p>
 
-<h3>Does self-evolution require a special framework or a large language model?</h3>
-<p>No special framework is required. The core requirement is an LLM capable of following a reflection prompt and a way to store execution traces — the Python demo in this guide is a self-contained memory class you can embed in any agent. What matters more is discipline: reliably saving traces, triggering reflection on both successes and failures, and capping the rule list so it doesn't bloat the prompt over time. A normal agent setup plus this feedback loop is enough to get started.</p>
+<h3>Are these plugins free and open source?</h3>
+<p>Yes, they are all community plugins in the DeepSeek Harness ecosystem and are free to install. They are managed through the <code>dsh plugin</code> command or DSH Studio, and several are explicit open-source alternatives — dsh-design is described as an open-source alternative to Claude Design, and the source for each project is available on GitHub. The only external dependency is when a plugin needs an API key, such as dsh-modlens using DashScope for the vision model.</p>
 
-<h3>How do I avoid the prompt from growing too large with accumulated rules?</h3>
-<p>Three guardrails. First, only append incremental rules and never let the agent rewrite the whole base prompt. Second, require multiple similar failed traces before accepting a new rule — don't over-fit to a single case. Third, set a hard maximum on the rule count and periodically prune low-value or outdated rules. This keeps the evolved prompt focused and prevents the latency and cost that come with prompt inflation.</p>
+<h3>Which plugins give the biggest boost for agent performance?</h3>
+<p>For raw capability, dsh-modlens (vision) and dsh-openviking (persistent memory) change what the agent can do, not just how it looks. dsh-prompt-enhancer improves every prompt you feed it, which compounds across tasks. dsh-agent-teams scales single agents into a collaborating team for complex projects. If you had to pick a shortlist: dsh-web-ui-all for the interface, dsh-openviking for memory, and dsh-agent-teams for multi-agent work are the three with the most visible day-to-day impact.</p>
 
-<h3>Can I still trust the agent after it has evolved by itself?</h3>
-<p>You should keep human oversight, especially for high-stakes business rules. Self-evolution optimizes prompts and tool-calling strategies, but it is not a substitute for review of important logic — the guide explicitly recommends manual review of critical rules even with evolution enabled. Use self-evolution to reduce the noise of constant manual prompt editing, while keeping a human check on the changes that matter most.</p>
+<h3>Do I need to configure plugins after installing them?</h3>
+<p>Some yes, some no. Pure UI plugins like dsh-web-ui-all, dsh-tui, and dsh-better-sidebar work right after install. Plugins that call external services need configuration: dsh-lark-channel requires scanning a QR code to bind Feishu, and dsh-modlens needs provider settings plus a DashScope API key. Follow the exact commands in each section above — the configuration steps are part of the install snippet for the plugins that need them.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Want to make your agents smarter and more reliable? Continue with these guides:</p>
+  <p>Want to get the most out of DeepSeek Harness? Continue with these guides:</p>
   <ul>
-    <li><a href="/article/write-effective-agents-md-codex">How to Write an Effective AGENTS.md for Codex</a> — encode the base rules and context your agent must follow</li>
-    <li><a href="/article/multi-agent-collaboration-architecture">Multi-Agent Collaboration Architecture</a> — how multiple agents share work and communicate</li>
-    <li><a href="/article/deepseek-harness-comprehensive-guide-installation-architecture-practical-usage">DeepSeek Harness: A Comprehensive Guide to Installation, Architecture, and Practical Usage</a> — the runtime harness where evolving agents live</li>
+    <li><a href="/article/deepseek-harness-comprehensive-guide-installation-architecture-practical-usage">DeepSeek Harness: A Comprehensive Guide to Installation, Architecture, and Practical Usage</a> — the foundation guide for the platform these plugins extend</li>
+    <li><a href="/article/multi-agent-collaboration-architecture">Multi-Agent Collaboration Architecture</a> — the architecture behind plugin #10's agent teams</li>
+    <li><a href="/article/why-agents-need-self-evolution-practical-implementation-guide-ai-agents">Why Agents Need Self-Evolution: Practical Implementation Guide for AI Agents</a> — how memory and reflection make agents smarter, like plugin #8</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
   <span class="meta-badge">📖 AI教程</span>
-  <span class="meta-badge">🕒 阅读约7分钟</span>
-  <span class="meta-badge">📅 2026年8月18日</span>
+  <span class="meta-badge">🕒 阅读约8分钟</span>
+  <span class="meta-badge">📅 2026年8月19日</span>
   <span class="meta-badge">🎯 进阶</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>普通的AI Agent遵循固定的提示词规则和预设工作流。一旦部署，它们就一直重复同样的逻辑。当遇到新任务、变化的业务需求或从未见过的边界情况时，性能会急剧下降。这正是自我进化对现代AI Agent至关重要的原因。</p>
-<p>自我进化意味着Agent可以复盘自己的执行记录，发现失败和薄弱点，自动更新提示词、工具使用策略和工作流逻辑，而无需人类开发人员每次都手动修改。它不是获得超级智能，而是让Agent从过去的错误中学习，每执行一次任务就变得更好。</p>
+<p>DeepSeek Harness（DSH）是一个强大的AI Agent平台，但只有安装了正确的插件，它的全部潜力才会被解锁。本指南涵盖10个必备插件，它们将彻底改变你的DSH体验——从UI定制到多Agent协作。我们为每个插件提供精确的安装命令和实用用法说明。</p>
 
-<h2 id="core-problems">不进化静态Agent的核心问题</h2>
+<h2 id="ui-plugins">UI与体验增强插件</h2>
+
+<h3>1. dsh-web-ui-all（主题与UI插件）</h3>
+<p>这个热门插件用漂亮的主题、桌面宠物和高级UI功能彻底改变DSH的外观。</p>
+<p><strong>核心特性：</strong></p>
 <ul>
-  <li>在相似任务上反复犯同样的错误</li>
-  <li>任务条件变化时无法适应</li>
-  <li>工具调用序列僵硬，无法优化执行路径</li>
-  <li>每次失败后操作员都要手动编辑系统提示词</li>
-  <li>Agent负载扩展带来沉重的提示词维护开销</li>
+  <li>自定义主题和皮肤</li>
+  <li>桌面宠物（鲸鱼等角色）</li>
+  <li>实时token和TPS统计</li>
+  <li>Git图谱可视化</li>
+  <li>右侧聊天面板</li>
+  <li>移动端远程聊天支持</li>
 </ul>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add @linxin66/dsh-web-ui-all</code></pre>
+<p><strong>用法：</strong>安装后，你会在右下角看到桌面宠物。通过设置菜单进入主题设置来自定义界面。</p>
 
-<h2 id="three-layers">Agent自我进化的三个关键层</h2>
+<h3>2. dsh-tui（终端UI插件）</h3>
+<p>为命令行爱好者提供纯TUI（文本用户界面）环境。非常适合没有图形界面的Linux服务器。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">npm install -g @deepseek-ai/dsh @deepseek-harness/tui/
+dsh-tui</code></pre>
+<p><strong>用法：</strong>在终端运行 <code>dsh-tui</code> 进入命令行编程环境，类似Claude Code或Codex CLI。</p>
+
+<h3>3. dsh-better-sidebar（侧边栏插件）</h3>
+<p>添加一个功能强大的侧边栏，用于实时查看和导航项目文件。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add dsh-better-sidebar@0.12.2</code></pre>
+<p><strong>用法：</strong>侧边栏出现在左侧，让你浏览文件、访问命令行工具、查看浏览器页面并监控项目开发结果。</p>
+
+<h2 id="productivity-plugins">生产力与开发插件</h2>
+
+<h3>4. dsh-lark-channel（飞书/Lark集成）</h3>
+<p>把DSH与飞书/Lark连接起来，实现无缝的团队协作。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">npm install --global dsh-lark-channel@0.0.6
+dsh-lark-channel start --profile lark --workspace "SPWD"</code></pre>
+<p><strong>用法：</strong>扫描二维码绑定你的飞书账号。连接后，你可以通过飞书消息控制DSH，用命令切换目录、调用技能和管理任务。</p>
+
+<h3>5. dsh-archify（架构图生成器）</h3>
+<p>从代码仓库自动生成漂亮的架构图。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add @tt-all/archify-dsh@0.1.0</code></pre>
+<p><strong>用法：</strong>直接提示插件生成架构图、流程图或时序图。它输出交互式HTML，支持章节导航和多格式导出。</p>
+
+<h2 id="performance-plugins">Agent性能提升插件</h2>
+
+<h3>6. dsh-design（Vibe设计插件）</h3>
+<p>面向AI驱动设计工作的Claude Design开源替代品。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add deepseek-design@0.2.2</code></pre>
+<p><strong>用法：</strong>安装后重启DSH，在对话窗口找到"Design"标签。你可以直接编辑设计、修改页面或导出为HTML。</p>
+
+<h3>7. dsh-prompt-enhancer（提示词优化）</h3>
+<p>自动增强和优化你的提示词，获得更好的Agent性能。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add github:fsisb/dsh-prompt-enhancer#3.15</code></pre>
+<p><strong>用法：</strong>写好提示词，然后用插件优化它。你可以进行多轮优化直到满意为止。</p>
+
+<h3>8. dsh-openviking（记忆系统）</h3>
+<p>为DSH Agent添加持久记忆管理，让它们随时间的推移变得更"聪明"。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">CMAKE_ARGS="-DGGML_METAL=ON" uv tool install --force --python 3.12 --with xhash<4" openviking[local-embed] =0.4.14"
+dsh plugin --profile web add @github/volcengine/OpenViking/path=/examples/dsh-memory-plugin</code></pre>
+<p><strong>用法：</strong>插件在后台工作，记住你的偏好和过去的交互。测试方法是告诉Agent一些信息（比如"我喜欢冰美式咖啡"），之后再去问它。</p>
+
+<h3>9. dsh-modlens（视觉增强）</h3>
+<p>为DSH Agent添加视觉能力，让它们能够分析图片。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">npx -y @deepseek-ai/dsh plugin --profile web add @ilustack/modlens@1.6.6
+npx -y @ilustack/modlens config set provider openai
+npx -y @ilustack/modlens config set openai.baseurl "https://dashscope.aliyuncs.com/compatible-mode/v1"
+npx -y @ilustack/modlens config set openai.model qwen3-vl-plus
+export DASHSCOPE_API_KEY="your-api-key"
+export OPENAI_API_KEY=$DASHSCOPE_API_KEY</code></pre>
+<p><strong>用法：</strong>上传图片，Agent会用视觉模型分析它们。</p>
+
+<h3>10. dsh-agent-teams（多Agent协作）</h3>
+<p>为复杂任务创建和管理Agent团队。</p>
+<p><strong>安装命令：</strong></p>
+<pre><code class="language-bash">dsh plugin --profile web add @nanmicoder/dsh-agent-teams</code></pre>
+<p><strong>用法：</strong>描述你的任务，插件会自动创建一个Agent团队（如产品设计师、开发者、安全审查员），协作完成任务。</p>
+
+<h2 id="installation">安装方法</h2>
+<h3>方法一：命令行安装</h3>
+<p>使用每个插件提供的 <code>dsh plugin</code> 命令。</p>
+<h3>方法二：DSH Studio（推荐）</h3>
+<p>为了更轻松的安装，使用官方的DeepSeek Harness Studio：</p>
 <ol>
-  <li><strong>执行轨迹收集</strong>：保存完整日志，包括任务输入、工具调用、中间输出、最终结果以及成功或失败状态。</li>
-  <li><strong>自我反思模块</strong>：Agent分析历史日志，总结失败运行的根因，找出哪一步出了问题。</li>
-  <li><strong>知识与提示词更新</strong>：基于反思结论，调整系统提示词、添加新的约束规则或优化未来任务的工具调用顺序。</li>
+  <li>从GitHub下载：<a href="https://github.com/deepseek-ai/deepseek-harness-studio">deepseek-harness-studio</a></li>
+  <li>打开插件市场</li>
+  <li>搜索插件</li>
+  <li>一键点击安装</li>
 </ol>
 
-<h2 id="prompt-template">Agent自我反思模块的实用提示词模板</h2>
-<p>把这个提示词嵌入Agent的任务后反思工作流中。</p>
-<pre><code class="language-text">你是这个AI Agent的自我反思单元。
-审阅下面的完整任务执行轨迹。
-1. 判断这次任务运行是成功还是失败。
-2. 如果失败，列出具体根因：提示词缺陷、工具选择不当、调用顺序错误、缺少约束或背景信息不足。
-3. 总结2-4条对未来相似任务可执行的优化规则。
-4. 输出能够修复上述问题的更新提示词片段。
-不要生成模糊的描述。所有结论都必须有执行日志事实支撑。</code></pre>
-
-<h2 id="python-demo">自我进化Agent日志处理的最小Python演示</h2>
-<pre><code class="language-python">class AgentEvolutionMemory:
-    def __init__(self):
-        self.execution_records = []
-        self.optimized_rules = []
-
-    def save_trace(self, task_input, tool_calls, final_output, is_success: bool):
-        record = {
-            "task": task_input,
-            "tool_calls": tool_calls,
-            "output": final_output,
-            "success": is_success
-        }
-        self.execution_records.append(record)
-
-    def add_optimized_rule(self, rule_text: str):
-        self.optimized_rules.append(rule_text)
-
-    def get_evolved_system_prompt(self, base_prompt: str) -> str:
-        rule_block = "\n".join([f"- {r}" for r in self.optimized_rules])
-        evolved_prompt = f"{base_prompt}\n\n=== 累积进化规则 ===\n{rule_block}"
-        return evolved_prompt
-
-# 使用示例
-memory = AgentEvolutionMemory()
-memory.save_trace(
-    task_input="查询上个季度的销售数据",
-    tool_calls=["query_database", "format_report"],
-    final_output="缺少区域过滤数据",
-    is_success=False
-)
-memory.add_optimized_rule("查询季度销售数据时始终添加区域过滤参数。")
-final_prompt = memory.get_evolved_system_prompt(base_prompt="你是一个数据分析Agent。")
-print(final_prompt)</code></pre>
-
-<h2 id="workflow">真实世界的运行工作流</h2>
-<ol>
-  <li>Agent运行一个任务，把完整执行轨迹存入记忆存储。</li>
-  <li>任务完成后触发自我反思模块，无论成功还是失败。</li>
-  <li>反思输出可执行的优化规则，追加到Agent记忆。</li>
-  <li>下一轮任务加载带有累积规则的进化系统提示词。</li>
-  <li>定期清理低价值的旧规则，防止提示词膨胀。</li>
-</ol>
-
-<h2 id="pitfalls">应该避开的常见坑</h2>
-<ul>
-  <li>不要让Agent重写整个基础提示词，只追加增量优化规则。完全重写可能破坏Agent的核心能力。</li>
-  <li>避免过度拟合单一失败案例。添加新规则前，先评估多个相似的轨迹。</li>
-  <li>设置规则数量的上限。积累过多规则会导致提示词膨胀，拖慢推理速度。</li>
-  <li>保持人类监督。即使启用了自我进化，重要业务规则仍需要人工审核。</li>
-</ul>
-
-<h2 id="closing">结语</h2>
-<p>自我进化不会让你的Agent无所不能。它解决的是静态Agent无法自动改进的痛点。通过轨迹日志、自我反思和增量提示词更新，你的Agent在处理更多真实任务的过程中不断变好，同时大幅减少人工提示词维护工作。</p>
+<h2 id="final-thoughts">结语</h2>
+<p>这10个插件将改变你的DeepSeek Harness体验，让它更强大、更灵活、更好用。无论你是开发者、设计师还是AI爱好者，这些工具都能帮助你充分发挥AI Agent平台的潜力。完整的安装命令和项目源码，请看视频描述或访问官方GitHub仓库。</p>
 
 <h2>常见问题</h2>
 
-<h3>Agent自我进化到底是什么意思？</h3>
-<p>自我进化是Agent从自身执行历史中改进行为的能力。每次任务后，Agent保存完整轨迹，运行反思模块分析失败原因，并把得出的优化规则追加到系统提示词中。下一次任务加载带累积规则的进化提示词。这不是"变超级智能"，而是一个实用的反馈循环，让Agent不再重复同样的错误，无需人类在每次失败后都去编辑提示词。</p>
+<h3>我需要一次性安装全部10个插件吗？</h3>
+<p>不需要。插件彼此独立，你只需要安装契合自己工作流的那些。如果你主要在终端工作，从dsh-tui和dsh-better-sidebar开始。如果你主要在浏览器中工作，先用dsh-web-ui-all体验主题和桌面宠物。性能类插件（dsh-design、dsh-prompt-enhancer、dsh-openviking、dsh-modlens、dsh-agent-teams）各自增加一项独特能力，按需安装即可，不必一次全装。</p>
 
-<h3>自我进化需要特殊框架或大型语言模型吗？</h3>
-<p>不需要特殊框架。核心要求是一个能遵循反思提示词的LLM，以及一种存储执行轨迹的方式——本指南中的Python演示就是一个自包含的记忆类，你可以嵌入任何Agent。更重要的是纪律：可靠地保存轨迹、无论成功失败都触发反思、限制规则列表以防提示词随时间膨胀。普通的Agent配置加上这个反馈循环就足够起步了。</p>
+<h3>这些插件免费且开源吗？</h3>
+<p>是的，它们都是DeepSeek Harness生态中的社区插件，免费安装。它们通过 <code>dsh plugin</code> 命令或DSH Studio管理，其中几个是明确的开源替代品——dsh-design被描述为Claude Design的开源替代品，每个项目的源码都在GitHub上可查。唯一的外部依赖是插件需要API密钥时，比如dsh-modlens使用DashScope来调用视觉模型。</p>
 
-<h3>如何避免累积规则让提示词变得过大？</h3>
-<p>三道防线。第一，只追加增量规则，绝不让Agent重写整个基础提示词。第二，接受新规则前要求多个相似的失败轨迹——不要过度拟合单一案例。第三，设置规则数量的硬上限，并定期修剪低价值或过时的规则。这能让进化提示词保持聚焦，防止提示词膨胀带来的延迟和成本。</p>
+<h3>哪些插件对Agent性能提升最大？</h3>
+<p>从原始能力看，dsh-modlens（视觉）和dsh-openviking（持久记忆）改变的是Agent能做什么，而不只是看起来怎么样。dsh-prompt-enhancer优化你输入的每个提示词，效果会在任务间累积。dsh-agent-teams把单个Agent扩展成协作文档，应对复杂项目。如果只能选三个：dsh-web-ui-all负责界面、dsh-openviking负责记忆、dsh-agent-teams负责多Agent工作，这三个对日常使用的影响最明显。</p>
 
-<h3>Agent自我进化后还能信任它吗？</h3>
-<p>应该保持人类监督，尤其是高风险业务规则。自我进化优化的是提示词和工具调用策略，不能替代对重要逻辑的审核——本指南明确建议即使启用进化，关键规则仍需人工审阅。用自我进化来减少持续手动编辑提示词的负担，同时对最重要的变更保留人工检查。</p>
+<h3>安装插件后还需要配置吗？</h3>
+<p>有些要，有些不用。纯UI插件如dsh-web-ui-all、dsh-tui和dsh-better-sidebar安装后立即可用。调用外部服务的插件需要配置：dsh-lark-channel需要扫描二维码绑定飞书，dsh-modlens需要provider设置和DashScope API密钥。请按照上文每节的精确命令操作——需要配置的插件，其配置步骤已经包含在安装片段里。</p>
 
 <div class="next-step">
   <h3>📖 下一步</h3>
-  <p>想让你的Agent更聪明、更可靠？继续阅读这些指南：</p>
+  <p>想充分发挥DeepSeek Harness的潜力？继续阅读这些指南：</p>
   <ul>
-    <li><a href="/article/write-effective-agents-md-codex">如何为Codex编写有效的AGENTS.md</a> — 固化Agent必须遵循的基础规则和上下文</li>
-    <li><a href="/article/multi-agent-collaboration-architecture">多Agent协作架构</a> — 多个Agent如何分工和通信</li>
-    <li><a href="/article/deepseek-harness-comprehensive-guide-installation-architecture-practical-usage">DeepSeek Harness：安装、架构与实用操作完全指南</a> — 进化Agent所栖身的运行时框架</li>
+    <li><a href="/article/deepseek-harness-comprehensive-guide-installation-architecture-practical-usage">DeepSeek Harness：安装、架构与实用操作完全指南</a> — 这些插件所扩展平台的基础指南</li>
+    <li><a href="/article/multi-agent-collaboration-architecture">多Agent协作架构</a> — 插件#10的Agent团队背后的架构</li>
+    <li><a href="/article/why-agents-need-self-evolution-practical-implementation-guide-ai-agents">为什么Agent需要自我进化：实用实现指南</a> — 记忆与反思如何让Agent更聪明，正如插件#8</li>
   </ul>
 </div>`,
   },
