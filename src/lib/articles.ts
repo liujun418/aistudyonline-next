@@ -3098,4 +3098,16 @@ export const articles: Article[] = [
     date: "2026-08-19",
   },
 
+  {
+    slug: "opencode-desktop-complete-beginners-guide",
+    title: "OpenCode Desktop: A Complete Beginner's Guide",
+    titleZh: "OpenCode Desktop完全入门指南",
+    description: "OpenCode Desktop is an open-source AI coding agent (197K+ GitHub stars) that works directly in China with built-in free models. A beginner's guide to installation, Build vs Plan modes, @ / ! commands, and free-model usage rules.",
+    descriptionZh: "OpenCode Desktop是开源AI编码代理（197K+ GitHub星标），内置免费模型，国内可直接使用。面向初学者的完整指南：安装、Build与Plan模式、@ / !命令、免费模型使用规则。",
+    category: "ai-tutorials",
+    tags: ["OpenCode", "AI Coding", "Desktop App", "Open Source", "Free Models", "DeepSeek V4 Flash", "Plan Mode"],
+    difficulty: "beginner",
+    toolsMentioned: ["OpenCode"],
+    date: "2026-08-20",
+  },
 ];
