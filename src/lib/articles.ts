@@ -3110,4 +3110,16 @@ export const articles: Article[] = [
     toolsMentioned: ["OpenCode"],
     date: "2026-08-20",
   },
+  {
+    slug: "deepseek-harness-complete-beginners-guide",
+    title: "DeepSeek Harness: Complete Beginner's Guide",
+    titleZh: "DeepSeek Harness完全入门指南",
+    description: "A complete beginner's guide to DeepSeek Harness — installation (quick try + permanent + headless + source build), API key setup, the four working modes, permission levels, plugin management, and creating your first plugin.",
+    descriptionZh: "DeepSeek Harness完全入门指南——安装（快速试用+永久+无头+源码构建）、API Key配置、四种工作模式、权限级别、插件管理和创建你的第一个插件。",
+    category: "ai-tutorials",
+    tags: ["DeepSeek Harness", "AI Agents", "Beginner Guide", "Installation", "Plugins", "Creative Mode", "Node.js"],
+    difficulty: "beginner",
+    toolsMentioned: ["DeepSeek Harness"],
+    date: "2026-08-21",
+  },
 ];
