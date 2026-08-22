@@ -3122,4 +3122,16 @@ export const articles: Article[] = [
     toolsMentioned: ["DeepSeek Harness"],
     date: "2026-08-21",
   },
+  {
+    slug: "5-levels-using-codex-demo-production-grade-ai-workflows",
+    title: "The 5 Levels of Using Codex: From Demo to Production-Grade AI Workflows",
+    titleZh: "使用Codex的5个层级：从Demo到生产级AI工作流",
+    description: "Over 18 days, 400 tasks, and 71 billion tokens — how to move Codex from basic chat-box demos to reliable production tooling. Five levels: direct submission, document-driven workflows, Git code management, open source ecosystem integration, and multi-agent collaboration.",
+    descriptionZh: "18天、400个任务、710亿token——如何让Codex从基础的聊天框演示进阶为可靠的生产级工具。五个层级：直接提交、文档驱动工作流、Git代码管理、开源生态集成和多Agent协作。",
+    category: "ai-tutorials",
+    tags: ["Codex", "AI Workflow", "Git", "Multi-Agent", "Open Source", "Production", "Vibe Coding", "Documentation"],
+    difficulty: "intermediate",
+    toolsMentioned: ["Codex", "Deer Flow"],
+    date: "2026-08-22",
+  },
 ];
