@@ -3134,4 +3134,16 @@ export const articles: Article[] = [
     toolsMentioned: ["Codex", "Deer Flow"],
     date: "2026-08-22",
   },
+  {
+    slug: "build-ai-second-brain-workbuddy-ima-knowledge-base",
+    title: "Step-by-Step Guide: Build Your AI Second Brain with WorkBuddy + IMA Knowledge Base",
+    titleZh: "分步指南：用WorkBuddy + IMA知识库打造你的AI第二大脑",
+    description: "A step-by-step guide to building an AI second brain with WorkBuddy + IMA Knowledge Base. Master three core steps — Connect (authorize and import documents), Use (the 'Based on IMA Knowledge Base' prefix for hallucination-free answers), and Update (keep your knowledge fresh) — plus the advanced bidirectional closed-loop workflow powered by the IMA OpenAPI that auto-saves AI output back into your knowledge base.",
+    descriptionZh: "用WorkBuddy + IMA知识库打造AI“第二大脑”的分步指南。掌握三大核心步骤——连接（授权并导入文档）、使用（“基于IMA知识库”前缀获得低幻觉答案）、更新（保持知识新鲜）——以及基于IMA OpenAPI的双向闭环高级玩法，让AI生成的内容自动回存到知识库。",
+    category: "ai-tutorials",
+    tags: ["WorkBuddy", "IMA", "Knowledge Base", "Second Brain", "RAG", "Tencent", "Productivity", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy", "IMA Knowledge Base"],
+    date: "2026-08-25",
+  },
 ];

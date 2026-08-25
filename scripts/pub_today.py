@@ -1,260 +1,410 @@
-"""Publish Aug 22, 2026 — 1 article (Codex 5 Levels), no new tools."""
+"""Publish Aug 25, 2026 — 1 article (WorkBuddy + IMA second brain), add IMA Knowledge Base tool."""
 import os
+
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-# ---------- Part 1: articles.ts ----------
-with open('src/lib/articles.ts', 'r', encoding='utf-8') as f:
-    s = f.read()
+SLUG = "build-ai-second-brain-workbuddy-ima-knowledge-base"
 
+# ---------------------------------------------------------------------------
+# Part 1: articles.ts
+# ---------------------------------------------------------------------------
 a = r"""  {
-    slug: "5-levels-using-codex-demo-production-grade-ai-workflows",
-    title: "The 5 Levels of Using Codex: From Demo to Production-Grade AI Workflows",
-    titleZh: "使用Codex的5个层级：从Demo到生产级AI工作流",
-    description: "Over 18 days, 400 tasks, and 71 billion tokens — how to move Codex from basic chat-box demos to reliable production tooling. Five levels: direct submission, document-driven workflows, Git code management, open source ecosystem integration, and multi-agent collaboration.",
-    descriptionZh: "18天、400个任务、710亿token——如何让Codex从基础的聊天框演示进阶为可靠的生产级工具。五个层级：直接提交、文档驱动工作流、Git代码管理、开源生态集成和多Agent协作。",
+    slug: "build-ai-second-brain-workbuddy-ima-knowledge-base",
+    title: "Step-by-Step Guide: Build Your AI Second Brain with WorkBuddy + IMA Knowledge Base",
+    titleZh: "分步指南：用WorkBuddy + IMA知识库打造你的AI第二大脑",
+    description: "A step-by-step guide to building an AI second brain with WorkBuddy + IMA Knowledge Base. Master three core steps — Connect (authorize and import documents), Use (the 'Based on IMA Knowledge Base' prefix for hallucination-free answers), and Update (keep your knowledge fresh) — plus the advanced bidirectional closed-loop workflow powered by the IMA OpenAPI that auto-saves AI output back into your knowledge base.",
+    descriptionZh: "用WorkBuddy + IMA知识库打造AI“第二大脑”的分步指南。掌握三大核心步骤——连接（授权并导入文档）、使用（“基于IMA知识库”前缀获得低幻觉答案）、更新（保持知识新鲜）——以及基于IMA OpenAPI的双向闭环高级玩法，让AI生成的内容自动回存到知识库。",
     category: "ai-tutorials",
-    tags: ["Codex", "AI Workflow", "Git", "Multi-Agent", "Open Source", "Production", "Vibe Coding", "Documentation"],
-    difficulty: "intermediate",
-    toolsMentioned: ["Codex", "Deer Flow"],
-    date: "2026-08-22",
+    tags: ["WorkBuddy", "IMA", "Knowledge Base", "Second Brain", "RAG", "Tencent", "Productivity", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: ["Tencent WorkBuddy", "IMA Knowledge Base"],
+    date: "2026-08-25",
   },
 """
-
-last = s.rfind('];')
-with open('src/lib/articles.ts', 'w', encoding='utf-8', newline='\n') as f:
-    f.write(s[:last] + a + '];')
-print('Part 1 done')
-
-# ---------- Part 2: article-content.ts ----------
-with open('src/lib/article-content.ts', 'r', encoding='utf-8') as f:
+with open("src/lib/articles.ts", encoding="utf-8") as f:
     s = f.read()
+last = s.rfind("];")
+assert last != -1, "articles.ts: ]; marker not found"
+s2 = s[:last] + a + s[last:]
+with open("src/lib/articles.ts", "w", encoding="utf-8", newline="\n") as f:
+    f.write(s2)
+print("articles.ts updated")
 
-content = r"""  "5-levels-using-codex-demo-production-grade-ai-workflows": {
+# ---------------------------------------------------------------------------
+# Part 2: article-content.ts
+# ---------------------------------------------------------------------------
+content = r"""  "build-ai-second-brain-workbuddy-ima-knowledge-base": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📖 AI Tutorial</span>
-  <span class="meta-badge">🕒 8 min read</span>
-  <span class="meta-badge">📅 Aug 22, 2026</span>
-  <span class="meta-badge">🎯 Intermediate</span>
+  <span class="meta-badge">📚 AI Tutorials</span>
+  <span class="meta-badge">🕒 7 min read</span>
+  <span class="meta-badge">📅 Aug 25, 2026</span>
+  <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
-<p>Over 18 days, I ran 400 tasks in Codex, consuming 71 billion tokens in total. The longest task ran continuously for 16 hours using GPT-5.6. However, I've noticed many users only use Codex at the most basic level — submitting requests directly in the chat box and stopping once a result is generated. This article breaks down Codex usage into 5 distinct levels, and explains why you need to reach Level 3 to turn Codex into a reliable production tool.</p>
 
-<h2 id="level-1">Level 1: Direct Task Submission</h2>
-<p>Level 1 is the simplest way to use Codex: submit tasks directly in the chat box. You can ask Codex to create a webpage, build a small game, or implement a simple feature, and it will usually produce a result that looks good in just a few minutes.</p>
-<p>However, this approach has critical limitations. Once tasks become more complex, you'll often run into issues: the functionality doesn't match your expectations, the layout is unreasonable, or a single small change (like modifying one button) can cause the entire page to break. After several rounds of revisions, the work you completed earlier may also stop working. This is why Level 1 outputs are almost always just demos, and rarely evolve into long-term maintainable projects.</p>
+<p>Many users face a common pain point when using WorkBuddy: it excels at answering general questions but struggles with personalized or company-specific content. This tutorial will walk you through integrating WorkBuddy with IMA Knowledge Base to create an AI "second brain" — enabling your assistant to access your private documents and deliver accurate, context-aware responses instead of generic guesses.</p>
 
-<h2 id="level-2">Level 2: Document-Driven Workflow</h2>
-<p>When you realize you need to help Codex remember what the project is supposed to do, you move to Level 2: document-driven development.</p>
-<p>The workflow is:</p>
+<h2 id="three-core-steps">Three Core Steps to Master IMA Knowledge Base</h2>
+
+<p>The process is divided into three simple phases: <strong>Connect, Use, and Update</strong>. You can implement all of them immediately after reading this guide.</p>
+
+<h2 id="step-1-connect">Step 1: Connect to IMA Knowledge Base (Build Your Knowledge Library)</h2>
+
+<p>Think of this step as building a dedicated library for your AI. You'll store all your notes, documents, and reference materials here, so the AI can retrieve information directly from these files instead of generating generic responses.</p>
+
+<h3>3 Key Operations to Complete the Connection</h3>
+
 <ol>
-  <li>Create a dedicated project folder before starting work</li>
-  <li>Prepare three core documents:
+  <li><strong>Authorize the Connection</strong>
     <ul>
-      <li>Product requirements</li>
-      <li>Software architecture</li>
-      <li>Current progress</li>
+      <li>Click the "+" button next to the input box in WorkBuddy.</li>
+      <li>Select "Connector" and choose "IMA Knowledge Base".</li>
+      <li>Log in with your account to grant WorkBuddy access permissions.</li>
     </ul>
   </li>
-  <li>You don't need to write these documents from scratch — ask Codex to ask you clarifying questions, then generate the documents based on your answers</li>
-  <li>Before starting each new task, have Codex read these documents first, create a work plan, and confirm the plan with you before execution</li>
-  <li>After completing the task, sync the results back to the progress document</li>
-</ol>
-<p>This effectively gives your project an "external brain". Even if conversations get very long or you create new tasks, Codex will always understand what the product is supposed to do, where the project stands, and which parts should not be modified. At this level, you're no longer just thinking about prompts — you're thinking about product requirements, feature breakdowns, and software architecture.</p>
-<p>However, documents can only prevent Codex from forgetting the project. They can't prevent it from breaking the project.</p>
-
-<h2 id="level-3">Level 3: Code Management</h2>
-<p>That's where Level 3 comes in: code management. This is the step that most Vibe coders overlook.</p>
-<p>Many developers wait until the product is almost finished to save stable versions, but by then it's already too late. You should start using Git from the moment your project has its first working version. Think of Git as a game save system:</p>
-<ul>
-  <li>Save a version every time you complete a stable feature</li>
-  <li>Create a new branch before making major changes</li>
-  <li>Merge the branch if changes work, or roll back if they fail</li>
-</ul>
-<p>This gives you the confidence to let Codex make large-scale modifications without worrying that one mistake will require another AI to fix the problems created by the first one.</p>
-<p>Level 2 solves the problem of "AI forgetting what it's doing". Level 3 solves the problem of "what if the AI breaks the project". With documents and version control in place, Codex can already complete projects reliably.</p>
-
-<h2 id="level-4">Level 4: Integrate with the Open Source Ecosystem</h2>
-<p>But if you have to build every capability from scratch, the efficiency is still too low. That's why Level 4 is about integrating with the open source ecosystem.</p>
-<p>At this level, you can:</p>
-<ul>
-  <li>Package your own workflows into reusable skills</li>
-  <li>Directly use open source skills and complete projects from the community</li>
-</ul>
-<p>A great example is ByteDance's Deer Flow, which I use frequently for research tasks. Previously, I would have to manually search for information, filter results, compare different viewpoints, and compile reports. Now, I just submit a research topic, and Deer Flow will call tools and agents to handle the entire research process and deliver the final report.</p>
-<p>Deer Flow is just one example. GitHub has thousands of ready-made skills, agent frameworks, and open source tools available. You don't even need to understand how every line of code works. Just send the project URL to Codex and ask it to:</p>
-<pre><code class="language-text">"Download this project, get it running, and tell me how to use it"</code></pre>
-<p>Codex will read the documentation, set up the environment, resolve errors, and deliver a working version to you.</p>
-<p>In my own usage, I've called over 1,000 skills, with "superpowers" being the most frequently used. At this level, Codex is no longer just a code generator — it can integrate existing capabilities directly into your workflow.</p>
-
-<h2 id="level-5">Level 5: Multi-Agent Collaboration</h2>
-<p>At Level 4, you still need to call skills and open source projects one by one. Level 5 is about multi-agent collaboration, where you submit a final goal and let Codex determine what capabilities it needs to use to complete the entire task.</p>
-<p>Level 5 integrates all the previous four levels into a single system:</p>
-<ol>
-  <li>A main agent first reads the project documents, manages versions with Git, and calls the necessary skills and open source tools</li>
-  <li>Then it creates specialized agents for different stages:
+  <li><strong>Create and Import Resources</strong>
     <ul>
-      <li>Market research agent</li>
-      <li>Requirements organization agent</li>
-      <li>Architecture design agent</li>
-      <li>Software development agent</li>
-      <li>Quality testing agent</li>
+      <li>Open the IMA Knowledge Base management page.</li>
+      <li>Create a new knowledge base (e.g., "WorkBuddy Mastery Guide").</li>
+      <li>Upload your basic files (supports PDF, Word, PPT, Excel, TXT, and other common formats).</li>
     </ul>
   </li>
-  <li>These agents work in parallel toward the same goal</li>
-  <li>Finally, the main agent summarizes the results and delivers the complete project to you</li>
+  <li><strong>Enable Connector Synchronization</strong>
+    <ul>
+      <li>Return to the main WorkBuddy interface.</li>
+      <li>Find the IMA Knowledge Base connector in the added connectors list.</li>
+      <li>Turn on the synchronization switch to enable real-time knowledge sharing.</li>
+    </ul>
+  </li>
 </ol>
-<p>Interestingly, the highest level actually brings you back to a simpler operation. You still submit tasks in the chat box, but there's a critical difference:</p>
+
+<h2 id="step-2-use">Step 2: Use the Knowledge Base (One Prefix for Precise Answers)</h2>
+
+<p>Using the integrated system is extremely simple. Just add the prefix <strong>"Based on IMA Knowledge Base"</strong> to your questions, and WorkBuddy will only retrieve answers from your uploaded materials, significantly reducing hallucinations.</p>
+
+<h3>Two Common Usage Scenarios</h3>
+
+<ol>
+  <li><strong>Question &amp; Answer Interaction</strong>
+
+<pre><code class="language-text">Based on IMA Knowledge Base, answer: [Your specific question]</code></pre>
+
+<p>This format ensures the AI provides direct, verifiable answers based on your documents.</p>
+  </li>
+  <li><strong>Creative Generation</strong>
+
+<pre><code class="language-text">Based on IMA Knowledge Base, help me write a report/article/summary</code></pre>
+
+<p>The AI will use factual data from your knowledge base to generate content that fits your business scenario.</p>
+  </li>
+</ol>
+
+<h2 id="step-3-update">Step 3: Update the Knowledge Base (Manual Upload for Continuous Improvement)</h2>
+
+<p>Building a knowledge base isn't a one-time task — you need to add new content regularly to keep it useful.</p>
+
+<h3>3 Steps to Update Your Knowledge Base</h3>
+
+<ol>
+  <li><strong>Open the Knowledge Base</strong>: Log in to the IMA Knowledge Base management interface and navigate to the target directory where you want to add content.</li>
+  <li><strong>Trigger the Upload</strong>: Click the "Upload" button in the toolbar and select local files from your computer (supports batch uploads).</li>
+  <li><strong>Automatic Parsing and Storage</strong>: Confirm the selected files — the system will automatically identify file formats, extract key information, and complete parsing. The new content will be synchronized to the knowledge base in real time.</li>
+</ol>
+
+<h2 id="advanced-closed-loop">Advanced Play: Bidirectional Closed-Loop Workflow</h2>
+
+<p>To make your knowledge base even more powerful, you can set up a bidirectional closed-loop system that automatically saves AI-generated content back into the knowledge base.</p>
+
+<h3>Prerequisite</h3>
+
+<p>First, configure the IMA Knowledge Base API in the "Connector" module — this is the core switch for bidirectional data flow.</p>
+
+<h3>Implementation Steps</h3>
+
+<ol>
+  <li><strong>Get OpenAPI Credentials</strong>: Open <code>https://ima.qq.com/agent-interface</code> and log in. Apply for and obtain two values:
+
+<pre><code class="language-text">Client ID
+API Key</code></pre>
+  </li>
+  <li><strong>Configure the API</strong>: Send the obtained API Key to the IMA skill to complete the configuration.</li>
+  <li><strong>Automatic Closed-Loop Operation</strong>: After WorkBuddy generates content (such as meeting minutes, reports, or summaries), you can directly instruct it:
+
+<pre><code class="language-text">Save this content as an IMA note and upload it to the knowledge base</code></pre>
+
+<p>The AI will automatically complete the upload, forming a closed loop: <strong>Retrieve from Knowledge Base → AI Process &amp; Generate → Auto-Save Back to Knowledge Base</strong>.</p>
+  </li>
+</ol>
+
+<h2 id="more-connectors">More Connector Options</h2>
+
+<p>In addition to IMA Knowledge Base, WorkBuddy supports seamless integration with multiple platforms:</p>
+
 <ul>
-  <li>Level 1: One AI gets the request and immediately starts generating</li>
-  <li>Level 5: A main agent first understands the goal, then organizes an entire team of agents to work for you</li>
+  <li><strong>Feishu</strong>: Real-time synchronization of document messages and multi-dimensional tables.</li>
+  <li><strong>Tencent Docs</strong>: Direct reading and writing of cloud files.</li>
+  <li><strong>Lexiang Knowledge Base</strong>: Enterprise internal knowledge linkage.</li>
+  <li><strong>Tencent Meeting</strong>: Automatic organization and synchronization of meeting minutes.</li>
 </ul>
-<p>The 16-hour continuous task I ran was completed using this multi-agent collaboration approach, covering everything from requirements analysis and market research to product design, development, and final delivery.</p>
-<p>The power of Level 5 isn't about how many agents run at the same time — it's about you clearly defining the final goal, and letting the system break it down, organize the work, and complete the entire process.</p>
+
+<h2 id="important-reminders">Important Reminders</h2>
+
+<p>To maintain the accuracy of your knowledge base, follow these best practices:</p>
+
+<ol>
+  <li><strong>Clean Up Redundant "Digital Junk"</strong>: Regularly delete expired, invalid, or low-value documents. These files not only occupy storage space but also affect the system's response accuracy.</li>
+  <li><strong>Beware of Information Interference</strong>: "Noise" in the knowledge base can interfere with the algorithm's judgment logic — leading to fuzzy search results, incorrect answers, or even unprofessional responses.</li>
+  <li><strong>Maintain a "Pure" Knowledge Base</strong>: Keeping the knowledge base "clean and pure" is the key to improving response quality. Pure knowledge allows the system to lock in valid information and output professional answers that meet your needs.</li>
+</ol>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>Level 5 seems to come full circle. You're still submitting tasks in the chat box, but what you submit has changed. In Level 1, you submit a single instruction. In Level 5, you submit a complete, well-defined goal.</p>
-<p>This is the journey from demo to production: starting with simple generation, moving through documentation and version control, leveraging the open source ecosystem, and finally orchestrating entire agent teams to deliver complete projects.</p>
+
+<p>The integration follows a simple rhythm: establish a <strong>"weekly self-check + monthly review"</strong> mechanism, let each business department take responsibility for cleaning up the content under its jurisdiction, and set up automatic expiration reminders for key information to ensure the "freshness" and "purity" of the knowledge base from the source.</p>
+
+<p>By following this guide, you'll transform WorkBuddy into a truly personalized AI assistant that grows with your knowledge and business needs. Start building your AI second brain today!</p>
 
 <h2>常见问题</h2>
 
-<h3>Why do most users get stuck at Level 1?</h3>
-<p>Because Level 1 looks deceptively good. You type a task, Codex produces a nice-looking page or demo in minutes, and that feels like success. The problem only appears with complexity: mismatched functionality, broken layouts, and regressions where a tiny change breaks previously working code. Level 1 is fine for throwaway demos, but without documents and version control, those outputs rarely survive into maintainable projects — which is exactly why you need to reach at least Level 3 for real work.</p>
+<h3>What is the difference between this guide and the earlier WorkBuddy + IMA tutorial?</h3>
+<p>The earlier guide (<a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA</a>) focuses on installation, connection, and content management. This guide distills the workflow into three repeatable steps — Connect, Use, Update — and adds the advanced <strong>bidirectional closed-loop workflow</strong>: by configuring the IMA OpenAPI (Client ID + API Key), AI-generated content is automatically saved back into your knowledge base, turning it from a static archive into a self-growing second brain.</p>
 
-<h3>What are the three core documents in Level 2?</h3>
-<p>Product requirements (what the product should do), software architecture (how the pieces fit together), and current progress (what's done and what's pending). You don't write them from scratch — you ask Codex to interview you with clarifying questions, then generate the documents from your answers. Before each new task, Codex reads these documents, drafts a plan, and confirms it with you. After finishing, it syncs the results back into the progress document.</p>
+<h3>Do I need programming skills to set up the IMA OpenAPI?</h3>
+<p>No. You only need to open <code>https://ima.qq.com/agent-interface</code>, log in with your Tencent account, and apply for the <strong>Client ID</strong> and <strong>API Key</strong>. Then send the API Key to the IMA skill in WorkBuddy to complete the configuration. There is no code to write — the entire closed loop is handled by WorkBuddy.</p>
 
-<h3>Why is Git version control the most overlooked step?</h3>
-<p>Because most vibe coders only think about saving once the product is nearly finished — and by then it's too late. Git should start at the first working version. Treat it like a game save system: commit after every stable feature, branch before major changes, merge on success or roll back on failure. That safety net is what gives you the confidence to let Codex attempt large-scale modifications without fearing that one mistake will cascade into more AI fixes.</p>
+<h3>Can IMA Knowledge Base be used independently of WorkBuddy?</h3>
+<p>Yes. IMA Knowledge Base is Tencent's standalone AI knowledge base product — you can create knowledge bases, upload documents, and query them directly. WorkBuddy is just one of its integration channels. This also means your knowledge base stays portable: the same content can be reused across different tools that support IMA or its OpenAPI.</p>
 
-<h3>What's the real difference between Level 1 and Level 5?</h3>
-<p>In Level 1 you submit a single instruction and one AI immediately starts generating. In Level 5 you submit a well-defined final goal, and a main agent breaks it down — reading project documents, managing Git versions, calling open source skills — then spawns specialized agents (market research, requirements, architecture, development, testing) that work in parallel. You end up back at the chat box, but what you submit has changed from a prompt to a complete goal.</p>
+<h3>How often should I update and clean my knowledge base?</h3>
+<p>Adopt a <strong>"weekly self-check + monthly review"</strong> rhythm: each business department cleans the content under its jurisdiction weekly, and key information gets automatic expiration reminders. Remember that "noise" hurts retrieval — an overstuffed knowledge base with expired documents returns fuzzier answers than a small, clean one.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Ready to move Codex up the levels? Continue with these guides:</p>
+  <p>Want to go deeper with your AI second brain? Keep exploring:</p>
   <ul>
-    <li><a href="/article/codex-agent-desktop-jarvis">Codex Agent: Your Desktop Jarvis for Effortless Task Automation</a> — the desktop AI agent built around Codex for everyday task automation</li>
-    <li><a href="/article/multi-agent-collaboration-architecture">Multi-Agent Collaboration Architecture</a> — the architecture behind Level 5's parallel agent teams</li>
-    <li><a href="/article/git-github-beginners-guide">Git &amp; GitHub Beginner's Guide: Core Concepts &amp; Operation</a> — everything you need to set up the Level 3 version-control foundation</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA: A Step-by-Step Guide</a> — the companion guide covering installation, connection, and advanced prompts</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: AI Office Workbench</a> — a full overview of WorkBuddy's modes, skills, and expert teams</li>
+    <li><a href="/article/karpathy-ai-knowledge-base-3-folders">Build a Karpathy-Style AI Knowledge Base: A 2-Minute Setup with Just 3 Folders</a> — a complementary philosophy for organizing what your AI remembers</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📖 AI教程</span>
-  <span class="meta-badge">🕒 阅读约8分钟</span>
-  <span class="meta-badge">📅 2026年8月22日</span>
-  <span class="meta-badge">🎯 进阶</span>
+  <span class="meta-badge">📚 AI 教程</span>
+  <span class="meta-badge">🕒 阅读约7分钟</span>
+  <span class="meta-badge">📅 2026年8月25日</span>
+  <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
-<p>18天里，我在Codex中运行了400个任务，总共消耗710亿token。最长的一个任务用GPT-5.6连续跑了16小时。但我发现许多用户只用最基础的Codex——直接在聊天框提交请求，生成结果后就停止。本文将Codex的使用拆解为5个层级，并解释为什么你需要达到Level 3才能把Codex变成可靠的生产工具。</p>
 
-<h2 id="level-1">Level 1：直接任务提交</h2>
-<p>Level 1是使用Codex最简单的方式：直接在聊天框提交任务。你可以让Codex创建一个网页、构建一个小游戏或实现一个简单功能，通常几分钟就能得到看起来不错的成果。</p>
-<p>然而，这种方法有致命局限。一旦任务变复杂，你常会遇到这些问题：功能不符合预期、布局不合理，或者一个很小的改动（比如改一个按钮）就导致整个页面崩溃。经过几轮修改后，之前完成的工作也可能失效。这就是为什么Level 1的输出几乎永远只是demo，很难成长为长期可维护的项目。</p>
+<p>许多用户在使用WorkBuddy时都会遇到一个共同的痛点：它能出色地回答通用问题，但在涉及个性化或公司专属内容时却力不从心。本教程将带你将WorkBuddy与IMA知识库打通，打造一个AI“第二大脑”——让助手能够访问你的私有文档，输出准确、贴合上下文的答案，而不是泛泛而谈的猜测。</p>
 
-<h2 id="level-2">Level 2：文档驱动工作流</h2>
-<p>当你意识到需要帮Codex记住项目应该做什么时，就进入Level 2：文档驱动开发。</p>
-<p>工作流如下：</p>
+<h2 id="three-core-steps">掌握IMA知识库的三大核心步骤</h2>
+
+<p>整个流程被拆分为三个简单阶段：<strong>连接、使用、更新</strong>。读完本指南，你就能立刻上手全部三步。</p>
+
+<h2 id="step-1-connect">第一步：连接IMA知识库（搭建你的知识图书馆）</h2>
+
+<p>把这一步想象成给AI建一座专属图书馆。把笔记、文档和参考资料全部存放于此，AI就能直接从这些文件中检索信息，而不是生成泛泛的通用回复。</p>
+
+<h3>完成连接的3个关键操作</h3>
+
 <ol>
-  <li>开工前创建一个专用项目文件夹</li>
-  <li>准备三份核心文档：
+  <li><strong>授权连接</strong>
     <ul>
-      <li>产品需求</li>
-      <li>软件架构</li>
-      <li>当前进度</li>
+      <li>点击WorkBuddy输入框旁的“+”按钮。</li>
+      <li>选择“连接器”，再选择“IMA知识库”。</li>
+      <li>登录你的账号，授予WorkBuddy访问权限。</li>
     </ul>
   </li>
-  <li>这些文档不需要从零写——让Codex向你提出澄清问题，然后根据你的回答生成文档</li>
-  <li>每次开始新任务前，先让Codex阅读这些文档、制定工作计划，并在执行前与你确认</li>
-  <li>任务完成后，把结果同步回进度文档</li>
-</ol>
-<p>这相当于给项目装了一个"外部大脑"。即使对话变得很长或你创建新任务，Codex也始终明白产品要做什么、项目进展到哪、哪些部分不能改。在这个层级，你不再只是思考提示词——你思考的是产品需求、功能拆解和软件架构。</p>
-<p>但文档只能防止Codex忘记项目，无法防止它破坏项目。</p>
-
-<h2 id="level-3">Level 3：代码管理</h2>
-<p>这就是Level 3登场的地方：代码管理。这一步是大多数Vibe coder最常忽略的。</p>
-<p>许多开发者等到产品快做完才保存稳定版本，但那时已经太晚。你应该在项目有第一个可用版本时就使用Git。把Git想成游戏存档系统：</p>
-<ul>
-  <li>每完成一个稳定功能就保存一个版本</li>
-  <li>做大改动前先新建一个分支</li>
-  <li>改动成功就合并分支，失败就回滚</li>
-</ul>
-<p>这给了你让Codex做大规模改动的信心，而不用担心一个失误需要另一个AI来收拾前一个AI闯的祸。</p>
-<p>Level 2解决"AI忘记自己在做什么"的问题，Level 3解决"AI搞坏了项目怎么办"的问题。有了文档和版本控制，Codex已经能可靠地完成项目。</p>
-
-<h2 id="level-4">Level 4：集成开源生态</h2>
-<p>但如果每个能力都要从零构建，效率仍然太低。这就是Level 4的意义：集成开源生态。</p>
-<p>在这个层级，你可以：</p>
-<ul>
-  <li>把自己的工作流打包成可复用的技能（skills）</li>
-  <li>直接使用社区的现成技能和完整项目</li>
-</ul>
-<p>一个绝佳例子是字节跳动的Deer Flow，我经常用它做研究任务。以前我需要手动搜索信息、筛选结果、对比不同观点、编写报告。现在，我只要提交一个研究主题，Deer Flow就会调用工具和Agent处理整个研究流程并交付最终报告。</p>
-<p>Deer Flow只是一个例子。GitHub上有成千上万的现成技能、Agent框架和开源工具。你甚至不需要理解每一行代码。只需把项目URL发给Codex并让它：</p>
-<pre><code class="language-text">"下载这个项目，让它跑起来，告诉我怎么用"</code></pre>
-<p>Codex会阅读文档、配置环境、解决报错，然后交付一个可用的版本给你。</p>
-<p>在我自己的使用中，我已经调用过超过1000个技能，其中最常用的是"superpowers"。在这个层级，Codex不再只是代码生成器——它能把现有能力直接集成到你的工作流中。</p>
-
-<h2 id="level-5">Level 5：多Agent协作</h2>
-<p>在Level 4，你仍需要逐个调用技能和开源项目。Level 5是多Agent协作：你提交一个最终目标，让Codex自己决定需要调用哪些能力来完成整个任务。</p>
-<p>Level 5把前四个层级整合进一个系统：</p>
-<ol>
-  <li>主Agent先阅读项目文档、用Git管理版本、调用必要的技能和开源工具</li>
-  <li>然后为不同阶段创建专门Agent：
+  <li><strong>创建并导入资源</strong>
     <ul>
-      <li>市场调研Agent</li>
-      <li>需求整理Agent</li>
-      <li>架构设计Agent</li>
-      <li>软件开发Agent</li>
-      <li>质量测试Agent</li>
+      <li>打开IMA知识库管理页面。</li>
+      <li>新建一个知识库（例如“WorkBuddy精通指南”）。</li>
+      <li>上传基础文件（支持PDF、Word、PPT、Excel、TXT等常见格式）。</li>
     </ul>
   </li>
-  <li>这些Agent并行朝同一目标工作</li>
-  <li>最后主Agent汇总结果，把完整项目交付给你</li>
+  <li><strong>开启连接器同步</strong>
+    <ul>
+      <li>回到WorkBuddy主界面。</li>
+      <li>在已添加的连接器列表中找到IMA知识库。</li>
+      <li>打开同步开关，开启实时知识共享。</li>
+    </ul>
+  </li>
 </ol>
-<p>有趣的是，最高层级反而回到更简单的操作。你仍然在聊天框提交任务，但有一个关键区别：</p>
+
+<h2 id="step-2-use">第二步：使用知识库（一个前缀拿到精准答案）</h2>
+
+<p>使用打通后的系统极其简单：只需在提问前加上前缀<strong>“基于IMA知识库”</strong>，WorkBuddy就只会从你上传的资料中检索答案，大幅降低幻觉。</p>
+
+<h3>两种常见使用场景</h3>
+
+<ol>
+  <li><strong>问答互动</strong>
+
+<pre><code class="language-text">基于IMA知识库，请回答：[你的具体问题]</code></pre>
+
+<p>这种格式确保AI基于你的文档给出直接、可核实的答案。</p>
+  </li>
+  <li><strong>创意生成</strong>
+
+<pre><code class="language-text">基于IMA知识库，帮我写一份报告/文章/总结</code></pre>
+
+<p>AI会使用知识库中的真实数据来生成贴合你业务场景的内容。</p>
+  </li>
+</ol>
+
+<h2 id="step-3-update">第三步：更新知识库（持续手动上传，让知识常新）</h2>
+
+<p>搭建知识库不是一次性任务——你需要定期补充新内容，才能让它持续发挥作用。</p>
+
+<h3>更新知识库的3个步骤</h3>
+
+<ol>
+  <li><strong>打开知识库</strong>：登录IMA知识库管理界面，进入想添加内容的目标目录。</li>
+  <li><strong>触发上传</strong>：点击工具栏的“上传”按钮，从电脑中选择本地文件（支持批量上传）。</li>
+  <li><strong>自动解析与存储</strong>：确认所选文件后，系统会自动识别文件格式、提取关键信息并完成解析。新内容会实时同步进知识库。</li>
+</ol>
+
+<h2 id="advanced-closed-loop">高级玩法：双向闭环工作流</h2>
+
+<p>想让知识库更强大，你可以搭建一套双向闭环系统，把AI生成的内容自动存回知识库。</p>
+
+<h3>前置条件</h3>
+
+<p>首先在“连接器”模块中配置IMA知识库API——这是双向数据流通的核心开关。</p>
+
+<h3>实现步骤</h3>
+
+<ol>
+  <li><strong>获取OpenAPI凭证</strong>：打开 <code>https://ima.qq.com/agent-interface</code> 并登录，申请并获取两个值：
+
+<pre><code class="language-text">Client ID
+API Key</code></pre>
+  </li>
+  <li><strong>配置API</strong>：把获取到的API Key发送给IMA技能，完成配置。</li>
+  <li><strong>自动闭环运行</strong>：当WorkBuddy生成内容（如会议纪要、报告或总结）后，你只需直接指示：
+
+<pre><code class="language-text">把这段内容保存为IMA笔记并上传到知识库</code></pre>
+
+<p>AI会自动完成上传，形成闭环：<strong>从知识库检索 → AI处理与生成 → 自动回存知识库</strong>。</p>
+  </li>
+</ol>
+
+<h2 id="more-connectors">更多连接器选项</h2>
+
+<p>除了IMA知识库，WorkBuddy还支持无缝接入多个平台：</p>
+
 <ul>
-  <li>Level 1：一个AI收到请求立即开始生成</li>
-  <li>Level 5：主Agent先理解目标，再组织一整个Agent团队为你工作</li>
+  <li><strong>飞书</strong>：文档消息与多维表格实时同步。</li>
+  <li><strong>腾讯文档</strong>：云文件的直接读写。</li>
+  <li><strong>乐享知识库</strong>：企业内部知识联动。</li>
+  <li><strong>腾讯会议</strong>：会议纪要自动整理与同步。</li>
 </ul>
-<p>我运行的那个16小时连续任务，就是用这种多Agent协作方式完成的，覆盖了从需求分析、市场调研到产品设计、开发和最终交付的全过程。</p>
-<p>Level 5的力量不在于同时运行多少个Agent——而在于你清晰定义最终目标，让系统去拆解它、组织工作、完成整个流程。</p>
+
+<h2 id="important-reminders">重要提醒</h2>
+
+<p>要保持知识库的准确性，请遵循以下最佳实践：</p>
+
+<ol>
+  <li><strong>清理冗余的“数字垃圾”</strong>：定期删除过期、失效或低价值的文档。这些文件不仅占用存储空间，还会影响系统回复的准确度。</li>
+  <li><strong>警惕信息干扰</strong>：知识库中的“噪音”会干扰算法的判断逻辑，可能导致检索结果模糊、答案错误甚至回复不专业。</li>
+  <li><strong>保持知识库“纯净”</strong>：让知识库保持“干净纯粹”是提升回复质量的关键。纯净的知识能让系统锁定有效信息，输出符合你需求的专业答案。</li>
+</ol>
 
 <h2 id="conclusion">结语</h2>
-<p>Level 5似乎回到了起点。你仍然在聊天框提交任务，但提交的内容变了。在Level 1，你提交一条指令。在Level 5，你提交一个完整、定义清晰的目标。</p>
-<p>这就是从demo到生产的旅程：从简单生成出发，经过文档和版本控制，利用开源生态，最终编排整个Agent团队来交付完整项目。</p>
+
+<p>这套打通的用法遵循一个简单的节奏：建立<strong>“每周自查+每月复盘”</strong>机制，让每个业务部门负责清理自己管辖范围内的内容，并为关键信息设置自动过期提醒，从源头保证知识库的“新鲜度”和“纯净度”。</p>
+
+<p>照着本指南操作，你就能把WorkBuddy变成真正个性化的AI助手，让它随着你的知识和业务一起成长。现在就动手搭建你的AI第二大脑吧！</p>
 
 <h2>常见问题</h2>
 
-<h3>为什么大多数用户卡在Level 1？</h3>
-<p>因为Level 1看起来出奇地好。你输入一个任务，Codex几分钟就产出一个漂亮的页面或demo，这感觉就像成功。问题只在复杂时出现：功能不匹配、布局崩坏、以及"改一处小地方导致之前能用代码失效"的回退。Level 1适合一次性demo，但没有文档和版本控制，这些产出很难长成可维护的项目——这正是为什么真正的项目工作至少要达到Level 3。</p>
+<h3>本指南与之前的WorkBuddy + IMA教程有什么区别？</h3>
+<p>之前的教程（<a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">用WorkBuddy + IMA搭建个人AI知识库</a>）重点在安装、连接和内容管理。本指南则把整个流程提炼为三个可复用的步骤——连接、使用、更新——并新增了高级的<strong>双向闭环工作流</strong>：通过配置IMA OpenAPI（Client ID + API Key），AI生成的内容会自动回存到知识库，把它从静态档案变成能自我成长的第二大脑。</p>
 
-<h3>Level 2的三份核心文档是什么？</h3>
-<p>产品需求（产品应该做什么）、软件架构（各部分如何组合）、当前进度（什么做完了、什么待办）。这些文档不用从零写——你让Codex用澄清问题来采访你，然后根据回答生成文档。每次新任务前，Codex会阅读这些文档、起草计划并和你确认。完成后，再把结果同步回进度文档。</p>
+<h3>配置IMA OpenAPI需要编程技能吗？</h3>
+<p>不需要。你只需打开 <code>https://ima.qq.com/agent-interface</code>，用腾讯账号登录，申请<strong>Client ID</strong>和<strong>API Key</strong>，再把API Key发给WorkBuddy中的IMA技能完成配置即可。全程无需写任何代码，闭环由WorkBuddy自动完成。</p>
 
-<h3>为什么Git版本控制是最容易被忽略的一步？</h3>
-<p>因为大多数vibe coder只想着等产品快做完再保存，而那时已经太晚。Git应该在第一个可用版本时就启用。把它当作游戏存档系统：每个稳定功能后提交一次，大改动前开分支，成功就合并、失败就回滚。这个安全网给了你让Codex尝试大规模改动的信心，而不用担心一次失误会引发更多AI返工。</p>
+<h3>IMA知识库可以不依赖WorkBuddy独立使用吗？</h3>
+<p>可以。IMA知识库本身就是腾讯独立推出的AI知识库产品——你可以单独创建知识库、上传文档并直接检索。WorkBuddy只是它的接入渠道之一。这也意味着你的知识库是可迁移的：同样的内容可以在其他支持IMA或OpenAPI的工具中复用。</p>
 
-<h3>Level 1和Level 5的真正区别是什么？</h3>
-<p>Level 1是提交一条指令，一个AI收到后立即开始生成。Level 5是提交一个定义良好的最终目标，主Agent先拆解它——阅读项目文档、管理Git版本、调用开源技能——然后派生专门Agent（市场调研、需求、架构、开发、测试）并行工作。你最终回到聊天框，但提交的内容从提示词变成了完整目标。</p>
+<h3>知识库应该多久更新、清理一次？</h3>
+<p>建议采用<strong>“每周自查+每月复盘”</strong>的节奏：各业务部门每周清理自己管辖的内容，关键信息设置自动过期提醒。请记住，“噪音”会损害检索效果——塞满过期文档的知识库，比一个精炼干净的小知识库返回的答案更模糊。</p>
 
 <div class="next-step">
-  <h3>📖 下一步</h3>
-  <p>想让Codex升级到更高的层级？继续阅读这些指南：</p>
+  <h3>📖 继续学习</h3>
+  <p>想深入打造你的AI第二大脑？继续探索：</p>
   <ul>
-    <li><a href="/article/codex-agent-desktop-jarvis">Codex Agent：你的桌面贾维斯，轻松实现任务自动化</a> — 围绕Codex构建的桌面AI代理，用于日常任务自动化</li>
-    <li><a href="/article/multi-agent-collaboration-architecture">多智能体协作架构：终极版问答工具</a> — Level 5并行Agent团队背后的架构</li>
-    <li><a href="/article/git-github-beginners-guide">Git与GitHub初学者指南：核心概念与操作</a> — 搭建Level 3版本控制基础所需的一切</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">用WorkBuddy + IMA搭建个人AI知识库：完整步骤指南</a> — 涵盖安装、连接与高级提示词的姊妹篇</li>
+    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：一站式AI办公工作台</a> — WorkBuddy的模式、技能与专家团队全景</li>
+    <li><a href="/article/karpathy-ai-knowledge-base-3-folders">构建Karpathy风格的AI知识库：3个文件夹2分钟搭建</a> — 另一套组织AI记忆的互补方法论</li>
   </ul>
 </div>`,
   },
 """
+with open("src/lib/article-content.ts", encoding="utf-8") as f:
+    s = f.read()
+last = s.rfind("};")
+assert last != -1, "article-content.ts: }; marker not found"
+s2 = s[:last] + content + s[last:]
+with open("src/lib/article-content.ts", "w", encoding="utf-8", newline="\n") as f:
+    f.write(s2)
+print("article-content.ts updated")
 
-last = s.rfind('};')
-with open('src/lib/article-content.ts', 'w', encoding='utf-8', newline='\n') as f:
-    f.write(s[:last] + content + '};')
-print('Part 2 done')
-
-print('ALL DONE')
+# ---------------------------------------------------------------------------
+# Part 3: tools.ts — add IMA Knowledge Base
+# ---------------------------------------------------------------------------
+tool = r"""  {
+    id: "ima-knowledge-base",
+    name: "IMA Knowledge Base",
+    nameZh: "腾讯IMA知识库",
+    description: "Tencent's AI knowledge base (a 'second brain') that stores notes, documents, and materials for retrieval-augmented answers, connects natively to WorkBuddy, and exposes an OpenAPI for bidirectional closed-loop sync.",
+    descriptionZh: "腾讯AI知识库（“第二大脑”），存储笔记、文档和资料用于检索增强回答，可原生接入WorkBuddy，并提供OpenAPI支持双向闭环同步。",
+    category: "productivity",
+    tags: ["productivity", "knowledge-base", "rag", "tencent", "second-brain", "china"],
+    difficulty: "beginner",
+    url: "https://ima.qq.com",
+    rating: 4.4,
+    pricing: "Free",
+    useCase: "AI-powered knowledge management — store documents, run hallucination-free Q&A over them, and sync bidirectionally with WorkBuddy and other apps",
+    icon: "🧠",
+    company: "Tencent",
+    companyZh: "腾讯",
+    founded: 1998,
+    headquarters: "Shenzhen, China",
+    descriptionLong: "IMA Knowledge Base is Tencent's AI-powered knowledge management product, often called an AI 'second brain'. It lets you create personal or team knowledge bases, upload documents in common formats (PDF, Word, PPT, Excel, TXT), and run retrieval-augmented Q&A — the AI answers only from your own materials, dramatically reducing hallucinations on personalized or company-specific topics. Beyond standalone use, IMA shines through its integration ecosystem: it connects to WorkBuddy as a native connector (authorize once, then add the 'Based on IMA Knowledge Base' prefix to force document-grounded answers), and it exposes an OpenAPI at ima.qq.com/agent-interface where you can obtain a Client ID and API Key. With the API configured, you can build a bidirectional closed loop — retrieve from the knowledge base, have the AI process and generate (meeting minutes, reports, summaries), and automatically save the output back as new IMA notes. IMA also complements a broader Tencent ecosystem (Feishu, Tencent Docs, Lexiang, Tencent Meeting) via WorkBuddy's connector hub. For Chinese users who want a private, growing knowledge layer for their AI assistants without touching RAG infrastructure, IMA Knowledge Base is the most practical option available.",
+    descriptionLongZh: "IMA知识库是腾讯推出的AI知识管理产品，常被称为AI“第二大脑”。你可以创建个人或团队知识库，上传PDF、Word、PPT、Excel、TXT等常见格式文档，并进行检索增强问答——AI只基于你自己的资料作答，大幅降低在个性化或公司专属话题上的幻觉。除了独立使用，IMA的优势更体现在其集成生态：它可作为原生连接器接入WorkBuddy（授权一次后，提问加“基于IMA知识库”前缀即可强制文档落地式回答），并在ima.qq.com/agent-interface开放OpenAPI，可申请Client ID和API Key。配置API后即可搭建双向闭环——从知识库检索、由AI处理生成（会议纪要、报告、总结）、再把输出自动存回为新的IMA笔记。IMA还能通过WorkBuddy的连接器中心与飞书、腾讯文档、乐享、腾讯会议等更广泛的腾讯生态联动。对于想要给AI助手构建私有、可成长知识层，又不想碰RAG基础设施的中国用户，IMA知识库是目前最实用的选择。",
+    advantages: ["Native WorkBuddy connector with one-click authorization", "Retrieval-augmented answers drastically reduce hallucinations on private topics", "OpenAPI enables a bidirectional closed loop (retrieve → generate → save back)", "Supports common document formats (PDF, Word, PPT, Excel, TXT)", "Free to use with generous Tencent-backed quota"],
+    advantagesZh: ["原生WorkBuddy连接器，一键授权", "检索增强回答大幅降低私有话题幻觉", "OpenAPI支持双向闭环（检索→生成→回存）", "支持PDF/Word/PPT/Excel/TXT等常见格式", "免费使用，腾讯背书额度充足"],
+    useCases: ["Personal knowledge base / AI second brain", "Company-specific document Q&A", "Automatic saving of AI-generated meeting minutes and reports", "Cross-tool knowledge reuse via OpenAPI"],
+    useCasesZh: ["个人知识库/AI第二大脑", "公司专属文档问答", "AI生成的会议纪要、报告自动回存", "通过OpenAPI跨工具复用知识"],
+    targetAudience: "Chinese professionals, content creators, and teams who want a private, always-growing knowledge layer their AI assistants can query without hallucinations.",
+    targetAudienceZh: "想要为AI助手构建私有、可持续成长知识层，且需要低幻觉回答的中国职场人士、内容创作者和团队。",
+    pricingTiers: [
+      {
+        tier: "Free",
+        tierZh: "免费版",
+        price: "Free",
+        features: ["Create unlimited personal knowledge bases", "Document upload and RAG Q&A", "WorkBuddy connector", "OpenAPI access"],
+        featuresZh: ["创建无限个人知识库", "文档上传与RAG问答", "WorkBuddy连接器", "OpenAPI接口"],
+      },
+    ],
+    pros: ["Native integration with WorkBuddy — zero setup friction for Tencent users", "OpenAPI makes a no-code bidirectional knowledge loop possible", "Clean Chinese UI and solid document parsing quality", "Free tier is adequate for personal use"],
+    prosZh: ["与WorkBuddy原生集成——腾讯用户零门槛", "OpenAPI让无代码双向知识闭环成为可能", "中文界面和文档解析质量好", "免费版满足个人使用"],
+    cons: ["Primarily a Chinese-market product", "Requires a Tencent account", "Third-party integration depends on OpenAPI maturity", "Consider data export and lock-in for long-term knowledge"],
+    consZh: ["主要面向中国市场", "需腾讯账号登录", "第三方集成依赖OpenAPI成熟度", "长期知识沉淀需考虑导出与锁定问题"],
+    extensions: [],
+    skills: ["Knowledge management", "RAG Q&A", "Document parsing", "Second brain", "Tencent ecosystem integration"],
+    scene: "office-productivity",
+  },
+"""
+with open("src/lib/tools.ts", encoding="utf-8") as f:
+    s = f.read()
+last = s.rfind("] as Tool[];")
+assert last != -1, "tools.ts: ] as Tool[]; marker not found"
+s2 = s[:last] + tool + s[last:]
+with open("src/lib/tools.ts", "w", encoding="utf-8", newline="\n") as f:
+    f.write(s2)
+print("tools.ts updated")
+print("Done. Article:", SLUG)
