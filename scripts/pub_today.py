@@ -1,25 +1,25 @@
-"""Publish Aug 25, 2026 — 1 article (WorkBuddy + IMA second brain), add IMA Knowledge Base tool."""
+"""Publish Aug 26, 2026 — 1 article (Auto-Evolving AI Knowledge Base), no new tools."""
 import os
 
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-SLUG = "build-ai-second-brain-workbuddy-ima-knowledge-base"
+SLUG = "build-auto-evolving-ai-knowledge-base-hands-on-tutorial"
 
 # ---------------------------------------------------------------------------
 # Part 1: articles.ts
 # ---------------------------------------------------------------------------
 a = r"""  {
-    slug: "build-ai-second-brain-workbuddy-ima-knowledge-base",
-    title: "Step-by-Step Guide: Build Your AI Second Brain with WorkBuddy + IMA Knowledge Base",
-    titleZh: "分步指南：用WorkBuddy + IMA知识库打造你的AI第二大脑",
-    description: "A step-by-step guide to building an AI second brain with WorkBuddy + IMA Knowledge Base. Master three core steps — Connect (authorize and import documents), Use (the 'Based on IMA Knowledge Base' prefix for hallucination-free answers), and Update (keep your knowledge fresh) — plus the advanced bidirectional closed-loop workflow powered by the IMA OpenAPI that auto-saves AI output back into your knowledge base.",
-    descriptionZh: "用WorkBuddy + IMA知识库打造AI“第二大脑”的分步指南。掌握三大核心步骤——连接（授权并导入文档）、使用（“基于IMA知识库”前缀获得低幻觉答案）、更新（保持知识新鲜）——以及基于IMA OpenAPI的双向闭环高级玩法，让AI生成的内容自动回存到知识库。",
+    slug: "build-auto-evolving-ai-knowledge-base-hands-on-tutorial",
+    title: "Hands-On Tutorial: Build an Auto-Evolving AI Knowledge Base",
+    titleZh: "实操教程：搭建自动进化的AI知识库",
+    description: "Build an auto-evolving AI knowledge base that collects, filters, and structures new information on its own. Master the closed-loop workflow — folder-trigger collection, JSON knowledge-sorting agent, API write-back with duplicate skip, and scheduled self-optimization — so your knowledge base grows without manual file uploading.",
+    descriptionZh: "搭建能自动收集、筛选、结构化新信息的自动进化AI知识库。掌握闭环工作流——文件夹触发器收集、JSON知识整理Agent、API写回去重、定时自我优化——让知识库无需手动上传文件也能自我成长。",
     category: "ai-tutorials",
-    tags: ["WorkBuddy", "IMA", "Knowledge Base", "Second Brain", "RAG", "Tencent", "Productivity", "Tutorial"],
+    tags: ["Knowledge Base", "AI Agent", "Automation", "RAG", "Self-Evolving", "Closed Loop", "Workflow", "Tutorial"],
     difficulty: "beginner",
-    toolsMentioned: ["Tencent WorkBuddy", "IMA Knowledge Base"],
-    date: "2026-08-25",
+    toolsMentioned: [],
+    date: "2026-08-26",
   },
 """
 with open("src/lib/articles.ts", encoding="utf-8") as f:
@@ -34,311 +34,355 @@ print("articles.ts updated")
 # ---------------------------------------------------------------------------
 # Part 2: article-content.ts
 # ---------------------------------------------------------------------------
-content = r"""  "build-ai-second-brain-workbuddy-ima-knowledge-base": {
+content = r"""  "build-auto-evolving-ai-knowledge-base-hands-on-tutorial": {
     content: `<div class="meta-banner">
   <span class="meta-badge">📚 AI Tutorials</span>
-  <span class="meta-badge">🕒 7 min read</span>
-  <span class="meta-badge">📅 Aug 25, 2026</span>
+  <span class="meta-badge">🕒 8 min read</span>
+  <span class="meta-badge">📅 Aug 26, 2026</span>
   <span class="meta-badge">🎯 Beginner</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Many users face a common pain point when using WorkBuddy: it excels at answering general questions but struggles with personalized or company-specific content. This tutorial will walk you through integrating WorkBuddy with IMA Knowledge Base to create an AI "second brain" — enabling your assistant to access your private documents and deliver accurate, context-aware responses instead of generic guesses.</p>
+<p>Ordinary AI knowledge bases require you to manually upload files one by one. Once materials are updated, you have to re-upload and re-parse everything. This repetitive work is exhausting. In this tutorial, we will build an <strong>auto-evolving AI knowledge base</strong> — a system that automatically collects new information, sorts out content, adds knowledge entries, and optimizes itself without constant manual file uploading. Even AI-generated outputs can feed back into the knowledge base, forming a self-growing closed-loop system. This guide is made for AI beginners; you can copy-paste the prompts and configurations directly to practice.</p>
 
-<h2 id="three-core-steps">Three Core Steps to Master IMA Knowledge Base</h2>
+<h2 id="core-logic">Core Logic of an Auto-Evolving Knowledge Base</h2>
 
-<p>The process is divided into three simple phases: <strong>Connect, Use, and Update</strong>. You can implement all of them immediately after reading this guide.</p>
+<p>The auto-evolving knowledge base runs on a simple closed-loop workflow:</p>
 
-<h2 id="step-1-connect">Step 1: Connect to IMA Knowledge Base (Build Your Knowledge Library)</h2>
+<blockquote>
+  <p>Collect new information → Filter valid content → Re-organize knowledge entries → Write into knowledge base → AI uses knowledge to generate output → Feed new output back into knowledge base</p>
+</blockquote>
 
-<p>Think of this step as building a dedicated library for your AI. You'll store all your notes, documents, and reference materials here, so the AI can retrieve information directly from these files instead of generating generic responses.</p>
+<p>Instead of humans doing all the import work, the AI agent takes charge of information collection, filtering, and updating. Your job is to set rules and review key results.</p>
 
-<h3>3 Key Operations to Complete the Connection</h3>
+<h2 id="preparation">Preparation Work</h2>
 
-<ol>
-  <li><strong>Authorize the Connection</strong>
-    <ul>
-      <li>Click the "+" button next to the input box in WorkBuddy.</li>
-      <li>Select "Connector" and choose "IMA Knowledge Base".</li>
-      <li>Log in with your account to grant WorkBuddy access permissions.</li>
-    </ul>
-  </li>
-  <li><strong>Create and Import Resources</strong>
-    <ul>
-      <li>Open the IMA Knowledge Base management page.</li>
-      <li>Create a new knowledge base (e.g., "WorkBuddy Mastery Guide").</li>
-      <li>Upload your basic files (supports PDF, Word, PPT, Excel, TXT, and other common formats).</li>
-    </ul>
-  </li>
-  <li><strong>Enable Connector Synchronization</strong>
-    <ul>
-      <li>Return to the main WorkBuddy interface.</li>
-      <li>Find the IMA Knowledge Base connector in the added connectors list.</li>
-      <li>Turn on the synchronization switch to enable real-time knowledge sharing.</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="step-2-use">Step 2: Use the Knowledge Base (One Prefix for Precise Answers)</h2>
-
-<p>Using the integrated system is extremely simple. Just add the prefix <strong>"Based on IMA Knowledge Base"</strong> to your questions, and WorkBuddy will only retrieve answers from your uploaded materials, significantly reducing hallucinations.</p>
-
-<h3>Two Common Usage Scenarios</h3>
+<p>You need an AI Agent platform that supports knowledge bases plus custom skill triggers. Prerequisites:</p>
 
 <ol>
-  <li><strong>Question &amp; Answer Interaction</strong>
-
-<pre><code class="language-text">Based on IMA Knowledge Base, answer: [Your specific question]</code></pre>
-
-<p>This format ensures the AI provides direct, verifiable answers based on your documents.</p>
-  </li>
-  <li><strong>Creative Generation</strong>
-
-<pre><code class="language-text">Based on IMA Knowledge Base, help me write a report/article/summary</code></pre>
-
-<p>The AI will use factual data from your knowledge base to generate content that fits your business scenario.</p>
-  </li>
+  <li>Create an empty knowledge base as your main storage library.</li>
+  <li>Enable the custom agent skill and workflow trigger function.</li>
+  <li>Get your knowledge base API credentials: <code>API-Endpoint</code> and <code>Access-Key</code>.</li>
 </ol>
 
-<h2 id="step-3-update">Step 3: Update the Knowledge Base (Manual Upload for Continuous Improvement)</h2>
+<blockquote>
+  <p>Store your credential variables safely. Never hard-print raw keys in chat windows.</p>
+</blockquote>
 
-<p>Building a knowledge base isn't a one-time task — you need to add new content regularly to keep it useful.</p>
+<pre><code class="language-text">API-Endpoint = "your-knowledge-base-api-url"
+Access-Key = "your-access-key-here"</code></pre>
 
-<h3>3 Steps to Update Your Knowledge Base</h3>
+<h2 id="step-1-collection">Step 1: Configure the Information Collection Source</h2>
+
+<p>Set where your knowledge base obtains new raw materials. Common sources include a local monitoring folder, web page crawling, chat-session output, meeting transcripts, and note-software synchronization.</p>
+
+<p>Take local folder monitoring as a practical example:</p>
 
 <ol>
-  <li><strong>Open the Knowledge Base</strong>: Log in to the IMA Knowledge Base management interface and navigate to the target directory where you want to add content.</li>
-  <li><strong>Trigger the Upload</strong>: Click the "Upload" button in the toolbar and select local files from your computer (supports batch uploads).</li>
-  <li><strong>Automatic Parsing and Storage</strong>: Confirm the selected files — the system will automatically identify file formats, extract key information, and complete parsing. The new content will be synchronized to the knowledge base in real time.</li>
+  <li>Create a dedicated local folder for incoming materials.</li>
+  <li>Turn on the folder-monitoring trigger inside your agent workflow.</li>
+  <li>Set the trigger rule: when new files (<code>.pdf</code>, <code>.txt</code>, <code>.md</code>, <code>.docx</code>) appear in this folder, start the auto-evolution workflow automatically.</li>
 </ol>
 
-<h2 id="advanced-closed-loop">Advanced Play: Bidirectional Closed-Loop Workflow</h2>
+<blockquote>
+  <p>You do not need to manually open the knowledge base and click upload. Just drop new documents into this folder, and the whole process kicks off.</p>
+</blockquote>
 
-<p>To make your knowledge base even more powerful, you can set up a bidirectional closed-loop system that automatically saves AI-generated content back into the knowledge base.</p>
+<h2 id="step-2-filtering-agent">Step 2: Build the Filtering &amp; Knowledge-Sorting Agent Prompt</h2>
 
-<h3>Prerequisite</h3>
+<p>This is the most critical part. The agent reads raw files, throws away junk content, extracts valuable points, and restructures standardized knowledge entries. Paste this prompt block directly into your agent system:</p>
 
-<p>First, configure the IMA Knowledge Base API in the "Connector" module — this is the core switch for bidirectional data flow.</p>
+<pre><code class="language-text">You are the knowledge sorting agent for the auto-evolving knowledge base.
+Task rules:
+1. Read input raw document content. Remove redundant ads, repeated paragraphs, and meaningless noise text.
+2. Split long content into independent knowledge entries. Each entry contains: Title, Tags, Core-Content, Source-Reference.
+3. Tags should be concise keywords for later retrieval. Do not make tags too long.
+4. Do not fabricate facts. All content must come from the original input material.
+5. Output format must strictly follow the JSON structure below, no extra explanatory chat text.
 
-<h3>Implementation Steps</h3>
+Output JSON format:
+{
+  "knowledge_list": [
+    {
+      "title": "knowledge entry title",
+      "tags": ["tag1","tag2"],
+      "core_content": "condensed core information",
+      "source_reference": "file name or web source"
+    }
+  ]
+}</code></pre>
 
-<ol>
-  <li><strong>Get OpenAPI Credentials</strong>: Open <code>https://ima.qq.com/agent-interface</code> and log in. Apply for and obtain two values:
+<p>After parsing finishes, the agent outputs structured JSON knowledge entries, ready to be written into the knowledge base via API.</p>
 
-<pre><code class="language-text">Client ID
-API Key</code></pre>
-  </li>
-  <li><strong>Configure the API</strong>: Send the obtained API Key to the IMA skill to complete the configuration.</li>
-  <li><strong>Automatic Closed-Loop Operation</strong>: After WorkBuddy generates content (such as meeting minutes, reports, or summaries), you can directly instruct it:
+<h2 id="step-3-api-write">Step 3: Automatically Write Entries via API Call</h2>
 
-<pre><code class="language-text">Save this content as an IMA note and upload it to the knowledge base</code></pre>
+<p>Configure the agent API-call node to push the JSON knowledge list into your knowledge base. Sample request payload template:</p>
 
-<p>The AI will automatically complete the upload, forming a closed loop: <strong>Retrieve from Knowledge Base → AI Process &amp; Generate → Auto-Save Back to Knowledge Base</strong>.</p>
-  </li>
-</ol>
-
-<h2 id="more-connectors">More Connector Options</h2>
-
-<p>In addition to IMA Knowledge Base, WorkBuddy supports seamless integration with multiple platforms:</p>
+<pre><code class="language-json">{
+  "knowledge_items": {{knowledge_list}},
+  "overwrite_strategy": "skip_duplicate",
+  "auto_create_tag": true
+}</code></pre>
 
 <ul>
-  <li><strong>Feishu</strong>: Real-time synchronization of document messages and multi-dimensional tables.</li>
-  <li><strong>Tencent Docs</strong>: Direct reading and writing of cloud files.</li>
-  <li><strong>Lexiang Knowledge Base</strong>: Enterprise internal knowledge linkage.</li>
-  <li><strong>Tencent Meeting</strong>: Automatic organization and synchronization of meeting minutes.</li>
+  <li><strong>overwrite_strategy: skip_duplicate</strong> — if the same title and source already exist in the library, skip the import to avoid duplicate knowledge pollution.</li>
+  <li><strong>auto_create_tag</strong> — automatically generate tag categories inside the knowledge base.</li>
 </ul>
 
-<h2 id="important-reminders">Important Reminders</h2>
+<blockquote>
+  <p>Important setting: turn on duplicate detection. Without this switch, repeated similar entries will pile up and reduce AI answer quality.</p>
+</blockquote>
 
-<p>To maintain the accuracy of your knowledge base, follow these best practices:</p>
+<h2 id="step-4-closed-loop">Step 4: Realize Closed-Loop Evolution — Feed AI Output Back</h2>
+
+<p>This step differentiates an auto-evolving knowledge base from a regular static one. Every time your AI finishes answering questions or generates reports/summaries, trigger a secondary workflow.</p>
+
+<p>Trigger instruction you send to the agent:</p>
+
+<pre><code class="language-text">Treat this AI-generated reply as new source material. Run the knowledge-sorting agent prompt, extract valid knowledge points, filter out useless conversational filler content, and write qualified new knowledge entries back to the auto-evolving knowledge base. Skip vague conclusions without factual support.</code></pre>
+
+<p>Workflow logic:</p>
+
+<p><strong>User question → Knowledge base provides reference → AI generates answer → Agent extracts new knowledge points → Append into knowledge base</strong></p>
+
+<p>Now your knowledge base continuously absorbs both external documents and internal AI-produced insights.</p>
+
+<h2 id="step-5-self-optimization">Step 5: Add a Regular Self-Optimization Task</h2>
+
+<p>Set a scheduled cron trigger for a weekly knowledge-base maintenance task. Run this prompt periodically:</p>
+
+<pre><code class="language-text">You are the knowledge-base maintenance agent.
+Read existing entries in the current knowledge base:
+1. Merge highly duplicated knowledge entries.
+2. Mark outdated information and tag it as "obsolete". Do not directly delete for traceability.
+3. Supplement cross-reference links between related knowledge entries.
+4. Output the optimized updated knowledge list, and call the API to apply changes.</code></pre>
+
+<p>This scheduled job keeps your knowledge base clean, prevents information bloat, and maintains query response accuracy.</p>
+
+<h2 id="practical-tips">Practical Usage Tips</h2>
 
 <ol>
-  <li><strong>Clean Up Redundant "Digital Junk"</strong>: Regularly delete expired, invalid, or low-value documents. These files not only occupy storage space but also affect the system's response accuracy.</li>
-  <li><strong>Beware of Information Interference</strong>: "Noise" in the knowledge base can interfere with the algorithm's judgment logic — leading to fuzzy search results, incorrect answers, or even unprofessional responses.</li>
-  <li><strong>Maintain a "Pure" Knowledge Base</strong>: Keeping the knowledge base "clean and pure" is the key to improving response quality. Pure knowledge allows the system to lock in valid information and output professional answers that meet your needs.</li>
+  <li><strong>Watch your input quality</strong>: don't throw messy, unfiltered files into the monitoring folder. The filtering agent can handle noise, but too much garbage input will lower final knowledge quality.</li>
+  <li><strong>Keep duplicate-skip always enabled</strong>: mass duplicates will break retrieval performance.</li>
+  <li><strong>Enable human review for critical knowledge</strong>: new entries will wait for your manual confirmation before being written into the base.</li>
+  <li><strong>Monitor growth speed</strong>: if entries expand extremely fast, check whether your filtering rules are too loose.</li>
 </ol>
 
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="troubleshooting">Common Troubleshooting</h2>
 
-<p>The integration follows a simple rhythm: establish a <strong>"weekly self-check + monthly review"</strong> mechanism, let each business department take responsibility for cleaning up the content under its jurisdiction, and set up automatic expiration reminders for key information to ensure the "freshness" and "purity" of the knowledge base from the source.</p>
+<h3>New files are dropped into the folder, but no new knowledge appears</h3>
+<p>Check the trigger status, verify the API Access-Key validity, and confirm the file format is supported.</p>
 
-<p>By following this guide, you'll transform WorkBuddy into a truly personalized AI assistant that grows with your knowledge and business needs. Start building your AI second brain today!</p>
+<h3>Knowledge entries are too long and messy after auto-parsing</h3>
+<p>Adjust the sorting-agent prompt and strengthen the requirements for the condensed core-content field.</p>
+
+<h3>AI-generated low-quality nonsense is written into the knowledge library</h3>
+<p>Add a stricter rule to the prompt: reject entries without factual support, and turn on human review mode.</p>
+
+<h2 id="conclusion">Final Summary</h2>
+
+<p>A traditional knowledge base is static storage. An auto-evolving AI knowledge base builds a self-reinforcing loop: automatic collection, intelligent filtering, structured parsing, scheduled maintenance, and feeding AI output back to expand your knowledge inventory.</p>
+
+<p>You don't need complex development work. By configuring trigger rules, a sorting-agent prompt, and an API writing node, beginners can deploy this system. Start with small-scale test files first, tune the filtering rules, then expand to full-scale use.</p>
 
 <h2>常见问题</h2>
 
-<h3>What is the difference between this guide and the earlier WorkBuddy + IMA tutorial?</h3>
-<p>The earlier guide (<a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA</a>) focuses on installation, connection, and content management. This guide distills the workflow into three repeatable steps — Connect, Use, Update — and adds the advanced <strong>bidirectional closed-loop workflow</strong>: by configuring the IMA OpenAPI (Client ID + API Key), AI-generated content is automatically saved back into your knowledge base, turning it from a static archive into a self-growing second brain.</p>
+<h3>Do I need to write code to build this system?</h3>
+<p>No. The whole system is driven by configuration and prompts: trigger rules (folder monitoring), a knowledge-sorting agent prompt, and an API-write node with a paste-ready JSON payload. The only "API" work is replacing two credential placeholders and one template field. If your platform supports knowledge-base connectors (like WorkBuddy + IMA Knowledge Base), you can often skip the API entirely.</p>
 
-<h3>Do I need programming skills to set up the IMA OpenAPI?</h3>
-<p>No. You only need to open <code>https://ima.qq.com/agent-interface</code>, log in with your Tencent account, and apply for the <strong>Client ID</strong> and <strong>API Key</strong>. Then send the API Key to the IMA skill in WorkBuddy to complete the configuration. There is no code to write — the entire closed loop is handled by WorkBuddy.</p>
+<h3>Which platforms can I use to build an auto-evolving knowledge base?</h3>
+<p>Any AI Agent platform that supports knowledge bases plus custom skill or workflow triggers. Popular choices include WorkBuddy with IMA Knowledge Base, agent frameworks with built-in KB APIs, and RAG platforms with scheduled jobs. The pattern is platform-agnostic — what matters is that your platform exposes three things: a collection trigger, an agent-prompt slot, and a way to write entries programmatically.</p>
 
-<h3>Can IMA Knowledge Base be used independently of WorkBuddy?</h3>
-<p>Yes. IMA Knowledge Base is Tencent's standalone AI knowledge base product — you can create knowledge bases, upload documents, and query them directly. WorkBuddy is just one of its integration channels. This also means your knowledge base stays portable: the same content can be reused across different tools that support IMA or its OpenAPI.</p>
+<h3>How do I prevent the knowledge base from being polluted with low-quality content?</h3>
+<p>Use three layers of protection: (1) keep duplicate detection on so repeated entries never pile up; (2) strengthen the sorting-agent prompt — demand condensed core-content, require factual grounding, and reject vague conclusions; (3) turn on the human-review switch for critical business knowledge so new entries wait for your confirmation before being written.</p>
 
-<h3>How often should I update and clean my knowledge base?</h3>
-<p>Adopt a <strong>"weekly self-check + monthly review"</strong> rhythm: each business department cleans the content under its jurisdiction weekly, and key information gets automatic expiration reminders. Remember that "noise" hurts retrieval — an overstuffed knowledge base with expired documents returns fuzzier answers than a small, clean one.</p>
+<h3>What's the difference between this and a static knowledge base?</h3>
+<p>A static knowledge base only answers from files you manually upload and re-upload. An auto-evolving knowledge base closes the loop: it collects new materials by trigger, filters and structures them into entries automatically, and even feeds AI-generated output back in — then runs scheduled maintenance to merge duplicates and mark obsolete content. It grows and cleans itself, which is the entire point.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Want to go deeper with your AI second brain? Keep exploring:</p>
+  <p>Want to go deeper with AI knowledge bases? Keep exploring:</p>
   <ul>
-    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA: A Step-by-Step Guide</a> — the companion guide covering installation, connection, and advanced prompts</li>
-    <li><a href="/article/tencent-workbuddy-ai-office-workbench">Tencent WorkBuddy: AI Office Workbench</a> — a full overview of WorkBuddy's modes, skills, and expert teams</li>
-    <li><a href="/article/karpathy-ai-knowledge-base-3-folders">Build a Karpathy-Style AI Knowledge Base: A 2-Minute Setup with Just 3 Folders</a> — a complementary philosophy for organizing what your AI remembers</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA: A Step-by-Step Guide</a> — set up a concrete WorkBuddy + IMA knowledge base first</li>
+    <li><a href="/article/build-ai-second-brain-workbuddy-ima-knowledge-base">Step-by-Step Guide: Build Your AI Second Brain with WorkBuddy + IMA Knowledge Base</a> — add the bidirectional closed loop to your knowledge system</li>
+    <li><a href="/article/why-99-percent-ai-knowledge-bases-fail-in-practice">Why 99% of AI Knowledge Bases Fail in Practice</a> — avoid the common RAG pitfalls that kill knowledge-base quality</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
   <span class="meta-badge">📚 AI 教程</span>
-  <span class="meta-badge">🕒 阅读约7分钟</span>
-  <span class="meta-badge">📅 2026年8月25日</span>
+  <span class="meta-badge">🕒 阅读约8分钟</span>
+  <span class="meta-badge">📅 2026年8月26日</span>
   <span class="meta-badge">🎯 入门</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>许多用户在使用WorkBuddy时都会遇到一个共同的痛点：它能出色地回答通用问题，但在涉及个性化或公司专属内容时却力不从心。本教程将带你将WorkBuddy与IMA知识库打通，打造一个AI“第二大脑”——让助手能够访问你的私有文档，输出准确、贴合上下文的答案，而不是泛泛而谈的猜测。</p>
+<p>普通的AI知识库需要你一个一个手动上传文件。一旦资料更新，又要重新上传、重新解析，重复劳动让人疲惫。本教程中，我们将搭建一个<strong>自动进化的AI知识库</strong>——它能自动收集新信息、梳理内容、添加知识条目并自我优化，无需频繁手动上传文件。甚至AI生成的输出也能反馈回知识库，形成自我成长的闭环系统。本指南面向AI初学者，提示词和配置都可以直接复制粘贴练习。</p>
 
-<h2 id="three-core-steps">掌握IMA知识库的三大核心步骤</h2>
+<h2 id="core-logic">自进化知识库的核心逻辑</h2>
 
-<p>整个流程被拆分为三个简单阶段：<strong>连接、使用、更新</strong>。读完本指南，你就能立刻上手全部三步。</p>
+<p>自进化知识库运行在一个简单的闭环工作流之上：</p>
 
-<h2 id="step-1-connect">第一步：连接IMA知识库（搭建你的知识图书馆）</h2>
+<blockquote>
+  <p>收集新信息 → 筛选有效内容 → 重新组织知识条目 → 写入知识库 → AI使用知识生成输出 → 新输出反馈回知识库</p>
+</blockquote>
 
-<p>把这一步想象成给AI建一座专属图书馆。把笔记、文档和参考资料全部存放于此，AI就能直接从这些文件中检索信息，而不是生成泛泛的通用回复。</p>
+<p>导入工作不再由人类完成，而是由AI Agent负责信息收集、筛选和更新。你的工作只是设定规则并审核关键结果。</p>
 
-<h3>完成连接的3个关键操作</h3>
+<h2 id="preparation">准备工作</h2>
 
-<ol>
-  <li><strong>授权连接</strong>
-    <ul>
-      <li>点击WorkBuddy输入框旁的“+”按钮。</li>
-      <li>选择“连接器”，再选择“IMA知识库”。</li>
-      <li>登录你的账号，授予WorkBuddy访问权限。</li>
-    </ul>
-  </li>
-  <li><strong>创建并导入资源</strong>
-    <ul>
-      <li>打开IMA知识库管理页面。</li>
-      <li>新建一个知识库（例如“WorkBuddy精通指南”）。</li>
-      <li>上传基础文件（支持PDF、Word、PPT、Excel、TXT等常见格式）。</li>
-    </ul>
-  </li>
-  <li><strong>开启连接器同步</strong>
-    <ul>
-      <li>回到WorkBuddy主界面。</li>
-      <li>在已添加的连接器列表中找到IMA知识库。</li>
-      <li>打开同步开关，开启实时知识共享。</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="step-2-use">第二步：使用知识库（一个前缀拿到精准答案）</h2>
-
-<p>使用打通后的系统极其简单：只需在提问前加上前缀<strong>“基于IMA知识库”</strong>，WorkBuddy就只会从你上传的资料中检索答案，大幅降低幻觉。</p>
-
-<h3>两种常见使用场景</h3>
+<p>你需要一个支持知识库+自定义技能触发的AI Agent平台。前置条件：</p>
 
 <ol>
-  <li><strong>问答互动</strong>
-
-<pre><code class="language-text">基于IMA知识库，请回答：[你的具体问题]</code></pre>
-
-<p>这种格式确保AI基于你的文档给出直接、可核实的答案。</p>
-  </li>
-  <li><strong>创意生成</strong>
-
-<pre><code class="language-text">基于IMA知识库，帮我写一份报告/文章/总结</code></pre>
-
-<p>AI会使用知识库中的真实数据来生成贴合你业务场景的内容。</p>
-  </li>
+  <li>创建一个空知识库作为你的主存储库。</li>
+  <li>开启自定义Agent技能和工作流触发功能。</li>
+  <li>获取你的知识库API凭证：<code>API-Endpoint</code> 和 <code>Access-Key</code>。</li>
 </ol>
 
-<h2 id="step-3-update">第三步：更新知识库（持续手动上传，让知识常新）</h2>
+<blockquote>
+  <p>请安全保存你的凭证变量。切勿在聊天窗口中明文打印原始密钥。</p>
+</blockquote>
 
-<p>搭建知识库不是一次性任务——你需要定期补充新内容，才能让它持续发挥作用。</p>
+<pre><code class="language-text">API-Endpoint = "你的知识库API地址"
+Access-Key = "你的访问密钥"</code></pre>
 
-<h3>更新知识库的3个步骤</h3>
+<h2 id="step-1-collection">第一步：配置信息收集源</h2>
+
+<p>设定知识库获取新原料的渠道。常见来源包括：本地监控文件夹、网页爬取、会话输出、会议转写、笔记软件同步。</p>
+
+<p>以本地文件夹监控为例：</p>
 
 <ol>
-  <li><strong>打开知识库</strong>：登录IMA知识库管理界面，进入想添加内容的目标目录。</li>
-  <li><strong>触发上传</strong>：点击工具栏的“上传”按钮，从电脑中选择本地文件（支持批量上传）。</li>
-  <li><strong>自动解析与存储</strong>：确认所选文件后，系统会自动识别文件格式、提取关键信息并完成解析。新内容会实时同步进知识库。</li>
+  <li>创建一个专门的本地文件夹存放待入库材料。</li>
+  <li>在Agent工作流中开启文件夹监控触发器。</li>
+  <li>设置触发规则：当该文件夹出现新文件（<code>.pdf</code>、<code>.txt</code>、<code>.md</code>、<code>.docx</code>）时，自动启动自进化工作流。</li>
 </ol>
 
-<h2 id="advanced-closed-loop">高级玩法：双向闭环工作流</h2>
+<blockquote>
+  <p>你无需手动打开知识库点击上传。只要把新文档丢进这个文件夹，整个流程就会自动启动。</p>
+</blockquote>
 
-<p>想让知识库更强大，你可以搭建一套双向闭环系统，把AI生成的内容自动存回知识库。</p>
+<h2 id="step-2-filtering-agent">第二步：构建筛选与知识整理Agent提示词</h2>
 
-<h3>前置条件</h3>
+<p>这是最关键的一步。Agent会读取原始文件、丢弃垃圾内容、提取有价值要点，并重构为标准化的知识条目。把这段提示词直接粘贴进你的Agent系统：</p>
 
-<p>首先在“连接器”模块中配置IMA知识库API——这是双向数据流通的核心开关。</p>
+<pre><code class="language-text">你是自进化知识库的知识整理Agent。
+任务规则：
+1. 读取输入的原始文档内容，删除冗余广告、重复段落和无意义的噪音文本。
+2. 将长内容拆分为独立的知识条目。每个条目包含：标题、标签、核心内容、来源引用。
+3. 标签应使用简洁关键词，便于后续检索，不要太长。
+4. 不得编造事实。所有内容必须来自原始输入材料。
+5. 输出格式必须严格遵循下方JSON结构，不要附带额外解释性聊天文本。
 
-<h3>实现步骤</h3>
+输出JSON格式：
+{
+  "knowledge_list": [
+    {
+      "title": "知识条目标题",
+      "tags": ["标签1","标签2"],
+      "core_content": "凝练的核心信息",
+      "source_reference": "文件名或网页来源"
+    }
+  ]
+}</code></pre>
 
-<ol>
-  <li><strong>获取OpenAPI凭证</strong>：打开 <code>https://ima.qq.com/agent-interface</code> 并登录，申请并获取两个值：
+<p>解析完成后，Agent输出结构化的JSON知识条目，即可通过API写入知识库。</p>
 
-<pre><code class="language-text">Client ID
-API Key</code></pre>
-  </li>
-  <li><strong>配置API</strong>：把获取到的API Key发送给IMA技能，完成配置。</li>
-  <li><strong>自动闭环运行</strong>：当WorkBuddy生成内容（如会议纪要、报告或总结）后，你只需直接指示：
+<h2 id="step-3-api-write">第三步：通过API调用自动写入条目</h2>
 
-<pre><code class="language-text">把这段内容保存为IMA笔记并上传到知识库</code></pre>
+<p>配置Agent的API调用节点，把JSON知识列表推入知识库。请求负载模板示例：</p>
 
-<p>AI会自动完成上传，形成闭环：<strong>从知识库检索 → AI处理与生成 → 自动回存知识库</strong>。</p>
-  </li>
-</ol>
-
-<h2 id="more-connectors">更多连接器选项</h2>
-
-<p>除了IMA知识库，WorkBuddy还支持无缝接入多个平台：</p>
+<pre><code class="language-json">{
+  "knowledge_items": {{knowledge_list}},
+  "overwrite_strategy": "skip_duplicate",
+  "auto_create_tag": true
+}</code></pre>
 
 <ul>
-  <li><strong>飞书</strong>：文档消息与多维表格实时同步。</li>
-  <li><strong>腾讯文档</strong>：云文件的直接读写。</li>
-  <li><strong>乐享知识库</strong>：企业内部知识联动。</li>
-  <li><strong>腾讯会议</strong>：会议纪要自动整理与同步。</li>
+  <li><strong>overwrite_strategy: skip_duplicate</strong>——如果库中已存在相同标题与来源，则跳过导入，避免重复知识污染。</li>
+  <li><strong>auto_create_tag</strong>——在知识库内自动生成标签分类。</li>
 </ul>
 
-<h2 id="important-reminders">重要提醒</h2>
+<blockquote>
+  <p>重要设置：务必开启去重检测。没有这个开关，相似的重复条目会不断堆积，拉低AI回答质量。</p>
+</blockquote>
 
-<p>要保持知识库的准确性，请遵循以下最佳实践：</p>
+<h2 id="step-4-closed-loop">第四步：实现闭环进化——将AI输出反馈回知识库</h2>
+
+<p>这一步是自进化知识库与普通静态知识库的本质区别。每次AI完成问题回答或生成报告/总结后，触发一个次级工作流。</p>
+
+<p>发给Agent的触发指令：</p>
+
+<pre><code class="language-text">把这段AI生成的回复当作新的源材料。运行知识整理Agent提示词，提取有效的知识要点，过滤掉无用的对话填充内容，把合格的新知识条目写回自进化知识库。跳过没有事实依据的模糊结论。</code></pre>
+
+<p>工作流逻辑：</p>
+
+<p><strong>用户提问 → 知识库提供参考 → AI生成答案 → Agent从答案中提取新知识点 → 追加进知识库</strong></p>
+
+<p>现在，你的知识库能持续吸收外部文档和内部AI产出的洞见。</p>
+
+<h2 id="step-5-self-optimization">第五步：添加定期自我优化任务</h2>
+
+<p>设置定时cron触发，执行每周的知识库维护任务。定期运行这段提示词：</p>
+
+<pre><code class="language-text">你是知识库维护Agent。
+读取当前知识库中的现有条目：
+1. 合并高度重复的知识条目。
+2. 标记过期信息并打上"obsolete"标签，为了可追溯性不要直接删除。
+3. 为相关条目之间补充交叉引用链接。
+4. 输出优化后的知识列表，并调用API应用变更。</code></pre>
+
+<p>这个定时任务能让知识库保持整洁、防止信息膨胀，并维持查询回答的准确性。</p>
+
+<h2 id="practical-tips">实用使用技巧</h2>
 
 <ol>
-  <li><strong>清理冗余的“数字垃圾”</strong>：定期删除过期、失效或低价值的文档。这些文件不仅占用存储空间，还会影响系统回复的准确度。</li>
-  <li><strong>警惕信息干扰</strong>：知识库中的“噪音”会干扰算法的判断逻辑，可能导致检索结果模糊、答案错误甚至回复不专业。</li>
-  <li><strong>保持知识库“纯净”</strong>：让知识库保持“干净纯粹”是提升回复质量的关键。纯净的知识能让系统锁定有效信息，输出符合你需求的专业答案。</li>
+  <li><strong>把好输入关</strong>：不要往监控文件夹里丢杂乱未过滤的文件。筛选Agent能处理噪音，但太多垃圾输入会拉低最终的知识质量。</li>
+  <li><strong>始终开启去重跳过</strong>：海量重复会破坏检索性能。</li>
+  <li><strong>关键业务知识开启人工审核</strong>：新条目会等待你手动确认后才写入知识库。</li>
+  <li><strong>监控知识增长速度</strong>：如果条目膨胀极快，检查筛选规则是否过于宽松。</li>
 </ol>
 
-<h2 id="conclusion">结语</h2>
+<h2 id="troubleshooting">常见问题排查</h2>
 
-<p>这套打通的用法遵循一个简单的节奏：建立<strong>“每周自查+每月复盘”</strong>机制，让每个业务部门负责清理自己管辖范围内的内容，并为关键信息设置自动过期提醒，从源头保证知识库的“新鲜度”和“纯净度”。</p>
+<h3>文件已丢入文件夹，但没有新知识出现</h3>
+<p>检查触发状态、验证API Access-Key是否有效、确认文件格式受支持。</p>
 
-<p>照着本指南操作，你就能把WorkBuddy变成真正个性化的AI助手，让它随着你的知识和业务一起成长。现在就动手搭建你的AI第二大脑吧！</p>
+<h3>自动解析后知识条目过长且杂乱</h3>
+<p>调整整理Agent提示词，强化对core-content核心内容字段凝练程度的要求。</p>
+
+<h3>AI生成的低质量废话被写进了知识库</h3>
+<p>在提示词中增加更严格的规则：拒绝没有事实依据的条目；开启人工审核模式。</p>
+
+<h2 id="conclusion">总结</h2>
+
+<p>传统知识库是静态存储。自动进化的AI知识库则构建了一条自我强化的闭环：自动收集、智能筛选、结构化解析、定时维护，以及把AI输出反馈回来扩充知识库存。</p>
+
+<p>你不需要复杂的开发工作。通过配置触发规则、整理Agent提示词和API写入节点，初学者就能部署这套系统。先用小规模测试文件起步，调好筛选规则，再扩展到全量使用。</p>
 
 <h2>常见问题</h2>
 
-<h3>本指南与之前的WorkBuddy + IMA教程有什么区别？</h3>
-<p>之前的教程（<a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">用WorkBuddy + IMA搭建个人AI知识库</a>）重点在安装、连接和内容管理。本指南则把整个流程提炼为三个可复用的步骤——连接、使用、更新——并新增了高级的<strong>双向闭环工作流</strong>：通过配置IMA OpenAPI（Client ID + API Key），AI生成的内容会自动回存到知识库，把它从静态档案变成能自我成长的第二大脑。</p>
+<h3>搭建这套系统需要写代码吗？</h3>
+<p>不需要。整个系统由配置和提示词驱动：触发规则（文件夹监控）、知识整理Agent提示词、以及带现成JSON负载的API写入节点。所谓的"API"工作只是替换两个凭证占位符和一个模板字段。如果你的平台支持知识库连接器（如WorkBuddy + IMA知识库），甚至可以完全跳过API。</p>
 
-<h3>配置IMA OpenAPI需要编程技能吗？</h3>
-<p>不需要。你只需打开 <code>https://ima.qq.com/agent-interface</code>，用腾讯账号登录，申请<strong>Client ID</strong>和<strong>API Key</strong>，再把API Key发给WorkBuddy中的IMA技能完成配置即可。全程无需写任何代码，闭环由WorkBuddy自动完成。</p>
+<h3>可以用哪些平台搭建自进化知识库？</h3>
+<p>任何支持知识库+自定义技能或工作流触发的AI Agent平台都可以。常见选择包括：WorkBuddy + IMA知识库、内置KB API的Agent框架、支持定时任务的RAG平台。这套模式与平台无关——关键在于你的平台要能暴露三样东西：收集触发器、Agent提示词槽位、程序化写入条目的途径。</p>
 
-<h3>IMA知识库可以不依赖WorkBuddy独立使用吗？</h3>
-<p>可以。IMA知识库本身就是腾讯独立推出的AI知识库产品——你可以单独创建知识库、上传文档并直接检索。WorkBuddy只是它的接入渠道之一。这也意味着你的知识库是可迁移的：同样的内容可以在其他支持IMA或OpenAPI的工具中复用。</p>
+<h3>如何防止低质量内容污染知识库？</h3>
+<p>用三层防护：(1) 始终开启去重检测，让重复条目无法堆积；(2) 强化整理Agent提示词——要求凝练的核心内容、强制事实依据、拒绝模糊结论；(3) 对关键业务知识开启人工审核开关，让新条目先等待你的确认再写入。</p>
 
-<h3>知识库应该多久更新、清理一次？</h3>
-<p>建议采用<strong>“每周自查+每月复盘”</strong>的节奏：各业务部门每周清理自己管辖的内容，关键信息设置自动过期提醒。请记住，“噪音”会损害检索效果——塞满过期文档的知识库，比一个精炼干净的小知识库返回的答案更模糊。</p>
+<h3>它和静态知识库有什么区别？</h3>
+<p>静态知识库只能回答你手动上传并反复更新的文件。自进化知识库则打通了闭环：通过触发器自动收集新材料、自动筛选并结构化知识条目、甚至把AI生成的输出反馈回库——再运行定时维护去重和标记过期内容。它会自我成长和自我清理，这正是它的核心价值。</p>
 
 <div class="next-step">
   <h3>📖 继续学习</h3>
-  <p>想深入打造你的AI第二大脑？继续探索：</p>
+  <p>想深入了解AI知识库？继续探索：</p>
   <ul>
-    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">用WorkBuddy + IMA搭建个人AI知识库：完整步骤指南</a> — 涵盖安装、连接与高级提示词的姊妹篇</li>
-    <li><a href="/article/tencent-workbuddy-ai-office-workbench">腾讯WorkBuddy：一站式AI办公工作台</a> — WorkBuddy的模式、技能与专家团队全景</li>
-    <li><a href="/article/karpathy-ai-knowledge-base-3-folders">构建Karpathy风格的AI知识库：3个文件夹2分钟搭建</a> — 另一套组织AI记忆的互补方法论</li>
+    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">用WorkBuddy + IMA搭建个人AI知识库：完整步骤指南</a> — 先搭好一个具体的WorkBuddy + IMA知识库</li>
+    <li><a href="/article/build-ai-second-brain-workbuddy-ima-knowledge-base">分步指南：用WorkBuddy + IMA知识库打造你的AI第二大脑</a> — 为你的知识系统加上双向闭环</li>
+    <li><a href="/article/why-99-percent-ai-knowledge-bases-fail-in-practice">为什么99%的AI知识库在实践中失败</a> — 避开拖垮知识库质量的常见RAG陷阱</li>
   </ul>
 </div>`,
   },
@@ -351,60 +395,4 @@ s2 = s[:last] + content + s[last:]
 with open("src/lib/article-content.ts", "w", encoding="utf-8", newline="\n") as f:
     f.write(s2)
 print("article-content.ts updated")
-
-# ---------------------------------------------------------------------------
-# Part 3: tools.ts — add IMA Knowledge Base
-# ---------------------------------------------------------------------------
-tool = r"""  {
-    id: "ima-knowledge-base",
-    name: "IMA Knowledge Base",
-    nameZh: "腾讯IMA知识库",
-    description: "Tencent's AI knowledge base (a 'second brain') that stores notes, documents, and materials for retrieval-augmented answers, connects natively to WorkBuddy, and exposes an OpenAPI for bidirectional closed-loop sync.",
-    descriptionZh: "腾讯AI知识库（“第二大脑”），存储笔记、文档和资料用于检索增强回答，可原生接入WorkBuddy，并提供OpenAPI支持双向闭环同步。",
-    category: "productivity",
-    tags: ["productivity", "knowledge-base", "rag", "tencent", "second-brain", "china"],
-    difficulty: "beginner",
-    url: "https://ima.qq.com",
-    rating: 4.4,
-    pricing: "Free",
-    useCase: "AI-powered knowledge management — store documents, run hallucination-free Q&A over them, and sync bidirectionally with WorkBuddy and other apps",
-    icon: "🧠",
-    company: "Tencent",
-    companyZh: "腾讯",
-    founded: 1998,
-    headquarters: "Shenzhen, China",
-    descriptionLong: "IMA Knowledge Base is Tencent's AI-powered knowledge management product, often called an AI 'second brain'. It lets you create personal or team knowledge bases, upload documents in common formats (PDF, Word, PPT, Excel, TXT), and run retrieval-augmented Q&A — the AI answers only from your own materials, dramatically reducing hallucinations on personalized or company-specific topics. Beyond standalone use, IMA shines through its integration ecosystem: it connects to WorkBuddy as a native connector (authorize once, then add the 'Based on IMA Knowledge Base' prefix to force document-grounded answers), and it exposes an OpenAPI at ima.qq.com/agent-interface where you can obtain a Client ID and API Key. With the API configured, you can build a bidirectional closed loop — retrieve from the knowledge base, have the AI process and generate (meeting minutes, reports, summaries), and automatically save the output back as new IMA notes. IMA also complements a broader Tencent ecosystem (Feishu, Tencent Docs, Lexiang, Tencent Meeting) via WorkBuddy's connector hub. For Chinese users who want a private, growing knowledge layer for their AI assistants without touching RAG infrastructure, IMA Knowledge Base is the most practical option available.",
-    descriptionLongZh: "IMA知识库是腾讯推出的AI知识管理产品，常被称为AI“第二大脑”。你可以创建个人或团队知识库，上传PDF、Word、PPT、Excel、TXT等常见格式文档，并进行检索增强问答——AI只基于你自己的资料作答，大幅降低在个性化或公司专属话题上的幻觉。除了独立使用，IMA的优势更体现在其集成生态：它可作为原生连接器接入WorkBuddy（授权一次后，提问加“基于IMA知识库”前缀即可强制文档落地式回答），并在ima.qq.com/agent-interface开放OpenAPI，可申请Client ID和API Key。配置API后即可搭建双向闭环——从知识库检索、由AI处理生成（会议纪要、报告、总结）、再把输出自动存回为新的IMA笔记。IMA还能通过WorkBuddy的连接器中心与飞书、腾讯文档、乐享、腾讯会议等更广泛的腾讯生态联动。对于想要给AI助手构建私有、可成长知识层，又不想碰RAG基础设施的中国用户，IMA知识库是目前最实用的选择。",
-    advantages: ["Native WorkBuddy connector with one-click authorization", "Retrieval-augmented answers drastically reduce hallucinations on private topics", "OpenAPI enables a bidirectional closed loop (retrieve → generate → save back)", "Supports common document formats (PDF, Word, PPT, Excel, TXT)", "Free to use with generous Tencent-backed quota"],
-    advantagesZh: ["原生WorkBuddy连接器，一键授权", "检索增强回答大幅降低私有话题幻觉", "OpenAPI支持双向闭环（检索→生成→回存）", "支持PDF/Word/PPT/Excel/TXT等常见格式", "免费使用，腾讯背书额度充足"],
-    useCases: ["Personal knowledge base / AI second brain", "Company-specific document Q&A", "Automatic saving of AI-generated meeting minutes and reports", "Cross-tool knowledge reuse via OpenAPI"],
-    useCasesZh: ["个人知识库/AI第二大脑", "公司专属文档问答", "AI生成的会议纪要、报告自动回存", "通过OpenAPI跨工具复用知识"],
-    targetAudience: "Chinese professionals, content creators, and teams who want a private, always-growing knowledge layer their AI assistants can query without hallucinations.",
-    targetAudienceZh: "想要为AI助手构建私有、可持续成长知识层，且需要低幻觉回答的中国职场人士、内容创作者和团队。",
-    pricingTiers: [
-      {
-        tier: "Free",
-        tierZh: "免费版",
-        price: "Free",
-        features: ["Create unlimited personal knowledge bases", "Document upload and RAG Q&A", "WorkBuddy connector", "OpenAPI access"],
-        featuresZh: ["创建无限个人知识库", "文档上传与RAG问答", "WorkBuddy连接器", "OpenAPI接口"],
-      },
-    ],
-    pros: ["Native integration with WorkBuddy — zero setup friction for Tencent users", "OpenAPI makes a no-code bidirectional knowledge loop possible", "Clean Chinese UI and solid document parsing quality", "Free tier is adequate for personal use"],
-    prosZh: ["与WorkBuddy原生集成——腾讯用户零门槛", "OpenAPI让无代码双向知识闭环成为可能", "中文界面和文档解析质量好", "免费版满足个人使用"],
-    cons: ["Primarily a Chinese-market product", "Requires a Tencent account", "Third-party integration depends on OpenAPI maturity", "Consider data export and lock-in for long-term knowledge"],
-    consZh: ["主要面向中国市场", "需腾讯账号登录", "第三方集成依赖OpenAPI成熟度", "长期知识沉淀需考虑导出与锁定问题"],
-    extensions: [],
-    skills: ["Knowledge management", "RAG Q&A", "Document parsing", "Second brain", "Tencent ecosystem integration"],
-    scene: "office-productivity",
-  },
-"""
-with open("src/lib/tools.ts", encoding="utf-8") as f:
-    s = f.read()
-last = s.rfind("] as Tool[];")
-assert last != -1, "tools.ts: ] as Tool[]; marker not found"
-s2 = s[:last] + tool + s[last:]
-with open("src/lib/tools.ts", "w", encoding="utf-8", newline="\n") as f:
-    f.write(s2)
-print("tools.ts updated")
 print("Done. Article:", SLUG)

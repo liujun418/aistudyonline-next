@@ -3146,4 +3146,16 @@ export const articles: Article[] = [
     toolsMentioned: ["Tencent WorkBuddy", "IMA Knowledge Base"],
     date: "2026-08-25",
   },
+  {
+    slug: "build-auto-evolving-ai-knowledge-base-hands-on-tutorial",
+    title: "Hands-On Tutorial: Build an Auto-Evolving AI Knowledge Base",
+    titleZh: "实操教程：搭建自动进化的AI知识库",
+    description: "Build an auto-evolving AI knowledge base that collects, filters, and structures new information on its own. Master the closed-loop workflow — folder-trigger collection, JSON knowledge-sorting agent, API write-back with duplicate skip, and scheduled self-optimization — so your knowledge base grows without manual file uploading.",
+    descriptionZh: "搭建能自动收集、筛选、结构化新信息的自动进化AI知识库。掌握闭环工作流——文件夹触发器收集、JSON知识整理Agent、API写回去重、定时自我优化——让知识库无需手动上传文件也能自我成长。",
+    category: "ai-tutorials",
+    tags: ["Knowledge Base", "AI Agent", "Automation", "RAG", "Self-Evolving", "Closed Loop", "Workflow", "Tutorial"],
+    difficulty: "beginner",
+    toolsMentioned: [],
+    date: "2026-08-26",
+  },
 ];
