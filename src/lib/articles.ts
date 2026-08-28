@@ -3158,4 +3158,16 @@ export const articles: Article[] = [
     toolsMentioned: [],
     date: "2026-08-26",
   },
+  {
+    slug: "how-to-choose-right-agent-architecture-7-mainstream",
+    title: "How to Choose the Right Agent Architecture: 7 Mainstream Architectures from Lightweight to Enterprise-Grade",
+    titleZh: "如何选择正确的Agent架构：从轻量到企业级的7大主流架构",
+    description: "80% of teams pick ReAct or Multi-Agent just because those are the only two they've heard of. This decision guide builds a coordinate system for choosing among 7 mainstream agent architectures — Single Agent, ReAct, Plan and Execute, Multi-Agent, Route + Skill, Blackboard, and Graph Workflow — covering the pros, cons, and fit of each, plus the full evolution line from lightweight to enterprise-grade.",
+    descriptionZh: "80%的团队选择ReAct或多Agent，仅仅因为只听说过这两个。本决策指南建立一套坐标系，帮助你在7大主流Agent架构——单Agent、ReAct、计划与执行、多Agent、路由+技能、黑板、图工作流——中做出选择，涵盖各自优缺点与适用场景，以及从轻量到企业级的完整演进线。",
+    category: "ai-comparisons",
+    tags: ["AI Agent", "Architecture", "ReAct", "Multi-Agent", "Route Skill", "Graph Workflow", "Blackboard", "Enterprise"],
+    difficulty: "intermediate",
+    toolsMentioned: [],
+    date: "2026-08-28",
+  },
 ];

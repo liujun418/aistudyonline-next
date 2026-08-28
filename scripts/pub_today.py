@@ -1,25 +1,25 @@
-"""Publish Aug 26, 2026 — 1 article (Auto-Evolving AI Knowledge Base), no new tools."""
+"""Publish Aug 28, 2026 — 1 article (7 Agent Architectures decision guide), no new tools."""
 import os
 
 BASE = r"C:\Users\jun\aistudyonline-next"
 os.chdir(BASE)
 
-SLUG = "build-auto-evolving-ai-knowledge-base-hands-on-tutorial"
+SLUG = "how-to-choose-right-agent-architecture-7-mainstream"
 
 # ---------------------------------------------------------------------------
 # Part 1: articles.ts
 # ---------------------------------------------------------------------------
 a = r"""  {
-    slug: "build-auto-evolving-ai-knowledge-base-hands-on-tutorial",
-    title: "Hands-On Tutorial: Build an Auto-Evolving AI Knowledge Base",
-    titleZh: "实操教程：搭建自动进化的AI知识库",
-    description: "Build an auto-evolving AI knowledge base that collects, filters, and structures new information on its own. Master the closed-loop workflow — folder-trigger collection, JSON knowledge-sorting agent, API write-back with duplicate skip, and scheduled self-optimization — so your knowledge base grows without manual file uploading.",
-    descriptionZh: "搭建能自动收集、筛选、结构化新信息的自动进化AI知识库。掌握闭环工作流——文件夹触发器收集、JSON知识整理Agent、API写回去重、定时自我优化——让知识库无需手动上传文件也能自我成长。",
-    category: "ai-tutorials",
-    tags: ["Knowledge Base", "AI Agent", "Automation", "RAG", "Self-Evolving", "Closed Loop", "Workflow", "Tutorial"],
-    difficulty: "beginner",
+    slug: "how-to-choose-right-agent-architecture-7-mainstream",
+    title: "How to Choose the Right Agent Architecture: 7 Mainstream Architectures from Lightweight to Enterprise-Grade",
+    titleZh: "如何选择正确的Agent架构：从轻量到企业级的7大主流架构",
+    description: "80% of teams pick ReAct or Multi-Agent just because those are the only two they've heard of. This decision guide builds a coordinate system for choosing among 7 mainstream agent architectures — Single Agent, ReAct, Plan and Execute, Multi-Agent, Route + Skill, Blackboard, and Graph Workflow — covering the pros, cons, and fit of each, plus the full evolution line from lightweight to enterprise-grade.",
+    descriptionZh: "80%的团队选择ReAct或多Agent，仅仅因为只听说过这两个。本决策指南建立一套坐标系，帮助你在7大主流Agent架构——单Agent、ReAct、计划与执行、多Agent、路由+技能、黑板、图工作流——中做出选择，涵盖各自优缺点与适用场景，以及从轻量到企业级的完整演进线。",
+    category: "ai-comparisons",
+    tags: ["AI Agent", "Architecture", "ReAct", "Multi-Agent", "Route Skill", "Graph Workflow", "Blackboard", "Enterprise"],
+    difficulty: "intermediate",
     toolsMentioned: [],
-    date: "2026-08-26",
+    date: "2026-08-28",
   },
 """
 with open("src/lib/articles.ts", encoding="utf-8") as f:
@@ -34,355 +34,243 @@ print("articles.ts updated")
 # ---------------------------------------------------------------------------
 # Part 2: article-content.ts
 # ---------------------------------------------------------------------------
-content = r"""  "build-auto-evolving-ai-knowledge-base-hands-on-tutorial": {
+content = r"""  "how-to-choose-right-agent-architecture-7-mainstream": {
     content: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI Tutorials</span>
+  <span class="meta-badge">⚖️ AI Comparisons</span>
   <span class="meta-badge">🕒 8 min read</span>
-  <span class="meta-badge">📅 Aug 26, 2026</span>
-  <span class="meta-badge">🎯 Beginner</span>
+  <span class="meta-badge">📅 Aug 28, 2026</span>
+  <span class="meta-badge">🎯 Intermediate</span>
 </div>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Ordinary AI knowledge bases require you to manually upload files one by one. Once materials are updated, you have to re-upload and re-parse everything. This repetitive work is exhausting. In this tutorial, we will build an <strong>auto-evolving AI knowledge base</strong> — a system that automatically collects new information, sorts out content, adds knowledge entries, and optimizes itself without constant manual file uploading. Even AI-generated outputs can feed back into the knowledge base, forming a self-growing closed-loop system. This guide is made for AI beginners; you can copy-paste the prompts and configurations directly to practice.</p>
+<p>When building an agent system from scratch, 80% of people choose ReAct or Multi-Agent — not because those fit their scenario, but because those are the only two architectures they have ever heard of. Today we will thoroughly compare the 7 mainstream agent architectures, from the most lightweight to those used in enterprise-level production environments. After reading this article, you will know exactly which tier your business should choose.</p>
 
-<h2 id="core-logic">Core Logic of an Auto-Evolving Knowledge Base</h2>
+<h2 id="coordinate-system">Three Core Conclusions to Establish a Coordinate System</h2>
 
-<p>The auto-evolving knowledge base runs on a simple closed-loop workflow:</p>
+<h3>1. There is no unified standard for agent architecture</h3>
+<p>The choice of architecture only depends on two things: the <strong>complexity of the scenario</strong> and the <strong>required level of control</strong>.</p>
 
-<blockquote>
-  <p>Collect new information → Filter valid content → Re-organize knowledge entries → Write into knowledge base → AI uses knowledge to generate output → Feed new output back into knowledge base</p>
-</blockquote>
+<h3>2. The evolution path of agent architectures</h3>
+<p>The evolution path runs from <strong>Single Agent → Multi-Agent Collaboration → Graph-based Workflow</strong>.</p>
 
-<p>Instead of humans doing all the import work, the AI agent takes charge of information collection, filtering, and updating. Your job is to set rules and review key results.</p>
+<h3>3. Route + Skill is the current optimal practice</h3>
+<p>For the AI Coding and skill-system directions, <strong>Route + Skill</strong> is currently the relatively optimal practice.</p>
 
-<h2 id="preparation">Preparation Work</h2>
-
-<p>You need an AI Agent platform that supports knowledge bases plus custom skill triggers. Prerequisites:</p>
-
-<ol>
-  <li>Create an empty knowledge base as your main storage library.</li>
-  <li>Enable the custom agent skill and workflow trigger function.</li>
-  <li>Get your knowledge base API credentials: <code>API-Endpoint</code> and <code>Access-Key</code>.</li>
-</ol>
-
-<blockquote>
-  <p>Store your credential variables safely. Never hard-print raw keys in chat windows.</p>
-</blockquote>
-
-<pre><code class="language-text">API-Endpoint = "your-knowledge-base-api-url"
-Access-Key = "your-access-key-here"</code></pre>
-
-<h2 id="step-1-collection">Step 1: Configure the Information Collection Source</h2>
-
-<p>Set where your knowledge base obtains new raw materials. Common sources include a local monitoring folder, web page crawling, chat-session output, meeting transcripts, and note-software synchronization.</p>
-
-<p>Take local folder monitoring as a practical example:</p>
-
-<ol>
-  <li>Create a dedicated local folder for incoming materials.</li>
-  <li>Turn on the folder-monitoring trigger inside your agent workflow.</li>
-  <li>Set the trigger rule: when new files (<code>.pdf</code>, <code>.txt</code>, <code>.md</code>, <code>.docx</code>) appear in this folder, start the auto-evolution workflow automatically.</li>
-</ol>
-
-<blockquote>
-  <p>You do not need to manually open the knowledge base and click upload. Just drop new documents into this folder, and the whole process kicks off.</p>
-</blockquote>
-
-<h2 id="step-2-filtering-agent">Step 2: Build the Filtering &amp; Knowledge-Sorting Agent Prompt</h2>
-
-<p>This is the most critical part. The agent reads raw files, throws away junk content, extracts valuable points, and restructures standardized knowledge entries. Paste this prompt block directly into your agent system:</p>
-
-<pre><code class="language-text">You are the knowledge sorting agent for the auto-evolving knowledge base.
-Task rules:
-1. Read input raw document content. Remove redundant ads, repeated paragraphs, and meaningless noise text.
-2. Split long content into independent knowledge entries. Each entry contains: Title, Tags, Core-Content, Source-Reference.
-3. Tags should be concise keywords for later retrieval. Do not make tags too long.
-4. Do not fabricate facts. All content must come from the original input material.
-5. Output format must strictly follow the JSON structure below, no extra explanatory chat text.
-
-Output JSON format:
-{
-  "knowledge_list": [
-    {
-      "title": "knowledge entry title",
-      "tags": ["tag1","tag2"],
-      "core_content": "condensed core information",
-      "source_reference": "file name or web source"
-    }
-  ]
-}</code></pre>
-
-<p>After parsing finishes, the agent outputs structured JSON knowledge entries, ready to be written into the knowledge base via API.</p>
-
-<h2 id="step-3-api-write">Step 3: Automatically Write Entries via API Call</h2>
-
-<p>Configure the agent API-call node to push the JSON knowledge list into your knowledge base. Sample request payload template:</p>
-
-<pre><code class="language-json">{
-  "knowledge_items": {{knowledge_list}},
-  "overwrite_strategy": "skip_duplicate",
-  "auto_create_tag": true
-}</code></pre>
-
+<h2 id="single-agent">1. Single Agent Architecture</h2>
+<p>A single large model handles all tasks: user input → LLM thinking → tool invocation → result output. Typical example: early ChatGPT.</p>
 <ul>
-  <li><strong>overwrite_strategy: skip_duplicate</strong> — if the same title and source already exist in the library, skip the import to avoid duplicate knowledge pollution.</li>
-  <li><strong>auto_create_tag</strong> — automatically generate tag categories inside the knowledge base.</li>
+  <li><strong>Pros</strong>: simple to implement, low cost, low latency.</li>
+  <li><strong>Cons</strong>: cognitive overload when tasks get complex, prone to context pollution.</li>
 </ul>
+<p><strong>Suitable for</strong>: simple dialogue verification scenarios. <strong>Not suitable for</strong>: complex multi-task parallel processing.</p>
 
-<blockquote>
-  <p>Important setting: turn on duplicate detection. Without this switch, repeated similar entries will pile up and reduce AI answer quality.</p>
-</blockquote>
+<h2 id="react">2. ReAct Architecture</h2>
+<p>Core concept: <strong>Reason + Act</strong>. It works in a cycle — think → act → observe → result → think again — until the task is complete.</p>
+<ul>
+  <li><strong>Pros</strong>: complete chain-of-reasoning, good interpretability.</li>
+  <li><strong>Cons</strong>: high token consumption, not stable enough (easy to drift off task), unsuitable for large-scale engineering systems.</li>
+</ul>
+<p><strong>Suitable for</strong>: multi-step exploration tasks. <strong>Not suitable for</strong>: production systems that need predictable behavior.</p>
 
-<h2 id="step-4-closed-loop">Step 4: Realize Closed-Loop Evolution — Feed AI Output Back</h2>
+<h2 id="plan-execute">3. Plan and Execute Architecture</h2>
+<p>An engineering-oriented approach: plan first, then execute.</p>
+<ul>
+  <li><strong>Plan phase</strong>: generate a complete multi-step plan.</li>
+  <li><strong>Execute phase</strong>: implement each step according to the plan.</li>
+  <li><strong>Pros</strong>: high stability, great for long processes, code generation, and long-running automation.</li>
+  <li><strong>Cons</strong>: if the plan is wrong, the whole task fails; less flexible than ReAct.</li>
+</ul>
+<p><strong>Suitable for</strong>: engineering tasks with a clear structure. <strong>Not suitable for</strong>: open-ended problems that need constant re-planning.</p>
 
-<p>This step differentiates an auto-evolving knowledge base from a regular static one. Every time your AI finishes answering questions or generates reports/summaries, trigger a secondary workflow.</p>
+<h2 id="multi-agent">4. Multi-Agent Architecture</h2>
+<p>Multiple agents work together with a division of labor. A coordination and allocation layer at the top manages the work, while planner, reviewer, executor and other role agents sit at the bottom, each with its own responsibility.</p>
+<ul>
+  <li><strong>Pros</strong>: clear task decomposition, low context pollution, strong scalability.</li>
+  <li><strong>Cons</strong>: high cost.</li>
+</ul>
+<p><strong>Suitable for</strong>: complex industry scenarios with strict process consistency requirements — financial risk control, medical diagnosis, legal review.</p>
 
-<p>Trigger instruction you send to the agent:</p>
+<h2 id="route-skill">5. Route + Skill Architecture</h2>
+<p>This is the most recommended architecture today. The core idea: instead of letting the model think, let the model <strong>choose</strong>.</p>
+<p>The flow: user input → Intent Router recognizes the intent → directly routes to the matching Skill for execution. Each Skill is an executable capability bundled with its own knowledge.</p>
+<ul>
+  <li><strong>Pros</strong>: extremely stable, enterprise-level controllable and cacheable, high performance, hit rate is easy to evaluate.</li>
+  <li><strong>Cons</strong>: high skill-design cost, possible routing conflicts.</li>
+</ul>
+<p><strong>Suitable for</strong>: AI Coding and intelligent system fields.</p>
 
-<pre><code class="language-text">Treat this AI-generated reply as new source material. Run the knowledge-sorting agent prompt, extract valid knowledge points, filter out useless conversational filler content, and write qualified new knowledge entries back to the auto-evolving knowledge base. Skip vague conclusions without factual support.</code></pre>
+<h2 id="blackboard">6. Blackboard System</h2>
+<p>Multiple agents can read and write shared state at the same time, and execution is driven by state changes.</p>
+<ul>
+  <li><strong>Pros</strong>: fits complex collaboration scenarios.</li>
+  <li><strong>Cons</strong>: very heavy state management, difficult to track problems.</li>
+</ul>
+<p><strong>Commonly used in</strong>: workflow engines like LangGraph and distributed systems.</p>
 
-<p>Workflow logic:</p>
+<h2 id="graph-workflow">7. Graph Workflow Architecture</h2>
+<p>The heaviest but most stable architecture for enterprise production environments — it orchestrates workflows based on directed acyclic graphs (DAGs).</p>
+<ul>
+  <li><strong>Pros</strong>: supports conditional branching, parallel execution, backtracking, and retry; enterprise-grade stability and debuggability; built for long processes.</li>
+</ul>
+<p><strong>Common tools</strong>: LangGraph, Temporal, n8n, Prefect.</p>
 
-<p><strong>User question → Knowledge base provides reference → AI generates answer → Agent extracts new knowledge points → Append into knowledge base</strong></p>
+<h2 id="evolution-line">The Entire Evolution Line</h2>
 
-<p>Now your knowledge base continuously absorbs both external documents and internal AI-produced insights.</p>
+<pre><code class="language-text">Single Agent      →  Simple verification
+ReAct             →  Multi-step exploration
+Plan + Execute    →  Engineering
+Multi-Agent       →  Collaboration
+Route + Skill     →  Precise skill systems
+Blackboard        →  Shared state
+Graph Workflow    →  Production</code></pre>
 
-<h2 id="step-5-self-optimization">Step 5: Add a Regular Self-Optimization Task</h2>
+<p>You don't need to implement all these architectures at once — just choose the one that matches the complexity of your scenario.</p>
 
-<p>Set a scheduled cron trigger for a weekly knowledge-base maintenance task. Run this prompt periodically:</p>
-
-<pre><code class="language-text">You are the knowledge-base maintenance agent.
-Read existing entries in the current knowledge base:
-1. Merge highly duplicated knowledge entries.
-2. Mark outdated information and tag it as "obsolete". Do not directly delete for traceability.
-3. Supplement cross-reference links between related knowledge entries.
-4. Output the optimized updated knowledge list, and call the API to apply changes.</code></pre>
-
-<p>This scheduled job keeps your knowledge base clean, prevents information bloat, and maintains query response accuracy.</p>
-
-<h2 id="practical-tips">Practical Usage Tips</h2>
-
-<ol>
-  <li><strong>Watch your input quality</strong>: don't throw messy, unfiltered files into the monitoring folder. The filtering agent can handle noise, but too much garbage input will lower final knowledge quality.</li>
-  <li><strong>Keep duplicate-skip always enabled</strong>: mass duplicates will break retrieval performance.</li>
-  <li><strong>Enable human review for critical knowledge</strong>: new entries will wait for your manual confirmation before being written into the base.</li>
-  <li><strong>Monitor growth speed</strong>: if entries expand extremely fast, check whether your filtering rules are too loose.</li>
-</ol>
-
-<h2 id="troubleshooting">Common Troubleshooting</h2>
-
-<h3>New files are dropped into the folder, but no new knowledge appears</h3>
-<p>Check the trigger status, verify the API Access-Key validity, and confirm the file format is supported.</p>
-
-<h3>Knowledge entries are too long and messy after auto-parsing</h3>
-<p>Adjust the sorting-agent prompt and strengthen the requirements for the condensed core-content field.</p>
-
-<h3>AI-generated low-quality nonsense is written into the knowledge library</h3>
-<p>Add a stricter rule to the prompt: reject entries without factual support, and turn on human review mode.</p>
-
-<h2 id="conclusion">Final Summary</h2>
-
-<p>A traditional knowledge base is static storage. An auto-evolving AI knowledge base builds a self-reinforcing loop: automatic collection, intelligent filtering, structured parsing, scheduled maintenance, and feeding AI output back to expand your knowledge inventory.</p>
-
-<p>You don't need complex development work. By configuring trigger rules, a sorting-agent prompt, and an API writing node, beginners can deploy this system. Start with small-scale test files first, tune the filtering rules, then expand to full-scale use.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Remember one sentence: <strong>there is no best architecture, only the most suitable one</strong>.</p>
+<p>Start by mapping your scenario's complexity and control requirements onto the coordinate system, then walk the evolution line from left to right until you find the tier that matches. For most AI Coding and skill-system products, Route + Skill gives the best stability-to-effort ratio; for enterprise production pipelines with strict SLAs, Graph Workflow is the safe choice.</p>
 
 <h2>常见问题</h2>
 
-<h3>Do I need to write code to build this system?</h3>
-<p>No. The whole system is driven by configuration and prompts: trigger rules (folder monitoring), a knowledge-sorting agent prompt, and an API-write node with a paste-ready JSON payload. The only "API" work is replacing two credential placeholders and one template field. If your platform supports knowledge-base connectors (like WorkBuddy + IMA Knowledge Base), you can often skip the API entirely.</p>
+<h3>Why do most people default to ReAct or Multi-Agent?</h3>
+<p>Because those are the two architectures most tutorial content covers, so they are the first two people learn. But "popular" is not the same as "suitable" — ReAct burns tokens and drifts on long tasks, while Multi-Agent multiplies cost. Before picking either, run your scenario through the coordinate system: complexity and control level first, architecture second.</p>
 
-<h3>Which platforms can I use to build an auto-evolving knowledge base?</h3>
-<p>Any AI Agent platform that supports knowledge bases plus custom skill or workflow triggers. Popular choices include WorkBuddy with IMA Knowledge Base, agent frameworks with built-in KB APIs, and RAG platforms with scheduled jobs. The pattern is platform-agnostic — what matters is that your platform exposes three things: a collection trigger, an agent-prompt slot, and a way to write entries programmatically.</p>
+<h3>What's the difference between this guide and the earlier 7-architecture breakdown?</h3>
+<p>The earlier guide (<a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade Guide</a>) explains how each architecture is built — its mechanics, internals, and typical components. This guide is the decision layer on top: it gives you the coordinate system, the per-architecture fit, and the evolution-line decision map, so you can pick the right one instead of just understanding them.</p>
 
-<h3>How do I prevent the knowledge base from being polluted with low-quality content?</h3>
-<p>Use three layers of protection: (1) keep duplicate detection on so repeated entries never pile up; (2) strengthen the sorting-agent prompt — demand condensed core-content, require factual grounding, and reject vague conclusions; (3) turn on the human-review switch for critical business knowledge so new entries wait for your confirmation before being written.</p>
+<h3>When should I choose Route + Skill over a single ReAct agent?</h3>
+<p>Whenever your use case is a set of well-defined capabilities rather than open-ended reasoning — AI Coding, skill libraries, and productized assistants. ReAct lets the model think freely but is unstable and expensive; Route + Skill replaces free thinking with a predictable intent router, giving you enterprise-level stability, caching, and measurable hit rates. The cost is upfront skill design.</p>
 
-<h3>What's the difference between this and a static knowledge base?</h3>
-<p>A static knowledge base only answers from files you manually upload and re-upload. An auto-evolving knowledge base closes the loop: it collects new materials by trigger, filters and structures them into entries automatically, and even feeds AI-generated output back in — then runs scheduled maintenance to merge duplicates and mark obsolete content. It grows and cleans itself, which is the entire point.</p>
+<h3>Is Graph Workflow always the final answer for enterprise?</h3>
+<p>For production pipelines with strict reliability requirements — conditional branching, parallel execution, retries, audit trails — yes, DAG-based Graph Workflows (LangGraph, Temporal, n8n, Prefect) are the industry standard. But if your scenario is a simple dialog or a small skill set, adopting Graph Workflow is over-engineering. Start light, escalate only when the complexity justifies it.</p>
 
 <div class="next-step">
   <h3>📖 Next Steps</h3>
-  <p>Want to go deeper with AI knowledge bases? Keep exploring:</p>
+  <p>Ready to apply this decision framework? Go deeper:</p>
   <ul>
-    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">Build Your Personal AI Knowledge Base with WorkBuddy + IMA: A Step-by-Step Guide</a> — set up a concrete WorkBuddy + IMA knowledge base first</li>
-    <li><a href="/article/build-ai-second-brain-workbuddy-ima-knowledge-base">Step-by-Step Guide: Build Your AI Second Brain with WorkBuddy + IMA Knowledge Base</a> — add the bidirectional closed loop to your knowledge system</li>
-    <li><a href="/article/why-99-percent-ai-knowledge-bases-fail-in-practice">Why 99% of AI Knowledge Bases Fail in Practice</a> — avoid the common RAG pitfalls that kill knowledge-base quality</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7 Mainstream Agent Architectures: From Beginner to Enterprise-Grade Guide</a> — understand how each of the 7 architectures is actually built</li>
+    <li><a href="/article/effective-multi-agent-collaboration-4-structures">Effective Multi-Agent Collaboration: 4 Practical Structures Beyond Just Scaling Agents</a> — design real multi-agent teams once you choose that tier</li>
+    <li><a href="/article/mastering-ai-agent-tool-orchestration-meta-tools">Mastering AI Agent Tool Orchestration: The Power of Meta-Tools in Modern Workflows</a> — the tool layer that makes Route + Skill and ReAct agents actually work</li>
   </ul>
 </div>`,
     contentZh: `<div class="meta-banner">
-  <span class="meta-badge">📚 AI 教程</span>
+  <span class="meta-badge">⚖️ AI 对比</span>
   <span class="meta-badge">🕒 阅读约8分钟</span>
-  <span class="meta-badge">📅 2026年8月26日</span>
-  <span class="meta-badge">🎯 入门</span>
+  <span class="meta-badge">📅 2026年8月28日</span>
+  <span class="meta-badge">🎯 进阶</span>
 </div>
 
 <h2 id="introduction">引言</h2>
 
-<p>普通的AI知识库需要你一个一个手动上传文件。一旦资料更新，又要重新上传、重新解析，重复劳动让人疲惫。本教程中，我们将搭建一个<strong>自动进化的AI知识库</strong>——它能自动收集新信息、梳理内容、添加知识条目并自我优化，无需频繁手动上传文件。甚至AI生成的输出也能反馈回知识库，形成自我成长的闭环系统。本指南面向AI初学者，提示词和配置都可以直接复制粘贴练习。</p>
+<p>从零搭建Agent系统时，80%的人会选择ReAct或多Agent——不是因为它们适合你的场景，而是因为只听说过这两个。今天我们将彻底对比7种主流Agent架构，从最轻量的到企业级生产环境所用的。读完本文，你会清楚自己的业务应该选择哪一层。</p>
 
-<h2 id="core-logic">自进化知识库的核心逻辑</h2>
+<h2 id="coordinate-system">三个核心结论：建立坐标系</h2>
 
-<p>自进化知识库运行在一个简单的闭环工作流之上：</p>
+<h3>1. Agent架构没有统一标准</h3>
+<p>架构的选择只取决于两件事：<strong>场景的复杂度</strong>和<strong>所需的控制程度</strong>。</p>
 
-<blockquote>
-  <p>收集新信息 → 筛选有效内容 → 重新组织知识条目 → 写入知识库 → AI使用知识生成输出 → 新输出反馈回知识库</p>
-</blockquote>
+<h3>2. Agent架构的演进路径</h3>
+<p>演进路径为：<strong>单Agent → 多Agent协作 → 基于图的工作流</strong>。</p>
 
-<p>导入工作不再由人类完成，而是由AI Agent负责信息收集、筛选和更新。你的工作只是设定规则并审核关键结果。</p>
+<h3>3. Route + Skill是目前相对最优实践</h3>
+<p>在AI Coding和技能系统方向上，<strong>Route + Skill</strong>是目前相对最优的实践。</p>
 
-<h2 id="preparation">准备工作</h2>
-
-<p>你需要一个支持知识库+自定义技能触发的AI Agent平台。前置条件：</p>
-
-<ol>
-  <li>创建一个空知识库作为你的主存储库。</li>
-  <li>开启自定义Agent技能和工作流触发功能。</li>
-  <li>获取你的知识库API凭证：<code>API-Endpoint</code> 和 <code>Access-Key</code>。</li>
-</ol>
-
-<blockquote>
-  <p>请安全保存你的凭证变量。切勿在聊天窗口中明文打印原始密钥。</p>
-</blockquote>
-
-<pre><code class="language-text">API-Endpoint = "你的知识库API地址"
-Access-Key = "你的访问密钥"</code></pre>
-
-<h2 id="step-1-collection">第一步：配置信息收集源</h2>
-
-<p>设定知识库获取新原料的渠道。常见来源包括：本地监控文件夹、网页爬取、会话输出、会议转写、笔记软件同步。</p>
-
-<p>以本地文件夹监控为例：</p>
-
-<ol>
-  <li>创建一个专门的本地文件夹存放待入库材料。</li>
-  <li>在Agent工作流中开启文件夹监控触发器。</li>
-  <li>设置触发规则：当该文件夹出现新文件（<code>.pdf</code>、<code>.txt</code>、<code>.md</code>、<code>.docx</code>）时，自动启动自进化工作流。</li>
-</ol>
-
-<blockquote>
-  <p>你无需手动打开知识库点击上传。只要把新文档丢进这个文件夹，整个流程就会自动启动。</p>
-</blockquote>
-
-<h2 id="step-2-filtering-agent">第二步：构建筛选与知识整理Agent提示词</h2>
-
-<p>这是最关键的一步。Agent会读取原始文件、丢弃垃圾内容、提取有价值要点，并重构为标准化的知识条目。把这段提示词直接粘贴进你的Agent系统：</p>
-
-<pre><code class="language-text">你是自进化知识库的知识整理Agent。
-任务规则：
-1. 读取输入的原始文档内容，删除冗余广告、重复段落和无意义的噪音文本。
-2. 将长内容拆分为独立的知识条目。每个条目包含：标题、标签、核心内容、来源引用。
-3. 标签应使用简洁关键词，便于后续检索，不要太长。
-4. 不得编造事实。所有内容必须来自原始输入材料。
-5. 输出格式必须严格遵循下方JSON结构，不要附带额外解释性聊天文本。
-
-输出JSON格式：
-{
-  "knowledge_list": [
-    {
-      "title": "知识条目标题",
-      "tags": ["标签1","标签2"],
-      "core_content": "凝练的核心信息",
-      "source_reference": "文件名或网页来源"
-    }
-  ]
-}</code></pre>
-
-<p>解析完成后，Agent输出结构化的JSON知识条目，即可通过API写入知识库。</p>
-
-<h2 id="step-3-api-write">第三步：通过API调用自动写入条目</h2>
-
-<p>配置Agent的API调用节点，把JSON知识列表推入知识库。请求负载模板示例：</p>
-
-<pre><code class="language-json">{
-  "knowledge_items": {{knowledge_list}},
-  "overwrite_strategy": "skip_duplicate",
-  "auto_create_tag": true
-}</code></pre>
-
+<h2 id="single-agent">1. 单Agent架构</h2>
+<p>一个大模型处理所有任务：用户输入 → 大模型思考 → 工具调用 → 结果输出。典型例子：早期ChatGPT。</p>
 <ul>
-  <li><strong>overwrite_strategy: skip_duplicate</strong>——如果库中已存在相同标题与来源，则跳过导入，避免重复知识污染。</li>
-  <li><strong>auto_create_tag</strong>——在知识库内自动生成标签分类。</li>
+  <li><strong>优点</strong>：实现简单、成本低、延迟低。</li>
+  <li><strong>缺点</strong>：任务复杂时认知过载，容易产生上下文污染。</li>
 </ul>
+<p><strong>适用</strong>：简单对话验证场景。<strong>不适用</strong>：复杂多任务并行处理。</p>
 
-<blockquote>
-  <p>重要设置：务必开启去重检测。没有这个开关，相似的重复条目会不断堆积，拉低AI回答质量。</p>
-</blockquote>
+<h2 id="react">2. ReAct架构</h2>
+<p>核心概念：<strong>推理+行动（Reason + Act）</strong>。它循环运行——思考 → 行动 → 观察 → 结果 → 再次思考——直到任务完成。</p>
+<ul>
+  <li><strong>优点</strong>：完整的链式推理能力，可解释性好。</li>
+  <li><strong>缺点</strong>：Token消耗高，不够稳定（容易偏离任务），不适合大规模工程系统。</li>
+</ul>
+<p><strong>适用</strong>：多步骤探索类任务。<strong>不适用</strong>：需要可预测行为的生产系统。</p>
 
-<h2 id="step-4-closed-loop">第四步：实现闭环进化——将AI输出反馈回知识库</h2>
+<h2 id="plan-execute">3. 计划与执行架构</h2>
+<p>工程化思路：先计划，后执行。</p>
+<ul>
+  <li><strong>计划阶段</strong>：生成完整的多步骤计划。</li>
+  <li><strong>执行阶段</strong>：按计划逐步实现。</li>
+  <li><strong>优点</strong>：稳定性高，适合长流程、代码生成和长时自动化。</li>
+  <li><strong>缺点</strong>：计划出错则整个任务失败；灵活性不如ReAct。</li>
+</ul>
+<p><strong>适用</strong>：结构清晰的工程任务。<strong>不适用</strong>：需要不断重新规划的开放式问题。</p>
 
-<p>这一步是自进化知识库与普通静态知识库的本质区别。每次AI完成问题回答或生成报告/总结后，触发一个次级工作流。</p>
+<h2 id="multi-agent">4. 多Agent架构</h2>
+<p>多个Agent分工协作。顶层有任务协调与分配系统统筹工作，底层有规划者、审查者、执行者等角色Agent，各司其职。</p>
+<ul>
+  <li><strong>优点</strong>：任务分解清晰、上下文污染低、可扩展性强。</li>
+  <li><strong>缺点</strong>：成本高。</li>
+</ul>
+<p><strong>适用</strong>：对流程一致性要求极高的复杂行业场景——金融风控、医疗诊断、法律审查。</p>
 
-<p>发给Agent的触发指令：</p>
+<h2 id="route-skill">5. 路由+技能架构</h2>
+<p>这是目前最推荐的架构。核心思想：不让模型思考，让模型<strong>选择</strong>。</p>
+<p>流程：用户输入 → 意图路由器识别意图 → 直接路由到对应技能执行。每个技能都是一个可执行能力，并附带相应知识。</p>
+<ul>
+  <li><strong>优点</strong>：极其稳定、企业级可控可缓存、性能高、命中率易评估。</li>
+  <li><strong>缺点</strong>：技能设计成本高，可能存在路由冲突。</li>
+</ul>
+<p><strong>适用</strong>：AI Coding和智能系统领域。</p>
 
-<pre><code class="language-text">把这段AI生成的回复当作新的源材料。运行知识整理Agent提示词，提取有效的知识要点，过滤掉无用的对话填充内容，把合格的新知识条目写回自进化知识库。跳过没有事实依据的模糊结论。</code></pre>
+<h2 id="blackboard">6. 黑板系统</h2>
+<p>多个Agent可同时读写共享状态，执行由状态变化驱动。</p>
+<ul>
+  <li><strong>优点</strong>：适合复杂协作场景。</li>
+  <li><strong>缺点</strong>：状态管理非常重，问题难以追踪。</li>
+</ul>
+<p><strong>常用于</strong>：LangGraph等工作流引擎和分布式系统。</p>
 
-<p>工作流逻辑：</p>
+<h2 id="graph-workflow">7. 图工作流架构</h2>
+<p>企业级生产环境中最重但最稳定的架构——基于有向无环图（DAG）编排工作流。</p>
+<ul>
+  <li><strong>优点</strong>：支持条件分支、并行执行、回溯与重试；企业级稳定、可调试、适合长流程。</li>
+</ul>
+<p><strong>常用工具</strong>：LangGraph、Temporal、n8n、Prefect。</p>
 
-<p><strong>用户提问 → 知识库提供参考 → AI生成答案 → Agent从答案中提取新知识点 → 追加进知识库</strong></p>
+<h2 id="evolution-line">完整演进线</h2>
 
-<p>现在，你的知识库能持续吸收外部文档和内部AI产出的洞见。</p>
+<pre><code class="language-text">单Agent          →  简单验证
+ReAct            →  多步探索
+计划+执行        →  工程化
+多Agent          →  协作
+路由+技能        →  精准技能系统
+黑板             →  共享状态
+图工作流         →  生产环境</code></pre>
 
-<h2 id="step-5-self-optimization">第五步：添加定期自我优化任务</h2>
+<p>你不需要一次性实现所有这些架构——只需根据场景复杂度选择合适的那一个。</p>
 
-<p>设置定时cron触发，执行每周的知识库维护任务。定期运行这段提示词：</p>
-
-<pre><code class="language-text">你是知识库维护Agent。
-读取当前知识库中的现有条目：
-1. 合并高度重复的知识条目。
-2. 标记过期信息并打上"obsolete"标签，为了可追溯性不要直接删除。
-3. 为相关条目之间补充交叉引用链接。
-4. 输出优化后的知识列表，并调用API应用变更。</code></pre>
-
-<p>这个定时任务能让知识库保持整洁、防止信息膨胀，并维持查询回答的准确性。</p>
-
-<h2 id="practical-tips">实用使用技巧</h2>
-
-<ol>
-  <li><strong>把好输入关</strong>：不要往监控文件夹里丢杂乱未过滤的文件。筛选Agent能处理噪音，但太多垃圾输入会拉低最终的知识质量。</li>
-  <li><strong>始终开启去重跳过</strong>：海量重复会破坏检索性能。</li>
-  <li><strong>关键业务知识开启人工审核</strong>：新条目会等待你手动确认后才写入知识库。</li>
-  <li><strong>监控知识增长速度</strong>：如果条目膨胀极快，检查筛选规则是否过于宽松。</li>
-</ol>
-
-<h2 id="troubleshooting">常见问题排查</h2>
-
-<h3>文件已丢入文件夹，但没有新知识出现</h3>
-<p>检查触发状态、验证API Access-Key是否有效、确认文件格式受支持。</p>
-
-<h3>自动解析后知识条目过长且杂乱</h3>
-<p>调整整理Agent提示词，强化对core-content核心内容字段凝练程度的要求。</p>
-
-<h3>AI生成的低质量废话被写进了知识库</h3>
-<p>在提示词中增加更严格的规则：拒绝没有事实依据的条目；开启人工审核模式。</p>
-
-<h2 id="conclusion">总结</h2>
-
-<p>传统知识库是静态存储。自动进化的AI知识库则构建了一条自我强化的闭环：自动收集、智能筛选、结构化解析、定时维护，以及把AI输出反馈回来扩充知识库存。</p>
-
-<p>你不需要复杂的开发工作。通过配置触发规则、整理Agent提示词和API写入节点，初学者就能部署这套系统。先用小规模测试文件起步，调好筛选规则，再扩展到全量使用。</p>
+<h2 id="conclusion">结语</h2>
+<p>记住一句话：<strong>没有最好的架构，只有最合适的架构</strong>。</p>
+<p>先把自己的场景复杂度和控制需求映射到坐标系上，再从演进线左到右逐个对照，直到找到匹配的那一层。对大多数AI Coding和技能系统产品，Route + Skill的稳定性/投入比最高；对SLA严格的企事业生产管线，图工作流是稳妥之选。</p>
 
 <h2>常见问题</h2>
 
-<h3>搭建这套系统需要写代码吗？</h3>
-<p>不需要。整个系统由配置和提示词驱动：触发规则（文件夹监控）、知识整理Agent提示词、以及带现成JSON负载的API写入节点。所谓的"API"工作只是替换两个凭证占位符和一个模板字段。如果你的平台支持知识库连接器（如WorkBuddy + IMA知识库），甚至可以完全跳过API。</p>
+<h3>为什么大多数人默认选ReAct或多Agent？</h3>
+<p>因为这两者是教程内容覆盖最多的架构，也是人们最先学到的两个。但"流行"不等于"适合"——ReAct在长任务上烧Token且易漂移，多Agent则成本倍增。在二选一之前，先用坐标系过一遍你的场景：先定复杂度与控制级别，再定架构。</p>
 
-<h3>可以用哪些平台搭建自进化知识库？</h3>
-<p>任何支持知识库+自定义技能或工作流触发的AI Agent平台都可以。常见选择包括：WorkBuddy + IMA知识库、内置KB API的Agent框架、支持定时任务的RAG平台。这套模式与平台无关——关键在于你的平台要能暴露三样东西：收集触发器、Agent提示词槽位、程序化写入条目的途径。</p>
+<h3>本指南与之前的7大架构拆解有什么区别？</h3>
+<p>之前的指南（<a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a>）讲解每种架构如何构建——机制、内部结构、典型组件。本指南是叠加在它之上的决策层：给你坐标系、每种架构的适用性，以及演进线决策地图，让你不仅能理解它们，还能选对它们。</p>
 
-<h3>如何防止低质量内容污染知识库？</h3>
-<p>用三层防护：(1) 始终开启去重检测，让重复条目无法堆积；(2) 强化整理Agent提示词——要求凝练的核心内容、强制事实依据、拒绝模糊结论；(3) 对关键业务知识开启人工审核开关，让新条目先等待你的确认再写入。</p>
+<h3>什么情况下该选Route + Skill而不是单个ReAct Agent？</h3>
+<p>只要你的用例是一组明确定义的能力而非开放式推理——比如AI Coding、技能库、产品化助手。ReAct让模型自由思考但不够稳定且成本高；Route + Skill用可预测的意图路由器取代自由思考，带来企业级稳定性、可缓存性和可衡量的命中率。代价是需要前置的技能设计投入。</p>
 
-<h3>它和静态知识库有什么区别？</h3>
-<p>静态知识库只能回答你手动上传并反复更新的文件。自进化知识库则打通了闭环：通过触发器自动收集新材料、自动筛选并结构化知识条目、甚至把AI生成的输出反馈回库——再运行定时维护去重和标记过期内容。它会自我成长和自我清理，这正是它的核心价值。</p>
+<h3>图工作流永远是企业的最终答案吗？</h3>
+<p>对于可靠性要求严格的生产管线——条件分支、并行执行、重试、审计追踪——是的，基于DAG的图工作流（LangGraph、Temporal、n8n、Prefect）是行业标准。但如果你的场景只是一个简单对话或小型技能集，上图工作流就是过度设计。从轻量起步，只有当复杂度真正需要时才升级。</p>
 
 <div class="next-step">
   <h3>📖 继续学习</h3>
-  <p>想深入了解AI知识库？继续探索：</p>
+  <p>准备应用这套决策框架？深入探索：</p>
   <ul>
-    <li><a href="/article/build-personal-ai-knowledge-base-workbuddy-ima-guide">用WorkBuddy + IMA搭建个人AI知识库：完整步骤指南</a> — 先搭好一个具体的WorkBuddy + IMA知识库</li>
-    <li><a href="/article/build-ai-second-brain-workbuddy-ima-knowledge-base">分步指南：用WorkBuddy + IMA知识库打造你的AI第二大脑</a> — 为你的知识系统加上双向闭环</li>
-    <li><a href="/article/why-99-percent-ai-knowledge-bases-fail-in-practice">为什么99%的AI知识库在实践中失败</a> — 避开拖垮知识库质量的常见RAG陷阱</li>
+    <li><a href="/article/7-mainstream-agent-architectures-beginner-enterprise-guide">7大主流Agent架构：从入门到企业级完整指南</a> — 理解7种架构各自如何构建</li>
+    <li><a href="/article/effective-multi-agent-collaboration-4-structures">高效多Agent协作：超越简单堆量的4种实用结构</a> — 选定该层级后，设计真正的多Agent团队</li>
+    <li><a href="/article/mastering-ai-agent-tool-orchestration-meta-tools">掌握AI Agent工具编排：Meta-Tools在现代工作流中的力量</a> — 让Route + Skill和ReAct真正跑起来的工具层</li>
   </ul>
 </div>`,
   },
