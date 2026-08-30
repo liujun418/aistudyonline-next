@@ -3170,4 +3170,16 @@ export const articles: Article[] = [
     toolsMentioned: [],
     date: "2026-08-28",
   },
-];
+  {
+    slug: "agent-harness-three-engineering-forms-comparison",
+    title: "Agent Harness: Three Engineering Forms for Your AI Workflow (DeepSeek Harness, OpenCode, Pi)",
+    titleZh: "Agent Harness：AI工作流的三大工程形态（DeepSeek Harness、OpenCode、Pi）",
+    description: "An Agent Harness is the work environment for your AI model, and there is no universal best — only the right fit. This decision guide compares the three leading engineering forms: DeepSeek Harness (full runtime control, everything is a plugin), OpenCode (ready-to-use with extensibility), and Pi (a minimal 4-tool kernel under 1,000 tokens for ~3x context reduction and 50%+ cost savings) — covering core design, key features, install commands, and a concrete how-to-choose framework for your AI workflow.",
+    descriptionZh: "Agent Harness是AI模型的工作环境，没有万能最优，只有最适合。本决策指南对比三大主流工程形态：DeepSeek Harness（完全掌控运行时、万物皆插件）、OpenCode（开箱即用且可扩展）、Pi（仅4个工具的极简内核，1000 token以内，约3倍上下文缩减、50%以上成本下降）——涵盖核心设计、关键特性、安装命令与一套可直接套用的选择框架。",
+    category: "ai-comparisons",
+    tags: ["AI Agent", "Agent Harness", "DeepSeek Harness", "OpenCode", "Pi", "Context Efficiency", "Coding"],
+    difficulty: "intermediate",
+    toolsMentioned: ["deepseek-harness", "opencode", "pi"],
+    date: "2026-08-30",
+  },
+  ];
