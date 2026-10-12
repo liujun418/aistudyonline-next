@@ -3182,4 +3182,16 @@ export const articles: Article[] = [
     toolsMentioned: ["deepseek-harness", "opencode", "pi"],
     date: "2026-08-30",
   },
+    {
+    slug: "rewriting-content-creation-workflow-ai-driven-video-production",
+    title: "Rewriting the Content Creation Workflow: A Practical Guide to AI-Driven Video Production",
+    titleZh: "重塑内容创作工作流：AI驱动视频制作实用指南",
+    description: "AI is reshaping video creation from ideation to final export. This practical guide compares the traditional linear production pipeline with AI-driven workflows, maps the four tool categories that matter most (script generation, automated editing, visual asset generation, and voice/audio processing), walks through a complete 60-second short-video workflow step by step, and covers the benefits, best practices, and pitfalls of handing repetitive production work to AI.",
+    descriptionZh: "AI正在重塑从创意到成片的视频创作全流程。本实用指南对比传统线性制作流程与AI驱动工作流，梳理最关键的四大工具类别（脚本生成、自动化剪辑、视觉素材生成、语音与音频处理），逐步演示一条完整的60秒短视频制作流水线，并涵盖AI接管重复性工作的收益、最佳实践与注意事项。",
+    category: "ai-tutorials",
+    tags: ["AI Video", "Video Production", "Content Creation", "AI Editing", "AI Voiceover", "Workflow", "Short Video"],
+    difficulty: "beginner",
+    toolsMentioned: [],
+    date: "2026-10-12",
+  },
   ];
