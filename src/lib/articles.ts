@@ -3194,4 +3194,16 @@ export const articles: Article[] = [
     toolsMentioned: [],
     date: "2026-10-12",
   },
+    {
+    slug: "top-5-ai-video-creation-tools-streamline-workflow",
+    title: "Top 5 AI Video Creation Tools to Streamline Your Workflow",
+    titleZh: "Top 5 AI视频创作工具：让工作流真正跑起来",
+    description: "AI video creation has reached production-grade maturity. This guide ranks the top 5 AI video tools that automate the entire pipeline from script to final cut — waoowaoo (industrial-grade film production), Toonflow (infinite canvas + agent visual creation), Open-Generative-AI (unrestricted open-source video engine), diffusers (full-modal diffusion infrastructure), and OpenMontage (agent auto-editing with music) — covering key features, install commands, and the best use case for each.",
+    descriptionZh: "AI视频创作已进入工业化成熟期。本指南盘点 5 款能从脚本一路自动到成片的AI视频工具——waoowaoo（工业级影视制作）、Toonflow（无限画布+代理可视化创作）、Open-Generative-AI（无限制开源视频引擎）、diffusers（全模态扩散模型基础设施）、OpenMontage（带音乐的代理自动剪辑）——逐一说明关键特性、安装命令与最佳使用场景。",
+    category: "ai-tutorials",
+    tags: ["AI Video", "Video Creation", "Open Source", "Agent", "Diffusion Models", "Editing", "Top Tools"],
+    difficulty: "intermediate",
+    toolsMentioned: ["waoowaoo", "toonflow", "open-generative-ai", "diffusers", "openmontage"],
+    date: "2026-10-14",
+  },
   ];
